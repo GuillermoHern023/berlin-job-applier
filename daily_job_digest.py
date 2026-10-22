@@ -27,7 +27,7 @@ ARTIFACT_DASHBOARD_PATH = Path(r"C:\Users\guill\.gemini\antigravity\brain\e708b6
 
 RECIPIENT_EMAILS = ["guillejhl@gmail.com", "schuetzenc@gmail.com"]
 GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1o2r4Qvn9SL7gOa05P-up9tiwnCXPmcnOG3kttL_H0Fk/edit"
-REMOTE_WEB_URL = os.environ.get("JOB_DASHBOARD_URL", "https://berlin-job-hub.loca.lt")
+REMOTE_WEB_URL = os.environ.get("JOB_DASHBOARD_URL", "https://guillermohern023.github.io/berlin-job-applier/")
 
 from pdf_generator import load_master_profile, generate_master_cv
 from tailor import (

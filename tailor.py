@@ -16,16 +16,17 @@ ROLE_CATEGORIES = {
         "label": "AI Operations & Automation",
         "keywords": [
             "ai", "artificial intelligence", "automation", "chatbot", "voicebot", "voice bot",
-            "llm", "prompt", "knowledge base", "workflow", "apps script", "bot", "genai",
-            "agent", "automatisierung", "tooling",
+            "llm", "prompt", "knowledge base", "vector", "vector database", "evaluation",
+            "workflow", "apps script", "low-code", "rest api", "api", "git", "github", "cloud",
+            "bot", "genai", "agent", "automatisierung", "tooling",
         ],
     },
     "product_management": {
         "label": "Product Management",
         "keywords": [
-            "product manager", "product management", "product owner", "digital product",
+            "product manager", "product management", "product owner", "product team", "digital product",
             "roadmap", "feature", "user story", "ux", "figma", "backlog", "mvp",
-            "product operations", "produktmanagement", "erp", "saas",
+            "product operations", "produktmanagement", "erp", "saas", "evaluation",
         ],
     },
     "project_management": {
@@ -37,11 +38,12 @@ ROLE_CATEGORIES = {
         ],
     },
     "cx_operations": {
-        "label": "Business & CX Operations",
+        "label": "Business & Data Operations",
         "keywords": [
             "operations", "customer experience", "cx", "customer service", "quality assurance",
-            "qa", "kpi", "reporting", "dashboard", "looker", "tableau", "process improvement",
-            "business operations", "bizops", "freshdesk", "support",
+            "qa", "kpi", "reporting", "dashboard", "sql", "redash", "quantitative", "complex data",
+            "data analysis", "looker", "tableau", "process improvement", "business operations",
+            "bizops", "freshdesk", "support",
         ],
     },
 }
@@ -159,7 +161,7 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
     extracted_pay = salary_match.group(0) if salary_match else (job.get("salary") or "Not listed")
 
     # Why it fits summary
-    top_kws = ", ".join(matched_keywords[:6]) if matched_keywords else "Project coordination, workflows, stakeholder alignment"
+    top_kws = ", ".join(matched_keywords[:6]) if matched_keywords else "Product team, SQL (Redash), quantitative analysis, AI evaluation tools"
     why_fits = f"Strong {best_cat_label} fit. Matches keywords: {top_kws}."
 
     return {
@@ -176,7 +178,7 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
 def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dict[str, Any]:
     """
     Selects the best 6 Auto1 Group bullets, orders core skills, and crafts a tailored 4-paragraph
-    Cover Letter based on Guillermo's Xentral cover letter style + his 4 new Auto1 projects.
+    Cover Letter based on Guillermo's Xentral cover letter style + his technical & product skills.
     """
     analysis = score_and_classify_job(job)
     cat_id = analysis["category_id"]
@@ -194,13 +196,17 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
         if "new_project" in b["tags"]:
             b_score += 10
         # Extra boost if specific words match
-        if b["id"] == "qa_review_platform" and any(w in desc_lower for w in ["qa", "quality", "audit", "review", "ai", "product", "tool"]):
-            b_score += 20
+        if b["id"] == "qa_review_platform" and any(w in desc_lower for w in ["qa", "quality", "audit", "review", "evaluation", "ai", "product", "tool"]):
+            b_score += 25
+        if b["id"] == "chatbot_kb_maintenance" and any(w in desc_lower for w in ["vector", "database", "knowledge", "rag", "chatbot", "llm"]):
+            b_score += 25
+        if b["id"] == "kpi_reporting" and any(w in desc_lower for w in ["sql", "redash", "quantitative", "complex", "data", "kpi", "reporting", "analytics"]):
+            b_score += 25
         if b["id"] == "cross_country_kb" and any(w in desc_lower for w in ["knowledge", "documentation", "international", "cross", "operations", "support"]):
             b_score += 20
-        if b["id"] == "price_lead_email_tool" and any(w in desc_lower for w in ["automation", "email", "crm", "lead", "process", "admin", "workflow"]):
-            b_score += 20
-        if b["id"] == "reviews_portal" and any(w in desc_lower for w in ["customer", "review", "trustpilot", "experience", "cx", "template", "portal"]):
+        if b["id"] == "price_lead_email_tool" and any(w in desc_lower for w in ["automation", "api", "rest", "low-code", "email", "crm", "lead", "workflow"]):
+            b_score += 25
+        if b["id"] == "reviews_portal" and any(w in desc_lower for w in ["customer", "review", "trustpilot", "git", "github", "portal"]):
             b_score += 20
         scored_bullets.append((b_score, b))
 
@@ -211,59 +217,55 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
     # Tailor core skills order
     all_skills = list(profile["skills"]["core"])
     if cat_id == "ai_automation":
-        all_skills.sort(key=lambda s: 0 if ("AI" in s or "Automation" in s) else 1)
+        all_skills.sort(key=lambda s: 0 if ("AI" in s or "Automation" in s or "Vector" in s) else 1)
     elif cat_id == "product_management":
-        all_skills.sort(key=lambda s: 0 if ("Product" in s or "Tooling" in s) else 1)
+        all_skills.sort(key=lambda s: 0 if ("Product" in s or "Quantitative" in s) else 1)
 
-    # Build tailored Cover Letter paragraphs (inspired by Guillermo's Xentral cover letter)
+    # Build tailored Cover Letter paragraphs
     if cat_id == "ai_automation":
-        hook_focus = "AI-driven workflow automation, internal tooling, and scalable process design"
+        hook_focus = "AI-driven workflow automation, evaluation tooling, vector/knowledge databases, and quantitative data analysis"
         project_highlight = (
-            "Beyond rolling out an AI voice bot across 9 markets (routing 700,000+ calls and boosting inbound answer rates by 20%) "
-            "and maintaining AI knowledge bases for a chatbot handling 30,000+ monthly conversations, I proactively built several internal tools. "
-            "These include an AI Conversation QA web platform with bulk-review features, an automated Price-Lead Offer Email generator integrated with our admin system, "
-            "and a real-time cross-country knowledge base for live multi-market support."
+            "Working embedded in a cross-functional product and operations team, I helped roll out an AI voice bot across 9 markets (routing 700,000+ calls and boosting inbound answer rates by 20%) "
+            "and structured AI knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. Furthermore, I built an internal AI Conversation QA & Evaluation web tool with bulk-review pipelines, "
+            "an automated Price-Lead Offer Email generator integrating internal admin systems and REST APIs, and a real-time cross-country knowledge base."
         )
     elif cat_id == "product_management":
-        hook_focus = "digital product management, internal tool building, and AI-driven workflow improvements"
+        hook_focus = "agile product team execution, quantitative analysis on complex datasets, and AI evaluation tooling"
         project_highlight = (
-            "Alongside helping roll out an AI voice bot (boosting inbound answer rates by 20% across 9 markets) and optimizing a chatbot handling 30,000+ monthly conversations, "
-            "I identified operational bottlenecks and built internal web tools to solve them. Specifically, I created an AI Conversation QA web platform with bulk-review capabilities, "
-            "a centralized Google Reviews & Trustpilot portal with one-click template approvals, and a real-time cross-country knowledge base for live agent collaboration."
+            "Collaborating closely within our cross-functional Product, Tech, and Analytics team, I helped scale an AI voice bot (boosting inbound answer rates by 20% across 9 markets) and maintained knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. "
+            "I also designed and shipped internal product & evaluation tools—including an AI Conversation QA & Evaluation web platform with bulk-review workflows, a Google Reviews & Trustpilot portal (versioned via Git/GitHub), and REST API / low-code workflow automations."
         )
     elif cat_id == "cx_operations":
-        hook_focus = "operational excellence, customer experience optimization, and intelligent workflow automation"
+        hook_focus = "quantitative analysis on complex datasets, SQL reporting, and intelligent workflow automation"
         project_highlight = (
-            "Among my key contributions was scaling an AI voice bot across 9 markets (improving inbound answer rates from 65% to 85%) and maintaining a chatbot handling 30,000+ monthly conversations. "
-            "To further empower our agents, I built a real-time cross-country collaboration knowledge base (enabling markets like NL and BE to support each other live on calls), "
-            "a centralized Google Reviews & Trustpilot reply portal, and an automated Price-Lead Offer Email tool."
+            "Among my key contributions was scaling an AI voice bot across 9 markets (improving inbound answer rates from 65% to 85%) and structuring knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. "
+            "To empower our international teams, I built an AI Conversation QA & Evaluation platform, a real-time cross-country collaboration knowledge base, and an automated Price-Lead Offer Email tool using REST APIs and low-code automation."
         )
     else:  # project_management default
-        hook_focus = "international project coordination, process documentation, and AI-driven operational improvements"
+        hook_focus = "cross-functional product & project execution, quantitative analysis on complex datasets, and AI evaluation tooling"
         project_highlight = (
-            "I have taken responsibility for project documentation, KPI reporting, and stakeholder alignment across nine international markets. "
-            "Alongside supporting the rollout of an AI voice bot (routing 700,000+ calls and boosting inbound answer rates by 20%) and a chatbot managing 30,000+ monthly conversations, "
-            "I delivered practical internal tools—including a real-time cross-country knowledge base, an AI Conversation QA platform with bulk-review workflows, and an automated customer offer email tool."
+            "Working closely with our Product, Tech, and Analytics teams across nine international markets, I supported the rollout of an AI voice bot (routing 700,000+ calls and boosting inbound answer rates by 20%) and structured knowledge/vector databases for a chatbot managing 30,000+ monthly conversations. "
+            "I also built practical internal tools—including an AI Conversation QA & Evaluation platform with bulk-review pipelines, a real-time cross-country knowledge base, and an automated customer offer tool integrating internal admin systems and REST APIs."
         )
 
     paragraphs = [
         (
-            f"After prompting more AIs and automating more workflows than I’d like to admit, I’ve learned that real operational impact happens where "
-            f"people, clear processes, and smart technology meet. That is why I am excited to apply for the {job_title} role at {company}. "
+            f"After prompting more AIs, querying more messy databases, and automating more workflows than I’d like to admit, I’ve learned that real impact happens where "
+            f"product thinking, clean data, and smart technology meet. That is why I am excited to apply for the {job_title} role at {company}. "
             f"With hands-on experience in {hook_focus}, combined with my Bachelor’s in Digital Product Management and current Master’s studies in "
-            f"International Business Management in Berlin, I am eager to help your team streamline workflows and deliver measurable results."
+            f"International Business Management in Berlin, I am eager to help your team turn complex problems into scalable solutions."
         ),
         (
-            f"In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I coordinate across business, tech, product, and customer service teams "
-            f"to drive efficiency across nine markets. {project_highlight}"
+            f"In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment "
+            f"across nine markets. {project_highlight}"
         ),
         (
-            f"I bring strong analytical and organizational skills, hands-on proficiency in Google Workspace, Google Apps Script (JavaScript automation), Looker Studio, Tableau, and Advanced Excel, "
-            f"and a proactive builder mindset. I enjoy creating clarity in fast-paced environments, turning repetitive manual tasks into clean tools, and ensuring projects stay organized and on track. "
+            f"On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. "
+            f"I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. "
             f"Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish."
         ),
         (
-            f"What draws me most to {company} is the opportunity to contribute to a dynamic, forward-thinking team where structured execution and practical innovation make a tangible difference. "
+            f"What draws me most to {company} is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. "
             f"Thank you for considering my application—I would welcome the opportunity to discuss how I can support {company} in this role."
         ),
     ]

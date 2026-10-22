@@ -26,49 +26,49 @@
       "id": "voicebot_rollout",
       "tags": ["project_management", "product_management", "ai_automation", "cx_operations", "core"],
       "priority": 100,
-      "html": "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong>, routing <strong>700,000+ calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, raising call-to-booking rates to <strong>57.8% (+25%)</strong>, and increasing outbound answer rates by <strong>10%</strong>."
+      "html": "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>700,000+ calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
     },
     {
       "id": "chatbot_kb_maintenance",
       "tags": ["ai_automation", "product_management", "cx_operations", "core"],
-      "priority": 95,
-      "html": "Implemented, optimized, and maintained an <strong>AI chatbot and its AI knowledge bases</strong>, overseeing deployment and database improvements now handling <strong>30,000+ monthly conversations</strong>."
+      "priority": 96,
+      "html": "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>."
     },
     {
       "id": "qa_review_platform",
       "tags": ["product_management", "ai_automation", "project_management", "cx_operations", "new_project"],
-      "priority": 92,
-      "html": "Designed and built an internal <strong>AI Conversation QA web tool</strong> featuring <strong>automated workflows and bulk-review capabilities</strong>, enabling agents to audit AI interactions significantly faster and accelerating AI quality improvements."
+      "priority": 94,
+      "html": "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster."
+    },
+    {
+      "id": "kpi_reporting",
+      "tags": ["project_management", "product_management", "cx_operations", "ai_automation", "data_reporting", "core"],
+      "priority": 93,
+      "html": "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers."
     },
     {
       "id": "cross_country_kb",
       "tags": ["project_management", "cx_operations", "product_management", "new_project"],
       "priority": 90,
-      "html": "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market support."
+      "html": "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows."
     },
     {
       "id": "price_lead_email_tool",
       "tags": ["ai_automation", "product_management", "cx_operations", "new_project"],
-      "priority": 88,
-      "html": "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrated with internal admin systems to extract customer data and auto-generate personalized offer emails, reducing manual handling time."
+      "priority": 89,
+      "html": "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails."
     },
     {
       "id": "reviews_portal",
       "tags": ["cx_operations", "product_management", "ai_automation", "new_project"],
-      "priority": 85,
-      "html": "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> with template-based smart reply suggestions, turning manual review discovery into a streamlined <strong>one-click approval workflow</strong>."
-    },
-    {
-      "id": "kpi_reporting",
-      "tags": ["project_management", "cx_operations", "data_reporting", "core"],
-      "priority": 89,
-      "html": "Managed <strong>company-wide KPI reporting</strong>, performance dashboards, and process improvements in collaboration with 3 project managers, scaling operational workflows across international teams."
+      "priority": 86,
+      "html": "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>."
     },
     {
       "id": "cross_functional",
       "tags": ["project_management", "product_management", "core"],
-      "priority": 87,
-      "html": "Collaborated closely with <strong>Business Analytics, Tech, Product, Marketing, and Customer Service teams</strong> to align initiatives with business objectives and drive operational improvements across <strong>9 international markets</strong>."
+      "priority": 88,
+      "html": "Worked embedded in an agile <strong>Product, Tech, Business Analytics, and Operations team</strong> to translate complex operational data into product features, evaluation tools, and scalable processes across <strong>9 international markets</strong>."
     }
   ],
   "experience": [
@@ -87,9 +87,9 @@
       "subtitle": "",
       "dates": "Oct 2023",
       "bullets": [
-        "Conducted <strong>supporting research and data analysis</strong> to propose a new service/subscription model that incentivized sustainability, <strong>boosting client engagement</strong>.",
+        "Conducted <strong>quantitative research and complex data analysis</strong> to propose a new service/subscription model that incentivized sustainability, <strong>boosting client engagement</strong>.",
         "Designed webpages to communicate FSB's sustainable product standards, <strong>enhancing market differentiation</strong>.",
-        "<strong>Collaborated closely with stakeholders</strong> across different business units to ensure alignment and effectiveness of sustainability initiatives."
+        "<strong>Collaborated closely with product and business stakeholders</strong> across units to ensure alignment and effectiveness of digital initiatives."
       ]
     },
     {
@@ -99,7 +99,7 @@
       "subtitle": "",
       "dates": "Jan 2022 – Aug 2022",
       "bullets": [
-        "Managed <strong>inventory levels and purchasing decisions</strong> using <strong>advanced Excel analytics</strong>, resulting in a <strong>15% increase</strong> in stock accuracy and availability.",
+        "Managed <strong>inventory levels and purchasing decisions</strong> using <strong>quantitative analysis and Advanced Excel</strong>, resulting in a <strong>15% increase</strong> in stock accuracy and availability.",
         "Analyzed and incorporated customer feedback to enhance service quality, <strong>leading to a 10% improvement in customer retention</strong>.",
         "Collaborated with cross-functional teams to streamline operations, <strong>reducing processing time by 20%</strong>."
       ]
@@ -139,16 +139,15 @@
   ],
   "skills": {
     "core": [
-      "Agile Project Management",
-      "Stakeholder Guidance & Support",
-      "AI Operations & Knowledge Base Management",
-      "Internal Tooling & Process Automation",
-      "Product Documentation & Reporting",
-      "Data Analysis & KPI Dashboards",
-      "Feedback & Insights Integration"
+      "Product Team Collaboration & Agile Delivery",
+      "Quantitative Analysis on Complex Datasets",
+      "AI Evaluation Tools & Vector / Knowledge Databases",
+      "Low-Code Workflow Automation & Internal Tooling",
+      "SQL Reporting & Disorganized Data Structuring",
+      "Cross-Functional Stakeholder Management"
     ],
-    "technical": "Google Apps Script (JavaScript for Workflow Automation) | Web Tool Development (Internal Portals & QA Tools) | C# (Unity Game Development)",
-    "software": "Microsoft Office (Advanced Excel), Google Workspace & Sheets, Looker Studio, Tableau, Figma, Freshdesk, Photoshop"
+    "technical": "SQL (Redash Querying & Complex Dataset Analysis) | REST APIs & System Integrations | Git, GitHub & Cloud Platforms | Vector Databases, Knowledge Bases & AI Evaluation Tools | Low-Code Automation & Google Apps Script (JavaScript)",
+    "software": "Redash (SQL), GitHub / Git, Looker Studio, Tableau, Advanced Excel & Google Sheets, Figma, Freshdesk, C# (Unity)"
   },
   "languages": [
     { "language": "SPANISH", "level": "Native Speaker" },

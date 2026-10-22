@@ -11,7 +11,16 @@ OUTPUT_DIR = BASE_DIR / "output"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
+import shutil
+
 def find_browser_executable() -> str:
+    # 1. Check PATH (for Linux / Ubuntu GitHub Actions and system installs)
+    for name in ["google-chrome", "google-chrome-stable", "chromium", "chromium-browser", "msedge", "chrome"]:
+        p = shutil.which(name)
+        if p and os.path.exists(p):
+            return p
+
+    # 2. Windows default installation paths
     candidates = [
         r"C:\Program Files\Google\Chrome\Application\chrome.exe",
         r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
@@ -21,7 +30,7 @@ def find_browser_executable() -> str:
     for path in candidates:
         if os.path.exists(path):
             return path
-    raise FileNotFoundError("Neither Google Chrome nor Microsoft Edge was found for PDF generation.")
+    raise FileNotFoundError("Neither Google Chrome nor Microsoft Edge nor Chromium was found for PDF generation.")
 
 
 def load_master_profile() -> Dict[str, Any]:
@@ -87,7 +96,7 @@ def build_cv_html(
 <style>
   @page {{
     size: A4;
-    margin: 7mm 10mm 7mm 10mm;
+    margin: 5.5mm 9mm 5.5mm 9mm;
   }}
   * {{
     box-sizing: border-box;
@@ -96,43 +105,43 @@ def build_cv_html(
   }}
   body {{
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 8.6pt;
-    line-height: 1.24;
+    font-size: 8.35pt;
+    line-height: 1.20;
     color: #1a1a1a;
     background: #fff;
   }}
   .header-box {{
     border: 1px solid #333;
-    padding: 7px 12px;
-    margin-bottom: 6px;
+    padding: 6px 11px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
   }}
   .header-left h1 {{
-    font-size: 14.5pt;
+    font-size: 14pt;
     font-weight: bold;
-    margin-bottom: 2px;
+    margin-bottom: 1.5px;
     color: #111;
   }}
   .header-left p {{
-    font-size: 8.4pt;
+    font-size: 8.2pt;
     color: #333;
-    margin-bottom: 1px;
+    margin-bottom: 0.5px;
   }}
   .header-right a {{
-    font-size: 8.5pt;
+    font-size: 8.3pt;
     color: #111;
     text-decoration: underline;
   }}
   fieldset.section-box {{
     border: 1px solid #333;
-    padding: 5px 12px 7px 12px;
-    margin-bottom: 6px;
+    padding: 4px 11px 5.5px 11px;
+    margin-bottom: 5px;
   }}
   fieldset.section-box legend {{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 8pt;
+    font-size: 7.8pt;
     font-weight: bold;
     letter-spacing: 0.7px;
     padding: 0 5px;
@@ -142,57 +151,57 @@ def build_cv_html(
   }}
   .row-item {{
     display: flex;
-    margin-bottom: 5.5px;
+    margin-bottom: 4.5px;
   }}
   .row-item:last-child {{
     margin-bottom: 0;
   }}
   .left-col {{
-    width: 19%;
-    font-size: 8.2pt;
+    width: 18%;
+    font-size: 8pt;
     color: #333;
     padding-right: 8px;
     flex-shrink: 0;
   }}
   .right-col {{
-    width: 81%;
+    width: 82%;
   }}
   .exp-title {{
     font-weight: bold;
-    font-size: 9pt;
+    font-size: 8.75pt;
     color: #111;
   }}
   .exp-company {{
-    font-size: 8.5pt;
+    font-size: 8.3pt;
     color: #222;
-    margin-bottom: 1px;
+    margin-bottom: 0.5px;
   }}
   .exp-subtitle {{
-    font-size: 8.2pt;
+    font-size: 8pt;
     color: #444;
-    margin-bottom: 2px;
+    margin-bottom: 1.5px;
   }}
   ul.bullet-list {{
-    margin-top: 2px;
+    margin-top: 1.5px;
     padding-left: 14px;
   }}
   ul.bullet-list li {{
-    margin-bottom: 1.5px;
-    font-size: 8.35pt;
+    margin-bottom: 1px;
+    font-size: 8.15pt;
   }}
   .edu-row {{
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }}
   .edu-degree {{
-    font-size: 8.5pt;
+    font-size: 8.3pt;
   }}
   .edu-loc {{
-    font-size: 8.1pt;
+    font-size: 7.9pt;
     color: #333;
   }}
   .skills-content p {{
-    margin-bottom: 2px;
-    font-size: 8.3pt;
+    margin-bottom: 1.5px;
+    font-size: 8.1pt;
   }}
   .skills-content p:last-child {{
     margin-bottom: 0;
@@ -201,7 +210,7 @@ def build_cv_html(
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2px 10px;
-    font-size: 8.2pt;
+    font-size: 8.05pt;
   }}
 </style>
 </head>
@@ -383,6 +392,8 @@ def render_html_to_pdf(html_content: str, output_pdf_path: Path) -> Path:
         browser_exe,
         "--headless",
         "--disable-gpu",
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
         "--no-pdf-header-footer",
         f"--print-to-pdf={str(output_pdf_path.resolve())}",
         temp_html_path.resolve().as_uri(),

@@ -1,0 +1,61 @@
+name: Daily Berlin Job Applier & CV Tailor (Cloud Automation)
+
+on:
+  schedule:
+    # Runs daily at 09:00 Europe/Berlin (07:00 UTC during CEST)
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+    inputs:
+      scrape:
+        description: "Scrape fresh jobs from LinkedIn & Indeed (true/false)"
+        required: false
+        default: "true"
+
+permissions:
+  contents: write
+
+jobs:
+  job-applier:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Europe/Berlin
+      SMTP_HOST: ${{ secrets.SMTP_HOST }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_PASS: ${{ secrets.SMTP_PASS }}
+      SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+      JOB_DASHBOARD_URL: "https://guillermohern023.github.io/berlin-job-applier/"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Chromium & Fonts for Headless PDF Printing
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser fonts-liberation fonts-dejavu-core
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Daily Job Scrape, CV Tailor & Email Digest
+        run: |
+          if [ "${{ github.event.inputs.scrape }}" = "false" ]; then
+            python daily_job_digest.py
+          else
+            python daily_job_digest.py --scrape
+          fi
+
+      - name: Commit & Push Updated Jobs, Tailored PDFs & Dashboard
+        run: |
+          git config user.name "Antigravity Job Applier Bot"
+          git config user.email "guillejhl@gmail.com"
+          git add data/ output/ docs/ latest_job_digest.txt dashboard.html
+          git diff --staged --quiet || (git commit -m "chore(jobs): automated daily scrape, CV tailor & dashboard update [skip ci]" && git push)
