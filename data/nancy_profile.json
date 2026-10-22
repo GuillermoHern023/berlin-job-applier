@@ -1,0 +1,131 @@
+{
+  "personal_info": {
+    "full_name": "Nancy Thuy Dung Schütze",
+    "short_name": "Nancy Schütze",
+    "role_headline_de": "Office Managerin & Werkstudentin Backoffice / Teamassistenz",
+    "role_headline_en": "Office Manager & Working Student Backoffice / Team Assistant",
+    "address": "Teichbergstraße 17, 13125 Berlin",
+    "alt_address": "Söhtstraße 16, 12203 Berlin",
+    "email": "schuetzenancy@gmx.de",
+    "phone": "+49 1523 7164097",
+    "birth_info_de": "17.08.2001 in Berlin | Staatsangehörigkeit: Deutsch",
+    "birth_info_en": "17.08.2001 in Berlin | German Citizen",
+    "photo_path": "nancy_assets/image2.png",
+    "signature_path": "nancy_assets/image3.png"
+  },
+  "target_preferences": {
+    "roles": [
+      "Werkstudentin Office Management",
+      "Office Managerin (Teilzeit / Werkstudent)",
+      "Teamassistenz / Backoffice",
+      "Kanzleiassistenz / Sekretariat",
+      "Empfang & Office Operations"
+    ],
+    "preferred_hub": "Zoologischer Garten / TU Berlin (Charlottenburg / City West)",
+    "nearby_districts": [
+      "Zoologischer Garten", "Charlottenburg", "Kurfürstendamm", "Ku'damm",
+      "Ernst-Reuter-Platz", "Savignyplatz", "Hardenbergstraße", "Kantstraße",
+      "Tiergarten", "City West", "Wilmersdorf", "Halensee", "Schöneberg",
+      "Wittenbergplatz", "Nollendorfplatz", "Potsdamer Platz", "Mitte",
+      "10623", "10625", "10627", "10629", "10719", "10785", "10787", "10789", "10587"
+    ]
+  },
+  "experience_de": [
+    {
+      "dates": "2025 – 2026",
+      "title": "Office Managerin & Kanzleiassistenz",
+      "company": "SERS Rechtsanwaltsgesellschaft mbH",
+      "location": "Berlin",
+      "bullets": [
+        "Eigenverantwortliche Organisation und Steuerung des gesamten Kanzlei- und Sekretariatsbetriebs.",
+        "Professionelle schriftliche und telefonische Kommunikation mit Mandanten, Gerichten und Behörden auf <strong>Deutsch und Englisch (C2)</strong>.",
+        "Strukturierte Dokumentenorganisation, Fristenkontrolle, Aktenführung sowie <strong>vorbereitende Buchhaltung und Rechnungserstellung</strong>.",
+        "Kontinuierliche <strong>Prozessoptimierung, Digitalisierung</strong> von Büroabläufen und Qualitätsmanagement."
+      ]
+    },
+    {
+      "dates": "2023 – 2025",
+      "title": "Junior Projektleitung & Office Operations",
+      "company": "zett.events",
+      "location": "Berlin",
+      "bullets": [
+        "Kaufmännische und organisatorische Planung von Projekten inklusive <strong>Personal-, Event- und Budgetsteuerung</strong>.",
+        "Interne Koordination, Einsatzplanung sowie <strong>Mitarbeiterabrechnungen für Werkstudierende und Aushilfen</strong>.",
+        "Eigenständige <strong>Angebotskalkulation und Rechnungserstellung</strong> sowie Kunden- und Dienstleisterbetreuung.",
+        "Weiterentwicklung interner Verwaltungsstrukturen durch Digitalisierung und Prozessoptimierung."
+      ]
+    },
+    {
+      "dates": "2019 – heute",
+      "title": "Teamleitung Events, Hostess & Promotion (Nebenberuflich)",
+      "company": "Verschiedene Event- und Promotionagenturen",
+      "location": "Berlin & bundesweit",
+      "bullets": [
+        "Vor-Ort-Teamleitung: Check-In, Briefing und <strong>Koordination der Einsatzteams</strong> bei Messen, Kongressen und Corporate Events.",
+        "Direkte Ansprechpartnerin für Auftraggeber vor Ort sowie Sicherstellung eines reibungslosen Serviceablaufs."
+      ]
+    },
+    {
+      "dates": "2021 – 2022",
+      "title": "Werkstudentin Qualitätsmanagement, Recruiting & PR",
+      "company": "Vergleich.org (VGL Publishing AG)",
+      "location": "Berlin",
+      "bullets": [
+        "<strong>Recruiting, Vertragsabwicklung und Onboarding</strong> neuer Freelancer sowie Koordination externer Dienstleister.",
+        "Qualitätssicherung, Lektorat von Produkttexten sowie technische Pflege von XML- und HTML-Dateien."
+      ]
+    },
+    {
+      "dates": "2019 – 2022",
+      "title": "Duale Studentin – Front & Back Office / Hospitality Management",
+      "company": "Accor Hotels (Novotel Suites, Ibis & Ibis Budget)",
+      "location": "Berlin",
+      "bullets": [
+        "Operative Steuerung im <strong>Front- und Back-Office</strong>, Guest Relations sowie professionelles Beschwerdemanagement.",
+        "Mitwirkung in der <strong>Buchhaltung und Vertragsverwaltung</strong> sowie stellvertretende Leitung im Bereich Housekeeping."
+      ]
+    },
+    {
+      "dates": "2013 – 2025",
+      "title": "Kaufmännische Mitarbeit, Einkauf & Kundenbetreuung",
+      "company": "Obst- und Gemüse Karow (Einzelhandels-Familienbetrieb)",
+      "location": "Berlin",
+      "bullets": [
+        "Unterstützung in <strong>Einkauf, Warenlogistik, Bestandskontrolle</strong> und laufender Qualitätssicherung.",
+        "Persönliche Kundenbetreuung, Lieferantenkoordination sowie vorbereitende Kassen- und Tagesabrechnung."
+      ]
+    }
+  ],
+  "education_de": [
+    {
+      "dates": "seit 2026",
+      "degree": "B.Sc. Informatik (Studium)",
+      "institution": "Technische Universität Berlin (Campus Charlottenburg / Zoologischer Garten)",
+      "details": "Aktives Vollzeitstudium direkt am Standort Zoologischer Garten / Ernst-Reuter-Platz"
+    },
+    {
+      "dates": "2019 – 2023",
+      "degree": "B.A. Business Administration (Duales Studium)",
+      "institution": "VICTORIA – Internationale Hochschule, Berlin (Praxispartner: Accor Hotels)",
+      "details": "Vertiefung: Hotel- & Tourismusmanagement | Auslandssemester 2021–2022: Universidad de Girona, Spanien (Marketing & PR)"
+    },
+    {
+      "dates": "2013 – 2019",
+      "degree": "Allgemeine Hochschulreife (Abitur – Gesamtnote: 1,7)",
+      "institution": "Robert-Havemann-Gymnasium, Berlin",
+      "details": ""
+    }
+  ],
+  "skills_de": {
+    "office_management": "Sekretariats- & Kanzleiorganisation | Angebots- & Rechnungserstellung | Vorbereitende Buchhaltung & Lohnabrechnung | Termin-, Reise- & Eventmanagement | Recruiting & Onboarding | Prozessoptimierung & Qualitätsmanagement",
+    "it_software": "Microsoft Office 365 (Excel, Word, PowerPoint, Outlook – fortgeschritten) | Google Workspace | Digitale Akten- & Dokumentenverwaltung | HTML & CSS (gut) | Python (Grundkenntnisse) | DaVinci Resolve & Adobe Audition",
+    "certificates": "Führerschein Klasse B | Gesundheitszeugnis vorhanden"
+  },
+  "languages_de": [
+    { "language": "Deutsch", "level": "Muttersprache" },
+    { "language": "Vietnamesisch", "level": "Muttersprache" },
+    { "language": "Englisch", "level": "C2 (Verhandlungssicher / Proficient)" },
+    { "language": "Spanisch", "level": "B1 (Erprobte Kenntnisse / Auslandssemester)" },
+    { "language": "Katalanisch", "level": "A1 (Zertifikat)" }
+  ]
+}
