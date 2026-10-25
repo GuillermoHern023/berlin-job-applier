@@ -1306,6 +1306,61 @@
     }
   },
   {
+    "id": "efa08ae857",
+    "title": "Product Management Intern (2027) - Berlin",
+    "company": "Databricks",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4473183064",
+    "source": "Linkedin",
+    "date_posted": "2026-10-24",
+    "date_found": "2026-10-25 13:28",
+    "salary": "",
+    "description": "P-1452\n  \n  \nAt Databricks, we are passionate about helping data teams solve the world's toughest problems — from making the next mode of transportation a reality to accelerating the development of medical breakthroughs. We do this by building and running the world's best data and AI infrastructure platform so our customers can use deep data insights to improve their business.\n  \n  \nAs a Product Management Intern, you will join a team that works diligently to understand and solve our customers' most challenging problems\n**.**\nYou will learn how to be a successful PM at a high-growth enterprise technology company that operates at the important intersection of data and AI. You will have a dedicated mentor and will join our 2027 intern cohort where you'll connect with product managers, engineers, designers, account teams, other interns, and leaders from across the company.\n  \n  \nThis is a 12 week paid summer internship program in either Amsterdam, Berlin and Belgrade.\n  \n  \n**The Impact You Will Have**\n\n* Work with a team to build features for the Databricks platform\n* Manage your project end-to-end, including design, code, and feedback\n* Learn about building a platform that scales quickly while maintaining quality and security\n\n**What We Look For**\n\n* Pursuing a degree in computer science or related engineering subject\n* You have some experience with SQL and/or Python\n* You use analytical skills to make data-driven decisions (e.g. analyze product usage)\n* You can make complex topics simple and clearly communicate nuance to partners (engineers, customers, field, etc.) in both written and verbal form\n* You are excited to solve ambiguous problems with a collaborative team\n\n**About Databricks**\nDatabricks is the Data and AI company. More than 20,000 organizations worldwide — including adidas, AT&T, Bayer, Block, Mastercard, Rivian, Unilever, and 70% of the Fortune 500 — rely on the Databricks Data + AI Platform to build and scale data and AI apps, analytics and agents. Headquartered in San Francisco with 30+ offices around the globe, Databricks offers a unified platform that includes Genie, Lakebase, Agent Bricks, Lakeflow, Lakehouse, and Unity Catalog. To learn more, follow Databricks on LinkedIn, X, YouTube, and Instagram.\n  \n  \n**Benefits**\nAt Databricks, we strive to provide comprehensive benefits and perks that meet the needs of all of our employees. For specific details on the benefits offered in your region click here.\n  \n  \n**Our Commitment to Diversity and Inclusion**\nAt Databricks, we are committed to fostering a diverse and inclusive culture where everyone can excel. We take great care to ensure that our hiring practices are inclusive and meet equal employment opportunity standards. Individuals looking for employment at Databricks are considered without regard to age, color, disability, ethnicity, family or marital status, gender identity or expression, language, national origin, physical and mental ability, political affiliation, race, religion, sexual orientation, socio-economic status, veteran status, and other protected characteristics.\n  \n  \n**Compliance**\n**If access to export-controlled technology or source code is required for performance of job duties, it is within Employer's discretion whether to apply for a U.S. government license for such positions, and Employer may decline to proceed with an applicant on this basis alone.**",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "product_management",
+    "category_label": "Product Management",
+    "match_score": 90,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "bot",
+      "agent",
+      "product manager",
+      "product management",
+      "feature",
+      "erp",
+      "sql"
+    ],
+    "why_fits": "Strong Product Management fit. Matches keywords: ai, bot, agent, product manager, product management, feature.",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-10-24)",
+    "applicants_num": 188,
+    "applicants_text": "🔴 188 applicants",
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>700,000+ calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "After prompting more AIs, querying more messy databases, and automating more workflows than I’d like to admit, I’ve learned that real impact happens where product thinking, clean data, and smart technology meet. That is why I am excited to apply for the Product Management Intern (2027) - Berlin role at Databricks. With hands-on experience in agile product team execution, quantitative analysis on complex datasets, and AI evaluation tooling, combined with my Bachelor’s in Digital Product Management and current Master’s studies in International Business Management in Berlin, I am eager to help your team turn complex problems into scalable solutions.",
+        "In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment across nine markets. Collaborating closely within our cross-functional Product, Tech, and Analytics team, I helped scale an AI voice bot (boosting inbound answer rates by 20% across 9 markets) and maintained knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. I also designed and shipped internal product & evaluation tools—including an AI Conversation QA & Evaluation web platform with bulk-review workflows, a Google Reviews & Trustpilot portal (versioned via Git/GitHub), and REST API / low-code workflow automations.",
+        "On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish.",
+        "What draws me most to Databricks is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. Thank you for considering my application—I would welcome the opportunity to discuss how I can support Databricks in this role."
+      ]
+    }
+  },
+  {
     "id": "73099104c9",
     "title": "Working Student- Engineering (m/f/d)",
     "company": "Deepspin",
@@ -1716,6 +1771,58 @@
     }
   },
   {
+    "id": "13f75aa28f",
+    "title": "Only for Erasmus/Turing Internship: AI/IT, Graphic Designer and/or Computer Science&Technologies on MA-Level",
+    "company": "Art & Science Node Berlin (ASN)",
+    "location": "Berlin, BE, Germany",
+    "job_url": "https://join.com/companies/artscience-node/5102095-only-for-erasmus-turing-internship-ai-it-graphic-designer-and-or-computer-science-and-technologies-on-ma-level?pid=a13795120131dbe48464",
+    "source": "Indeed",
+    "date_posted": "2026-10-24",
+    "date_found": "2026-10-25 13:28",
+    "salary": "",
+    "description": "**Our mission**\n\nWITH COMPETENCE\n\nAccompanying, supporting, and disseminating sciences to society with\n\nOur innovative communication strategy through art.\n\n**AMBITIONS**\n\nA**SN** is a platform for sharing knowledge, ideas & experience between scientific & artistic milieus:\n\n– we challenge and promote interdisciplinary excellence in art and science\n\n– we bolster the synergy between art and science for innovation and creativity\n\n– we define and strengthen the role and place of art in the society of knowledge\n\n– we develop an  \nartistic/scientific/research community and network as a source of  \nvaluable knowledge, based on individual and interdisciplinary studies,  \non openness and cooperation.\n\n**Tasks**\n---------\n\nOnly for student with **eligibility** to Erasmus/Turing programs (Mundus, Plus or Pro: \"Erasmus for Young Entrepreneurs\". ). Without sending evidence of eligibility for Erasmus grant, applications will not be considered or answered and will be systematically deleted....!!!\n\nPlease, do not apply if you cannot provide evidence of eligibility for Erasmus grant!\n\n**AI-/IT-Graphic Design and/or Computer Science/Technics students with BA and/or MA level**\n\n* **with Interactive Web Experience Design,** and/or\n* **with Hardware/Software experience**\n\nfor art & science international projects **in Berlin (DE) or Saint Martin (FR)**\n\nStudent with Talent & expertise in AI/IT, Graphic Design: Mostly Illustrator, Photoshop, NoteBook LM, NanoBanana, AntiGravity, etc... Graphic Designer to join us in the construction of a non-commercial augmented reality platform (AR Application and interactive website) for an immersive, digital experience of artworks and future AR artistic projects. The accepted candidate will be working together with the interdisciplinary, science and art team of ASN as a platform (AR Application and interactive website) for an immersive, digital experience of artworks and future AR artistic projects.\n\nStudent with Talent & Expertise in computer science: you should possess excellent problem-solving and critical thinking skills, extensive technical knowledge, and good task management abilities. A top-notch computer technician should be able to optimize systems' efficiency, improve network security, provide timely technical support, and introduce new technology to the organization.\n\nThe accepted candidate will be working together with the interdisciplinary, science and art team of ASN\n\n**as an ERASMUS** i**ntern/student** **in 10777 Berlin (DE) or 97150 St. Martin (FR).**\n\n**The ideal candidate should have:**\n\n* Talent & expertise with AI in Graphic Design: Mostly Illustrator, Photoshop, etc....\n* good design and layout skills in animation – creating and modifying 3D assets making them AR/ interactive implementation ready\n* expertise in programming with major technologies used by iOS & Android app developers, like below:\n* C#, C/C++ programming languages or\n* Swift programming language or\n* Java, JavaScript, Python, Unity,... or\n* visual development tools like Vuforia, ARkit, Wikitude, ARCore, and others\n* experience with 3D mapping, modelling and animation – creating and modifying 3D assets making them AR/ interactive implementation ready\n* good design and layout skills making them AR/ interactive implementation ready\n* exp them AR/ interactive implementation ready\n* good design and layout skills\n* experience working with end users and onboarding new users (i.e. artists who will implement their work onto the developed platform)\n* Good knowledge of computer science & technologies...\n\n**Our expectations:**\n\n* **You have to be eligible for Erasmus funding/support during your study,**\n* Min. excellent Bachelor’s degree in IT, Computer Science & Technologies, a similar degree or comparable experience, preferred on Master level,\n* Ability to create with AI media content for PR & Communication campaigns such as images for thumbnails, advertisements, short videos, 3D/VR/AR etc.\n* Excellent English; German, and/or French and/or Polish are appreciated\n* Strong motivation for connecting the worlds of art and science\n* Deep commitment to ASN ambitions and objectives\n\n**Main tasks:**\n\n* You will be responsible for graphic designing of AR/VR App and interactive web experience creation (WordPress) with supports of AI,\n* You will manage PC-Software & -Hardware,\n* You will be working as part of an international, interdisciplinary team working on art experience based on scientific discoveries and innovations\n* You will be advising, guiding and assisting the team in the technical aspects of platform development\n* You will be managing the developed interactive website – monitoring performance, implementing updates and upgrades promptly.\n\n**Requirements**\n----------------\n\n* Evidence of Eligibility for grant of Erasmus funding/support (Attention: if you are BA or MA student in Germany, you are not eligible for an Erasmus internship in Berlin!!! **Thus, your application for an intern position at ASN will be hopeless if you are studying in Germany...!**)\n* Internship for at least 3 months,\n* Experiences with AI, UnrealEngine & Unity & more...\n\n**Benefits**\n------------\n\n**We are offering:**\n\n* International, positively challenging working environment, combining artistic and scientific milieus\n* Multidisciplinary working fields\n* Knowledge sharing\n* Incentives for creativity & innovation\n* with full CV & Cover Letter till 30.12.2026 (you can send also to management, see ASN-web, under \"contact\").\n* with evidence of grant eligibility for Erasmus-internship (Attention: if you are BA or MA student in Germany, you are not eligible for an Erasmus internship in Berlin but only in France...!!! Thus, once again, your application for an intern position at ASN will be hopeless, rejected without further notice if you are not eligible...!)",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 86,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "prompt",
+      "git",
+      "implementation",
+      "support"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, prompt, git, implementation, support.",
+    "days_ago": 1,
+    "posted_ago": "🔥 Yesterday (2026-10-24)",
+    "applicants_num": 999,
+    "applicants_text": "Direct Portal (No counter)",
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>700,000+ calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows."
+      ],
+      "cover_letter_paragraphs": [
+        "After prompting more AIs, querying more messy databases, and automating more workflows than I’d like to admit, I’ve learned that real impact happens where product thinking, clean data, and smart technology meet. That is why I am excited to apply for the Only for Erasmus/Turing Internship: AI/IT, Graphic Designer and/or Computer Science&Technologies on MA-Level role at Art & Science Node Berlin (ASN). With hands-on experience in AI-driven workflow automation, evaluation tooling, vector/knowledge databases, and quantitative data analysis, combined with my Bachelor’s in Digital Product Management and current Master’s studies in International Business Management in Berlin, I am eager to help your team turn complex problems into scalable solutions.",
+        "In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment across nine markets. Working embedded in a cross-functional product and operations team, I helped roll out an AI voice bot across 9 markets (routing 700,000+ calls and boosting inbound answer rates by 20%) and structured AI knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. Furthermore, I built an internal AI Conversation QA & Evaluation web tool with bulk-review pipelines, an automated Price-Lead Offer Email generator integrating internal admin systems and REST APIs, and a real-time cross-country knowledge base.",
+        "On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish.",
+        "What draws me most to Art & Science Node Berlin (ASN) is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. Thank you for considering my application—I would welcome the opportunity to discuss how I can support Art & Science Node Berlin (ASN) in this role."
+      ]
+    }
+  },
+  {
     "id": "f9e1c5aea5",
     "title": "Werkstudent*in",
     "company": "BIOTRONIK",
@@ -1968,6 +2075,61 @@
     }
   },
   {
+    "id": "541cf922c8",
+    "title": "Venture Development Manager (m/w/d)",
+    "company": "autarc (YC S24)",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4480042601",
+    "source": "Linkedin",
+    "date_posted": "2026-10-22",
+    "date_found": "2026-10-25 13:28",
+    "salary": "",
+    "description": "**About Us**\nFounded in Berlin,\n**autarc**\nis a ~80-person start-up that graduated from Y Combinator in San Francisco. Our team spans Sales, Tech, and Operations. We build software that helps energy installers plan, sell, and deliver home electrification projects faster and with higher quality.\n  \n  \n**Your Impact**\nAre you excited to work on strategic projects that accelerate the energy transition?\n  \n  \nIf you're excited about green-tech, cross-functional projects, and exploring scalable solutions, join us and make an impact.\n  \n  \nYou will work closely with the COO and co-founder and collaborate with Sales, Customer Success, Product, and Tech to drive new initiatives from idea to launch. This role is built for someone who likes ownership, moves fast, and learns directly from customers.\n  \n  \nPlease note: This position is\n**on-site in Berlin (Mitte) and C2-level proficiency in German is required.**\nWhat you’ll do\n  \n  \n\n* Own early product management and cross-team execution for new initiatives: shape value propositions, define MVPs, prioritize features, align stakeholders, and coordinate Sales, Marketing, and Tech for fast, smooth launches\n* Dive quickly into new topics, markets, and customer problems, building a deep understanding through frequent, direct customer conversations\n* Hands-on drive the launch of new digital products and services - from first idea to market rollout - working closely with the co-founders and team\n* Talk to customers daily to uncover pain points, validate solutions, and actively promote, position, and upsell new products and features while iterating based on real-world feedback\n* Support go-to-market execution with sales decks, presentations, and customer-facing materials, and help the team communicate new value clearly\n* Work closely with Product and Design to translate market/customer requirements into concrete product improvements and launch assets\n\n**What You Bring**\n\n* Graduated from a strong university; entrepreneurial mindset\n* Fluent in English and C2 German (required)\n* Experience in a startup environment (or similarly fast-paced setting)\n* Hands-on: you execute, not just coordinate\n* Curious about how tech, operations, and business strategy come together in high-growth companies\n* Structured thinker who’s not afraid to get into details, run the numbers, and execute fast\n* Based in Berlin and willing to work on-site (office in Mitte)\n\n**What We Offer**\n\n* Freedom to choose your own equipment\n* An annual team retreat\n* The choice between Dance or Deutschland Ticket for mobility\n* Urban Sports Club for fitness\n* Regular team events, lunches and activities\n\n**Next steps**\nIf your application is successful, you will participate in the following:\n  \n  \n\n* Screening call with our Lead Venture Development\n* Culture fit call with Thies (COO & Co-Founder)\n* Take home case study (approx. 1 hour)\n* Final on-site interview with our COO Thies and the team\n\n**About Us**\nHeating our buildings causes around 25% of Europe's CO₂ emissions. Decarbonizing it depends on installers – and there are far too few of them to keep up with the growing demand for heat pumps.\n  \n  \nautarc is building the operating system for energy installers across Europe: software that makes planning, designing and installing heat pumps faster and more digital. Our goal is to help plan and design 1 million heat pumps by 2030.\n  \n  \nFounded in Berlin and backed by Y Combinator (S24), we're a team of 60+ people across Sales, Tech and Operations, already serving more than 2,000 customers.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "product_management",
+    "category_label": "Product Management",
+    "match_score": 83,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "product management",
+      "digital product",
+      "feature",
+      "mvp",
+      "stakeholder",
+      "rollout"
+    ],
+    "why_fits": "Strong Product Management fit. Matches keywords: ai, git, product management, digital product, feature, mvp.",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-10-22)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>700,000+ calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "After prompting more AIs, querying more messy databases, and automating more workflows than I’d like to admit, I’ve learned that real impact happens where product thinking, clean data, and smart technology meet. That is why I am excited to apply for the Venture Development Manager (m/w/d) role at autarc (YC S24). With hands-on experience in agile product team execution, quantitative analysis on complex datasets, and AI evaluation tooling, combined with my Bachelor’s in Digital Product Management and current Master’s studies in International Business Management in Berlin, I am eager to help your team turn complex problems into scalable solutions.",
+        "In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment across nine markets. Collaborating closely within our cross-functional Product, Tech, and Analytics team, I helped scale an AI voice bot (boosting inbound answer rates by 20% across 9 markets) and maintained knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. I also designed and shipped internal product & evaluation tools—including an AI Conversation QA & Evaluation web platform with bulk-review workflows, a Google Reviews & Trustpilot portal (versioned via Git/GitHub), and REST API / low-code workflow automations.",
+        "On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish.",
+        "What draws me most to autarc (YC S24) is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. Thank you for considering my application—I would welcome the opportunity to discuss how I can support autarc (YC S24) in this role."
+      ]
+    }
+  },
+  {
     "id": "4f67855bbf",
     "title": "Career Orientation Internship (m/f/d) Management Assistant for Dialogue Marketing",
     "company": "T-Mobile",
@@ -2069,6 +2231,60 @@
         "In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment across nine markets. Working embedded in a cross-functional product and operations team, I helped roll out an AI voice bot across 9 markets (routing 700,000+ calls and boosting inbound answer rates by 20%) and structured AI knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. Furthermore, I built an internal AI Conversation QA & Evaluation web tool with bulk-review pipelines, an automated Price-Lead Offer Email generator integrating internal admin systems and REST APIs, and a real-time cross-country knowledge base.",
         "On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish.",
         "What draws me most to 1KOMMA5° is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. Thank you for considering my application—I would welcome the opportunity to discuss how I can support 1KOMMA5° in this role."
+      ]
+    }
+  },
+  {
+    "id": "53abe67f28",
+    "title": "Product Manager, New Grad (2027) - Berlin",
+    "company": "Databricks",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4473171577",
+    "source": "Linkedin",
+    "date_posted": "2026-10-24",
+    "date_found": "2026-10-25 13:28",
+    "salary": "",
+    "description": "P-1453\n  \n  \nAt Databricks, we are passionate about helping data teams solve the world's toughest problems — from making the next mode of transportation a reality to accelerating the development of medical breakthroughs. We do this by building and running the world's best data and AI infrastructure platform so our customers can use deep data insights to improve their business.\n  \n  \nAs an Associate Product Manager, you will join a team that works diligently to understand and solve our customers’ most challenging problems. We're hiring across all of our teams, including Machine Learning, Unity Catalog, Databricks SQL, ETL, Streaming, EDA, and Content Organization. You will have a dedicated mentor and will join our 2027 APM cohortwhere you'll connect with product managers, engineers, designers, account teams, other interns, and leaders from across the company.\n  \n  \nWe are hiring for Amsterdam, Berlin and Belgrade\n  \n  \n**The Impact You Will Have**\n\n* Work with a team to build features for the Databricks platform\n* Manage your project end-to-end, including design, code, and feedback\n* Learn about building a platform that scales quickly while maintaining quality and security\n\n**What We Look For**\n\n* You will graduate between Fall 2026 and Summer 2027 with a bachelors or masters degree in computer science or related engineering practice\n* You have some experience with SQL and/or Python\n* You can leverage analytical skills to make data-driven decisions (e.g. analyze product usage)\n* You are able to make complex topics simple and clearly communicate nuance to stakeholders (engineers, customers, field, etc.) in both written and verbal form\n* You are excited to solve ambiguous problems with a collaborative team\n\n**About Databricks**\nDatabricks is the Data and AI company. More than 20,000 organizations worldwide — including adidas, AT&T, Bayer, Block, Mastercard, Rivian, Unilever, and 70% of the Fortune 500 — rely on the Databricks Data + AI Platform to build and scale data and AI apps, analytics and agents. Headquartered in San Francisco with 30+ offices around the globe, Databricks offers a unified platform that includes Genie, Lakebase, Agent Bricks, Lakeflow, Lakehouse, and Unity Catalog. To learn more, follow Databricks on LinkedIn, X, YouTube, and Instagram.\n  \n  \n**Benefits**\nAt Databricks, we strive to provide comprehensive benefits and perks that meet the needs of all of our employees. For specific details on the benefits offered in your region click here.\n  \n  \n**Our Commitment to Diversity and Inclusion**\nAt Databricks, we are committed to fostering a diverse and inclusive culture where everyone can excel. We take great care to ensure that our hiring practices are inclusive and meet equal employment opportunity standards. Individuals looking for employment at Databricks are considered without regard to age, color, disability, ethnicity, family or marital status, gender identity or expression, language, national origin, physical and mental ability, political affiliation, race, religion, sexual orientation, socio-economic status, veteran status, and other protected characteristics.\n  \n  \n**Compliance**\n**If access to export-controlled technology or source code is required for performance of job duties, it is within Employer's discretion whether to apply for a U.S. government license for such positions, and Employer may decline to proceed with an applicant on this basis alone.**",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "product_management",
+    "category_label": "Product Management",
+    "match_score": 79,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "bot",
+      "agent",
+      "product manager",
+      "feature",
+      "stakeholder",
+      "sql"
+    ],
+    "why_fits": "Strong Product Management fit. Matches keywords: ai, bot, agent, product manager, feature, stakeholder.",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-10-24)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "After prompting more AIs, querying more messy databases, and automating more workflows than I’d like to admit, I’ve learned that real impact happens where product thinking, clean data, and smart technology meet. That is why I am excited to apply for the Product Manager, New Grad (2027) - Berlin role at Databricks. With hands-on experience in agile product team execution, quantitative analysis on complex datasets, and AI evaluation tooling, combined with my Bachelor’s in Digital Product Management and current Master’s studies in International Business Management in Berlin, I am eager to help your team turn complex problems into scalable solutions.",
+        "In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment across nine markets. Collaborating closely within our cross-functional Product, Tech, and Analytics team, I helped scale an AI voice bot (boosting inbound answer rates by 20% across 9 markets) and maintained knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. I also designed and shipped internal product & evaluation tools—including an AI Conversation QA & Evaluation web platform with bulk-review workflows, a Google Reviews & Trustpilot portal (versioned via Git/GitHub), and REST API / low-code workflow automations.",
+        "On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish.",
+        "What draws me most to Databricks is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. Thank you for considering my application—I would welcome the opportunity to discuss how I can support Databricks in this role."
       ]
     }
   },
@@ -2659,6 +2875,61 @@
     }
   },
   {
+    "id": "43ee775289",
+    "title": "Werkstudent (m/w/d) KI-Agenten & Multi-Agenten-Systeme im HR",
+    "company": "Telefónica Germany",
+    "location": "Teltow, Brandenburg, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4481692369",
+    "source": "Linkedin",
+    "date_posted": "2026-10-23",
+    "date_found": "2026-10-25 13:28",
+    "salary": "",
+    "description": "**Vertragsart:**\nTeilzeit, Befristet für 6 Monate\n  \n  \n**Eintritt:**\nab nächstmöglichem Zeitpunkt\n  \n  \n**Top #Skills: #Multi Agenten Systeme, #Systemintegration, #AI**\n**Flex and Connect – Arbeiten, wo es am produktivsten ist.**\nUnser flexibles Arbeitsmodell bietet dir die Freiheit, deinen Arbeitsort und deine Arbeitszeiten flexibel zu gestalten. Dabei spielt die Anwesenheit in unseren deutschlandweiten Telefónica Deutschland Standorten eine wichtige Rolle: Sie fördert den direkten Austausch, stärkt unsere Unternehmenskultur und trägt zum Aufbau starker Netzwerke bei. So bleibt der Teamgeist auch in einer flexiblen Arbeitswelt ein entscheidender Erfolgsfaktor. Weitere Details zu unserem hybriden Arbeitsmodell besprechen wir im Bewerbungsprozess.\n  \n  \n**Wer wir sind**\nBei uns gestaltest du mit, wie Gesellschaft und Wirtschaft in Deutschland in einer digitalen Welt erfolgreich sein können. Mit unserem starken Netz, unseren Produkten und Services schaffen wir die Grundlage für Verbindung, Teilhabe und digitale Möglichkeiten im Alltag von Millionen Menschen.\n  \n  \nDafür braucht es Menschen, die Technologie mit echten Bedürfnissen verbinden, Herausforderungen als Chancen verstehen und mit zukunftsorientierten Skills neue Lösungen entwickeln. Du gehörst dazu? Dann erwartet dich bei uns nicht einfach ein Job, sondern die Möglichkeit, gemeinsam mit einem starken Team einen spürbaren Unterschied zu machen.\n  \n  \n**Was dich erwartet**\n\n* #Agentic HR: Du wirkst am Aufbau einer agentischen HR-Organisation mit, in der spezialisierte KI-Agenten HR-Prozesse unterstützen, dabei begleitest du die Entwicklung von ersten Ideen und Prototypen bis hin zum produktiven Einsatz\n* #Multi Agenten Systeme: Du unterstützt bei der Konzeption, Entwicklung und Orchestrierung von KI-Agenten mit Microsoft Azure AI, insbesondere mit Azure AI Foundry, Agent Service und Azure OpenAI, dazu gehören auch Prompt Engineering, die Anbindung von Tools und die Gestaltung von Agenten-Workflows\n* #Systemintegration: Du arbeitest an der Anbindung unserer HR-Systeme SAP SuccessFactors, UKG HRServiceDelivery und SAP Employee Central Payroll über APIs und Schnittstellen mit und beschäftigst dich mit Datenmodellen und Datenflüssen\n* #Use Case Design: Du identifizierst und bewertest Einsatzmöglichkeiten für KI-Agenten im HR-Umfeld, beispielsweise im Employee Self-Service, Case Management, bei Payroll-Anfragen oder in Talent-Prozessen\n* #Anforderungsmanagement: Du unterstützt dabei, Anforderungen aus dem HR-Business aufzunehmen, zu strukturieren und als User Stories, Akzeptanzkriterien und Agenten-Spezifikationen zu dokumentieren\n* #Qualitätssicherung: Du testest KI-Agenten, entwickelst passende Evaluationsszenarien und bewertest die Qualität und Zuverlässigkeit ihrer Antworten, die Ergebnisse nutzt du, um Verbesserungen abzuleiten\n* #Responsible AI: Du beschäftigst dich mit Datenschutz, Berechtigungskonzepten, Guardrails und Compliance, damit KI-Agenten auch beim Umgang mit sensiblen HR-Daten verantwortungsvoll eingesetzt werden können\n* #Projektunterstützung: Du bereitest Präsentationen, Demos und Statusberichte vor, unterstützt bei der Abstimmung mit Stakeholdern und behältst offene Aufgaben im Projektmanagement im Blick\n\n**Was du mitbringst**\n\n* Du bist in einem Masterstudium der #Informatik, #Wirtschaftsinformatik, #Data Science, des #Wirtschaftsingenieurwesens oder eines vergleichbaren Studiengangs eingeschrieben\n* Du hast bereits erste praktische Erfahrungen mit #generativer KI, #Large Language Models oder #KI-Agenten gesammelt – beispielsweise in Projekten, Abschlussarbeiten, Hackathons oder Praktika\n* Du verfügst über #Python-Kenntnisse und hast idealerweise bereits mit Frameworks wie #Semantic Kernel, #AutoGen oder #LangChain gearbeitet\n* Du bringst idealerweise erste Erfahrungen mit Microsoft #Azure und #Cloud-Services mit oder möchtest dich in diesem Bereich vertiefen\n* Du interessierst dich für #HR-Prozesse und deren technische Umsetzung, Kenntnisse in #SAP SuccessFactors, #UKG oder #SAP Payroll sind ein Plus\n* Sehr gute Sprachkenntnisse in #Deutsch und #Englisch\n\n**Was wir dir bieten**\n**Modernes, flexibles Arbeitsumfeld:**\nDeine Vorlesungszeiten haben sich geändert? Kein Problem – wir besprechen deine Arbeitszeiten individuell und passen diese gemeinsam auf deine Bedürfnisse an. Wir bieten dir die perfekte Balance zwischen inspirierendem Austausch in unseren modernen Büros in Deutschland und der Flexibilität im Homeoffice. So kannst du produktiv arbeiten und dich mit dem Team vor Ort vernetzen.\n  \n  \n**Weiterbildung & Entwicklung:**\nMit Trainings on the Job und Learning Journeys erreichst du mit uns deine Ziele.\n  \n  \n**Finanzielle Vorteile:**\nDu profitierst von einer Vielzahl an Corporate Benefits, Rabatten auf eigene Produkte & Services sowie Family & Friends Angebote.\n  \n  \n**Gesundheit:**\nUnser „Feel Good“ Programm sorgt dafür, dass es dir gut geht. Unter anderem bieten wir Fitnesskurse, Ernährungsberatungen und Angebote zur Verbesserung der Ergonomie am Arbeitsplatz sowie der Work-Life-Balance an.\n  \n  \n**Soziales Engagement:**\nWir engagieren uns auch außerhalb der Unternehmensgrenzen. Du kannst im Rahmen von Volunteering Days / Holidays oder Spendenläufen soziale Projekte unterstützen.\n  \n  \n**Community:**\nWir fördern ein inklusives Arbeitsumfeld, in dem alle willkommen sind. In unseren Pride-, Youngsters- und Multiculturals-Communities kannst du dich mit anderen Mitarbeitenden vernetzen, austauschen und aktiv eine vielfältige Arbeitswelt gestalten.\n  \n  \n**Unser Commitment**\nBei Telefónica Deutschland arbeiten Menschen aus über 80 Nationalitäten zusammen. Wir schätzen unterschiedliche Perspektiven und Fähigkeiten, Vielfalt ist für unser Schlüssel zum Erfolg. Alle Bewerbungen sind willkommen, unabhängig von Geschlecht, Herkunft, Religion, Alter oder persönlichen Merkmalen und Menschen mit Schwerbehinderung werden gezielt unterstützt.\n  \n  \n**Bewerben leicht gemacht:**\nLade einfach deinen Lebenslauf und deine Zeugnisse hoch – wir kümmern uns um den Rest!\n  \n  \n**Fragen?**\nSchreib uns gern an 📩 de-recruiting@telefonica.com\n  \n  \n**Quick Clicks**\n\n* Zahlen, Daten & Fakten: Telefónica Deutschland\n* Diverse Karrieremöglichkeiten: Karriereseite\n* Ein Blick hinter die Kulissen: Instagram",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 73,
+    "language_req": "German Job Post (Check B1 Fit)",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "prompt",
+      "evaluation",
+      "workflow",
+      "api",
+      "git",
+      "cloud",
+      "bot"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, prompt, evaluation, workflow, api, git.",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-10-23)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>700,000+ calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "After prompting more AIs, querying more messy databases, and automating more workflows than I’d like to admit, I’ve learned that real impact happens where product thinking, clean data, and smart technology meet. That is why I am excited to apply for the Werkstudent (m/w/d) KI-Agenten & Multi-Agenten-Systeme im HR role at Telefónica Germany. With hands-on experience in AI-driven workflow automation, evaluation tooling, vector/knowledge databases, and quantitative data analysis, combined with my Bachelor’s in Digital Product Management and current Master’s studies in International Business Management in Berlin, I am eager to help your team turn complex problems into scalable solutions.",
+        "In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment across nine markets. Working embedded in a cross-functional product and operations team, I helped roll out an AI voice bot across 9 markets (routing 700,000+ calls and boosting inbound answer rates by 20%) and structured AI knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. Furthermore, I built an internal AI Conversation QA & Evaluation web tool with bulk-review pipelines, an automated Price-Lead Offer Email generator integrating internal admin systems and REST APIs, and a real-time cross-country knowledge base.",
+        "On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish.",
+        "What draws me most to Telefónica Germany is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. Thank you for considering my application—I would welcome the opportunity to discuss how I can support Telefónica Germany in this role."
+      ]
+    }
+  },
+  {
     "id": "98b2bfda09",
     "title": "Werkstudent*in Technical Customer Success - AI Products (m/w/d/x)",
     "company": "T-Systems International",
@@ -3166,6 +3437,57 @@
         "In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment across nine markets. Working embedded in a cross-functional product and operations team, I helped roll out an AI voice bot across 9 markets (routing 700,000+ calls and boosting inbound answer rates by 20%) and structured AI knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. Furthermore, I built an internal AI Conversation QA & Evaluation web tool with bulk-review pipelines, an automated Price-Lead Offer Email generator integrating internal admin systems and REST APIs, and a real-time cross-country knowledge base.",
         "On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish.",
         "What draws me most to ENGIE Deutschland is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. Thank you for considering my application—I would welcome the opportunity to discuss how I can support ENGIE Deutschland in this role."
+      ]
+    }
+  },
+  {
+    "id": "9cd29bfd76",
+    "title": "Werkstudent:in Founders Associate",
+    "company": "ecopals",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4481050260",
+    "source": "Linkedin",
+    "date_posted": "2026-10-24",
+    "date_found": "2026-10-25 13:28",
+    "salary": "",
+    "description": "ecopals entwickelt leistungsfähige Additive zur Modifikation von Asphalt und Bitumen. Unsere Technologien kommen in der Straßeninfrastruktur zum Einsatz und verbinden hohe technische Performance mit effizienteren und ressourcenschonenden Lösungen.\n\n  \n\nIn den vergangenen Jahren haben wir unser Geschäft international aufgebaut und sind heute in mehr als zehn europäischen Märkten aktiv. Mit der nächsten Wachstumsphase stehen die weitere internationale Expansion, die Entwicklung zusätzlicher Produktkategorien sowie der Ausbau unserer Vertriebs-, Finanzierungs- und Organisationsstrukturen im Fokus.\n\n  \n\nZur Verstärkung unseres Teams in Berlin suchen wir ab sofort eine\\*n Werkstudierende\\*n (m/w/d) als Founders Associate (Berlin, hybrid).\n\n  \n\n**Aufgaben**\n\n  \n\nIn Deiner Rolle unterstützt Du unser Team in zentralen strategischen Bereichen: von Marktanalysen über Wachstumsprojekte bis hin zur strukturierten Vorbereitung unserer internationalen Skalierung. Du arbeitest an Themen, die für die Weiterentwicklung von ecopals entscheidend sind und erhältst gleichzeitig Einblicke in die operativen Grundlagen unseres Geschäfts, einschließlich ausgewählter Fragestellungen aus Strategie, Produktion und Kommunikation.\n\n  \n\n  \n* Strategische Analysen & Growth: Durchführung von Markt- und Wettbewerbsanalysen, Identifikation von Wachstumspotenzialen und Aufbereitung relevanter Recherchen und Handlungsempfehlungen.\n  \n* Kommunikation & Präsentation: Erstellung von Pitchdecks, Präsentationen und Berichten für externe und interne Stakeholder.\n  \n* CRM & Sales Enablement: Pflege und Weiterentwicklung unseres CRM-Systems, Unterstützung bei der Analyse und Strukturierung von Vertriebspipelines.\n  \n* Supply Chain & Operations: Unterstützung beim Monitoring unserer Lieferkette – von Produktionskapazitäten und Beständen über Auslieferungen bis hin zu Export- und Logistikthemen.\n  \n* Eigenständige Projekte: Entwicklung eigener Ideen, die unsere Prozesse und unser Wachstum verbessern.\n  \n\n  \n\n**Qualifikation**\n\n  \n\n  \n* Fortgeschrittenes Studium in BWL, VWL, Management oder einem verwandten Studiengang.\n  \n* Strukturierte Arbeitsweise und ein hohes Maß an Eigenverantwortung.\n  \n* Starke analytische Fähigkeiten und ein gutes Gespür für Zahlen, Zusammenhänge und Prozesse.\n  \n* Ausgeprägte Kommunikationsstärke, schriftlich und visuell, auf Deutsch und Englisch.\n  \n* Sehr gute Kenntnisse in PowerPoint und Excel; Erfahrungen mit CRM-Tools sowie Interesse an Supply-Chain-/Operations-Themen sind ein Plus sowie ebenfalls Erfahrung in Startup, Beratung oder Bauindustrie.\n  \n* Unternehmerisches Mindset, Hands-on-Mentalität und Interesse an allen Facetten eines schnell wachsenden Startups – von Strategie bis operative Umsetzung.\n  \n\n  \n\n**Benefits**\n\n  \n\n  \n* Strategische Einblicke: Mitarbeit an unternehmensweiten Projekten mit hoher Sichtbarkeit und Relevanz.\n  \n* Verantwortung ab Tag 1: Du gestaltest aktiv mit und treibst eigene Themen voran.\n  \n* Lernkurve & Mentoring: Enge Zusammenarbeit mit einem erfahrenen Team, kontinuierliches Feedback und Entwicklungsmöglichkeiten.\n  \n* Hybrid Work: Büro in Berlin mit Home-Office-Möglichkeiten.\n  \n* Kompetitive Vergütung: Ein faires und marktgerechtes Vergütungsmodell für Werkstudierende.\n  \n* Nachhaltiger Impact: Werde Teil einer Mission, die Infrastruktur neu denkt. Echter Einfluss auf Umwelt und Gesellschaft.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 65,
+    "language_req": "German Job Post (Check B1 Fit)",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "erp",
+      "stakeholder",
+      "operations"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, erp, stakeholder, operations.",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-10-24)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>700,000+ calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows."
+      ],
+      "cover_letter_paragraphs": [
+        "After prompting more AIs, querying more messy databases, and automating more workflows than I’d like to admit, I’ve learned that real impact happens where product thinking, clean data, and smart technology meet. That is why I am excited to apply for the Werkstudent:in Founders Associate role at ecopals. With hands-on experience in AI-driven workflow automation, evaluation tooling, vector/knowledge databases, and quantitative data analysis, combined with my Bachelor’s in Digital Product Management and current Master’s studies in International Business Management in Berlin, I am eager to help your team turn complex problems into scalable solutions.",
+        "In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment across nine markets. Working embedded in a cross-functional product and operations team, I helped roll out an AI voice bot across 9 markets (routing 700,000+ calls and boosting inbound answer rates by 20%) and structured AI knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. Furthermore, I built an internal AI Conversation QA & Evaluation web tool with bulk-review pipelines, an automated Price-Lead Offer Email generator integrating internal admin systems and REST APIs, and a real-time cross-country knowledge base.",
+        "On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish.",
+        "What draws me most to ecopals is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. Thank you for considering my application—I would welcome the opportunity to discuss how I can support ecopals in this role."
       ]
     }
   },
@@ -3687,6 +4009,58 @@
     }
   },
   {
+    "id": "9927096041",
+    "title": "Expansion Working Student (German-speaking)",
+    "company": "Via",
+    "location": "Berlin Metropolitan Area",
+    "job_url": "https://www.linkedin.com/jobs/view/4473399291",
+    "source": "Linkedin",
+    "date_posted": "2026-10-24",
+    "date_found": "2026-10-25 13:28",
+    "salary": "",
+    "description": "Via is using technology to transform transportation around the world. From changing a single person’s daily commute to reducing humanity’s collective environmental footprint — we’ve got huge goals.\n  \n  \nAs an\n**Expansion Working Student**\n, you’ll get a front-row seat to how Via launches and scales new markets around the world. You’ll gain hands-on experience across entrepreneurship, Operations, Product, and Marketing, work on real projects, learn from experienced teammates, and see how different teams come together to bring new ideas to life.\n  \n  \nAnd no two launches look the same. One week, you might be helping launch an on-demand service alongside electric buses; the next, supporting a new university shuttle or an entire city transit system. That’s what makes Expansion so exciting: you’ll get to see the many different ways Via is reimagining public transportation.\n  \n  \nBased in either Paris or Berlin, you’ll support the launch and growth of our services in Germany while also contributing to expansion projects across Via’s global markets.\n  \n  \n*This is a working student position with 20 hours per week, starting as soon as possible, ideally in October or November. We're also open to full-time interns (40 hours/week) for 6 months.*\n**What You'll Do:**\n\n* Contribute to the project planning required to set up Via-enabled mobility services for new partners\n* Lead testing efforts for our new global launches, providing ongoing support as needed to enable and promote project success\n* Ensure that our engineering team is getting the feedback they need to build the best product possible\n* Tap Via’s in-house product, operational, and marketing knowledge base to help partners get the most out of our technology, while contributing to our scaling growth\n* Work collaboratively with our Berlin team, as well as other Via teammates in Paris, London, Berlin, and New York, to test and implement product improvements\n\n**Who You Are:**\n\n* Entrepreneurial and a proactive problem solver; you don’t accept the status quo and are always looking for creative solutions\n* Effective at managing multiple tasks simultaneously and comfortable taking on responsibility\n* Willing to wear multiple hats and work on projects of all types\n* Excellent communicator with the ability to adjust to a variety of stakeholders\n* Eager and available to travel for field tests when needed\n* Fluency in English and German (C2 or above) is required\n\n**What We Offer:**\n  \n  \n\n* Joining a global employer with 1,000+ mobility deployments across 40+ countries\n* Becoming part of a company that was awarded for its commitment to social good:\n\n+ We are one of 17 Ventures That Embody the U.N.’s 17 Sustainability Goals.\n+ Inc. Magazine’s “Best in Business” Awardee in the software category for Companies That Put Purpose Before Profit\n\n* Base salary pay: €15/hour, which amounts to:\n\n+ €2,300 - 2,400 gross per month, based on a 40-hour week\n\n* If you're based in Berlin: a lovely office situated in the heart of Berlin, at Chausseestraße and weekly team lunch and breakfast.\n\nThere has never been a more exciting time to be on the cutting edge of public mobility. Ready to join the ride?\n  \n  \n*Via is an equal opportunity employer.*",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 56,
+    "language_req": "German C1/Fluent Required",
+    "extracted_pay": "€15/h",
+    "matched_keywords": [
+      "ai",
+      "knowledge base",
+      "stakeholder",
+      "operations",
+      "support"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, knowledge base, stakeholder, operations, support.",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-10-24)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>700,000+ calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows."
+      ],
+      "cover_letter_paragraphs": [
+        "After prompting more AIs, querying more messy databases, and automating more workflows than I’d like to admit, I’ve learned that real impact happens where product thinking, clean data, and smart technology meet. That is why I am excited to apply for the Expansion Working Student (German-speaking) role at Via. With hands-on experience in AI-driven workflow automation, evaluation tooling, vector/knowledge databases, and quantitative data analysis, combined with my Bachelor’s in Digital Product Management and current Master’s studies in International Business Management in Berlin, I am eager to help your team turn complex problems into scalable solutions.",
+        "In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment across nine markets. Working embedded in a cross-functional product and operations team, I helped roll out an AI voice bot across 9 markets (routing 700,000+ calls and boosting inbound answer rates by 20%) and structured AI knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. Furthermore, I built an internal AI Conversation QA & Evaluation web tool with bulk-review pipelines, an automated Price-Lead Offer Email generator integrating internal admin systems and REST APIs, and a real-time cross-country knowledge base.",
+        "On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish.",
+        "What draws me most to Via is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. Thank you for considering my application—I would welcome the opportunity to discuss how I can support Via in this role."
+      ]
+    }
+  },
+  {
     "id": "0d1b44a225",
     "title": "Founder's Associate Intern",
     "company": "Heidi Systems",
@@ -3847,6 +4221,57 @@
     }
   },
   {
+    "id": "9f56547fa1",
+    "title": "Praktikum Change Management, Prozess- und Projektmanagement - Center of Change (w/m/d)",
+    "company": "KPMG Deutschland",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4473366313",
+    "source": "Linkedin",
+    "date_posted": "2026-10-24",
+    "date_found": "2026-10-25 13:28",
+    "salary": "",
+    "description": "Begleite KPMG bei den zukünftigen Herausforderungen unserer Kund:innen. Begeistere auch Du Dich für die Vielfalt unserer Fragestellungen und mach gemeinsam mit uns den Unterschied. Unterstütze gemeinsam mit Deinem Team unsere Geschäftsbereiche in allen Aufgaben des Projektmanagements, der Projektadministration, bei Prozessmanagement-Themen, Konzepterstellungen sowie Change- und Kommunikationsthemen.\n  \n  \n**Deine Aufgaben**\nDu willst unsere internen Change-Projekte begleiten und dafür sorgen, dass die Transformationen erfolgreich ablaufen? Dann kannst Du Dich\n**ab dem 1. Januar 2027**\nals Praktikant:in einbringen:\n  \n  \n  \n\n* Du erstellst Analysen für Stakeholder:innen sowie Kommunikations- und Enablementpläne.\n* Du trägst mit Deinen Kompetenzen zur Planung, Organisation und Umsetzung von Change- und Kommunikationsformaten bei.\n* Außerdem unterstützt Du im strategischen und operativen Projekt- sowie im Prozessmanagement.\n* IT-Projekte, insbesondere bei der Schnittstellenkommunikation, werden zusätzlich von Dir unterstützt.\n* Du führst Recherchetätigkeiten und Analysen sowie die projektspezifische Aufbereitung in Form von Präsentationen und Berichten durch.\n* Du beteiligst Dich an der Ausarbeitung interner Richtlinien und Governance.\n\n**Dein Profil**\n\n* Dein Praktikum im Bereich Change Management, Prozess- und Projektmanagement - Center of Change kannst Du bei uns mit einem Studium der Wirtschaftswissenschaften, Psychologie, Sozialwissenschaften oder einer vergleichbaren Studienrichtung, idealerweise mit einem Schwerpunkt in den Bereichen Projekt- & Change Management oder Consulting absolvieren.\n* Bestenfalls konntest Du bereits erste Praxiserfahrungen im Change-, Prozess- und Projektmanagement sammeln.\n* Du bist sicher im Umgang mit den gängigen MS Office-Anwendungen, insbesondere mit PowerPoint und Excel.\n* Sichere Kenntnisse der deutschen und englischen Sprache (C1 oder vergleichbar) runden Deine Qualifikationen ab.\n\n**Deine Benefits**\n\n* **Willkommen im Team**\n  Damit Du von Beginn an voll bei uns durchstarten kannst, begleiten wir Dich mit strukturierten Onboarding-Maßnahmen während der gesamten Orientierungsphase – fachliches und persönliches Mentoring über Deinen gesamten Einsatzzeitraum inklusive.\n* Faire Vergütung Wir sind eine Fair Company. Deshalb ist es für uns selbstverständlich, Dir während Deines Praktikums ein faires Gehalt zu zahlen.\n* Feedback & Entwicklung Vom ersten Tag an bist Du fester Bestandteil des Teams und übernimmst Verantwortung in herausfordernden (Teil-) Projekten. Somit gewinnst Du wertvolle Praxiserfahrung und stellst die Weichen für Deine berufliche Zukunft. Mit regelmäßigem Feedback fördern wir zudem Deine persönliche und fachliche Weiterentwicklung.\n* Wertvolles Karrierenetzwerk Bei unseren YOUnior .Network-Aktivitäten stehen Vernetzung und der gemeinsame Austausch zwischen Auszubildenden, Dual Studierenden, Praktikanten/Praktikantinnen und Werkstudenten/Werkstudentinnen im Fokus.\n* Die abgebildeten Leistungen können je nach Position und Standort leicht variieren.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 50,
+    "language_req": "German Job Post (Check B1 Fit)",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "erp",
+      "stakeholder",
+      "projektmanagement"
+    ],
+    "why_fits": "Strong Project Management fit. Matches keywords: ai, erp, stakeholder, projektmanagement.",
+    "days_ago": 0,
+    "posted_ago": "🔥 23 hours ago (2026-10-25)",
+    "applicants_num": 51,
+    "applicants_text": "🟡 51 applicants",
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>700,000+ calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Worked embedded in an agile <strong>Product, Tech, Business Analytics, and Operations team</strong> to translate complex operational data into product features, evaluation tools, and scalable processes across <strong>9 international markets</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "After prompting more AIs, querying more messy databases, and automating more workflows than I’d like to admit, I’ve learned that real impact happens where product thinking, clean data, and smart technology meet. That is why I am excited to apply for the Praktikum Change Management, Prozess- und Projektmanagement - Center of Change (w/m/d) role at KPMG Deutschland. With hands-on experience in cross-functional product & project execution, quantitative analysis on complex datasets, and AI evaluation tooling, combined with my Bachelor’s in Digital Product Management and current Master’s studies in International Business Management in Berlin, I am eager to help your team turn complex problems into scalable solutions.",
+        "In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment across nine markets. Working closely with our Product, Tech, and Analytics teams across nine international markets, I supported the rollout of an AI voice bot (routing 700,000+ calls and boosting inbound answer rates by 20%) and structured knowledge/vector databases for a chatbot managing 30,000+ monthly conversations. I also built practical internal tools—including an AI Conversation QA & Evaluation platform with bulk-review pipelines, a real-time cross-country knowledge base, and an automated customer offer tool integrating internal admin systems and REST APIs.",
+        "On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish.",
+        "What draws me most to KPMG Deutschland is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. Thank you for considering my application—I would welcome the opportunity to discuss how I can support KPMG Deutschland in this role."
+      ]
+    }
+  },
+  {
     "id": "18d3679f2b",
     "title": "Intern Strategic Projects (w/m/d)",
     "company": "Enpal",
@@ -3895,6 +4320,58 @@
         "In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment across nine markets. Working closely with our Product, Tech, and Analytics teams across nine international markets, I supported the rollout of an AI voice bot (routing 700,000+ calls and boosting inbound answer rates by 20%) and structured knowledge/vector databases for a chatbot managing 30,000+ monthly conversations. I also built practical internal tools—including an AI Conversation QA & Evaluation platform with bulk-review pipelines, a real-time cross-country knowledge base, and an automated customer offer tool integrating internal admin systems and REST APIs.",
         "On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish.",
         "What draws me most to Enpal is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. Thank you for considering my application—I would welcome the opportunity to discuss how I can support Enpal in this role."
+      ]
+    }
+  },
+  {
+    "id": "8eae40985c",
+    "title": "Expansion Intern (German-speaking)",
+    "company": "Via",
+    "location": "Berlin Metropolitan Area",
+    "job_url": "https://www.linkedin.com/jobs/view/4473399293",
+    "source": "Linkedin",
+    "date_posted": "2026-10-24",
+    "date_found": "2026-10-25 13:28",
+    "salary": "",
+    "description": "Via is using technology to transform transportation around the world. From changing a single person’s daily commute to reducing humanity’s collective environmental footprint — we’ve got huge goals.\n  \n  \nAs an\n**Expansion Intern**\n, you’ll get a front-row seat to how Via launches and scales new markets around the world. You’ll gain hands-on experience across entrepreneurship, Operations, Product, and Marketing, work on real projects, learn from experienced teammates, and see how different teams come together to bring new ideas to life.\n  \n  \nAnd no two launches look the same. One week, you might be helping launch an on-demand service alongside electric buses; the next, supporting a new university shuttle or an entire city transit system. That’s what makes Expansion so exciting: you’ll get to see the many different ways Via is reimagining public transportation.\n  \n  \nBased in either Paris or Berlin, you’ll support the launch and growth of our services in Germany while also contributing to expansion projects across Via’s global markets.\n  \n  \n*This is a full-time internship (40 hours/week) for 6 months, starting as soon as possible, ideally in October or November. We're also open to working students.*\n**What You'll Do:**\n\n* Contribute to the project planning required to set up Via-enabled mobility services for new partners\n* Lead testing efforts for our new global launches, providing ongoing support as needed to enable and promote project success\n* Ensure that our engineering team is getting the feedback they need to build the best product possible\n* Tap Via’s in-house product, operational, and marketing knowledge base to help partners get the most out of our technology, while contributing to our scaling growth\n* Work collaboratively with our Berlin team, as well as other Via teammates in Paris, London, Berlin, and New York, to test and implement product improvements\n\n**Who You Are:**\n\n* Entrepreneurial and a proactive problem solver; you don’t accept the status quo and are always looking for creative solutions\n* Effective at managing multiple tasks simultaneously and comfortable taking on responsibility\n* Willing to wear multiple hats and work on projects of all types\n* Excellent communicator with the ability to adjust to a variety of stakeholders\n* Eager and available to travel for field tests when needed\n* Fluency in English and German (C2 or above) is required\n\n**What We Offer:**\n  \n  \n\n* Joining a global employer with 1,000+ mobility deployments across 40+ countries\n* Becoming part of a company that was awarded for its commitment to social good:\n\n+ We are one of 17 Ventures That Embody the U.N.’s 17 Sustainability Goals.\n+ Inc. Magazine’s “Best in Business” Awardee in the software category for Companies That Put Purpose Before Profit\n\n* Base salary pay: €15/hour, which amounts to:\n\n+ €2,300 - 2,400 gross per month, based on a 40-hour week\n\n* If you're based in Berlin: a lovely office situated in the heart of Berlin, at Chausseestraße and weekly team lunch and breakfast.\n\nThere has never been a more exciting time to be on the cutting edge of public mobility. Ready to join the ride?\n  \n  \n*Via is an equal opportunity employer.*",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 48,
+    "language_req": "German C1/Fluent Required",
+    "extracted_pay": "€15/h",
+    "matched_keywords": [
+      "ai",
+      "knowledge base",
+      "stakeholder",
+      "operations",
+      "support"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, knowledge base, stakeholder, operations, support.",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-10-24)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>700,000+ calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows."
+      ],
+      "cover_letter_paragraphs": [
+        "After prompting more AIs, querying more messy databases, and automating more workflows than I’d like to admit, I’ve learned that real impact happens where product thinking, clean data, and smart technology meet. That is why I am excited to apply for the Expansion Intern (German-speaking) role at Via. With hands-on experience in AI-driven workflow automation, evaluation tooling, vector/knowledge databases, and quantitative data analysis, combined with my Bachelor’s in Digital Product Management and current Master’s studies in International Business Management in Berlin, I am eager to help your team turn complex problems into scalable solutions.",
+        "In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment across nine markets. Working embedded in a cross-functional product and operations team, I helped roll out an AI voice bot across 9 markets (routing 700,000+ calls and boosting inbound answer rates by 20%) and structured AI knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. Furthermore, I built an internal AI Conversation QA & Evaluation web tool with bulk-review pipelines, an automated Price-Lead Offer Email generator integrating internal admin systems and REST APIs, and a real-time cross-country knowledge base.",
+        "On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish.",
+        "What draws me most to Via is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. Thank you for considering my application—I would welcome the opportunity to discuss how I can support Via in this role."
       ]
     }
   },
