@@ -131,19 +131,27 @@ def build_nancy_cv_docx(
     r_name.font.color.rgb = DARK_RGB
 
     p_hl = left_cell.add_paragraph()
-    p_hl.paragraph_format.space_after = Pt(4)
-    r_hl = p_hl.add_run(headline)
+    p_hl.paragraph_format.space_after = Pt(2)
+    r_hl = p_hl.add_run(p.get("motto_keywords", headline))
     r_hl.bold = True
     r_hl.font.name = "Segoe UI"
-    r_hl.font.size = Pt(10.5)
+    r_hl.font.size = Pt(9.8)
     r_hl.font.color.rgb = NAVY_RGB
+
+    if p.get("about_me_de"):
+        p_abt = left_cell.add_paragraph()
+        p_abt.paragraph_format.space_after = Pt(3)
+        r_abt = p_abt.add_run(p["about_me_de"])
+        r_abt.font.name = "Segoe UI"
+        r_abt.font.size = Pt(8.3)
+        r_abt.font.color.rgb = MUTED_RGB
 
     p_c1 = left_cell.add_paragraph()
     p_c1.paragraph_format.space_after = Pt(1.5)
     _append_html_runs(
         p_c1,
         f"<strong>Adresse:</strong> {p['address']}    |    <strong>Mobil:</strong> {p['phone']}",
-        font_size_pt=8.7,
+        font_size_pt=8.5,
         color=MUTED_RGB,
     )
 
@@ -151,8 +159,8 @@ def build_nancy_cv_docx(
     p_c2.paragraph_format.space_after = Pt(2)
     _append_html_runs(
         p_c2,
-        f"<strong>E-Mail:</strong> {p['email']}    |    <strong>Geboren:</strong> {p['birth_info_de']}",
-        font_size_pt=8.7,
+        f"<strong>E-Mail:</strong> {p['email']}    |    <strong>LinkedIn:</strong> {p.get('linkedin_label', 'LinkedIn Profile')}",
+        font_size_pt=8.5,
         color=MUTED_RGB,
     )
 
@@ -160,12 +168,12 @@ def build_nancy_cv_docx(
         p_img = right_cell.paragraphs[0]
         p_img.alignment = WD_ALIGN_PARAGRAPH.RIGHT
         p_img.paragraph_format.space_after = Pt(0)
-        p_img.add_run().add_picture(str(photo_file), width=Mm(26.5))
+        p_img.add_run().add_picture(str(photo_file), width=Mm(26))
 
     # Divider line under header
     p_div = doc.add_paragraph()
     p_div.paragraph_format.space_before = Pt(0)
-    p_div.paragraph_format.space_after = Pt(3)
+    p_div.paragraph_format.space_after = Pt(2.5)
     _add_bottom_border(p_div, color_hex=NAVY_HEX, size="14")
 
     # 2. Berufserfahrung Section
@@ -176,34 +184,34 @@ def build_nancy_cv_docx(
         row = exp_table.rows[idx]
         c_date = row.cells[0]
         c_body = row.cells[1]
-        c_date.width = Mm(29)
-        c_body.width = Mm(157)
-        _set_cell_margins(c_date, top=25, bottom=25, left=0, right=60)
-        _set_cell_margins(c_body, top=25, bottom=25, left=0, right=0)
+        c_date.width = Mm(28)
+        c_body.width = Mm(158)
+        _set_cell_margins(c_date, top=18, bottom=18, left=0, right=50)
+        _set_cell_margins(c_body, top=18, bottom=18, left=0, right=0)
 
         p_dt = c_date.paragraphs[0]
         p_dt.paragraph_format.space_after = Pt(0)
         r_dt = p_dt.add_run(exp["dates"])
         r_dt.bold = True
         r_dt.font.name = "Segoe UI"
-        r_dt.font.size = Pt(8.6)
+        r_dt.font.size = Pt(8.4)
         r_dt.font.color.rgb = MUTED_RGB
 
         p_title = c_body.paragraphs[0]
-        p_title.paragraph_format.space_after = Pt(1.5)
+        p_title.paragraph_format.space_after = Pt(1)
         _append_html_runs(
             p_title,
             f"<strong>{exp['title']}</strong> | <strong>{exp['company']}</strong>, {exp['location']}",
-            font_size_pt=9.1,
+            font_size_pt=8.9,
             color=DARK_RGB,
         )
 
-        for b in exp["bullets"]:
+        for b in exp.get("bullets", []):
             p_b = c_body.add_paragraph()
             p_b.paragraph_format.left_indent = Mm(3.5)
             p_b.paragraph_format.first_line_indent = Mm(-3.5)
-            p_b.paragraph_format.space_after = Pt(1.2)
-            _append_html_runs(p_b, f"•  {b}", font_size_pt=8.65, color=DARK_RGB)
+            p_b.paragraph_format.space_after = Pt(1)
+            _append_html_runs(p_b, f"•  {b}", font_size_pt=8.4, color=DARK_RGB)
 
     # 3. Bildungsweg Section
     _add_section_heading(doc, "Bildungsweg")
@@ -213,17 +221,17 @@ def build_nancy_cv_docx(
         row = edu_table.rows[idx]
         c_date = row.cells[0]
         c_body = row.cells[1]
-        c_date.width = Mm(29)
-        c_body.width = Mm(157)
-        _set_cell_margins(c_date, top=20, bottom=20, left=0, right=60)
-        _set_cell_margins(c_body, top=20, bottom=20, left=0, right=0)
+        c_date.width = Mm(28)
+        c_body.width = Mm(158)
+        _set_cell_margins(c_date, top=16, bottom=16, left=0, right=50)
+        _set_cell_margins(c_body, top=16, bottom=16, left=0, right=0)
 
         p_dt = c_date.paragraphs[0]
         p_dt.paragraph_format.space_after = Pt(0)
         r_dt = p_dt.add_run(edu["dates"])
         r_dt.bold = True
         r_dt.font.name = "Segoe UI"
-        r_dt.font.size = Pt(8.6)
+        r_dt.font.size = Pt(8.4)
         r_dt.font.color.rgb = MUTED_RGB
 
         p_deg = c_body.paragraphs[0]
@@ -231,28 +239,29 @@ def build_nancy_cv_docx(
         _append_html_runs(
             p_deg,
             f"<strong>{edu['degree']}</strong> | {edu['institution']}",
-            font_size_pt=9.0,
+            font_size_pt=8.8,
             color=DARK_RGB,
         )
         if edu.get("details"):
             p_det = c_body.add_paragraph()
             p_det.paragraph_format.space_after = Pt(1)
-            _append_html_runs(p_det, edu["details"], font_size_pt=8.4, color=MUTED_RGB)
+            _append_html_runs(p_det, edu["details"], font_size_pt=8.2, color=MUTED_RGB)
 
     # 4. Fachkompetenzen & IT-Kenntnisse
     _add_section_heading(doc, "Fachkompetenzen & IT-Kenntnisse")
     lang_str = "  •  ".join(f"<strong>{l['language']}:</strong> {l['level']}" for l in profile["languages_de"])
 
     skills_lines = [
-        f"<strong>Office & Administration:</strong> {profile['skills_de']['office_management']}",
+        f"<strong>Office & Organisation:</strong> {profile['skills_de']['office_management']}",
         f"<strong>Software & IT:</strong> {profile['skills_de']['it_software']}",
+        f"<strong>Film & Audio:</strong> {profile['skills_de'].get('film_audio', 'DaVinci Resolve · Wondershare Filmora · Adobe Audition CC 2019')}",
         f"<strong>Sprachen:</strong> {lang_str}",
-        f"<strong>Sonstiges:</strong> {profile['skills_de']['certificates']}",
+        f"<strong>Nachweise & Mobilität:</strong> {profile['skills_de']['certificates']}",
     ]
     for s_line in skills_lines:
         ps = doc.add_paragraph()
-        ps.paragraph_format.space_after = Pt(2.5)
-        _append_html_runs(ps, s_line, font_size_pt=8.65, color=DARK_RGB)
+        ps.paragraph_format.space_after = Pt(2)
+        _append_html_runs(ps, s_line, font_size_pt=8.45, color=DARK_RGB)
 
     # 5. Footer Signature Table
     sig_table = doc.add_table(rows=1, cols=2)

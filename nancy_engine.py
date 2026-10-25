@@ -51,7 +51,12 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
 
     exp_html = ""
     for exp in profile["experience_de"]:
-        bullets_html = "\n".join(f"<li>{b}</li>" for b in exp["bullets"])
+        bullets = exp.get("bullets", [])
+        if bullets:
+            bullets_html = "\n".join(f"<li>{b}</li>" for b in bullets)
+            b_list_html = f'<ul class="bullet-list">{bullets_html}</ul>'
+        else:
+            b_list_html = ""
         exp_html += f"""
         <div class="row-item">
           <div class="left-col">{exp["dates"]}</div>
@@ -60,9 +65,7 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
               <span class="exp-title">{exp["title"]}</span>
               <span class="exp-company"> | <strong>{exp["company"]}</strong>, {exp["location"]}</span>
             </div>
-            <ul class="bullet-list">
-              {bullets_html}
-            </ul>
+            {b_list_html}
           </div>
         </div>
         """
@@ -92,7 +95,7 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
 <style>
   @page {{
     size: A4;
-    margin: 9mm 12mm 8mm 12mm;
+    margin: 7mm 11mm 6mm 11mm;
   }}
   * {{
     box-sizing: border-box;
@@ -101,11 +104,11 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
   }}
   body {{
     font-family: "Segoe UI", Calibri, Arial, sans-serif;
-    font-size: 8.85pt;
-    line-height: 1.29;
+    font-size: 8.5pt;
+    line-height: 1.25;
     color: #1e293b;
     background: #fff;
-    height: 279mm;
+    height: 283mm;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -115,63 +118,73 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #1e3a8a;
-    padding-bottom: 8px;
-    margin-bottom: 9px;
+    padding-bottom: 6px;
+    margin-bottom: 7px;
   }}
   .header-info {{
     flex: 1;
-    padding-right: 16px;
+    padding-right: 14px;
   }}
   .header-info h1 {{
-    font-size: 17pt;
+    font-size: 16.5pt;
     font-weight: 700;
     color: #0f172a;
     letter-spacing: 0.3px;
     margin-bottom: 2px;
   }}
-  .header-info .headline {{
-    font-size: 10.2pt;
-    font-weight: 600;
+  .header-info .motto {{
+    font-size: 9.2pt;
+    font-weight: 700;
     color: #1e3a8a;
-    margin-bottom: 6px;
+    margin-bottom: 2.5px;
+  }}
+  .header-info .about-me {{
+    font-size: 8.2pt;
+    color: #475569;
+    margin-bottom: 5px;
+    line-height: 1.25;
   }}
   .contact-grid {{
     display: grid;
     grid-template-columns: auto auto;
-    gap: 2.5px 18px;
-    font-size: 8.5pt;
+    gap: 2px 16px;
+    font-size: 8.35pt;
     color: #334155;
   }}
+  .contact-grid a {{
+    color: #1e3a8a;
+    text-decoration: underline;
+  }}
   .photo-box img {{
-    width: 80px;
-    height: 102px;
+    width: 78px;
+    height: 98px;
     object-fit: cover;
     border-radius: 5px;
     border: 1.5px solid #cbd5e1;
   }}
   .section-block {{
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }}
   .section-title {{
-    font-size: 8.9pt;
+    font-size: 8.75pt;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.9px;
     color: #1e3a8a;
     border-bottom: 1.2px solid #cbd5e1;
     padding-bottom: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }}
   .row-item {{
     display: flex;
-    margin-bottom: 6.5px;
+    margin-bottom: 5px;
   }}
   .row-item:last-child {{
     margin-bottom: 0;
   }}
   .left-col {{
     width: 15.5%;
-    font-size: 8.4pt;
+    font-size: 8.25pt;
     font-weight: 600;
     color: #475569;
     padding-right: 8px;
@@ -181,63 +194,63 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
     width: 84.5%;
   }}
   .exp-header {{
-    margin-bottom: 1.5px;
+    margin-bottom: 1px;
   }}
   .exp-title {{
     font-weight: 700;
-    font-size: 9.15pt;
+    font-size: 8.95pt;
     color: #0f172a;
   }}
   .exp-company {{
-    font-size: 8.75pt;
+    font-size: 8.55pt;
     color: #334155;
   }}
   ul.bullet-list {{
-    padding-left: 15px;
-    margin-top: 1.5px;
+    padding-left: 14px;
+    margin-top: 1px;
   }}
   ul.bullet-list li {{
-    margin-bottom: 1.5px;
-    font-size: 8.55pt;
+    margin-bottom: 1px;
+    font-size: 8.3pt;
   }}
   .edu-row {{
-    margin-bottom: 5.5px;
+    margin-bottom: 4px;
   }}
   .edu-degree {{
-    font-size: 8.9pt;
+    font-size: 8.7pt;
     color: #0f172a;
   }}
   .edu-details {{
-    font-size: 8.35pt;
+    font-size: 8.15pt;
     color: #475569;
-    margin-top: 1px;
+    margin-top: 0.5px;
   }}
   .skills-box p {{
-    margin-bottom: 3.5px;
-    font-size: 8.55pt;
-    line-height: 1.32;
+    margin-bottom: 2.5px;
+    font-size: 8.25pt;
+    line-height: 1.27;
   }}
   .skills-box p:last-child {{
     margin-bottom: 0;
   }}
   .footer-sig {{
-    margin-top: 6px;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-top: 5px;
+    padding-top: 4px;
     border-top: 1px solid #e2e8f0;
   }}
   .sig-block {{
     text-align: center;
   }}
   .sig-block img {{
-    height: 34px;
+    height: 32px;
     display: block;
     margin: 0 auto -2px auto;
   }}
   .sig-line {{
-    font-size: 8.3pt;
+    font-size: 8.15pt;
     color: #475569;
     border-top: 1px solid #94a3b8;
     padding-top: 2px;
@@ -250,12 +263,13 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
     <div class="header-container">
       <div class="header-info">
         <h1>{p["full_name"]}</h1>
-        <div class="headline">{headline}</div>
+        <div class="motto">{p.get("motto_keywords", headline)}</div>
+        <div class="about-me">{p.get("about_me_de", "")}</div>
         <div class="contact-grid">
           <span><strong>Adresse:</strong> {p["address"]}</span>
           <span><strong>Mobil:</strong> {p["phone"]}</span>
           <span><strong>E-Mail:</strong> {p["email"]}</span>
-          <span><strong>Geboren:</strong> {p["birth_info_de"]}</span>
+          <span><strong>LinkedIn:</strong> <a href="{p['linkedin_url']}" target="_blank">{p['linkedin_label']}</a></span>
         </div>
       </div>
       <div class="photo-box">
@@ -276,10 +290,11 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
     <div class="section-block" style="margin-bottom: 0;">
       <div class="section-title">Fachkompetenzen &amp; IT-Kenntnisse</div>
       <div class="skills-box">
-        <p><strong>Office &amp; Administration:</strong> {profile["skills_de"]["office_management"]}</p>
+        <p><strong>Office &amp; Organisation:</strong> {profile["skills_de"]["office_management"]}</p>
         <p><strong>Software &amp; IT:</strong> {profile["skills_de"]["it_software"]}</p>
+        <p><strong>Film &amp; Audio:</strong> {profile["skills_de"].get("film_audio", "DaVinci Resolve · Wondershare Filmora · Adobe Audition CC 2019")}</p>
         <p><strong>Sprachen:</strong> {lang_items}</p>
-        <p><strong>Sonstiges:</strong> {profile["skills_de"]["certificates"]}</p>
+        <p><strong>Nachweise &amp; Mobilität:</strong> {profile["skills_de"]["certificates"]}</p>
       </div>
     </div>
   </div>
