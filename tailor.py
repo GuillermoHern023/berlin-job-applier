@@ -221,52 +221,49 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
     elif cat_id == "product_management":
         all_skills.sort(key=lambda s: 0 if ("Product" in s or "Quantitative" in s) else 1)
 
-    # Build tailored Cover Letter paragraphs
+    # Build tailored Cover Letter paragraphs without emdashes or rigid keyword copying
     if cat_id == "ai_automation":
-        hook_focus = "AI-driven workflow automation, evaluation tooling, vector/knowledge databases, and quantitative data analysis"
         project_highlight = (
-            "Working embedded in a cross-functional product and operations team, I helped roll out an AI voice bot across 9 markets (routing 700,000+ calls and boosting inbound answer rates by 20%) "
-            "and structured AI knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. Furthermore, I built an internal AI Conversation QA & Evaluation web tool with bulk-review pipelines, "
-            "an automated Price-Lead Offer Email generator integrating internal admin systems and REST APIs, and a real-time cross-country knowledge base."
+            "A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. "
+            "I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality."
         )
     elif cat_id == "product_management":
-        hook_focus = "agile product team execution, quantitative analysis on complex datasets, and AI evaluation tooling"
         project_highlight = (
-            "Collaborating closely within our cross-functional Product, Tech, and Analytics team, I helped scale an AI voice bot (boosting inbound answer rates by 20% across 9 markets) and maintained knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. "
-            "I also designed and shipped internal product & evaluation tools—including an AI Conversation QA & Evaluation web platform with bulk-review workflows, a Google Reviews & Trustpilot portal (versioned via Git/GitHub), and REST API / low-code workflow automations."
+            "Embedded in an agile cross-functional product environment, I helped scale our conversational AI tooling across 9 international markets, routing millions of calls while improving answer rates by 20%. "
+            "To support our operational workflows, I have designed and deployed internal evaluation tools, including an AI conversation QA web platform with bulk review pipelines, a centralized review management portal versioned via GitHub, and automated dispatch workflows."
         )
     elif cat_id == "cx_operations":
-        hook_focus = "quantitative analysis on complex datasets, SQL reporting, and intelligent workflow automation"
         project_highlight = (
-            "Among my key contributions was scaling an AI voice bot across 9 markets (improving inbound answer rates from 65% to 85%) and structuring knowledge/vector databases for a chatbot handling 30,000+ monthly conversations. "
-            "To empower our international teams, I built an AI Conversation QA & Evaluation platform, a real-time cross-country collaboration knowledge base, and an automated Price-Lead Offer Email tool using REST APIs and low-code automation."
+            "My key initiatives include optimizing an international AI voice bot that scaled to route millions of calls (raising inbound answer rates from 65% to 85%), as well as structuring retrieval knowledge bases for an AI chatbot handling 30,000+ monthly customer chats. "
+            "To empower operational teams, I built an automated multi-market knowledge base, an AI QA review web application, and API-driven customer communication tools."
         )
     else:  # project_management default
-        hook_focus = "cross-functional product & project execution, quantitative analysis on complex datasets, and AI evaluation tooling"
         project_highlight = (
-            "Working closely with our Product, Tech, and Analytics teams across nine international markets, I supported the rollout of an AI voice bot (routing 700,000+ calls and boosting inbound answer rates by 20%) and structured knowledge/vector databases for a chatbot managing 30,000+ monthly conversations. "
-            "I also built practical internal tools—including an AI Conversation QA & Evaluation platform with bulk-review pipelines, a real-time cross-country knowledge base, and an automated customer offer tool integrating internal admin systems and REST APIs."
+            "Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. "
+            "I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems."
         )
 
     paragraphs = [
         (
-            f"After prompting more AIs, querying more messy databases, and automating more workflows than I’d like to admit, I’ve learned that real impact happens where "
-            f"product thinking, clean data, and smart technology meet. That is why I am excited to apply for the {job_title} role at {company}. "
-            f"With hands-on experience in {hook_focus}, combined with my Bachelor’s in Digital Product Management and current Master’s studies in "
-            f"International Business Management in Berlin, I am eager to help your team turn complex problems into scalable solutions."
+            f"I am writing to express my strong interest in the {job_title} role at {company}. "
+            f"Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, "
+            f"I have learned that the greatest value comes from combining analytical rigor with practical builder execution. "
+            f"With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, "
+            f"I am eager to contribute this hands-on, problem-solving mindset to your team."
         ),
         (
-            f"In my current role as a Junior Project Manager (Working Student) at Auto1 Group in Berlin, I work embedded in a cross-functional product and operations environment "
-            f"across nine markets. {project_highlight}"
+            f"In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. "
+            f"{project_highlight}"
         ),
         (
-            f"On the analytical and technical side, I perform quantitative analysis on complex, disorganized datasets daily—using SQL in Redash, Advanced Excel, Looker Studio, and Tableau to build reliable company-wide KPI reporting. "
-            f"I am comfortable working with Git/GitHub, REST APIs, cloud platforms, low-code automation tools (such as Google Apps Script), and custom evaluation/vector databases. "
-            f"Working in an international Berlin environment has also strengthened my German (B1) alongside my fluent English and native Spanish."
+            f"Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. "
+            f"In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. "
+            f"When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. "
+            f"Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1)."
         ),
         (
-            f"What draws me most to {company} is the opportunity to contribute to a dynamic, product-driven team where quantitative rigor and practical builder execution make a tangible difference. "
-            f"Thank you for considering my application—I would welcome the opportunity to discuss how I can support {company} in this role."
+            f"What particularly excites me about {company} is the opportunity to bring this mix of analytical curiosity and builder execution to your team. "
+            f"Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support {company} in this role."
         ),
     ]
 

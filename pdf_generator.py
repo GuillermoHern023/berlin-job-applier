@@ -280,7 +280,7 @@ def build_cover_letter_html(
 <style>
   @page {{
     size: A4;
-    margin: 20mm 22mm 20mm 22mm;
+    margin: 18mm 22mm 18mm 22mm;
   }}
   * {{
     box-sizing: border-box;
@@ -288,61 +288,69 @@ def build_cover_letter_html(
     padding: 0;
   }}
   body {{
-    font-family: Calibri, "Segoe UI", Arial, sans-serif;
-    font-size: 11pt;
-    line-height: 1.5;
-    color: #1a1a1a;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #1e293b;
     background: #fff;
   }}
   .top-header {{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 1.5px solid #222;
-    padding-bottom: 6px;
-    margin-bottom: 14px;
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
   }}
   .sender-name {{
-    font-size: 15pt;
-    font-weight: 600;
-    color: #111;
+    font-size: 16.5pt;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.2px;
   }}
   .sender-contact {{
     text-align: right;
-    font-size: 10pt;
-    line-height: 1.35;
-    color: #222;
+    font-size: 9.5pt;
+    line-height: 1.4;
+    color: #475569;
   }}
   .meta-row {{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 24px;
-    font-size: 10.5pt;
+    margin-bottom: 18px;
+    font-size: 10pt;
+    color: #334155;
   }}
   .recipient-info div {{
     margin-bottom: 2px;
   }}
   .job-subject {{
-    font-weight: 600;
-    margin-top: 4px;
+    font-weight: 700;
+    font-size: 11pt;
+    color: #0f172a;
+    margin-top: 6px;
   }}
   .date-col {{
-    font-style: italic;
-    color: #333;
+    font-size: 9.5pt;
+    color: #64748b;
   }}
   .salutation {{
-    margin-bottom: 14px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 12px;
   }}
   .letter-body p {{
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     text-align: left;
+    color: #334155;
   }}
   .sign-off {{
-    margin-top: 24px;
+    margin-top: 20px;
+    color: #334155;
   }}
   .sign-off p {{
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }}
 </style>
 </head>

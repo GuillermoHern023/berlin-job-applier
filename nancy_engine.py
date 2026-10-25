@@ -95,7 +95,7 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
 <style>
   @page {{
     size: A4;
-    margin: 7mm 11mm 6mm 11mm;
+    margin: 8mm 11mm 6mm 11mm;
   }}
   * {{
     box-sizing: border-box;
@@ -104,22 +104,18 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
   }}
   body {{
     font-family: "Segoe UI", Calibri, Arial, sans-serif;
-    font-size: 8.5pt;
-    line-height: 1.25;
+    font-size: 8.25pt;
+    line-height: 1.22;
     color: #1e293b;
     background: #fff;
-    height: 283mm;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }}
   .header-container {{
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #1e3a8a;
-    padding-bottom: 6px;
-    margin-bottom: 7px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
   }}
   .header-info {{
     flex: 1;
@@ -136,19 +132,19 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
     font-size: 9.2pt;
     font-weight: 700;
     color: #1e3a8a;
-    margin-bottom: 2.5px;
+    margin-bottom: 2px;
   }}
   .header-info .about-me {{
-    font-size: 8.2pt;
+    font-size: 8.15pt;
     color: #475569;
-    margin-bottom: 5px;
-    line-height: 1.25;
+    margin-bottom: 4px;
+    line-height: 1.22;
   }}
   .contact-grid {{
     display: grid;
     grid-template-columns: auto auto;
-    gap: 2px 16px;
-    font-size: 8.35pt;
+    gap: 1.5px 16px;
+    font-size: 8.2pt;
     color: #334155;
   }}
   .contact-grid a {{
@@ -156,14 +152,14 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
     text-decoration: underline;
   }}
   .photo-box img {{
-    width: 78px;
-    height: 98px;
+    width: 76px;
+    height: 96px;
     object-fit: cover;
     border-radius: 5px;
     border: 1.5px solid #cbd5e1;
   }}
   .section-block {{
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }}
   .section-title {{
     font-size: 8.75pt;
@@ -173,25 +169,25 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
     color: #1e3a8a;
     border-bottom: 1.2px solid #cbd5e1;
     padding-bottom: 2px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }}
   .row-item {{
     display: flex;
-    margin-bottom: 5px;
+    margin-bottom: 3.5px;
   }}
   .row-item:last-child {{
     margin-bottom: 0;
   }}
   .left-col {{
-    width: 15.5%;
-    font-size: 8.25pt;
+    width: 14.5%;
+    font-size: 8.1pt;
     font-weight: 600;
     color: #475569;
     padding-right: 8px;
     flex-shrink: 0;
   }}
   .right-col {{
-    width: 84.5%;
+    width: 85.5%;
   }}
   .exp-header {{
     margin-bottom: 1px;
@@ -234,18 +230,18 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
     margin-bottom: 0;
   }}
   .footer-sig {{
-    margin-top: 5px;
+    margin-top: 6px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding-top: 4px;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid #cbd5e1;
   }}
   .sig-block {{
     text-align: center;
   }}
   .sig-block img {{
-    height: 32px;
+    height: 28px;
     display: block;
     margin: 0 auto -2px auto;
   }}
@@ -269,7 +265,8 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
           <span><strong>Adresse:</strong> {p["address"]}</span>
           <span><strong>Mobil:</strong> {p["phone"]}</span>
           <span><strong>E-Mail:</strong> {p["email"]}</span>
-          <span><strong>LinkedIn:</strong> <a href="{p['linkedin_url']}" target="_blank">{p['linkedin_label']}</a></span>
+          <span><strong>Geboren:</strong> {p.get("birth_info_de", "17.08.2001 in Berlin")}</span>
+          <span style="grid-column: span 2;"><strong>LinkedIn:</strong> <a href="{p['linkedin_url']}" target="_blank">{p['linkedin_label']}</a></span>
         </div>
       </div>
       <div class="photo-box">
