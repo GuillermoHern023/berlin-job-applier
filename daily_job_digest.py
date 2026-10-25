@@ -267,7 +267,8 @@ def build_job_cards_email_html(jobs_list, is_nancy=False, limit=5):
     return "\n".join(rows_html)
 
 
-def format_daily_job_email(g_jobs, n_jobs):
+def format_daily_job_email(g_jobs, n_jobs, recipients=None):
+    target_recipients = recipients or RECIPIENT_EMAILS
     today_str = datetime.now().strftime("%b %d, %Y")
     g_ready = sum(1 for j in g_jobs if j.get("cv_url"))
     n_ready = sum(1 for j in n_jobs if j.get("cv_url"))
@@ -393,7 +394,7 @@ def format_daily_job_email(g_jobs, n_jobs):
           <!-- Footer -->
           <tr>
             <td style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; padding: 14px 20px; text-align: center; color: #94a3b8; font-size: 11px; line-height: 1.6;">
-              Delivered automatically to {', '.join(RECIPIENT_EMAILS)} • Antigravity Job Applier Engine<br>
+              Delivered automatically to {', '.join(target_recipients)} • Antigravity Job Applier Engine<br>
               <a href="{GOOGLE_SHEET_URL}" style="color: #059669; text-decoration: none; font-weight: 700;">Google Sheet Tracker</a> &nbsp;|&nbsp;
               <a href="{REMOTE_WEB_URL}" style="color: #4f46e5; text-decoration: none; font-weight: 700;">Live Web Dashboard</a>
             </td>
@@ -409,7 +410,8 @@ def format_daily_job_email(g_jobs, n_jobs):
     return subject, plain_text, html_email
 
 
-def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs):
+def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs, recipients=None):
+    target_recipients = recipients or RECIPIENT_EMAILS
     smtp_host = os.environ.get("SMTP_HOST")
     smtp_port = int(os.environ.get("SMTP_PORT", 587))
     smtp_user = os.environ.get("SMTP_USER")
@@ -432,7 +434,7 @@ def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs):
                     if k == "SENDER_EMAIL" and not sender_email:
                         sender_email = v
 
-    recipients_str = ", ".join(RECIPIENT_EMAILS)
+    recipients_str = ", ".join(target_recipients)
     REPORT_TXT_PATH.write_text(f"Subject: {subject}\nTo: {recipients_str}\n\n{plain_text}", encoding="utf-8")
     print(f"[5/5] Saved plain-text report to {REPORT_TXT_PATH}")
 
@@ -486,7 +488,7 @@ def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs):
         server = smtplib.SMTP(smtp_host, smtp_port, timeout=20)
         server.starttls()
         server.login(smtp_user, smtp_pass)
-        server.sendmail(sender_email, RECIPIENT_EMAILS, msg.as_string())
+        server.sendmail(sender_email, target_recipients, msg.as_string())
         server.quit()
         print(f"[SUCCESS] Rich HTML Job Digest + CV attachments sent to {recipients_str}!")
         return True
@@ -498,6 +500,15 @@ def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs):
 def main():
     do_scrape = ("--scrape" in sys.argv)
     no_email = ("--no-email" in sys.argv)
+    custom_recipients = None
+
+    for arg in sys.argv:
+        if arg == "--only-guillermo":
+            custom_recipients = ["guillejhl@gmail.com"]
+        elif arg == "--only-nancy":
+            custom_recipients = ["schuetzenc@gmail.com"]
+        elif arg.startswith("--recipient="):
+            custom_recipients = [arg.split("=", 1)[1].strip()]
 
     g_jobs, n_jobs = run_fresh_scrape_if_requested(do_scrape=do_scrape)
     g_jobs, n_jobs = ensure_top_jobs_tailored(g_jobs, n_jobs)
@@ -511,8 +522,8 @@ def main():
         print(f"  -> Google Sheets sync warning: {e}")
 
     if not no_email:
-        subject, plain_text, html_email = format_daily_job_email(g_jobs, n_jobs)
-        send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs)
+        subject, plain_text, html_email = format_daily_job_email(g_jobs, n_jobs, recipients=custom_recipients)
+        send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs, recipients=custom_recipients)
 
 
 if __name__ == "__main__":
