@@ -2,8 +2,8 @@ name: Daily Berlin Job Applier & CV Tailor (Cloud Automation)
 
 on:
   schedule:
-    # Runs 2x daily (08:30 & 16:30 Europe/Berlin) to constantly prune stale jobs (>1.5 weeks) and ingest fresh ones
-    - cron: "30 6,14 * * *"
+    # Runs 3x daily (08:00, 14:00, 20:00 Europe/Berlin) to search fresh jobs, prune stale roles (>10 days), and cycle the feed
+    - cron: "0 7,13,19 * * *"
   workflow_dispatch:
     inputs:
       scrape:
