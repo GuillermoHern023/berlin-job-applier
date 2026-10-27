@@ -4,7 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Berlin Job Hub • Indeed & LinkedIn Auto-Applier</title>
+  <script>
+    // Prevent flash of wrong theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && (document.documentElement.classList.contains('dark') || window.matchMedia('(prefers-color-scheme: dark)').matches))) {
+      document.documentElement.classList.add('dark');
+    } else if (savedTheme === 'light') {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,6 +27,30 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: #191919;
       background-color: #f3f2ef;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .dark body {
+      background-color: #0f141c;
+      color: #e2e8f0;
+    }
+    .dark .portal-card {
+      background: #18202f !important;
+      border-color: #263346 !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    }
+    .dark .portal-card:hover {
+      border-color: #3b4d66 !important;
+      background-color: #1e283b !important;
+    }
+    .dark .portal-card.active-job {
+      border-color: #38bdf8 !important;
+      background-color: #1b263b !important;
+      box-shadow: 0 0 0 1px #38bdf8, 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    }
+    .dark.user-nancy .portal-card.active-job {
+      border-color: #f472b6 !important;
+      background-color: #2b1728 !important;
+      box-shadow: 0 0 0 1px #f472b6, 0 4px 12px rgba(0, 0, 0, 0.3) !important;
     }
     .portal-card {
       background: #ffffff;
@@ -45,7 +83,7 @@
 <body class="min-h-full flex flex-col user-nancy" id="appBody">
 
   <!-- Top Global Navigation Bar (LinkedIn Style) -->
-  <header class="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-sm">
+  <header class="sticky top-0 z-40 bg-white dark:bg-[#141b26] border-b border-gray-200 dark:border-slate-800 shadow-sm transition-colors">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
       
       <!-- Brand & User Profile Switcher -->
@@ -55,7 +93,7 @@
             in
           </div>
           <div class="hidden sm:block">
-            <div class="text-sm font-bold text-gray-900 leading-tight">Berlin Job Hub</div>
+            <div class="text-sm font-bold text-gray-900 dark:text-white leading-tight">Berlin Job Hub</div>
             <div class="text-[10px] text-gray-500 font-medium">Indeed &amp; LinkedIn Career Command</div>
           </div>
         </div>
@@ -63,7 +101,7 @@
         <div class="h-6 w-px bg-gray-200 mx-1"></div>
 
         <!-- User Toggle Switcher (Nancy vs Guillermo) -->
-        <div class="flex items-center bg-gray-100 p-0.5 rounded-lg border border-gray-200 text-xs font-semibold">
+        <div class="flex items-center bg-gray-100 dark:bg-slate-800/90 p-0.5 rounded-lg border border-gray-200 dark:border-slate-700 text-xs font-semibold">
           <button id="userTabNancy" onclick="switchUser('nancy')" class="px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-white text-pink-700 shadow-sm">
             <span>👩 Nancy (Office &amp; Assistenz)</span>
           </button>
@@ -75,7 +113,13 @@
 
       <!-- Right Action Tools -->
       <div class="flex items-center gap-2">
-        <button onclick="openAutofillModal()" class="px-3 py-1.5 text-xs font-medium bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 rounded-md transition flex items-center gap-1.5">
+        <!-- Dark Mode Toggle Button -->
+        <button id="themeToggleBtn" onclick="toggleDarkMode()" class="px-2.5 py-1.5 rounded-md border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 text-xs font-semibold transition flex items-center gap-1.5 shadow-sm" title="Zwischen Hell- und Dunkelmodus wechseln">
+          <span id="themeToggleIcon">🌙</span>
+          <span id="themeToggleText" class="hidden sm:inline">Dunkel</span>
+        </button>
+
+        <button onclick="openAutofillModal()" class="px-3 py-1.5 text-xs font-medium bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60 rounded-md transition flex items-center gap-1.5">
           <span>⚡ 1-Click Autofill Helper</span>
         </button>
 
@@ -100,33 +144,33 @@
   <main class="max-w-[1440px] w-full mx-auto px-3 sm:px-6 py-4 flex-1 flex flex-col">
     
     <!-- Top Filter & Search Bar -->
-    <div class="bg-white border border-gray-200 rounded-lg p-3.5 mb-4 shadow-sm space-y-3">
+    <div class="bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-lg p-3.5 mb-4 shadow-sm space-y-3 transition-colors">
       <!-- Search Input row -->
       <div class="flex flex-col sm:flex-row gap-2.5">
         <div class="relative flex-1">
           <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
             🔍
           </span>
-          <input id="searchInput" type="text" oninput="renderJobs()" placeholder="Position, Stichwort, Firma, z.B. Office Manager, Kanzlei, HR, Backoffice..." class="w-full pl-9 pr-3 py-2 bg-gray-50 border border-gray-300 rounded-md text-xs sm:text-sm text-gray-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          <input id="searchInput" type="text" oninput="renderJobs()" placeholder="Position, Stichwort, Firma, z.B. Office Manager, Kanzlei, HR, Backoffice..." class="w-full pl-9 pr-3 py-2 bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md text-xs sm:text-sm text-gray-900 dark:text-gray-100 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
 
         <div class="flex flex-wrap sm:flex-nowrap gap-2">
           <!-- Workplace Model Filter -->
-          <select id="workModelFilter" onchange="renderJobs()" class="bg-gray-50 border border-gray-300 rounded-md px-3 py-2 text-xs font-medium text-gray-700 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <select id="workModelFilter" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="HYBRID_REMOTE" selected>🏠 Nur Hybrid &amp; Remote (Kein 100% Vor-Ort)</option>
             <option value="ALL">🏢 Alle Arbeitsmodelle (Inkl. Vor-Ort)</option>
             <option value="REMOTE_ONLY">🏡 Nur 100% Remote</option>
           </select>
 
           <!-- Portal Filter -->
-          <select id="sourceFilter" onchange="renderJobs()" class="bg-gray-50 border border-gray-300 rounded-md px-3 py-2 text-xs font-medium text-gray-700 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <select id="sourceFilter" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="ALL">🌐 Alle Portale (Indeed &amp; LinkedIn)</option>
             <option value="INDEED">🔷 Nur Indeed</option>
             <option value="LINKEDIN">🔗 Nur LinkedIn</option>
           </select>
 
           <!-- Sort -->
-          <select id="sortBy" onchange="renderJobs()" class="bg-gray-50 border border-gray-300 rounded-md px-3 py-2 text-xs font-medium text-gray-700 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <select id="sortBy" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="NEWEST" selected>⚡ Neueste Stellen zuerst</option>
             <option value="MATCH">⭐ Höchste Passung</option>
           </select>
@@ -165,7 +209,7 @@
       </div>
 
       <!-- RIGHT COLUMN: Active Job Detail & Command Panel (Sticky) -->
-      <div class="hidden lg:flex flex-1 flex-col bg-white border border-gray-200 rounded-lg shadow-sm sticky top-[76px] max-h-[calc(100vh-210px)] overflow-hidden" id="jobDetailContainer">
+      <div class="hidden lg:flex flex-1 flex-col bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-lg shadow-sm sticky top-[76px] max-h-[calc(100vh-210px)] overflow-hidden transition-colors" id="jobDetailContainer">
         <!-- Selected job details injected here -->
       </div>
 
@@ -254,7 +298,24 @@
     let currentStatusFilter = 'ACTIVE';
     let selectedJobId = null;
 
+    function toggleDarkMode() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      updateThemeToggleUi();
+      applyUserTheme();
+      renderJobs();
+    }
+
+    function updateThemeToggleUi() {
+      const isDark = document.documentElement.classList.contains('dark');
+      const icon = document.getElementById('themeToggleIcon');
+      const text = document.getElementById('themeToggleText');
+      if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+      if (text) text.textContent = isDark ? 'Hell' : 'Dunkel';
+    }
+
     function init() {
+      updateThemeToggleUi();
       // Check user from URL hash or default
       const hash = window.location.hash || '';
       if (hash.includes('guillermo')) {
@@ -282,18 +343,27 @@
       const tabG = document.getElementById('userTabGuillermo');
       const masterBtn = document.getElementById('navMasterCvBtn');
 
+      const isDark = document.documentElement.classList.contains('dark');
       if (activeUser === 'nancy') {
         body.className = 'min-h-full flex flex-col user-nancy';
-        tabN.className = 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-white text-pink-700 shadow-sm font-bold';
-        tabG.className = 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-600 hover:text-gray-900 font-medium';
+        tabN.className = isDark 
+          ? 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-[#2b1728] text-pink-300 shadow-sm font-bold border border-pink-500/30'
+          : 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-white text-pink-700 shadow-sm font-bold';
+        tabG.className = isDark
+          ? 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-400 hover:text-gray-200 font-medium'
+          : 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-600 hover:text-gray-900 font-medium';
         if (masterBtn) {
           masterBtn.href = 'files/Nancy_Schuetze_Lebenslauf_Master.pdf';
           masterBtn.innerHTML = '<span>📄 Nancys Lebenslauf PDF</span>';
         }
       } else {
         body.className = 'min-h-full flex flex-col user-guillermo';
-        tabG.className = 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-white text-blue-700 shadow-sm font-bold';
-        tabN.className = 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-600 hover:text-gray-900 font-medium';
+        tabG.className = isDark
+          ? 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-[#17253b] text-blue-300 shadow-sm font-bold border border-blue-500/30'
+          : 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-white text-blue-700 shadow-sm font-bold';
+        tabN.className = isDark
+          ? 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-400 hover:text-gray-200 font-medium'
+          : 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-600 hover:text-gray-900 font-medium';
         if (masterBtn) {
           masterBtn.href = 'files/Guillermo_Hernandez_CV_Master.pdf';
           masterBtn.innerHTML = '<span>📄 Guillermos CV PDF</span>';
@@ -462,14 +532,14 @@
             <div class="flex items-start gap-3">
               
               <!-- Company Initial Avatar -->
-              <div class="w-10 h-10 rounded-md bg-gray-100 border border-gray-200 flex items-center justify-center font-bold text-gray-700 text-base shrink-0">
+              <div class="w-10 h-10 rounded-md bg-gray-100 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 flex items-center justify-center font-bold text-gray-700 dark:text-gray-200 text-base shrink-0">
                 ${initial}
               </div>
 
               <!-- Main Card Info -->
               <div class="flex-1 min-w-0">
                 <div class="flex items-start justify-between gap-1">
-                  <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 line-clamp-2 leading-snug">
+                  <h3 class="text-sm font-bold text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 line-clamp-2 leading-snug">
                     ${j.title}
                   </h3>
                   <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold ${score >= 90 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-gray-100 text-gray-700'} shrink-0 ml-1">
@@ -477,7 +547,7 @@
                   </span>
                 </div>
 
-                <div class="text-xs text-gray-600 font-medium mt-0.5 truncate">
+                <div class="text-xs text-gray-600 dark:text-gray-400 font-medium mt-0.5 truncate">
                   ${j.company} &bull; ${j.location || 'Berlin'}
                 </div>
 
@@ -510,7 +580,7 @@
                   ` : ''}
                 </div>
 
-                <div class="text-[11px] text-gray-500 mt-2 line-clamp-1">
+                <div class="text-[11px] text-gray-500 dark:text-gray-400 mt-2 line-clamp-1">
                   ${j.why_fits || ''}
                 </div>
               </div>
@@ -560,18 +630,18 @@
 
       container.innerHTML = `
         <!-- Sticky Detail Header -->
-        <div class="p-5 border-b border-gray-200 bg-white">
+        <div class="p-5 border-b border-gray-200 dark:border-slate-800 bg-white dark:bg-[#18202f]">
           <div class="flex items-start justify-between gap-4">
             <div class="flex items-start gap-3.5">
-              <div class="w-12 h-12 rounded-lg bg-gray-100 border border-gray-200 flex items-center justify-center font-black text-gray-700 text-xl shrink-0">
+              <div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 flex items-center justify-center font-black text-gray-700 dark:text-gray-200 text-xl shrink-0">
                 ${initial}
               </div>
               <div>
-                <h2 class="text-lg font-bold text-gray-900 leading-snug">
+                <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100 leading-snug">
                   ${job.title}
                 </h2>
-                <div class="text-xs text-gray-600 mt-0.5 flex flex-wrap items-center gap-1.5 font-medium">
-                  <span class="font-bold text-gray-900">${job.company}</span>
+                <div class="text-xs text-gray-600 dark:text-gray-300 mt-0.5 flex flex-wrap items-center gap-1.5 font-medium">
+                  <span class="font-bold text-gray-900 dark:text-white">${job.company}</span>
                   <span>&bull;</span>
                   <span>📍 ${job.location || 'Berlin'}</span>
                   <span>&bull;</span>
@@ -610,7 +680,7 @@
             </div>
 
             <div class="flex items-center gap-2">
-              <select onchange="markStatus('${job.id}', this.value)" class="bg-gray-50 border border-gray-200 rounded-md px-2.5 py-1.5 text-xs text-gray-700 font-medium">
+              <select onchange="markStatus('${job.id}', this.value)" class="bg-gray-50 dark:bg-[#121721] border border-gray-200 dark:border-slate-700 rounded-md px-2.5 py-1.5 text-xs text-gray-700 dark:text-gray-200 font-medium">
                 ${['New', 'Ready to Apply', 'Applied', 'Interview', 'Not Interested'].map(s => `<option value="${s}" ${job.status === s ? 'selected' : ''}>${s}</option>`).join('')}
               </select>
             </div>
@@ -618,10 +688,10 @@
         </div>
 
         <!-- Detail Tabs & Body Content -->
-        <div class="flex-1 overflow-y-auto p-5 space-y-5 bg-[#fafafa]">
+        <div class="flex-1 overflow-y-auto p-5 space-y-5 bg-[#fafafa] dark:bg-[#121721]">
           
           <!-- Box 1: Tailored Cover Letter (Instant Copy Ready) -->
-          <div class="bg-white border border-purple-200 rounded-lg p-4 shadow-sm space-y-3">
+          <div class="bg-white dark:bg-[#18202f] border border-purple-200 dark:border-purple-900/60 rounded-lg p-4 shadow-sm space-y-3">
             <div class="flex items-center justify-between border-b border-gray-100 pb-2">
               <div class="flex items-center gap-1.5 text-xs font-bold text-purple-900">
                 <span>✍️ Maßgeschneidertes Anschreiben für diese Stelle</span>
@@ -631,7 +701,7 @@
               </button>
             </div>
 
-            <textarea id="clDetailTextarea" rows="10" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-md text-xs text-gray-800 leading-relaxed font-sans focus:bg-white focus:outline-none focus:ring-1 focus:ring-purple-500">${clText}</textarea>
+            <textarea id="clDetailTextarea" rows="10" class="w-full p-3 bg-gray-50 dark:bg-[#121721] border border-gray-200 dark:border-slate-700 rounded-md text-xs text-gray-800 dark:text-gray-200 leading-relaxed font-sans focus:bg-white dark:focus:bg-[#0f141c] focus:outline-none focus:ring-1 focus:ring-purple-500">${clText}</textarea>
             
             <div class="text-[11px] text-gray-500 flex items-center justify-between">
               <span>👉 Text anklicken &amp; kopieren, um ihn direkt in Indeed oder das Portal einzufügen.</span>
@@ -642,18 +712,18 @@
           </div>
 
           <!-- Box 2: Job Description -->
-          <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm space-y-2">
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-700">
+          <div class="bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-lg p-4 shadow-sm space-y-2">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300">
               📋 Stellenbeschreibung
             </h4>
-            <div class="text-xs text-gray-700 leading-relaxed whitespace-pre-line font-sans max-h-96 overflow-y-auto pr-1">
+            <div class="text-xs text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line font-sans max-h-96 overflow-y-auto pr-1">
               ${job.description || 'Keine ausführliche Beschreibung hinterlegt. Klicke oben auf den Bewerbungslink, um die vollständige Ausschreibung direkt auf ' + (isIndeed ? 'Indeed' : 'LinkedIn') + ' einzusehen.'}
             </div>
           </div>
 
           <!-- Box 3: Why fits / Analysis -->
-          <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm space-y-2">
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-700">
+          <div class="bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-lg p-4 shadow-sm space-y-2">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300">
               📊 Passung &amp; Hintergrund
             </h4>
             <div class="text-xs text-gray-600">
