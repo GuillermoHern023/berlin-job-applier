@@ -54,6 +54,11 @@
           <span>📝 Download Word (.docx)</span>
         </a>
 
+        <button onclick="openAutofillModal()"
+           class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 border border-amber-500/40 transition flex items-center gap-1.5">
+          <span>⚡ 1-Click Autofill &amp; CV Upload Helper</span>
+        </button>
+
         <a id="directSheetTopBtn" href="https://docs.google.com/spreadsheets/d/1o2r4Qvn9SL7gOa05P-up9tiwnCXPmcnOG3kttL_H0Fk/edit" target="_blank"
            class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-emerald-700/80 hover:bg-emerald-600 text-white border border-emerald-500/40 transition flex items-center gap-1.5">
           <span>📗 Open Live Google Sheet ↗</span>
@@ -469,6 +474,21 @@
           el.className = 'px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition';
         }
       });
+    }
+
+
+    function openAutofillModal() {
+      const bookmarkletCode = "javascript:(function(){const info={firstName:'Nancy',lastName:'Schütze',fullName:'Nancy Schütze',email:'schuetzenancy@gmx.de',phone:'+4915237164097',city:'Berlin',zip:'13125',linkedin:'https://www.linkedin.com/in/schuetzenancy/',hours:'15-20',start:'Ab sofort'};document.querySelectorAll('input,textarea,select').forEach(el=>{const n=(el.name||el.id||el.placeholder||el.getAttribute('aria-label')||'').toLowerCase();if(!el.value){if(n.includes('first')||n.includes('vorname'))el.value=info.firstName;else if(n.includes('last')||n.includes('nachname'))el.value=info.lastName;else if(n.includes('name')&&!n.includes('user'))el.value=info.fullName;else if(n.includes('mail'))el.value=info.email;else if(n.includes('phone')||n.includes('tel')||n.includes('mobil'))el.value=info.phone;else if(n.includes('city')||n.includes('stadt')||n.includes('ort'))el.value=info.city;else if(n.includes('zip')||n.includes('plz'))el.value=info.zip;else if(n.includes('linkedin'))el.value=info.linkedin;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));}});alert('✨ Formulardaten erfolgreich ausgefüllt!');})();";
+      const bLink = document.getElementById('autofillBookmarkletLink');
+      if (bLink) {
+        bLink.href = bookmarkletCode;
+        bLink.textContent = activeUser === 'nancy' ? '⚡ Nancy 1-Klick Autofill' : '⚡ Guillermo 1-Click Autofill';
+      }
+      document.getElementById('autofillModal').classList.remove('hidden');
+    }
+
+    function closeAutofillModal() {
+      document.getElementById('autofillModal').classList.add('hidden');
     }
 
     function renderJobs() {
@@ -934,5 +954,81 @@
     }
     initApp();
   </script>
+
+  <!-- 1-Click Autofill & CV Pre-Fill Modal -->
+  <div id="autofillModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="glass-card bg-slate-900 border border-slate-700 rounded-2xl max-w-2xl w-full p-6 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div>
+          <h2 class="text-lg font-bold text-white flex items-center gap-2">
+            <span>⚡ 1-Click Autofill &amp; Vorab-Ausfüllung</span>
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">So werden Bewerbungen, Lebensläufe &amp; Formulare in Sekundenschnelle vorab ausgefüllt</p>
+        </div>
+        <button onclick="closeAutofillModal()" class="text-slate-400 hover:text-white text-lg font-bold">✕</button>
+      </div>
+
+      <div class="space-y-4 text-xs text-slate-300">
+        <!-- Indeed Quick Apply Section -->
+        <div class="p-4 rounded-xl bg-sky-950/40 border border-sky-800/60 space-y-2">
+          <div class="font-bold text-sky-300 flex items-center gap-2 text-sm">
+            <span>🔷 1. Für Indeed: 1-Klick-Bewerbung (Mit Profil vorab hinterlegen)</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Indeed hat eine <strong>eingebaute Sofort-Bewerbung</strong>. Wenn du deinen neuen 1-Seiten-Master-Lebenslauf <strong>einmalig</strong> in deinem Indeed-Profil hochlädst, ist jede Indeed-Bewerbung sofort vorab ausgefüllt:
+          </p>
+          <div class="pt-2 flex flex-wrap gap-2">
+            <a href="https://de.indeed.com/profile" target="_blank" class="px-3.5 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-bold transition flex items-center gap-1.5">
+              <span>🚀 Zu deinem Indeed-Profil (Lebenslauf hinterlegen) ↗</span>
+            </a>
+            <a id="downloadMasterCvForAutofill" href="files/Nancy_Schuetze_Lebenslauf_Master.pdf" download class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold transition">
+              📄 Master-Lebenslauf PDF herunterladen
+            </a>
+          </div>
+          <p class="text-[11px] text-sky-400/90 pt-1">
+            👉 Danach klickst du auf dem Dashboard einfach auf <strong>"🔷 Apply on Indeed"</strong> &bull; Name, Telefon, E-Mail und dein Lebenslauf sind sofort vorausgewählt &bull; 2 Klicks zum Absenden!
+          </p>
+        </div>
+
+        <!-- 1-Click Browser Bookmarklet for All Forms -->
+        <div class="p-4 rounded-xl bg-indigo-950/40 border border-indigo-800/60 space-y-2">
+          <div class="font-bold text-indigo-300 flex items-center gap-2 text-sm">
+            <span>🪄 2. Für alle anderen Jobportale: Der "1-Klick Autofill"-Button</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Für externe Portale (Personio, Join.com, Workday, Softgarden) kannst du diesen Button einfach in deine <strong>Browser-Lesezeichenleiste ziehen</strong> (Chrome, Safari, Edge):
+          </p>
+          <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 text-center my-2">
+            <a id="autofillBookmarkletLink" href="#" class="inline-block px-4 py-2 bg-gradient-to-r from-indigo-600 to-pink-600 hover:opacity-90 text-white font-bold rounded-lg shadow-lg cursor-grab text-xs">
+              ⚡ Nancy 1-Klick Autofill (In Lesezeichenleiste ziehen)
+            </a>
+          </div>
+          <p class="text-[11px] text-slate-400">
+            <strong>Wie es funktioniert:</strong> Wenn du auf einem beliebigen Bewerbungsformular bist, klicke einfach einmal auf dieses Lesezeichen. Es füllt Vorname, Nachname, E-Mail, Telefonnummer, Stadt, LinkedIn-URL und Arbeitszeit (15-20h Werkstudent) automatisch in 1 Millisekunde aus!
+          </p>
+        </div>
+
+        <!-- Pre-Filled Contact Data Box -->
+        <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700 space-y-2">
+          <div class="font-bold text-slate-200 text-sm">📋 3. Deine hinterlegten Profildaten</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+            <div><strong>Name:</strong> Nancy Thuy Dung Schütze</div>
+            <div><strong>E-Mail:</strong> schuetzenancy@gmx.de</div>
+            <div><strong>Telefon:</strong> +49 15237164097</div>
+            <div><strong>Ort:</strong> Berlin (Charlottenburg / Pankow)</div>
+            <div><strong>LinkedIn:</strong> linkedin.com/in/schuetzenancy</div>
+            <div><strong>Status:</strong> Studentin TU Berlin (15–20h)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-end pt-2 border-t border-slate-800">
+        <button onclick="closeAutofillModal()" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs">
+          Schließen
+        </button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
