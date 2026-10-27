@@ -96,7 +96,7 @@ def build_cv_html(
 <style>
   @page {{
     size: A4;
-    margin: 5.5mm 9mm 5.5mm 9mm;
+    margin: 7mm 11mm 6.5mm 11mm;
   }}
   * {{
     box-sizing: border-box;
@@ -105,43 +105,43 @@ def build_cv_html(
   }}
   body {{
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 8.35pt;
-    line-height: 1.20;
+    font-size: 8.45pt;
+    line-height: 1.23;
     color: #1a1a1a;
     background: #fff;
   }}
   .header-box {{
     border: 1px solid #333;
-    padding: 6px 11px;
-    margin-bottom: 5px;
+    padding: 7px 12px;
+    margin-bottom: 4px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
   }}
   .header-left h1 {{
-    font-size: 14pt;
+    font-size: 15pt;
     font-weight: bold;
-    margin-bottom: 1.5px;
+    margin-bottom: 2px;
     color: #111;
   }}
   .header-left p {{
-    font-size: 8.2pt;
+    font-size: 8.5pt;
     color: #333;
     margin-bottom: 0.5px;
   }}
   .header-right a {{
-    font-size: 8.3pt;
+    font-size: 8.5pt;
     color: #111;
     text-decoration: underline;
   }}
   fieldset.section-box {{
     border: 1px solid #333;
-    padding: 4px 11px 5.5px 11px;
-    margin-bottom: 5px;
+    padding: 5px 12px 6px 12px;
+    margin-bottom: 4px;
   }}
   fieldset.section-box legend {{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 7.8pt;
+    font-size: 8.2pt;
     font-weight: bold;
     letter-spacing: 0.7px;
     padding: 0 5px;
@@ -151,57 +151,59 @@ def build_cv_html(
   }}
   .row-item {{
     display: flex;
-    margin-bottom: 4.5px;
+    margin-bottom: 3px;
   }}
   .row-item:last-child {{
     margin-bottom: 0;
   }}
   .left-col {{
-    width: 18%;
-    font-size: 8pt;
+    width: 17%;
+    font-size: 8.3pt;
     color: #333;
     padding-right: 8px;
     flex-shrink: 0;
   }}
   .right-col {{
-    width: 82%;
+    width: 83%;
   }}
   .exp-title {{
     font-weight: bold;
-    font-size: 8.75pt;
+    font-size: 9pt;
     color: #111;
   }}
   .exp-company {{
-    font-size: 8.3pt;
+    font-size: 8.6pt;
     color: #222;
     margin-bottom: 0.5px;
   }}
   .exp-subtitle {{
-    font-size: 8pt;
+    font-size: 8.2pt;
     color: #444;
-    margin-bottom: 1.5px;
+    margin-bottom: 2px;
   }}
   ul.bullet-list {{
     margin-top: 1.5px;
     padding-left: 14px;
   }}
   ul.bullet-list li {{
-    margin-bottom: 1px;
-    font-size: 8.15pt;
+    margin-bottom: 1.2px;
+    font-size: 8.4pt;
+    line-height: 1.24;
   }}
   .edu-row {{
-    margin-bottom: 3px;
+    margin-bottom: 3.5px;
   }}
   .edu-degree {{
-    font-size: 8.3pt;
+    font-size: 8.6pt;
   }}
   .edu-loc {{
-    font-size: 7.9pt;
+    font-size: 8.1pt;
     color: #333;
   }}
   .skills-content p {{
-    margin-bottom: 1.5px;
-    font-size: 8.1pt;
+    margin-bottom: 2px;
+    font-size: 8.35pt;
+    line-height: 1.28;
   }}
   .skills-content p:last-child {{
     margin-bottom: 0;
@@ -210,7 +212,7 @@ def build_cv_html(
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2px 10px;
-    font-size: 8.05pt;
+    font-size: 8.35pt;
   }}
 </style>
 </head>
@@ -420,12 +422,11 @@ def generate_master_cv() -> Path:
             "voicebot_rollout",
             "chatbot_kb_maintenance",
             "qa_review_platform",
-            "cross_country_kb",
-            "price_lead_email_tool",
-            "reviews_portal",
             "kpi_reporting",
+            "price_lead_email_tool",
+            "cross_country_kb",
         ]
-    ]
+    ][:6]
     html = build_cv_html(profile, selected_auto1_bullets=bullets)
     out_path = OUTPUT_DIR / "Guillermo_Hernandez_CV_Master.pdf"
     return render_html_to_pdf(html, out_path)

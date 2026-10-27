@@ -95,7 +95,7 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
 <style>
   @page {{
     size: A4;
-    margin: 8mm 11mm 6mm 11mm;
+    margin: 11mm 12mm 11mm 12mm;
   }}
   * {{
     box-sizing: border-box;
@@ -296,13 +296,7 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
     </div>
   </div>
 
-  <div class="footer-sig">
-    <div style="font-size: 8.6pt; color: #475569;">Berlin, den {today_str}</div>
-    <div class="sig-block">
-      <img src="{sig_uri}" alt="Unterschrift" />
-      <div class="sig-line">{p["full_name"]}</div>
-    </div>
-  </div>
+
 </body>
 </html>
 """

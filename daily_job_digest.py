@@ -60,6 +60,40 @@ def save_json(path: Path, data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
+def prune_and_refresh_job_ages(jobs, max_days=10):
+    now = datetime.now().date()
+    fresh_jobs = []
+    pruned_count = 0
+    for j in jobs:
+        dp = j.get("date_posted")
+        diff = 99
+        if dp:
+            try:
+                dt = datetime.strptime(str(dp).strip(), "%Y-%m-%d").date()
+                diff = max(0, (now - dt).days)
+            except Exception:
+                diff = j.get("days_ago", 99)
+        else:
+            diff = j.get("days_ago", 99)
+
+        j["days_ago"] = diff
+        if diff == 0:
+            j["posted_ago"] = f"🔥 Today ({dp or now.strftime('%Y-%m-%d')})"
+        elif diff == 1:
+            j["posted_ago"] = f"🔥 1 day ago ({dp})"
+        elif diff <= 3:
+            j["posted_ago"] = f"⚡ {diff} days ago ({dp})"
+        else:
+            j["posted_ago"] = f"{diff} days ago ({dp})"
+
+        if diff <= max_days:
+            fresh_jobs.append(j)
+        else:
+            pruned_count += 1
+
+    return fresh_jobs, pruned_count
+
+
 def run_fresh_scrape_if_requested(do_scrape: bool):
     g_jobs = load_json(DATA_DIR / "jobs_db.json", [])
     n_jobs = load_json(DATA_DIR / "nancy_jobs_db.json", [])
@@ -98,6 +132,14 @@ def run_fresh_scrape_if_requested(do_scrape: bool):
             print(f"  -> Nancy scrape complete (+{res_n.get('added_count', 0)} new roles, {len(n_jobs)} total).")
         except Exception as e:
             print(f"  -> Warning during Nancy scrape: {e}")
+
+    # Enforce strict freshness policy: prune anything older than 1.5 weeks (10 days)
+    g_jobs, g_pruned = prune_and_refresh_job_ages(g_jobs, max_days=10)
+    n_jobs, n_pruned = prune_and_refresh_job_ages(n_jobs, max_days=10)
+    print(f"  -> Job Lifecycle Audit: Pruned {g_pruned} stale Guillermo jobs and {n_pruned} stale Nancy jobs (>1.5 weeks / 10 days old).")
+    print(f"  -> Active Fresh Jobs: {len(g_jobs)} for Guillermo, {len(n_jobs)} for Nancy.")
+    save_json(DATA_DIR / "jobs_db.json", g_jobs)
+    save_json(DATA_DIR / "nancy_jobs_db.json", n_jobs)
 
     return g_jobs, n_jobs
 
@@ -355,7 +397,7 @@ def format_daily_job_email(g_jobs, n_jobs, recipients=None):
                 </tr>
               </table>
               <div style="font-size: 11px; color: #475569; text-align: center; padding-bottom: 8px;">
-                📎 <strong>Attached to this email:</strong> Master CVs (PDF), Nancy's Editable Word Lebenslauf (<code>.docx</code>), and your #1 Top Tailored CV &amp; Cover Letter bundles!
+                📎 <strong>Attached to this email:</strong> Clean 1-Page Master CVs (PDF) and your #1 Top Tailored CV &amp; Cover Letter bundles!
               </div>
             </td>
           </tr>
@@ -453,11 +495,10 @@ def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs, recip
         alt.attach(MIMEText(html_email, "html", "utf-8"))
         msg.attach(alt)
 
-        # Attach Master PDFs + Nancy's Word (.docx) + #1 Top Tailored CV for each
+        # Attach Master PDFs + #1 Top Tailored CV & Cover Letter for each
         attachments = [
             OUTPUT_DIR / "Guillermo_Hernandez_CV_Master.pdf",
             OUTPUT_DIR / "Nancy_Schuetze_Lebenslauf_Master.pdf",
-            OUTPUT_DIR / "Nancy_Schuetze_Lebenslauf_Master.docx",
         ]
         # Add #1 tailored job PDF for Guillermo & Nancy if available
         for j in g_jobs:
