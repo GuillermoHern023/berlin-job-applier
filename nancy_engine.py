@@ -699,7 +699,7 @@ def scrape_nancy_jobs(
     from metadata_enricher import enrich_jobs_metadata
 
     if not sites:
-        sites = ["linkedin", "indeed"]
+        sites = ["indeed", "linkedin"]
 
     queries = (
         [{"search_term": q, "location": location} for q in search_terms]
@@ -732,14 +732,40 @@ def scrape_nancy_jobs(
                 if not title or not company or title.lower() == "nan":
                     continue
 
-                job_url = str(row.get("job_url_direct") or row.get("job_url") or "").strip()
+                import math
+                def clean_str(v):
+                    if v is None:
+                        return ""
+                    if isinstance(v, float) and math.isnan(v):
+                        return ""
+                    s = str(v).strip()
+                    if s.lower() in ["nan", "none", "null"]:
+                        return ""
+                    return s
+
+                raw_indeed_url = clean_str(row.get("job_url"))
+                raw_direct_url = clean_str(row.get("job_url_direct"))
+                jid_str = clean_str(row.get("id"))
+                site = str(row.get("site") or "indeed").capitalize()
+
+                # For Indeed jobs, Nancy specifically uses Indeed to apply! Prioritize de.indeed.com/viewjob?jk=...
+                if "indeed" in site.lower() or "indeed.com" in raw_indeed_url:
+                    if "indeed.com" in raw_indeed_url:
+                        job_url = raw_indeed_url
+                    elif jid_str.startswith("in-"):
+                        jk = jid_str.split("in-", 1)[1]
+                        job_url = f"https://de.indeed.com/viewjob?jk={jk}"
+                    else:
+                        job_url = raw_indeed_url or raw_direct_url
+                else:
+                    job_url = raw_direct_url or raw_indeed_url
+
                 # If there's no direct apply URL/button, discard the job immediately
-                if not job_url or job_url.lower() in ["nan", "none", "null", ""] or not (job_url.startswith("http://") or job_url.startswith("https://")) or "google.com/search" in job_url:
+                if not job_url or not (job_url.startswith("http://") or job_url.startswith("https://")) or "google.com/search" in job_url:
                     continue
 
                 loc = str(row.get("location") or "Berlin").strip()
                 desc = str(row.get("description") or "").strip()
-                site = str(row.get("site") or "indeed").capitalize()
                 date_posted = str(row.get("date_posted") or datetime.now().strftime("%Y-%m-%d"))
 
                 dedup_key = f"{company.lower()}|{title.lower()}"
@@ -753,9 +779,10 @@ def scrape_nancy_jobs(
                     "company": company,
                     "location": loc,
                     "job_url": job_url,
+                    "job_url_direct": raw_direct_url if raw_direct_url != job_url else "",
                     "source": site,
                     "date_posted": date_posted,
-                    "salary": "",
+                    "salary": clean_str(row.get("min_amount")),
                     "description": desc,
                     "status": "New",
                     "cv_pdf": "",
@@ -763,7 +790,11 @@ def scrape_nancy_jobs(
                     "cv_url": "",
                     "cover_letter_url": "",
                 }
-                job_obj.update(score_nancy_job(job_obj))
+                analysis = score_nancy_job(job_obj)
+                # Drop 100% onsite roles
+                if analysis.get("is_100_onsite"):
+                    continue
+                job_obj.update(analysis)
                 existing.append(job_obj)
                 existing_ids.add(jid)
                 existing_keys.add(dedup_key)

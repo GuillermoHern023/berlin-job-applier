@@ -153,6 +153,12 @@
             <option value="REMOTE_ONLY">🏡 100% Remote Only</option>
           </select>
 
+          <select id="sourceFilter" onchange="renderJobs()" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200">
+            <option value="ALL">🌐 All Portals (Indeed &amp; LinkedIn)</option>
+            <option value="INDEED">🔷 Indeed Only</option>
+            <option value="LINKEDIN">🔗 LinkedIn Only</option>
+          </select>
+
           <select id="statusFilter" onchange="updateTabs(); renderJobs();" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200">
             <option value="ACTIVE" selected>✨ To Review / Active (Excludes Not Interested &amp; Applied)</option>
             <option value="ALL">📌 All Jobs (Including Dismissed)</option>
@@ -472,6 +478,7 @@
       const lang = document.getElementById('langFilter').value;
       const st = document.getElementById('statusFilter').value;
       const wmFilter = (document.getElementById('workModelFilter') ? document.getElementById('workModelFilter').value : 'ALL');
+      const srcFilter = (document.getElementById('sourceFilter') ? document.getElementById('sourceFilter').value : 'ALL');
       const recency = document.getElementById('recencyFilter').value;
       const maxApps = document.getElementById('applicantsFilter').value;
       const sortBy = document.getElementById('sortBy').value;
@@ -511,6 +518,14 @@
           if (j.is_100_onsite || (j.work_model && j.work_model.includes('100% Vor Ort'))) return false;
         } else if (wmFilter === 'REMOTE_ONLY') {
           if (!j.work_model || !j.work_model.includes('Remote')) return false;
+        }
+
+        if (srcFilter === 'INDEED') {
+          const isInd = (j.source || '').toLowerCase() === 'indeed' || (j.job_url || '').toLowerCase().includes('indeed.com');
+          if (!isInd) return false;
+        } else if (srcFilter === 'LINKEDIN') {
+          const isLk = (j.source || '').toLowerCase() === 'linkedin' || (j.job_url || '').toLowerCase().includes('linkedin.com');
+          if (!isLk) return false;
         }
         if (q) {
           const hay = `${j.title} ${j.company} ${j.location} ${j.why_fits} ${j.language_req} ${j.posted_ago || ''} ${j.applicants_text || ''}`.toLowerCase();
@@ -635,9 +650,13 @@
               <button onclick="openTailorModal('${j.id}')" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition">
                 ✨ ${j.cv_url ? 'View / Re-Tailor' : (activeUser === 'nancy' ? 'Tailor Lebenslauf & Anschreiben' : 'Tailor CV & Cover Letter')}
               </button>
-              <a href="${j.job_url || '#'}" target="_blank" onclick="markStatus('${j.id}', 'Applied')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 text-xs font-semibold transition">
-                🚀 Quick Apply ↗
-              </a>
+              ${(() => {
+                const isIndeed = (j.source || '').toLowerCase() === 'indeed' || (j.job_url || '').toLowerCase().includes('indeed.com');
+                const isLinkedin = (j.source || '').toLowerCase() === 'linkedin' || (j.job_url || '').toLowerCase().includes('linkedin.com');
+                const btnClass = isIndeed ? 'bg-sky-700 hover:bg-sky-600 text-white shadow-sm' : (isLinkedin ? 'bg-blue-700 hover:bg-blue-600 text-white shadow-sm' : 'bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600');
+                const btnText = isIndeed ? '🔷 Apply on Indeed ↗' : (isLinkedin ? '🔗 Apply on LinkedIn ↗' : '🚀 Quick Apply ↗');
+                return `<a href="${j.job_url || '#'}" target="_blank" onclick="markStatus('${j.id}', 'Applied')" class="px-3 py-1.5 rounded-lg ${btnClass} text-xs font-semibold transition flex items-center gap-1.5">${btnText}</a>`;
+              })()}
               ${(j.status || '').toLowerCase() === 'not interested'
                 ? `<button onclick="markStatus('${j.id}', 'New')" class="px-3 py-1.5 rounded-lg bg-emerald-950/70 hover:bg-emerald-900 text-emerald-300 border border-emerald-800 text-xs font-semibold transition flex items-center gap-1.5" title="Wiederherstellen">
                      ↩ ${activeUser === 'nancy' ? 'Wiederherstellen' : 'Restore'}
