@@ -10,8 +10,8 @@
     "alt_address": "Söhtstraße 16, 12203 Berlin",
     "email": "schuetzenancy@gmx.de",
     "phone": "+49 15237164097",
-    "linkedin_label": "LinkedIn Profile",
-    "linkedin_url": "https://www.linkedin.com/in/nancy-thuy-dung-sch%C3%BCtze-338b71216/",
+    "linkedin_label": "linkedin.com/in/schuetzenancy",
+    "linkedin_url": "https://www.linkedin.com/in/schuetzenancy/",
     "birth_info_de": "17.08.2001 in Berlin | Staatsangehörigkeit: Deutsch",
     "photo_path": "nancy_assets/image2.png",
     "signature_path": "nancy_assets/image3.png"
@@ -26,11 +26,32 @@
     ],
     "preferred_hub": "Zoologischer Garten / TU Berlin (Charlottenburg / City West)",
     "nearby_districts": [
-      "Zoologischer Garten", "Charlottenburg", "Kurfürstendamm", "Ku'damm",
-      "Ernst-Reuter-Platz", "Savignyplatz", "Hardenbergstraße", "Kantstraße",
-      "Tiergarten", "City West", "Wilmersdorf", "Halensee", "Schöneberg",
-      "Wittenbergplatz", "Nollendorfplatz", "Potsdamer Platz", "Mitte",
-      "10623", "10625", "10627", "10629", "10719", "10785", "10787", "10789", "10587"
+      "Zoologischer Garten",
+      "Charlottenburg",
+      "Kurfürstendamm",
+      "Ku'damm",
+      "Ernst-Reuter-Platz",
+      "Savignyplatz",
+      "Hardenbergstraße",
+      "Kantstraße",
+      "Tiergarten",
+      "City West",
+      "Wilmersdorf",
+      "Halensee",
+      "Schöneberg",
+      "Wittenbergplatz",
+      "Nollendorfplatz",
+      "Potsdamer Platz",
+      "Mitte",
+      "10623",
+      "10625",
+      "10627",
+      "10629",
+      "10719",
+      "10785",
+      "10787",
+      "10789",
+      "10587"
     ]
   },
   "experience_de": [
@@ -126,10 +147,25 @@
     "certificates": "Führerschein Klasse B · Gesundheitszeugnis"
   },
   "languages_de": [
-    { "language": "Deutsch", "level": "Muttersprache" },
-    { "language": "Vietnamesisch", "level": "Muttersprache" },
-    { "language": "Englisch", "level": "C2 Proficient" },
-    { "language": "Spanisch", "level": "B1-Modulzeugnis" },
-    { "language": "Katalanisch", "level": "A1-Zertifikat" }
+    {
+      "language": "Deutsch",
+      "level": "Muttersprache"
+    },
+    {
+      "language": "Vietnamesisch",
+      "level": "Muttersprache"
+    },
+    {
+      "language": "Englisch",
+      "level": "C2 Proficient"
+    },
+    {
+      "language": "Spanisch",
+      "level": "B1-Modulzeugnis"
+    },
+    {
+      "language": "Katalanisch",
+      "level": "A1-Zertifikat"
+    }
   ]
 }
