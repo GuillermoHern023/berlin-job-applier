@@ -112,10 +112,13 @@ def run_fresh_scrape_if_requested(do_scrape: bool):
                     "Working Student Project Management",
                     "Working Student Product Management",
                     "Working Student Operations AI",
+                    "Werkstudent IT Projektmanagement",
+                    "Working Student Business Analyst",
+                    "Werkstudent Data Analytics Reporting",
                 ],
                 location="Berlin, Germany",
-                results_wanted=10,
-                hours_old=72,
+                results_wanted=15,
+                hours_old=168,
             )
             g_jobs = load_json(DATA_DIR / "jobs_db.json", g_jobs)
             print(f"  -> Guillermo scrape complete (+{res_g.get('added_count', 0)} new roles, {len(g_jobs)} total).")
@@ -126,12 +129,19 @@ def run_fresh_scrape_if_requested(do_scrape: bool):
             res_n = scrape_nancy_jobs(
                 search_terms=[
                     "Werkstudent Office Management",
-                    "Werkstudent Teamassistenz Backoffice",
-                    "Office Manager Teilzeit Charlottenburg",
+                    "Werkstudent Teamassistenz",
+                    "Werkstudent Assistenz",
+                    "Werkstudent Backoffice",
+                    "Office Manager Teilzeit",
+                    "Working Student Office Management",
+                    "Working Student Team Assistant",
+                    "Werkstudent Verwaltung",
+                    "Werkstudent HR Assistenz",
+                    "Werkstudent Event Organisation",
                 ],
                 location="Berlin, Germany",
-                results_wanted=10,
-                hours_old=72,
+                results_wanted=15,
+                hours_old=168,
             )
             n_jobs = load_json(DATA_DIR / "nancy_jobs_db.json", n_jobs)
             print(f"  -> Nancy scrape complete (+{res_n.get('added_count', 0)} new roles, {len(n_jobs)} total).")
@@ -253,14 +263,35 @@ def build_independent_website(g_jobs, n_jobs):
     print(f"  -> Independent site built at: {DOCS_DIR / 'index.html'} and {DASHBOARD_HTML_PATH}")
 
 
-def build_job_cards_email_html(jobs_list, is_nancy=False, limit=5):
+def build_job_cards_email_html(jobs_list, is_nancy=False, limit=6):
     rows_html = []
-    top_jobs = jobs_list[:limit]
+    # 1. Filter out jobs that the user is not interested in, archived, or already applied to
+    active_jobs = [
+        j for j in jobs_list
+        if str(j.get("status", "")).lower() not in ["applied", "not interested", "archived", "rejected"]
+    ]
+
+    # 2. Sort by Freshness first (days_ago 0 = Today, 1 = Yesterday), then by match_score
+    def sort_key(j):
+        da = j.get("days_ago", 99)
+        tier = 0 if da <= 1 else (1 if da <= 3 else 2)
+        score = -(j.get("match_score", 0))
+        return (tier, score, da)
+
+    sorted_jobs = sorted(active_jobs, key=sort_key)
+    top_jobs = sorted_jobs[:limit]
+
     accent = "#db2777" if is_nancy else "#4f46e5"
     badge_bg = "#fdf2f8" if is_nancy else "#eef2ff"
     badge_fg = "#9d174d" if is_nancy else "#3730a3"
 
     for idx, j in enumerate(top_jobs, 1):
+        days_ago = j.get("days_ago", 99)
+        recency_badge = ""
+        if days_ago == 0:
+            recency_badge = '<span style="display: inline-block; background-color: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px; margin-right: 6px;">🔥 NEU HEUTE</span>'
+        elif days_ago == 1:
+            recency_badge = '<span style="display: inline-block; background-color: #ffedd5; color: #c2410c; border: 1px solid #fdba74; font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px; margin-right: 6px;">⚡ NEU GESTERN</span>'
         score = j.get("match_score", 80)
         title = j.get("title", "Working Student Role")
         company = j.get("company", "Berlin Company")
@@ -281,6 +312,7 @@ def build_job_cards_email_html(jobs_list, is_nancy=False, limit=5):
               <table width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td valign="top" style="padding-right: 10px;">
+                    {recency_badge}
                     <span style="display: inline-block; background-color: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 6px; margin-right: 6px;">
                       {score}% Match
                     </span>
@@ -303,6 +335,9 @@ def build_job_cards_email_html(jobs_list, is_nancy=False, limit=5):
                   <td valign="middle" align="right" width="135" style="min-width: 125px;">
                     <a href="{url}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: {accent}; color: #ffffff !important; font-size: 12px; font-weight: 800; text-decoration: none; padding: 10px 14px; border-radius: 8px; text-align: center;">
                       {"⚡ Bewerben ➔" if is_nancy else "⚡ Quick Apply ➔"}
+                    </a>
+                    <a href="{JOB_DASHBOARD_URL}#user={'nancy' if is_nancy else 'guillermo'}" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 6px; font-size: 11px; color: #94a3b8; text-decoration: underline; text-align: center;">
+                      ❌ {"Nicht interessiert" if is_nancy else "Not Interested"}
                     </a>
                   </td>
                 </tr>
@@ -544,7 +579,7 @@ def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs, recip
 
 
 def main():
-    do_scrape = ("--scrape" in sys.argv)
+    do_scrape = ("--no-scrape" not in sys.argv)
     no_email = ("--no-email" in sys.argv)
     custom_recipients = None
 
@@ -564,6 +599,9 @@ def main():
     try:
         res = sync_jobs_to_google_sheet(g_jobs, n_jobs)
         print(f"  -> Google Sheets synced: {res.get('rows_written')} total rows ({res.get('spreadsheet_url')}).")
+        # Save back any preserved statuses from Google Sheets to disk
+        save_json(DATA_DIR / "jobs_db.json", g_jobs)
+        save_json(DATA_DIR / "nancy_jobs_db.json", n_jobs)
     except Exception as e:
         print(f"  -> Google Sheets sync warning: {e}")
 

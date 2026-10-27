@@ -134,20 +134,27 @@
         </select>
       </div>
 
-      <div class="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-slate-800/80">
+      <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-800/80">
+        <button onclick="setFilterStatus('ACTIVE')" id="tabActive" class="px-3 py-1 rounded-lg text-xs font-bold bg-indigo-600 text-white transition shadow-sm">⭐ To Review / Active</button>
+        <button onclick="setFilterStatus('Applied')" id="tabApplied" class="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">✅ Applied (<span id="pillAppliedCount">0</span>)</button>
+        <button onclick="setFilterStatus('NOT_INTERESTED')" id="tabNotInterested" class="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">❌ Not Interested (<span id="pillDismissedCount">0</span>)</button>
+        <button onclick="setFilterStatus('ALL')" id="tabAll" class="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">📁 All Jobs (<span id="pillTotalCount">0</span>)</button>
+      </div>
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
         <div class="flex flex-wrap items-center gap-2.5">
           <select id="langFilter" onchange="renderJobs()" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200">
             <option value="ALL">🌐 All Fit / Locations</option>
             <option value="TOP_FIT">⭐ Top Fit Only (English OK / Near Zoo)</option>
           </select>
 
-          <select id="statusFilter" onchange="renderJobs()" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200">
-            <option value="ALL">📌 All Statuses</option>
-            <option value="EDITED_YES">✅ CV &amp; Cover Letter Edited</option>
-            <option value="EDITED_NO">⏳ Not Edited Yet</option>
+          <select id="statusFilter" onchange="updateTabs(); renderJobs();" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200">
+            <option value="ACTIVE" selected>✨ To Review / Active (Excludes Not Interested &amp; Applied)</option>
+            <option value="ALL">📌 All Jobs (Including Dismissed)</option>
+            <option value="NOT_INTERESTED">❌ Not Interested / Dismissed</option>
+            <option value="Applied">✅ Applied</option>
+            <option value="EDITED_YES">📄 Tailored PDFs Ready</option>
             <option value="New">New</option>
             <option value="Ready to Apply">Ready to Apply</option>
-            <option value="Applied">Applied</option>
             <option value="Interview">Interview</option>
             <option value="Archived">Archived</option>
           </select>
@@ -417,7 +424,39 @@
       document.getElementById('statTotal').textContent = jobs.length;
       document.getElementById('statHighMatch').textContent = jobs.filter(j => (j.match_score || 0) >= 75).length;
       document.getElementById('statReady').textContent = jobs.filter(j => j.cv_url || j.status === 'Ready to Apply').length;
-      document.getElementById('statApplied').textContent = jobs.filter(j => j.status === 'Applied').length;
+      document.getElementById('statApplied').textContent = jobs.filter(j => (j.status || '').toLowerCase() === 'applied').length;
+
+      const appliedCount = jobs.filter(j => (j.status || '').toLowerCase() === 'applied').length;
+      const dismissedCount = jobs.filter(j => (j.status || '').toLowerCase() === 'not interested').length;
+      if (document.getElementById('pillAppliedCount')) document.getElementById('pillAppliedCount').textContent = appliedCount;
+      if (document.getElementById('pillDismissedCount')) document.getElementById('pillDismissedCount').textContent = dismissedCount;
+      if (document.getElementById('pillTotalCount')) document.getElementById('pillTotalCount').textContent = jobs.length;
+    }
+
+
+    function setFilterStatus(st) {
+      document.getElementById('statusFilter').value = st;
+      updateTabs();
+      renderJobs();
+    }
+
+    function updateTabs() {
+      const current = document.getElementById('statusFilter').value;
+      const tabs = [
+        { id: 'tabActive', active: current === 'ACTIVE' },
+        { id: 'tabApplied', active: current === 'Applied' },
+        { id: 'tabNotInterested', active: current === 'NOT_INTERESTED' },
+        { id: 'tabAll', active: current === 'ALL' },
+      ];
+      tabs.forEach(t => {
+        const el = document.getElementById(t.id);
+        if (!el) return;
+        if (t.active) {
+          el.className = 'px-3 py-1 rounded-lg text-xs font-bold bg-indigo-600 text-white transition shadow-sm';
+        } else {
+          el.className = 'px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition';
+        }
+      });
     }
 
     function renderJobs() {
@@ -431,9 +470,18 @@
       const sortBy = document.getElementById('sortBy').value;
 
       let filtered = jobs.filter(j => {
-        if (st === 'EDITED_YES' && !j.cv_url) return false;
-        if (st === 'EDITED_NO' && j.cv_url) return false;
-        if (st !== 'ALL' && st !== 'EDITED_YES' && st !== 'EDITED_NO' && j.status !== st) return false;
+        const jStatus = (j.status || 'New').toLowerCase();
+        if (st === 'ACTIVE') {
+          if (['not interested', 'archived', 'applied', 'rejected'].includes(jStatus)) return false;
+        } else if (st === 'NOT_INTERESTED') {
+          if (jStatus !== 'not interested') return false;
+        } else if (st === 'EDITED_YES' && !j.cv_url) {
+          return false;
+        } else if (st === 'EDITED_NO' && j.cv_url) {
+          return false;
+        } else if (st !== 'ALL' && st !== 'ACTIVE' && st !== 'NOT_INTERESTED' && st !== 'EDITED_YES' && st !== 'EDITED_NO' && j.status !== st) {
+          return false;
+        }
 
         if (recency !== 'ALL') {
           const maxDays = parseInt(recency, 10);
@@ -565,8 +613,16 @@
               <a href="${j.job_url || '#'}" target="_blank" onclick="markStatus('${j.id}', 'Applied')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 text-xs font-semibold transition">
                 🚀 Quick Apply ↗
               </a>
+              ${(j.status || '').toLowerCase() === 'not interested'
+                ? `<button onclick="markStatus('${j.id}', 'New')" class="px-3 py-1.5 rounded-lg bg-emerald-950/70 hover:bg-emerald-900 text-emerald-300 border border-emerald-800 text-xs font-semibold transition flex items-center gap-1.5" title="Wiederherstellen">
+                     ↩ ${activeUser === 'nancy' ? 'Wiederherstellen' : 'Restore'}
+                   </button>`
+                : `<button onclick="markStatus('${j.id}', 'Not Interested')" class="px-3 py-1.5 rounded-lg bg-rose-950/60 hover:bg-rose-900 text-rose-300 border border-rose-800/60 text-xs font-semibold transition flex items-center gap-1.5" title="Job ausblenden">
+                     ❌ ${activeUser === 'nancy' ? 'Nicht interessiert' : 'Not Interested'}
+                   </button>`
+              }
               <select onchange="markStatus('${j.id}', this.value)" class="bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200">
-                ${['New', 'Ready to Apply', 'Applied', 'Interview', 'Archived'].map(s => `<option value="${s}" ${j.status === s ? 'selected' : ''}>${s}</option>`).join('')}
+                ${['New', 'Ready to Apply', 'Applied', 'Interview', 'Not Interested', 'Archived'].map(s => `<option value="${s}" ${j.status === s ? 'selected' : ''}>${s}</option>`).join('')}
               </select>
             </div>
           </div>

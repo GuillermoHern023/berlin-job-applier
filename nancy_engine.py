@@ -13,10 +13,17 @@ NANCY_JOBS_DB_PATH = DATA_DIR / "nancy_jobs_db.json"
 
 NANCY_DEFAULT_QUERIES = [
     {"search_term": "Werkstudent Office Management", "location": "Berlin, Germany"},
-    {"search_term": "Werkstudent Teamassistenz Backoffice", "location": "Berlin, Germany"},
-    {"search_term": "Office Manager Teilzeit Charlottenburg", "location": "Berlin, Germany"},
-    {"search_term": "Werkstudent Kanzleiassistenz Sekretariat", "location": "Berlin, Germany"},
-    {"search_term": "Working Student Office Manager", "location": "Berlin, Germany"},
+    {"search_term": "Werkstudent Teamassistenz", "location": "Berlin, Germany"},
+    {"search_term": "Werkstudent Assistenz", "location": "Berlin, Germany"},
+    {"search_term": "Werkstudent Backoffice", "location": "Berlin, Germany"},
+    {"search_term": "Office Manager Teilzeit", "location": "Berlin, Germany"},
+    {"search_term": "Working Student Office Management", "location": "Berlin, Germany"},
+    {"search_term": "Working Student Team Assistant", "location": "Berlin, Germany"},
+    {"search_term": "Werkstudent Verwaltung", "location": "Berlin, Germany"},
+    {"search_term": "Werkstudent HR Assistenz", "location": "Berlin, Germany"},
+    {"search_term": "Werkstudent Event Organisation", "location": "Berlin, Germany"},
+    {"search_term": "Werkstudent Sekretariat", "location": "Berlin, Germany"},
+    {"search_term": "Office Assistant Berlin", "location": "Berlin, Germany"},
 ]
 
 

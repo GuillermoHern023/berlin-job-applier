@@ -94,6 +94,35 @@ def _job_to_row(j: Dict[str, Any]) -> List[str]:
     ]
 
 
+def fetch_existing_sheet_statuses(sheet_id: str, tab_name: str) -> Dict[str, str]:
+    try:
+        res = subprocess.run(
+            [GSHEETS_CMD, "readonly", "read", sheet_id, f"'{tab_name}'!B1:G500", "--json"],
+            capture_output=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=20,
+        )
+        if res.returncode != 0:
+            return {}
+        out = res.stdout.strip()
+        json_start = out.find("[")
+        if json_start == -1:
+            return {}
+        data = json.loads(out[json_start:])
+        status_map = {}
+        for row in data[1:]:
+            if len(row) >= 6:
+                status = str(row[0]).strip()
+                title = str(row[4]).strip().lower()
+                comp = str(row[5]).strip().lower()
+                if comp and title and status and status.lower() not in ["status", ""]:
+                    status_map[f"{comp}|{title}"] = status
+        return status_map
+    except Exception:
+        return {}
+
+
 def check_gsheets_auth() -> bool:
     try:
         res = subprocess.run(
@@ -126,6 +155,20 @@ def sync_jobs_to_google_sheet(
     sheet_id = settings.get("spreadsheet_id")
     if not sheet_id:
         return {"synced": False, "reason": "No spreadsheet ID configured.", "local_csv": str(csv_path)}
+
+    # Preserve any manual status edits made by Nancy or Guillermo in Google Sheets
+    g_statuses = fetch_existing_sheet_statuses(sheet_id, "Guillermo - PM & AI")
+    for j in guillermo_jobs:
+        k = f"{str(j.get('company','')).strip().lower()}|{str(j.get('title','')).strip().lower()}"
+        if k in g_statuses:
+            j["status"] = g_statuses[k]
+
+    if nancy_jobs is not None:
+        n_statuses = fetch_existing_sheet_statuses(sheet_id, "Nancy - Office Mgmt (Zoo)")
+        for j in nancy_jobs:
+            k = f"{str(j.get('company','')).strip().lower()}|{str(j.get('title','')).strip().lower()}"
+            if k in n_statuses:
+                j["status"] = n_statuses[k]
 
     g_rows = [SHEET_HEADERS] + [_job_to_row(j) for j in guillermo_jobs]
     batch_payload = [
