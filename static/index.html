@@ -1,357 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de" class="h-full bg-[#f3f2ef]">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guillermo & Nancy — Auto-Job Applier & CV Tailor</title>
+  <title>Berlin Job Hub • Indeed & LinkedIn Auto-Applier</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #0f172a;
-      color: #f8fafc;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #191919;
+      background-color: #f3f2ef;
     }
-    .glass-card {
-      background: rgba(30, 41, 59, 0.85);
-      border: 1px solid rgba(148, 163, 184, 0.16);
-      backdrop-filter: blur(8px);
+    .portal-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      transition: all 0.15s ease-in-out;
     }
-    ::-webkit-scrollbar { width: 8px; height: 8px; }
-    ::-webkit-scrollbar-track { background: #0f172a; }
-    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    .portal-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+    }
+    .portal-card.active-job {
+      border-color: #0a66c2 !important;
+      background-color: #f8fafd;
+      box-shadow: 0 0 0 1px #0a66c2, 0 4px 6px -1px rgba(10, 102, 194, 0.1);
+    }
+    .user-nancy .portal-card.active-job {
+      border-color: #db2777 !important;
+      background-color: #fdf2f8;
+      box-shadow: 0 0 0 1px #db2777, 0 4px 6px -1px rgba(219, 39, 119, 0.1);
+    }
+    /* Scrollbars */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
   </style>
 </head>
-<body class="min-h-screen pb-16">
-  <!-- Header -->
-  <header class="border-b border-slate-800 bg-slate-900/90 sticky top-0 z-30 backdrop-blur">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-4">
-      <div>
-        <!-- Profile Switcher Tabs -->
-        <div class="flex items-center gap-2 mb-2">
-          <button id="tabGuillermo" onclick="switchUser('guillermo')"
-                  class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-indigo-600 text-white shadow">
-            👨‍💻 Guillermo (PM / Product / AI)
+<body class="min-h-full flex flex-col user-nancy" id="appBody">
+
+  <!-- Top Global Navigation Bar (LinkedIn Style) -->
+  <header class="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+      
+      <!-- Brand & User Profile Switcher -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded bg-[#0a66c2] text-white flex items-center justify-center font-black text-lg tracking-tighter shadow-sm">
+            in
+          </div>
+          <div class="hidden sm:block">
+            <div class="text-sm font-bold text-gray-900 leading-tight">Berlin Job Hub</div>
+            <div class="text-[10px] text-gray-500 font-medium">Indeed &amp; LinkedIn Career Command</div>
+          </div>
+        </div>
+
+        <div class="h-6 w-px bg-gray-200 mx-1"></div>
+
+        <!-- User Toggle Switcher (Nancy vs Guillermo) -->
+        <div class="flex items-center bg-gray-100 p-0.5 rounded-lg border border-gray-200 text-xs font-semibold">
+          <button id="userTabNancy" onclick="switchUser('nancy')" class="px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-white text-pink-700 shadow-sm">
+            <span>👩 Nancy (Office &amp; Assistenz)</span>
           </button>
-          <button id="tabNancy" onclick="switchUser('nancy')"
-                  class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700">
-            👩‍💼 Nancy (Office Management – Zoologischer Garten)
+          <button id="userTabGuillermo" onclick="switchUser('guillermo')" class="px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-600 hover:text-gray-900">
+            <span>👨 Guillermo (PM &amp; AI)</span>
           </button>
         </div>
-        <h1 id="headerTitle" class="text-xl font-bold text-white">Guillermo's Auto-Job Applier & CV Tailor</h1>
-        <p id="headerSubtitle" class="text-xs text-slate-400 mt-0.5">
-          Söhtstraße 16, 12203 Berlin • Target: Working Student Project / Product / AI & Ops
-        </p>
       </div>
 
-      <div class="flex flex-wrap items-center gap-2.5">
-        <a id="masterCvBtn" href="files/Guillermo_Hernandez_CV_Master.pdf" target="_blank"
-           class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-1.5">
-          <span id="masterCvLabel">📄 Guillermo Master CV (PDF)</span>
+      <!-- Right Action Tools -->
+      <div class="flex items-center gap-2">
+        <button onclick="openAutofillModal()" class="px-3 py-1.5 text-xs font-medium bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 rounded-md transition flex items-center gap-1.5">
+          <span>⚡ 1-Click Autofill Helper</span>
+        </button>
+
+        <a id="navSheetLink" href="https://docs.google.com/spreadsheets/d/1o2r4Qvn9SL7gOa05P-up9tiwnCXPmcnOG3kttL_H0Fk/edit" target="_blank" class="hidden md:flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 rounded-md transition">
+          <span>📗 Google Sheet ↗</span>
         </a>
 
-        <a id="nancyDocxBtn" href="files/Nancy_Schuetze_Lebenslauf_Master.docx" download
-           class="hidden px-3.5 py-2 rounded-lg text-xs font-semibold bg-blue-600/30 hover:bg-blue-600/50 text-blue-200 border border-blue-500/40 transition flex items-center gap-1.5">
-          <span>📝 Download Word (.docx)</span>
+        <a id="navMasterCvBtn" href="files/Nancy_Schuetze_Lebenslauf_Master.pdf" download class="px-3 py-1.5 text-xs font-semibold bg-gray-900 hover:bg-gray-800 text-white rounded-md transition flex items-center gap-1.5 shadow-sm">
+          <span>📄 Master-CV PDF</span>
         </a>
-
-        <button onclick="openAutofillModal()"
-           class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 border border-amber-500/40 transition flex items-center gap-1.5">
-          <span>⚡ 1-Click Autofill &amp; CV Upload Helper</span>
-        </button>
-
-        <a id="directSheetTopBtn" href="https://docs.google.com/spreadsheets/d/1o2r4Qvn9SL7gOa05P-up9tiwnCXPmcnOG3kttL_H0Fk/edit" target="_blank"
-           class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-emerald-700/80 hover:bg-emerald-600 text-white border border-emerald-500/40 transition flex items-center gap-1.5">
-          <span>📗 Open Live Google Sheet ↗</span>
-        </a>
-
-        <button id="manualAddBtn" onclick="openManualModal()"
-                class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
-          + Paste Job / Custom Tailor
-        </button>
-
-        <button id="syncSheetsBtn" onclick="syncGoogleSheets()"
-                class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-emerald-600/90 hover:bg-emerald-500 text-white transition flex items-center gap-1.5">
-          <span>📊 Sync to Google Sheets</span>
-        </button>
-
-        <button id="scrapeBtn" onclick="openScrapeModal()"
-                class="px-4 py-2 rounded-lg text-xs font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/25 transition flex items-center gap-1.5">
-          <span>🔍 Auto-Find Jobs Now</span>
-        </button>
       </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="max-w-7xl mx-auto px-6 mt-6">
-    <!-- Stats & Sheet Banner -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-      <div class="glass-card rounded-xl p-4">
-        <div class="text-xs text-slate-400">Total Jobs in Tab</div>
-        <div id="statTotal" class="text-2xl font-bold text-white mt-1">0</div>
-      </div>
-      <div class="glass-card rounded-xl p-4">
-        <div id="statHighMatchLabel" class="text-xs text-slate-400">High Match (75%+)</div>
-        <div id="statHighMatch" class="text-2xl font-bold text-emerald-400 mt-1">0</div>
-      </div>
-      <div class="glass-card rounded-xl p-4">
-        <div class="text-xs text-slate-400">Tailored & Ready to Apply</div>
-        <div id="statReady" class="text-2xl font-bold text-indigo-400 mt-1">0</div>
-      </div>
-      <div class="glass-card rounded-xl p-4">
-        <div class="text-xs text-slate-400">Applied</div>
-        <div id="statApplied" class="text-2xl font-bold text-amber-400 mt-1">0</div>
-      </div>
-    </div>
+  <!-- Notification Banner -->
+  <div id="liveBanner" class="hidden bg-emerald-50 border-b border-emerald-200 text-emerald-900 px-4 py-2 text-xs flex items-center justify-between">
+    <div id="bannerText" class="font-medium"></div>
+    <a id="bannerLink" href="#" target="_blank" class="font-bold underline ml-2">Sheet öffnen ↗</a>
+  </div>
 
-    <!-- Notification / Sheet Link Bar -->
-    <div id="statusBanner" class="hidden mb-6 p-3.5 rounded-xl bg-indigo-950/60 border border-indigo-500/30 text-sm text-indigo-200 flex items-center justify-between">
-      <span id="statusBannerText"></span>
-      <a id="sheetLinkBtn" href="#" target="_blank" class="hidden underline font-semibold text-emerald-300 hover:text-emerald-200">Open Google Sheet (2 Tabs) ↗</a>
-    </div>
-
-    <!-- Filters & Sorting -->
-    <div class="glass-card rounded-xl p-4 mb-6 space-y-3">
-      <div class="flex flex-wrap items-center gap-3">
-        <div class="flex-1 min-w-[220px]">
-          <input id="searchInput" type="text" oninput="renderJobs()" placeholder="Search title, company, district (e.g. Charlottenburg), or keyword..."
-                 class="w-full bg-slate-900/90 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500" />
+  <!-- Main Container: Two-Column Split-View (The LinkedIn / Indeed Layout) -->
+  <main class="max-w-[1440px] w-full mx-auto px-3 sm:px-6 py-4 flex-1 flex flex-col">
+    
+    <!-- Top Filter & Search Bar -->
+    <div class="bg-white border border-gray-200 rounded-lg p-3.5 mb-4 shadow-sm space-y-3">
+      <!-- Search Input row -->
+      <div class="flex flex-col sm:flex-row gap-2.5">
+        <div class="relative flex-1">
+          <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+            🔍
+          </span>
+          <input id="searchInput" type="text" oninput="renderJobs()" placeholder="Position, Stichwort, Firma, z.B. Office Manager, Kanzlei, HR, Backoffice..." class="w-full pl-9 pr-3 py-2 bg-gray-50 border border-gray-300 rounded-md text-xs sm:text-sm text-gray-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
         </div>
 
-        <select id="recencyFilter" onchange="renderJobs()" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs font-medium text-slate-200">
-          <option value="ALL">🕒 All Posting Dates</option>
-          <option value="1">🔥 Posted in Last 24h (Today / Yesterday)</option>
-          <option value="3">⚡ Posted in Last 3 Days</option>
-          <option value="7">📅 Posted in Last 7 Days</option>
-          <option value="14">🗓️ Posted in Last 14 Days</option>
-        </select>
-
-        <select id="applicantsFilter" onchange="renderJobs()" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs font-medium text-slate-200">
-          <option value="ALL">👥 All Applicant Counts</option>
-          <option value="35">🟢 Low Competition (&lt; 35 Applicants)</option>
-          <option value="100">🟡 Under 100 Applicants</option>
-        </select>
-
-        <select id="sortBy" onchange="renderJobs()" class="bg-slate-900 border border-indigo-500/40 rounded-lg px-3 py-2 text-xs font-semibold text-indigo-200">
-          <option value="MATCH">🎯 Sort: Highest Match Score</option>
-          <option value="NEWEST">🕒 Sort: Newest / Most Recent First</option>
-          <option value="FEWEST_APPS">👥 Sort: Fewest Applicants First</option>
-        </select>
-      </div>
-
-      <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-800/80">
-        <button onclick="setFilterStatus('ACTIVE')" id="tabActive" class="px-3 py-1 rounded-lg text-xs font-bold bg-indigo-600 text-white transition shadow-sm">⭐ To Review / Active</button>
-        <button onclick="setFilterStatus('Applied')" id="tabApplied" class="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">✅ Applied (<span id="pillAppliedCount">0</span>)</button>
-        <button onclick="setFilterStatus('NOT_INTERESTED')" id="tabNotInterested" class="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">❌ Not Interested (<span id="pillDismissedCount">0</span>)</button>
-        <button onclick="setFilterStatus('ALL')" id="tabAll" class="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">📁 All Jobs (<span id="pillTotalCount">0</span>)</button>
-      </div>
-      <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
-        <div class="flex flex-wrap items-center gap-2.5">
-          <select id="langFilter" onchange="renderJobs()" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200">
-            <option value="ALL">🌐 All Fit / Locations</option>
-            <option value="TOP_FIT">⭐ Top Fit Only (English OK / Near Zoo)</option>
+        <div class="flex flex-wrap sm:flex-nowrap gap-2">
+          <!-- Workplace Model Filter -->
+          <select id="workModelFilter" onchange="renderJobs()" class="bg-gray-50 border border-gray-300 rounded-md px-3 py-2 text-xs font-medium text-gray-700 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="HYBRID_REMOTE" selected>🏠 Nur Hybrid &amp; Remote (Kein 100% Vor-Ort)</option>
+            <option value="ALL">🏢 Alle Arbeitsmodelle (Inkl. Vor-Ort)</option>
+            <option value="REMOTE_ONLY">🏡 Nur 100% Remote</option>
           </select>
 
-          <select id="workModelFilter" onchange="renderJobs()" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200">
-            <option value="HYBRID_REMOTE" selected>🏠 Hybrid &amp; Remote Only (No 100% Onsite)</option>
-            <option value="ALL">🏢 All Models (Including Onsite)</option>
-            <option value="REMOTE_ONLY">🏡 100% Remote Only</option>
+          <!-- Portal Filter -->
+          <select id="sourceFilter" onchange="renderJobs()" class="bg-gray-50 border border-gray-300 rounded-md px-3 py-2 text-xs font-medium text-gray-700 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="ALL">🌐 Alle Portale (Indeed &amp; LinkedIn)</option>
+            <option value="INDEED">🔷 Nur Indeed</option>
+            <option value="LINKEDIN">🔗 Nur LinkedIn</option>
           </select>
 
-          <select id="sourceFilter" onchange="renderJobs()" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200">
-            <option value="ALL">🌐 All Portals (Indeed &amp; LinkedIn)</option>
-            <option value="INDEED">🔷 Indeed Only</option>
-            <option value="LINKEDIN">🔗 LinkedIn Only</option>
+          <!-- Sort -->
+          <select id="sortBy" onchange="renderJobs()" class="bg-gray-50 border border-gray-300 rounded-md px-3 py-2 text-xs font-medium text-gray-700 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="NEWEST" selected>⚡ Neueste Stellen zuerst</option>
+            <option value="MATCH">⭐ Höchste Passung</option>
           </select>
-
-          <select id="statusFilter" onchange="updateTabs(); renderJobs();" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200">
-            <option value="ACTIVE" selected>✨ To Review / Active (Excludes Not Interested &amp; Applied)</option>
-            <option value="ALL">📌 All Jobs (Including Dismissed)</option>
-            <option value="NOT_INTERESTED">❌ Not Interested / Dismissed</option>
-            <option value="Applied">✅ Applied</option>
-            <option value="EDITED_YES">📄 Tailored PDFs Ready</option>
-            <option value="New">New</option>
-            <option value="Ready to Apply">Ready to Apply</option>
-            <option value="Interview">Interview</option>
-            <option value="Archived">Archived</option>
-          </select>
-
-          <span id="showingCountLabel" class="text-xs text-slate-400 pl-1"></span>
         </div>
+      </div>
 
-        <div class="flex flex-wrap items-center gap-2">
-          <button id="refreshMetaBtn" onclick="refreshMetadata()" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
-            🔄 Refresh Live Applicant Counts &amp; Age
+      <!-- Quick Status Filter Pills -->
+      <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-gray-100">
+        <div class="flex flex-wrap items-center gap-1.5">
+          <button onclick="setFilterStatus('ACTIVE')" id="tabActive" class="px-3 py-1 rounded-full text-xs font-bold bg-[#0a66c2] text-white transition shadow-sm">
+            ⭐ Zu prüfen (<span id="pillActiveCount">0</span>)
           </button>
-
-          <button onclick="tailorTopMatches()" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-violet-600 hover:bg-violet-500 text-white transition">
-            ⚡ Auto-Tailor Top 5 Filtered Jobs
+          <button onclick="setFilterStatus('Applied')" id="tabApplied" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">
+            ✅ Beworben (<span id="pillAppliedCount">0</span>)
+          </button>
+          <button onclick="setFilterStatus('NOT_INTERESTED')" id="tabNotInterested" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">
+            ❌ Nicht interessiert (<span id="pillDismissedCount">0</span>)
+          </button>
+          <button onclick="setFilterStatus('ALL')" id="tabAll" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">
+            📁 Alle Stellen (<span id="pillTotalCount">0</span>)
           </button>
         </div>
+
+        <div class="text-xs text-gray-500" id="showingCountLabel">
+          Zeige Stellen...
+        </div>
       </div>
     </div>
 
-    <!-- Jobs List -->
-    <div id="jobsContainer" class="space-y-3"></div>
+    <!-- Split-Pane Two Columns Layout (Desktop) -->
+    <div class="flex-1 flex gap-4 items-start relative pb-10">
+      
+      <!-- LEFT COLUMN: Job List Feed (440px wide) -->
+      <div class="w-full lg:w-[480px] xl:w-[520px] shrink-0 space-y-2.5 overflow-y-auto max-h-[calc(100vh-210px)] pr-1" id="jobFeedContainer">
+        <!-- Rendered job cards injected here -->
+      </div>
+
+      <!-- RIGHT COLUMN: Active Job Detail & Command Panel (Sticky) -->
+      <div class="hidden lg:flex flex-1 flex-col bg-white border border-gray-200 rounded-lg shadow-sm sticky top-[76px] max-h-[calc(100vh-210px)] overflow-hidden" id="jobDetailContainer">
+        <!-- Selected job details injected here -->
+      </div>
+
+    </div>
+
   </main>
 
-  <!-- Tailor & Preview Modal -->
-  <div id="tailorModal" class="fixed inset-0 bg-black/75 z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl">
-      <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
-        <div>
-          <h2 id="modalJobTitle" class="text-lg font-bold text-white">Tailor CV &amp; Cover Letter</h2>
-          <p id="modalJobCompany" class="text-xs text-slate-400"></p>
-        </div>
-        <button onclick="closeTailorModal()" class="text-slate-400 hover:text-white text-xl">&times;</button>
+  <!-- Mobile Detail Slide-Over Modal (For screens < 1024px) -->
+  <div id="mobileDetailModal" class="hidden fixed inset-0 z-50 bg-black/60 flex flex-col justify-end lg:hidden">
+    <div class="bg-white rounded-t-2xl max-h-[92vh] flex flex-col overflow-hidden shadow-2xl">
+      <div class="p-3 border-b border-gray-200 flex items-center justify-between bg-gray-50">
+        <button onclick="closeMobileDetail()" class="text-xs font-bold text-blue-600 flex items-center gap-1">
+          ← Zurück zur Liste
+        </button>
+        <div class="text-xs font-medium text-gray-500" id="mobileModalJobCount">Job-Detail</div>
+        <button onclick="closeMobileDetail()" class="text-gray-400 hover:text-gray-700 font-bold text-lg">✕</button>
       </div>
-
-      <div class="p-6 overflow-y-auto space-y-5 flex-1">
-        <!-- Generated PDF Quick Links -->
-        <div id="modalPdfLinks" class="hidden p-3.5 rounded-xl bg-emerald-950/50 border border-emerald-500/30 flex flex-wrap items-center justify-between gap-3">
-          <div class="text-xs text-emerald-200 font-medium">✅ 1-Page Tailored CV &amp; Cover Letter PDFs generated!</div>
-          <div class="flex items-center gap-2">
-            <a id="modalCvLink" href="#" target="_blank" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold">View Tailored CV PDF ↗</a>
-            <a id="modalClLink" href="#" target="_blank" class="px-3 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-500 text-white text-xs font-semibold">View Cover Letter PDF ↗</a>
-            <button onclick="openJobFolder(currentTailorJobId)" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-600">📂 Show in Explorer</button>
-          </div>
-        </div>
-
-        <!-- Auto1 Bullet Selector (Guillermo only) -->
-        <div id="bulletSection">
-          <label class="block text-xs font-bold uppercase tracking-wider text-indigo-300 mb-2">
-            Select Auto1 Group Bullets for CV (6 Recommended for 1-Page Fit)
-          </label>
-          <div id="bulletCheckboxes" class="space-y-2"></div>
-        </div>
-
-        <!-- Cover Letter Editor -->
-        <!-- Tailored Cover Letter Section -->
-        <div class="space-y-3">
-          <div class="flex flex-wrap items-center justify-between gap-2 p-3 rounded-xl bg-purple-950/40 border border-purple-800/60">
-            <div>
-              <div class="text-sm font-bold text-purple-200 flex items-center gap-1.5">
-                <span>✍️ Maßgeschneidertes Anschreiben für diese Stelle</span>
-              </div>
-              <div class="text-[11px] text-purple-300/80">Automatisch auf die Position &amp; das Unternehmen angepasst</div>
-            </div>
-            <button onclick="copyCoverLetterText()" class="px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md">
-              <span>📋 1-Klick: Text kopieren (Für Indeed / Portal)</span>
-            </button>
-          </div>
-          <div id="clParagraphInputs" class="space-y-2.5"></div>
-        </div>
-      </div>
-
-      <div class="px-6 py-4 border-t border-slate-800 bg-slate-950/60 flex items-center justify-between">
-        <button onclick="closeTailorModal()" class="px-4 py-2 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700">Close</button>
-        <div class="flex items-center gap-3">
-          <button id="generateBundleBtn" onclick="saveAndGenerateBundle()" class="px-5 py-2.5 rounded-lg text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg">
-            ⚡ Generate 1-Page CV &amp; Cover Letter PDFs
-          </button>
-        </div>
-      </div>
+      <div class="flex-1 overflow-y-auto p-4" id="mobileDetailContent"></div>
     </div>
   </div>
 
-  <!-- Scrape Modal -->
-  <div id="scrapeModal" class="fixed inset-0 bg-black/75 z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full p-6 shadow-2xl">
-      <h2 id="scrapeModalTitle" class="text-lg font-bold text-white mb-1">Start Fresh Job Search</h2>
-      <p class="text-xs text-slate-400 mb-3">Scrapes LinkedIn &amp; Indeed Germany for recent postings and fetches live applicant counts.</p>
-
-      <!-- Preset Quick Buttons -->
-      <div class="flex flex-wrap gap-1.5 mb-3">
-        <button onclick="setScrapePreset('guillermo_berlin')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-[11px] text-indigo-300 border border-slate-700">Preset: Guillermo (Berlin PM/AI)</button>
-        <button onclick="setScrapePreset('guillermo_remote')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-[11px] text-indigo-300 border border-slate-700">Preset: Guillermo (Remote Germany)</button>
-        <button onclick="setScrapePreset('nancy_zoo')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-[11px] text-pink-300 border border-slate-700">Preset: Nancy (Office Mgmt Zoo/Charlottenburg)</button>
-      </div>
-
-      <div class="space-y-3">
+  <!-- 1-Click Autofill Helper Modal -->
+  <div id="autofillModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+    <div class="bg-white border border-gray-200 rounded-xl max-w-2xl w-full p-6 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-gray-200 pb-3">
         <div>
-          <label class="block text-xs text-slate-300 mb-1">Search Queries (one per line)</label>
-          <textarea id="scrapeQueriesInput" rows="4" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-xs text-white"></textarea>
+          <h2 class="text-base font-bold text-gray-900 flex items-center gap-2">
+            <span>⚡ 1-Klick Autofill &amp; CV Vorab-Hinterlegung</span>
+          </h2>
+          <p class="text-xs text-gray-500 mt-0.5">So sparst du Zeit und bewirbst dich in 3 Sekunden</p>
         </div>
-        <div class="grid grid-cols-3 gap-2.5">
-          <div>
-            <label class="block text-xs text-slate-300 mb-1">Location</label>
-            <input id="scrapeLocationInput" type="text" value="Berlin, Germany" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-xs text-white" />
+        <button onclick="closeAutofillModal()" class="text-gray-400 hover:text-gray-700 text-lg font-bold">✕</button>
+      </div>
+
+      <div class="space-y-4 text-xs text-gray-700">
+        <div class="p-4 rounded-lg bg-blue-50 border border-blue-200 space-y-2">
+          <div class="font-bold text-blue-900 text-sm flex items-center gap-1.5">
+            <span>🔷 1. Für Indeed: Lebenslauf einmal hinterlegen</span>
           </div>
-          <div>
-            <label class="block text-xs text-slate-300 mb-1">Posted Within</label>
-            <select id="scrapeHoursInput" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-xs text-white">
-              <option value="24">🔥 Last 24 Hours</option>
-              <option value="72" selected>⚡ Last 3 Days (72h)</option>
-              <option value="168">📅 Last 7 Days</option>
-              <option value="336">🗓️ Last 14 Days</option>
-            </select>
+          <p class="leading-relaxed">
+            Lade deinen neuen 1-Seiten-Master-Lebenslauf <strong>einmalig</strong> in deinem Indeed-Profil hoch. Danach sind alle Indeed-Bewerbungen sofort vorab ausgefüllt:
+          </p>
+          <div class="pt-1 flex flex-wrap gap-2">
+            <a href="https://de.indeed.com/profile" target="_blank" class="px-3 py-1.5 rounded-md bg-[#003a9b] hover:bg-[#002f7d] text-white font-semibold transition flex items-center gap-1.5">
+              <span>🚀 Zu deinem Indeed-Profil ↗</span>
+            </a>
+            <a id="modalDownloadMasterBtn" href="files/Nancy_Schuetze_Lebenslauf_Master.pdf" download class="px-3 py-1.5 rounded-md bg-white hover:bg-gray-50 text-gray-800 border border-gray-300 font-semibold transition">
+              📄 Master-Lebenslauf herunterladen
+            </a>
           </div>
-          <div>
-            <label class="block text-xs text-slate-300 mb-1">Results / Query</label>
-            <input id="scrapeCountInput" type="number" value="12" min="5" max="30" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-xs text-white" />
+        </div>
+
+        <div class="p-4 rounded-lg bg-purple-50 border border-purple-200 space-y-2">
+          <div class="font-bold text-purple-900 text-sm flex items-center gap-1.5">
+            <span>🪄 2. Für andere Portale (Personio, Join.com, Workday)</span>
           </div>
+          <p class="leading-relaxed">
+            Ziehe diesen Button einfach in deine <strong>Browser-Lesezeichenleiste</strong> (Chrome, Safari, Edge):
+          </p>
+          <div class="p-3 bg-white rounded border border-purple-200 text-center my-1.5">
+            <a id="autofillBookmarkletLink" href="#" class="inline-block px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-95 text-white font-bold rounded shadow cursor-grab text-xs">
+              ⚡ Nancy 1-Klick Autofill (In Lesezeichenleiste ziehen)
+            </a>
+          </div>
+          <p class="text-[11px] text-gray-500">
+            Klicke auf einem beliebigen Online-Formular auf dieses Lesezeichen: Es füllt Name, E-Mail, Telefon und Adresse automatisch in 1 Millisekunde aus!
+          </p>
         </div>
       </div>
 
-      <div class="mt-6 flex justify-end gap-2">
-        <button onclick="closeScrapeModal()" class="px-4 py-2 rounded-lg text-xs bg-slate-800 text-slate-300">Cancel</button>
-        <button id="runScrapeConfirmBtn" onclick="runScrape()" class="px-4 py-2 rounded-lg text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white">🔍 Search &amp; Enrich Jobs</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Manual Add Job Modal -->
-  <div id="manualModal" class="fixed inset-0 bg-black/75 z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-xl w-full p-6 shadow-2xl">
-      <h2 class="text-lg font-bold text-white mb-1">Paste Job to Score & Tailor</h2>
-      <p class="text-xs text-slate-400 mb-4">Found a role on StepStone, LinkedIn, or Indeed? Paste it here for instant 1-click CV & Cover Letter PDFs.</p>
-
-      <div class="space-y-3">
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs text-slate-300 mb-1">Job Title *</label>
-            <input id="manTitle" type="text" placeholder="e.g. Werkstudentin Office Management (m/w/d)" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-xs text-white" />
-          </div>
-          <div>
-            <label class="block text-xs text-slate-300 mb-1">Company *</label>
-            <input id="manCompany" type="text" placeholder="e.g. Kanzlei / Agentur Charlottenburg" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-xs text-white" />
-          </div>
-        </div>
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs text-slate-300 mb-1">Location</label>
-            <input id="manLocation" type="text" value="Berlin Charlottenburg / Zoologischer Garten" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-xs text-white" />
-          </div>
-          <div>
-            <label class="block text-xs text-slate-300 mb-1">Direct Application Link</label>
-            <input id="manUrl" type="text" placeholder="https://..." class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2 text-xs text-white" />
-          </div>
-        </div>
-        <div>
-          <label class="block text-xs text-slate-300 mb-1">Job Description</label>
-          <textarea id="manDesc" rows="6" placeholder="Paste the job description here..." class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-xs text-white"></textarea>
-        </div>
-      </div>
-
-      <div class="mt-6 flex justify-end gap-2">
-        <button onclick="closeManualModal()" class="px-4 py-2 rounded-lg text-xs bg-slate-800 text-slate-300">Cancel</button>
-        <button onclick="submitManualJob()" class="px-4 py-2 rounded-lg text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white">Add & Open Tailor Studio</button>
+      <div class="flex justify-end pt-2 border-t border-gray-200">
+        <button onclick="closeAutofillModal()" class="px-4 py-1.5 rounded-md bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium text-xs">
+          Schließen
+        </button>
       </div>
     </div>
   </div>
 
   <!-- STATIC_STATE_INJECTION_POINT -->
+
   <script>
-    let activeUser = 'guillermo';
+    let activeUser = 'nancy';
+    let isLiveBackend = false;
     let guillermoJobs = [];
     let nancyJobs = [];
-    let currentTailorJobId = null;
-    let isLiveBackend = false;
+    let currentStatusFilter = 'ACTIVE';
+    let selectedJobId = null;
 
-    function resolveFileUrl(u) {
-      if (!u) return '';
-      if (u.startsWith('http://') || u.startsWith('https://')) return u;
-      return u.startsWith('/') ? u.slice(1) : u;
+    function init() {
+      // Check user from URL hash or default
+      const hash = window.location.hash || '';
+      if (hash.includes('guillermo')) {
+        activeUser = 'guillermo';
+      } else {
+        activeUser = 'nancy';
+      }
+
+      applyUserTheme();
+
+      if (window.STATIC_STATE) {
+        guillermoJobs = window.STATIC_STATE.jobs || [];
+        nancyJobs = window.STATIC_STATE.nancy_jobs || [];
+        applyLocalStatusOverrides(guillermoJobs, 'guillermo');
+        applyLocalStatusOverrides(nancyJobs, 'nancy');
+        renderJobs();
+      }
+
+      loadLiveState();
+    }
+
+    function applyUserTheme() {
+      const body = document.getElementById('appBody');
+      const tabN = document.getElementById('userTabNancy');
+      const tabG = document.getElementById('userTabGuillermo');
+      const masterBtn = document.getElementById('navMasterCvBtn');
+
+      if (activeUser === 'nancy') {
+        body.className = 'min-h-full flex flex-col user-nancy';
+        tabN.className = 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-white text-pink-700 shadow-sm font-bold';
+        tabG.className = 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-600 hover:text-gray-900 font-medium';
+        if (masterBtn) {
+          masterBtn.href = 'files/Nancy_Schuetze_Lebenslauf_Master.pdf';
+          masterBtn.innerHTML = '<span>📄 Nancys Lebenslauf PDF</span>';
+        }
+      } else {
+        body.className = 'min-h-full flex flex-col user-guillermo';
+        tabG.className = 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-white text-blue-700 shadow-sm font-bold';
+        tabN.className = 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-600 hover:text-gray-900 font-medium';
+        if (masterBtn) {
+          masterBtn.href = 'files/Guillermo_Hernandez_CV_Master.pdf';
+          masterBtn.innerHTML = '<span>📄 Guillermos CV PDF</span>';
+        }
+      }
+    }
+
+    function switchUser(u) {
+      activeUser = u;
+      applyUserTheme();
+      selectedJobId = null;
+      renderJobs();
     }
 
     function applyLocalStatusOverrides(list, userKey) {
@@ -367,121 +321,456 @@
       return activeUser === 'nancy' ? nancyJobs : guillermoJobs;
     }
 
-    function setActiveJobs(list) {
-      if (activeUser === 'nancy') nancyJobs = list;
-      else guillermoJobs = list;
-    }
-
-    async function loadState() {
+    async function loadLiveState() {
       try {
         const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), 2200);
+        const timer = setTimeout(() => controller.abort(), 2000);
         const res = await fetch('/api/state', { signal: controller.signal });
         clearTimeout(timer);
-        if (!res.ok) throw new Error('Static mode');
+        if (!res.ok) throw new Error('Static');
         const data = await res.json();
         isLiveBackend = true;
         guillermoJobs = data.jobs || [];
         nancyJobs = data.nancy_jobs || [];
-        if (data.spreadsheet_url) {
-          showBanner('🟢 Live Server Mode • Connected to Google Sheets Tracker (Guillermo & Nancy Tabs).', data.spreadsheet_url);
-        }
-      } catch (err) {
-        isLiveBackend = false;
-        const staticData = window.STATIC_STATE || { jobs: [], nancy_jobs: [] };
-        guillermoJobs = staticData.jobs || [];
-        nancyJobs = staticData.nancy_jobs || [];
         applyLocalStatusOverrides(guillermoJobs, 'guillermo');
         applyLocalStatusOverrides(nancyJobs, 'nancy');
-        const sheetUrl = staticData.spreadsheet_url || 'https://docs.google.com/spreadsheets/d/1o2r4Qvn9SL7gOa05P-up9tiwnCXPmcnOG3kttL_H0Fk/edit';
-        const updatedStr = staticData.updated_at ? ` (Last Auto-Updated: ${staticData.updated_at})` : '';
-        showBanner(`🌐 Independent Web App Mode${updatedStr} • Pre-Tailored PDFs, Word CV & Google Sheet Ready!`, sheetUrl);
-      }
-      renderJobs();
-    }
-
-    function switchUser(user) {
-      activeUser = user;
-      const tabG = document.getElementById('tabGuillermo');
-      const tabN = document.getElementById('tabNancy');
-      const hTitle = document.getElementById('headerTitle');
-      const hSub = document.getElementById('headerSubtitle');
-      const cvBtn = document.getElementById('masterCvBtn');
-      const cvLabel = document.getElementById('masterCvLabel');
-
-      const docxBtn = document.getElementById('nancyDocxBtn');
-      if (user === 'nancy') {
-        tabN.className = 'px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-pink-600 text-white shadow';
-        tabG.className = 'px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700';
-        hTitle.textContent = "Nancy's Office Management Job Finder & Lebenslauf Tailor";
-        hSub.textContent = "TU Berlin (Campus Zoologischer Garten) • Target: Office Management / Teamassistenz / Kanzlei near Zoo & City West";
-        cvBtn.href = resolveFileUrl('files/Nancy_Schuetze_Lebenslauf_Master.pdf');
-        cvLabel.textContent = '📄 Nancy Master Lebenslauf (PDF)';
-        docxBtn.classList.remove('hidden');
-      } else {
-        tabG.className = 'px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-indigo-600 text-white shadow';
-        tabN.className = 'px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700';
-        hTitle.textContent = "Guillermo's Auto-Job Applier & CV Tailor";
-        hSub.textContent = "Söhtstraße 16, 12203 Berlin • Target: Working Student Project / Product / AI & Ops";
-        cvBtn.href = resolveFileUrl('files/Guillermo_Hernandez_CV_Master.pdf');
-        cvLabel.textContent = '📄 Guillermo Master CV (PDF)';
-        docxBtn.classList.add('hidden');
-      }
-      renderJobs();
-    }
-
-    function showBanner(msg, sheetUrl = null) {
-      const banner = document.getElementById('statusBanner');
-      const text = document.getElementById('statusBannerText');
-      const link = document.getElementById('sheetLinkBtn');
-      banner.classList.remove('hidden');
-      text.textContent = msg;
-      if (sheetUrl) {
-        link.href = sheetUrl;
-        link.classList.remove('hidden');
+        renderJobs();
+      } catch (e) {
+        isLiveBackend = false;
       }
     }
-
-    function updateStats() {
-      const jobs = getActiveJobs();
-      document.getElementById('statTotal').textContent = jobs.length;
-      document.getElementById('statHighMatch').textContent = jobs.filter(j => (j.match_score || 0) >= 75).length;
-      document.getElementById('statReady').textContent = jobs.filter(j => j.cv_url || j.status === 'Ready to Apply').length;
-      document.getElementById('statApplied').textContent = jobs.filter(j => (j.status || '').toLowerCase() === 'applied').length;
-
-      const appliedCount = jobs.filter(j => (j.status || '').toLowerCase() === 'applied').length;
-      const dismissedCount = jobs.filter(j => (j.status || '').toLowerCase() === 'not interested').length;
-      if (document.getElementById('pillAppliedCount')) document.getElementById('pillAppliedCount').textContent = appliedCount;
-      if (document.getElementById('pillDismissedCount')) document.getElementById('pillDismissedCount').textContent = dismissedCount;
-      if (document.getElementById('pillTotalCount')) document.getElementById('pillTotalCount').textContent = jobs.length;
-    }
-
 
     function setFilterStatus(st) {
-      document.getElementById('statusFilter').value = st;
-      updateTabs();
+      currentStatusFilter = st;
+      updateFilterTabs();
       renderJobs();
     }
 
-    function updateTabs() {
-      const current = document.getElementById('statusFilter').value;
+    function updateFilterTabs() {
       const tabs = [
-        { id: 'tabActive', active: current === 'ACTIVE' },
-        { id: 'tabApplied', active: current === 'Applied' },
-        { id: 'tabNotInterested', active: current === 'NOT_INTERESTED' },
-        { id: 'tabAll', active: current === 'ALL' },
+        { id: 'tabActive', active: currentStatusFilter === 'ACTIVE', activeClass: (activeUser === 'nancy' ? 'bg-pink-600' : 'bg-[#0a66c2]') + ' text-white font-bold shadow-sm' },
+        { id: 'tabApplied', active: currentStatusFilter === 'Applied', activeClass: 'bg-emerald-600 text-white font-bold shadow-sm' },
+        { id: 'tabNotInterested', active: currentStatusFilter === 'NOT_INTERESTED', activeClass: 'bg-rose-600 text-white font-bold shadow-sm' },
+        { id: 'tabAll', active: currentStatusFilter === 'ALL', activeClass: 'bg-gray-800 text-white font-bold shadow-sm' },
       ];
       tabs.forEach(t => {
         const el = document.getElementById(t.id);
         if (!el) return;
         if (t.active) {
-          el.className = 'px-3 py-1 rounded-lg text-xs font-bold bg-indigo-600 text-white transition shadow-sm';
+          el.className = 'px-3 py-1 rounded-full text-xs ' + t.activeClass + ' transition';
         } else {
-          el.className = 'px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition';
+          el.className = 'px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition';
         }
       });
     }
 
+    function renderJobs() {
+      updateFilterTabs();
+      const allJobs = getActiveJobs();
+      const q = (document.getElementById('searchInput').value || '').toLowerCase();
+      const wm = document.getElementById('workModelFilter').value;
+      const src = document.getElementById('sourceFilter').value;
+      const sort = document.getElementById('sortBy').value;
+
+      // Update counters
+      const activeCount = allJobs.filter(j => !['applied', 'not interested', 'archived', 'rejected'].includes((j.status || '').toLowerCase())).length;
+      const appliedCount = allJobs.filter(j => (j.status || '').toLowerCase() === 'applied').length;
+      const dismissedCount = allJobs.filter(j => (j.status || '').toLowerCase() === 'not interested').length;
+
+      document.getElementById('pillActiveCount').textContent = activeCount;
+      document.getElementById('pillAppliedCount').textContent = appliedCount;
+      document.getElementById('pillDismissedCount').textContent = dismissedCount;
+      document.getElementById('pillTotalCount').textContent = allJobs.length;
+
+      let filtered = allJobs.filter(j => {
+        const st = (j.status || 'New').toLowerCase();
+        if (currentStatusFilter === 'ACTIVE') {
+          if (['applied', 'not interested', 'archived', 'rejected'].includes(st)) return false;
+        } else if (currentStatusFilter === 'NOT_INTERESTED') {
+          if (st !== 'not interested') return false;
+        } else if (currentStatusFilter === 'Applied') {
+          if (st !== 'applied') return false;
+        }
+
+        // Work model filter
+        if (wm === 'HYBRID_REMOTE') {
+          if (j.is_100_onsite || (j.work_model && j.work_model.includes('100% Vor Ort'))) return false;
+        } else if (wm === 'REMOTE_ONLY') {
+          if (!j.work_model || !j.work_model.includes('Remote')) return false;
+        }
+
+        // Source portal filter
+        const isInd = (j.source || '').toLowerCase() === 'indeed' || (j.job_url || '').toLowerCase().includes('indeed.com');
+        const isLk = (j.source || '').toLowerCase() === 'linkedin' || (j.job_url || '').toLowerCase().includes('linkedin.com');
+        if (src === 'INDEED' && !isInd) return false;
+        if (src === 'LINKEDIN' && !isLk) return false;
+
+        // Search text query
+        if (q) {
+          const hay = `${j.title} ${j.company} ${j.location} ${j.why_fits || ''} ${j.description || ''}`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      // Sort
+      filtered.sort((a, b) => {
+        if (sort === 'NEWEST') {
+          const da = a.days_ago !== undefined ? a.days_ago : 99;
+          const db = b.days_ago !== undefined ? b.days_ago : 99;
+          if (da !== db) return da - db;
+          return (b.match_score || 0) - (a.match_score || 0);
+        } else {
+          return (b.match_score || 0) - (a.match_score || 0);
+        }
+      });
+
+      document.getElementById('showingCountLabel').textContent = `${filtered.length} von ${allJobs.length} Stellen angezeigt`;
+
+      // Keep active job selection valid
+      if (!selectedJobId || !filtered.some(j => j.id === selectedJobId)) {
+        selectedJobId = filtered.length > 0 ? filtered[0].id : null;
+      }
+
+      renderFeedCards(filtered);
+      renderDetailPane(filtered.find(j => j.id === selectedJobId));
+    }
+
+    function renderFeedCards(jobsList) {
+      const feed = document.getElementById('jobFeedContainer');
+      if (jobsList.length === 0) {
+        feed.innerHTML = `
+          <div class="p-8 text-center bg-white border border-gray-200 rounded-lg text-gray-500">
+            <div class="text-3xl mb-2">🔍</div>
+            <div class="font-bold text-gray-800 text-sm">Keine Stellen für diese Filter gefunden</div>
+            <div class="text-xs text-gray-500 mt-1">Probiere andere Suchbegriffe oder wähle "Alle Stellen".</div>
+          </div>
+        `;
+        return;
+      }
+
+      feed.innerHTML = jobsList.map(j => {
+        const isSelected = j.id === selectedJobId;
+        const initial = (j.company || 'C').charAt(0).toUpperCase();
+        const score = j.match_score || 85;
+        const isIndeed = (j.source || '').toLowerCase() === 'indeed' || (j.job_url || '').toLowerCase().includes('indeed.com');
+        const isFresh = (j.days_ago !== undefined && j.days_ago <= 1);
+        const wm = j.work_model || (j.is_100_onsite ? '100% Vor Ort' : 'Hybrid');
+
+        return `
+          <div onclick="selectJob('${j.id}')" class="portal-card p-3.5 cursor-pointer relative ${isSelected ? 'active-job' : ''}">
+            <div class="flex items-start gap-3">
+              
+              <!-- Company Initial Avatar -->
+              <div class="w-10 h-10 rounded-md bg-gray-100 border border-gray-200 flex items-center justify-center font-bold text-gray-700 text-base shrink-0">
+                ${initial}
+              </div>
+
+              <!-- Main Card Info -->
+              <div class="flex-1 min-w-0">
+                <div class="flex items-start justify-between gap-1">
+                  <h3 class="text-sm font-bold text-gray-900 hover:text-blue-600 line-clamp-2 leading-snug">
+                    ${j.title}
+                  </h3>
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold ${score >= 90 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-gray-100 text-gray-700'} shrink-0 ml-1">
+                    ${score}%
+                  </span>
+                </div>
+
+                <div class="text-xs text-gray-600 font-medium mt-0.5 truncate">
+                  ${j.company} &bull; ${j.location || 'Berlin'}
+                </div>
+
+                <!-- Chips Row -->
+                <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                  <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-emerald-50 text-emerald-800 border border-emerald-200">
+                    🏠 ${wm}
+                  </span>
+
+                  ${isIndeed ? `
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-sky-50 text-sky-800 border border-sky-200">
+                      🔷 Indeed
+                    </span>
+                  ` : `
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-blue-50 text-blue-800 border border-blue-200">
+                      🔗 LinkedIn
+                    </span>
+                  `}
+
+                  ${isFresh ? `
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-50 text-amber-800 border border-amber-200">
+                      🔥 Neu
+                    </span>
+                  ` : ''}
+
+                  ${j.status && j.status !== 'New' ? `
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-gray-100 text-gray-700">
+                      ${j.status}
+                    </span>
+                  ` : ''}
+                </div>
+
+                <div class="text-[11px] text-gray-500 mt-2 line-clamp-1">
+                  ${j.why_fits || ''}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function selectJob(jobId) {
+      selectedJobId = jobId;
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      
+      // Update left feed cards selection styling
+      document.querySelectorAll('#jobFeedContainer .portal-card').forEach(el => {
+        el.classList.remove('active-job');
+      });
+      renderJobs();
+
+      // On mobile screens, open drawer
+      if (window.innerWidth < 1024 && job) {
+        openMobileDetail(job);
+      }
+    }
+
+    function renderDetailPane(job) {
+      const container = document.getElementById('jobDetailContainer');
+      if (!job) {
+        container.innerHTML = `
+          <div class="p-12 text-center text-gray-400 my-auto">
+            <div class="text-4xl mb-3">👈</div>
+            <div class="text-sm font-semibold text-gray-700">Wähle eine Stelle aus der Liste links aus</div>
+            <div class="text-xs text-gray-400 mt-1">Hier siehst du sofort das Anschreiben, Details und Bewerbung.</div>
+          </div>
+        `;
+        return;
+      }
+
+      const initial = (job.company || 'C').charAt(0).toUpperCase();
+      const isIndeed = (job.source || '').toLowerCase() === 'indeed' || (job.job_url || '').toLowerCase().includes('indeed.com');
+      const isDismissed = (job.status || '').toLowerCase() === 'not interested';
+
+      // Generate bespoke cover letter paragraphs
+      const clText = buildTailoredCoverLetter(job);
+
+      container.innerHTML = `
+        <!-- Sticky Detail Header -->
+        <div class="p-5 border-b border-gray-200 bg-white">
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex items-start gap-3.5">
+              <div class="w-12 h-12 rounded-lg bg-gray-100 border border-gray-200 flex items-center justify-center font-black text-gray-700 text-xl shrink-0">
+                ${initial}
+              </div>
+              <div>
+                <h2 class="text-lg font-bold text-gray-900 leading-snug">
+                  ${job.title}
+                </h2>
+                <div class="text-xs text-gray-600 mt-0.5 flex flex-wrap items-center gap-1.5 font-medium">
+                  <span class="font-bold text-gray-900">${job.company}</span>
+                  <span>&bull;</span>
+                  <span>📍 ${job.location || 'Berlin'}</span>
+                  <span>&bull;</span>
+                  <span>🕒 ${job.posted_ago || job.date_posted || 'Kürzlich'}</span>
+                  <span>&bull;</span>
+                  <span>👥 ${job.applicants_text || 'Direktes Portal'}</span>
+                </div>
+              </div>
+            </div>
+
+            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+              ${job.match_score || 85}% Passung
+            </span>
+          </div>
+
+          <!-- Main CTA Action Buttons Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-2.5 mt-4 pt-3 border-t border-gray-100">
+            <div class="flex flex-wrap items-center gap-2">
+              <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-sm ${isIndeed ? 'bg-[#003a9b] hover:bg-[#002f7d] text-white' : 'bg-[#0a66c2] hover:bg-[#004182] text-white'}">
+                ${isIndeed ? '🔷 Auf Indeed bewerben ↗' : '🔗 Auf LinkedIn bewerben ↗'}
+              </a>
+
+              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 transition flex items-center gap-1.5">
+                <span>📋 Anschreiben kopieren</span>
+              </button>
+
+              ${isDismissed ? `
+                <button onclick="markStatus('${job.id}', 'New')" class="px-3 py-2 rounded-md text-xs font-medium bg-gray-100 hover:bg-gray-200 text-gray-700 transition">
+                  ↩ Wiederherstellen
+                </button>
+              ` : `
+                <button onclick="markStatus('${job.id}', 'Not Interested')" class="px-3 py-2 rounded-md text-xs font-medium bg-gray-50 hover:bg-rose-50 text-gray-500 hover:text-rose-600 border border-gray-200 rounded-md transition" title="Ausblenden">
+                  ❌ Nicht interessiert
+                </button>
+              `}
+            </div>
+
+            <div class="flex items-center gap-2">
+              <select onchange="markStatus('${job.id}', this.value)" class="bg-gray-50 border border-gray-200 rounded-md px-2.5 py-1.5 text-xs text-gray-700 font-medium">
+                ${['New', 'Ready to Apply', 'Applied', 'Interview', 'Not Interested'].map(s => `<option value="${s}" ${job.status === s ? 'selected' : ''}>${s}</option>`).join('')}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detail Tabs & Body Content -->
+        <div class="flex-1 overflow-y-auto p-5 space-y-5 bg-[#fafafa]">
+          
+          <!-- Box 1: Tailored Cover Letter (Instant Copy Ready) -->
+          <div class="bg-white border border-purple-200 rounded-lg p-4 shadow-sm space-y-3">
+            <div class="flex items-center justify-between border-b border-gray-100 pb-2">
+              <div class="flex items-center gap-1.5 text-xs font-bold text-purple-900">
+                <span>✍️ Maßgeschneidertes Anschreiben für diese Stelle</span>
+              </div>
+              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-1 rounded bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition flex items-center gap-1">
+                <span>📋 1-Klick Kopieren</span>
+              </button>
+            </div>
+
+            <textarea id="clDetailTextarea" rows="10" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-md text-xs text-gray-800 leading-relaxed font-sans focus:bg-white focus:outline-none focus:ring-1 focus:ring-purple-500">${clText}</textarea>
+            
+            <div class="text-[11px] text-gray-500 flex items-center justify-between">
+              <span>👉 Text anklicken &amp; kopieren, um ihn direkt in Indeed oder das Portal einzufügen.</span>
+              <a href="files/Nancy_Schuetze_Lebenslauf_Master.pdf" download class="font-semibold text-blue-600 hover:underline">
+                📄 Lebenslauf-PDF herunterladen
+              </a>
+            </div>
+          </div>
+
+          <!-- Box 2: Job Description -->
+          <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm space-y-2">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-700">
+              📋 Stellenbeschreibung
+            </h4>
+            <div class="text-xs text-gray-700 leading-relaxed whitespace-pre-line font-sans max-h-96 overflow-y-auto pr-1">
+              ${job.description || 'Keine ausführliche Beschreibung hinterlegt. Klicke oben auf den Bewerbungslink, um die vollständige Ausschreibung direkt auf ' + (isIndeed ? 'Indeed' : 'LinkedIn') + ' einzusehen.'}
+            </div>
+          </div>
+
+          <!-- Box 3: Why fits / Analysis -->
+          <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm space-y-2">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-700">
+              📊 Passung &amp; Hintergrund
+            </h4>
+            <div class="text-xs text-gray-600">
+              ${job.why_fits || ''}
+            </div>
+          </div>
+
+        </div>
+      `;
+    }
+
+    function openMobileDetail(job) {
+      const modal = document.getElementById('mobileDetailModal');
+      const content = document.getElementById('mobileDetailContent');
+      modal.classList.remove('hidden');
+
+      const clText = buildTailoredCoverLetter(job);
+      const isIndeed = (job.source || '').toLowerCase() === 'indeed' || (job.job_url || '').toLowerCase().includes('indeed.com');
+
+      content.innerHTML = `
+        <div class="space-y-4">
+          <div>
+            <h3 class="text-base font-bold text-gray-900">${job.title}</h3>
+            <div class="text-xs text-gray-600 mt-0.5">${job.company} &bull; ${job.location}</div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="flex-1 text-center py-2.5 rounded-md text-xs font-bold ${isIndeed ? 'bg-[#003a9b] text-white' : 'bg-[#0a66c2] text-white'}">
+              ${isIndeed ? '🔷 Auf Indeed bewerben ↗' : '🔗 Auf LinkedIn bewerben ↗'}
+            </a>
+            <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-2.5 rounded-md text-xs font-bold bg-purple-600 text-white">
+              📋 Anschreiben kopieren
+            </button>
+          </div>
+
+          <div class="space-y-2">
+            <div class="text-xs font-bold text-purple-900">✍️ Anschreiben-Vorschau</div>
+            <textarea rows="8" class="w-full p-2.5 bg-gray-50 border border-gray-300 rounded text-xs text-gray-800">${clText}</textarea>
+          </div>
+
+          <div class="space-y-1 text-xs text-gray-700">
+            <div class="font-bold">📋 Beschreibung</div>
+            <div class="max-h-60 overflow-y-auto whitespace-pre-line text-xs text-gray-600">${job.description || ''}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function closeMobileDetail() {
+      document.getElementById('mobileDetailModal').classList.add('hidden');
+    }
+
+    function buildTailoredCoverLetter(job) {
+      if (activeUser === 'guillermo') {
+        return `Dear Hiring Team at ${job.company || 'your company'},\n\nI am writing to apply for the ${job.title || 'Product / Project Management'} position in Berlin.\n\nWith hands-on experience in high-volume operations, technical data reporting (SQL, Redash, Looker Studio), and cross-functional team coordination, I bridge strategic planning with practical builder execution.\n\nI look forward to discussing how my experience can support ${job.company}.\n\nSincerely,\nGuillermo Hernandez`;
+      }
+
+      const comp = job.company || 'Ihrem Unternehmen';
+      const title = job.title || 'Werkstudentin Office Management (m/w/d)';
+      const desc = (job.description || '').toLowerCase();
+
+      const isAcct = desc.includes('buchhalt') || desc.includes('rechnung') || desc.includes('datev') || desc.includes('finance');
+      const isEvt = desc.includes('event') || desc.includes('veranstaltung') || desc.includes('catering') || desc.includes('meeting');
+      const isHr = desc.includes('hr') || desc.includes('personal') || desc.includes('onboarding');
+      const isKanzlei = desc.includes('kanzlei') || desc.includes('anwalt') || desc.includes('recht');
+
+      let p2 = "In meiner letzten Position als Office Managerin bei der SERS Rechtsanwaltsgesellschaft mbH habe ich den gesamten Kanzlei- und Sekretariatsbetrieb eigenverantwortlich koordiniert. ";
+      if (isAcct) {
+        p2 += "Hierbei gehörten die vorbereitende Buchhaltung, das Rechnungs- und Mahnwesen sowie das Fristen- und Dokumentenmanagement zu meinen täglichen Kernaufgaben. ";
+      } else if (isKanzlei) {
+        p2 += "Hierbei lagen die Kommunikation mit Mandanten und Behörden auf Deutsch und Englisch (C2), das Fristenmanagement sowie die Unterstützung der Geschäftsführung in meiner Verantwortung. ";
+      } else {
+        p2 += "Dazu gehörten die professionelle Kommunikation auf Deutsch und Englisch (C2), die Dokumentenorganisation sowie die vorbereitende Buchhaltung. ";
+      }
+
+      if (isEvt) {
+        p2 += "Zuvor konnte ich bei zett.events fundierte Praxiserfahrung in der Eventplanung, Gästebetreuung und Lieferantenkoordination sammeln.";
+      } else if (isHr) {
+        p2 += "Zuvor habe ich bei zett.events und im dualen Studium Erfahrung in der Personaleinsatzplanung und im Onboarding gesammelt.";
+      } else {
+        p2 += "Ergänzend bringe ich aus meiner Tätigkeit bei zett.events Erfahrung in Termin- und Reiseplanung sowie Gästebetreuung mit.";
+      }
+
+      return `Sehr geehrtes Recruiting-Team von ${comp},\n\nein reibungslos organisiertes Office bildet das Rückgrat jedes erfolgreichen Teams. Da ich bereits als Office Managerin in einer Berliner Rechtsanwaltskanzlei sowie als Junior Projektleiterin in einer Eventagentur umfassende Verantwortung für Sekretariat, Backoffice und kaufmännische Abläufe übernommen habe, bewerbe ich mich mit großer Begeisterung bei Ihnen als ${title}.\n\n${p2}\n\nAktuell absolviere ich mein Studium an der Technischen Universität Berlin (Standort Charlottenburg). Dadurch verbinde ich kaufmännische Praxiserfahrung mit digitaler Affinität (MS Office 365, Cloud-Dokumentenverwaltung) und bin als Werkstudentin mit 15 bis 20 Wochenstunden zeitlich und örtlich flexibel einsatzbereit.\n\nGerne möchte ich Ihr Team bei ${comp} tatkräftig unterstützen und für perfekt strukturierte Büroabläufe sorgen. Über eine Einladung zu einem persönlichen Gespräch freue ich mich sehr.\n\nMit freundlichen Grüßen\nNancy Schütze`;
+    }
+
+    function copyGeneratedCoverLetter(jobId) {
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      if (!job) return;
+      const text = document.getElementById('clDetailTextarea') ? document.getElementById('clDetailTextarea').value : buildTailoredCoverLetter(job);
+      navigator.clipboard.writeText(text).then(() => {
+        alert('📋 Anschreiben-Text in die Zwischenablage kopiert!\n\nDu kannst ihn jetzt mit Strg+V direkt in Indeed oder das Bewerbungsformular einfügen.');
+      }).catch(() => {
+        alert('Kopiert!');
+      });
+    }
+
+    async function markStatus(jobId, status) {
+      const jobs = getActiveJobs();
+      const idx = jobs.findIndex(j => j.id === jobId);
+      if (idx !== -1) jobs[idx].status = status;
+      try {
+        const saved = JSON.parse(localStorage.getItem('job_status_' + activeUser) || '{}');
+        saved[jobId] = status;
+        localStorage.setItem('job_status_' + activeUser, JSON.stringify(saved));
+      } catch (e) {}
+
+      if (isLiveBackend) {
+        fetch(`/api/jobs/${jobId}/status`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ user: activeUser, status })
+        });
+      }
+      renderJobs();
+    }
 
     function openAutofillModal() {
       const bookmarkletCode = "javascript:(function(){const info={firstName:'Nancy',lastName:'Schütze',fullName:'Nancy Schütze',email:'schuetzenancy@gmx.de',phone:'+4915237164097',city:'Berlin',zip:'13125',linkedin:'https://www.linkedin.com/in/schuetzenancy/',hours:'15-20',start:'Ab sofort'};document.querySelectorAll('input,textarea,select').forEach(el=>{const n=(el.name||el.id||el.placeholder||el.getAttribute('aria-label')||'').toLowerCase();if(!el.value){if(n.includes('first')||n.includes('vorname'))el.value=info.firstName;else if(n.includes('last')||n.includes('nachname'))el.value=info.lastName;else if(n.includes('name')&&!n.includes('user'))el.value=info.fullName;else if(n.includes('mail'))el.value=info.email;else if(n.includes('phone')||n.includes('tel')||n.includes('mobil'))el.value=info.phone;else if(n.includes('city')||n.includes('stadt')||n.includes('ort'))el.value=info.city;else if(n.includes('zip')||n.includes('plz'))el.value=info.zip;else if(n.includes('linkedin'))el.value=info.linkedin;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));}});alert('✨ Formulardaten erfolgreich ausgefüllt!');})();";
@@ -497,550 +786,7 @@
       document.getElementById('autofillModal').classList.add('hidden');
     }
 
-    function renderJobs() {
-      updateStats();
-      const jobs = getActiveJobs();
-      const q = (document.getElementById('searchInput').value || '').toLowerCase();
-      const lang = document.getElementById('langFilter').value;
-      const st = document.getElementById('statusFilter').value;
-      const wmFilter = (document.getElementById('workModelFilter') ? document.getElementById('workModelFilter').value : 'ALL');
-      const srcFilter = (document.getElementById('sourceFilter') ? document.getElementById('sourceFilter').value : 'ALL');
-      const recency = document.getElementById('recencyFilter').value;
-      const maxApps = document.getElementById('applicantsFilter').value;
-      const sortBy = document.getElementById('sortBy').value;
-
-      let filtered = jobs.filter(j => {
-        const jStatus = (j.status || 'New').toLowerCase();
-        if (st === 'ACTIVE') {
-          if (['not interested', 'archived', 'applied', 'rejected'].includes(jStatus)) return false;
-        } else if (st === 'NOT_INTERESTED') {
-          if (jStatus !== 'not interested') return false;
-        } else if (st === 'EDITED_YES' && !j.cv_url) {
-          return false;
-        } else if (st === 'EDITED_NO' && j.cv_url) {
-          return false;
-        } else if (st !== 'ALL' && st !== 'ACTIVE' && st !== 'NOT_INTERESTED' && st !== 'EDITED_YES' && st !== 'EDITED_NO' && j.status !== st) {
-          return false;
-        }
-
-        if (recency !== 'ALL') {
-          const maxDays = parseInt(recency, 10);
-          const daysAgo = (j.days_ago !== undefined && j.days_ago !== null) ? j.days_ago : 99;
-          if (daysAgo > maxDays) return false;
-        }
-
-        if (maxApps !== 'ALL') {
-          const limit = parseInt(maxApps, 10);
-          const appNum = (j.applicants_num !== undefined && j.applicants_num !== null) ? j.applicants_num : 999;
-          if (appNum > limit) return false;
-        }
-
-        if (lang === 'TOP_FIT') {
-          if (activeUser === 'guillermo' && ((j.language_req || '').includes('C1') || (j.language_req || '').includes('Requires'))) return false;
-          if (activeUser === 'nancy' && (j.match_score || 0) < 75) return false;
-        }
-
-        if (wmFilter === 'HYBRID_REMOTE') {
-          if (j.is_100_onsite || (j.work_model && j.work_model.includes('100% Vor Ort'))) return false;
-        } else if (wmFilter === 'REMOTE_ONLY') {
-          if (!j.work_model || !j.work_model.includes('Remote')) return false;
-        }
-
-        if (srcFilter === 'INDEED') {
-          const isInd = (j.source || '').toLowerCase() === 'indeed' || (j.job_url || '').toLowerCase().includes('indeed.com');
-          if (!isInd) return false;
-        } else if (srcFilter === 'LINKEDIN') {
-          const isLk = (j.source || '').toLowerCase() === 'linkedin' || (j.job_url || '').toLowerCase().includes('linkedin.com');
-          if (!isLk) return false;
-        }
-        if (q) {
-          const hay = `${j.title} ${j.company} ${j.location} ${j.why_fits} ${j.language_req} ${j.posted_ago || ''} ${j.applicants_text || ''}`.toLowerCase();
-          if (!hay.includes(q)) return false;
-        }
-        return true;
-      });
-
-      // Sort
-      filtered = [...filtered].sort((a, b) => {
-        if (sortBy === 'NEWEST') {
-          const da = a.days_ago !== undefined ? a.days_ago : 99;
-          const db = b.days_ago !== undefined ? b.days_ago : 99;
-          if (da !== db) return da - db;
-          return (b.match_score || 0) - (a.match_score || 0);
-        }
-        if (sortBy === 'FEWEST_APPS') {
-          const aa = a.applicants_num !== undefined ? a.applicants_num : 999;
-          const ab = b.applicants_num !== undefined ? b.applicants_num : 999;
-          if (aa !== ab) return aa - ab;
-          return (b.match_score || 0) - (a.match_score || 0);
-        }
-        return (b.match_score || 0) - (a.match_score || 0);
-      });
-
-      document.getElementById('showingCountLabel').textContent = `Showing ${filtered.length} of ${jobs.length} jobs`;
-
-      const container = document.getElementById('jobsContainer');
-      if (filtered.length === 0) {
-        container.innerHTML = `
-          <div class="glass-card rounded-2xl p-12 text-center">
-            <p class="text-slate-300 font-semibold">No jobs match the current filters.</p>
-            <p class="text-xs text-slate-400 mt-1">Try widening the Posting Date / Applicant filter or click "🔍 Auto-Find Jobs Now" to scrape fresh listings.</p>
-          </div>
-        `;
-        return;
-      }
-
-      container.innerHTML = filtered.map(j => {
-        const score = j.match_score || 60;
-        const scoreColor = score >= 80 ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
-                         : score >= 65 ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40'
-                         : 'bg-amber-500/20 text-amber-300 border-amber-500/40';
-
-        const isWarn = (j.language_req || '').includes('C1') || (j.language_req || '').includes('Requires');
-        const langBadge = isWarn
-          ? `<span class="px-2 py-0.5 rounded text-[11px] bg-amber-500/20 text-amber-300 border border-amber-500/30">⚠️ ${j.language_req}</span>`
-          : `<span class="px-2 py-0.5 rounded text-[11px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">${j.language_req || 'Top Fit'}</span>`;
-
-        const editedBadge = j.cv_url
-          ? `<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-500/25 text-indigo-200 border border-indigo-400/40">✅ CV &amp; Cover Letter Edited</span>`
-          : `<span class="px-2 py-0.5 rounded text-[11px] bg-slate-800/80 text-slate-400 border border-slate-700">⏳ Not Edited Yet</span>`;
-
-        const postedText = j.posted_ago || j.date_posted || 'Recent';
-        const isFresh = (j.days_ago !== undefined && j.days_ago <= 3);
-        const postedBadge = `<span class="px-2 py-0.5 rounded text-[11px] font-medium ${isFresh ? 'bg-sky-500/20 text-sky-300 border border-sky-500/30' : 'bg-slate-800 text-slate-300 border border-slate-700'}">🕒 ${postedText}</span>`;
-
-        const appText = j.applicants_text || 'Direct Portal';
-        const appNum = j.applicants_num !== undefined ? j.applicants_num : 999;
-        const appColor = appNum <= 35 ? 'bg-emerald-500/20 text-emerald-200 border-emerald-500/30'
-                       : appNum <= 100 ? 'bg-amber-500/20 text-amber-200 border-amber-500/30'
-                       : 'bg-slate-800 text-slate-400 border-slate-700';
-        const appBadge = `<span class="px-2 py-0.5 rounded text-[11px] border ${appColor}">👥 ${appText}</span>`;
-
-        const wm = j.work_model || (j.is_100_onsite ? '100% Vor Ort' : 'Hybrid');
-        const isWmOnsite = j.is_100_onsite || wm.includes('Vor Ort');
-        const isWmRemote = wm.includes('Remote');
-        const isWmHybrid = wm.includes('Hybrid') || wm.includes('Home Office');
-        const wmColor = isWmRemote ? 'bg-purple-500/20 text-purple-200 border-purple-500/30'
-                      : isWmHybrid ? 'bg-cyan-500/20 text-cyan-200 border-cyan-500/30'
-                      : isWmOnsite ? 'bg-rose-500/20 text-rose-200 border-rose-500/30'
-                      : 'bg-slate-800 text-slate-300 border-slate-700';
-        const wmIcon = isWmRemote ? '🏡' : isWmHybrid ? '🏠' : isWmOnsite ? '🏢' : '🏢';
-        const workModelBadge = `<span class="px-2 py-0.5 rounded text-[11px] font-semibold border ${wmColor}">${wmIcon} ${wm}</span>`;
-
-        const cvHref = resolveFileUrl(j.cv_url);
-        const clHref = resolveFileUrl(j.cover_letter_url);
-        const folderBtnHtml = isLiveBackend
-          ? `<button onclick="openJobFolder('${j.id}')" title="Show PDFs in Windows Explorer" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 text-xs">📂 Folder</button>`
-          : '';
-
-        const pdfBadges = j.cv_url ? `
-          <a href="${cvHref}" target="_blank" class="px-2.5 py-1.5 rounded-lg bg-emerald-600/25 hover:bg-emerald-600/40 text-emerald-200 border border-emerald-500/30 text-xs font-semibold transition">📄 CV PDF</a>
-          <a href="${clHref}" target="_blank" class="px-2.5 py-1.5 rounded-lg bg-teal-600/25 hover:bg-teal-600/40 text-teal-200 border border-teal-500/30 text-xs font-semibold transition">✉️ ${activeUser === 'nancy' ? 'Anschreiben PDF' : 'Cover Letter PDF'}</a>
-          ${folderBtnHtml}
-        ` : '';
-
-        return `
-          <div class="glass-card rounded-xl p-4 hover:border-slate-600 transition flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div class="flex items-start gap-4 flex-1">
-              <div class="px-3 py-2 rounded-xl border font-bold text-sm text-center min-w-[62px] ${scoreColor}">
-                ${score}%
-                <div class="text-[10px] font-normal opacity-80">Match</div>
-              </div>
-              <div class="space-y-1.5 flex-1">
-                <div class="flex flex-wrap items-center gap-2">
-                  <a href="${j.job_url || '#'}" target="_blank" class="text-base font-bold text-white hover:text-indigo-300 transition">
-                    ${j.title} ↗
-                  </a>
-                  ${editedBadge}
-                  <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300 border border-slate-700">${j.category_label || 'Role'}</span>
-                  ${workModelBadge}
-                  ${langBadge}
-                </div>
-                <div class="flex flex-wrap items-center gap-2 text-xs text-slate-300 font-medium">
-                  <span>🏢 ${j.company}</span>
-                  <span>•</span>
-                  <span>📍 ${j.location}</span>
-                  <span>•</span>
-                  ${postedBadge}
-                  ${appBadge}
-                  <span class="text-slate-400">(${j.source || 'Web'})</span>
-                </div>
-                <div class="text-xs text-slate-400">
-                  ${j.why_fits || ''}
-                </div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap items-center gap-2 self-end md:self-center">
-              ${pdfBadges}
-              <button onclick="openTailorModal('${j.id}')" class="px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold transition shadow-sm flex items-center gap-1.5" title="Individuelles Anschreiben für diese Stelle generieren">
-                ${activeUser === 'nancy'
-                  ? (j.cover_letter_url || j.cv_url ? '✍️ Anschreiben ansehen / kopieren' : '✍️ Anschreiben erstellen')
-                  : (j.cover_letter_url || j.cv_url ? '✍️ View / Copy Cover Letter' : '✍️ Make Cover Letter')
-                }
-              </button>
-              ${(() => {
-                const isIndeed = (j.source || '').toLowerCase() === 'indeed' || (j.job_url || '').toLowerCase().includes('indeed.com');
-                const isLinkedin = (j.source || '').toLowerCase() === 'linkedin' || (j.job_url || '').toLowerCase().includes('linkedin.com');
-                const btnClass = isIndeed ? 'bg-sky-700 hover:bg-sky-600 text-white shadow-sm' : (isLinkedin ? 'bg-blue-700 hover:bg-blue-600 text-white shadow-sm' : 'bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600');
-                const btnText = isIndeed ? '🔷 Apply on Indeed ↗' : (isLinkedin ? '🔗 Apply on LinkedIn ↗' : '🚀 Quick Apply ↗');
-                return `<a href="${j.job_url || '#'}" target="_blank" onclick="markStatus('${j.id}', 'Applied')" class="px-3 py-1.5 rounded-lg ${btnClass} text-xs font-semibold transition flex items-center gap-1.5">${btnText}</a>`;
-              })()}
-              ${(j.status || '').toLowerCase() === 'not interested'
-                ? `<button onclick="markStatus('${j.id}', 'New')" class="px-3 py-1.5 rounded-lg bg-emerald-950/70 hover:bg-emerald-900 text-emerald-300 border border-emerald-800 text-xs font-semibold transition flex items-center gap-1.5" title="Wiederherstellen">
-                     ↩ ${activeUser === 'nancy' ? 'Wiederherstellen' : 'Restore'}
-                   </button>`
-                : `<button onclick="markStatus('${j.id}', 'Not Interested')" class="px-3 py-1.5 rounded-lg bg-rose-950/60 hover:bg-rose-900 text-rose-300 border border-rose-800/60 text-xs font-semibold transition flex items-center gap-1.5" title="Job ausblenden">
-                     ❌ ${activeUser === 'nancy' ? 'Nicht interessiert' : 'Not Interested'}
-                   </button>`
-              }
-              <select onchange="markStatus('${j.id}', this.value)" class="bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200">
-                ${['New', 'Ready to Apply', 'Applied', 'Interview', 'Not Interested', 'Archived'].map(s => `<option value="${s}" ${j.status === s ? 'selected' : ''}>${s}</option>`).join('')}
-              </select>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    async function openTailorModal(jobId) {
-      currentTailorJobId = jobId;
-      let job, tailored, allBullets;
-
-      if (isLiveBackend) {
-        const res = await fetch(`/api/jobs/${jobId}/preview-tailor?user=${activeUser}`);
-        const data = await res.json();
-        job = data.job;
-        tailored = data.tailored;
-        allBullets = data.all_auto1_bullets || [];
-      } else {
-        const jobs = getActiveJobs();
-        job = jobs.find(j => j.id === jobId);
-        if (!job) return;
-        tailored = job.tailored_preview || {
-          selected_bullets: job.selected_bullets || [],
-          cover_letter_paragraphs: job.cover_letter_paragraphs || [
-            activeUser === 'nancy'
-              ? `Sehr geehrtes Recruiting-Team von ${job.company},\n\nmit großem Interesse bewerbe ich mich als ${job.title} in Berlin.`
-              : `Dear Hiring Team at ${job.company},\n\nI am writing to apply for the ${job.title} position.`
-          ]
-        };
-        allBullets = (window.STATIC_STATE && window.STATIC_STATE.all_auto1_bullets) || [];
-      }
-
-      document.getElementById('modalJobTitle').textContent = `${job.title}`;
-      document.getElementById('modalJobCompany').textContent = `${job.company} • ${job.location} • Match Score: ${job.match_score}%`;
-
-      const pdfLinksBox = document.getElementById('modalPdfLinks');
-      if (job.cv_url) {
-        pdfLinksBox.classList.remove('hidden');
-        document.getElementById('modalCvLink').href = resolveFileUrl(job.cv_url);
-        document.getElementById('modalClLink').href = resolveFileUrl(job.cover_letter_url);
-      } else {
-        pdfLinksBox.classList.add('hidden');
-      }
-
-      const bulletSec = document.getElementById('bulletSection');
-      if (activeUser === 'nancy' || allBullets.length === 0) {
-        bulletSec.classList.add('hidden');
-      } else {
-        bulletSec.classList.remove('hidden');
-        const selectedSet = new Set(tailored.selected_bullets || []);
-        document.getElementById('bulletCheckboxes').innerHTML = allBullets.map(b => {
-          const checked = selectedSet.has(b.html) ? 'checked' : '';
-          return `
-            <label class="flex items-start gap-2.5 p-2.5 rounded-lg bg-slate-950/70 border border-slate-800 hover:border-slate-700 cursor-pointer text-xs text-slate-200">
-              <input type="checkbox" class="bullet-cb mt-0.5" value="${encodeURIComponent(b.html)}" ${checked} />
-              <span>${b.html}</span>
-            </label>
-          `;
-        }).join('');
-      }
-
-      document.getElementById('clParagraphInputs').innerHTML = (tailored.cover_letter_paragraphs || []).map(p => `
-        <textarea rows="3" class="cl-para w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-slate-200 focus:border-indigo-500 focus:outline-none">${p}</textarea>
-      `).join('');
-
-      document.getElementById('tailorModal').classList.remove('hidden');
-    }
-
-    function closeTailorModal() {
-      document.getElementById('tailorModal').classList.add('hidden');
-    }
-
-    async function saveAndGenerateBundle() {
-      if (!isLiveBackend) {
-        copyCoverLetterText();
-        return;
-      }
-      const btn = document.getElementById('generateBundleBtn');
-      btn.textContent = 'Generating 1-Page PDFs...';
-      btn.disabled = true;
-
-      const bullets = Array.from(document.querySelectorAll('.bullet-cb:checked')).map(cb => decodeURIComponent(cb.value));
-      const paragraphs = Array.from(document.querySelectorAll('.cl-para')).map(ta => ta.value.trim()).filter(Boolean);
-
-      const res = await fetch(`/api/jobs/${currentTailorJobId}/tailor`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ user: activeUser, custom_bullets: bullets, custom_paragraphs: paragraphs })
-      });
-      const data = await res.json();
-
-      btn.textContent = '⚡ Generate 1-Page CV & Cover Letter PDFs';
-      btn.disabled = false;
-
-      const jobs = getActiveJobs();
-      const idx = jobs.findIndex(j => j.id === currentTailorJobId);
-      if (idx !== -1) jobs[idx] = data.job;
-      renderJobs();
-
-      const pdfLinksBox = document.getElementById('modalPdfLinks');
-      pdfLinksBox.classList.remove('hidden');
-      document.getElementById('modalCvLink').href = resolveFileUrl(data.job.cv_url) + '?t=' + Date.now();
-      document.getElementById('modalClLink').href = resolveFileUrl(data.job.cover_letter_url) + '?t=' + Date.now();
-    }
-
-    async function tailorTopMatches() {
-      if (!isLiveBackend) {
-        alert('In Independent Static / GitHub Pages Mode, the top high-match jobs are already pre-tailored with 1-page PDFs! Filter by "✅ Yes — CV & Cover Letter Edited" to download them.');
-        return;
-      }
-      const jobs = getActiveJobs();
-      const candidates = jobs.filter(j => !j.cv_url).slice(0, 5);
-      if (candidates.length === 0) {
-        alert('Top jobs in this tab already have tailored PDFs!');
-        return;
-      }
-      showBanner(`Auto-tailoring top ${candidates.length} jobs for ${activeUser.toUpperCase()}...`);
-      for (const job of candidates) {
-        const res = await fetch(`/api/jobs/${job.id}/tailor`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ user: activeUser })
-        });
-        const data = await res.json();
-        const idx = jobs.findIndex(x => x.id === job.id);
-        if (idx !== -1) jobs[idx] = data.job;
-        renderJobs();
-      }
-      showBanner(`✅ Generated tailored 1-Page PDFs for ${candidates.length} top jobs!`);
-    }
-
-    async function markStatus(jobId, status) {
-      const jobs = getActiveJobs();
-      const idx = jobs.findIndex(j => j.id === jobId);
-      if (idx !== -1) jobs[idx].status = status;
-      try {
-        const saved = JSON.parse(localStorage.getItem('job_status_' + activeUser) || '{}');
-        saved[jobId] = status;
-        localStorage.setItem('job_status_' + activeUser, JSON.stringify(saved));
-      } catch (e) {}
-
-      if (isLiveBackend) {
-        const res = await fetch(`/api/jobs/${jobId}/status`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ user: activeUser, status })
-        });
-        const data = await res.json();
-        if (idx !== -1) jobs[idx] = data.job;
-      }
-      renderJobs();
-    }
-
-    async function openJobFolder(jobId) {
-      if (!isLiveBackend) return;
-      await fetch(`/api/jobs/${jobId}/open-folder?user=${activeUser}`, { method: 'POST' });
-    }
-
-    function copyCoverLetterText() {
-      const paragraphs = Array.from(document.querySelectorAll('.cl-para')).map(ta => ta.value.trim()).join('\n\n');
-      navigator.clipboard.writeText(paragraphs).then(() => {
-        alert('📋 Anschreiben-Text erfolgreich in die Zwischenablage kopiert!\n\nDu kannst ihn jetzt einfach mit Strg+V (oder Rechtsklick -> Einfügen) in Indeed oder das Web-Formular einfügen.');
-      }).catch(() => {
-        alert('Kopiert!');
-      });
-    }
-
-    function setScrapePreset(preset) {
-      const qBox = document.getElementById('scrapeQueriesInput');
-      const locBox = document.getElementById('scrapeLocationInput');
-      if (preset === 'nancy_zoo') {
-        qBox.value = "Werkstudent Office Management\nWerkstudent Teamassistenz Backoffice\nOffice Manager Teilzeit Charlottenburg\nWerkstudent Kanzleiassistenz Sekretariat";
-        locBox.value = "Berlin, Germany";
-      } else if (preset === 'guillermo_remote') {
-        qBox.value = "Working Student Project Manager Remote\nWorking Student Product Manager Remote\nWorking Student AI Operations Remote";
-        locBox.value = "Germany";
-      } else {
-        qBox.value = "Working Student Project Management\nWorking Student Product Management\nWorking Student Operations AI\nWorking Student Business Operations";
-        locBox.value = "Berlin, Germany";
-      }
-    }
-
-    function openScrapeModal() {
-      setScrapePreset(activeUser === 'nancy' ? 'nancy_zoo' : 'guillermo_berlin');
-      document.getElementById('scrapeModal').classList.remove('hidden');
-    }
-    function closeScrapeModal() { document.getElementById('scrapeModal').classList.add('hidden'); }
-
-    async function runScrape() {
-      const btn = document.getElementById('runScrapeConfirmBtn');
-      btn.textContent = 'Scraping & Fetching Applicant Counts...';
-      btn.disabled = true;
-
-      const queries = document.getElementById('scrapeQueriesInput').value.split('\n').map(s => s.trim()).filter(Boolean);
-      const location = document.getElementById('scrapeLocationInput').value.trim();
-      const results_wanted = parseInt(document.getElementById('scrapeCountInput').value || '12', 10);
-      const hours_old = parseInt(document.getElementById('scrapeHoursInput').value || '72', 10);
-
-      const res = await fetch('/api/scrape', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ user: activeUser, search_terms: queries, location, results_wanted, hours_old })
-      });
-      const data = await res.json();
-      setActiveJobs(data.jobs || []);
-      btn.textContent = '🔍 Search & Enrich Jobs';
-      btn.disabled = false;
-      closeScrapeModal();
-      renderJobs();
-      showBanner(`✅ Search finished! Added ${data.scrape_result.added_count} new jobs (with live applicant counts & posting age).`);
-    }
-
-    async function refreshMetadata() {
-      const btn = document.getElementById('refreshMetaBtn');
-      btn.textContent = '🔄 Fetching Live Counts...';
-      btn.disabled = true;
-      const res = await fetch(`/api/refresh-metadata?user=${activeUser}`, { method: 'POST' });
-      const data = await res.json();
-      setActiveJobs(data.jobs || []);
-      btn.textContent = '🔄 Refresh Live Applicant Counts & Age';
-      btn.disabled = false;
-      renderJobs();
-      showBanner(`✅ Refreshed live posting ages and LinkedIn applicant counts for ${activeUser.toUpperCase()}!`);
-    }
-
-    function openManualModal() { document.getElementById('manualModal').classList.remove('hidden'); }
-    function closeManualModal() { document.getElementById('manualModal').classList.add('hidden'); }
-
-    async function submitManualJob() {
-      const title = document.getElementById('manTitle').value.trim();
-      const company = document.getElementById('manCompany').value.trim();
-      if (!title || !company) { alert('Please enter both Job Title and Company'); return; }
-      const location = document.getElementById('manLocation').value.trim();
-      const job_url = document.getElementById('manUrl').value.trim();
-      const description = document.getElementById('manDesc').value.trim();
-
-      const res = await fetch('/api/jobs/manual', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ user: activeUser, title, company, location, job_url, description })
-      });
-      const data = await res.json();
-      setActiveJobs(data.jobs);
-      closeManualModal();
-      renderJobs();
-      openTailorModal(data.job.id);
-    }
-
-    async function syncGoogleSheets() {
-      const btn = document.getElementById('syncSheetsBtn');
-      btn.textContent = 'Syncing Both Tabs...';
-      const res = await fetch('/api/sync-sheets', { method: 'POST' });
-      const data = await res.json();
-      btn.textContent = '📊 Sync Both Tabs to Google Sheets';
-      if (data.synced) {
-        showBanner(`✅ Synced ${data.rows_written} total jobs across Guillermo & Nancy tabs in Google Sheets!`, data.spreadsheet_url);
-      } else {
-        showBanner(`ℹ️ ${data.reason}`, data.spreadsheet_url || null);
-      }
-    }
-
-    async function initApp() {
-      await loadState();
-      const params = new URLSearchParams(window.location.search);
-      if (params.get('user') === 'nancy') {
-        switchUser('nancy');
-      }
-    }
-    initApp();
+    window.addEventListener('DOMContentLoaded', init);
   </script>
-
-  <!-- 1-Click Autofill & CV Pre-Fill Modal -->
-  <div id="autofillModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-    <div class="glass-card bg-slate-900 border border-slate-700 rounded-2xl max-w-2xl w-full p-6 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
-      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-        <div>
-          <h2 class="text-lg font-bold text-white flex items-center gap-2">
-            <span>⚡ 1-Click Autofill &amp; Vorab-Ausfüllung</span>
-          </h2>
-          <p class="text-xs text-slate-400 mt-1">So werden Bewerbungen, Lebensläufe &amp; Formulare in Sekundenschnelle vorab ausgefüllt</p>
-        </div>
-        <button onclick="closeAutofillModal()" class="text-slate-400 hover:text-white text-lg font-bold">✕</button>
-      </div>
-
-      <div class="space-y-4 text-xs text-slate-300">
-        <!-- Indeed Quick Apply Section -->
-        <div class="p-4 rounded-xl bg-sky-950/40 border border-sky-800/60 space-y-2">
-          <div class="font-bold text-sky-300 flex items-center gap-2 text-sm">
-            <span>🔷 1. Für Indeed: 1-Klick-Bewerbung (Mit Profil vorab hinterlegen)</span>
-          </div>
-          <p class="text-slate-300 leading-relaxed">
-            Indeed hat eine <strong>eingebaute Sofort-Bewerbung</strong>. Wenn du deinen neuen 1-Seiten-Master-Lebenslauf <strong>einmalig</strong> in deinem Indeed-Profil hochlädst, ist jede Indeed-Bewerbung sofort vorab ausgefüllt:
-          </p>
-          <div class="pt-2 flex flex-wrap gap-2">
-            <a href="https://de.indeed.com/profile" target="_blank" class="px-3.5 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-bold transition flex items-center gap-1.5">
-              <span>🚀 Zu deinem Indeed-Profil (Lebenslauf hinterlegen) ↗</span>
-            </a>
-            <a id="downloadMasterCvForAutofill" href="files/Nancy_Schuetze_Lebenslauf_Master.pdf" download class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold transition">
-              📄 Master-Lebenslauf PDF herunterladen
-            </a>
-          </div>
-          <p class="text-[11px] text-sky-400/90 pt-1">
-            👉 Danach klickst du auf dem Dashboard einfach auf <strong>"🔷 Apply on Indeed"</strong> &bull; Name, Telefon, E-Mail und dein Lebenslauf sind sofort vorausgewählt &bull; 2 Klicks zum Absenden!
-          </p>
-        </div>
-
-        <!-- 1-Click Browser Bookmarklet for All Forms -->
-        <div class="p-4 rounded-xl bg-indigo-950/40 border border-indigo-800/60 space-y-2">
-          <div class="font-bold text-indigo-300 flex items-center gap-2 text-sm">
-            <span>🪄 2. Für alle anderen Jobportale: Der "1-Klick Autofill"-Button</span>
-          </div>
-          <p class="text-slate-300 leading-relaxed">
-            Für externe Portale (Personio, Join.com, Workday, Softgarden) kannst du diesen Button einfach in deine <strong>Browser-Lesezeichenleiste ziehen</strong> (Chrome, Safari, Edge):
-          </p>
-          <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 text-center my-2">
-            <a id="autofillBookmarkletLink" href="#" class="inline-block px-4 py-2 bg-gradient-to-r from-indigo-600 to-pink-600 hover:opacity-90 text-white font-bold rounded-lg shadow-lg cursor-grab text-xs">
-              ⚡ Nancy 1-Klick Autofill (In Lesezeichenleiste ziehen)
-            </a>
-          </div>
-          <p class="text-[11px] text-slate-400">
-            <strong>Wie es funktioniert:</strong> Wenn du auf einem beliebigen Bewerbungsformular bist, klicke einfach einmal auf dieses Lesezeichen. Es füllt Vorname, Nachname, E-Mail, Telefonnummer, Stadt, LinkedIn-URL und Arbeitszeit (15-20h Werkstudent) automatisch in 1 Millisekunde aus!
-          </p>
-        </div>
-
-        <!-- Pre-Filled Contact Data Box -->
-        <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700 space-y-2">
-          <div class="font-bold text-slate-200 text-sm">📋 3. Deine hinterlegten Profildaten</div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
-            <div><strong>Name:</strong> Nancy Thuy Dung Schütze</div>
-            <div><strong>E-Mail:</strong> schuetzenancy@gmx.de</div>
-            <div><strong>Telefon:</strong> +49 15237164097</div>
-            <div><strong>Ort:</strong> Berlin (Charlottenburg / Pankow)</div>
-            <div><strong>LinkedIn:</strong> linkedin.com/in/schuetzenancy</div>
-            <div><strong>Status:</strong> Studentin TU Berlin (15–20h)</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex justify-end pt-2 border-t border-slate-800">
-        <button onclick="closeAutofillModal()" class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs">
-          Schließen
-        </button>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>
