@@ -59,10 +59,21 @@ def export_local_csv(jobs: List[Dict[str, Any]], filename: str = "Job_Tracker_Qu
 
 
 def _job_to_row(j: Dict[str, Any]) -> List[str]:
+    import urllib.parse
+
     has_pdfs = bool(j.get("cv_pdf") and j.get("cover_letter_pdf"))
     edited_status = "✅ Yes (Tailored PDFs Ready)" if has_pdfs else "⏳ No (Not tailored yet)"
     posted_ago = str(j.get("posted_ago") or j.get("date_posted") or "Recent")
     applicants = str(j.get("applicants_text") or "Direct Portal (No counter)")
+    
+    raw_url = str(j.get("job_url") or "").strip()
+    if not raw_url or raw_url.lower() in ["nan", "none", "null"]:
+        comp = str(j.get("company", ""))
+        tit = str(j.get("title", ""))
+        clean_url = f"https://www.google.com/search?q={urllib.parse.quote_plus(comp + ' ' + tit + ' Berlin jobs')}"
+    else:
+        clean_url = raw_url
+
     return [
         f"{j.get('match_score', 0)}%",
         str(j.get("status", "New")),
@@ -75,7 +86,7 @@ def _job_to_row(j: Dict[str, Any]) -> List[str]:
         str(j.get("location", "")),
         str(j.get("language_req", "English Friendly")),
         str(j.get("extracted_pay", "Not listed")),
-        str(j.get("job_url", "")),
+        clean_url,
         str(j.get("cv_pdf", "Not generated yet")),
         str(j.get("cover_letter_pdf", "Not generated yet")),
         str(j.get("why_fits", "")),

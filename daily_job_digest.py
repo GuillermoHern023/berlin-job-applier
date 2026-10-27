@@ -65,6 +65,11 @@ def prune_and_refresh_job_ages(jobs, max_days=10):
     fresh_jobs = []
     pruned_count = 0
     for j in jobs:
+        raw_url = str(j.get("job_url") or "").strip()
+        if not raw_url or raw_url.lower() in ["nan", "none", "null"]:
+            comp = str(j.get("company", ""))
+            tit = str(j.get("title", ""))
+            j["job_url"] = f"https://www.google.com/search?q={urllib.parse.quote_plus(comp + ' ' + tit + ' Berlin jobs')}"
         dp = j.get("date_posted")
         diff = 99
         if dp:
