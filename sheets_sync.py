@@ -66,13 +66,7 @@ def _job_to_row(j: Dict[str, Any]) -> List[str]:
     posted_ago = str(j.get("posted_ago") or j.get("date_posted") or "Recent")
     applicants = str(j.get("applicants_text") or "Direct Portal (No counter)")
     
-    raw_url = str(j.get("job_url") or "").strip()
-    if not raw_url or raw_url.lower() in ["nan", "none", "null"]:
-        comp = str(j.get("company", ""))
-        tit = str(j.get("title", ""))
-        clean_url = f"https://www.google.com/search?q={urllib.parse.quote_plus(comp + ' ' + tit + ' Berlin jobs')}"
-    else:
-        clean_url = raw_url
+    clean_url = str(j.get("job_url") or "").strip()
 
     return [
         f"{j.get('match_score', 0)}%",
@@ -155,6 +149,15 @@ def sync_jobs_to_google_sheet(
     sheet_id = settings.get("spreadsheet_id")
     if not sheet_id:
         return {"synced": False, "reason": "No spreadsheet ID configured.", "local_csv": str(csv_path)}
+
+    # Filter out any jobs that do not have a real direct apply URL
+    def has_apply_url(job):
+        u = str(job.get("job_url") or "").strip()
+        return bool(u and u.lower() not in ["nan", "none", "null", ""] and (u.startswith("http://") or u.startswith("https://")) and "google.com/search" not in u)
+
+    guillermo_jobs = [j for j in guillermo_jobs if has_apply_url(j)]
+    if nancy_jobs is not None:
+        nancy_jobs = [j for j in nancy_jobs if has_apply_url(j)]
 
     # Preserve any manual status edits made by Nancy or Guillermo in Google Sheets
     g_statuses = fetch_existing_sheet_statuses(sheet_id, "Guillermo - PM & AI")

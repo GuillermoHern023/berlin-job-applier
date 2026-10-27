@@ -655,10 +655,12 @@ def scrape_nancy_jobs(
                 company = str(row.get("company") or "").strip()
                 if not title or not company or title.lower() == "nan":
                     continue
+
                 job_url = str(row.get("job_url_direct") or row.get("job_url") or "").strip()
-                if not job_url or job_url.lower() in ["nan", "none", "null"]:
-                    import urllib.parse
-                    job_url = f"https://www.google.com/search?q={urllib.parse.quote_plus(company + ' ' + title + ' Berlin jobs')}"
+                # If there's no direct apply URL/button, discard the job immediately
+                if not job_url or job_url.lower() in ["nan", "none", "null", ""] or not (job_url.startswith("http://") or job_url.startswith("https://")) or "google.com/search" in job_url:
+                    continue
+
                 loc = str(row.get("location") or "Berlin").strip()
                 desc = str(row.get("description") or "").strip()
                 site = str(row.get("site") or "indeed").capitalize()

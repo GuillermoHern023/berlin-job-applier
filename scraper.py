@@ -91,6 +91,9 @@ def run_job_scrape(
                 title = clean_val(row.get("title"), "Working Student Role")
                 company = clean_val(row.get("company"), "Unknown Company")
                 job_url = clean_val(row.get("job_url_direct")) or clean_val(row.get("job_url"))
+                # Require direct apply link - discard if missing or nan
+                if not job_url or job_url.lower() in ["nan", "none", "null", ""] or not (job_url.startswith("http://") or job_url.startswith("https://")) or "google.com/search" in job_url:
+                    continue
                 loc = clean_val(row.get("location"), q["location"])
                 desc = clean_val(row.get("description"), "")
                 site = clean_val(row.get("site"), "linkedin")
