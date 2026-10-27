@@ -336,7 +336,7 @@ def build_job_cards_email_html(jobs_list, is_nancy=False, limit=6):
                     <a href="{url}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: {accent}; color: #ffffff !important; font-size: 12px; font-weight: 800; text-decoration: none; padding: 10px 14px; border-radius: 8px; text-align: center;">
                       {"⚡ Bewerben ➔" if is_nancy else "⚡ Quick Apply ➔"}
                     </a>
-                    <a href="{JOB_DASHBOARD_URL}#user={'nancy' if is_nancy else 'guillermo'}" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 6px; font-size: 11px; color: #94a3b8; text-decoration: underline; text-align: center;">
+                    <a href="{REMOTE_WEB_URL}#user={'nancy' if is_nancy else 'guillermo'}" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 6px; font-size: 11px; color: #94a3b8; text-decoration: underline; text-align: center;">
                       ❌ {"Nicht interessiert" if is_nancy else "Not Interested"}
                     </a>
                   </td>
