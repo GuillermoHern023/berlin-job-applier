@@ -226,12 +226,18 @@
         </div>
 
         <!-- Cover Letter Editor -->
-        <div>
-          <div class="flex items-center justify-between mb-2">
-            <label class="text-xs font-bold uppercase tracking-wider text-indigo-300">
-              Tailored Cover Letter / Anschreiben Paragraphs (Editable)
-            </label>
-            <button onclick="copyCoverLetterText()" class="text-xs text-indigo-400 hover:text-indigo-300 underline">Copy Full Text</button>
+        <!-- Tailored Cover Letter Section -->
+        <div class="space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2 p-3 rounded-xl bg-purple-950/40 border border-purple-800/60">
+            <div>
+              <div class="text-sm font-bold text-purple-200 flex items-center gap-1.5">
+                <span>✍️ Maßgeschneidertes Anschreiben für diese Stelle</span>
+              </div>
+              <div class="text-[11px] text-purple-300/80">Automatisch auf die Position &amp; das Unternehmen angepasst</div>
+            </div>
+            <button onclick="copyCoverLetterText()" class="px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-md">
+              <span>📋 1-Klick: Text kopieren (Für Indeed / Portal)</span>
+            </button>
           </div>
           <div id="clParagraphInputs" class="space-y-2.5"></div>
         </div>
@@ -667,8 +673,11 @@
 
             <div class="flex flex-wrap items-center gap-2 self-end md:self-center">
               ${pdfBadges}
-              <button onclick="openTailorModal('${j.id}')" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition">
-                ✨ ${j.cv_url ? 'View / Re-Tailor' : (activeUser === 'nancy' ? 'Tailor Lebenslauf & Anschreiben' : 'Tailor CV & Cover Letter')}
+              <button onclick="openTailorModal('${j.id}')" class="px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold transition shadow-sm flex items-center gap-1.5" title="Individuelles Anschreiben für diese Stelle generieren">
+                ${activeUser === 'nancy'
+                  ? (j.cover_letter_url || j.cv_url ? '✍️ Anschreiben ansehen / kopieren' : '✍️ Anschreiben erstellen')
+                  : (j.cover_letter_url || j.cv_url ? '✍️ View / Copy Cover Letter' : '✍️ Make Cover Letter')
+                }
               </button>
               ${(() => {
                 const isIndeed = (j.source || '').toLowerCase() === 'indeed' || (j.job_url || '').toLowerCase().includes('indeed.com');
@@ -847,8 +856,11 @@
 
     function copyCoverLetterText() {
       const paragraphs = Array.from(document.querySelectorAll('.cl-para')).map(ta => ta.value.trim()).join('\n\n');
-      navigator.clipboard.writeText(paragraphs);
-      alert('Cover letter text copied to clipboard!');
+      navigator.clipboard.writeText(paragraphs).then(() => {
+        alert('📋 Anschreiben-Text erfolgreich in die Zwischenablage kopiert!\n\nDu kannst ihn jetzt einfach mit Strg+V (oder Rechtsklick -> Einfügen) in Indeed oder das Web-Formular einfügen.');
+      }).catch(() => {
+        alert('Kopiert!');
+      });
     }
 
     function setScrapePreset(preset) {

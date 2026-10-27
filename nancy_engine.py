@@ -605,39 +605,58 @@ def score_nancy_job(job: Dict[str, Any]) -> Dict[str, Any]:
 def select_nancy_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dict[str, Any]:
     company = str(job.get("company") or "Ihrem Unternehmen").strip()
     job_title = str(job.get("title") or "Werkstudentin Office Management (m/w/d)").strip()
+    desc = str(job.get("description") or "").lower()
     analysis = score_nancy_job(job)
 
-    paragraphs = [
-        (
-            f"ein reibungslos organisiertes Office bildet das Rückgrat jedes erfolgreichen Teams. "
-            f"Da ich bereits als Office Managerin in einer Berliner Rechtsanwaltskanzlei sowie als Junior Projektleiterin "
-            f"in einer Eventagentur umfassende Verantwortung für Sekretariat, Backoffice und kaufmännische Abläufe übernommen habe, "
-            f"bewerbe ich mich mit großer Begeisterung bei <strong>{company}</strong> als <strong>{job_title}</strong>."
-        ),
-        (
-            f"In meiner letzten Position als Office Managerin bei der SERS Rechtsanwaltsgesellschaft mbH habe ich den gesamten "
-            f"Kanzlei- und Sekretariatsbetrieb eigenverantwortlich koordiniert. Dazu gehörten die professionelle Kommunikation "
-            f"mit Mandanten und Behörden auf Deutsch (Muttersprache) und Englisch (C2), die strukturierte Dokumenten- und Fristenorganisation "
-            f"sowie die vorbereitende Buchhaltung und Rechnungserstellung. Zuvor konnte ich als Junior Projektleiterin bei zett.events "
-            f"sowie während meines dualen B.A.-Studiums in Business Administration (mit Accor Hotels) fundierte Erfahrung in der "
-            f"Personal- und Einsatzplanung, im Onboarding neuer Mitarbeitender und in der Angebots- und Vertragsverwaltung sammeln."
-        ),
-        (
-            f"Aktuell absolviere ich mein Studium an der Technischen Universität Berlin direkt am Standort Zoologischer Garten / Charlottenburg. "
-            f"Dadurch verbinde ich kaufmännische Praxiserfahrung und ausgeprägte Serviceorientierung mit hoher digitaler Affinität "
-            f"(MS Office 365, digitale Dokumentenverwaltung, Prozessoptimierung) und bin örtlich sowie zeitlich besonders flexibel einsetzbar. "
-            f"Kolleginnen, Kollegen und Vorgesetzte schätzen an mir vor allem meine strukturierte, proaktive Arbeitsweise und mein souveränes Auftreten am Empfang und Telefon."
-        ),
-        (
-            f"Gerne möchte ich Ihr Team bei <strong>{company}</strong> tatkräftig entlasten und für perfekt strukturierte Büroabläufe sorgen. "
-            f"Über die Einladung zu einem persönlichen Kennenlernen freue ich mich sehr."
-        ),
+    # Determine focus from job description
+    is_accounting = any(w in desc for w in ["buchhalt", "rechnung", "datev", "lexware", "finance", "zahlung", "mahnwesen"])
+    is_event = any(w in desc for w in ["event", "veranstaltung", "catering", "meeting", "gäste", "reise"])
+    is_hr = any(w in desc for w in ["hr", "personal", "onboarding", "recruiting", "bewerber", "arbeitsvertrag"])
+    is_kanzlei = any(w in desc for w in ["kanzlei", "anwalt", "notar", "recht", "jurist", "fristen"])
+
+    p1 = (
+        f"ein reibungslos organisiertes Office bildet das Rückgrat jedes erfolgreichen Teams. "
+        f"Da ich bereits als Office Managerin in einer Berliner Rechtsanwaltskanzlei sowie als Junior Projektleiterin "
+        f"in einer Eventagentur umfassende Verantwortung für Sekretariat, Backoffice und kaufmännische Abläufe übernommen habe, "
+        f"bewerbe ich mich mit großer Begeisterung bei <strong>{company}</strong> als <strong>{job_title}</strong>."
+    )
+
+    p2_parts = [
+        "In meiner letzten Position als Office Managerin bei der SERS Rechtsanwaltsgesellschaft mbH habe ich den gesamten Kanzlei- und Sekretariatsbetrieb eigenverantwortlich koordiniert."
     ]
+    if is_accounting:
+        p2_parts.append("Hierbei gehörten die vorbereitende Buchhaltung, das strukturierte Rechnungs- und Mahnwesen sowie das gewissenhafte Fristen- und Dokumentenmanagement zu meinen täglichen Kernaufgaben.")
+    elif is_kanzlei:
+        p2_parts.append("Hierbei lagen die professionelle Kommunikation mit Mandanten und Behörden auf Deutsch (Muttersprache) und Englisch (C2), das fristgerechte Aktenmanagement sowie die zuverlässige Unterstützung der Geschäftsführung in meiner Verantwortung.")
+    else:
+        p2_parts.append("Dazu gehörten die professionelle Kommunikation mit Mandanten und Partnern auf Deutsch (Muttersprache) und Englisch (C2), die strukturierte Fristenorganisation sowie die vorbereitende Buchhaltung.")
+
+    if is_event:
+        p2_parts.append("Zuvor konnte ich als Junior Projektleiterin bei zett.events fundierte Praxiserfahrung in der Eventplanung, Gästebetreuung, Terminorganisation und im Lieferantenmanagement sammeln.")
+    elif is_hr:
+        p2_parts.append("Zuvor habe ich bei zett.events sowie während meines dualen Studiums fundierte Erfahrung in der Personaleinsatzplanung, im Onboarding neuer Teammitglieder und in der administrativen Mitarbeiterbetreuung aufgebaut.")
+    else:
+        p2_parts.append("Ergänzend bringe ich aus meiner Tätigkeit bei zett.events wertvolle Erfahrung in der Termin- und Reiseplanung, Gästebetreuung und Dienstleisterkoordination mit.")
+
+    p2 = " ".join(p2_parts)
+
+    p3 = (
+        f"Aktuell absolviere ich mein Studium an der Technischen Universität Berlin direkt am Standort Charlottenburg / Zoo. "
+        f"Dadurch verbinde ich kaufmännische Praxiserfahrung und ausgeprägte Serviceorientierung mit hoher digitaler Affinität "
+        f"(MS Office 365, Cloud-Dokumentenverwaltung, Prozessoptimierung) und bin als Werkstudentin mit 15 bis 20 Wochenstunden "
+        f"zeitlich und örtlich besonders flexibel einsatzbereit. Kolleginnen, Kollegen und Vorgesetzte schätzen an mir vor allem meine strukturierte, "
+        f"proaktive Arbeitsweise und mein souveränes Auftreten am Empfang und Telefon."
+    )
+
+    p4 = (
+        f"Gerne möchte ich Ihr Team bei <strong>{company}</strong> tatkräftig unterstützen und für perfekt strukturierte Büroabläufe sorgen. "
+        f"Über die Einladung zu einem persönlichen Kennenlernen freue ich mich sehr."
+    )
 
     return {
         "analysis": analysis,
         "selected_bullets": [b for exp in profile["experience_de"][:2] for b in exp["bullets"]],
-        "cover_letter_paragraphs": paragraphs,
+        "cover_letter_paragraphs": [p1, p2, p3, p4],
     }
 
 
