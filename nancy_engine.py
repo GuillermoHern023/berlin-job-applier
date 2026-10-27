@@ -465,6 +465,76 @@ def detect_zoo_proximity(title: str, company: str, location: str, description: s
     return ("📍 Berlin (Standort prüfen)", +4)
 
 
+
+def detect_work_model(title: str, location: str, description: str):
+    """
+    Returns (label, is_100_onsite, score_bonus)
+    """
+    text = f"{title} {location} {description}".lower()
+
+    # 1. Strict 100% Onsite check
+    strict_onsite = [
+        r"100\s*%\s*(präsenz|vor\s*ort|onsite|on-site)",
+        r"reine\s*präsenz",
+        r"kein\s*home\s*office",
+        r"kein\s*homeoffice",
+        r"keine\s*remote",
+        r"ausschließlich\s*vor\s*ort",
+        r"ausschließlich\s*in\s*präsenz",
+        r"vollständig\s*vor\s*ort",
+        r"nicht\s*remote",
+        r"reine\s*vor-ort",
+        r"vor-ort-präsenz",
+        r"ohne\s*homeoffice",
+        r"feste\s*präsenz\s*vor\s*ort",
+        r"tägliche\s*präsenz",
+        r"keine\s*home-office",
+    ]
+    for p in strict_onsite:
+        if re.search(p, text):
+            return ("100% Vor Ort", True, -35)
+
+    front_desk = [r"rezeption", r"front\s*desk", r"empfangsmitarbeiter", r"empfangskraft"]
+    for p in front_desk:
+        if re.search(p, title.lower()):
+            return ("100% Vor Ort (Empfang)", True, -25)
+
+    # 2. Remote check
+    remote_pat = [
+        r"100\s*%\s*remote",
+        r"vollständig\s*remote",
+        r"fully\s*remote",
+        r"remote\s*first",
+        r"deutschlandweit\s*remote",
+        r"100\s*%\s*homeoffice",
+        r"100\s*%\s*home\s*office",
+    ]
+    for p in remote_pat:
+        if re.search(p, text):
+            return ("100% Remote", False, 15)
+
+    # 3. Hybrid check
+    hybrid_pat = [
+        r"hybrid",
+        r"home\s*office",
+        r"homeoffice",
+        r"mobiles\s*arbeiten",
+        r"mobile\s*office",
+        r"remote\s*anteil",
+        r"flexibles\s*arbeiten",
+        r"von\s*zu\s*hause",
+        r"work\s*from\s*home",
+        r"telearbeit",
+        r"remote-option",
+        r"home-office",
+    ]
+    for p in hybrid_pat:
+        if re.search(p, text):
+            return ("Hybrid (Home Office)", False, 10)
+
+    return ("Flexibles Office", False, 0)
+
+
 def score_nancy_job(job: Dict[str, Any]) -> Dict[str, Any]:
     title = str(job.get("title") or "")
     company = str(job.get("company") or "")
@@ -514,13 +584,19 @@ def score_nancy_job(job: Dict[str, Any]) -> Dict[str, Any]:
     prox_label, prox_pts = detect_zoo_proximity(title, company, location, description)
     score += prox_pts
 
+    # Work Model (Hybrid/Remote preferred, penalize 100% onsite)
+    work_model_label, is_100_onsite, wm_pts = detect_work_model(title, location, description)
+    score += wm_pts
+
     final_score = max(25, min(99, score))
     kw_str = ", ".join(matched[:5]) if matched else "Office Management, Organisation, Kommunikation"
 
     return {
         "category_label": "Office Management & Assistenz",
         "match_score": final_score,
-        "language_req": prox_label,
+        "language_req": f"{prox_label} • {work_model_label}",
+        "work_model": work_model_label,
+        "is_100_onsite": is_100_onsite,
         "extracted_pay": job.get("salary") or "Siehe Ausschreibung",
         "why_fits": f"Passt ideal zu SERS Kanzlei- & zett.events Erfahrung ({kw_str}).",
     }

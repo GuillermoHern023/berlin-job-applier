@@ -147,6 +147,12 @@
             <option value="TOP_FIT">⭐ Top Fit Only (English OK / Near Zoo)</option>
           </select>
 
+          <select id="workModelFilter" onchange="renderJobs()" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200">
+            <option value="HYBRID_REMOTE" selected>🏠 Hybrid &amp; Remote Only (No 100% Onsite)</option>
+            <option value="ALL">🏢 All Models (Including Onsite)</option>
+            <option value="REMOTE_ONLY">🏡 100% Remote Only</option>
+          </select>
+
           <select id="statusFilter" onchange="updateTabs(); renderJobs();" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200">
             <option value="ACTIVE" selected>✨ To Review / Active (Excludes Not Interested &amp; Applied)</option>
             <option value="ALL">📌 All Jobs (Including Dismissed)</option>
@@ -465,6 +471,7 @@
       const q = (document.getElementById('searchInput').value || '').toLowerCase();
       const lang = document.getElementById('langFilter').value;
       const st = document.getElementById('statusFilter').value;
+      const wmFilter = (document.getElementById('workModelFilter') ? document.getElementById('workModelFilter').value : 'ALL');
       const recency = document.getElementById('recencyFilter').value;
       const maxApps = document.getElementById('applicantsFilter').value;
       const sortBy = document.getElementById('sortBy').value;
@@ -498,6 +505,12 @@
         if (lang === 'TOP_FIT') {
           if (activeUser === 'guillermo' && ((j.language_req || '').includes('C1') || (j.language_req || '').includes('Requires'))) return false;
           if (activeUser === 'nancy' && (j.match_score || 0) < 75) return false;
+        }
+
+        if (wmFilter === 'HYBRID_REMOTE') {
+          if (j.is_100_onsite || (j.work_model && j.work_model.includes('100% Vor Ort'))) return false;
+        } else if (wmFilter === 'REMOTE_ONLY') {
+          if (!j.work_model || !j.work_model.includes('Remote')) return false;
         }
         if (q) {
           const hay = `${j.title} ${j.company} ${j.location} ${j.why_fits} ${j.language_req} ${j.posted_ago || ''} ${j.applicants_text || ''}`.toLowerCase();
@@ -562,6 +575,17 @@
                        : 'bg-slate-800 text-slate-400 border-slate-700';
         const appBadge = `<span class="px-2 py-0.5 rounded text-[11px] border ${appColor}">👥 ${appText}</span>`;
 
+        const wm = j.work_model || (j.is_100_onsite ? '100% Vor Ort' : 'Hybrid');
+        const isWmOnsite = j.is_100_onsite || wm.includes('Vor Ort');
+        const isWmRemote = wm.includes('Remote');
+        const isWmHybrid = wm.includes('Hybrid') || wm.includes('Home Office');
+        const wmColor = isWmRemote ? 'bg-purple-500/20 text-purple-200 border-purple-500/30'
+                      : isWmHybrid ? 'bg-cyan-500/20 text-cyan-200 border-cyan-500/30'
+                      : isWmOnsite ? 'bg-rose-500/20 text-rose-200 border-rose-500/30'
+                      : 'bg-slate-800 text-slate-300 border-slate-700';
+        const wmIcon = isWmRemote ? '🏡' : isWmHybrid ? '🏠' : isWmOnsite ? '🏢' : '🏢';
+        const workModelBadge = `<span class="px-2 py-0.5 rounded text-[11px] font-semibold border ${wmColor}">${wmIcon} ${wm}</span>`;
+
         const cvHref = resolveFileUrl(j.cv_url);
         const clHref = resolveFileUrl(j.cover_letter_url);
         const folderBtnHtml = isLiveBackend
@@ -588,6 +612,7 @@
                   </a>
                   ${editedBadge}
                   <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300 border border-slate-700">${j.category_label || 'Role'}</span>
+                  ${workModelBadge}
                   ${langBadge}
                 </div>
                 <div class="flex flex-wrap items-center gap-2 text-xs text-slate-300 font-medium">

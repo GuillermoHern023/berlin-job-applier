@@ -1,7 +1,9 @@
 import os
 import sys
 import json
+import re
 import shutil
+import urllib.parse
 import smtplib
 from datetime import datetime
 from pathlib import Path
@@ -60,6 +62,76 @@ def save_json(path: Path, data):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
 
+
+def detect_work_model(title: str, location: str, description: str):
+    """
+    Returns (label, is_100_onsite, score_bonus)
+    """
+    text = f"{title} {location} {description}".lower()
+
+    # 1. Strict 100% Onsite check
+    strict_onsite = [
+        r"100\s*%\s*(präsenz|vor\s*ort|onsite|on-site)",
+        r"reine\s*präsenz",
+        r"kein\s*home\s*office",
+        r"kein\s*homeoffice",
+        r"keine\s*remote",
+        r"ausschließlich\s*vor\s*ort",
+        r"ausschließlich\s*in\s*präsenz",
+        r"vollständig\s*vor\s*ort",
+        r"nicht\s*remote",
+        r"reine\s*vor-ort",
+        r"vor-ort-präsenz",
+        r"ohne\s*homeoffice",
+        r"feste\s*präsenz\s*vor\s*ort",
+        r"tägliche\s*präsenz",
+        r"keine\s*home-office",
+    ]
+    for p in strict_onsite:
+        if re.search(p, text):
+            return ("100% Vor Ort", True, -35)
+
+    front_desk = [r"rezeption", r"front\s*desk", r"empfangsmitarbeiter", r"empfangskraft"]
+    for p in front_desk:
+        if re.search(p, title.lower()):
+            return ("100% Vor Ort (Empfang)", True, -25)
+
+    # 2. Remote check
+    remote_pat = [
+        r"100\s*%\s*remote",
+        r"vollständig\s*remote",
+        r"fully\s*remote",
+        r"remote\s*first",
+        r"deutschlandweit\s*remote",
+        r"100\s*%\s*homeoffice",
+        r"100\s*%\s*home\s*office",
+    ]
+    for p in remote_pat:
+        if re.search(p, text):
+            return ("100% Remote", False, 15)
+
+    # 3. Hybrid check
+    hybrid_pat = [
+        r"hybrid",
+        r"home\s*office",
+        r"homeoffice",
+        r"mobiles\s*arbeiten",
+        r"mobile\s*office",
+        r"remote\s*anteil",
+        r"flexibles\s*arbeiten",
+        r"von\s*zu\s*hause",
+        r"work\s*from\s*home",
+        r"telearbeit",
+        r"remote-option",
+        r"home-office",
+    ]
+    for p in hybrid_pat:
+        if re.search(p, text):
+            return ("Hybrid (Home Office)", False, 10)
+
+    return ("Flexibles Office", False, 0)
+
+
 def prune_and_refresh_job_ages(jobs, max_days=10):
     now = datetime.now().date()
     fresh_jobs = []
@@ -70,6 +142,11 @@ def prune_and_refresh_job_ages(jobs, max_days=10):
         if not raw_url or raw_url.lower() in ["nan", "none", "null", ""] or not (raw_url.startswith("http://") or raw_url.startswith("https://")) or "google.com/search" in raw_url:
             pruned_count += 1
             continue
+
+        wm_label, is_100_onsite, _ = detect_work_model(j.get("title", ""), j.get("location", ""), j.get("description", ""))
+        j["work_model"] = wm_label
+        j["is_100_onsite"] = is_100_onsite
+
         dp = j.get("date_posted")
         diff = 99
         if dp:
@@ -269,6 +346,7 @@ def build_job_cards_email_html(jobs_list, is_nancy=False, limit=6):
     active_jobs = [
         j for j in jobs_list
         if str(j.get("status", "")).lower() not in ["applied", "not interested", "archived", "rejected"]
+        and not (is_nancy and j.get("is_100_onsite"))
     ]
 
     # 2. Sort by Freshness first (days_ago 0 = Today, 1 = Yesterday), then by match_score
