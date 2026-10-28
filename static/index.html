@@ -674,8 +674,10 @@
       const isIndeed = (job.source || '').toLowerCase() === 'indeed' || (job.job_url || '').toLowerCase().includes('indeed.com');
       const isDismissed = (job.status || '').toLowerCase() === 'not interested';
 
-      // Generate bespoke cover letter paragraphs
-      const clText = buildTailoredCoverLetter(job);
+      // Generate bespoke cover letter with resolved recipient address
+      const addr = getResolvedJobAddress(job);
+      const clFormat = localStorage.getItem('cl_format_pref') || 'full';
+      const clText = buildTailoredCoverLetter(job, clFormat === 'full');
 
       container.innerHTML = `
         <!-- Sticky Detail Header -->
@@ -739,22 +741,94 @@
         <!-- Detail Tabs & Body Content -->
         <div class="flex-1 overflow-y-auto p-5 space-y-5 bg-[#fafafa] dark:bg-[#121721]">
           
-          <!-- Box 1: Tailored Cover Letter (Instant Copy Ready) -->
-          <div class="bg-white dark:bg-[#18202f] border border-purple-200 dark:border-purple-900/60 rounded-lg p-4 shadow-sm space-y-3">
-            <div class="flex items-center justify-between border-b border-gray-100 pb-2">
-              <div class="flex items-center gap-1.5 text-xs font-bold text-purple-900">
-                <span>✍️ Maßgeschneidertes Anschreiben für diese Stelle</span>
+          <!-- Box 1: Tailored Cover Letter & Company Address (Instant Copy Ready) -->
+          <div class="bg-white dark:bg-[#18202f] border border-purple-200 dark:border-purple-900/60 rounded-lg p-4 shadow-sm space-y-3.5">
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-gray-100 dark:border-slate-800 pb-2.5">
+              <div class="flex items-center gap-1.5 text-xs font-bold text-purple-900 dark:text-purple-300">
+                <span>✍️ Maßgeschneidertes Anschreiben &amp; Firmenanschrift</span>
               </div>
-              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-1 rounded bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition flex items-center gap-1">
-                <span>📋 1-Klick Kopieren</span>
-              </button>
+              <div class="flex items-center gap-2">
+                <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-1.5 rounded bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                  <span>📋 Anschreiben kopieren</span>
+                </button>
+              </div>
             </div>
 
-            <textarea id="clDetailTextarea" rows="10" class="w-full p-3 bg-gray-50 dark:bg-[#121721] border border-gray-200 dark:border-slate-700 rounded-md text-xs text-gray-800 dark:text-gray-200 leading-relaxed font-sans focus:bg-white dark:focus:bg-[#0f141c] focus:outline-none focus:ring-1 focus:ring-purple-500">${clText}</textarea>
+            <!-- Address Card (Firmenanschrift direkt für Anschreiben & Portal) -->
+            <div class="bg-purple-50/70 dark:bg-purple-950/25 border border-purple-200 dark:border-purple-800/50 rounded-lg p-3 space-y-2">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1.5 text-xs font-bold text-purple-900 dark:text-purple-200">
+                  <span>🏢 Empfängeranschrift (Firmenadresse)</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <button onclick="copyRecipientAddress('${job.id}')" class="px-2.5 py-1 rounded bg-white dark:bg-slate-800 border border-purple-300 dark:border-purple-700 text-purple-800 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-slate-700 text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="Nur die Firmenadresse in die Zwischenablage kopieren (z.B. für Formularfelder)">
+                    <span>📋 Nur Adresse kopieren</span>
+                  </button>
+                  <button onclick="toggleEditAddress('${job.id}')" id="editAddrBtn_${job.id}" class="px-2.5 py-1 rounded bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700 text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="Adresse bearbeiten">
+                    <span>✏️ Anpassen</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Display Mode -->
+              <div id="addrDisplay_${job.id}" class="text-xs text-gray-800 dark:text-gray-200 leading-snug bg-white/90 dark:bg-slate-900/70 p-2.5 rounded border border-purple-100 dark:border-purple-900/40">
+                <div class="font-bold text-gray-900 dark:text-white">${addr.company}</div>
+                <div class="text-gray-600 dark:text-gray-400 text-[11px]">${addr.department}</div>
+                <div>${addr.street}</div>
+                <div>${addr.zipCity}</div>
+              </div>
+
+              <!-- Edit Mode -->
+              <div id="addrEdit_${job.id}" class="hidden space-y-2 bg-white dark:bg-slate-900 p-3 rounded border border-purple-200 dark:border-purple-800">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div>
+                    <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">Firma / Unternehmen</label>
+                    <input type="text" id="editCompany_${job.id}" value="${(addr.company || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white text-xs">
+                  </div>
+                  <div>
+                    <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">Abteilung / Ansprechpartner</label>
+                    <input type="text" id="editDept_${job.id}" value="${(addr.department || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white text-xs">
+                  </div>
+                  <div>
+                    <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">Straße &amp; Hausnummer</label>
+                    <input type="text" id="editStreet_${job.id}" value="${(addr.street || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white text-xs">
+                  </div>
+                  <div>
+                    <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">PLZ &amp; Ort</label>
+                    <input type="text" id="editZipCity_${job.id}" value="${(addr.zipCity || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white text-xs">
+                  </div>
+                </div>
+                <div class="flex justify-end gap-2 pt-1">
+                  <button onclick="saveCustomAddress('${job.id}')" class="px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded text-xs font-bold transition shadow-xs">
+                    💾 Adresse speichern &amp; ins Anschreiben übernehmen
+                  </button>
+                  <button onclick="toggleEditAddress('${job.id}')" class="px-2.5 py-1 bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs">
+                    Abbrechen
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Format Toggle -->
+            <div class="flex flex-wrap items-center justify-between gap-2 pt-1 text-xs">
+              <div class="flex items-center gap-3">
+                <label class="flex items-center gap-1.5 cursor-pointer text-gray-700 dark:text-gray-300 font-medium text-xs">
+                  <input type="radio" name="clFormat_${job.id}" value="full" ${clFormat === 'full' ? 'checked' : ''} onchange="changeCoverLetterFormat('${job.id}', 'full')" class="accent-purple-600">
+                  <span>Mit Absender &amp; Firmenanschrift (DIN 5008)</span>
+                </label>
+                <label class="flex items-center gap-1.5 cursor-pointer text-gray-700 dark:text-gray-300 font-medium text-xs">
+                  <input type="radio" name="clFormat_${job.id}" value="body" ${clFormat === 'body' ? 'checked' : ''} onchange="changeCoverLetterFormat('${job.id}', 'body')" class="accent-purple-600">
+                  <span>Nur Textkörper</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Anschreiben Textarea -->
+            <textarea id="clDetailTextarea" rows="12" class="w-full p-3 bg-gray-50 dark:bg-[#121721] border border-gray-200 dark:border-slate-700 rounded-md text-xs text-gray-800 dark:text-gray-200 leading-relaxed font-sans focus:bg-white dark:focus:bg-[#0f141c] focus:outline-none focus:ring-1 focus:ring-purple-500">${clText}</textarea>
             
-            <div class="text-[11px] text-gray-500 flex items-center justify-between">
+            <div class="text-[11px] text-gray-500 flex flex-wrap items-center justify-between gap-2">
               <span>👉 Text anklicken &amp; kopieren, um ihn direkt in Indeed oder das Portal einzufügen.</span>
-              <a href="files/Nancy_Schuetze_Lebenslauf_Master.pdf" download class="font-semibold text-blue-600 hover:underline">
+              <a href="${activeUser === 'guillermo' ? 'files/Guillermo_Hernandez_CV_Master.pdf' : 'files/Nancy_Schuetze_Lebenslauf_Master.pdf'}" download class="font-semibold text-blue-600 hover:underline">
                 📄 Lebenslauf-PDF herunterladen
               </a>
             </div>
@@ -789,14 +863,16 @@
       const content = document.getElementById('mobileDetailContent');
       modal.classList.remove('hidden');
 
-      const clText = buildTailoredCoverLetter(job);
+      const addr = getResolvedJobAddress(job);
+      const clFormat = localStorage.getItem('cl_format_pref') || 'full';
+      const clText = buildTailoredCoverLetter(job, clFormat === 'full');
       const isIndeed = (job.source || '').toLowerCase() === 'indeed' || (job.job_url || '').toLowerCase().includes('indeed.com');
 
       content.innerHTML = `
         <div class="space-y-4">
           <div>
-            <h3 class="text-base font-bold text-gray-900">${job.title}</h3>
-            <div class="text-xs text-gray-600 mt-0.5">${job.company} &bull; ${job.location}</div>
+            <h3 class="text-base font-bold text-gray-900 dark:text-white">${job.title}</h3>
+            <div class="text-xs text-gray-600 dark:text-gray-300 mt-0.5">${job.company} &bull; ${job.location}</div>
           </div>
 
           <div class="flex flex-wrap gap-2">
@@ -808,14 +884,32 @@
             </button>
           </div>
 
-          <div class="space-y-2">
-            <div class="text-xs font-bold text-purple-900">✍️ Anschreiben-Vorschau</div>
-            <textarea rows="8" class="w-full p-2.5 bg-gray-50 border border-gray-300 rounded text-xs text-gray-800">${clText}</textarea>
+          <!-- Mobile Address Card -->
+          <div class="bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800 rounded-lg p-3 space-y-1.5 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-purple-900 dark:text-purple-200">🏢 Firmenanschrift:</span>
+              <button onclick="copyRecipientAddress('${job.id}')" class="px-2 py-0.5 rounded bg-white dark:bg-slate-800 border border-purple-300 text-[11px] font-semibold text-purple-700 dark:text-purple-300">
+                📋 Nur Adresse kopieren
+              </button>
+            </div>
+            <div class="text-gray-800 dark:text-gray-200 font-mono text-[11px] bg-white/80 dark:bg-slate-900/60 p-2 rounded">
+              <div class="font-bold">${addr.company}</div>
+              <div>${addr.department}</div>
+              <div>${addr.street}</div>
+              <div>${addr.zipCity}</div>
+            </div>
           </div>
 
-          <div class="space-y-1 text-xs text-gray-700">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-purple-900 dark:text-purple-200">✍️ Anschreiben (DIN 5008)</span>
+            </div>
+            <textarea id="clDetailTextarea" rows="10" class="w-full p-2.5 bg-gray-50 dark:bg-slate-900 border border-gray-300 dark:border-slate-700 rounded text-xs text-gray-800 dark:text-gray-200">${clText}</textarea>
+          </div>
+
+          <div class="space-y-1 text-xs text-gray-700 dark:text-gray-300">
             <div class="font-bold">📋 Beschreibung</div>
-            <div class="max-h-60 overflow-y-auto whitespace-pre-line text-xs text-gray-600">${job.description || ''}</div>
+            <div class="max-h-60 overflow-y-auto whitespace-pre-line text-xs text-gray-600 dark:text-gray-400">${job.description || ''}</div>
           </div>
         </div>
       `;
@@ -825,12 +919,152 @@
       document.getElementById('mobileDetailModal').classList.add('hidden');
     }
 
-    function buildTailoredCoverLetter(job) {
-      if (activeUser === 'guillermo') {
-        return `Dear Hiring Team at ${job.company || 'your company'},\n\nI am writing to apply for the ${job.title || 'Product / Project Management'} position in Berlin.\n\nWith hands-on experience in high-volume operations, technical data reporting (SQL, Redash, Looker Studio), and cross-functional team coordination, I bridge strategic planning with practical builder execution.\n\nI look forward to discussing how my experience can support ${job.company}.\n\nSincerely,\nGuillermo Hernandez`;
+    const KNOWN_COMPANY_ADDRESSES = {
+      'siemens': { name: 'Siemens Energy Global GmbH & Co. KG', department: 'Personalabteilung / Recruiting-Team', street: 'Huttenstraße 12', zipCity: '10553 Berlin' },
+      'siemens energy': { name: 'Siemens Energy Global GmbH & Co. KG', department: 'Personalabteilung / Recruiting-Team', street: 'Huttenstraße 12', zipCity: '10553 Berlin' },
+      'trade republic': { name: 'Trade Republic Bank GmbH', department: 'People Operations / Recruiting', street: 'Brunnenstraße 19-21', zipCity: '10119 Berlin' },
+      'zalando': { name: 'Zalando SE', department: 'Talent Acquisition Team', street: 'Valeska-Gert-Straße 5', zipCity: '10243 Berlin' },
+      'deutsche bahn': { name: 'Deutsche Bahn AG', department: 'Personalgewinnung / HR', street: 'Europaplatz 1', zipCity: '10557 Berlin' },
+      'charite': { name: 'Charité – Universitätsmedizin Berlin', department: 'Geschäftsbereich Personal', street: 'Charitéplatz 1', zipCity: '10117 Berlin' },
+      'charité': { name: 'Charité – Universitätsmedizin Berlin', department: 'Geschäftsbereich Personal', street: 'Charitéplatz 1', zipCity: '10117 Berlin' },
+      'pliant': { name: 'Pliant GmbH', department: 'People & Culture', street: 'Zimmerstraße 78', zipCity: '10117 Berlin' },
+      'lemon.markets': { name: 'lemon.markets technologies GmbH', department: 'People & Operations', street: 'Wallstraße 9-13', zipCity: '10179 Berlin' },
+      'zertificon': { name: 'Zertificon Solutions GmbH', department: 'Personalabteilung', street: 'Neuköllnische Allee 158', zipCity: '12057 Berlin' },
+      'hirschen group': { name: 'Hirschen Group GmbH', department: 'Talent & Culture', street: 'Schlesische Straße 26', zipCity: '10997 Berlin' },
+      'online birds': { name: 'Online Birds GmbH', department: 'Human Resources', street: 'Kurfürstendamm 194', zipCity: '10707 Berlin' },
+      'we are social': { name: 'We Are Social Deutschland GmbH', department: 'People & Culture', street: 'Alexandrinenstraße 2-3', zipCity: '10969 Berlin' },
+      'flatpay': { name: 'Flatpay Germany GmbH', department: 'Recruiting Team', street: 'Friedrichstraße 68', zipCity: '10117 Berlin' },
+      'tu berlin': { name: 'Technische Universität Berlin', department: 'Zentrale Universitätsverwaltung', street: 'Straße des 17. Juni 135', zipCity: '10623 Berlin' },
+      'ds event lobby': { name: 'DS Event Lobby GmbH', department: 'Personalabteilung', street: 'Messedamm 22', zipCity: '14055 Berlin' },
+      'umbrella unternehmensberatung': { name: 'Umbrella Unternehmensberatung GmbH', department: 'Recruiting', street: 'Friedrichstraße 123', zipCity: '10117 Berlin' }
+    };
+
+    function getResolvedJobAddress(job) {
+      if (!job) return { company: 'Unternehmen', department: 'Personalabteilung / Recruiting', street: 'Berlin', zipCity: 'Berlin' };
+      
+      const customKey = 'job_custom_addr_' + job.id;
+      const customSaved = localStorage.getItem(customKey);
+      if (customSaved) {
+        try {
+          return JSON.parse(customSaved);
+        } catch (e) {}
       }
 
-      const comp = job.company || 'Ihrem Unternehmen';
+      const comp = (job.company || '').trim();
+      const compLower = comp.toLowerCase();
+
+      for (const [key, addr] of Object.entries(KNOWN_COMPANY_ADDRESSES)) {
+        if (compLower.includes(key)) {
+          return {
+            company: addr.name || comp,
+            department: addr.department || 'Personalabteilung / Recruiting-Team',
+            street: addr.street,
+            zipCity: addr.zipCity
+          };
+        }
+      }
+
+      const desc = job.description || '';
+      const streetRegex = /([A-ZÄÖÜ][a-zäöüß]+(?:[ -][A-ZÄÖÜ][a-zäöüß]+)*(?:straße|strasse|str\.|allee|damm|weg|platz|ufer|chaussee|ring|gasse)\s+\d+[a-zA-Z]?)/i;
+      const zipRegex = /(1\d{4})\s+Berlin/i;
+
+      const streetMatch = desc.match(streetRegex);
+      const zipMatch = desc.match(zipRegex);
+
+      let street = streetMatch ? streetMatch[1] : '';
+      let zipCity = zipMatch ? `${zipMatch[1]} Berlin` : 'Berlin, Deutschland';
+
+      const loc = (job.location || '').replace(/,?\s*Germany/i, '').replace(/,?\s*BE/i, '').trim();
+      if (!street && loc && loc !== 'Berlin') {
+        street = loc;
+      }
+      if (!street) {
+        street = 'Standort Berlin';
+      }
+      if (!zipMatch && (!zipCity || zipCity === 'Berlin, Deutschland')) {
+        zipCity = 'Berlin';
+      }
+
+      return {
+        company: comp || 'Unternehmen',
+        department: 'Personalabteilung / Recruiting-Team',
+        street: street,
+        zipCity: zipCity
+      };
+    }
+
+    function copyRecipientAddress(jobId) {
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      if (!job) return;
+      const addr = getResolvedJobAddress(job);
+      const formatted = `${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}`;
+      navigator.clipboard.writeText(formatted).then(() => {
+        alert('🏢 Firmenanschrift in die Zwischenablage kopiert:\n\n' + formatted);
+      }).catch(() => {
+        alert('Kopiert:\n' + formatted);
+      });
+    }
+
+    function toggleEditAddress(jobId) {
+      const disp = document.getElementById('addrDisplay_' + jobId);
+      const edit = document.getElementById('addrEdit_' + jobId);
+      if (!disp || !edit) return;
+      const isHidden = edit.classList.contains('hidden');
+      if (isHidden) {
+        edit.classList.remove('hidden');
+        disp.classList.add('hidden');
+      } else {
+        edit.classList.add('hidden');
+        disp.classList.remove('hidden');
+      }
+    }
+
+    function saveCustomAddress(jobId) {
+      const company = (document.getElementById('editCompany_' + jobId).value || '').trim();
+      const department = (document.getElementById('editDept_' + jobId).value || '').trim();
+      const street = (document.getElementById('editStreet_' + jobId).value || '').trim();
+      const zipCity = (document.getElementById('editZipCity_' + jobId).value || '').trim();
+
+      const addr = { company, department, street, zipCity };
+      localStorage.setItem('job_custom_addr_' + jobId, JSON.stringify(addr));
+
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      if (job) {
+        selectJob(jobId);
+      }
+    }
+
+    function changeCoverLetterFormat(jobId, format) {
+      localStorage.setItem('cl_format_pref', format);
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      if (!job) return;
+      const textarea = document.getElementById('clDetailTextarea');
+      if (textarea) {
+        textarea.value = buildTailoredCoverLetter(job, format === 'full');
+      }
+    }
+
+    function buildTailoredCoverLetter(job, includeHeader = true) {
+      const addr = getResolvedJobAddress(job);
+      const today = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+
+      let header = '';
+      if (includeHeader) {
+        if (activeUser === 'guillermo') {
+          header = `Guillermo Hernandez\nSöhtstraße 16 · 12203 Berlin\nTel: +49 176 85136597 · E-Mail: guillejhl@gmail.com\n\n${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}\n\nBerlin, ${today}\n\nApplication for ${job.title || 'Product / Project Management'}\n\n`;
+        } else {
+          header = `Nancy Schütze\nTeichbergstr. 17 · 13125 Berlin\nTel: +49 15237164097 · E-Mail: schuetzenancy@gmx.de\n\n${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}\n\nBerlin, ${today}\n\nBewerbung als ${job.title || 'Werkstudentin'}\n\n`;
+        }
+      }
+
+      if (activeUser === 'guillermo') {
+        return header + `Dear Hiring Team at ${addr.company || job.company || 'your company'},\n\nI am writing to apply for the ${job.title || 'Product / Project Management'} position in Berlin.\n\nWith hands-on experience in high-volume operations, technical data reporting (SQL, Redash, Looker Studio), and cross-functional team coordination, I bridge strategic planning with practical builder execution.\n\nI look forward to discussing how my experience can support ${addr.company || job.company}.\n\nSincerely,\nGuillermo Hernandez`;
+      }
+
+      const comp = addr.company || job.company || 'Ihrem Unternehmen';
       const title = job.title || 'Werkstudentin Office Management (m/w/d)';
       const desc = (job.description || '').toLowerCase();
 
@@ -856,7 +1090,7 @@
         p2 += "Ergänzend bringe ich aus meiner Tätigkeit bei zett.events Erfahrung in Termin- und Reiseplanung sowie Gästebetreuung mit.";
       }
 
-      return `Sehr geehrtes Recruiting-Team von ${comp},\n\nein reibungslos organisiertes Office bildet das Rückgrat jedes erfolgreichen Teams. Da ich bereits als Office Managerin in einer Berliner Rechtsanwaltskanzlei sowie als Junior Projektleiterin in einer Eventagentur umfassende Verantwortung für Sekretariat, Backoffice und kaufmännische Abläufe übernommen habe, bewerbe ich mich mit großer Begeisterung bei Ihnen als ${title}.\n\n${p2}\n\nAktuell absolviere ich mein Studium an der Technischen Universität Berlin (Standort Charlottenburg). Dadurch verbinde ich kaufmännische Praxiserfahrung mit digitaler Affinität (MS Office 365, Cloud-Dokumentenverwaltung) und bin als Werkstudentin mit 15 bis 20 Wochenstunden zeitlich und örtlich flexibel einsatzbereit.\n\nGerne möchte ich Ihr Team bei ${comp} tatkräftig unterstützen und für perfekt strukturierte Büroabläufe sorgen. Über eine Einladung zu einem persönlichen Gespräch freue ich mich sehr.\n\nMit freundlichen Grüßen\nNancy Schütze`;
+      return header + `Sehr geehrtes Recruiting-Team von ${comp},\n\nein reibungslos organisiertes Office bildet das Rückgrat jedes erfolgreichen Teams. Da ich bereits als Office Managerin in einer Berliner Rechtsanwaltskanzlei sowie als Junior Projektleiterin in einer Eventagentur umfassende Verantwortung für Sekretariat, Backoffice und kaufmännische Abläufe übernommen habe, bewerbe ich mich mit großer Begeisterung bei Ihnen als ${title}.\n\n${p2}\n\nAktuell absolviere ich mein Studium an der Technischen Universität Berlin (Standort Charlottenburg). Dadurch verbinde ich kaufmännische Praxiserfahrung mit digitaler Affinität (MS Office 365, Cloud-Dokumentenverwaltung) und bin als Werkstudentin mit 15 bis 20 Wochenstunden zeitlich und örtlich flexibel einsatzbereit.\n\nGerne möchte ich Ihr Team bei ${comp} tatkräftig unterstützen und für perfekt strukturierte Büroabläufe sorgen. Über eine Einladung zu einem persönlichen Gespräch freue ich mich sehr.\n\nMit freundlichen Grüßen\nNancy Schütze`;
     }
 
     function copyGeneratedCoverLetter(jobId) {
