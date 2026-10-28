@@ -684,6 +684,177 @@
     }
   },
   {
+    "id": "dd46050b15",
+    "title": "Working Student - Product & Project Management (all genders)",
+    "company": "getolo GmbH",
+    "location": "Berlin, BE, Germany",
+    "job_url": "https://apply.workable.com/j/A1B721BF41",
+    "source": "Indeed",
+    "date_posted": "2026-10-28",
+    "date_found": "2026-10-28 19:56",
+    "salary": "",
+    "description": "Support us in designing the insurance experience of the future. As a Working Student in Product & Project Management for most of your time, you run projects with our partners and internal teams from first request to done. When there's time, you work on data projects. You work closely with the Head of Product and see up close how product decisions get made.\n  \n  \nThis is a 20h/week hybrid role, with 1 day per week working from our Berlin office.\n\n  \n  \n**Requirements**  \n\n### **Your Mission**\n\n* Check and triage new requests from partners and internal teams on our Jira board: what is it, how urgent is it, and who owns it?\n\n* Clarify requirements with stakeholders and turn them into clear tickets for our product squads\n* Find the right people (Product, Engineering, Data, Operations, Legal) and bring them together\n* Answer questions yourself where you can; check reported bugs yourself and test fixes before they go live\n* Track every project until it's closed, and send a short regular status update to stakeholders\n* Help us organise how feature requests from internal teams are collected, tracked and made visible to the product managers\n* Prepare priority calls and escalations for the Head of Product\n* Build and maintain dashboards for our product KPIs\n* Run analyses for the product team, e.g. how a KPI changed before and after a release\n* Tools you will work with: Jira, Confluence, Slack, Google Workspace, Metabase / SQL\n\n### **What You Will Need to Succeed**\n\n* Enrolled at a university (working student status), available 20 h/week for at least 12 months\n\n* German at B2 level or higher, plus good English. Many of our partners and stakeholders work in German.\n* Strong analytical thinking and a record of excellent results (grades, scholarships, projects, competitions)\n* Technical affinity: you understand how web apps, APIs and data flows work, or you learn fast. An error message or a data table doesn't scare you.\n* Structured and reliable: you keep many threads open without dropping one, and you follow up without being asked\n* Clear writing, and confidence with experienced stakeholders\n\n### **What Would Make You Stand Out**\n\n* First experience in product management, consulting, a startup or project coordination\n* SQL skills\n* Experience building with AI or automation tools (n8n, Zapier, LLM APIs)\nInterest in insurance, health or insurtech  \n\n  \n  \n**Benefits**\n\n**Why getolo?**\n\n**Vacation**\n\n* Start with 28 vacation days, with an increase every two years (capped at 30 days). Holidays on December 24th and 31st. Vacation entitlement for working students is prorated based on working days per week\n\n‍ **Mobility & Flexibility**\n\n* Work hybrid - from your home office or in our office in Berlin-Mitte\n\n**Health**\n\n* Benefit from free coaching sessions with nilo.health, our mental health tool\n* Test our products yourself! Choose between dentolo, petolo or vitolo\n\n**Development**\n\n* Regular (360 degree) feedback\n\n**Berlin Based, International Mindset**\n\n* We communicate, collaborate, and celebrate in English to ensure everyone is included\n* Our diverse team spans from 33 different countries\n\n**Values**\n\n* Our values are not buzzwords, but actions that are a part of our individual and collective DNA:\n* + #fast: We simplify, move with urgency, and focus on outcomes\n  + #brave: We take bold decisions, challenge the status quo, and act with conviction\n  + #accountable: We deliver end-to-end, reduce dependencies, and own our decisions\n  + #caring: We treat each other with respect, build trust, and create an environment where everyone can thrive\n\n**And much more…**\n\n* Legendary summer and winter parties\n* Regular team events\n* Many discounts on the corporate Benefits Platform\n* Two Community Days per calendar year\n* Pet friendly office\n\nSounds like the perfect job for you? We look forward to receiving your application and getting to know you!\n\n**About getolo**\n\nFounded in 2015, getolo GmbH is an innovative and award-winning InsurTech company that offers comprehensive supplementary insurance plans in the areas of dental, pet health and liability, as well as health add-on coverage. Under the brands dentolo, petolo, patolo and vitolo, we serve over 265,000 customers across Germany, France and Spain, providing digital and hassle-free protection that seamlessly integrates into their daily lives.  \nWe believe that prevention is always better than cure—which is why we focus on preventive care, customer-centric service, and financial security to protect our customers and their loved ones from unexpected costs. Thanks to the close collaboration of our team of market specialists and insurance experts, we continuously monitor industry developments to offer practical solutions for current challenges.  \ngetolo's company culture is built on collaboration, innovation, and agility—always with a strong focus on the needs of our customers. With a team of around 300 employees, getolo is led by Daniel Gadea (CEO) and Laura Wulff (CGO). getolo is a partner of DA Direkt and part of the Zurich Group Germany.\n\ngetolo is an equal opportunity and diversity employer. We strive to create a friendly, safe, and welcoming environment for all our team members, regardless of ethnicity, gender, gender identity and expression, sexual orientation, limitations and talents of any kind, physical appearance, social background, marital status, age, or religion (or lack thereof).\n\nWhen you apply, we focus solely on your experience and motivation. You decide what additional information you want to disclose (photo, marital status, religion, gender, nationality, etc.). We value and treat all applications equally.\n\nContact:\n\ngetolo Recruiting Team  \njobs@getolo.com",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 99,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "automation",
+      "llm",
+      "api",
+      "git",
+      "product manager",
+      "product management",
+      "product team"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, llm, api, git, product manager.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-10-28)",
+    "applicants_num": 999,
+    "applicants_text": "Direct Portal (No counter)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Working Student - Product & Project Management (all genders) role at getolo GmbH. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about getolo GmbH is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support getolo GmbH in this role."
+      ]
+    }
+  },
+  {
+    "id": "341292b43e",
+    "title": "Working Student - Product & Project Management (all genders)",
+    "company": "getolo",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4484462953",
+    "source": "Linkedin",
+    "date_posted": "2026-10-28",
+    "date_found": "2026-10-28 19:56",
+    "salary": "",
+    "description": "Support us in designing the insurance experience of the future. As a Working Student in Product & Project Management for most of your time, you run projects with our partners and internal teams from first request to done. When there's time, you work on data projects. You work closely with the Head of Product and see up close how product decisions get made.\n  \n  \nThis is a 20h/week hybrid role, with 1 day per week working from our Berlin office.\n  \n  \n**Requirements**\n**Your Mission**\n\n* Check and triage new requests from partners and internal teams on our Jira board: what is it, how urgent is it, and who owns it?\n* Clarify requirements with stakeholders and turn them into clear tickets for our product squads\n* Find the right people (Product, Engineering, Data, Operations, Legal) and bring them together\n* Answer questions yourself where you can; check reported bugs yourself and test fixes before they go live\n* Track every project until it's closed, and send a short regular status update to stakeholders\n* Help us organise how feature requests from internal teams are collected, tracked and made visible to the product managers\n* Prepare priority calls and escalations for the Head of Product\n* Build and maintain dashboards for our product KPIs\n* Run analyses for the product team, e.g. how a KPI changed before and after a release\n* Tools you will work with: Jira, Confluence, Slack, Google Workspace, Metabase / SQL\n\n****What You Will Need to Succeed****\n\n* Enrolled at a university (working student status), available 20 h/week for at least 12 months\n* German at B2 level or higher, plus good English. Many of our partners and stakeholders work in German\n* Strong analytical thinking and a record of excellent results (grades, scholarships, projects, competitions)\n* Technical affinity: you understand how web apps, APIs and data flows work, or you learn fast. An error message or a data table doesn't scare you\n* Structured and reliable: you keep many threads open without dropping one, and you follow up without being asked\n* Clear writing, and confidence with experienced stakeholders\n\n**What Would Make You Stand Out**\n\n* First experience in product management, consulting, a startup or project coordination\n* SQL skills\n* Experience building with AI or automation tools (n8n, Zapier, LLM APIs)\n* Interest in insurance, health or insurtech\n\n**Benefits**\n**Why getolo?**\n🌴\n**Vacation**\n\n* Start with 28 vacation days, with an increase every two years (capped at 30 days). Holidays on December 24th and 31st. Vacation entitlement for working students is prorated based on working days per week\n\n🧑‍💻\n**Mobility & Flexibility**\n\n* Work hybrid - from your home office or in our office in Berlin-Mitte\n\n🧘\n**Health**\n\n* Benefit from free coaching sessions with nilo.health, our mental health tool\n* Test our products yourself! Choose between dentolo, petolo or vitolo\n\n📚\n**Development**\n\n* Regular (360 degree) feedback\n\n🌍\n**Berlin Based, International Mindset**\n\n* We communicate, collaborate, and celebrate in English to ensure everyone is included\n* Our diverse team spans from 33 different countries\n\n🧬\n**Values**\n\n* Our values are not buzzwords, but actions that are a part of our individual and collective DNA:\n\n+ #fast: We simplify, move with urgency, and focus on outcomes\n+ #brave: We take bold decisions, challenge the status quo, and act with conviction\n+ #accountable: We deliver end-to-end, reduce dependencies, and own our decisions\n+ #caring: We treat each other with respect, build trust, and create an environment where everyone can thrive\n\n🙌\n**And much more...**\n\n* Legendary summer and winter parties\n* Regular team events\n* Many discounts on the corporate Benefits Platform\n* Two Community Days per calendar year\n* Pet friendly office\n\nSounds like the perfect job for you? We look forward to receiving your application and getting to know you!\n  \n  \n**About Getolo**\nFounded in 2015, getolo GmbH is an innovative and award-winning InsurTech company that offers comprehensive supplementary insurance plans in the areas of dental, pet health and liability, as well as health add-on coverage. Under the brands dentolo, petolo, patolo and vitolo, we serve over 265,000 customers across Germany, France and Spain, providing digital and hassle-free protection that seamlessly integrates into their daily lives.\n  \n  \nWe believe that prevention is always better than cure—which is why we focus on preventive care, customer-centric service, and financial security to protect our customers and their loved ones from unexpected costs. Thanks to the close collaboration of our team of market specialists and insurance experts, we continuously monitor industry developments to offer practical solutions for current challenges.\n  \n  \ngetolo's company culture is built on collaboration, innovation, and agility—always with a strong focus on the needs of our customers. With a team of around 300 employees, getolo is led by Daniel Gadea (CEO) and Laura Wulff (CGO). getolo is a partner of DA Direkt and part of the Zurich Group Germany.\n  \n  \ngetolo is an equal opportunity and diversity employer. We strive to create a friendly, safe, and welcoming environment for all our team members, regardless of ethnicity, gender, gender identity and expression, sexual orientation, limitations and talents of any kind, physical appearance, social background, marital status, age, or religion (or lack thereof).\n  \n  \nWhen you apply, we focus solely on your experience and motivation. You decide what additional information you want to disclose (photo, marital status, religion, gender, nationality, etc.). We value and treat all applications equally.\n  \n  \nContact:\n  \n  \ngetolo Recruiting Team\n  \n  \njobs@getolo.com",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 99,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "automation",
+      "llm",
+      "api",
+      "git",
+      "product manager",
+      "product management",
+      "product team"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, llm, api, git, product manager.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-10-28)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Working Student - Product & Project Management (all genders) role at getolo. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about getolo is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support getolo in this role."
+      ]
+    }
+  },
+  {
+    "id": "03a417c732",
+    "title": "­Working Student Digital Product Management (all genders) – Beats & Bytes – Universal Music Entertainment GmbH",
+    "company": "Universal Music Deutschland",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4482535649",
+    "source": "Linkedin",
+    "date_posted": "2026-10-28",
+    "date_found": "2026-10-28 19:57",
+    "salary": "",
+    "description": "Universal Music is the market leader in the music business. The world’s most famous and most successful record labels belong to us. We’ve been writing music history for over 100 years representing legendary musicians across all genres. Our accomplishments are driven by our love for music, extraordinary artists and our ambitious team.\n  \n  \nBeats & Bytes (B3S) is our tech organization and is comprised of a network of product teams. To be agile and innovative, we live and foster psychological safety, constructive nonconformity and diversity of thought! Empowerment and community are part of our culture. As the technical backbone we generate added value for Universal Music by solving our users’ problems. The B3S Team forms the digital foundation for our business and actively contributes to the competitive advantage of Universal Music.\n  \n  \nHere’s your chance to join!\n**Effective**\n**as of now**\n, we’re looking for a\n**working student (all genders) Digital Product Management**\nto join us within our\n**Beats and Bytes**\ndepartment in the eCommerce team at our headquarters in Berlin.\n  \n  \n**This Is What You Can Learn Here**\n\n* You can grow into the field of product management\n* You learn about user-centric product management\n* You will learn how quality assurance and testing fit into the product lifecycle - from feature development to delivery and user acceptance testing (UAT)\n* You will develop communication and documentation skills to ensure clear alignment between technical and non-technical teams\n* You will gain experience in identifying, reproducing, and documenting issues, and understand how Quality Assurance contributes to continuous improvement in digital products\n* You will gain exposure to sales, supply chain, and finance processes in eCommerce and learn how the systems supporting these processes connect and interact.\n* You will learn the B3S way – working in a creative and supportive cross-functional team that connects product, engineering, and business operations\n\n**What You Will Be Doing**\n\n* You will work closely with the Product Managers of the eCommerce Team\n* You will be responsible for some of the product management tasks like writing user stories\n* You will work in product trios with product management, design, research, insights and engineering\n* You provide first-level product support for internal teams and help resolve issues in collaboration with engineering\n* Assist in user acceptance testing (UAT) and coordinate feedback loops with stakeholders\n* Document testing outcomes, feature behavior, and user feedback for product improvements will also be in your field of work\n* You maintain and improve our product documentation and support guides\n* What else would you like to learn? Let’s discuss your interests – a lot is possible with our team!\n\n**We Would Like To Meet You If**\n\n* You are enrolled in a full-time degree programme in product management or another relevant field, with more than 12 months remaining in your studies.\n* You think strategically and unconventionally, quickly connecting disparate information to uncover insights opportunities and actionable outcomes\n* You have an interest in product development, testing, and technical support\n* You are detail-oriented, organized, and enjoy solving problems\n* You are proficient in English (German skills are a plus)\n* You have a proactive, team-oriented mindset and are eager to learn\n* Basic knowledge of eCommerce systems\n* You are excited to work in a fast-paced environment and collaborate across teams\n\n**Our Values, Our Compass, Our Culture**\n\n* Creativity – Home to Artists, Innovators and Entrepreneurs.\n* Connection – We are ONE team.\n* Passion – Music is our first love.\n* Responsibility – It’s up to us.\n* Diversity – Music is universal.\n* Factuition – Guided by head AND heart.\n\n**#joinuniversalmusic**\nWe look forward to receiving your application via our online application form! Please upload your documents (letter of motivation / cover letter, CV, references) as files and state your earliest starting date.\n  \n  \n**MUSIC IS UNIVERSAL!**\nAs a large and globally operating company, Universal Music promotes diversity and opposes discrimination. We aspire to reflect the diversity represented by our artists through their music and individuality in our teams. We pledge ourselves to be an equal opportunity employer and enable individuals to express themselves – regardless of age, sex, gender, appearance, origin, faith, physical/mental ability, or sexual orientation.\n  \n  \nIf you are unsure about submitting an application because, for example, you do not fulfil all of the requirements, we would like to encourage you to try it nonetheless!\n  \n  \n**#YOUatUMG**",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "product_management",
+    "category_label": "Product Management",
+    "match_score": 99,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "product manager",
+      "product management",
+      "product team",
+      "digital product",
+      "feature",
+      "stakeholder"
+    ],
+    "why_fits": "Strong Product Management fit. Matches keywords: ai, git, product manager, product management, product team, digital product.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-10-28)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the ­Working Student Digital Product Management (all genders) – Beats & Bytes – Universal Music Entertainment GmbH role at Universal Music Deutschland. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Embedded in an agile cross-functional product environment, I helped scale our conversational AI tooling across 9 international markets, routing millions of calls while improving answer rates by 20%. To support our operational workflows, I have designed and deployed internal evaluation tools, including an AI conversation QA web platform with bulk review pipelines, a centralized review management portal versioned via GitHub, and automated dispatch workflows.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Universal Music Deutschland is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Universal Music Deutschland in this role."
+      ]
+    }
+  },
+  {
     "id": "44804fe1d5",
     "title": "Working Student Revenue Operations and GTM Strategy",
     "company": "Lucanet",
@@ -4057,6 +4228,61 @@
     "is_100_onsite": false
   },
   {
+    "id": "756539ea13",
+    "title": "Research Assistants in Economics of Populism (Berlin)",
+    "company": "Kiel Institut für Weltwirtschaft",
+    "location": "Berlin, BE, Germany",
+    "job_url": "https://www.kielinstitut.de/institute/career/job-vacancies/research-assistants-in-economics-of-populism-berlin/",
+    "source": "Indeed",
+    "date_posted": "2026-10-28",
+    "date_found": "2026-10-28 19:56",
+    "salary": "16.2-16.2 EUR (hourly",
+    "description": "The Kiel Institute for the World Economy is seeking **Research Assistants in Economics of Populism (Berlin)**. We are looking for up to two highly motivated research assistants to support a new research project on populist leaders in government. The positions are embedded in the research group of Prof. Christoph Trebesch and will be supervised by Dr. Max Deter. The project, “From Populist to Dictator”, builds an event-level database of illiberal actions taken by populist leaders since 1900 and studies how these actions unfold over time and how they relate to economic and financial-market outcomes. It is also part of the SCRIPTS Cluster of Excellence.\n\nIn this role, you will work closely with postdoctoral scholars as well as more senior faculty of the Kiel Institute to support them in their research.\n\n### **Your Role:**\n\nAs a research assistant in the Research Group of Prof. Dr. Christoph Trebesch, you will play a key role in building the data foundation of the project. The research topics include:\n\n* Economics of Populism\n  + Illiberal actions of populist leaders (e.g. against the judiciary, the media, elections, and state employees)\n  + Economic policies of populist leaders\n  + Financial market reactions to illiberal actions\n* Economics of Autocracies\n  + Sequencing illiberal actions: how and when populists in government turn into autocrats\n  + Constraints on leaders and the role of institutions, civil society and international actors\n  + Business freedom and cronyism under populist and autocratic rule\n\nYour responsibilities will include:\n\n#### **Research Assistance**\n\nProviding research assistance for the project’s data work and for further projects of the group. These tasks include:\n\n* **AI-assisted event coding**: using large language models and a structured codebook to extract events (action, date, outcome) on populist leaders from country reports, news archives and academic literature\n* **Source verification**: checking coded events against the original document, recording verbatim quotes for action, date and outcome, and flagging events that cannot be confirmed\n* Assist in compiling, cleaning and harmonizing the resulting dataset, including checks for duplicates, inconsistent dates and missing sources\n* Assist with documenting research processes (codebook, coding decisions, source logs) and maintaining organized research files and datasets\n* Assist with data visualization, tables, and figures for papers and presentations\n* Conduct background research on populist leaders, country cases and their institutional context\n* Support the preparation of research papers, reports and policy briefs\n\n#### **Project Management**\n\n* Assist with day-to-day administrative and organizational tasks\n* Help organize seminars, workshops, and other events (both online and in-person), including managing invitations and participants\n\n### **Your Profile**\n\nWe seek candidates who have the following qualifications and experience:\n\n* Enrolled in a **Master’s program** in economics, political science or a closely related quantitative subject in a German University. Applicants should intend to remain enrolled as a student for **at least one more year**.\n* An **excellent academic record**\n* **Attention to detail**, also when working through long documents and large numbers of cases\n* **Careful and critical use of AI tools**: willingness to check every AI-generated claim against the original source and to document how a result was obtained\n* Strong interest in **political economy**, including topics such as populism, democratic backsliding, autocracy and political institutions; an interest in geoeconomics, international finance or sanctions is a plus\n* Fluency in **English** (minimum C1 level). German skills are not required.\n* Previous experience as a research assistant is a plus\n* Reading knowledge of further languages (e.g. Spanish, Portuguese, Turkish, Russian) is a plus\n* Programming skills in **Stata or Python** are a plus, as is familiarity with **Overleaf (LaTeX)** or **Claude Code**.\n* Very good interpersonal, verbal, and written communication skills as well as a proactive, solution-oriented mindset\n* **Strong organizational skills** and the ability to meet deadlines\n* Ability to work **independently**\n\n### **We are offering**\n\n* Flexible working arrangements; the primary work location is Berlin, with the possibility of remote work.\n* Up to **37 hours/month**\n  + Research assistant (with completed Bachelor’s degree): 16,20€/hour\n* **Fixed-term contract for one year** (with the option of extension)\n* **Planned start**: 1 December 2026.\n\nThe Kiel Institute for the World Economy values diversity. We welcome applications regardless of gender, nationality, ethnic and social origin, religion/belief, disability, age or sexual orientation. The Kiel Institute is an equal opportunity employer with a certified family-friendly policy. We promote the professional opportunities of women and strongly encourage them to apply. Women with equivalent qualifications, competence and expertise will be given preference. We are committed to employing persons with recognized disabilities and will therefore give them preference over persons without disabilities if they are equally qualified. We welcome all applications, regardless of nationality, ethnic and social origin, religion/belief, age and sexual orientation.\n\nIn order to be eligible for this position you have to hold EU citizenship or need to be able to provide a work permit that is valid throughout the time of your contract.\n\nThe Cluster of Excellence “Contestations of the Liberal Script (SCRIPTS)” examines why liberal democracies around the world face growing pressure and what strengthens their resilience. Funded by the German Research Foundation (DFG) under the German Excellence Strategy since 2019, SCRIPTS is hosted by Freie Universität Berlin and partners with Humboldt-Universität zu Berlin, the Hertie School, the WZB Berlin Social Science Center, Centre for East European and International Studies (ZOiS), and the Kiel Institute for the World Economy. The selection is done according to the SCRIPTS Diversity Rules & Guidelines.\n\nPlease submit your application online using ID-No. “**2026\\_Populism\\_Hiwi**”.\n\nPlease include (i) a letter of interest, (ii) your CV, (iii) university transcripts, as well as (iv) proof of relevant work experience. Ideally submit just one PDF, including the ID-No. and your family name as file name.\n\nThe deadline for applications is **15****th** **November 2026**. Application photos should not be included.\n\nFor additional information, please contact Max Deter.\n\n#### **For questions regarding this position please contact**\n\n* **Dr. Max Deter**\n\n  Kiel Institute Reseacher\n\n  max.deter@kielinstitut.de\n\n### **At a glance**\n\nSupport a new research project on populist leaders in government\n\nUp to 37 hours/month\n\nFixed-term contract for one year (with the option of extension)\n\nPlanned start: December 1st, 2026\n\nID No. “2026\\_Populism\\_Hiwi”\n\nDeadline for applications is the November 15, 2026.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 75,
+    "language_req": "English Friendly",
+    "extracted_pay": "16,20€/h",
+    "matched_keywords": [
+      "ai",
+      "bot",
+      "erp",
+      "project management",
+      "quantitative",
+      "support"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, bot, erp, project management, quantitative, support.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-10-28)",
+    "applicants_num": 999,
+    "applicants_text": "Direct Portal (No counter)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Research Assistants in Economics of Populism (Berlin) role at Kiel Institut für Weltwirtschaft. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Kiel Institut für Weltwirtschaft is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Kiel Institut für Weltwirtschaft in this role."
+      ]
+    }
+  },
+  {
     "id": "fd8806da96",
     "title": "Werkstudent Business Analytics - Retail Media Insights (m/w/d)",
     "company": "Schwarz Digits",
@@ -4505,6 +4731,61 @@
     "is_100_onsite": false
   },
   {
+    "id": "51d767c0da",
+    "title": "Werkstudent (w/m/d) im Bereich Pricing Schwerpunkt Data Analytics und Automatisierung",
+    "company": "Siemens",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4481908705",
+    "source": "Linkedin",
+    "date_posted": "2026-10-23",
+    "date_found": "2026-10-28 19:58",
+    "salary": "",
+    "description": "**Art der Anstellung:**\nBefristet / mind. 10-15h Stunden/Woche\n  \n  \nDu willst mit Daten echten Mehrwert schaffen und moderne Technologien im Pricing einsetzen? Dann werde als Werkstudent (w/m/d) im Bereich Data Analytics und Automatisierung Teil unseres Teams in Erlangen, Berlin oder Stuttgart und gestalte mit uns intelligente Lösungen für die Zukunft!\n  \n  \nWerde Teil unseres Working Student Network – einer Community, die dir Austausch, Unterstützung und wertvolle Kontakte bei Siemens bietet.\n  \n  \n**Verändere die Welt von morgen:**\n\n* Du unterstützt unser Pricing-Team bei der Entwicklung und Optimierung von Reports, Dashboards und Auswertungen, indem du deine analytischen Fähigkeiten gezielt einbringst\n* Anschließend arbeitest du aktiv mit an der Weiterentwicklung von BI- und Automatisierungslösungen wie Power BI, Power Query und Power Automate, um datenbasierte Prozesse effizienter zu gestalten\n* Darüber hinaus begleitest du Projekte rund um Data Analytics und Künstliche Intelligenz und trägst dazu bei, innovative Lösungen im Bereich Pricing umzusetzen\n* Abschließend bringst du deine Ideen ein, um moderne digitale Ansätze für die kontinuierliche Verbesserung unserer Arbeitsabläufe zu fördern\n\n**So überzeugst du uns:**\n\n* Ausbildung: Du studierst derzeit erfolgreich Informatik, Wirtschaftsinformatik, Data Science, Mathematik oder Betriebswirtschaftslehre mit Schwerpunkt Digitalisierung oder Data Analytics\n* Erfahrungen und Kenntnisse:\n\n+ Du hast Interesse an Pricing, Data Analytics und Automatisierung\n+ Du besitzt Kenntnisse in der Entwicklung und Optimierung von Reports und Dashboards, idealerweise mit Power BI\n+ Du hast erste Erfahrungen im Umgang mit modernen BI- und Automatisierungstools wie Power Query oder Power Automate\n\n* Arbeitsweise: Du arbeitest analytisch, lösungsorientiert und zeigst eine hohe Eigeninitiative\n* Sprachkenntnisse: Sehr gute Deutschkenntnisse, Englischkenntnisse sind von Vorteil\n\nDu bist viel mehr als deine Qualifikationen und wir glauben an das Potential jeder einzelnen Person. Wir freuen uns darauf, dich kennenzulernen!\n  \n  \nBei Siemens sind wir überzeugt: Wer sich wertgeschätzt und zugehörig fühlt, kann das eigene Potenzial voll entwickeln. Deshalb schaffen wir ein inklusives Arbeitsumfeld, in dem jede Person ein Gefühl der Zugehörigkeit erfährt und in dem individuelle Perspektiven und Erfahrungen geschätzt werden. Unser Engagement für Fairness und Respekt gilt für alle Bewerbenden.\n  \n  \nWir legen Wert auf Chancengleichheit und freuen uns über Bewerbungen von Menschen mit unterschiedlichen Hintergründen, ausdrücklich auch von Menschen mit Behinderung.\n  \n  \n**Über Uns**\nWir entwickeln Netzwerke, die unsere Städte schlauer mit Licht und Wärme versorgen und kennen uns in Sachen Automatisierung und Digitalisierung in der Prozess- und Fertigungsindustrie bestens aus. Dafür und für viele weitere Zukunftsprojekte brauchen wir kluge Köpfe, die ihr Können und ihre Kreativität aktiv einbringen. Menschen wie dich! Hilf uns dabei, die spannendsten Herausforderungen gemeinsam anzugehen und umzusetzen, worauf es ankommt. Was wir dir bieten, ist die Chance, wirklich etwas zu bewegen. Also worauf warten? Mach mit uns den nächsten Schritt in deiner Karriere!\n  \n  \nwww.siemens.de/karriere – wenn du mehr Informationen zu Jobs & Karriere bei Siemens erhalten möchtest.\n  \n  \nFAQ – wenn du eine Frage zum Thema Bewerbung bei Siemens hast.\n  \n  \nWenn du darüber hinaus noch Fragen hast, wende dich gerne an uns: www.siemens.de/fragenzurbewerbung\n  \n  \n#sagworkingstudent",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 73,
+    "language_req": "German Job Post (Check B1 Fit)",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "automatisierung",
+      "erp",
+      "initiative",
+      "dashboard"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, automatisierung, erp, initiative, dashboard.",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-10-23)",
+    "applicants_num": 36,
+    "applicants_text": "🟡 36 applicants",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent (w/m/d) im Bereich Pricing Schwerpunkt Data Analytics und Automatisierung role at Siemens. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Siemens is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Siemens in this role."
+      ]
+    }
+  },
+  {
     "id": "98b2bfda09",
     "title": "Werkstudent*in Technical Customer Success - AI Products (m/w/d/x)",
     "company": "T-Systems International",
@@ -4669,6 +4950,62 @@
     },
     "work_model": "Flexibles Office",
     "is_100_onsite": false
+  },
+  {
+    "id": "1d2702eb2b",
+    "title": "Werkstudent (m/w/d) im Team Vertriebssteuerung – Schwerpunkt Anwendungsbetreuung CRM",
+    "company": "S-Kreditpartner",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4484719393",
+    "source": "Linkedin",
+    "date_posted": "2026-10-28",
+    "date_found": "2026-10-28 19:57",
+    "salary": "",
+    "description": "S-Kreditpartner – unser Name ist unser Versprechen. Er zeigt unsere Zugehörigkeit zur Sparkassen-Familie. Als spezialisierter Motor der Innovation bündeln wir unsere Expertise in der Auto- und Konsumentenfinanzierung. Gemeinsam mit unseren Vertriebspartnern stärken wir die Sparkassen-Finanzgruppe mit frischem Denken und entschlossenem Handeln in diesen Geschäftsfeldern.\n  \n  \nDu hast Lust, in einem tollen Team eigenverantwortlich die digitalen Prozesse hinter unserem Geschäftsmodell weiter voranzutreiben und zu dokumentieren? Es reizt dich, interne Anwender (m/w/d) von ihrer Anpassungsidee bis zur Umsetzung und bei der Anwendungsnutzung zu begleiten und zu unterstützen? Dann bist du bei uns genau richtig, denn wir suchen dich (m/w/d) zum nächstmöglichen Zeitpunkt!\n  \n  \n**Werkstudent (m/w/d) im Team Vertriebssteuerung – Schwerpunkt Anwendungsbetreuung CRM**\n**Dein Verantwortungsbereich**\nDu unterstützt unseren Referenten CRM (m/w/d) in der täglichen Betreuung unserer atypisch genutzten CRM-Anwendung, z. B.:\n  \n  \n\n* Beratung und Begleitung unserer internen Kunden bei Änderungs‑ /Erweiterungswünschen und Vorbereiten/Erstellen der IT‑Anforderungen\n* Test neuer Anwendungsversionen (einschließlich Erstellung der Test-Sets im Test-Tool)\n* Dokumentation und Kommunikation der Anwendung bzw. von Änderungen\n* Bearbeitung von Anfragen interner Kunden aus dem Ticketsystem (Support)\n* Unterstützung in administrativen und organisatorischen Aufgaben\n\n**Dein Profil**\n\n* Dich interessieren technische Lösungen im komplexen Umfeld unterschiedlicher Systeme\n* Du beherrschst die Microsoft-Office-Produkte – und idealerweise auch SQL\n* Du hast idealerweise bereits erste Erfahrungen mit einem CRM‑System, einem Workflow-Management-System, einem Ticket-System, einem Testfall-Tool (z. B. Aqua oder Confluence)\n* Dir fällt es leicht, in eigenen Worten Ideen und Tatsachen klar und ansprechend schriftlich und mündlich zu formulieren – ohne Nutzung einer KI\n* Du verfügst über eine schnelle Auffassungsgabe, arbeitest eigenständig und eigenverantwortlich und setzt Aufgaben strukturiert sowie lösungsorientiert um\n* Du befindest dich in einem Studiengang der Wirtschaftsinformatik, der Medieninformatik, des IT‑Managements oder einem artverwandten Studiengang\n\n**Deine Benefits**\n\n* Vergütung & Finanzen: Attraktive Vergütung mit einem Stundenlohn von 16 Euro zum Einstieg\n* Work-Life-Balance & Flexibilität: Gute Vereinbarkeit von Beruf, Studium und Privatleben durch z. B. flexible Arbeitszeiten und Home-Office, Förderung Deiner individuellen Entwicklung durch eine umfassende Einarbeitung sowie Weiterentwicklungsmöglichkeiten\n* Gesundheit und Wohlbefinden: Modern ausgestattete Arbeitsplätze in unserem zentral gelegenen Office in der Nähe des U‑Bahnhofes Berliner Straße, Betriebliche Gesundheitsförderung, z. B. Betriebsarzt, Grippeschutzimpfungen, Beratungsangebote\n* Entwicklung & Community: Regelmäßige Firmenevents und Sportangebote, z. B. Sommerfest und Weihnachtsfeier, Tischtennis, Yoga und Firmenlauf etc., Kreativ- und Kollaborationsetage SKPhub inkl. Obstkorb und Getränkeauswahl\n\nNoch mehr Einblicke gewünscht?\n**Hier geht es ins Detail zu unseren Benefits**\n**Dein Job?**\nWir freuen uns auf Deine aussagekräftige, digitale Bewerbung im PDF-Format, idealerweise bestehend aus Anschreiben, Lebenslauf und Zeugnissen. Bitte reiche deine Bewerbung ausschließlich über diesen\n**Link**\nein. Andernfalls kann deine Bewerbung nicht berücksichtigt werden.\n  \n  \nDatenschutzhinweise für Bewerberinnen und Bewerber (PDF 95 KB)\n  \n  \nNoch Fragen? Gerne beantwortet florian.ciechanowski@s-kreditpartner.de diese per E-Mail.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 72,
+    "language_req": "German Job Post (Check B1 Fit)",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "workflow",
+      "git",
+      "bot",
+      "erp",
+      "sql",
+      "support"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, workflow, git, bot, erp, sql.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-10-28)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent (m/w/d) im Team Vertriebssteuerung – Schwerpunkt Anwendungsbetreuung CRM role at S-Kreditpartner. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about S-Kreditpartner is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support S-Kreditpartner in this role."
+      ]
+    }
   },
   {
     "id": "f018eb1642",
@@ -6470,6 +6807,63 @@
     "is_100_onsite": false
   },
   {
+    "id": "26dd8ae3be",
+    "title": "Consultant Digital Project Solutions (m/w/d)",
+    "company": "Campana & Schott",
+    "location": "Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4235521086",
+    "source": "Linkedin",
+    "date_posted": "2026-10-23",
+    "date_found": "2026-10-28 19:57",
+    "salary": "",
+    "description": "**Deine Persönlichkeit. Deine Karriere im Consulting.**\nCampana & Schott ist eine internationale Management- und Technologieberatung mit den Schwerpunkten Transformationsvorhaben in den Bereichen Digitalisierung, New Work und Sustainability sowie Geschäftsbereichs- und Organisationstransformation.\n  \n  \nBei uns erlebst Du eine Kultur der Menschlichkeit und arbeitest in Teams, die sich unterstützen, Herausforderungen annehmen und außergewöhnliche Lösungen für unsere Kunden finden. Wir geben Dir Raum für Dich und Deine Ideen, fördern Deine persönliche und fachliche Entwicklung und übernehmen gemeinsam Verantwortung für eine nachhaltige Zukunft.\n  \n  \nUns interessiert, welche Expertise Du mitbringst, welche Talente und Ambitionen Du hast und was Du noch lernen möchtest.\n  \n  \nNoch mehr sind wir aber daran interessiert, zu entdecken, wer Du bist. Working with us: Just be.\n  \n  \nFür Kundenprojekte in ganz Deutschland suchen wir ab sofort eine:n engagierte:n Consultant Digital Project Solutions (m/w/d).\n  \n  \n**Dein Job**\n\n* In deiner Rolle als Consultant für Digital Project Solutions (m/w/d) analysierst du Kundenanforderungen und entwickelst daraufhin passgenaue Projektmanagement- und Digitalisierungslösungen.\n* Dabei wirkst Du an der Mitgestaltung von Prozessen, Projektorganisationen und Systemlandschaften im Projekt-, Programm- und Portfoliomanagement auf C-Level-Ebene mit.\n* Du agierst hands-on und realisierst digitale Lösungen mit Microsoft Power Platform, Power BI, Planner Premium, Copilot sowie KI- und Automatisierungstechnologien.\n* Zudem entwickelst Du Dashboards, Reports und Auswertungen für eine transparente Projekt- und Ressourcensteuerung.\n* Darüber hinaus entwickelst du innovative Lösungen rund um KI, Agenten und Automatisierung und wirkst an der strategischen Weiterentwicklung unseres Beratungsportfolios mit.\n* Zur Kundenberatung gehört ebenfalls die Moderation von Workshops, die Zusammenarbeit mit verschiedenen Stakeholdern sowie die stetige Begleitung unserer Kunden bei der Einführung und Weiterentwicklung der Lösungen.\n\n**Dein Profil**\n\n* Abgeschlossenes Studium, z. B. im Bereich (Wirtschafts-)Informatik, Wirtschaftsingenieurwesen oder BWL mit IT-Schwerpunkt\n* Erste praktische Erfahrungen in Projektmanagement-, Digitalisierungs- oder Transformationsprojekten, bestenfalls in Verbindung von Projektmanagement, Prozessen und Technologie\n* Erste Berührungspunkte und die klare Begeisterung für moderne Microsoft-Technologien, KI-Anwendungen und digitale Projektmanagementlösungen, z. B. Power Platform, Power BI, Planner Premium, Copilot, Copilot Studio oder Azure DevOps\n* Kommunikationsstärke, strukturierte Arbeitsweise, Eigeninitiative und Freude an der Zusammenarbeit mit Kunden und Projektteams\n* Sehr gute Deutsch- und Englischkenntnisse\n* Reisebereitschaft und Lust auf die Arbeit beim Kunden vor Ort\n\n**Unser Angebot**\n**Keine Floskeln:**\nAls inhabergeführtes Unternehmen bieten wir echte Freiräume, faire Bedingungen und eine transparente Führung.\n  \n  \n**Start Nach Maß**\nEin zweiwöchiges StartUp-Camp und unser Buddy-Programm sorgen für ein optimales Onboarding.\n  \n  \n**Karriere 4.0**\nIn unserem wachsenden Unternehmen kannst Du Dich individuell weiterentwickeln, z. B. durch PMI, Prince2 oder Microsoft-Zertifizierungen.\n  \n  \n**Professionell & Persönlich**\nFreue Dich auf exzellente Projektarbeit beim Kunden und ein vertrauensvolles Verhältnis zu Kolleg:innen und Vorgesetzten.\n  \n  \n**Zusammenarbeit Leben**\nWir tauschen uns regelmäßig in Foren und Fachgruppen aus und veranstalten außergewöhnliche Company-Events.\n  \n  \n**Work-Life-Balance**\nProfitiere von flexiblen Arbeitszeiten und unserem Sabbatical-Modell „Private Time“.\n  \n  \n**Chancengleichheit**\nCampana & Schott setzt sich für Chancengleichheit, Vielfalt und Integration am Arbeitsplatz ein. Wir unterbinden Diskriminierung und Belästigung jeglicher Art aufgrund von Geschlecht, Hautfarbe, Religion, Alter, sexueller Orientierung, Herkunft, körperlicher und geistiger Fähigkeiten, geschlechtlicher Identität oder anderer geschützter Merkmale.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 58,
+    "language_req": "German Job Post (Check B1 Fit)",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "bot",
+      "agent",
+      "automatisierung",
+      "erp",
+      "stakeholder",
+      "projektmanagement"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, bot, agent, automatisierung, erp.",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-10-23)",
+    "applicants_num": 78,
+    "applicants_text": "🟡 78 applicants",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Consultant Digital Project Solutions (m/w/d) role at Campana & Schott. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Campana & Schott is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Campana & Schott in this role."
+      ]
+    }
+  },
+  {
     "id": "9b41b9eb84",
     "title": "(Junior) Digital Consultant DACH (m/w/d)",
     "company": "Odoo",
@@ -6834,6 +7228,63 @@
     }
   },
   {
+    "id": "12e4436db3",
+    "title": "Project Management Office (m/w/d)",
+    "company": "mamgo | Talente 🔗 Jobs",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4484714517",
+    "source": "Linkedin",
+    "date_posted": "2026-10-28",
+    "date_found": "2026-10-28 19:57",
+    "salary": "",
+    "description": "Für unseren Kunden besetzen wir ab sofort folgende Position:\n  \n  \nAufgabenprofil\n  \n  \n\n* Unterstützung von Projektleitung und Programmmanagement bei der Steuerung eines strategischen IT-Transformations- und Rollout-Programms mit mehreren Teilprojekten\n* Erstellung und Nachverfolgung von Projekt-, Termin-, Cutover- und Meilensteinplänen sowie KPI-Reportings, Projektcontrolling und Risikomanagement\n* Organisation und Moderation von Projektmeetings, Workshops und Steuerungsgremien inklusive Tracking von Aufgaben, Abhängigkeiten und Beschlüssen\n* Stakeholder- und Schnittstellenmanagement zwischen Fachbereichen, IT, Projektteams, Lieferanten und externen Partnern sowie Begleitung von Go-Live-, Transition- und Hypercare-Phasen\n\nQualifikationsprofil\n  \n  \n\n* Studium oder vergleichbare Qualifikation im IT- oder Wirtschaftsumfeld\n* Mindesten 5 Jahre Erfahrung als PMO, im IT-Projektmanagement oder Programmmanagement\n* Kenntnisse in Jira, Confluence sowie agilen Projektmethoden\n* Erfahrung in Reporting, Projektcontrolling und Budgettracking\n* Sehr gute Deutsch- und Englischkenntnisse\n* Automotive-Erfahrung von Vorteil, idealerweise Mercedes-Benz-Umfeld\n\nWir bieten\n  \n  \n\n* Attraktive Mitarbeiterrabatte für Fitnessangebote, Markenprodukte und diverse Freizeitaktivitäten\n* Flexible Arbeitszeiten sowie ein Arbeitszeitkonto mit Überstundenausgleich\n* 30 Tage Jahresurlaub mit flexibler Urlaubsplanung\n* Home-Office: 2 Tage pro Woche\n* Wochenarbeitszeit: 38 Stunden\n* Laufzeit: 3 Jahre in Arbeitnehmerüberlassung\n\nÜber YER Deutschland\n  \n  \nEgal ob als Junior, Professional oder Führungskraft: Wir begleiten den gesamten Karriereweg. Bundesweit warten attraktive Jobs, insbesondere in den Bereichen Mobility, Tech und Energy. Unser Ziel ist es dabei stets, das Perfect Match zwischen Talenten und Unternehmen zu finden. Als Teil der YER Group wächst unser Angebot an internationalen Services stetig weiter und eröffnet auch berufliche Perspektiven über Ländergrenzen hinweg. Ob im Einsatz bei einem renommierten Kundenunternehmen oder im internen Team von YER - bei uns beginnt der Weg zum Traumjob!\n  \n  \nInteressiert?\n  \n  \nDann freuen wir uns über eine aussagekräftige Bewerbung inkl. Gehaltsvorstellung und frühestem Eintrittstermin über unser Onlineportal.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 56,
+    "language_req": "German Job Post (Check B1 Fit)",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "bot",
+      "project management",
+      "pmo",
+      "stakeholder",
+      "rollout",
+      "agile",
+      "projektmanagement",
+      "kpi"
+    ],
+    "why_fits": "Strong Project Management fit. Matches keywords: bot, project management, pmo, stakeholder, rollout, agile.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-10-28)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Worked embedded in an agile <strong>Product, Tech, Business Analytics, and Operations team</strong> to translate complex operational data into product features, evaluation tools, and scalable processes across <strong>9 international markets</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Project Management Office (m/w/d) role at mamgo | Talente 🔗 Jobs. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about mamgo | Talente 🔗 Jobs is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support mamgo | Talente 🔗 Jobs in this role."
+      ]
+    }
+  },
+  {
     "id": "0d1b44a225",
     "title": "Founder's Associate Intern",
     "company": "Heidi Systems",
@@ -7000,6 +7451,62 @@
     },
     "work_model": "Flexibles Office",
     "is_100_onsite": false
+  },
+  {
+    "id": "ae6e37ca71",
+    "title": "Praktikum Product Management",
+    "company": "Finanzfluss",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4482537881",
+    "source": "Linkedin",
+    "date_posted": "2026-10-28",
+    "date_found": "2026-10-28 19:57",
+    "salary": "",
+    "description": "**Dein Impact**\nDu arbeitest direkt an der Weiterentwicklung des Finanzfluss Copiloten, unserer Mobile App und der Finanzfluss Webseite mit. Gemeinsam mit dem Product Team entwickelst du neue Features, analysierst Nutzerbedürfnisse und setzt Produktideen um, die hunderttausende Nutzer erreichen. Du übernimmst früh Verantwortung für eigene Themen und gestaltest aktiv mit, wie Produkte bei Finanzfluss entstehen.\n  \n  \n**Deine Aufgaben**\n\n* Du analysierst Nutzerfeedback, Produktdaten sowie Markt- und Wettbewerbsentwicklungen und leitest daraus konkrete Produktideen und Handlungsempfehlungen ab\n* Du entwickelst Konzepte und Business Cases für neue Features, Tools und Produktinitiativen\n* Du arbeitest eng mit Product, Engineering, Design und Content zusammen, um neue Funktionen erfolgreich umzusetzen\n* Du moderierst unsere Betatest-Gruppen und sorgst dafür, dass das Community-Feedback in die Weiterentwicklung einfließt\n\n**Deine Skills**\n\n* Du bist zuverlässig, arbeitest selbstständig, strukturiert und mit Liebe zum Detail\n* Du kannst komplexe Themen schnell durchdringen und verständlich kommunizieren\n* Du interessierst dich für Finanzen und Finanzprodukte und hast Lust, diese Themen anderen verständlich zu vermitteln\n* Du bringst hohe Eigeninitiative mit und möchtest Dinge nicht nur mitdenken, sondern auch umsetzen\n* Du nutzt KI-Tools (z. B. Claude, Lovable oder Figma Make) oder hast großes Interesse daran, diese für schnelles Prototyping, Produktkonzepte und datengetriebene Entscheidungen einzusetzen\n* Idealerweise hast du bereits erste praktische Erfahrungen gesammelt , z. B. im Product Management, Business Development, Startups, Consulting oder Venture Capital\n* Sehr sichere Deutschkenntnisse (C2 oder Muttersprache)\n\n**Wir bieten dir**\n\n* Ein bezahltes Praktikum mit 2.531€ brutto pro Monat\n* Ein schnelles Lernumfeld mit hoher Ownership und echtem Impact\n* Die Möglichkeit, Finanzfluss und die Fintech-Branche aus nächster Nähe kennenzulernen\n* Team-Events und vieles mehr!\n\n**Über uns**\nBei uns zählst du. Bei Finanzfluss feiern wir Vielfalt und sind überzeugt, dass unterschiedliche Perspektiven, Erfahrungen und Hintergründe uns als Team stärker machen. Deshalb heißen wir Bewerbungen unabhängig von Geschlecht, Alter, Herkunft, Religion, sexueller Orientierung, körperlichen Fähigkeiten oder Familienstand herzlich willkommen. Wenn du dich von dieser Stelle angesprochen fühlst, freuen wir uns darauf, dich kennenzulernen.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "product_management",
+    "category_label": "Product Management",
+    "match_score": 54,
+    "language_req": "German Job Post (Check B1 Fit)",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "api",
+      "product management",
+      "product team",
+      "feature",
+      "figma",
+      "initiative"
+    ],
+    "why_fits": "Strong Product Management fit. Matches keywords: ai, api, product management, product team, feature, figma.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-10-28)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Praktikum Product Management role at Finanzfluss. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Embedded in an agile cross-functional product environment, I helped scale our conversational AI tooling across 9 international markets, routing millions of calls while improving answer rates by 20%. To support our operational workflows, I have designed and deployed internal evaluation tools, including an AI conversation QA web platform with bulk review pipelines, a centralized review management portal versioned via GitHub, and automated dispatch workflows.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Finanzfluss is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Finanzfluss in this role."
+      ]
+    }
   },
   {
     "id": "e598f042df",
