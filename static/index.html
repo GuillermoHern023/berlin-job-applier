@@ -121,6 +121,12 @@
           <span id="moreJobsBtnText">Mehr Jobs finden (+50)</span>
         </button>
 
+        <!-- Language Switcher Button (EN / DE) -->
+        <button id="langToggleBtn" onclick="toggleLanguage()" class="px-2.5 py-1.5 rounded-md border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 text-xs font-bold transition flex items-center gap-1.5 shadow-sm" title="Sprache wechseln / Switch Language (EN / DE)">
+          <span id="langFlag">🇬🇧</span>
+          <span id="langLabel">EN</span>
+        </button>
+
         <!-- Dark Mode Toggle Button -->
         <button id="themeToggleBtn" onclick="toggleDarkMode()" class="px-2.5 py-1.5 rounded-md border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 text-xs font-semibold transition flex items-center gap-1.5 shadow-sm" title="Zwischen Hell- und Dunkelmodus wechseln">
           <span id="themeToggleIcon">🌙</span>
@@ -299,6 +305,200 @@
   <!-- STATIC_STATE_INJECTION_POINT -->
 
   <script>
+    
+    const I18N = {
+      de: {
+        brand_sub: "Indeed & LinkedIn Career Command",
+        tab_nancy: "👩 Nancy (Office & Assistenz)",
+        tab_guillermo: "👨 Guillermo (PM & AI)",
+        find_more_jobs: "Mehr Jobs finden (+50)",
+        scouting_jobs: "Suche auf Indeed...",
+        theme_dark: "Dunkel",
+        theme_light: "Hell",
+        autofill_helper: "⚡ 1-Click Autofill Helper",
+        google_sheet: "📗 Google Sheet ↗",
+        master_cv: "📄 Master-CV PDF",
+        search_placeholder: "Position, Stichwort, Firma, z.B. Office Manager, Kanzlei, HR, Backoffice...",
+        workplace_all: "Alle Arbeitsmodelle (Inkl. Vor-Ort)",
+        workplace_hybrid_remote: "Nur Hybrid & Remote (Kein 100% Vor-Ort)",
+        workplace_remote: "Nur 100% Remote",
+        portal_all: "Alle Portale (Indeed & LinkedIn)",
+        portal_indeed: "Nur Indeed",
+        portal_linkedin: "Nur LinkedIn",
+        sort_newest: "Neueste Stellen zuerst",
+        sort_score: "Höchste Passung",
+        tab_to_review: "Zu prüfen",
+        tab_applied: "Beworben",
+        tab_not_interested: "Nicht interessiert",
+        tab_all: "Alle Stellen",
+        showing_jobs: "Zeige {shown} von {total} Stellen",
+        no_jobs_found: "Keine Stellen gefunden",
+        no_jobs_sub: "Passe deine Suchbegriffe oder Filter oben an.",
+        select_job_prompt: "Wähle eine Stelle aus der linken Liste",
+        select_job_sub: "Hier siehst du sofort das Anschreiben, Details und Bewerbung.",
+        apply_indeed: "🔷 Auf Indeed bewerben ↗",
+        apply_linkedin: "🔗 Auf LinkedIn bewerben ↗",
+        as_word: "📝 Als Word-Datei (.docx)",
+        copy_cl: "📋 Anschreiben kopieren",
+        not_interested: "❌ Nicht interessiert",
+        restore: "↩ Wiederherstellen",
+        match: "Passung",
+        cl_box_title: "✍️ Maßgeschneidertes Anschreiben & Firmenanschrift",
+        cl_download_docx: "📝 Als Word (.docx) herunterladen",
+        cl_copy_text: "📋 Text kopieren",
+        address_card_title: "🏢 Empfängeranschrift (Firmenadresse)",
+        copy_address_only: "📋 Nur Adresse kopieren",
+        edit_address: "✏️ Anpassen",
+        save_address: "💾 Adresse speichern & übernehmen",
+        cancel: "Abbrechen",
+        format_full: "Mit Absender & Firmenanschrift (DIN 5008)",
+        format_body: "Nur Textkörper",
+        cl_hint: "👉 Text anklicken & kopieren oder als bearbeitbare Word-Datei herunterladen.",
+        download_resume: "📄 Lebenslauf-PDF",
+        job_desc_title: "📋 Stellenbeschreibung",
+        no_job_desc: "Keine ausführliche Beschreibung hinterlegt. Klicke oben auf den Bewerbungslink, um die vollständige Ausschreibung einzusehen.",
+        why_fits_title: "📊 Passung & Hintergrund",
+        badge_flexible_office: "Flexibles Office",
+        badge_hybrid: "Hybrid (Home Office)",
+        badge_remote: "100% Remote",
+        badge_onsite: "Vor-Ort",
+        badge_new: "Neu",
+        badge_applied: "Applied",
+        cl_lang_de: "🇩🇪 Deutsch (Bewerbung)",
+        cl_lang_en: "🇬🇧 Englische Übersetzung (Preview für Guillermo)",
+        field_company: "Firma / Unternehmen",
+        field_dept: "Abteilung / Ansprechpartner",
+        field_street: "Straße & Hausnummer",
+        field_zipcity: "PLZ & Ort"
+      },
+      en: {
+        brand_sub: "Indeed & LinkedIn Career Command",
+        tab_nancy: "👩 Nancy (Office & Admin)",
+        tab_guillermo: "👨 Guillermo (PM & AI)",
+        find_more_jobs: "Find More Jobs (+50)",
+        scouting_jobs: "Scouting Indeed...",
+        theme_dark: "Dark",
+        theme_light: "Light",
+        autofill_helper: "⚡ 1-Click Autofill Helper",
+        google_sheet: "📗 Google Sheet ↗",
+        master_cv: "📄 Master CV (PDF)",
+        search_placeholder: "Position, keyword, company (e.g. Office Manager, Operations, HR)...",
+        workplace_all: "All Workplace Types (incl. Onsite)",
+        workplace_hybrid_remote: "Hybrid & Remote Only (No 100% Onsite)",
+        workplace_remote: "100% Remote Only",
+        portal_all: "All Portals (Indeed & LinkedIn)",
+        portal_indeed: "Indeed Only",
+        portal_linkedin: "LinkedIn Only",
+        sort_newest: "Newest Roles First",
+        sort_score: "Highest Match Score",
+        tab_to_review: "To Review",
+        tab_applied: "Applied",
+        tab_not_interested: "Not Interested",
+        tab_all: "All Jobs",
+        showing_jobs: "Showing {shown} of {total} jobs",
+        no_jobs_found: "No jobs found",
+        no_jobs_sub: "Try adjusting your search query or filters above.",
+        select_job_prompt: "Select a job from the list on the left",
+        select_job_sub: "View the tailored cover letter, details, and direct apply link here.",
+        apply_indeed: "🔷 Apply on Indeed ↗",
+        apply_linkedin: "🔗 Apply on LinkedIn ↗",
+        as_word: "📝 Word File (.docx)",
+        copy_cl: "📋 Copy Cover Letter",
+        not_interested: "❌ Not Interested",
+        restore: "↩ Restore",
+        match: "Match",
+        cl_box_title: "✍️ Tailored Cover Letter & Company Address",
+        cl_download_docx: "📝 Download Word (.docx)",
+        cl_copy_text: "📋 Copy Text",
+        address_card_title: "🏢 Recipient Company Address",
+        copy_address_only: "📋 Copy Address Only",
+        edit_address: "✏️ Edit Address",
+        save_address: "💾 Save Address & Apply to Letter",
+        cancel: "Cancel",
+        format_full: "With Sender & Company Address (DIN 5008)",
+        format_body: "Body Text Only",
+        cl_hint: "👉 Click & copy text, or download as an editable Microsoft Word (.docx) document.",
+        download_resume: "📄 Resume (PDF)",
+        job_desc_title: "📋 Job Description",
+        no_job_desc: "No detailed description provided. Click the direct apply link above to view the full posting.",
+        why_fits_title: "📊 Match & Candidate Analysis",
+        badge_flexible_office: "Flexible Office",
+        badge_hybrid: "Hybrid (Home Office)",
+        badge_remote: "100% Remote",
+        badge_onsite: "Onsite",
+        badge_new: "New",
+        badge_applied: "Applied",
+        cl_lang_de: "🇩🇪 German (for submission)",
+        cl_lang_en: "🇬🇧 English Translation (Preview for Guillermo)",
+        field_company: "Company Name",
+        field_dept: "Department / Contact",
+        field_street: "Street & Number",
+        field_zipcity: "Postal Code & City"
+      }
+    };
+
+    let currentLang = localStorage.getItem('app_lang') || 'de';
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'de' ? 'en' : 'de';
+      localStorage.setItem('app_lang', currentLang);
+      applyLanguage();
+    }
+
+    function applyLanguage() {
+      const t = I18N[currentLang];
+      
+      const flag = document.getElementById('langFlag');
+      const label = document.getElementById('langLabel');
+      if (flag) flag.textContent = currentLang === 'de' ? '🇩🇪' : '🇬🇧';
+      if (label) label.textContent = currentLang.toUpperCase();
+
+      const nancyBtn = document.getElementById('userTabNancy');
+      if (nancyBtn) nancyBtn.innerHTML = `<span>${t.tab_nancy}</span>`;
+      const guillermoBtn = document.getElementById('userTabGuillermo');
+      if (guillermoBtn) guillermoBtn.innerHTML = `<span>${t.tab_guillermo}</span>`;
+
+      const moreJobsBtnText = document.getElementById('moreJobsBtnText');
+      if (moreJobsBtnText) moreJobsBtnText.textContent = t.find_more_jobs;
+
+      const searchInput = document.getElementById('searchInput');
+      if (searchInput) searchInput.placeholder = t.search_placeholder;
+
+      const workModelFilter = document.getElementById('workModelFilter');
+      if (workModelFilter) {
+        workModelFilter.options[0].text = `🏠 ${t.workplace_hybrid_remote}`;
+        workModelFilter.options[1].text = `🏢 ${t.workplace_all}`;
+        workModelFilter.options[2].text = `🏡 ${t.workplace_remote}`;
+      }
+
+      const sourceFilter = document.getElementById('sourceFilter');
+      if (sourceFilter) {
+        sourceFilter.options[0].text = `🌐 ${t.portal_all}`;
+        sourceFilter.options[1].text = `🔷 ${t.portal_indeed}`;
+        sourceFilter.options[2].text = `🔗 ${t.portal_linkedin}`;
+      }
+
+      const sortBy = document.getElementById('sortBy');
+      if (sortBy) {
+        sortBy.options[0].text = `⚡ ${t.sort_newest}`;
+        sortBy.options[1].text = `⭐ ${t.sort_score}`;
+      }
+
+      const navMasterCvBtn = document.getElementById('navMasterCvBtn');
+      if (navMasterCvBtn) {
+        navMasterCvBtn.innerHTML = `<span>${t.master_cv}</span>`;
+      }
+
+      const themeToggleText = document.getElementById('themeToggleText');
+      if (themeToggleText) {
+        const isDark = document.documentElement.classList.contains('dark');
+        themeToggleText.textContent = isDark ? t.theme_light : t.theme_dark;
+      }
+
+      updateFilterTabs();
+      renderJobs();
+    }
+
     let activeUser = 'nancy';
     let isLiveBackend = false;
     let guillermoJobs = [];
@@ -333,6 +533,7 @@
       }
 
       applyUserTheme();
+      applyLanguage();
 
       if (window.STATIC_STATE) {
         guillermoJobs = window.STATIC_STATE.jobs || [];
@@ -425,17 +626,39 @@
     }
 
     function updateFilterTabs() {
+      const t = I18N[currentLang] || I18N.de;
+      const tabActive = document.getElementById('tabActive');
+      if (tabActive) {
+        const c = document.getElementById('pillActiveCount')?.textContent || 0;
+        tabActive.innerHTML = `⭐ ${t.tab_to_review} (<span id="pillActiveCount">${c}</span>)`;
+      }
+      const tabApplied = document.getElementById('tabApplied');
+      if (tabApplied) {
+        const c = document.getElementById('pillAppliedCount')?.textContent || 0;
+        tabApplied.innerHTML = `✅ ${t.tab_applied} (<span id="pillAppliedCount">${c}</span>)`;
+      }
+      const tabNotInterested = document.getElementById('tabNotInterested');
+      if (tabNotInterested) {
+        const c = document.getElementById('pillDismissedCount')?.textContent || 0;
+        tabNotInterested.innerHTML = `❌ ${t.tab_not_interested} (<span id="pillDismissedCount">${c}</span>)`;
+      }
+      const tabAll = document.getElementById('tabAll');
+      if (tabAll) {
+        const c = document.getElementById('pillTotalCount')?.textContent || 0;
+        tabAll.innerHTML = `📁 ${t.tab_all} (<span id="pillTotalCount">${c}</span>)`;
+      }
+
       const tabs = [
         { id: 'tabActive', active: currentStatusFilter === 'ACTIVE', activeClass: (activeUser === 'nancy' ? 'bg-pink-600' : 'bg-[#0a66c2]') + ' text-white font-bold shadow-sm' },
         { id: 'tabApplied', active: currentStatusFilter === 'Applied', activeClass: 'bg-emerald-600 text-white font-bold shadow-sm' },
         { id: 'tabNotInterested', active: currentStatusFilter === 'NOT_INTERESTED', activeClass: 'bg-rose-600 text-white font-bold shadow-sm' },
         { id: 'tabAll', active: currentStatusFilter === 'ALL', activeClass: 'bg-gray-800 text-white font-bold shadow-sm' },
       ];
-      tabs.forEach(t => {
-        const el = document.getElementById(t.id);
+      tabs.forEach(tab => {
+        const el = document.getElementById(tab.id);
         if (!el) return;
-        if (t.active) {
-          el.className = 'px-3 py-1 rounded-full text-xs ' + t.activeClass + ' transition';
+        if (tab.active) {
+          el.className = 'px-3 py-1 rounded-full text-xs ' + tab.activeClass + ' transition';
         } else {
           el.className = 'px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition';
         }
@@ -546,7 +769,8 @@
         }
       });
 
-      document.getElementById('showingCountLabel').textContent = `${filtered.length} von ${allJobs.length} Stellen angezeigt`;
+      const t = I18N[currentLang] || I18N.de;
+      document.getElementById('showingCountLabel').textContent = t.showing_jobs.replace('{shown}', filtered.length).replace('{total}', allJobs.length);
 
       // Keep active job selection valid
       if (!selectedJobId || !filtered.some(j => j.id === selectedJobId)) {
@@ -558,13 +782,14 @@
     }
 
     function renderFeedCards(jobsList) {
+      const t = I18N[currentLang] || I18N.de;
       const feed = document.getElementById('jobFeedContainer');
       if (jobsList.length === 0) {
         feed.innerHTML = `
-          <div class="p-8 text-center bg-white border border-gray-200 rounded-lg text-gray-500">
+          <div class="p-8 text-center bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-lg text-gray-500">
             <div class="text-3xl mb-2">🔍</div>
-            <div class="font-bold text-gray-800 text-sm">Keine Stellen für diese Filter gefunden</div>
-            <div class="text-xs text-gray-500 mt-1">Probiere andere Suchbegriffe oder wähle "Alle Stellen".</div>
+            <div class="font-bold text-gray-800 dark:text-gray-200 text-sm">${t.no_jobs_found}</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">${t.no_jobs_sub}</div>
           </div>
         `;
         return;
@@ -660,13 +885,14 @@
     }
 
     function renderDetailPane(job) {
+      const t = I18N[currentLang] || I18N.de;
       const container = document.getElementById('jobDetailContainer');
       if (!job) {
         container.innerHTML = `
           <div class="p-12 text-center text-gray-400 my-auto">
             <div class="text-4xl mb-3">👈</div>
-            <div class="text-sm font-semibold text-gray-700">Wähle eine Stelle aus der Liste links aus</div>
-            <div class="text-xs text-gray-400 mt-1">Hier siehst du sofort das Anschreiben, Details und Bewerbung.</div>
+            <div class="text-sm font-semibold text-gray-700 dark:text-gray-200">${t.select_job_prompt}</div>
+            <div class="text-xs text-gray-400 mt-1">${t.select_job_sub}</div>
           </div>
         `;
         return;
@@ -679,7 +905,8 @@
       // Generate bespoke cover letter with resolved recipient address
       const addr = getResolvedJobAddress(job);
       const clFormat = localStorage.getItem('cl_format_pref') || 'full';
-      const clText = buildTailoredCoverLetter(job, clFormat === 'full');
+      const clLang = localStorage.getItem('cl_lang_pref_' + job.id) || (currentLang === 'en' ? 'en' : 'de');
+      const clText = buildTailoredCoverLetter(job, clFormat === 'full', clLang);
 
       container.innerHTML = `
         <!-- Sticky Detail Header -->
@@ -714,24 +941,24 @@
           <div class="flex flex-wrap items-center justify-between gap-2.5 mt-4 pt-3 border-t border-gray-100">
             <div class="flex flex-wrap items-center gap-2">
               <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-sm ${isIndeed ? 'bg-[#003a9b] hover:bg-[#002f7d] text-white' : 'bg-[#0a66c2] hover:bg-[#004182] text-white'}">
-                ${isIndeed ? '🔷 Auf Indeed bewerben ↗' : '🔗 Auf LinkedIn bewerben ↗'}
+                ${isIndeed ? t.apply_indeed : t.apply_linkedin}
               </a>
 
               <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 transition flex items-center gap-1.5 shadow-2xs" title="Als bearbeitbare Microsoft Word (.docx) Datei herunterladen">
-                <span>📝 Als Word-Datei (.docx)</span>
+                <span>${t.as_word}</span>
               </button>
 
-              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 transition flex items-center gap-1.5">
-                <span>📋 Anschreiben kopieren</span>
+              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-purple-50 hover:bg-purple-100 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 transition flex items-center gap-1.5">
+                <span>${t.copy_cl}</span>
               </button>
 
               ${isDismissed ? `
-                <button onclick="markStatus('${job.id}', 'New')" class="px-3 py-2 rounded-md text-xs font-medium bg-gray-100 hover:bg-gray-200 text-gray-700 transition">
-                  ↩ Wiederherstellen
+                <button onclick="markStatus('${job.id}', 'New')" class="px-3 py-2 rounded-md text-xs font-medium bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 transition">
+                  ${t.restore}
                 </button>
               ` : `
-                <button onclick="markStatus('${job.id}', 'Not Interested')" class="px-3 py-2 rounded-md text-xs font-medium bg-gray-50 hover:bg-rose-50 text-gray-500 hover:text-rose-600 border border-gray-200 rounded-md transition" title="Ausblenden">
-                  ❌ Nicht interessiert
+                <button onclick="markStatus('${job.id}', 'Not Interested')" class="px-3 py-2 rounded-md text-xs font-medium bg-gray-50 dark:bg-slate-800 hover:bg-rose-50 text-gray-500 hover:text-rose-600 border border-gray-200 dark:border-slate-700 transition" title="Ausblenden">
+                  ${t.not_interested}
                 </button>
               `}
             </div>
@@ -750,15 +977,24 @@
           <!-- Box 1: Tailored Cover Letter & Company Address (Instant Copy Ready) -->
           <div class="bg-white dark:bg-[#18202f] border border-purple-200 dark:border-purple-900/60 rounded-lg p-4 shadow-sm space-y-3.5">
             <div class="flex flex-wrap items-center justify-between gap-2 border-b border-gray-100 dark:border-slate-800 pb-2.5">
-              <div class="flex items-center gap-1.5 text-xs font-bold text-purple-900 dark:text-purple-300">
-                <span>✍️ Maßgeschneidertes Anschreiben &amp; Firmenanschrift</span>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-purple-900 dark:text-purple-300">${t.cl_box_title}</span>
+                <!-- Bilingual Cover Letter Toggle for Nancy & Guillermo -->
+                <div class="inline-flex items-center bg-gray-100 dark:bg-slate-800 p-0.5 rounded border border-gray-200 dark:border-slate-700 text-[11px] font-semibold">
+                  <button onclick="setCoverLetterLanguage('${job.id}', 'de')" class="px-2 py-0.5 rounded transition ${clLang === 'de' ? 'bg-white dark:bg-slate-700 text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="Auf Deutsch anzeigen">
+                    🇩🇪 DE
+                  </button>
+                  <button onclick="setCoverLetterLanguage('${job.id}', 'en')" class="px-2 py-0.5 rounded transition ${clLang === 'en' ? 'bg-white dark:bg-slate-700 text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="Show English translation (for Guillermo)">
+                    🇬🇧 EN
+                  </button>
+                </div>
               </div>
               <div class="flex items-center gap-2">
                 <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="px-3 py-1.5 rounded bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm" title="Vollständiges Anschreiben als bearbeitbare Microsoft Word (.docx) Datei herunterladen">
-                  <span>📝 Als Word (.docx) herunterladen</span>
+                  <span>${t.cl_download_docx}</span>
                 </button>
                 <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-1.5 rounded bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
-                  <span>📋 Text kopieren</span>
+                  <span>${t.cl_copy_text}</span>
                 </button>
               </div>
             </div>
@@ -767,14 +1003,14 @@
             <div class="bg-purple-50/70 dark:bg-purple-950/25 border border-purple-200 dark:border-purple-800/50 rounded-lg p-3 space-y-2">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1.5 text-xs font-bold text-purple-900 dark:text-purple-200">
-                  <span>🏢 Empfängeranschrift (Firmenadresse)</span>
+                  <span>${t.address_card_title}</span>
                 </div>
                 <div class="flex items-center gap-1.5">
-                  <button onclick="copyRecipientAddress('${job.id}')" class="px-2.5 py-1 rounded bg-white dark:bg-slate-800 border border-purple-300 dark:border-purple-700 text-purple-800 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-slate-700 text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="Nur die Firmenadresse in die Zwischenablage kopieren (z.B. für Formularfelder)">
-                    <span>📋 Nur Adresse kopieren</span>
+                  <button onclick="copyRecipientAddress('${job.id}')" class="px-2.5 py-1 rounded bg-white dark:bg-slate-800 border border-purple-300 dark:border-purple-700 text-purple-800 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-slate-700 text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="Nur die Firmenadresse in die Zwischenablage kopieren">
+                    <span>${t.copy_address_only}</span>
                   </button>
                   <button onclick="toggleEditAddress('${job.id}')" id="editAddrBtn_${job.id}" class="px-2.5 py-1 rounded bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700 text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="Adresse bearbeiten">
-                    <span>✏️ Anpassen</span>
+                    <span>${t.edit_address}</span>
                   </button>
                 </div>
               </div>
@@ -823,11 +1059,11 @@
               <div class="flex items-center gap-3">
                 <label class="flex items-center gap-1.5 cursor-pointer text-gray-700 dark:text-gray-300 font-medium text-xs">
                   <input type="radio" name="clFormat_${job.id}" value="full" ${clFormat === 'full' ? 'checked' : ''} onchange="changeCoverLetterFormat('${job.id}', 'full')" class="accent-purple-600">
-                  <span>Mit Absender &amp; Firmenanschrift (DIN 5008)</span>
+                  <span>${t.format_full}</span>
                 </label>
                 <label class="flex items-center gap-1.5 cursor-pointer text-gray-700 dark:text-gray-300 font-medium text-xs">
                   <input type="radio" name="clFormat_${job.id}" value="body" ${clFormat === 'body' ? 'checked' : ''} onchange="changeCoverLetterFormat('${job.id}', 'body')" class="accent-purple-600">
-                  <span>Nur Textkörper</span>
+                  <span>${t.format_body}</span>
                 </label>
               </div>
             </div>
@@ -846,17 +1082,17 @@
           <!-- Box 2: Job Description -->
           <div class="bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-lg p-4 shadow-sm space-y-2">
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300">
-              📋 Stellenbeschreibung
+              ${t.job_desc_title}
             </h4>
             <div class="text-xs text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line font-sans max-h-96 overflow-y-auto pr-1">
-              ${job.description || 'Keine ausführliche Beschreibung hinterlegt. Klicke oben auf den Bewerbungslink, um die vollständige Ausschreibung direkt auf ' + (isIndeed ? 'Indeed' : 'LinkedIn') + ' einzusehen.'}
+              ${job.description || t.no_job_desc}
             </div>
           </div>
 
           <!-- Box 3: Why fits / Analysis -->
           <div class="bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-lg p-4 shadow-sm space-y-2">
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300">
-              📊 Passung &amp; Hintergrund
+              ${t.why_fits_title}
             </h4>
             <div class="text-xs text-gray-600">
               ${job.why_fits || ''}
@@ -1232,6 +1468,20 @@
       saveBlobAs(blob, filename);
     }
 
+
+    function setCoverLetterLanguage(jobId, lang) {
+      localStorage.setItem('cl_lang_pref_' + jobId, lang);
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      if (!job) return;
+      const clFormat = localStorage.getItem('cl_format_pref') || 'full';
+      const textarea = document.getElementById('clDetailTextarea');
+      if (textarea) {
+        textarea.value = buildTailoredCoverLetter(job, clFormat === 'full', lang);
+      }
+      selectJob(jobId);
+    }
+
     function changeCoverLetterFormat(jobId, format) {
       localStorage.setItem('cl_format_pref', format);
       const allJobs = getActiveJobs();
@@ -1243,7 +1493,8 @@
       }
     }
 
-    function buildTailoredCoverLetter(job, includeHeader = true) {
+    function buildTailoredCoverLetter(job, includeHeader = true, clLang = null) {
+      const lang = clLang || (currentLang === 'en' && activeUser === 'nancy' ? 'en' : 'de');
       const addr = getResolvedJobAddress(job);
       const today = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
 
@@ -1258,6 +1509,41 @@
 
       if (activeUser === 'guillermo') {
         return header + `Dear Hiring Team at ${addr.company || job.company || 'your company'},\n\nI am writing to apply for the ${job.title || 'Product / Project Management'} position in Berlin.\n\nWith hands-on experience in high-volume operations, technical data reporting (SQL, Redash, Looker Studio), and cross-functional team coordination, I bridge strategic planning with practical builder execution.\n\nI look forward to discussing how my experience can support ${addr.company || job.company}.\n\nSincerely,\nGuillermo Hernandez`;
+      }
+
+      if (lang === 'en' && activeUser === 'nancy') {
+        const comp = addr.company || job.company || 'your company';
+        const title = job.title || 'Office Management Working Student';
+        const desc = (job.description || '').toLowerCase();
+
+        const isAcct = desc.includes('buchhalt') || desc.includes('rechnung') || desc.includes('datev') || desc.includes('finance');
+        const isEvt = desc.includes('event') || desc.includes('veranstaltung') || desc.includes('catering') || desc.includes('meeting');
+        const isHr = desc.includes('hr') || desc.includes('personal') || desc.includes('onboarding');
+        const isKanzlei = desc.includes('kanzlei') || desc.includes('anwalt') || desc.includes('recht');
+
+        let p2 = "In my recent role as Office Manager at SERS Rechtsanwaltsgesellschaft mbH, I independently coordinated overall law firm and secretarial operations. ";
+        if (isAcct) {
+          p2 += "My daily core responsibilities included preparatory bookkeeping, invoicing, dunning, and strict deadline and legal document management. ";
+        } else if (isKanzlei) {
+          p2 += "My key responsibilities included client and official authority communications in German and English (bilingual C2 proficiency), court deadline management, and executive support. ";
+        } else {
+          p2 += "This included professional communication in German and English (C2), documentation organization, and preparatory bookkeeping. ";
+        }
+
+        if (isEvt) {
+          p2 += "Prior to that, at zett.events, I gained solid hands-on experience in corporate event planning, guest hospitality, and vendor coordination.";
+        } else if (isHr) {
+          p2 += "Prior to that, at zett.events and during my dual studies, I gained valuable experience in staff rostering, scheduling, and onboarding.";
+        } else {
+          p2 += "In addition, from my work at zett.events, I bring extensive experience in calendar and travel scheduling, executive support, and hospitality.";
+        }
+
+        let header = '';
+        if (includeHeader) {
+          header = `Nancy Schütze\nTeichbergstr. 17 · 13125 Berlin\nTel: +49 1523 71 64 097 · Email: schuetzenancy@gmx.de\n\n${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}\n\nBerlin, ${today}\n\nApplication for ${title}\n\n`;
+        }
+
+        return header + `Dear Recruiting Team at ${comp},\n\nA smoothly organized office forms the backbone of every successful team. Having already taken on comprehensive responsibility for legal secretarial work, back-office administration, and commercial operations as an Office Manager at a Berlin law firm and as a Junior Project Lead at an event agency, I am applying with great enthusiasm for the ${title} position.\n\n${p2}\n\nCurrently, I am completing my degree at the Technical University of Berlin (TU Berlin, Charlottenburg campus). Through this, I combine hands-on commercial experience with strong digital affinity (MS Office 365, cloud document management) and am available with 15 to 20 flexible hours per week.\n\nI would love to actively support your team at ${comp} and ensure structured, reliable office operations. I look forward to an invitation to an interview.\n\nSincerely,\nNancy Schütze`;
       }
 
       const comp = addr.company || job.company || 'Ihrem Unternehmen';
