@@ -338,7 +338,16 @@
         select_job_sub: "Hier siehst du sofort das Anschreiben, Details und Bewerbung.",
         apply_indeed: "🔷 Auf Indeed bewerben ↗",
         apply_linkedin: "🔗 Auf LinkedIn bewerben ↗",
-        as_word: "📝 Als Word-Datei (.docx)",
+                as_google_doc: "📄 Google Doc öffnen",
+        as_google_doc_tooltip: "Als Google Doc direkt hier im Tab bearbeiten",
+        tab_doc_editor: "📄 Google Doc (Anschreiben)",
+        tab_overview: "📋 Stellenbeschreibung & Details",
+        open_google_docs_new: "🌐 In Google Docs öffnen (docs.new) ↗",
+        print_pdf: "🖨️ PDF drucken",
+        copy_all: "📋 Alles kopieren",
+        auto_saved: "🟢 In Echtzeit gespeichert",
+        reset_original: "🔄 Zurücksetzen",
+        as_word: "💾 Word (.docx) herunterladen",
         copy_cl: "📋 Anschreiben kopieren",
         not_interested: "❌ Nicht interessiert",
         restore: "↩ Wiederherstellen",
@@ -402,7 +411,16 @@
         select_job_sub: "View the tailored cover letter, details, and direct apply link here.",
         apply_indeed: "🔷 Apply on Indeed ↗",
         apply_linkedin: "🔗 Apply on LinkedIn ↗",
-        as_word: "📝 Word File (.docx)",
+                as_google_doc: "📄 Open Google Doc",
+        as_google_doc_tooltip: "Edit as a Google Doc directly here in this tab",
+        tab_doc_editor: "📄 Google Doc (Cover Letter)",
+        tab_overview: "📋 Job Description & Details",
+        open_google_docs_new: "🌐 Open in Google Docs (docs.new) ↗",
+        print_pdf: "🖨️ Print / Save PDF",
+        copy_all: "📋 Copy All",
+        auto_saved: "🟢 Auto-saved in real-time",
+        reset_original: "🔄 Reset to Template",
+        as_word: "💾 Download Word (.docx)",
         copy_cl: "📋 Copy Cover Letter",
         not_interested: "❌ Not Interested",
         restore: "↩ Restore",
@@ -497,6 +515,104 @@
 
       updateFilterTabs();
       renderJobs();
+    }
+
+
+    let currentDetailTab = 'doc';
+
+    function switchDetailView(tab) {
+      currentDetailTab = tab;
+      const docView = document.getElementById('detailViewDoc');
+      const overviewView = document.getElementById('detailViewOverview');
+      const tabDocBtn = document.getElementById('detailSubTabDoc');
+      const tabOverviewBtn = document.getElementById('detailSubTabOverview');
+
+      if (tab === 'doc') {
+        if (docView) docView.classList.remove('hidden');
+        if (overviewView) overviewView.classList.add('hidden');
+        if (tabDocBtn) {
+          tabDocBtn.className = 'py-2 px-3 border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1.5 transition text-xs';
+        }
+        if (tabOverviewBtn) {
+          tabOverviewBtn.className = 'py-2 px-3 border-b-2 border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition flex items-center gap-1.5 text-xs font-medium';
+        }
+      } else {
+        if (docView) docView.classList.add('hidden');
+        if (overviewView) overviewView.classList.remove('hidden');
+        if (tabDocBtn) {
+          tabDocBtn.className = 'py-2 px-3 border-b-2 border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition flex items-center gap-1.5 text-xs font-medium';
+        }
+        if (tabOverviewBtn) {
+          tabOverviewBtn.className = 'py-2 px-3 border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1.5 transition text-xs';
+        }
+      }
+    }
+
+    function onDocContentInput(jobId) {
+      const docEl = document.getElementById('liveGoogleDocA4_' + jobId);
+      if (!docEl) return;
+      localStorage.setItem('job_doc_content_' + jobId, docEl.innerHTML);
+      const statusEl = document.getElementById('docSaveStatus_' + jobId);
+      if (statusEl) {
+        const t = I18N[currentLang] || I18N.de;
+        statusEl.innerHTML = `🟢 ${t.auto_saved}`;
+      }
+    }
+
+    function resetDocToTemplate(jobId) {
+      localStorage.removeItem('job_doc_content_' + jobId);
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      if (job) {
+        renderDetailPane(job);
+      }
+    }
+
+    function openInGoogleDocsTab(jobId) {
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      if (!job) return;
+
+      const docEl = document.getElementById('liveGoogleDocA4_' + jobId);
+      let textToCopy = '';
+      if (docEl) {
+        textToCopy = docEl.innerText;
+      } else {
+        textToCopy = buildTailoredCoverLetter(job, true);
+      }
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        alert('📋 Anschreiben-Text wurde in die Zwischenablage kopiert!\n\nGoogle Docs öffnet sich jetzt in einem neuen Tab. Drücke dort einfach Strg + V (bzw. Cmd + V), um den vollständigen formatierten Text einzufügen!');
+        window.open('https://docs.new', '_blank');
+      }).catch(() => {
+        window.open('https://docs.new', '_blank');
+      });
+    }
+
+    function printGoogleDoc(jobId) {
+      const docEl = document.getElementById('liveGoogleDocA4_' + jobId);
+      if (!docEl) return;
+      
+      const printWin = window.open('', '_blank');
+      printWin.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Anschreiben - ${jobId}</title>
+          <style>
+            @page { size: A4; margin: 20mm; }
+            body { font-family: Calibri, 'Segoe UI', Arial, sans-serif; font-size: 11pt; line-height: 1.5; color: #111; margin: 0; padding: 20px; }
+          </style>
+        </head>
+        <body>
+          ${docEl.innerHTML}
+          <script>
+            window.onload = function() { window.print(); }
+          <\\/script>
+        </body>
+        </html>
+      `);
+      printWin.document.close();
     }
 
     let activeUser = 'nancy';
@@ -908,6 +1024,93 @@
       const clLang = localStorage.getItem('cl_lang_pref_' + job.id) || (currentLang === 'en' ? 'en' : 'de');
       const clText = buildTailoredCoverLetter(job, clFormat === 'full', clLang);
 
+      // Pre-compute A4 HTML document for the Google Doc editor
+      const isGuillermo = (activeUser === 'guillermo');
+      const senderName = isGuillermo ? "Guillermo Hernandez" : "Nancy Schütze";
+      const senderAddr = isGuillermo ? "Söhtstraße 16, 12203 Berlin" : "Teichbergstr. 17, 13125 Berlin";
+      const senderPhone = isGuillermo ? "Mobil: +49 176 8513 6597" : "Mobil: +49 1523 71 64 097";
+      const senderEmail = isGuillermo ? "E-Mail: guillejhl@gmail.com" : "E-Mail: schuetzenancy@gmx.de";
+      const compName = addr.company || job.company || "Unternehmen";
+      const compDept = addr.department || "Personalabteilung / Recruiting-Team";
+      const compStreet = addr.street || "Standort Berlin";
+      const compZipCity = addr.zipCity || "10553 Berlin, Germany";
+      const today = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+      const jobTitle = job.title || (isGuillermo ? "Product / Project Management" : "Werkstudentin");
+      const cleanJobTitle = jobTitle.replace(/\s*\(m\/w\/d\)/ig, '').replace(/\s*\(w\/m\/d\)/ig, '').replace(/\s*\(f\/m\/d\)/ig, '').trim();
+      const subjectTitle = isGuillermo ? `Application for ${cleanJobTitle}` : `Bewerbung um eine Stelle als ${cleanJobTitle}`;
+
+      // Extract paragraphs for A4 document
+      let bodyLines = clText.split('\n');
+      let salutationIndex = bodyLines.findIndex(l => l.startsWith('Sehr geehrt') || l.startsWith('Dear '));
+      let salutation = salutationIndex !== -1 ? bodyLines[salutationIndex].trim() : (isGuillermo ? `Dear Hiring Team at ${compName},` : `Sehr geehrtes Recruiting-Team von ${compName},`);
+      let paragraphTexts = [];
+      if (salutationIndex !== -1) {
+        let currentPara = [];
+        for (let i = salutationIndex + 1; i < bodyLines.length; i++) {
+          let line = bodyLines[i].trim();
+          if (line.startsWith('Mit freundlichen Grüßen') || line.startsWith('Sincerely')) {
+            if (currentPara.length) paragraphTexts.push(currentPara.join(' '));
+            break;
+          }
+          if (line === '') {
+            if (currentPara.length) {
+              paragraphTexts.push(currentPara.join(' '));
+              currentPara = [];
+            }
+          } else {
+            currentPara.push(line);
+          }
+        }
+      }
+
+      if (paragraphTexts.length === 0) {
+        paragraphTexts = [
+          `ein reibungslos organisiertes Office bildet das Rückgrat jedes erfolgreichen Teams. Da ich bereits als Office Managerin in einer Berliner Rechtsanwaltskanzlei sowie als Junior Projektleiterin in einer Eventagentur umfassende Verantwortung für Sekretariat, Backoffice und kaufmännische Abläufe übernommen habe, bewerbe ich mich mit großer Begeisterung bei Ihnen als ${jobTitle}.`,
+          `In meiner letzten Position als Office Managerin bei der SERS Rechtsanwaltsgesellschaft mbH habe ich den gesamten Kanzlei- und Sekretariatsbetrieb eigenverantwortlich koordiniert. Hierbei gehörten die Kommunikation mit Mandanten und Behörden auf Deutsch und Englisch (C2), das Fristenmanagement sowie die Unterstützung der Geschäftsführung in meiner Verantwortung. Zuvor konnte ich bei zett.events fundierte Praxiserfahrung in der Eventplanung, Gästebetreuung und Lieferantenkoordination sammeln.`,
+          `Aktuell absolviere ich mein Studium an der Technischen Universität Berlin (Standort Charlottenburg). Dadurch verbinde ich kaufmännische Praxiserfahrung mit digitaler Affinität (MS Office 365, Cloud-Dokumentenverwaltung) und bin als Werkstudentin mit 15 bis 20 Wochenstunden zeitlich und örtlich flexibel einsatzbereit.`,
+          `Gerne möchte ich Ihr Team bei ${compName} tatkräftig unterstützen und für perfekt strukturierte Büroabläufe sorgen. Über eine Einladung zu einem persönlichen Gespräch freue ich mich sehr.`
+        ];
+      }
+
+      const defaultDocHtml = `
+        <div style="text-align: right; line-height: 1.45; margin-bottom: 28px; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
+          <div style="font-weight: 700; font-size: 14px; color: #111827;">${senderName}</div>
+          <div style="color: #4b5563; font-size: 12px;">${senderAddr}</div>
+          <div style="color: #4b5563; font-size: 12px;">${senderPhone}</div>
+          <div style="color: #4b5563; font-size: 12px;">${senderEmail}</div>
+        </div>
+
+        <div style="line-height: 1.45; margin-bottom: 28px; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
+          <div style="font-weight: 700; font-size: 13.5px; color: #111827;">${compName}</div>
+          <div style="color: #4b5563; font-size: 12px;">${compDept}</div>
+          <div style="font-size: 12.5px;">${compStreet}</div>
+          <div style="font-size: 12.5px;">${compZipCity}</div>
+        </div>
+
+        <div style="text-align: right; margin-bottom: 24px; color: #4b5563; font-size: 12.5px; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
+          ${today}
+        </div>
+
+        <div style="font-weight: 700; font-size: 14.5px; text-decoration: underline; margin-bottom: 22px; color: #111827; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
+          ${subjectTitle}
+        </div>
+
+        <div style="margin-bottom: 16px; font-size: 13px; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
+          ${salutation}
+        </div>
+
+        <div style="font-size: 13px; line-height: 1.6; color: #1f2937; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
+          ${paragraphTexts.map(p => `<p style="margin-bottom: 14px;">${p}</p>`).join('')}
+        </div>
+
+        <div style="margin-top: 26px; line-height: 1.6; font-size: 13px; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
+          <div>${isGuillermo ? "Sincerely," : "Mit freundlichen Grüßen"}</div>
+          <div style="font-weight: 700; margin-top: 18px; color: #111827;">${senderName}</div>
+        </div>
+      `;
+
+      const savedDocHtml = localStorage.getItem('job_doc_content_' + job.id);
+
       container.innerHTML = `
         <!-- Sticky Detail Header -->
         <div class="p-5 border-b border-gray-200 dark:border-slate-800 bg-white dark:bg-[#18202f]">
@@ -933,19 +1136,20 @@
             </div>
 
             <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
-              ${job.match_score || 85}% Passung
+              ${job.match_score || 85}% ${t.match}
             </span>
           </div>
 
           <!-- Main CTA Action Buttons Bar -->
-          <div class="flex flex-wrap items-center justify-between gap-2.5 mt-4 pt-3 border-t border-gray-100">
+          <div class="flex flex-wrap items-center justify-between gap-2.5 mt-4 pt-3 border-t border-gray-100 dark:border-slate-800">
             <div class="flex flex-wrap items-center gap-2">
               <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-sm ${isIndeed ? 'bg-[#003a9b] hover:bg-[#002f7d] text-white' : 'bg-[#0a66c2] hover:bg-[#004182] text-white'}">
                 ${isIndeed ? t.apply_indeed : t.apply_linkedin}
               </a>
 
-              <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 transition flex items-center gap-1.5 shadow-2xs" title="Als bearbeitbare Microsoft Word (.docx) Datei herunterladen">
-                <span>${t.as_word}</span>
+              <!-- Google Doc Action Button -->
+              <button onclick="switchDetailView('doc')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 transition flex items-center gap-1.5 shadow-2xs" title="${t.as_google_doc_tooltip}">
+                <span>${t.as_google_doc}</span>
               </button>
 
               <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-purple-50 hover:bg-purple-100 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 transition flex items-center gap-1.5">
@@ -971,27 +1175,95 @@
           </div>
         </div>
 
-        <!-- Detail Tabs & Body Content -->
-        <div class="flex-1 overflow-y-auto p-5 space-y-5 bg-[#fafafa] dark:bg-[#121721]">
+        <!-- Sub Tabs: Google Doc Editor vs Job Overview & Details -->
+        <div class="flex items-center px-5 bg-gray-50/80 dark:bg-slate-900/60 border-b border-gray-200 dark:border-slate-800 gap-2">
+          <button id="detailSubTabDoc" onclick="switchDetailView('doc')" class="py-2.5 px-3 border-b-2 ${currentDetailTab === 'doc' ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 font-medium'} flex items-center gap-1.5 transition text-xs">
+            <span>${t.tab_doc_editor}</span>
+            <span class="text-[10px] bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 px-1.5 py-0.2 rounded-full font-bold">Live Editor</span>
+          </button>
+          <button id="detailSubTabOverview" onclick="switchDetailView('overview')" class="py-2.5 px-3 border-b-2 ${currentDetailTab === 'overview' ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 font-medium'} flex items-center gap-1.5 transition text-xs">
+            <span>${t.tab_overview}</span>
+          </button>
+        </div>
+
+        <!-- VIEW 1: Interactive Google Doc Live Editor (A4 Paper Canvas) -->
+        <div id="detailViewDoc" class="${currentDetailTab === 'doc' ? '' : 'hidden'} flex-1 overflow-y-auto bg-[#f0f4f9] dark:bg-[#0c1017] p-3 sm:p-5 flex flex-col items-center">
           
-          <!-- Box 1: Tailored Cover Letter & Company Address (Instant Copy Ready) -->
+          <!-- Document Control Bar (Google Docs styled) -->
+          <div class="max-w-[700px] w-full bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-t-lg p-3 shadow-xs flex flex-wrap items-center justify-between gap-2.5 border-b-0">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-gray-800 dark:text-gray-100 flex items-center gap-1">
+                <span>📄 Anschreiben</span>
+                <span class="text-gray-400 font-normal">&bull;</span>
+                <span class="text-gray-600 dark:text-gray-300 font-semibold">${job.company}</span>
+              </span>
+              <span id="docSaveStatus_${job.id}" class="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
+                ${t.auto_saved}
+              </span>
+            </div>
+
+            <!-- Action Toolbar -->
+            <div class="flex flex-wrap items-center gap-1.5 text-xs">
+              <!-- Language Toggle -->
+              <div class="inline-flex items-center bg-gray-100 dark:bg-slate-800 p-0.5 rounded border border-gray-200 dark:border-slate-700 text-[11px] font-semibold">
+                <button onclick="setCoverLetterLanguage('${job.id}', 'de')" class="px-2 py-0.5 rounded transition ${clLang === 'de' ? 'bg-white dark:bg-slate-700 text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="Auf Deutsch anzeigen">
+                  🇩🇪 DE
+                </button>
+                <button onclick="setCoverLetterLanguage('${job.id}', 'en')" class="px-2 py-0.5 rounded transition ${clLang === 'en' ? 'bg-white dark:bg-slate-700 text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="English translation">
+                  🇬🇧 EN
+                </button>
+              </div>
+
+              <!-- Open in real Google Docs in new tab -->
+              <button onclick="openInGoogleDocsTab('${job.id}')" class="px-2.5 py-1 rounded bg-[#1a73e8] hover:bg-[#1557b0] text-white font-bold transition flex items-center gap-1 shadow-2xs text-[11px]" title="Kopiert den Text und öffnet ein neues Google Doc in Google Drive (docs.new)">
+                <span>${t.open_google_docs_new}</span>
+              </button>
+
+              <!-- Print / PDF -->
+              <button onclick="printGoogleDoc('${job.id}')" class="px-2 py-1 rounded bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700 text-[11px] font-medium flex items-center gap-1" title="Drucken oder als PDF speichern">
+                <span>${t.print_pdf}</span>
+              </button>
+
+              <!-- Copy All -->
+              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-2 py-1 rounded bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-100 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 text-[11px] font-medium flex items-center gap-1" title="Vollständigen Text in die Zwischenablage kopieren">
+                <span>${t.copy_all}</span>
+              </button>
+
+              <!-- Download Word (.docx) -->
+              <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="px-2 py-1 rounded bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-slate-700 text-[11px] font-medium flex items-center gap-1" title="Als Word-Datei herunterladen">
+                <span>💾 .docx</span>
+              </button>
+
+              <!-- Reset to template -->
+              <button onclick="resetDocToTemplate('${job.id}')" class="px-1.5 py-1 rounded text-gray-400 hover:text-rose-600 text-[11px]" title="${t.reset_original}">
+                <span>🔄</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- A4 Document Page Canvas (ContentEditable Google Doc) -->
+          <div class="max-w-[700px] w-full bg-white text-gray-900 shadow-xl border border-gray-200 dark:border-slate-700 rounded-b-lg p-8 sm:p-12 min-h-[850px] font-sans leading-relaxed text-[13px] outline-none focus:ring-2 focus:ring-blue-400" id="liveGoogleDocA4_${job.id}" contenteditable="true" oninput="onDocContentInput('${job.id}')">
+            ${savedDocHtml || defaultDocHtml}
+          </div>
+
+          <div class="text-[11px] text-gray-500 dark:text-gray-400 mt-2 text-center">
+            💡 Tipp: Du kannst jeden Text direkt im Dokument bearbeiten – Änderungen werden automatisch im Browser gespeichert!
+          </div>
+
+        </div>
+
+        <!-- VIEW 2: Overview, Address & Job Description -->
+        <div id="detailViewOverview" class="${currentDetailTab === 'overview' ? '' : 'hidden'} flex-1 overflow-y-auto p-5 space-y-5 bg-[#fafafa] dark:bg-[#121721]">
+          
+          <!-- Box 1: Tailored Cover Letter & Company Address -->
           <div class="bg-white dark:bg-[#18202f] border border-purple-200 dark:border-purple-900/60 rounded-lg p-4 shadow-sm space-y-3.5">
             <div class="flex flex-wrap items-center justify-between gap-2 border-b border-gray-100 dark:border-slate-800 pb-2.5">
               <div class="flex items-center gap-2">
                 <span class="text-xs font-bold text-purple-900 dark:text-purple-300">${t.cl_box_title}</span>
-                <!-- Bilingual Cover Letter Toggle for Nancy & Guillermo -->
-                <div class="inline-flex items-center bg-gray-100 dark:bg-slate-800 p-0.5 rounded border border-gray-200 dark:border-slate-700 text-[11px] font-semibold">
-                  <button onclick="setCoverLetterLanguage('${job.id}', 'de')" class="px-2 py-0.5 rounded transition ${clLang === 'de' ? 'bg-white dark:bg-slate-700 text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="Auf Deutsch anzeigen">
-                    🇩🇪 DE
-                  </button>
-                  <button onclick="setCoverLetterLanguage('${job.id}', 'en')" class="px-2 py-0.5 rounded transition ${clLang === 'en' ? 'bg-white dark:bg-slate-700 text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="Show English translation (for Guillermo)">
-                    🇬🇧 EN
-                  </button>
-                </div>
               </div>
               <div class="flex items-center gap-2">
-                <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="px-3 py-1.5 rounded bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm" title="Vollständiges Anschreiben als bearbeitbare Microsoft Word (.docx) Datei herunterladen">
-                  <span>${t.cl_download_docx}</span>
+                <button onclick="switchDetailView('doc')" class="px-3 py-1.5 rounded bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                  <span>${t.as_google_doc}</span>
                 </button>
                 <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-1.5 rounded bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
                   <span>${t.cl_copy_text}</span>
@@ -999,7 +1271,7 @@
               </div>
             </div>
 
-            <!-- Address Card (Firmenanschrift direkt für Anschreiben & Portal) -->
+            <!-- Address Card -->
             <div class="bg-purple-50/70 dark:bg-purple-950/25 border border-purple-200 dark:border-purple-800/50 rounded-lg p-3 space-y-2">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1.5 text-xs font-bold text-purple-900 dark:text-purple-200">
@@ -1027,28 +1299,28 @@
               <div id="addrEdit_${job.id}" class="hidden space-y-2 bg-white dark:bg-slate-900 p-3 rounded border border-purple-200 dark:border-purple-800">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                   <div>
-                    <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">Firma / Unternehmen</label>
+                    <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">${t.field_company}</label>
                     <input type="text" id="editCompany_${job.id}" value="${(addr.company || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white text-xs">
                   </div>
                   <div>
-                    <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">Abteilung / Ansprechpartner</label>
+                    <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">${t.field_dept}</label>
                     <input type="text" id="editDept_${job.id}" value="${(addr.department || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white text-xs">
                   </div>
                   <div>
-                    <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">Straße &amp; Hausnummer</label>
+                    <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">${t.field_street}</label>
                     <input type="text" id="editStreet_${job.id}" value="${(addr.street || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white text-xs">
                   </div>
                   <div>
-                    <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">PLZ &amp; Ort</label>
+                    <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">${t.field_zipcity}</label>
                     <input type="text" id="editZipCity_${job.id}" value="${(addr.zipCity || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white text-xs">
                   </div>
                 </div>
                 <div class="flex justify-end gap-2 pt-1">
                   <button onclick="saveCustomAddress('${job.id}')" class="px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded text-xs font-bold transition shadow-xs">
-                    💾 Adresse speichern &amp; ins Anschreiben übernehmen
+                    ${t.save_address}
                   </button>
                   <button onclick="toggleEditAddress('${job.id}')" class="px-2.5 py-1 bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs">
-                    Abbrechen
+                    ${t.cancel}
                   </button>
                 </div>
               </div>
@@ -1069,12 +1341,12 @@
             </div>
 
             <!-- Anschreiben Textarea -->
-            <textarea id="clDetailTextarea" rows="12" class="w-full p-3 bg-gray-50 dark:bg-[#121721] border border-gray-200 dark:border-slate-700 rounded-md text-xs text-gray-800 dark:text-gray-200 leading-relaxed font-sans focus:bg-white dark:focus:bg-[#0f141c] focus:outline-none focus:ring-1 focus:ring-purple-500">${clText}</textarea>
+            <textarea id="clDetailTextarea" rows="10" class="w-full p-3 bg-gray-50 dark:bg-[#121721] border border-gray-200 dark:border-slate-700 rounded-md text-xs text-gray-800 dark:text-gray-200 leading-relaxed font-sans focus:bg-white dark:focus:bg-[#0f141c] focus:outline-none focus:ring-1 focus:ring-purple-500">${clText}</textarea>
             
             <div class="text-[11px] text-gray-500 flex flex-wrap items-center justify-between gap-2">
-              <span>👉 Text anklicken &amp; kopieren, um ihn direkt in Indeed oder das Portal einzufügen.</span>
+              <span>${t.cl_hint}</span>
               <a href="${activeUser === 'guillermo' ? 'files/Guillermo_Hernandez_CV_Master.pdf' : 'files/Nancy_Schuetze_Lebenslauf_Master.pdf'}" download class="font-semibold text-blue-600 hover:underline">
-                📄 Lebenslauf-PDF herunterladen
+                ${t.download_resume}
               </a>
             </div>
           </div>
@@ -1094,13 +1366,14 @@
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300">
               ${t.why_fits_title}
             </h4>
-            <div class="text-xs text-gray-600">
+            <div class="text-xs text-gray-600 dark:text-gray-400">
               ${job.why_fits || ''}
             </div>
           </div>
 
         </div>
       `;
+    }
     }
 
     function openMobileDetail(job) {
