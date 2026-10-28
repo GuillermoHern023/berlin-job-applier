@@ -13,6 +13,8 @@
       document.documentElement.classList.remove('dark');
     }
   </script>
+  <script src="docx.umd.js"></script>
+  <script>if (typeof docx === 'undefined') { document.write('<script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js"><\\/script>'); }</script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -715,6 +717,10 @@
                 ${isIndeed ? '🔷 Auf Indeed bewerben ↗' : '🔗 Auf LinkedIn bewerben ↗'}
               </a>
 
+              <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 transition flex items-center gap-1.5 shadow-2xs" title="Als bearbeitbare Microsoft Word (.docx) Datei herunterladen">
+                <span>📝 Als Word-Datei (.docx)</span>
+              </button>
+
               <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 transition flex items-center gap-1.5">
                 <span>📋 Anschreiben kopieren</span>
               </button>
@@ -748,8 +754,11 @@
                 <span>✍️ Maßgeschneidertes Anschreiben &amp; Firmenanschrift</span>
               </div>
               <div class="flex items-center gap-2">
+                <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="px-3 py-1.5 rounded bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm" title="Vollständiges Anschreiben als bearbeitbare Microsoft Word (.docx) Datei herunterladen">
+                  <span>📝 Als Word (.docx) herunterladen</span>
+                </button>
                 <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-1.5 rounded bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
-                  <span>📋 Anschreiben kopieren</span>
+                  <span>📋 Text kopieren</span>
                 </button>
               </div>
             </div>
@@ -879,8 +888,11 @@
             <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="flex-1 text-center py-2.5 rounded-md text-xs font-bold ${isIndeed ? 'bg-[#003a9b] text-white' : 'bg-[#0a66c2] text-white'}">
               ${isIndeed ? '🔷 Auf Indeed bewerben ↗' : '🔗 Auf LinkedIn bewerben ↗'}
             </a>
+            <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="px-3 py-2.5 rounded-md text-xs font-bold bg-blue-600 text-white">
+              📝 Word (.docx)
+            </button>
             <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-2.5 rounded-md text-xs font-bold bg-purple-600 text-white">
-              📋 Anschreiben kopieren
+              📋 Kopieren
             </button>
           </div>
 
@@ -1034,6 +1046,190 @@
       if (job) {
         selectJob(jobId);
       }
+    }
+
+
+    function saveBlobAs(blob, filename) {
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      }, 2000);
+    }
+
+    async function downloadCoverLetterAsDocx(jobId) {
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      if (!job) return;
+
+      const docxLib = window.docx || (typeof docx !== 'undefined' ? docx : null);
+      if (!docxLib) {
+        alert('Word-Export-Modul lädt noch... bitte kurz warten.');
+        return;
+      }
+
+      const { Document, Paragraph, TextRun, AlignmentType, convertInchesToTwip, Packer } = docxLib;
+      const addr = getResolvedJobAddress(job);
+      const today = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+
+      const isGuillermo = (activeUser === 'guillermo');
+      const senderName = isGuillermo ? "Guillermo Hernandez" : "Nancy Schütze";
+      const senderAddr = isGuillermo ? "Söhtstraße 16, 12203 Berlin" : "Teichbergstr. 17, 13125 Berlin";
+      const senderPhone = isGuillermo ? "Mobil: +49 176 8513 6597" : "Mobil: +49 1523 71 64 097";
+      const senderEmail = isGuillermo ? "E-Mail: guillejhl@gmail.com" : "E-Mail: schuetzenancy@gmx.de";
+
+      const compName = addr.company || job.company || "Unternehmen";
+      const compStreet = addr.street || "Standort Berlin";
+      const compZipCity = addr.zipCity || "10553 Berlin, Germany";
+
+      const jobTitle = job.title || (isGuillermo ? "Product / Project Management" : "Werkstudentin");
+      const cleanJobTitle = jobTitle.replace(/\s*\(m\/w\/d\)/ig, '').replace(/\s*\(w\/m\/d\)/ig, '').replace(/\s*\(f\/m\/d\)/ig, '').trim();
+      const subjectTitle = isGuillermo ? `Application for ${cleanJobTitle}` : `Bewerbung um eine Stelle als ${cleanJobTitle}`;
+
+      // Read currently customized text from textarea if user edited it on page
+      const textarea = document.getElementById('clDetailTextarea');
+      let rawText = textarea ? textarea.value : buildTailoredCoverLetter(job, false);
+
+      let bodyLines = rawText.split('\n');
+      let salutationIndex = bodyLines.findIndex(l => l.startsWith('Sehr geehrt') || l.startsWith('Dear '));
+      let salutation = salutationIndex !== -1 ? bodyLines[salutationIndex].trim() : (isGuillermo ? `Dear Hiring Team at ${compName},` : `Sehr geehrtes Recruiting-Team von ${compName},`);
+      
+      let paragraphTexts = [];
+      if (salutationIndex !== -1) {
+        let currentPara = [];
+        for (let i = salutationIndex + 1; i < bodyLines.length; i++) {
+          let line = bodyLines[i].trim();
+          if (line.startsWith('Mit freundlichen Grüßen') || line.startsWith('Sincerely')) {
+            if (currentPara.length) paragraphTexts.push(currentPara.join(' '));
+            break;
+          }
+          if (line === '') {
+            if (currentPara.length) {
+              paragraphTexts.push(currentPara.join(' '));
+              currentPara = [];
+            }
+          } else {
+            currentPara.push(line);
+          }
+        }
+      }
+
+      if (paragraphTexts.length === 0) {
+        paragraphTexts = [
+          `ein reibungslos organisiertes Office bildet das Rückgrat jedes erfolgreichen Teams. Da ich bereits als Office Managerin in einer Berliner Rechtsanwaltskanzlei sowie als Junior Projektleiterin in einer Eventagentur umfassende Verantwortung für Sekretariat, Backoffice und kaufmännische Abläufe übernommen habe, bewerbe ich mich mit großer Begeisterung bei Ihnen als ${jobTitle}.`,
+          `In meiner letzten Position als Office Managerin bei der SERS Rechtsanwaltsgesellschaft mbH habe ich den gesamten Kanzlei- und Sekretariatsbetrieb eigenverantwortlich koordiniert. Hierbei gehörten die Kommunikation mit Mandanten und Behörden auf Deutsch und Englisch (C2), das Fristenmanagement sowie die Unterstützung der Geschäftsführung in meiner Verantwortung. Zuvor konnte ich bei zett.events fundierte Praxiserfahrung in der Eventplanung, Gästebetreuung und Lieferantenkoordination sammeln.`,
+          `Aktuell absolviere ich mein Studium an der Technischen Universität Berlin (Standort Charlottenburg). Dadurch verbinde ich kaufmännische Praxiserfahrung mit digitaler Affinität (MS Office 365, Cloud-Dokumentenverwaltung) und bin als Werkstudentin mit 15 bis 20 Wochenstunden zeitlich und örtlich flexibel einsatzbereit.`,
+          `Gerne möchte ich Ihr Team bei ${compName} tatkräftig unterstützen und für perfekt strukturierte Büroabläufe sorgen. Über eine Einladung zu einem persönlichen Gespräch freue ich mich sehr.`
+        ];
+      }
+
+      const doc = new Document({
+        sections: [{
+          properties: {
+            page: {
+              margin: {
+                top: convertInchesToTwip(0.8),
+                right: convertInchesToTwip(0.8),
+                bottom: convertInchesToTwip(0.8),
+                left: convertInchesToTwip(0.8)
+              }
+            }
+          },
+          children: [
+            // 1. Absender (Rechtsbündig, Calibri)
+            new Paragraph({
+              alignment: AlignmentType.RIGHT,
+              spacing: { line: 260, after: 40 },
+              children: [new TextRun({ text: senderName, bold: true, size: 22, font: "Calibri" })]
+            }),
+            new Paragraph({
+              alignment: AlignmentType.RIGHT,
+              spacing: { line: 260, after: 40 },
+              children: [new TextRun({ text: senderAddr, size: 20, font: "Calibri" })]
+            }),
+            new Paragraph({
+              alignment: AlignmentType.RIGHT,
+              spacing: { line: 260, after: 40 },
+              children: [new TextRun({ text: senderPhone, size: 20, font: "Calibri" })]
+            }),
+            new Paragraph({
+              alignment: AlignmentType.RIGHT,
+              spacing: { line: 260, after: 450 },
+              children: [new TextRun({ text: senderEmail, size: 20, font: "Calibri" })]
+            }),
+
+            // 2. Empfängeradresse (Linksbündig)
+            new Paragraph({
+              spacing: { line: 260, after: 40 },
+              children: [new TextRun({ text: compName, bold: true, size: 22, font: "Calibri" })]
+            }),
+            new Paragraph({
+              spacing: { line: 260, after: 40 },
+              children: [new TextRun({ text: compStreet, size: 22, font: "Calibri" })]
+            }),
+            new Paragraph({
+              spacing: { line: 260, after: 450 },
+              children: [new TextRun({ text: compZipCity, size: 22, font: "Calibri" })]
+            }),
+
+            // 3. Datum (Rechtsbündig)
+            new Paragraph({
+              alignment: AlignmentType.RIGHT,
+              spacing: { after: 320 },
+              children: [new TextRun({ text: today, size: 22, font: "Calibri" })]
+            }),
+
+            // 4. Betreffzeile (Fett, Unterstrichen)
+            new Paragraph({
+              spacing: { after: 320 },
+              children: [
+                new TextRun({
+                  text: subjectTitle,
+                  bold: true,
+                  underline: {},
+                  size: 24,
+                  font: "Calibri"
+                })
+              ]
+            }),
+
+            // 5. Anrede
+            new Paragraph({
+              spacing: { after: 240 },
+              children: [new TextRun({ text: salutation, size: 22, font: "Calibri" })]
+            }),
+
+            // 6. Textkörper-Absätze
+            ...paragraphTexts.map(para => new Paragraph({
+              spacing: { line: 276, after: 240 },
+              children: [new TextRun({ text: para, size: 22, font: "Calibri" })]
+            })),
+
+            // 7. Grußformel & Name
+            new Paragraph({
+              spacing: { line: 260, after: 220 },
+              children: [new TextRun({ text: isGuillermo ? "Sincerely," : "Mit freundlichen Grüßen", size: 22, font: "Calibri" })]
+            }),
+            new Paragraph({
+              spacing: { line: 260 },
+              children: [new TextRun({ text: senderName, bold: true, size: 22, font: "Calibri" })]
+            })
+          ]
+        }]
+      });
+
+      const blob = await Packer.toBlob(doc);
+      const cleanComp = (compName || "Firma").replace(/[^a-zA-Z0-9_-]/g, '_').substring(0, 30);
+      const cleanUser = isGuillermo ? "Guillermo_Hernandez" : "Nancy_Schuetze";
+      const filename = `${cleanUser}_Anschreiben_${cleanComp}.docx`;
+
+      saveBlobAs(blob, filename);
     }
 
     function changeCoverLetterFormat(jobId, format) {
