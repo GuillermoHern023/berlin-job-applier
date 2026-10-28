@@ -2,14 +2,22 @@ name: Daily Berlin Job Applier & CV Tailor (Cloud Automation)
 
 on:
   schedule:
-    # Runs 3x daily (08:00, 14:00, 20:00 Europe/Berlin) to search fresh jobs, prune stale roles (>10 days), and cycle the feed
-    - cron: "0 7,13,19 * * *"
+    # 08:20 Europe/Berlin (CET) - Morning Run: Scrapes + Refreshes Dashboard + Sends 1 Daily Morning Email Digest
+    - cron: "20 7 * * *"
+    # 14:20 Europe/Berlin (CET) - Afternoon Run: Silent feed refresh & pruning (no email)
+    - cron: "20 13 * * *"
+    # 20:20 Europe/Berlin (CET) - Evening Run: Silent feed refresh & pruning (no email)
+    - cron: "20 19 * * *"
   workflow_dispatch:
     inputs:
       scrape:
         description: "Scrape fresh jobs from LinkedIn & Indeed (true/false)"
         required: false
         default: "true"
+      send_email:
+        description: "Send email digest to inboxes (true/false)"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -47,11 +55,33 @@ jobs:
 
       - name: Run Daily Job Scrape, CV Tailor & Email Digest
         run: |
+          ARGS=""
           if [ "${{ github.event.inputs.scrape }}" = "false" ]; then
-            python daily_job_digest.py
+            ARGS="$ARGS --no-scrape"
           else
-            python daily_job_digest.py --scrape
+            ARGS="$ARGS --scrape"
           fi
+
+          # Exactly 1 email a day: Send email only on the 08:20 Berlin morning schedule
+          # All afternoon, evening, and on-demand website runs refresh the dashboard silently without email spam
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            UTC_HOUR=$(date -u +%H)
+            if [ "$UTC_HOUR" != "07" ] && [ "$UTC_HOUR" != "06" ]; then
+              echo ">> Afternoon/Evening cycle: Refreshing dashboard silently without email to keep inbox clean."
+              ARGS="$ARGS --no-email"
+            else
+              echo ">> Morning cycle: Sending 1 daily morning email digest."
+            fi
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ github.event.inputs.send_email }}" != "true" ]; then
+              echo ">> Manual on-demand run: Updating dashboard without email."
+              ARGS="$ARGS --no-email"
+            else
+              echo ">> Manual on-demand run: Sending email digest as requested."
+            fi
+          fi
+
+          python daily_job_digest.py $ARGS
 
       - name: Commit & Push Updated Jobs, Tailored PDFs & Dashboard
         run: |
