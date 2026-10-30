@@ -328,6 +328,13 @@ def build_independent_website(g_jobs, n_jobs):
 
     if (STATIC_DIR / "docx.umd.js").exists():
         shutil.copy2(STATIC_DIR / "docx.umd.js", DOCS_DIR / "docx.umd.js")
+    nancy_assets_src = DATA_DIR / "nancy_assets"
+    if nancy_assets_src.exists():
+        for target_base in [OUTPUT_DIR, DOCS_DIR / "files", BASE_DIR / "files"]:
+            target_assets = target_base / "nancy_assets"
+            if target_assets.exists():
+                shutil.rmtree(target_assets)
+            shutil.copytree(nancy_assets_src, target_assets)
 
     template_html = (STATIC_DIR / "index.html").read_text(encoding="utf-8")
     safe_json = json.dumps(static_state, ensure_ascii=False).replace("</", "<\\/")

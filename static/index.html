@@ -646,95 +646,142 @@
       const desc = (`${job.title || ''} ${job.description || ''} ${job.why_fits || ''}`).toLowerCase();
 
       if (!isGuillermo) {
-        // Nancy's tailored 1-page German Lebenslauf
-        const isAcct = desc.includes('buchhalt') || desc.includes('rechnung') || desc.includes('datev') || desc.includes('finance');
-        const isEvt = desc.includes('event') || desc.includes('veranstaltung') || desc.includes('marketing') || desc.includes('kommunikation');
-        const isKanzlei = desc.includes('kanzlei') || desc.includes('anwalt') || desc.includes('recht') || desc.includes('notar');
-        let focusMotto = 'Werkstudentin Office Management, Teamassistenz & Backoffice (15–20 Std./Woche)';
-        if (isKanzlei) focusMotto = 'Werkstudentin Kanzleiorganisation, Sekretariat & Office Management (15–20 Std./Woche)';
-        else if (isEvt) focusMotto = 'Werkstudentin Event-Organisation, Projektassistenz & Office Management (15–20 Std./Woche)';
-        else if (isAcct) focusMotto = 'Werkstudentin Backoffice, Vorbereitende Buchhaltung & Administration (15–20 Std./Woche)';
+        // Nancy's authentic, job-tailored 1-page German Lebenslauf matching data/nancy_profile.json & nancy_engine.py
+        const isAcct = desc.includes('buchhalt') || desc.includes('rechnung') || desc.includes('datev') || desc.includes('finance') || desc.includes('steuer');
+        const isEvt = desc.includes('event') || desc.includes('veranstaltung') || desc.includes('marketing') || desc.includes('produktion') || desc.includes('tv') || desc.includes('medien');
+        const isHr = desc.includes('hr') || desc.includes('personal') || desc.includes('recruiting') || desc.includes('onboarding') || desc.includes('people');
+        const isKanzlei = desc.includes('kanzlei') || desc.includes('anwalt') || desc.includes('recht') || desc.includes('notar') || desc.includes('jurist');
+
+        let focusMotto = 'Energiegeladen · Lösungsorientiert · Lebensfroh — Office Management & Projektsteuerung';
+        if (isKanzlei) focusMotto = 'Energiegeladen · Lösungsorientiert · Strukturstark — Kanzleiorganisation & Office Management';
+        else if (isEvt) focusMotto = 'Energiegeladen · Kreativ · Organisationsstark — Event-Projektleitung, Produktion & Office Operations';
+        else if (isHr) focusMotto = 'Energiegeladen · Kommunikativ · Strukturstark — Recruiting, Onboarding & Office Operations';
+        else if (isAcct) focusMotto = 'Energiegeladen · Präzise · Lösungsorientiert — Backoffice, Abrechnungswesen & Administration';
 
         return `
-          <div style="font-family: Calibri, 'Segoe UI', Arial, sans-serif; color: #0f172a; line-height: 1.32; font-size: 9.2pt;">
-            <div style="border-bottom: 2px solid #1e3a8a; padding-bottom: 8px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: flex-start;">
-              <div>
-                <div style="font-size: 17pt; font-weight: 700; color: #0f172a;">Nancy Schütze</div>
-                <div style="font-size: 9.5pt; font-weight: 700; color: #1e3a8a; margin-top: 2px;">${focusMotto}</div>
-                <div style="font-size: 8.4pt; color: #475569; margin-top: 3px;">Erfahrene Office Managerin (Kanzlei &amp; Eventagentur) &bull; TU Berlin Studentin (Standort Charlottenburg) &bull; Deutsch (Muttersprache) &amp; Englisch (C2)</div>
+          <div style="font-family: 'Segoe UI', Calibri, Arial, sans-serif; color: #1e293b; line-height: 1.24; font-size: 8.4pt;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 6px; margin-bottom: 6px;">
+              <div style="flex: 1; padding-right: 14px;">
+                <div style="font-size: 16pt; font-weight: 700; color: #0f172a; letter-spacing: 0.2px; margin-bottom: 2px;">Nancy Thuy Dung Schütze</div>
+                <div style="font-size: 9pt; font-weight: 700; color: #1e3a8a; margin-bottom: 2px;">${focusMotto}</div>
+                <div style="font-size: 8.1pt; color: #475569; margin-bottom: 4px; line-height: 1.22;">Als Organisationstalent arbeite ich eigenständig, strukturiert und kreativ und bringe mit meiner positiven Art einen humorvollen Alltag.</div>
+                <div style="display: grid; grid-template-columns: auto auto; gap: 1.5px 16px; font-size: 8.15pt; color: #334155;">
+                  <span><strong>Adresse:</strong> Teichbergstr. 17, 13125 Berlin</span>
+                  <span><strong>Mobil:</strong> +49 15237164097</span>
+                  <span><strong>E-Mail:</strong> schuetzenancy@gmx.de</span>
+                  <span><strong>Geboren:</strong> 17.08.2001 in Berlin | Deutsch</span>
+                  <span style="grid-column: span 2;"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/schuetzenancy/" target="_blank" style="color: #1e3a8a; text-decoration: underline;">linkedin.com/in/schuetzenancy</a></span>
+                </div>
               </div>
-              <div style="text-align: right; font-size: 8.4pt; color: #334155; line-height: 1.4;">
-                <div>Teichbergstr. 17, 13125 Berlin</div>
-                <div>Mobil: +49 1523 71 64 097</div>
-                <div>schuetzenancy@gmx.de</div>
+              <div style="flex-shrink: 0;">
+                <img src="files/nancy_assets/image2.png" alt="Nancy Schütze" onerror="this.style.display='none'" style="width: 74px; height: 94px; object-fit: cover; border-radius: 5px; border: 1.5px solid #cbd5e1;" />
               </div>
             </div>
 
-            <div style="margin-bottom: 8px;">
-              <div style="font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1e3a8a; border-bottom: 1px solid #cbd5e1; padding-bottom: 2px; margin-bottom: 5px;">Berufserfahrung</div>
+            <div style="margin-bottom: 5px;">
+              <div style="font-size: 8.65pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1e3a8a; border-bottom: 1.2px solid #cbd5e1; padding-bottom: 2px; margin-bottom: 4px;">Berufserfahrung</div>
               
-              <div style="display: flex; margin-bottom: 6px;">
-                <div style="width: 18%; font-size: 8.3pt; font-weight: 600; color: #475569;">10/2023 – 09/2024</div>
-                <div style="width: 82%;">
-                  <div style="font-weight: 700; font-size: 9.2pt;">Office Managerin &amp; Kanzleiassistenz</div>
-                  <div style="font-size: 8.6pt; color: #334155; margin-bottom: 2px;"><strong>SERS Rechtsanwaltsgesellschaft mbH</strong> &bull; Berlin</div>
-                  <ul style="padding-left: 15px; margin: 0; font-size: 8.5pt;">
-                    <li>Eigenverantwortliche Leitung des gesamten Kanzlei- und Sekretariatsbetriebs sowie Empfang und Betreuung von Mandanten.</li>
-                    <li>Korrespondenz mit Mandanten, Gerichten und Behörden auf Deutsch und Englisch (C2) sowie Fristen- und Aktenmanagement.</li>
-                    <li>Vorbereitende Buchhaltung, Rechnungsstellung, Mahnwesen sowie Termin-, Reise- und Meetingkoordination für die Geschäftsführung.</li>
+              <div style="display: flex; margin-bottom: 3.5px;">
+                <div style="width: 15%; font-size: 8pt; font-weight: 600; color: #475569; padding-right: 8px; flex-shrink: 0;">2025 – 2026</div>
+                <div style="width: 85%;">
+                  <div><span style="font-weight: 700; font-size: 8.85pt; color: #0f172a;">Office Managerin &amp; Kanzleiassistenz</span> &nbsp;<span style="font-size: 8.45pt; color: #334155;">| <strong>SERS Rechtsanwaltsgesellschaft mbH</strong>, Berlin</span></div>
+                  <ul style="padding-left: 14px; margin: 1px 0 0 0; font-size: 8.2pt; list-style-type: disc;">
+                    <li>Eigenverantwortliche Organisation und Steuerung des gesamten Kanzlei- und Sekretariatsbetriebs.</li>
+                    <li>Professionelle schriftliche und telefonische Kommunikation mit Mandanten, Gerichten und Behörden auf Deutsch und Englisch (C2).</li>
+                    <li>Strukturierte Dokumentenorganisation, Fristenkontrolle, Aktenführung sowie vorbereitende Buchhaltung und Rechnungserstellung.</li>
+                    <li>Kontinuierliche Prozessoptimierung, Digitalisierung von Büroabläufen und Qualitätsmanagement.</li>
                   </ul>
                 </div>
               </div>
 
-              <div style="display: flex; margin-bottom: 6px;">
-                <div style="width: 18%; font-size: 8.3pt; font-weight: 600; color: #475569;">08/2022 – 09/2023</div>
-                <div style="width: 82%;">
-                  <div style="font-weight: 700; font-size: 9.2pt;">Junior Projektleiterin Event &amp; Hospitality</div>
-                  <div style="font-size: 8.6pt; color: #334155; margin-bottom: 2px;"><strong>zett.events</strong> &bull; Berlin</div>
-                  <ul style="padding-left: 15px; margin: 0; font-size: 8.5pt;">
-                    <li>Planung, Kalkulation und organisatorische Durchführung von Corporate Events, Konferenzen und Kundenveranstaltungen.</li>
-                    <li>Koordination von Dienstleistern, Catering, Locations und Personalplanung sowie Vor-Ort-Betreuung von VIP-Gästen.</li>
-                    <li>Angebotserstellung, Budgetkontrolle, Rechnungsprüfung und administrative Nachbereitung im Backoffice.</li>
+              <div style="display: flex; margin-bottom: 3.5px;">
+                <div style="width: 15%; font-size: 8pt; font-weight: 600; color: #475569; padding-right: 8px; flex-shrink: 0;">2023 – 2025</div>
+                <div style="width: 85%;">
+                  <div><span style="font-weight: 700; font-size: 8.85pt; color: #0f172a;">Junior Projektleitung &amp; Office Operations</span> &nbsp;<span style="font-size: 8.45pt; color: #334155;">| <strong>zett.events</strong>, Berlin</span></div>
+                  <ul style="padding-left: 14px; margin: 1px 0 0 0; font-size: 8.2pt; list-style-type: disc;">
+                    <li>Kaufmännische und organisatorische Planung von Projekten inklusive Personal-, Event- und Budgetsteuerung.</li>
+                    <li>Interne Koordination, Einsatzplanung sowie Mitarbeiterabrechnungen für Werkstudierende und Aushilfen.</li>
+                    <li>Eigenständige Angebotskalkulation und Rechnungserstellung sowie Kunden- und Dienstleisterbetreuung.</li>
+                    <li>Weiterentwicklung interner Verwaltungsstrukturen durch Digitalisierung und Prozessoptimierung.</li>
                   </ul>
                 </div>
               </div>
 
-              <div style="display: flex; margin-bottom: 4px;">
-                <div style="width: 18%; font-size: 8.3pt; font-weight: 600; color: #475569;">10/2019 – 07/2022</div>
-                <div style="width: 82%;">
-                  <div style="font-weight: 700; font-size: 9.2pt;">Duales Studium &amp; Projektassistenz (B.A. Business Administration)</div>
-                  <div style="font-size: 8.6pt; color: #334155; margin-bottom: 2px;"><strong>Praxispartner Event- &amp; Immobilienwirtschaft</strong> &bull; Berlin</div>
-                  <ul style="padding-left: 15px; margin: 0; font-size: 8.5pt;">
-                    <li>Kaufmännische Sachbearbeitung, Vertragsverwaltung, Kundenbetreuung und Unterstützung im operativen Tagesgeschäft.</li>
+              <div style="display: flex; margin-bottom: 3.5px;">
+                <div style="width: 15%; font-size: 8pt; font-weight: 600; color: #475569; padding-right: 8px; flex-shrink: 0;">2019 – heute</div>
+                <div style="width: 85%;">
+                  <div><span style="font-weight: 700; font-size: 8.85pt; color: #0f172a;">Teamleitung Events, Hostess &amp; Promotion (Nebenberuflich)</span> &nbsp;<span style="font-size: 8.45pt; color: #334155;">| <strong>Event- &amp; Promotionagenturen</strong>, Berlin</span></div>
+                  <ul style="padding-left: 14px; margin: 1px 0 0 0; font-size: 8.2pt; list-style-type: disc;">
+                    <li>Vor-Ort-Teamleitung: Check-In, Briefing und Koordination der Einsatzteams bei Messen, Kongressen und Corporate Events.</li>
+                    <li>Direkte Ansprechpartnerin für Auftraggeber vor Ort sowie Sicherstellung eines reibungslosen Serviceablaufs.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 3.5px;">
+                <div style="width: 15%; font-size: 8pt; font-weight: 600; color: #475569; padding-right: 8px; flex-shrink: 0;">2021 – 2022</div>
+                <div style="width: 85%;">
+                  <div><span style="font-weight: 700; font-size: 8.85pt; color: #0f172a;">Werkstudentin Qualitätsmanagement, Recruiting &amp; PR</span> &nbsp;<span style="font-size: 8.45pt; color: #334155;">| <strong>Vergleich.org (VGL Publishing AG)</strong>, Berlin</span></div>
+                  <ul style="padding-left: 14px; margin: 1px 0 0 0; font-size: 8.2pt; list-style-type: disc;">
+                    <li>Recruiting, Vertragsabwicklung und Onboarding neuer Freelancer sowie Koordination externer Dienstleister.</li>
+                    <li>Qualitätssicherung, Lektorat von Produkttexten sowie technische Pflege von XML- und HTML-Dateien.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 3.5px;">
+                <div style="width: 15%; font-size: 8pt; font-weight: 600; color: #475569; padding-right: 8px; flex-shrink: 0;">2019 – 2022</div>
+                <div style="width: 85%;">
+                  <div><span style="font-weight: 700; font-size: 8.85pt; color: #0f172a;">Duale Studentin – Front &amp; Back Office / Hospitality Management</span> &nbsp;<span style="font-size: 8.45pt; color: #334155;">| <strong>Accor Hotels</strong>, Berlin</span></div>
+                  <ul style="padding-left: 14px; margin: 1px 0 0 0; font-size: 8.2pt; list-style-type: disc;">
+                    <li>Operative Steuerung im Front- und Back-Office, Guest Relations sowie professionelles Beschwerdemanagement.</li>
+                    <li>Mitwirkung in der Buchhaltung und Vertragsverwaltung sowie stellvertretende Leitung im Bereich Housekeeping.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="display: flex;">
+                <div style="width: 15%; font-size: 8pt; font-weight: 600; color: #475569; padding-right: 8px; flex-shrink: 0;">2013 – 2025</div>
+                <div style="width: 85%;">
+                  <div><span style="font-weight: 700; font-size: 8.85pt; color: #0f172a;">Kaufmännische Mitarbeit, Einkauf &amp; Kundenbetreuung</span> &nbsp;<span style="font-size: 8.45pt; color: #334155;">| <strong>Obst- und Gemüse Karow</strong>, Berlin</span></div>
+                  <ul style="padding-left: 14px; margin: 1px 0 0 0; font-size: 8.2pt; list-style-type: disc;">
+                    <li>Unterstützung in Einkauf, Warenlogistik, Bestandskontrolle sowie vorbereitende Kassen- und Tagesabrechnung.</li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            <div style="margin-bottom: 8px;">
-              <div style="font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1e3a8a; border-bottom: 1px solid #cbd5e1; padding-bottom: 2px; margin-bottom: 5px;">Studium &amp; Ausbildung</div>
-              <div style="display: flex; margin-bottom: 4px;">
-                <div style="width: 18%; font-size: 8.3pt; font-weight: 600; color: #475569;">Seit 10/2024</div>
-                <div style="width: 82%;">
-                  <div style="font-weight: 700; font-size: 8.8pt;">Technische Universität Berlin (TU Berlin, Campus Charlottenburg)</div>
-                  <div style="font-size: 8.4pt; color: #475569;">Bachelorstudium (Immatrikulierte Vollzeitstudentin &bull; flexibel 15–20 Std./Woche im Semester, bis 40 Std. in den Semesterferien)</div>
+            <div style="margin-bottom: 5px;">
+              <div style="font-size: 8.65pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1e3a8a; border-bottom: 1.2px solid #cbd5e1; padding-bottom: 2px; margin-bottom: 4px;">Bildungsweg</div>
+              <div style="display: flex; margin-bottom: 3px;">
+                <div style="width: 15%; font-size: 8pt; font-weight: 600; color: #475569;">seit 2026</div>
+                <div style="width: 85%;">
+                  <div style="font-size: 8.55pt; color: #0f172a;"><strong>B.Sc. Informatik (Studium)</strong> | Technische Universität Berlin (Campus Charlottenburg / Zoologischer Garten)</div>
+                  <div style="font-size: 8pt; color: #475569;">Aktives Vollzeitstudium direkt am Standort Zoologischer Garten / Ernst-Reuter-Platz</div>
+                </div>
+              </div>
+              <div style="display: flex; margin-bottom: 3px;">
+                <div style="width: 15%; font-size: 8pt; font-weight: 600; color: #475569;">2019 – 2023</div>
+                <div style="width: 85%;">
+                  <div style="font-size: 8.55pt; color: #0f172a;"><strong>B.A. Business Administration (Duales Studium)</strong> | VICTORIA – Internationale Hochschule, Berlin</div>
+                  <div style="font-size: 8pt; color: #475569;">Vertiefung: Hotel- &amp; Tourismusmanagement | Auslandssemester 2021–2022: Universidad de Girona, Spanien (Marketing &amp; PR)</div>
                 </div>
               </div>
               <div style="display: flex;">
-                <div style="width: 18%; font-size: 8.3pt; font-weight: 600; color: #475569;">10/2019 – 07/2022</div>
-                <div style="width: 82%;">
-                  <div style="font-weight: 700; font-size: 8.8pt;">Duales Studium Betriebswirtschaftslehre (BWL)</div>
-                  <div style="font-size: 8.4pt; color: #475569;">Schwerpunkt: Office-, Event- &amp; Dienstleistungsmanagement, Berlin</div>
+                <div style="width: 15%; font-size: 8pt; font-weight: 600; color: #475569;">2013 – 2019</div>
+                <div style="width: 85%;">
+                  <div style="font-size: 8.55pt; color: #0f172a;"><strong>Allgemeine Hochschulreife (Abitur – Gesamtnote: 1,7)</strong> | Robert-Havemann-Gymnasium, Berlin</div>
                 </div>
               </div>
             </div>
 
             <div>
-              <div style="font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1e3a8a; border-bottom: 1px solid #cbd5e1; padding-bottom: 2px; margin-bottom: 5px;">Kenntnisse &amp; Sprachen</div>
-              <div style="font-size: 8.5pt; line-height: 1.4;">
-                <div><strong>Office &amp; Administration:</strong> Kanzlei- &amp; Büromanagement, Vorbereitende Buchhaltung, Rechnungs- &amp; Mahnwesen, Fristenkontrolle, Reisemanagement, Eventorganisation</div>
-                <div><strong>IT &amp; Software:</strong> MS Office 365 (Word, Excel, PowerPoint, Outlook, Teams), Google Workspace, digitale Aktenführung, Cloud-Dokumentenmanagement, CRM-Systeme</div>
-                <div><strong>Sprachen:</strong> Deutsch (Muttersprache), Englisch (C2 – Verhandlungssicher in Wort und Schrift), Französisch (Grundkenntnisse)</div>
+              <div style="font-size: 8.65pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1e3a8a; border-bottom: 1.2px solid #cbd5e1; padding-bottom: 2px; margin-bottom: 4px;">Fachkompetenzen &amp; IT-Kenntnisse</div>
+              <div style="font-size: 8.15pt; line-height: 1.28;">
+                <div style="margin-bottom: 2px;"><strong>Office &amp; Organisation:</strong> Office Management &amp; Organisation · Projektleitung, Teamführung &amp; Koordination · Eventplanung · Personalplanung · Abrechnungswesen · Front Office Operations · Stakeholder-Management · IT-Prozessoptimierung &amp; Implementierung · Marketing &amp; Videoediting</div>
+                <div style="margin-bottom: 2px;"><strong>Software &amp; IT:</strong> Microsoft Office (Word, Excel, PowerPoint – Fortgeschritten) · HTML, CSS, Python (Grundlagen) · DaVinci Resolve · Wondershare Filmora · Adobe Audition CC 2019</div>
+                <div style="margin-bottom: 2px;"><strong>Sprachen:</strong> <strong>Deutsch</strong> (Muttersprache) &nbsp;&bull;&nbsp; <strong>Vietnamesisch</strong> (Muttersprache) &nbsp;&bull;&nbsp; <strong>Englisch</strong> (C2 Proficient) &nbsp;&bull;&nbsp; <strong>Spanisch</strong> (B1-Modulzeugnis) &nbsp;&bull;&nbsp; <strong>Katalanisch</strong> (A1-Zertifikat)</div>
+                <div><strong>Nachweise &amp; Mobilität:</strong> Führerschein Klasse B · Gesundheitszeugnis</div>
               </div>
             </div>
           </div>
@@ -1918,6 +1965,18 @@
 
     const KNOWN_COMPANY_ADDRESSES = {
       'appinio': { name: 'Appinio GmbH', department: 'People & Culture / Talent Acquisition', street: 'Friedrichstraße 68', zipCity: '10117 Berlin' },
+      'sunday natural': { name: 'Sunday Natural Products GmbH', department: 'People & Culture / Recruiting', street: 'Potsdamer Straße 83', zipCity: '10785 Berlin' },
+      'qonto': { name: 'Qonto (Olinda Zweigniederlassung Deutschland)', department: 'Talent Acquisition Berlin', street: 'Pappelallee 78/79', zipCity: '10437 Berlin' },
+      'demecan': { name: 'DEMECAN (Deutsche Medizinalcannabis GmbH)', department: 'Personalabteilung / HR', street: 'Lützowplatz 11-13', zipCity: '10785 Berlin' },
+      'rödl': { name: 'Rödl & Partner GmbH', department: 'Personalabteilung Berlin', street: 'Straße des 17. Juni 106', zipCity: '10623 Berlin' },
+      'roedl': { name: 'Rödl & Partner GmbH', department: 'Personalabteilung Berlin', street: 'Straße des 17. Juni 106', zipCity: '10623 Berlin' },
+      'wbs gruppe': { name: 'WBS TRAINING AG / WBS GRUPPE', department: 'Personalgewinnung', street: 'Lorenzweg 5', zipCity: '12099 Berlin' },
+      'digitalagenten': { name: 'digitalagenten GmbH', department: 'People & Culture', street: 'Schützenstraße 6', zipCity: '10117 Berlin' },
+      'verti': { name: 'Verti Versicherung AG', department: 'Human Resources', street: 'Rheinstraße 7A', zipCity: '14513 Teltow / Berlin' },
+      'otis': { name: 'OTIS GmbH & Co. OHG', department: 'Personalabteilung', street: 'Otisstraße 33', zipCity: '13507 Berlin' },
+      'reply': { name: 'Reply Deutschland SE (Standort Berlin)', department: 'Talent Acquisition', street: 'Potsdamer Platz 5', zipCity: '10785 Berlin' },
+      'trench': { name: 'Trench Germany GmbH', department: 'Human Resources / Asset Services', street: 'Nonnendammallee 104', zipCity: '13629 Berlin' },
+      'ge vernova': { name: 'GE Vernova / Grid Solutions Germany', department: 'Recruiting Team Berlin', street: 'Kufsteiner Straße 71', zipCity: '10825 Berlin' },
       '1komma5': { name: '1KOMMA5° GmbH (Standort Berlin)', department: 'People & Culture', street: 'Lohmühlenstraße 65', zipCity: '12435 Berlin' },
       '50hertz': { name: '50Hertz Transmission GmbH', department: 'Personal / Recruiting', street: 'Heidestraße 2', zipCity: '10557 Berlin' },
       'amazon': { name: 'Amazon Development Center Germany GmbH', department: 'University Talent Acquisition', street: 'Krausenstraße 38', zipCity: '10117 Berlin' },
@@ -2384,68 +2443,69 @@
         return header + `Dear Hiring Team at ${comp},\n\n${p1}\n\n${p2}\n\n${p3}\n\n${p4}\n\nSincerely,\nGuillermo Hernandez`;
       }
 
+      const comp = addr.company || job.company || (lang === 'en' ? 'your company' : 'Ihrem Unternehmen');
+      const rawTitle = job.title || (lang === 'en' ? 'Office Management Working Student' : 'Werkstudentin Office Management (m/w/d)');
+      const cleanTitle = rawTitle.replace(/\s*\(m\/w\/d\)/ig, '').replace(/\s*\(w\/m\/d\)/ig, '').replace(/\s*\(f\/m\/d\)/ig, '').replace(/\s*\(m\/f\/d\)/ig, '').replace(/\s*\(all genders\)/ig, '').trim();
+      const desc = (`${rawTitle} ${job.description || ''} ${job.why_fits || ''}`).toLowerCase();
+
+      const isAcct = desc.includes('buchhalt') || desc.includes('rechnung') || desc.includes('datev') || desc.includes('finance') || desc.includes('steuer') || desc.includes('abrechnung') || desc.includes('kaufmännisch');
+      const isEvt = desc.includes('event') || desc.includes('veranstaltung') || desc.includes('catering') || desc.includes('produktion') || desc.includes('tv') || desc.includes('marketing') || desc.includes('pr ') || desc.includes('medien') || desc.includes('hospitality');
+      const isHr = desc.includes('hr') || desc.includes('personal') || desc.includes('onboarding') || desc.includes('recruiting') || desc.includes('people') || desc.includes('talent');
+      const isKanzlei = desc.includes('kanzlei') || desc.includes('anwalt') || desc.includes('recht') || desc.includes('notar') || desc.includes('jurist') || desc.includes('fristen');
+
       if (lang === 'en' && activeUser === 'nancy') {
-        const comp = addr.company || job.company || 'your company';
-        const title = job.title || 'Office Management Working Student';
-        const desc = (job.description || '').toLowerCase();
-
-        const isAcct = desc.includes('buchhalt') || desc.includes('rechnung') || desc.includes('datev') || desc.includes('finance');
-        const isEvt = desc.includes('event') || desc.includes('veranstaltung') || desc.includes('catering') || desc.includes('meeting');
-        const isHr = desc.includes('hr') || desc.includes('personal') || desc.includes('onboarding');
-        const isKanzlei = desc.includes('kanzlei') || desc.includes('anwalt') || desc.includes('recht');
-
-        let p2 = "In my recent role as Office Manager at SERS Rechtsanwaltsgesellschaft mbH, I independently coordinated overall law firm and secretarial operations. ";
-        if (isAcct) {
-          p2 += "My daily core responsibilities included preparatory bookkeeping, invoicing, dunning, and strict deadline and legal document management. ";
-        } else if (isKanzlei) {
-          p2 += "My key responsibilities included client and official authority communications in German and English (bilingual C2 proficiency), court deadline management, and executive support. ";
-        } else {
-          p2 += "This included professional communication in German and English (C2), documentation organization, and preparatory bookkeeping. ";
-        }
-
-        if (isEvt) {
-          p2 += "Prior to that, at zett.events, I gained solid hands-on experience in corporate event planning, guest hospitality, and vendor coordination.";
-        } else if (isHr) {
-          p2 += "Prior to that, at zett.events and during my dual studies, I gained valuable experience in staff rostering, scheduling, and onboarding.";
-        } else {
-          p2 += "In addition, from my work at zett.events, I bring extensive experience in calendar and travel scheduling, executive support, and hospitality.";
-        }
-
-        let header = '';
+        let enHeader = '';
         if (includeHeader) {
-          header = `Nancy Schütze\nTeichbergstr. 17 · 13125 Berlin\nTel: +49 1523 71 64 097 · Email: schuetzenancy@gmx.de\n\n${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}\n\nBerlin, ${today}\n\nApplication for ${title}\n\n`;
+          enHeader = `Nancy Thuy Dung Schütze\nTeichbergstr. 17 · 13125 Berlin\nMobil: +49 1523 71 64 097 · Email: schuetzenancy@gmx.de\n\n${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}\n\nBerlin, ${today}\n\nApplication for ${cleanTitle}\n\n`;
         }
 
-        return header + `Dear Recruiting Team at ${comp},\n\nA smoothly organized office forms the backbone of every successful team. Having already taken on comprehensive responsibility for legal secretarial work, back-office administration, and commercial operations as an Office Manager at a Berlin law firm and as a Junior Project Lead at an event agency, I am applying with great enthusiasm for the ${title} position.\n\n${p2}\n\nCurrently, I am completing my degree at the Technical University of Berlin (TU Berlin, Charlottenburg campus). Through this, I combine hands-on commercial experience with strong digital affinity (MS Office 365, cloud document management) and am available with 15 to 20 flexible hours per week.\n\nI would love to actively support your team at ${comp} and ensure structured, reliable office operations. I look forward to an invitation to an interview.\n\nSincerely,\nNancy Schütze`;
+        let enRoleHook = "combining structured office management, commercial project control, and proactive team support";
+        if (isKanzlei) enRoleHook = "managing legal secretariat operations, bilingual client and authority correspondence, and strict deadline control";
+        else if (isEvt) enRoleHook = "planning and executing corporate events, coordinating production schedules and vendors, and steering commercial budgets";
+        else if (isHr) enRoleHook = "driving recruiting, freelancer and staff onboarding, roster scheduling, and people operations";
+        else if (isAcct) enRoleHook = "handling preparatory bookkeeping, quote and invoice calculation, contract administration, and structured back-office operations";
+
+        let enP1 = `I am writing to apply with great enthusiasm for the ${cleanTitle} position at ${comp}. Having already held end-to-end responsibility as an Office Manager & Legal Assistant at a Berlin law firm and as a Junior Project Lead & Office Operations Manager at an event agency, I know firsthand how essential ${enRoleHook} is to a high-performing team. With a completed Bachelor of Arts in Business Administration (dual degree program in Berlin) and my current B.Sc. Computer Science studies at Technical University of Berlin (TU Berlin, Charlottenburg campus), I bring both seasoned commercial execution and strong digital process skills to support ${comp} from day one.`;
+
+        let enP2 = `In my most recent position as Office Manager & Legal Assistant at SERS Rechtsanwaltsgesellschaft mbH in Berlin (2025–2026), I independently organized and steered the firm’s entire secretariat and office operations. My daily responsibilities encompassed written and telephone correspondence with clients, courts, and public authorities in native German and C2-level English, structured document and deadline control, preparatory bookkeeping and invoicing, and continuous digitization of internal office workflows. Prior to that, as Junior Project Lead & Office Operations at zett.events (2023–2025), I managed commercial and organizational project planning—including budget control, quote calculation, invoicing, vendor management, and internal scheduling and payroll administration for working students and temporary staff.`;
+
+        let enP3 = ``;
+        if (isHr) {
+          enP3 = `Additionally, during my tenure as a Working Student in Quality Management, Recruiting & PR at Vergleich.org (VGL Publishing AG), I independently handled recruiting, contract processing, and onboarding of new freelancers while coordinating external partners. Paired with my three-year dual B.A. study program with Accor Hotels in Berlin (where I managed front- and back-office operations, guest relations, and accounting support) and my ongoing B.Sc. in Computer Science at TU Berlin, I bridge strong people and organizational skills with advanced IT proficiency (MS Office 365, HTML/CSS, Python basics, and process automation).`;
+        } else if (isEvt) {
+          enP3 = `Complementing my agency work at zett.events, I have served as an on-site Event Team Lead since 2019 for trade fairs, congresses, and corporate events across Berlin, overseeing team briefings, check-in workflows, and direct client liaison. Furthermore, from my dual B.A. degree in Business Administration with Accor Hotels (including a Marketing & PR semester abroad at Universidad de Girona, Spain) and my work at Vergleich.org, I bring hands-on experience in hospitality, PR, quality assurance, and media editing (DaVinci Resolve, Wondershare Filmora, Adobe Audition CC), alongside advanced MS Office and IT process optimization skills from my current B.Sc. studies at TU Berlin.`;
+        } else {
+          enP3 = `Earlier stations in my career further broadened my commercial and administrative toolkit: as a Working Student at Vergleich.org (VGL Publishing AG), I managed recruiting, contract administration, quality assurance, and XML/HTML file maintenance, while during my dual B.A. degree with Accor Hotels in Berlin, I steered front- and back-office operations, contract administration, and preparatory accounting. Studying B.Sc. Computer Science at TU Berlin (directly at Zoologischer Garten / Charlottenburg) allows me to combine this commercial background with strong IT affinity (advanced Excel/Word/PowerPoint, HTML/CSS/Python basics, workflow digitization). I communicate fluently in German (native), Vietnamese (native), English (C2 Proficient), and Spanish (B1), and am flexibly available for 15 to 20 hours per week.`;
+        }
+
+        let enP4 = `I would be delighted to bring my structured, solution-oriented approach and positive energy to your team at ${comp} as ${cleanTitle}. Thank you very much for your time and consideration—I look forward to the opportunity of a personal interview.`;
+
+        return enHeader + `Dear Recruiting Team at ${comp},\n\n${enP1}\n\n${enP2}\n\n${enP3}\n\n${enP4}\n\nSincerely,\nNancy Schütze`;
       }
 
-      const comp = addr.company || job.company || 'Ihrem Unternehmen';
-      const title = job.title || 'Werkstudentin Office Management (m/w/d)';
-      const desc = (job.description || '').toLowerCase();
+      // Full, deeply tailored 4-paragraph German DIN 5008 Anschreiben for Nancy
+      let deRoleHook = "ein reibungslos organisiertes Office, strukturierte kaufmännische Prozesse und eine proaktive Teamunterstützung";
+      if (isKanzlei) deRoleHook = "eine präzise Kanzlei- und Sekretariatsorganisation, verlässliche Fristenkontrolle sowie eine souveräne Mandantenkommunikation";
+      else if (isEvt) deRoleHook = "eine durchdachte Projekt- und Eventorganisation, präzise Budget- und Dienstleistersteuerung sowie kreative Umsetzungsstärke";
+      else if (isHr) deRoleHook = "strukturierte Recruiting- und Onboarding-Prozesse, verlässliche Personaleinsatzplanung und eine herzliche Teamkultur";
+      else if (isAcct) deRoleHook = "gewissenhafte vorbereitende Buchhaltung, präzise Angebots- undchnungsabwicklung sowie strukturierte Backoffice-Prozesse".replace("undchnungs", "und Rechnungs");
 
-      const isAcct = desc.includes('buchhalt') || desc.includes('rechnung') || desc.includes('datev') || desc.includes('finance');
-      const isEvt = desc.includes('event') || desc.includes('veranstaltung') || desc.includes('catering') || desc.includes('meeting');
-      const isHr = desc.includes('hr') || desc.includes('personal') || desc.includes('onboarding');
-      const isKanzlei = desc.includes('kanzlei') || desc.includes('anwalt') || desc.includes('recht');
+      let deP1 = `mit großem Interesse bewerbe ich mich bei ${comp} als ${cleanTitle}. Da ich bereits als Office Managerin & Kanzleiassistenz in einer Berliner Rechtsanwaltskanzlei sowie als Junior Projektleiterin & Office Operations in einer Eventagentur die Gesamtverantwortung für Sekretariat, Backoffice und kaufmännische Abläufe übernommen habe, weiß ich aus der Praxis, wie entscheidend ${deRoleHook} für den gemeinsamen Erfolg sind. Mit meinem abgeschlossenen dualen Bachelorstudium in Business Administration (B.A.) und meinem aktuellen Zweitstudium der Informatik (B.Sc.) an der Technischen Universität Berlin bringe ich genau die Verbindung aus kaufmännischer Routine, Organisationstalent und digitaler Prozessstärke mit, um Ihr Team ab dem ersten Tag wirksam zu entlasten.`;
 
-      let p2 = "In meiner letzten Position als Office Managerin bei der SERS Rechtsanwaltsgesellschaft mbH habe ich den gesamten Kanzlei- und Sekretariatsbetrieb eigenverantwortlich koordiniert. ";
-      if (isAcct) {
-        p2 += "Hierbei gehörten die vorbereitende Buchhaltung, das Rechnungs- und Mahnwesen sowie das Fristen- und Dokumentenmanagement zu meinen täglichen Kernaufgaben. ";
-      } else if (isKanzlei) {
-        p2 += "Hierbei lagen die Kommunikation mit Mandanten und Behörden auf Deutsch und Englisch (C2), das Fristenmanagement sowie die Unterstützung der Geschäftsführung in meiner Verantwortung. ";
+      let deP2 = `In meiner jüngsten Position als Office Managerin & Kanzleiassistenz bei der SERS Rechtsanwaltsgesellschaft mbH in Berlin (2025–2026) habe ich den gesamten Kanzlei- und Sekretariatsbetrieb eigenverantwortlich gesteuert. Zu meinen täglichen Kernaufgaben zählten die schriftliche und telefonische Korrespondenz mit Mandanten, Gerichten und Behörden auf Deutsch (Muttersprache) und Englisch (C2), die strukturierte Dokumenten- und Fristenorganisation, die vorbereitende Buchhaltung und Rechnungserstellung sowie die Digitalisierung interner Büroabläufe. Zuvor verantwortete ich als Junior Projektleitung & Office Operations bei zett.events (2023–2025) die kaufmännische und organisatorische Planung von Projekten inklusive Budget-, Event- und Personalsteuerung, eigenständiger Angebotskalkulation sowie der Einsatzplanung und Abrechnung für Werkstudierende und Aushilfen.`;
+
+      let deP3 = ``;
+      if (isHr) {
+        deP3 = `Darüber hinaus konnte ich bereits als Werkstudentin im Bereich Qualitätsmanagement, Recruiting & PR bei Vergleich.org (VGL Publishing AG) fundierte Erfahrung im Recruiting, in der Vertragsabwicklung und im Onboarding neuer Freelancer sowie in der Steuerung externer Dienstleister sammeln. Ergänzt durch mein duales B.A.-Studium bei Accor Hotels in Berlin (Front- & Back-Office, Vertragsverwaltung und Buchhaltung) sowie mein aktuelles Informatikstudium an der TU Berlin (Campus Charlottenburg / Zoologischer Garten) verbinde ich hohe Menschenkenntnis und Kommunikationsstärke mit ausgeprägter IT-Affinität (MS Office 365 auf Fortgeschrittenen-Niveau, digitale Akten- und Prozessoptimierung sowie Grundlagen in HTML, CSS und Python). Als Muttersprachlerin in Deutsch und Vietnamesisch mit verhandlungssicherem Englisch (C2) und gutem Spanisch (B1) stehe ich Ihnen flexibel mit 15 bis 20 Wochenstunden zur Verfügung.`;
+      } else if (isEvt) {
+        deP3 = `Ergänzend zu meiner Projektleitung bei zett.events bin ich seit 2019 nebenberuflich als Vor-Ort-Teamleiterin bei Messen, Kongressen und Corporate Events tätig, wo ich das Briefing und die Koordination der Einsatzteams sowie die direkte Betreuung der Auftraggeber verantworte. Aus meinem dualen Bachelorstudium (B.A. Business Administration) bei Accor Hotels in Berlin – inklusive eines Auslandssemesters im Schwerpunkt Marketing & PR an der Universidad de Girona in Spanien – sowie meiner Tätigkeit bei Vergleich.org (Qualitätsmanagement & PR) bringe ich zudem fundierte Erfahrung in Guest Relations, Text- und Qualitätsmanagement sowie im Video- und Audio-Editing (DaVinci Resolve, Wondershare Filmora, Adobe Audition CC) mit. Durch mein laufendes Studium an der TU Berlin (Standort Charlottenburg / Zoo) bin ich mit 15 bis 20 Wochenstunden zeitlich und örtlich besonders flexibel einsatzbereit.`;
       } else {
-        p2 += "Dazu gehörten die professionelle Kommunikation auf Deutsch und Englisch (C2), die Dokumentenorganisation sowie die vorbereitende Buchhaltung. ";
+        deP3 = `Weitere wertvolle Praxiserfahrung sammelte ich als Werkstudentin bei Vergleich.org (VGL Publishing AG) im Recruiting, in der Vertragsabwicklung, Qualitätssicherung und technischen Datenpflege (XML/HTML) sowie während meines dreijährigen dualen Bachelorstudiums bei Accor Hotels in Berlin, wo ich das operative Front- und Back-Office, das Beschwerdemanagement sowie die vorbereitende Buchhaltung und Vertragsverwaltung unterstützte. Durch mein laufendes Studium (B.Sc. Informatik) an der Technischen Universität Berlin direkt am Standort Charlottenburg / Zoologischer Garten verbinde ich diese mehrjährige kaufmännische Berufserfahrung mit hoher digitaler Kompetenz (fortgeschrittenes MS Office, IT-Prozessoptimierung sowie HTML/CSS/Python-Grundlagen). Neben Deutsch und Vietnamesisch als Muttersprachen kommuniziere ich verhandlungssicher auf Englisch (C2) sowie auf Spanisch (B1) und bin mit 15 bis 20 Wochenstunden flexibel einsetzbar.`;
       }
 
-      if (isEvt) {
-        p2 += "Zuvor konnte ich bei zett.events fundierte Praxiserfahrung in der Eventplanung, Gästebetreuung und Lieferantenkoordination sammeln.";
-      } else if (isHr) {
-        p2 += "Zuvor habe ich bei zett.events und im dualen Studium Erfahrung in der Personaleinsatzplanung und im Onboarding gesammelt.";
-      } else {
-        p2 += "Ergänzend bringe ich aus meiner Tätigkeit bei zett.events Erfahrung in Termin- und Reiseplanung sowie Gästebetreuung mit.";
-      }
+      let deP4 = `Gerne möchte ich meine strukturierte, lösungsorientierte Arbeitsweise und meine positive Energie bei ${comp} als ${cleanTitle} einbringen. Über die Einladung zu einem persönlichen Kennenlernen freue ich mich sehr.`;
 
-      return header + `Sehr geehrtes Recruiting-Team von ${comp},\n\nein reibungslos organisiertes Office bildet das Rückgrat jedes erfolgreichen Teams. Da ich bereits als Office Managerin in einer Berliner Rechtsanwaltskanzlei sowie als Junior Projektleiterin in einer Eventagentur umfassende Verantwortung für Sekretariat, Backoffice und kaufmännische Abläufe übernommen habe, bewerbe ich mich mit großer Begeisterung bei Ihnen als ${title}.\n\n${p2}\n\nAktuell absolviere ich mein Studium an der Technischen Universität Berlin (Standort Charlottenburg). Dadurch verbinde ich kaufmännische Praxiserfahrung mit digitaler Affinität (MS Office 365, Cloud-Dokumentenverwaltung) und bin als Werkstudentin mit 15 bis 20 Wochenstunden zeitlich und örtlich flexibel einsatzbereit.\n\nGerne möchte ich Ihr Team bei ${comp} tatkräftig unterstützen und für perfekt strukturierte Büroabläufe sorgen. Über eine Einladung zu einem persönlichen Gespräch freue ich mich sehr.\n\nMit freundlichen Grüßen\nNancy Schütze`;
+      return header + `Sehr geehrtes Recruiting-Team von ${comp},\n\n${deP1}\n\n${deP2}\n\n${deP3}\n\n${deP4}\n\nMit freundlichen Grüßen\nNancy Schütze`;
     }
 
     function copyGeneratedCoverLetter(jobId) {
