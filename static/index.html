@@ -627,13 +627,25 @@
     function printGoogleDoc(jobId) {
       const docEl = document.getElementById('liveGoogleDocA4_' + jobId);
       if (!docEl) return;
-      
+
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      const isGuillermo = (activeUser === 'guillermo');
+      const rawComp = (job && job.company ? job.company : 'Unternehmen').replace(/[^a-zA-Z0-9äöüÄÖÜß_-]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
+      const pdfTitle = isGuillermo
+        ? ('Guillermo_Hernandez_Cover_Letter_' + rawComp)
+        : ('Nancy_Schuetze_Anschreiben_' + rawComp);
+
       const printWin = window.open('', '_blank');
       if (!printWin) return;
-      const openTag = '<' + 'html><' + 'head><title>Anschreiben - ' + jobId + '</title>';
-      const styleTag = '<style>@page { size: A4; margin: 20mm; } body { font-family: Calibri, Segoe UI, Arial, sans-serif; font-size: 11pt; line-height: 1.5; color: #111; margin: 0; padding: 20px; }</style></' + 'head><' + 'body>';
+      const openTag = '<' + 'html><' + 'head><meta charset="UTF-8"><title>' + pdfTitle + '</title>';
+      const styleTag = '<style>' +
+        '@page { size: A4 portrait; margin: 0mm !important; } ' +
+        'html, body { width: 210mm; margin: 0 !important; padding: 0 !important; background: #ffffff; color: #111827; font-family: Calibri, "Segoe UI", Arial, sans-serif; font-size: 11pt; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; } ' +
+        '.a4-print-wrapper { padding: 22mm 20mm 20mm 22mm; box-sizing: border-box; width: 100%; }' +
+        '</style></' + 'head><' + 'body>';
       const closeTag = '</' + 'body></' + 'html>';
-      printWin.document.write('<!DOCTYPE html>' + openTag + styleTag + docEl.innerHTML + closeTag);
+      printWin.document.write('<!DOCTYPE html>' + openTag + styleTag + '<div class="a4-print-wrapper">' + docEl.innerHTML + '</div>' + closeTag);
       printWin.document.close();
       printWin.focus();
       setTimeout(() => { printWin.print(); }, 250);
