@@ -1058,7 +1058,7 @@
       // Generate bespoke cover letter with resolved recipient address
       const addr = getResolvedJobAddress(job);
       const clFormat = localStorage.getItem('cl_format_pref') || 'full';
-      const clLang = localStorage.getItem('cl_lang_pref_' + job.id) || (currentLang === 'en' ? 'en' : 'de');
+      const clLang = localStorage.getItem('cl_lang_pref_' + job.id) || (activeUser === 'guillermo' ? 'en' : (currentLang === 'en' ? 'en' : 'de'));
       const clText = buildTailoredCoverLetter(job, clFormat === 'full', clLang);
 
       // Pre-compute A4 HTML document for the Google Doc editor
@@ -1478,6 +1478,39 @@
     }
 
     const KNOWN_COMPANY_ADDRESSES = {
+      'appinio': { name: 'Appinio GmbH', department: 'People & Culture / Talent Acquisition', street: 'Friedrichstraße 68', zipCity: '10117 Berlin' },
+      '1komma5': { name: '1KOMMA5° GmbH (Standort Berlin)', department: 'People & Culture', street: 'Lohmühlenstraße 65', zipCity: '12435 Berlin' },
+      '50hertz': { name: '50Hertz Transmission GmbH', department: 'Personal / Recruiting', street: 'Heidestraße 2', zipCity: '10557 Berlin' },
+      'amazon': { name: 'Amazon Development Center Germany GmbH', department: 'University Talent Acquisition', street: 'Krausenstraße 38', zipCity: '10117 Berlin' },
+      'biotronik': { name: 'BIOTRONIK SE & Co. KG', department: 'Human Resources', street: 'Woermannkehre 1', zipCity: '12359 Berlin' },
+      'bitkom': { name: 'Bitkom e.V.', department: 'Personalabteilung', street: 'Albrechtstraße 10', zipCity: '10117 Berlin' },
+      'boston consulting': { name: 'The Boston Consulting Group GmbH', department: 'Recruiting Team Berlin', street: 'Dircksenstraße 41', zipCity: '10178 Berlin' },
+      'buena': { name: 'Buena (Tech-Enabled Property Management)', department: 'People & Talent', street: 'Rosenthaler Straße 38', zipCity: '10178 Berlin' },
+      'cloover': { name: 'Cloover GmbH', department: 'People & Operations', street: 'Oranienburger Straße 27', zipCity: '10117 Berlin' },
+      'databricks': { name: 'Databricks Germany GmbH', department: 'University Recruiting', street: 'Friedrichstraße 126', zipCity: '10117 Berlin' },
+      'finanzfluss': { name: 'Finanzfluss (Finflow GmbH)', department: 'Recruiting Team', street: 'Lobeckstraße 36', zipCity: '10969 Berlin' },
+      'flink': { name: 'Flink SE', department: 'People & Culture', street: 'Brunnenstraße 19-21', zipCity: '10119 Berlin' },
+      'fraunhofer': { name: 'Fraunhofer-Institut für Produktionsanlagen (IPK)', department: 'Personalabteilung', street: 'Pascalstraße 8-9', zipCity: '10587 Berlin' },
+      'funke': { name: 'FUNKE Mediengruppe Berlin', department: 'Personal & Organisation', street: 'Friedrichstraße 70', zipCity: '10117 Berlin' },
+      'gasag': { name: 'GASAG AG', department: 'Personalmanagement', street: 'EUREF-Campus 23-24', zipCity: '10829 Berlin' },
+      'gotphoto': { name: 'GotPhoto (fotograf.de GmbH)', department: 'People & Culture', street: 'Lohmühlenstraße 65', zipCity: '12435 Berlin' },
+      'koro': { name: 'KoRo Handels GmbH', department: 'People & Culture', street: 'Hauptstraße 26', zipCity: '10827 Berlin' },
+      'lucanet': { name: 'LucaNet AG', department: 'People & Culture', street: 'Alexanderplatz 1', zipCity: '10178 Berlin' },
+      'arc intelligence': { name: 'ARC Intelligence GmbH', department: 'Hiring Team / Operations', street: 'Torstraße 177', zipCity: '10115 Berlin' },
+      'finoa': { name: 'Finoa GmbH', department: 'People & Talent', street: 'Charlottenstraße 4', zipCity: '10969 Berlin' },
+      'solaris': { name: 'Solaris SE', department: 'Talent Acquisition', street: 'Cuvrystraße 53', zipCity: '10997 Berlin' },
+      'raisin': { name: 'Raisin GmbH', department: 'People & Culture', street: 'Immanuelkirchstraße 14a', zipCity: '10405 Berlin' },
+      'clark': { name: 'CLARK Germany GmbH', department: 'People & Organization', street: 'Zimmerstraße 16', zipCity: '10969 Berlin' },
+      'wefox': { name: 'wefox Germany GmbH', department: 'Talent Acquisition', street: 'Karl-Liebknecht-Straße 29', zipCity: '10178 Berlin' },
+      'personio': { name: 'Personio SE & Co. KG', department: 'Talent Acquisition', street: 'rund um den Potsdamer Platz 1', zipCity: '10785 Berlin' },
+      'contentful': { name: 'Contentful GmbH', department: 'Talent Acquisition Team', street: 'Max-Urich-Straße 3', zipCity: '13355 Berlin' },
+      'mambu': { name: 'Mambu GmbH', department: 'People & Culture', street: 'Oberwallstraße 6', zipCity: '10117 Berlin' },
+      'omio': { name: 'Omio Corp. / GoEuro Travel GmbH', department: 'Talent Acquisition', street: 'Warschauer Platz 12', zipCity: '10245 Berlin' },
+      'home24': { name: 'home24 SE', department: 'People & Organization', street: 'Otto-Ostrowski-Straße 3', zipCity: '10249 Berlin' },
+      'check24': { name: 'CHECK24 Vergleichsportal GmbH', department: 'Personalabteilung / Recruiting', street: 'Spittelmarkt 12', zipCity: '10117 Berlin' },
+      'dkb': { name: 'Deutsche Kreditbank AG (DKB)', department: 'Bereich Personal / Recruiting', street: 'Taubenstraße 7-9', zipCity: '10117 Berlin' },
+      'sap': { name: 'SAP SE Berlin Campus', department: 'Talent Acquisition', street: 'Rahel-Hirsch-Straße 10', zipCity: '10557 Berlin' },
+      'tesla': { name: 'Tesla Manufacturing Brandenburg SE', department: 'Recruiting Team Berlin', street: 'Tesla-Straße 1', zipCity: '15537 Grünheide / Berlin' },
       'hrmony': { name: 'Hrmony GmbH', department: 'Personalabteilung / Recruiting-Team', street: 'Rosenthaler Straße 40', zipCity: '10178 Berlin' },
       'soullution': { name: 'Soullution MMP GmbH', department: 'Personalabteilung / Recruiting-Team', street: 'Kurfürstendamm 195', zipCity: '10707 Berlin' },
       'careship': { name: 'Careship GmbH', department: 'People & Culture / Recruiting', street: 'Rosenthaler Straße 13', zipCity: '10119 Berlin' },
@@ -1846,7 +1879,70 @@
       }
 
       if (activeUser === 'guillermo') {
-        return header + `Dear Hiring Team at ${addr.company || job.company || 'your company'},\n\nI am writing to apply for the ${job.title || 'Product / Project Management'} position in Berlin.\n\nWith hands-on experience in high-volume operations, technical data reporting (SQL, Redash, Looker Studio), and cross-functional team coordination, I bridge strategic planning with practical builder execution.\n\nI look forward to discussing how my experience can support ${addr.company || job.company}.\n\nSincerely,\nGuillermo Hernandez`;
+        const comp = addr.company || job.company || 'your company';
+        const rawTitle = job.title || 'Working Student Product & Project Management';
+        const cleanTitle = rawTitle.replace(/\s*\(m\/w\/d\)/ig, '').replace(/\s*\(w\/m\/d\)/ig, '').replace(/\s*\(f\/m\/d\)/ig, '').replace(/\s*\(m\/f\/d\)/ig, '').trim();
+        const desc = (`${rawTitle} ${job.description || ''} ${job.why_fits || ''}`).toLowerCase();
+
+        const isProdOps = desc.includes('product operations') || desc.includes('product ops') || desc.includes('product');
+        const isAiAuto = desc.includes('ai') || desc.includes('artificial intelligence') || desc.includes('automation') || desc.includes('llm') || desc.includes('chatbot') || desc.includes('agent') || desc.includes('workflow');
+        const isData = desc.includes('sql') || desc.includes('data') || desc.includes('analytics') || desc.includes('reporting') || desc.includes('kpi') || desc.includes('bi ') || desc.includes('dashboard') || desc.includes('research') || desc.includes('quantitative');
+        const isCxOps = desc.includes('customer') || desc.includes('cx') || desc.includes('operations') || desc.includes('support') || desc.includes('process') || desc.includes('quality');
+
+        // German cover letter option for Guillermo if DE is selected
+        if (clLang === 'de') {
+          const deHeader = includeHeader
+            ? `Guillermo Hernandez\nSöhtstraße 16 · 12203 Berlin\nMobil: +49 176 8513 6597 · E-Mail: guillejhl@gmail.com\n\n${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}\n\nBerlin, ${today}\n\nBewerbung als ${cleanTitle}\n\n`
+            : '';
+
+          let deP2 = `In meiner aktuellen Position als Junior Project Manager (Werkstudent) bei der AUTO1 Group in Berlin arbeite ich eng mit Product Managern, Entwicklern und regionalen Operations-Teams in neun europäischen Märkten zusammen. Dabei habe ich den Rollout und die kontinuierliche Optimierung unseres KI-Voicebots über 9 Ländermärkte hinweg begleitet, wodurch Millionen von Anrufen geroutet, die Annahmequote von 65 % auf 85 % (+20 %) gesteigert und die Call-to-Booking-Konversion auf 57,8 % (+25 %) erhöht wurden. Zudem verantworte ich die Wissensarchitektur und Vektor-/Retrieval-Datenbanken für unseren KI-Chatbot mit über 30.000 monatlichen Kundenanfragen.`;
+          if (isProdOps) {
+            deP2 += ` Um die Schnittstelle zwischen Produktentwicklung und operativen Teams zu stärken, habe ich eigene interne Web-Tools konzipiert und ausgerollt – darunter eine KI-QA-Evaluierungsplattform mit Bulk-Review-Pipelines sowie ein zentrales über GitHub versioniertes Kundenbewertungs-Portal.`;
+          } else if (isData) {
+            deP2 += ` Parallel dazu führe ich täglich quantitative Analysen auf komplexen, unstrukturierten Multi-Market-Datensätzen mit SQL (Redash) und Advanced Excel durch und erstelle automatisierte KPI-Dashboards in Looker Studio und Tableau.`;
+          } else {
+            deP2 += ` Darüber hinaus habe ich eine länderübergreifende Echtzeit-Wissensdatenbank aufgebaut sowie über REST APIs und Low-Code-Workflows automatisierte Angebots-Tools entwickelt, die manuelle Prozesszeiten drastisch reduzieren.`;
+          }
+
+          return deHeader +
+            `Sehr geehrtes Recruiting-Team von ${comp},\n\n` +
+            `mit großem Interesse bewerbe ich mich um die Position als ${cleanTitle} bei ${comp}. Durch meine praktische Erfahrung an der Schnittstelle von Product Operations, KI-Automatisierung und datengetriebenem Projektmanagement bei der AUTO1 Group weiß ich, wie entscheidend strukturierte Prozesse, verlässliche Datenanalysen und schnelle technische Umsetzung für skalierende Teams sind. Mit meinem abgeschlossenen Bachelor in Digital Product Management und meinem laufenden Masterstudium in International Business Management in Berlin bringe ich genau diese Kombination aus analytischer Präzision und Hands-on-Umsetzungsstärke mit.\n\n` +
+            `${deP2}\n\n` +
+            `Was meine Arbeitsweise besonders auszeichnet, ist mein Anspruch, nicht nur Probleme zu analysieren, sondern direkt funktionierende Lösungen zu bauen. Ich arbeite täglich mit SQL (Redash), Looker Studio, Tableau, Git/GitHub, Figma und modernen Automatisierungs-Workflows, um unstrukturierte Daten in klare Entscheidungsgrundlagen zu übersetzen. Durch meine Projektarbeit bei Franz Schneider Brakel (FSB) in Berlin sowie meine internationale Erfahrung kommuniziere ich fließend auf Englisch (C1/C2), Spanisch (Muttersprache) und im Arbeitsalltag auf Deutsch (B1) und stehe Ihnen flexibel mit bis zu 20 Wochenstunden zur Verfügung.\n\n` +
+            `Die Möglichkeit, das Team von ${comp} tatkräftig zu unterstützen und operative sowie produktseitige Prozesse aktiv mitzugestalten, motiviert mich sehr. Über eine Einladung zu einem persönlichen Gespräch freue ich mich daher besonders.\n\n` +
+            `Mit freundlichen Grüßen\nGuillermo Hernandez`;
+        }
+
+        // Rich, role-tailored English Cover Letter for Guillermo
+        let focusHook = "bridging product strategy, cross-functional operations, and data-driven execution";
+        if (isProdOps && isData) {
+          focusHook = "connecting product operations, quantitative data insights, and scalable internal tooling";
+        } else if (isProdOps) {
+          focusHook = "streamlining product operations, user feedback loops, and cross-functional workflows";
+        } else if (isAiAuto) {
+          focusHook = "scaling conversational AI systems, retrieval knowledge bases, and automated operational workflows";
+        } else if (isData) {
+          focusHook = "transforming complex, unstructured datasets into actionable KPI reporting and operational improvements";
+        }
+
+        let p1 = `I am writing to apply for the ${cleanTitle} role at ${comp}. Having spent the past year embedded in cross-functional Product, Tech, and Operations teams at AUTO1 Group in Berlin, I have seen firsthand how much impact comes from ${focusHook}. Combined with my Bachelor’s degree in Digital Product Management and my ongoing Master’s studies in International Business Management in Berlin, I bring both rigorous analytical structure and a hands-on builder mindset that allows me to contribute immediately to your team.`;
+
+        let p2 = `In my current role as a Junior Project Manager (Working Student) at AUTO1 Group, I collaborate daily with product managers, engineers, and regional leads across nine European markets. `;
+        if (isProdOps) {
+          p2 += `A centerpiece of my work has been scaling our conversational AI product suite across 9 international markets, routing millions of customer calls while lifting inbound answer rates from 65% to 85% (+20%) and increasing call-to-booking conversion to 57.8% (+25%). Because smooth product operations depend on fast feedback loops and reliable tooling, I also designed and shipped several internal web tools: an AI Conversation QA & Evaluation platform with bulk-review pipelines for auditing model quality, a real-time cross-country collaboration knowledge base standardizing multi-market processes, and a centralized Google Reviews & Trustpilot management portal (versioned via Git/GitHub) that turned manual review discovery into a one-click workflow.`;
+        } else if (isAiAuto) {
+          p2 += `I have led integrations and continuous optimization for our AI voice bot across 9 international markets (routing millions of calls, boosting answer rates from 65% to 85%, and lifting booking conversion by 25% to 57.8%), while structuring and maintaining custom vector and retrieval knowledge bases for an AI chatbot handling over 30,000 monthly customer conversations. Beyond managing existing systems, I actively build custom automation tools: I developed an internal AI Conversation QA & Evaluation web app with bulk-review pipelines, as well as an automated Price-Lead Offer Email engine integrating internal admin systems, REST APIs, and low-code workflows.`;
+        } else if (isData) {
+          p2 += `Alongside three project managers, I perform quantitative analysis on complex, unstructured multi-market datasets using SQL (Redash) and Advanced Excel to build automated company-wide KPI dashboards across Looker Studio and Tableau. These data pipelines directly powered the optimization of our 9-market AI voice bot (increasing answer rates from 65% to 85% and call-to-booking conversion to 57.8% across millions of calls) and guided retrieval improvements for our AI chatbot serving 30,000+ monthly inquiries. Whenever reporting or operational bottlenecks emerged, I built custom web utilities and REST API automations to eliminate manual data handling.`;
+        } else {
+          p2 += `Working across 9 international markets, I supported the rollout and continuous optimization of our AI voice bot, which routes millions of calls and achieved an increase in answer rates from 65% to 85% (+20%) and a 57.8% call-to-booking conversion rate (+25%). I also oversee knowledge base architecture for an AI chatbot handling 30,000+ monthly inquiries, created a real-time cross-country collaboration knowledge base enabling live cross-border agent support, and built internal web applications—including an AI QA evaluation platform and an automated REST API offer-generation tool—to standardize and accelerate team workflows.`;
+        }
+
+        let p3 = `Beyond my core responsibilities at AUTO1 Group, I thrive on untangling disorganized data and turning operational friction into clean, repeatable processes. Day to day, I query SQL in Redash, build live dashboards in Looker Studio, Tableau, and Advanced Excel, and prototype lightweight internal tools using JavaScript/Google Apps Script, REST APIs, and Git/GitHub whenever off-the-shelf software falls short. Earlier project experience with Franz Schneider Brakel (FSB) in Berlin—where I conducted quantitative market research to design a digital subscription model—further sharpened my ability to align product and business stakeholders. Working in international teams, I communicate fluently in English (C1/C2) and Spanish (native) alongside working German (B1), and I am available for up to 20 hours per week in Berlin.`;
+
+        let p4 = `What excites me most about ${comp} is the opportunity to bring this combination of product operations experience, SQL/BI analytics, and proactive builder execution to support your team in the ${cleanTitle} role. Thank you very much for your time and consideration—I look forward to the opportunity to discuss how I can contribute to ${comp} in an interview.`;
+
+        return header + `Dear Hiring Team at ${comp},\n\n${p1}\n\n${p2}\n\n${p3}\n\n${p4}\n\nSincerely,\nGuillermo Hernandez`;
       }
 
       if (lang === 'en' && activeUser === 'nancy') {
