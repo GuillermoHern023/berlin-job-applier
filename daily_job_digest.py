@@ -326,8 +326,12 @@ def build_independent_website(g_jobs, n_jobs):
         "nancy_jobs": n_jobs,
     }
 
+    if (STATIC_DIR / "docx.umd.js").exists():
+        shutil.copy2(STATIC_DIR / "docx.umd.js", DOCS_DIR / "docx.umd.js")
+
     template_html = (STATIC_DIR / "index.html").read_text(encoding="utf-8")
-    state_script = f"<script>window.STATIC_STATE = {json.dumps(static_state, ensure_ascii=False)};</script>"
+    safe_json = json.dumps(static_state, ensure_ascii=False).replace("</", "<\\/")
+    state_script = f"<script>window.STATIC_STATE = {safe_json};</script>"
     standalone_html = template_html.replace("<!-- STATIC_STATE_INJECTION_POINT -->", state_script)
 
     (DOCS_DIR / "index.html").write_text(standalone_html, encoding="utf-8")

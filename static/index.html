@@ -13,18 +13,20 @@
       document.documentElement.classList.remove('dark');
     }
   </script>
-  <script src="docx.umd.js"></script>
-  <script>if (typeof docx === 'undefined') { document.write('<script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js"><\\/script>'); }</script>
+  <script src="docx.umd.js" onerror="var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js';document.head.appendChild(s);"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-    };
+    if (typeof tailwind !== 'undefined') {
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    [id$="Modal"].hidden, #liveBanner.hidden, #portalToast.hidden, #detailViewDoc.hidden, #detailViewOverview.hidden { display: none !important; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: #191919;
@@ -455,16 +457,39 @@
       }
     };
 
-    let currentLang = localStorage.getItem('app_lang') || 'de';
+    let currentLang = (localStorage.getItem('app_lang') === 'en') ? 'en' : 'de';
+
+    function showToast(msg) {
+      let toast = document.getElementById('portalToast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'portalToast';
+        toast.className = 'fixed bottom-5 right-5 z-50 px-4 py-2.5 rounded-lg bg-gray-900 text-white text-xs font-bold shadow-xl border border-gray-700 transition-opacity duration-300';
+        document.body.appendChild(toast);
+      }
+      toast.textContent = msg;
+      toast.style.opacity = '1';
+      toast.classList.remove('hidden');
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.classList.add('hidden'), 300);
+      }, 2600);
+    }
 
     function toggleLanguage() {
       currentLang = currentLang === 'de' ? 'en' : 'de';
       localStorage.setItem('app_lang', currentLang);
+      if (selectedJobId) {
+        localStorage.setItem('cl_lang_pref_' + selectedJobId, currentLang);
+        localStorage.removeItem('job_doc_content_' + selectedJobId);
+      }
       applyLanguage();
+      showToast(currentLang === 'en' ? '🇬🇧 Switched to English (Cover Letter translated)' : '🇩🇪 Sprache auf Deutsch gewechselt');
     }
 
     function applyLanguage() {
-      const t = I18N[currentLang];
+      const t = I18N[currentLang] || I18N.de;
       
       const flag = document.getElementById('langFlag');
       const label = document.getElementById('langLabel');
@@ -520,7 +545,7 @@
 
     let currentDetailTab = 'doc';
 
-    function switchDetailView(tab) {
+    function switchDetailView(tab, focusEditor = false) {
       currentDetailTab = tab;
       const docView = document.getElementById('detailViewDoc');
       const overviewView = document.getElementById('detailViewOverview');
@@ -531,19 +556,29 @@
         if (docView) docView.classList.remove('hidden');
         if (overviewView) overviewView.classList.add('hidden');
         if (tabDocBtn) {
-          tabDocBtn.className = 'py-2 px-3 border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1.5 transition text-xs';
+          tabDocBtn.className = 'py-2.5 px-3 border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1.5 transition text-xs';
         }
         if (tabOverviewBtn) {
-          tabOverviewBtn.className = 'py-2 px-3 border-b-2 border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition flex items-center gap-1.5 text-xs font-medium';
+          tabOverviewBtn.className = 'py-2.5 px-3 border-b-2 border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition flex items-center gap-1.5 text-xs font-medium';
+        }
+        if (focusEditor && selectedJobId) {
+          const docEl = document.getElementById('liveGoogleDocA4_' + selectedJobId);
+          if (docEl) {
+            docEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            docEl.focus();
+            docEl.classList.add('ring-4', 'ring-blue-400');
+            setTimeout(() => docEl.classList.remove('ring-4', 'ring-blue-400'), 1200);
+            showToast(currentLang === 'en' ? '📄 Google Doc Editor active — click anywhere on the document to edit!' : '📄 Google Doc Live-Editor aktiv – klicke direkt in den Text zum Bearbeiten!');
+          }
         }
       } else {
         if (docView) docView.classList.add('hidden');
         if (overviewView) overviewView.classList.remove('hidden');
         if (tabDocBtn) {
-          tabDocBtn.className = 'py-2 px-3 border-b-2 border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition flex items-center gap-1.5 text-xs font-medium';
+          tabDocBtn.className = 'py-2.5 px-3 border-b-2 border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition flex items-center gap-1.5 text-xs font-medium';
         }
         if (tabOverviewBtn) {
-          tabOverviewBtn.className = 'py-2 px-3 border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1.5 transition text-xs';
+          tabOverviewBtn.className = 'py-2.5 px-3 border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1.5 transition text-xs';
         }
       }
     }
@@ -594,25 +629,14 @@
       if (!docEl) return;
       
       const printWin = window.open('', '_blank');
-      printWin.document.write(`
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>Anschreiben - ${jobId}</title>
-          <style>
-            @page { size: A4; margin: 20mm; }
-            body { font-family: Calibri, 'Segoe UI', Arial, sans-serif; font-size: 11pt; line-height: 1.5; color: #111; margin: 0; padding: 20px; }
-          </style>
-        </head>
-        <body>
-          ${docEl.innerHTML}
-          <script>
-            window.onload = function() { window.print(); }
-          <\\/script>
-        </body>
-        </html>
-      `);
+      if (!printWin) return;
+      const openTag = '<' + 'html><' + 'head><title>Anschreiben - ' + jobId + '</title>';
+      const styleTag = '<style>@page { size: A4; margin: 20mm; } body { font-family: Calibri, Segoe UI, Arial, sans-serif; font-size: 11pt; line-height: 1.5; color: #111; margin: 0; padding: 20px; }</style></' + 'head><' + 'body>';
+      const closeTag = '</' + 'body></' + 'html>';
+      printWin.document.write('<!DOCTYPE html>' + openTag + styleTag + docEl.innerHTML + closeTag);
       printWin.document.close();
+      printWin.focus();
+      setTimeout(() => { printWin.print(); }, 250);
     }
 
     let activeUser = 'nancy';
@@ -640,7 +664,6 @@
 
     function init() {
       updateThemeToggleUi();
-      // Check user from URL hash or default
       const hash = window.location.hash || '';
       if (hash.includes('guillermo')) {
         activeUser = 'guillermo';
@@ -648,17 +671,15 @@
         activeUser = 'nancy';
       }
 
-      applyUserTheme();
-      applyLanguage();
-
       if (window.STATIC_STATE) {
         guillermoJobs = window.STATIC_STATE.jobs || [];
         nancyJobs = window.STATIC_STATE.nancy_jobs || [];
         applyLocalStatusOverrides(guillermoJobs, 'guillermo');
         applyLocalStatusOverrides(nancyJobs, 'nancy');
-        renderJobs();
       }
 
+      applyUserTheme();
+      applyLanguage();
       loadLiveState();
     }
 
@@ -717,6 +738,10 @@
     }
 
     async function loadLiveState() {
+      if (window.location.protocol === 'file:' || window.location.hostname.includes('github.io')) {
+        isLiveBackend = false;
+        return;
+      }
       try {
         const controller = new AbortController();
         const timer = setTimeout(() => controller.abort(), 2000);
@@ -1037,7 +1062,8 @@
       const today = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
       const jobTitle = job.title || (isGuillermo ? "Product / Project Management" : "Werkstudentin");
       const cleanJobTitle = jobTitle.replace(/\s*\(m\/w\/d\)/ig, '').replace(/\s*\(w\/m\/d\)/ig, '').replace(/\s*\(f\/m\/d\)/ig, '').trim();
-      const subjectTitle = isGuillermo ? `Application for ${cleanJobTitle}` : `Bewerbung um eine Stelle als ${cleanJobTitle}`;
+      const isEnDoc = isGuillermo || clLang === 'en';
+      const subjectTitle = isEnDoc ? `Application for ${cleanJobTitle}` : `Bewerbung um eine Stelle als ${cleanJobTitle}`;
 
       // Extract paragraphs for A4 document
       let bodyLines = clText.split('\n');
@@ -1104,7 +1130,7 @@
         </div>
 
         <div style="margin-top: 26px; line-height: 1.6; font-size: 13px; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
-          <div>${isGuillermo ? "Sincerely," : "Mit freundlichen Grüßen"}</div>
+          <div>${isEnDoc ? "Sincerely," : "Mit freundlichen Grüßen"}</div>
           <div style="font-weight: 700; margin-top: 18px; color: #111827;">${senderName}</div>
         </div>
       `;
@@ -1148,7 +1174,7 @@
               </a>
 
               <!-- Google Doc Action Button -->
-              <button onclick="switchDetailView('doc')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 transition flex items-center gap-1.5 shadow-2xs" title="${t.as_google_doc_tooltip}">
+              <button onclick="switchDetailView('doc', true)" class="px-3.5 py-2 rounded-md text-xs font-bold bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 transition flex items-center gap-1.5 shadow-2xs" title="${t.as_google_doc_tooltip}">
                 <span>${t.as_google_doc}</span>
               </button>
 
@@ -1262,7 +1288,7 @@
                 <span class="text-xs font-bold text-purple-900 dark:text-purple-300">${t.cl_box_title}</span>
               </div>
               <div class="flex items-center gap-2">
-                <button onclick="switchDetailView('doc')" class="px-3 py-1.5 rounded bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                <button onclick="switchDetailView('doc', true)" class="px-3 py-1.5 rounded bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
                   <span>${t.as_google_doc}</span>
                 </button>
                 <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-1.5 rounded bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
@@ -1440,6 +1466,28 @@
     }
 
     const KNOWN_COMPANY_ADDRESSES = {
+      'hrmony': { name: 'Hrmony GmbH', department: 'Personalabteilung / Recruiting-Team', street: 'Rosenthaler Straße 40', zipCity: '10178 Berlin' },
+      'soullution': { name: 'Soullution MMP GmbH', department: 'Personalabteilung / Recruiting-Team', street: 'Kurfürstendamm 195', zipCity: '10707 Berlin' },
+      'careship': { name: 'Careship GmbH', department: 'People & Culture / Recruiting', street: 'Rosenthaler Straße 13', zipCity: '10119 Berlin' },
+      'believe': { name: 'Believe Digital GmbH', department: 'HR & Talent Acquisition', street: 'Stralauer Allee 2b', zipCity: '10245 Berlin' },
+      'enpal': { name: 'Enpal B.V. Zweigniederlassung Deutschland', department: 'Talent Acquisition / HR', street: 'Koppenstraße 8', zipCity: '10243 Berlin' },
+      'n26': { name: 'N26 GmbH', department: 'People & Talent', street: 'Voltairestraße 8', zipCity: '10179 Berlin' },
+      'delivery hero': { name: 'Delivery Hero SE', department: 'Talent Acquisition', street: 'Oranienburger Straße 70', zipCity: '10117 Berlin' },
+      'hellofresh': { name: 'HelloFresh SE', department: 'People Operations', street: 'Prinzenstraße 89', zipCity: '10969 Berlin' },
+      'babbel': { name: 'Babbel GmbH', department: 'People & Organization', street: 'Andreasstraße 72', zipCity: '10243 Berlin' },
+      'doctolib': { name: 'Doctolib GmbH', department: 'People Team', street: 'Mehringdamm 51', zipCity: '10961 Berlin' },
+      'auto1': { name: 'AUTO1 Group SE', department: 'HR / Talent Acquisition', street: 'Bergmannstraße 72', zipCity: '10961 Berlin' },
+      'idealo': { name: 'idealo internet GmbH', department: 'People & Culture', street: 'Ritterstraße 11', zipCity: '10969 Berlin' },
+      'axel springer': { name: 'Axel Springer SE', department: 'People & Culture', street: 'Axel-Springer-Straße 65', zipCity: '10888 Berlin' },
+      'kpmg': { name: 'KPMG AG Wirtschaftsprüfungsgesellschaft', department: 'Human Resources', street: 'Heidestraße 58', zipCity: '10557 Berlin' },
+      'pwc': { name: 'PricewaterhouseCoopers GmbH WPG', department: 'Human Capital', street: 'Kapelle-Ufer 4', zipCity: '10117 Berlin' },
+      'deloitte': { name: 'Deloitte GmbH', department: 'Talent Acquisition', street: 'Kurfürstendamm 23', zipCity: '10719 Berlin' },
+      'ey': { name: 'EY GmbH & Co. KG WPG', department: 'Talent Team', street: 'Friedrichstraße 140', zipCity: '10117 Berlin' },
+      'bvg': { name: 'Berliner Verkehrsbetriebe (BVG)', department: 'Personalmanagement', street: 'Holzmarktstraße 15-17', zipCity: '10179 Berlin' },
+      'vattenfall': { name: 'Vattenfall GmbH', department: 'Human Resources', street: 'Chausseestraße 23', zipCity: '10115 Berlin' },
+      'getyourguide': { name: 'GetYourGuide Deutschland GmbH', department: 'People Team', street: 'Sonnenburger Straße 73', zipCity: '10437 Berlin' },
+      'sumup': { name: 'SumUp Payments Limited Berlin', department: 'Talent Acquisition', street: 'Koppenstraße 93', zipCity: '10243 Berlin' },
+      'taxfix': { name: 'Taxfix SE', department: 'People & Culture', street: 'Köpenicker Straße 122', zipCity: '10179 Berlin' },
       'siemens': { name: 'Siemens Energy Global GmbH & Co. KG', department: 'Personalabteilung / Recruiting-Team', street: 'Huttenstraße 12', zipCity: '10553 Berlin' },
       'siemens energy': { name: 'Siemens Energy Global GmbH & Co. KG', department: 'Personalabteilung / Recruiting-Team', street: 'Huttenstraße 12', zipCity: '10553 Berlin' },
       'trade republic': { name: 'Trade Republic Bank GmbH', department: 'People Operations / Recruiting', street: 'Brunnenstraße 19-21', zipCity: '10119 Berlin' },
@@ -1460,13 +1508,14 @@
     };
 
     function getResolvedJobAddress(job) {
-      if (!job) return { company: 'Unternehmen', department: 'Personalabteilung / Recruiting', street: 'Berlin', zipCity: 'Berlin' };
+      if (!job) return { company: 'Unternehmen', department: 'Personalabteilung / Recruiting', street: 'Standort Berlin', zipCity: 'Berlin' };
       
       const customKey = 'job_custom_addr_' + job.id;
       const customSaved = localStorage.getItem(customKey);
       if (customSaved) {
         try {
-          return JSON.parse(customSaved);
+          const parsed = JSON.parse(customSaved);
+          if (parsed && typeof parsed === 'object') return parsed;
         } catch (e) {}
       }
 
@@ -1491,18 +1540,20 @@
       const streetMatch = desc.match(streetRegex);
       const zipMatch = desc.match(zipRegex);
 
-      let street = streetMatch ? streetMatch[1] : '';
-      let zipCity = zipMatch ? `${zipMatch[1]} Berlin` : 'Berlin, Deutschland';
+      let street = streetMatch ? streetMatch[1].trim() : '';
+      let zipCity = zipMatch ? `${zipMatch[1]} Berlin` : 'Berlin';
 
-      const loc = (job.location || '').replace(/,?\s*Germany/i, '').replace(/,?\s*BE/i, '').trim();
-      if (!street && loc && loc !== 'Berlin') {
+      const loc = (job.location || '')
+        .replace(/,\s*Germany/ig, '')
+        .replace(/,\s*Deutschland/ig, '')
+        .replace(/,\s*BE\b/ig, '')
+        .replace(/,\s*Berlin\b/ig, '')
+        .trim();
+      if (!street && loc && !/^berlin$/i.test(loc)) {
         street = loc;
       }
       if (!street) {
         street = 'Standort Berlin';
-      }
-      if (!zipMatch && (!zipCity || zipCity === 'Berlin, Deutschland')) {
-        zipCity = 'Berlin';
       }
 
       return {
@@ -1548,6 +1599,8 @@
 
       const addr = { company, department, street, zipCity };
       localStorage.setItem('job_custom_addr_' + jobId, JSON.stringify(addr));
+      localStorage.removeItem('job_doc_content_' + jobId);
+      showToast('💾 Firmenanschrift gespeichert & im Anschreiben aktualisiert!');
 
       const allJobs = getActiveJobs();
       const job = allJobs.find(j => j.id === jobId);
@@ -1743,6 +1796,7 @@
 
     function setCoverLetterLanguage(jobId, lang) {
       localStorage.setItem('cl_lang_pref_' + jobId, lang);
+      localStorage.removeItem('job_doc_content_' + jobId);
       const allJobs = getActiveJobs();
       const job = allJobs.find(j => j.id === jobId);
       if (!job) return;
@@ -1851,11 +1905,20 @@
       const allJobs = getActiveJobs();
       const job = allJobs.find(j => j.id === jobId);
       if (!job) return;
-      const text = document.getElementById('clDetailTextarea') ? document.getElementById('clDetailTextarea').value : buildTailoredCoverLetter(job);
+      const docEl = document.getElementById('liveGoogleDocA4_' + jobId);
+      const textarea = document.getElementById('clDetailTextarea');
+      let text = '';
+      if (currentDetailTab === 'doc' && docEl) {
+        text = docEl.innerText.trim();
+      } else if (textarea) {
+        text = textarea.value;
+      } else {
+        text = buildTailoredCoverLetter(job);
+      }
       navigator.clipboard.writeText(text).then(() => {
-        alert('📋 Anschreiben-Text in die Zwischenablage kopiert!\n\nDu kannst ihn jetzt mit Strg+V direkt in Indeed oder das Bewerbungsformular einfügen.');
+        showToast(currentLang === 'en' ? '📋 Cover letter copied to clipboard!' : '📋 Anschreiben in die Zwischenablage kopiert!');
       }).catch(() => {
-        alert('Kopiert!');
+        alert('📋 Kopiert!');
       });
     }
 
