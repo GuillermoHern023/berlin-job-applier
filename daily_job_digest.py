@@ -26,6 +26,7 @@ DOCS_DIR = BASE_DIR / "docs"
 REPORT_TXT_PATH = BASE_DIR / "latest_job_digest.txt"
 DASHBOARD_HTML_PATH = BASE_DIR / "dashboard.html"
 ARTIFACT_DASHBOARD_PATH = Path(r"C:\Users\guill\.gemini\antigravity\brain\e708b6f5-3e3c-4683-86c2-48a58698cce4\job_dashboard.html")
+CURRENT_CONV_ARTIFACT_PATH = Path(r"C:\Users\guill\.gemini\antigravity\brain\769566fa-93ba-4c9a-8413-b6c6cda5b296\job_dashboard.html")
 
 RECIPIENT_EMAILS = ["guillejhl@gmail.com", "schuetzenc@gmail.com"]
 GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1o2r4Qvn9SL7gOa05P-up9tiwnCXPmcnOG3kttL_H0Fk/edit"
@@ -230,6 +231,13 @@ def run_fresh_scrape_if_requested(do_scrape: bool):
     n_jobs, n_pruned = prune_and_refresh_job_ages(n_jobs, max_days=10)
     print(f"  -> Job Lifecycle Audit: Pruned {g_pruned} stale Guillermo jobs and {n_pruned} stale Nancy jobs (>1.5 weeks / 10 days old).")
     print(f"  -> Active Fresh Jobs: {len(g_jobs)} for Guillermo, {len(n_jobs)} for Nancy.")
+    from metadata_enricher import enrich_jobs_metadata
+    print("  -> Fetching live applicant counts and posting ages...")
+    enrich_jobs_metadata(g_jobs[:25], force_refresh=True)
+    enrich_jobs_metadata(n_jobs[:25], force_refresh=True)
+    enrich_jobs_metadata(g_jobs, force_refresh=False)
+    enrich_jobs_metadata(n_jobs, force_refresh=False)
+
     save_json(DATA_DIR / "jobs_db.json", g_jobs)
     save_json(DATA_DIR / "nancy_jobs_db.json", n_jobs)
 
@@ -346,6 +354,8 @@ def build_independent_website(g_jobs, n_jobs):
     DASHBOARD_HTML_PATH.write_text(standalone_html, encoding="utf-8")
     try:
         ARTIFACT_DASHBOARD_PATH.write_text(standalone_html, encoding="utf-8")
+        CURRENT_CONV_ARTIFACT_PATH.parent.mkdir(parents=True, exist_ok=True)
+        CURRENT_CONV_ARTIFACT_PATH.write_text(standalone_html, encoding="utf-8")
     except Exception:
         pass
     print(f"  -> Independent site built at: {DOCS_DIR / 'index.html'} and {DASHBOARD_HTML_PATH}")
@@ -628,6 +638,7 @@ def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs, recip
         attachments = [
             OUTPUT_DIR / "Guillermo_Hernandez_CV_Master.pdf",
             OUTPUT_DIR / "Nancy_Schuetze_Lebenslauf_Master.pdf",
+            OUTPUT_DIR / "Nancy_Schuetze_Lebenslauf_Master.docx",
         ]
         # Add #1 tailored job PDF for Guillermo & Nancy if available
         for j in g_jobs:
