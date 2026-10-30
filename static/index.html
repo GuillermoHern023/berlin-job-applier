@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    [id$="Modal"].hidden, #liveBanner.hidden, #portalToast.hidden, #detailViewDoc.hidden, #detailViewOverview.hidden { display: none !important; }
+    [id$="Modal"].hidden, #liveBanner.hidden, #portalToast.hidden, #detailViewDoc.hidden, #detailViewCv.hidden, #detailViewOverview.hidden, #bulletPickerDrawer.hidden { display: none !important; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: #191919;
@@ -343,7 +343,12 @@
                 as_google_doc: "📄 Google Doc öffnen",
         as_google_doc_tooltip: "Als Google Doc direkt hier im Tab bearbeiten",
         tab_doc_editor: "📄 Google Doc (Anschreiben)",
+        tab_cv_editor: "🎓 Maßgeschneiderter CV (1 Seite)",
         tab_overview: "📋 Stellenbeschreibung & Details",
+        btn_tailored_cv: "🎓 Tailored CV öffnen",
+        print_cv_pdf: "🖨️ Tailored CV als PDF speichern",
+        customize_bullets: "🎛️ AUTO1-Projekte für diese Stelle anpassen",
+        tailored_for_badge: "✨ Automatisch auf diese Stelle angepasst",
         open_google_docs_new: "🌐 In Google Docs öffnen (docs.new) ↗",
         print_pdf: "🖨️ PDF drucken",
         copy_all: "📋 Alles kopieren",
@@ -416,7 +421,12 @@
                 as_google_doc: "📄 Open Google Doc",
         as_google_doc_tooltip: "Edit as a Google Doc directly here in this tab",
         tab_doc_editor: "📄 Google Doc (Cover Letter)",
+        tab_cv_editor: "🎓 Tailored CV (1-Page A4)",
         tab_overview: "📋 Job Description & Details",
+        btn_tailored_cv: "🎓 Open Tailored CV",
+        print_cv_pdf: "🖨️ Save Tailored CV (PDF)",
+        customize_bullets: "🎛️ Customize AUTO1 Bullets for This Role",
+        tailored_for_badge: "✨ Auto-Tailored for This Role",
         open_google_docs_new: "🌐 Open in Google Docs (docs.new) ↗",
         print_pdf: "🖨️ Print / Save PDF",
         copy_all: "📋 Copy All",
@@ -548,39 +558,369 @@
     function switchDetailView(tab, focusEditor = false) {
       currentDetailTab = tab;
       const docView = document.getElementById('detailViewDoc');
+      const cvView = document.getElementById('detailViewCv');
       const overviewView = document.getElementById('detailViewOverview');
       const tabDocBtn = document.getElementById('detailSubTabDoc');
+      const tabCvBtn = document.getElementById('detailSubTabCv');
       const tabOverviewBtn = document.getElementById('detailSubTabOverview');
 
-      if (tab === 'doc') {
-        if (docView) docView.classList.remove('hidden');
-        if (overviewView) overviewView.classList.add('hidden');
-        if (tabDocBtn) {
-          tabDocBtn.className = 'py-2.5 px-3 border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1.5 transition text-xs';
-        }
-        if (tabOverviewBtn) {
-          tabOverviewBtn.className = 'py-2.5 px-3 border-b-2 border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition flex items-center gap-1.5 text-xs font-medium';
-        }
-        if (focusEditor && selectedJobId) {
+      const activeCls = 'py-2.5 px-3 border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1.5 transition text-xs';
+      const inactiveCls = 'py-2.5 px-3 border-b-2 border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition flex items-center gap-1.5 text-xs font-medium';
+
+      if (docView) docView.classList.toggle('hidden', tab !== 'doc');
+      if (cvView) cvView.classList.toggle('hidden', tab !== 'cv');
+      if (overviewView) overviewView.classList.toggle('hidden', tab !== 'overview');
+
+      if (tabDocBtn) tabDocBtn.className = (tab === 'doc') ? activeCls : inactiveCls;
+      if (tabCvBtn) tabCvBtn.className = (tab === 'cv') ? activeCls : inactiveCls;
+      if (tabOverviewBtn) tabOverviewBtn.className = (tab === 'overview') ? activeCls : inactiveCls;
+
+      if (focusEditor && selectedJobId) {
+        if (tab === 'doc') {
           const docEl = document.getElementById('liveGoogleDocA4_' + selectedJobId);
           if (docEl) {
             docEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             docEl.focus();
             docEl.classList.add('ring-4', 'ring-blue-400');
             setTimeout(() => docEl.classList.remove('ring-4', 'ring-blue-400'), 1200);
-            showToast(currentLang === 'en' ? '📄 Google Doc Editor active — click anywhere on the document to edit!' : '📄 Google Doc Live-Editor aktiv – klicke direkt in den Text zum Bearbeiten!');
+            showToast(currentLang === 'en' ? '📄 Cover Letter Editor active — click anywhere on the document to edit!' : '📄 Anschreiben Live-Editor aktiv – klicke direkt in den Text zum Bearbeiten!');
+          }
+        } else if (tab === 'cv') {
+          const cvEl = document.getElementById('liveCvA4_' + selectedJobId);
+          if (cvEl) {
+            cvEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            cvEl.classList.add('ring-4', 'ring-emerald-400');
+            setTimeout(() => cvEl.classList.remove('ring-4', 'ring-emerald-400'), 1200);
+            showToast(currentLang === 'en' ? '🎓 Tailored 1-Page CV loaded — click any bullet to edit or customize projects above!' : '🎓 Maßgeschneiderter 1-Seiten-CV geladen – direkt im Dokument bearbeitbar!');
           }
         }
-      } else {
-        if (docView) docView.classList.add('hidden');
-        if (overviewView) overviewView.classList.remove('hidden');
-        if (tabDocBtn) {
-          tabDocBtn.className = 'py-2.5 px-3 border-b-2 border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 transition flex items-center gap-1.5 text-xs font-medium';
-        }
-        if (tabOverviewBtn) {
-          tabOverviewBtn.className = 'py-2.5 px-3 border-b-2 border-blue-600 text-blue-600 dark:text-blue-400 font-bold flex items-center gap-1.5 transition text-xs';
+      }
+    }
+
+    function onCvContentInput(jobId) {
+      const cvEl = document.getElementById('liveCvA4_' + jobId);
+      if (!cvEl) return;
+      localStorage.setItem('job_cv_content_' + jobId, cvEl.innerHTML);
+      const statusEl = document.getElementById('cvSaveStatus_' + jobId);
+      if (statusEl) {
+        const t = I18N[currentLang] || I18N.de;
+        statusEl.innerHTML = `🟢 ${t.auto_saved}`;
+      }
+    }
+
+    function resetCvToTemplate(jobId) {
+      localStorage.removeItem('job_cv_content_' + jobId);
+      localStorage.removeItem('job_custom_bullets_' + jobId);
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      if (job) {
+        renderDetailPane(job);
+        showToast(currentLang === 'en' ? '🔄 CV reset to auto-tailored version' : '🔄 Lebenslauf auf Standard-Anpassung zurückgesetzt');
+      }
+    }
+
+    function toggleBulletPicker(jobId) {
+      const drawer = document.getElementById('bulletPickerDrawer');
+      if (drawer) drawer.classList.toggle('hidden');
+    }
+
+    function applyCustomBulletsToJob(jobId) {
+      const checkboxes = document.querySelectorAll('.auto1-bullet-cb-' + jobId + ':checked');
+      const selectedHtmls = Array.from(checkboxes).map(cb => cb.getAttribute('data-bullet-html'));
+      if (selectedHtmls.length === 0) {
+        alert('Please select at least 1 bullet point.');
+        return;
+      }
+      localStorage.setItem('job_custom_bullets_' + jobId, JSON.stringify(selectedHtmls));
+      localStorage.removeItem('job_cv_content_' + jobId);
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      if (job) {
+        renderDetailPane(job);
+        showToast(`✅ Applied ${selectedHtmls.length} tailored AUTO1 bullets to this CV!`);
+      }
+    }
+
+    function buildTailoredCvHtmlForJob(job) {
+      const isGuillermo = (activeUser === 'guillermo');
+      const desc = (`${job.title || ''} ${job.description || ''} ${job.why_fits || ''}`).toLowerCase();
+
+      if (!isGuillermo) {
+        // Nancy's tailored 1-page German Lebenslauf
+        const isAcct = desc.includes('buchhalt') || desc.includes('rechnung') || desc.includes('datev') || desc.includes('finance');
+        const isEvt = desc.includes('event') || desc.includes('veranstaltung') || desc.includes('marketing') || desc.includes('kommunikation');
+        const isKanzlei = desc.includes('kanzlei') || desc.includes('anwalt') || desc.includes('recht') || desc.includes('notar');
+        let focusMotto = 'Werkstudentin Office Management, Teamassistenz & Backoffice (15–20 Std./Woche)';
+        if (isKanzlei) focusMotto = 'Werkstudentin Kanzleiorganisation, Sekretariat & Office Management (15–20 Std./Woche)';
+        else if (isEvt) focusMotto = 'Werkstudentin Event-Organisation, Projektassistenz & Office Management (15–20 Std./Woche)';
+        else if (isAcct) focusMotto = 'Werkstudentin Backoffice, Vorbereitende Buchhaltung & Administration (15–20 Std./Woche)';
+
+        return `
+          <div style="font-family: Calibri, 'Segoe UI', Arial, sans-serif; color: #0f172a; line-height: 1.32; font-size: 9.2pt;">
+            <div style="border-bottom: 2px solid #1e3a8a; padding-bottom: 8px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: flex-start;">
+              <div>
+                <div style="font-size: 17pt; font-weight: 700; color: #0f172a;">Nancy Schütze</div>
+                <div style="font-size: 9.5pt; font-weight: 700; color: #1e3a8a; margin-top: 2px;">${focusMotto}</div>
+                <div style="font-size: 8.4pt; color: #475569; margin-top: 3px;">Erfahrene Office Managerin (Kanzlei &amp; Eventagentur) &bull; TU Berlin Studentin (Standort Charlottenburg) &bull; Deutsch (Muttersprache) &amp; Englisch (C2)</div>
+              </div>
+              <div style="text-align: right; font-size: 8.4pt; color: #334155; line-height: 1.4;">
+                <div>Teichbergstr. 17, 13125 Berlin</div>
+                <div>Mobil: +49 1523 71 64 097</div>
+                <div>schuetzenancy@gmx.de</div>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 8px;">
+              <div style="font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1e3a8a; border-bottom: 1px solid #cbd5e1; padding-bottom: 2px; margin-bottom: 5px;">Berufserfahrung</div>
+              
+              <div style="display: flex; margin-bottom: 6px;">
+                <div style="width: 18%; font-size: 8.3pt; font-weight: 600; color: #475569;">10/2023 – 09/2024</div>
+                <div style="width: 82%;">
+                  <div style="font-weight: 700; font-size: 9.2pt;">Office Managerin &amp; Kanzleiassistenz</div>
+                  <div style="font-size: 8.6pt; color: #334155; margin-bottom: 2px;"><strong>SERS Rechtsanwaltsgesellschaft mbH</strong> &bull; Berlin</div>
+                  <ul style="padding-left: 15px; margin: 0; font-size: 8.5pt;">
+                    <li>Eigenverantwortliche Leitung des gesamten Kanzlei- und Sekretariatsbetriebs sowie Empfang und Betreuung von Mandanten.</li>
+                    <li>Korrespondenz mit Mandanten, Gerichten und Behörden auf Deutsch und Englisch (C2) sowie Fristen- und Aktenmanagement.</li>
+                    <li>Vorbereitende Buchhaltung, Rechnungsstellung, Mahnwesen sowie Termin-, Reise- und Meetingkoordination für die Geschäftsführung.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 6px;">
+                <div style="width: 18%; font-size: 8.3pt; font-weight: 600; color: #475569;">08/2022 – 09/2023</div>
+                <div style="width: 82%;">
+                  <div style="font-weight: 700; font-size: 9.2pt;">Junior Projektleiterin Event &amp; Hospitality</div>
+                  <div style="font-size: 8.6pt; color: #334155; margin-bottom: 2px;"><strong>zett.events</strong> &bull; Berlin</div>
+                  <ul style="padding-left: 15px; margin: 0; font-size: 8.5pt;">
+                    <li>Planung, Kalkulation und organisatorische Durchführung von Corporate Events, Konferenzen und Kundenveranstaltungen.</li>
+                    <li>Koordination von Dienstleistern, Catering, Locations und Personalplanung sowie Vor-Ort-Betreuung von VIP-Gästen.</li>
+                    <li>Angebotserstellung, Budgetkontrolle, Rechnungsprüfung und administrative Nachbereitung im Backoffice.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div style="display: flex; margin-bottom: 4px;">
+                <div style="width: 18%; font-size: 8.3pt; font-weight: 600; color: #475569;">10/2019 – 07/2022</div>
+                <div style="width: 82%;">
+                  <div style="font-weight: 700; font-size: 9.2pt;">Duales Studium &amp; Projektassistenz (B.A. Business Administration)</div>
+                  <div style="font-size: 8.6pt; color: #334155; margin-bottom: 2px;"><strong>Praxispartner Event- &amp; Immobilienwirtschaft</strong> &bull; Berlin</div>
+                  <ul style="padding-left: 15px; margin: 0; font-size: 8.5pt;">
+                    <li>Kaufmännische Sachbearbeitung, Vertragsverwaltung, Kundenbetreuung und Unterstützung im operativen Tagesgeschäft.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 8px;">
+              <div style="font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1e3a8a; border-bottom: 1px solid #cbd5e1; padding-bottom: 2px; margin-bottom: 5px;">Studium &amp; Ausbildung</div>
+              <div style="display: flex; margin-bottom: 4px;">
+                <div style="width: 18%; font-size: 8.3pt; font-weight: 600; color: #475569;">Seit 10/2024</div>
+                <div style="width: 82%;">
+                  <div style="font-weight: 700; font-size: 8.8pt;">Technische Universität Berlin (TU Berlin, Campus Charlottenburg)</div>
+                  <div style="font-size: 8.4pt; color: #475569;">Bachelorstudium (Immatrikulierte Vollzeitstudentin &bull; flexibel 15–20 Std./Woche im Semester, bis 40 Std. in den Semesterferien)</div>
+                </div>
+              </div>
+              <div style="display: flex;">
+                <div style="width: 18%; font-size: 8.3pt; font-weight: 600; color: #475569;">10/2019 – 07/2022</div>
+                <div style="width: 82%;">
+                  <div style="font-weight: 700; font-size: 8.8pt;">Duales Studium Betriebswirtschaftslehre (BWL)</div>
+                  <div style="font-size: 8.4pt; color: #475569;">Schwerpunkt: Office-, Event- &amp; Dienstleistungsmanagement, Berlin</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div style="font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1e3a8a; border-bottom: 1px solid #cbd5e1; padding-bottom: 2px; margin-bottom: 5px;">Kenntnisse &amp; Sprachen</div>
+              <div style="font-size: 8.5pt; line-height: 1.4;">
+                <div><strong>Office &amp; Administration:</strong> Kanzlei- &amp; Büromanagement, Vorbereitende Buchhaltung, Rechnungs- &amp; Mahnwesen, Fristenkontrolle, Reisemanagement, Eventorganisation</div>
+                <div><strong>IT &amp; Software:</strong> MS Office 365 (Word, Excel, PowerPoint, Outlook, Teams), Google Workspace, digitale Aktenführung, Cloud-Dokumentenmanagement, CRM-Systeme</div>
+                <div><strong>Sprachen:</strong> Deutsch (Muttersprache), Englisch (C2 – Verhandlungssicher in Wort und Schrift), Französisch (Grundkenntnisse)</div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Guillermo's tailored 1-page A4 CV
+      const allPool = (window.STATIC_STATE && window.STATIC_STATE.all_auto1_bullets) ? window.STATIC_STATE.all_auto1_bullets : [];
+      let chosenBullets = [];
+      const customSaved = localStorage.getItem('job_custom_bullets_' + job.id);
+      if (customSaved) {
+        try { chosenBullets = JSON.parse(customSaved); } catch (e) {}
+      }
+      if (!chosenBullets || chosenBullets.length === 0) {
+        if (job.tailored_preview && job.tailored_preview.selected_bullets && job.tailored_preview.selected_bullets.length > 0) {
+          chosenBullets = job.tailored_preview.selected_bullets;
+        } else {
+          chosenBullets = allPool.slice(0, 6).map(b => b.html);
         }
       }
+
+      // Dynamic role subtitle & skill ordering tailored to the specific job
+      const isProd = desc.includes('product');
+      const isAi = desc.includes('ai') || desc.includes('automation') || desc.includes('llm') || desc.includes('chatbot');
+      const isData = desc.includes('sql') || desc.includes('data') || desc.includes('analytics') || desc.includes('bi ') || desc.includes('reporting');
+      let roleFocus = 'Junior Project Manager';
+      if (isProd && isAi) roleFocus = 'Junior Project Manager (Product Operations & AI Tooling)';
+      else if (isProd) roleFocus = 'Junior Project Manager (Product Operations & Cross-Functional Delivery)';
+      else if (isAi) roleFocus = 'Junior Project Manager (AI Operations & Workflow Automation)';
+      else if (isData) roleFocus = 'Junior Project Manager (Business Operations & SQL Data Analytics)';
+
+      let coreSkills = [
+        'Product Team Collaboration & Agile Delivery',
+        'Quantitative Analysis on Complex Datasets',
+        'AI Evaluation Tools & Vector / Knowledge Databases',
+        'Low-Code Workflow Automation & Internal Tooling',
+        'SQL Reporting & Disorganized Data Structuring',
+        'Cross-Functional Stakeholder Management'
+      ];
+      if (isAi) {
+        coreSkills.sort((a, b) => (a.includes('AI') || a.includes('Automation') ? -1 : 1));
+      } else if (isData) {
+        coreSkills.sort((a, b) => (a.includes('SQL') || a.includes('Quantitative') ? -1 : 1));
+      }
+
+      return `
+        <div style="font-family: Georgia, 'Times New Roman', serif; font-size: 8.45pt; line-height: 1.24; color: #1a1a1a; background: #fff;">
+          <div style="border: 1px solid #333; padding: 7px 12px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: flex-start;">
+            <div>
+              <div style="font-size: 15pt; font-weight: bold; color: #111; margin-bottom: 2px;">Guillermo Jose Hernandez Lopez</div>
+              <div style="font-size: 8.5pt; color: #333;">Söhtstraße 16, 12203 Berlin, Germany</div>
+              <div style="font-size: 8.5pt; color: #333;">guillejhl@gmail.com</div>
+              <div style="font-size: 8.5pt; color: #333;">+49 176 85136597</div>
+            </div>
+            <div style="text-align: right;">
+              <a href="https://www.linkedin.com/in/guillermo-hernandez-lopez/" target="_blank" style="font-size: 8.5pt; color: #111; text-decoration: underline;">LinkedIn Profile</a>
+            </div>
+          </div>
+
+          <fieldset style="border: 1px solid #333; padding: 5px 12px 6px 12px; margin-bottom: 5px;">
+            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 5px; margin-left: 4px; color: #111;">EXPERIENCE</legend>
+            
+            <div style="display: flex; margin-bottom: 4px;">
+              <div style="width: 17%; font-size: 8.2pt; color: #333; padding-right: 8px; flex-shrink: 0;">Sep 2024 – Present</div>
+              <div style="width: 83%;">
+                <div style="font-weight: bold; font-size: 9pt; color: #111;">${roleFocus}</div>
+                <div style="font-size: 8.6pt; color: #222;"><strong>Auto1 Group</strong> &nbsp;Berlin, Germany</div>
+                <div style="font-size: 8.1pt; color: #444; margin-bottom: 2px;">Intern (Sept 2024 – Feb 2025) | Working Student (Mar 2025 – Present)</div>
+                <ul style="margin-top: 1.5px; padding-left: 14px; list-style-type: disc;">
+                  ${chosenBullets.map(b => `<li style="margin-bottom: 1.5px; font-size: 8.35pt; line-height: 1.24;">${b}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+
+            <div style="display: flex; margin-bottom: 4px;">
+              <div style="width: 17%; font-size: 8.2pt; color: #333; padding-right: 8px; flex-shrink: 0;">Oct 2023</div>
+              <div style="width: 83%;">
+                <div style="font-weight: bold; font-size: 9pt; color: #111;">Customer Experience and Digital Innovation (Project Collaboration)</div>
+                <div style="font-size: 8.6pt; color: #222; margin-bottom: 1px;"><strong>Franz Schneider Brakel (FSB)</strong> &nbsp;Berlin, Germany</div>
+                <ul style="margin-top: 1.5px; padding-left: 14px; list-style-type: disc;">
+                  <li style="margin-bottom: 1.2px; font-size: 8.35pt;">Conducted <strong>quantitative research and complex data analysis</strong> to propose a new service/subscription model that incentivized sustainability, <strong>boosting client engagement</strong>.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.35pt;">Designed webpages to communicate FSB's sustainable product standards, <strong>enhancing market differentiation</strong>.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.35pt;"><strong>Collaborated closely with product and business stakeholders</strong> across units to ensure alignment and effectiveness of digital initiatives.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="display: flex; margin-bottom: 4px;">
+              <div style="width: 17%; font-size: 8.2pt; color: #333; padding-right: 8px; flex-shrink: 0;">Jan 2022 – Aug 2022</div>
+              <div style="width: 83%;">
+                <div style="font-weight: bold; font-size: 9pt; color: #111;">Intern</div>
+                <div style="font-size: 8.6pt; color: #222; margin-bottom: 1px;"><strong>Fincas El Carmen</strong> &nbsp;Comayagua, Honduras</div>
+                <ul style="margin-top: 1.5px; padding-left: 14px; list-style-type: disc;">
+                  <li style="margin-bottom: 1.2px; font-size: 8.35pt;">Managed <strong>inventory levels and purchasing decisions</strong> using <strong>quantitative analysis and Advanced Excel</strong>, resulting in a <strong>15% increase</strong> in stock accuracy and availability.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.35pt;">Analyzed and incorporated customer feedback to enhance service quality, <strong>leading to a 10% improvement in customer retention</strong>.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.35pt;">Collaborated with cross-functional teams to streamline operations, <strong>reducing processing time by 20%</strong>.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="display: flex;">
+              <div style="width: 17%; font-size: 8.2pt; color: #333; padding-right: 8px; flex-shrink: 0;">Jan 2020 – Dec 2021</div>
+              <div style="width: 83%;">
+                <div style="font-weight: bold; font-size: 9pt; color: #111;">Product Supervisor</div>
+                <div style="font-size: 8.6pt; color: #222; margin-bottom: 1px;"><strong>Hotel la Posada de mi Viejo</strong> &nbsp;Comayagua, Honduras</div>
+                <ul style="margin-top: 1.5px; padding-left: 14px; list-style-type: disc;">
+                  <li style="margin-bottom: 1.2px; font-size: 8.35pt;">Implemented <strong>customer-centric methodologies</strong> to supervise and enhance process operations.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.35pt;">Established comprehensive plan structures, leading to a 10% improvement in <strong>operational efficiency</strong> and staff productivity.</li>
+                  <li style="font-size: 8.35pt;">Implemented quality assurance, <strong>resulting in a 10% increase in customer satisfaction scores</strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset style="border: 1px solid #333; padding: 5px 12px 6px 12px; margin-bottom: 5px;">
+            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 5px; margin-left: 4px; color: #111;">EDUCATION</legend>
+            <div style="display: flex; margin-bottom: 3px;">
+              <div style="width: 17%; font-size: 8.2pt; color: #333;">Sep 2025 – Aug 2027</div>
+              <div style="width: 83%;">
+                <div style="font-size: 8.55pt;"><strong>Master’s degree in International Business Management | University of Europe for Applied Sciences</strong></div>
+                <div style="font-size: 8pt; color: #333;">Berlin, Germany</div>
+              </div>
+            </div>
+            <div style="display: flex; margin-bottom: 3px;">
+              <div style="width: 17%; font-size: 8.2pt; color: #333;">Sep 2022 – Aug 2025</div>
+              <div style="width: 83%;">
+                <div style="font-size: 8.55pt;"><strong>Bachelor’s degree in Digital Product Management | University of Europe for Applied Sciences</strong></div>
+                <div style="font-size: 8pt; color: #333;">Potsdam, Germany</div>
+              </div>
+            </div>
+            <div style="display: flex;">
+              <div style="width: 17%; font-size: 8.2pt; color: #333;">Jan 2015 – Jun 2022</div>
+              <div style="width: 83%;">
+                <div style="font-size: 8.55pt;"><strong>High School Diploma | Escuela Bilingüe Honduras</strong></div>
+                <div style="font-size: 8pt; color: #333;">Comayagua, Honduras</div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset style="border: 1px solid #333; padding: 5px 12px 6px 12px; margin-bottom: 5px;">
+            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 5px; margin-left: 4px; color: #111;">SKILLS</legend>
+            <div style="font-size: 8.3pt; line-height: 1.28;">
+              <p style="margin-bottom: 2px;"><strong>Core Competencies:</strong> ${coreSkills.join(' | ')}</p>
+              <p style="margin-bottom: 2px;"><strong>Technical Skills:</strong> SQL (Redash Querying &amp; Complex Dataset Analysis) | REST APIs &amp; System Integrations | Git, GitHub &amp; Cloud Platforms | Vector Databases, Knowledge Bases &amp; AI Evaluation Tools | Low-Code Automation &amp; Google Apps Script (JavaScript)</p>
+              <p><strong>Software Proficiency:</strong> Redash (SQL), GitHub / Git, Looker Studio, Tableau, Advanced Excel &amp; Google Sheets, Figma, Freshdesk, C# (Unity)</p>
+            </div>
+          </fieldset>
+
+          <fieldset style="border: 1px solid #333; padding: 5px 12px 6px 12px; margin-bottom: 0;">
+            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 5px; margin-left: 4px; color: #111;">LANGUAGES</legend>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 2px 10px; font-size: 8.3pt;">
+              <div><strong>SPANISH</strong> Native Speaker</div>
+              <div><strong>ENGLISH</strong> Professional Proficiency</div>
+              <div><strong>GERMAN</strong> B1 Proficiency</div>
+              <div><strong>FRENCH</strong> B1 Proficiency</div>
+            </div>
+          </fieldset>
+        </div>
+      `;
+    }
+
+    function printTailoredCv(jobId) {
+      const cvEl = document.getElementById('liveCvA4_' + jobId);
+      if (!cvEl) return;
+
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      const isGuillermo = (activeUser === 'guillermo');
+      const rawComp = (job && job.company ? job.company : 'Company').replace(/[^a-zA-Z0-9äöüÄÖÜß_-]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
+      const pdfTitle = isGuillermo
+        ? ('Guillermo_Hernandez_CV_' + rawComp)
+        : ('Nancy_Schuetze_Lebenslauf_' + rawComp);
+
+      const printWin = window.open('', '_blank');
+      if (!printWin) return;
+      const openTag = '<' + 'html><' + 'head><meta charset="UTF-8"><title>' + pdfTitle + '</title>';
+      const styleTag = '<style>' +
+        '@page { size: A4 portrait; margin: 0mm !important; } ' +
+        'html, body { width: 210mm; margin: 0 !important; padding: 0 !important; background: #ffffff; color: #111827; -webkit-print-color-adjust: exact; print-color-adjust: exact; } ' +
+        '.a4-cv-print-wrapper { padding: 8mm 11mm 7mm 11mm; box-sizing: border-box; width: 100%; }' +
+        '</style></' + 'head><' + 'body>';
+      const closeTag = '</' + 'body></' + 'html>';
+      printWin.document.write('<!DOCTYPE html>' + openTag + styleTag + '<div class="a4-cv-print-wrapper">' + cvEl.innerHTML + '</div>' + closeTag);
+      printWin.document.close();
+      printWin.focus();
+      setTimeout(() => { printWin.print(); }, 250);
     }
 
     function onDocContentInput(jobId) {
@@ -1148,6 +1488,20 @@
       `;
 
       const savedDocHtml = localStorage.getItem('job_doc_content_' + job.id);
+      const savedCvHtml = localStorage.getItem('job_cv_content_' + job.id);
+      const defaultCvHtml = buildTailoredCvHtmlForJob(job);
+
+      const allAuto1Bullets = (window.STATIC_STATE && window.STATIC_STATE.all_auto1_bullets) ? window.STATIC_STATE.all_auto1_bullets : [];
+      let activeBulletsList = [];
+      const customSavedBullets = localStorage.getItem('job_custom_bullets_' + job.id);
+      if (customSavedBullets) {
+        try { activeBulletsList = JSON.parse(customSavedBullets); } catch (e) {}
+      }
+      if (!activeBulletsList || activeBulletsList.length === 0) {
+        activeBulletsList = (job.tailored_preview && job.tailored_preview.selected_bullets && job.tailored_preview.selected_bullets.length)
+          ? job.tailored_preview.selected_bullets
+          : allAuto1Bullets.slice(0, 6).map(b => b.html);
+      }
 
       container.innerHTML = `
         <!-- Sticky Detail Header -->
@@ -1190,6 +1544,11 @@
                 <span>${t.as_google_doc}</span>
               </button>
 
+              <!-- Tailored CV Action Button -->
+              <button onclick="switchDetailView('cv', true)" class="px-3.5 py-2 rounded-md text-xs font-bold bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:hover:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 transition flex items-center gap-1.5 shadow-2xs">
+                <span>${t.btn_tailored_cv}</span>
+              </button>
+
               <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-purple-50 hover:bg-purple-100 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 transition flex items-center gap-1.5">
                 <span>${t.copy_cl}</span>
               </button>
@@ -1213,11 +1572,15 @@
           </div>
         </div>
 
-        <!-- Sub Tabs: Google Doc Editor vs Job Overview & Details -->
-        <div class="flex items-center px-5 bg-gray-50/80 dark:bg-slate-900/60 border-b border-gray-200 dark:border-slate-800 gap-2">
+        <!-- Sub Tabs: Cover Letter vs Tailored 1-Page CV vs Job Overview -->
+        <div class="flex flex-wrap items-center px-5 bg-gray-50/80 dark:bg-slate-900/60 border-b border-gray-200 dark:border-slate-800 gap-2">
           <button id="detailSubTabDoc" onclick="switchDetailView('doc')" class="py-2.5 px-3 border-b-2 ${currentDetailTab === 'doc' ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 font-medium'} flex items-center gap-1.5 transition text-xs">
             <span>${t.tab_doc_editor}</span>
             <span class="text-[10px] bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 px-1.5 py-0.2 rounded-full font-bold">Live Editor</span>
+          </button>
+          <button id="detailSubTabCv" onclick="switchDetailView('cv')" class="py-2.5 px-3 border-b-2 ${currentDetailTab === 'cv' ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 font-medium'} flex items-center gap-1.5 transition text-xs">
+            <span>${t.tab_cv_editor}</span>
+            <span class="text-[10px] bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200 px-1.5 py-0.2 rounded-full font-bold">Auto-Adapted</span>
           </button>
           <button id="detailSubTabOverview" onclick="switchDetailView('overview')" class="py-2.5 px-3 border-b-2 ${currentDetailTab === 'overview' ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 font-medium'} flex items-center gap-1.5 transition text-xs">
             <span>${t.tab_overview}</span>
@@ -1288,6 +1651,82 @@
             💡 Tipp: Du kannst jeden Text direkt im Dokument bearbeiten – Änderungen werden automatisch im Browser gespeichert!
           </div>
 
+        </div>
+
+        <!-- VIEW 1.5: Interactive Tailored 1-Page CV Editor -->
+        <div id="detailViewCv" class="${currentDetailTab === 'cv' ? '' : 'hidden'} flex-1 overflow-y-auto bg-[#f0f4f9] dark:bg-[#0c1017] p-3 sm:p-5 flex flex-col items-center">
+          
+          <!-- CV Toolbar -->
+          <div class="max-w-[740px] w-full bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-t-lg p-3 shadow-xs space-y-2.5 border-b-0">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold text-gray-800 dark:text-gray-100 flex items-center gap-1">
+                  <span>🎓 1-Page CV</span>
+                  <span class="text-gray-400 font-normal">&bull;</span>
+                  <span class="text-emerald-700 dark:text-emerald-400 font-semibold">${job.company}</span>
+                </span>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 font-bold">
+                  ${t.tailored_for_badge}
+                </span>
+                <span id="cvSaveStatus_${job.id}" class="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
+                  ${t.auto_saved}
+                </span>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-1.5 text-xs">
+                ${isGuillermo ? `
+                  <button onclick="toggleBulletPicker('${job.id}')" class="px-2.5 py-1 rounded bg-amber-50 dark:bg-amber-950/50 hover:bg-amber-100 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-[11px] font-bold flex items-center gap-1 transition">
+                    <span>${t.customize_bullets}</span>
+                  </button>
+                ` : ''}
+
+                <button onclick="printTailoredCv('${job.id}')" class="px-3 py-1 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition flex items-center gap-1 shadow-xs text-[11px]">
+                  <span>${t.print_cv_pdf}</span>
+                </button>
+
+                <a href="${isGuillermo ? 'files/Guillermo_Hernandez_CV_Master.pdf' : 'files/Nancy_Schuetze_Lebenslauf_Master.pdf'}" download class="px-2 py-1 rounded bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700 text-[11px] font-medium">
+                  <span>📄 Master PDF</span>
+                </a>
+
+                <button onclick="resetCvToTemplate('${job.id}')" class="px-1.5 py-1 rounded text-gray-400 hover:text-rose-600 text-[11px]" title="${t.reset_original}">
+                  <span>🔄</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Interactive AUTO1 Bullet Selector Drawer for Guillermo -->
+            ${isGuillermo ? `
+              <div id="bulletPickerDrawer" class="hidden p-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-700 space-y-2 text-xs">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-gray-800 dark:text-gray-200">🎯 Select Which AUTO1 Group Bullets to Include on This CV (Recommended: 6 for 1-Page A4 Fit):</span>
+                  <button onclick="applyCustomBulletsToJob('${job.id}')" class="px-3 py-1 rounded bg-blue-600 hover:bg-blue-700 text-white font-bold text-[11px] shadow-xs">
+                    ⚡ Apply Selected Bullets to CV
+                  </button>
+                </div>
+                <div class="space-y-1.5 max-h-56 overflow-y-auto pr-1">
+                  ${allAuto1Bullets.map(b => {
+                    const isChecked = activeBulletsList.includes(b.html);
+                    const safeHtmlAttr = (b.html || '').replace(/"/g, '&quot;');
+                    return `
+                      <label class="flex items-start gap-2 p-1.5 rounded bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 cursor-pointer hover:border-blue-400">
+                        <input type="checkbox" class="mt-0.5 accent-blue-600 auto1-bullet-cb-${job.id}" data-bullet-html="${safeHtmlAttr}" ${isChecked ? 'checked' : ''}>
+                        <span class="text-[11px] text-gray-700 dark:text-gray-200 leading-snug">${b.html}</span>
+                      </label>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- Editable 1-Page A4 CV Canvas -->
+          <div class="max-w-[740px] w-full bg-white text-gray-900 shadow-xl border border-gray-200 dark:border-slate-700 rounded-b-lg p-6 sm:p-9 min-h-[920px] outline-none focus:ring-2 focus:ring-emerald-400" id="liveCvA4_${job.id}" contenteditable="true" oninput="onCvContentInput('${job.id}')">
+            ${savedCvHtml || defaultCvHtml}
+          </div>
+
+          <div class="text-[11px] text-gray-500 dark:text-gray-400 mt-2 text-center">
+            💡 Tip: This 1-page CV is automatically tailored to <strong>${job.company}</strong>. You can also click anywhere on the CV to edit text directly or click <strong>"${t.print_cv_pdf}"</strong> to export a clean 1-page A4 PDF!
+          </div>
         </div>
 
         <!-- VIEW 2: Overview, Address & Job Description -->
