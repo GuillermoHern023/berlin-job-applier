@@ -320,8 +320,8 @@
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, workflow, git, bot, automatisierung, erp.",
     "days_ago": 3,
     "posted_ago": "⚡ 3 days ago (2026-10-28)",
-    "applicants_num": 36,
-    "applicants_text": "🟡 36 applicants",
+    "applicants_num": 37,
+    "applicants_text": "🟡 37 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -432,10 +432,10 @@
       "product team"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, llm, api, git, product manager.",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-10-28)",
-    "applicants_num": 62,
-    "applicants_text": "🟡 62 applicants",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-10-28)",
+    "applicants_num": 63,
+    "applicants_text": "🟡 63 applicants",
     "work_model": "Hybrid (Home Office)",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -489,10 +489,10 @@
       "stakeholder"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, git, product manager, product management, product team, digital product.",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-10-28)",
-    "applicants_num": 59,
-    "applicants_text": "🟡 59 applicants",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-10-28)",
+    "applicants_num": 60,
+    "applicants_text": "🟡 60 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -776,8 +776,8 @@
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, project manager, project management, stakeholder, documentation.",
     "days_ago": 1,
     "posted_ago": "🔥 1 day ago (2026-10-29)",
-    "applicants_num": 43,
-    "applicants_text": "🟡 43 applicants",
+    "applicants_num": 47,
+    "applicants_text": "🟡 47 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1056,9 +1056,9 @@
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, workflow, api, agent, tooling, product manager.",
     "days_ago": 0,
-    "posted_ago": "🔥 19 hours ago (2026-10-31)",
-    "applicants_num": 76,
-    "applicants_text": "🟡 76 applicants",
+    "posted_ago": "🔥 23 hours ago (2026-10-31)",
+    "applicants_num": 98,
+    "applicants_text": "🟡 98 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1301,6 +1301,62 @@
     }
   },
   {
+    "id": "624f05aa06",
+    "title": "Werkstudent (m/w/d) Digitalisierung & Data Analytics im Bereich General Service",
+    "company": "Knorr-Bremse AG",
+    "location": "Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4466670201",
+    "source": "Linkedin",
+    "date_posted": "2026-10-31",
+    "date_found": "2026-10-31 18:51",
+    "salary": "",
+    "description": "We believe that a change towards a better, more sustainable future of transportation is possible. That’s why we are so dedicated to developing safer, more efficient and innovative solutions that make our visions come to life. Who are we? More than 30,000 team-players from all around the world who drive progress through technical excellence and social responsibility.\n  \n  \nAls Werkstudent (m/w/d) unterstützen Sie die Digitalisierung unserer Fertigungs- und Logistikprozesse. Sie arbeiten an innovativen Lösungen in den Bereichen Data Analytics, Industrial IoT und Automatisierung und erhalten Einblicke in die gesamte Wertschöpfungskette eines internationalen Industrieunternehmens.\n  \n  \nZu Ihren Aufgaben gehören:\n  \n  \n\n* Entwicklung und Weiterentwicklung von Business-Intelligence-Anwendungen auf Basis von Qlik Sense\n* Konzeption und Umsetzung von Webanwendungen für interne Anwender\n* Mitarbeit an Digitalisierungs-, Datenanalyse- und IoT-Projekten im Produktionsumfeld\n* Analyse, Aufbereitung und Visualisierung von Produktions- und Logistikdaten\n* Entwicklung und Optimierung von Schnittstellen zwischen Maschinen, Datenbanken und IT-Systemen\n* Umsetzung von Automatisierungs- und Digitalisierungslösungen mit der Microsoft Power Platform\n* Unterstützung bei der Anbindung und Integration von Maschinen sowie Shopfloor-Systemen\n* Mitarbeit in Datenintegrations- und Analytics-Projekten\n* Aufnahme fachlicher Anforderungen sowie Umsetzung bis zur erfolgreichen Produktivsetzung\n* Analyse und Behebung von Fehlern sowie kontinuierliche Optimierung bestehender Anwendungen und Datenmodelle\n\nIhr Profil:\n  \n  \n\n* Laufendes Studium im Bereich Informatik, Wirtschaftsinformatik, Maschinenbau, Wirtschaftsingenieurwesen, Data Science oder einer vergleichbaren Fachrichtung\n* Interesse an Digitalisierung, Datenanalyse und Produktionsprozessen\n* Gute Kenntnisse in MS Excel und PowerPoint\n* Erste Erfahrungen mit Analyse- und Reporting-Tools wie Qlik Sense, Power BI oder SAP sind von Vorteil\n* Erste Kenntnisse in SQL, Python oder JavaScript sind wünschenswert\n* Sehr gute Deutsch- und gute Englischkenntnisse in Wort und Schrift\n* Strukturierte, analytische und selbstständige Arbeitsweise\n* Hohe Eigeninitiative, Zuverlässigkeit und Teamfähigkeit",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 97,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "automatisierung",
+      "erp",
+      "initiative",
+      "reporting",
+      "sql"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, automatisierung, erp, initiative, reporting.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-10-31)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent (m/w/d) Digitalisierung & Data Analytics im Bereich General Service role at Knorr-Bremse AG. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Knorr-Bremse AG is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Knorr-Bremse AG in this role."
+      ]
+    }
+  },
+  {
     "id": "9d2a44bb43",
     "title": "Working Student – Finance / General Ledger / Intercompany Operations (all genders)",
     "company": "Zalando",
@@ -1390,8 +1446,8 @@
       "stakeholder"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, artificial intelligence, cloud, bot, agent, erp.",
-    "days_ago": 4,
-    "posted_ago": "4 days ago (2026-10-26)",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-10-26)",
     "applicants_num": 153,
     "applicants_text": "🔴 153 applicants",
     "tailored_preview": {
@@ -2088,6 +2144,62 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. My key initiatives include optimizing an international AI voice bot that scaled to route millions of calls (raising inbound answer rates from 65% to 85%), as well as structuring retrieval knowledge bases for an AI chatbot handling 30,000+ monthly customer chats. To empower operational teams, I built an automated multi-market knowledge base, an AI QA review web application, and API-driven customer communication tools.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about KPMG IT Service GmbH is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support KPMG IT Service GmbH in this role."
+      ]
+    }
+  },
+  {
+    "id": "810bdeeee5",
+    "title": "Werkstudent Product Strategy & Lifecycle Management (PLM) (m/w/d)",
+    "company": "Deloitte",
+    "location": "Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4243059873",
+    "source": "Linkedin",
+    "date_posted": "2026-10-31",
+    "date_found": "2026-10-31 18:50",
+    "salary": "",
+    "description": "Deloitte bietet führende Prüfungs- und Beratungsleistungen in Audit & Assurance, Tax & Legal, Consulting und Advisory - für nahezu 90 % der Fortune Global 500® und zahlreiche private Unternehmen. Wir liefern innovative Denkansätze, lösen komplexe Herausforderungen und fördern nachhaltiges Wachstum. Mit rund 470.000 Mitarbeitenden weltweit eröffnen wir hervorragende Karrierechancen - getragen von einem starken „Wir“ und einer Vielfalt an Perspektiven und Fähigkeiten.\n  \n  \nDu willst im Bereich\n**Consulting - Supply Chain & Network Operations**\nsmarte und innovative Lösungen für unsere Kunden entwickeln? Unser Team berät entlang der kompletten Supply Chain, befasst sich mit Product Lifecycle Management, Systems Engineering und hilft regulatorischen Anforderungen gerecht zu werden. Sichere unseren gemeinsamen Erfolg und mach mit uns den Unterschied: als\n**Werkstudent Product Strategy & Lifecycle Management (PLM) (m/w/d).**\nStandorte:\n**Berlin**\n**, Düsseldorf**\n**, Frankfurt (Main)**\n**, Hamburg**\n**, Hannover**\n**, Köln**\n**, München**\n**und Stuttgart**\n.\n  \n  \n**Dein Impact:**\nAls Werkstudent PLM (m/w/d) erhälts du Einblick in Kundenprojekte, den Berater-Alltag und unterstützt uns bei strategischen sowie operativen Themen. Dein Beitrag zu unserem Thought Leadership und Innovation sichert unseren gemeinsamen Erfolg.\n  \n  \n\n* Aufgabenvielfalt: In unseren Kundenprojekten unterstützt du das Projektteam bei der Erarbeitung von Lösungen im Bereich PLM, Software-defined Vehicle oder Systems Engineering. Wie ein Berater kannst du erste Themen übernehmen und wirst von deinem Mentor unterstützt.\n* Innovation: Intern verstärkst du das Team bei der Entwicklung neuer Market Offerings im Bereich Product Strategy & Lifecycle Management mit und trägst mit innovativen Ansätzen zum kontinuierlichen Ausbau unseres Thought Leadership bei.\n* Konzeption: Du bringst dein Know-How bei der Gestaltung von Strategien und Konzepten sowie technische Lösungsarchitekturen ein und unterstützt bei der Entwicklung innovativer Projektansätze. Gern auch im Rahmen einer Bachelor-/Masterarbeit.\n* Technologie: Dabei verwendest du gängige PLM/ALM Lösungen wie Teamcenter, Windchill, SAP und IIoT sowie Cloud Plattformen, um eine cross-funktionale Integration zu gewährleisten und tragfähige Lösungen zu entwickeln. Weitere zukunftsorienterte Themen im SDV-Ökosystem, wie OTA, DLCM oder E/E-Onboard-Offboard-Architekturen sind willkommen.\n* Perspektive: Du wirkst bei Angebotserstellung und Planung neuer Projekte mit und unterstützt unser starkes Wachstum. In internen Projekten (z.b. Smart Factory) kannst du Neues auszuprobieren oder eigene Ideen zu verfolgen.\n\n**Dein Skillset:**\n\n* Sehr gute Studienergebnisse in (Wirtschafts-) Ingenieurwesen, (Wirtschafts-) Informatik, Elektrotechnik, Systems Engineering oder vergleichbar, mit Schwerpunkt Produktmanagement / Product Lifecycle Management / Systems Engineering\n* Gutes Verständnis essenzieller Abläufe der Produktentwicklung sowie der vor- und nachgelagerten Prozesse im Unternehmen. Erste Erfahrung im Prozessmanagement und Grundkenntnisse gängiger PLM/ALM, CAx Systeme oder auch SDV Themen sind von Vorteil\n* Themenrelevante Erfahrung in Studium oder Praxis in (agiler) Produktentwicklung, Systems- & Software-Engineering, PLM / PDM / ALM und idealerweise Grundkenntnisse von Normen und Regularien, z. B. ASPICE oder ISO 15288, 26262\n* Analytische Fähigkeiten und Freude an komplexen Fragestellungen, schnelle Auffassungsgabe und eine strukturierte Arbeitsweise. Lernbereitschaft und hohes Interesse an der Einarbeitung in neue Themen sowie sehr gute Office Kenntnisse.\n* Reisebereitschaft sowie Spaß an Kommunikation und Präsentation in Deutsch und Englisch (sehr gut in Wort und Schrift)\n\n**Deine Chance:**\n\n* Echte Verantwortung für eigene Aufgabenpakete innerhalb unserer Projekte, die du selbständig bearbeitest\n* Persönliche:r Mentor:in in deinem Team, der/die dir mit Rat und Tat zur Seite steht und dich mit umfassenden Know-how unterstützt\n* Ein chancenreiches und internationales Umfeld , das dir einmalige Einblicke in die Arbeit des weltweit größten Prüfungs- und Beratungsunternehmens bietet\n* Work-Life-Balance in einem innovativen Unternehmensumfeld, das dir Gesundheitstage, Mitarbeiter:innen-Events und vieles mehr bietet\n* Bereichsübergreifendes Networking im Deloitte Student Network mit exklusiven Vorträgen und regelmäßigem Austausch beim Praktikant:innen-Stammtisch\n* Vielfältige Gestaltungsspielräume und aktive Förderung einer inklusiven Unternehmenskultur - u. a. durch unsere Diversity & Inclusion Mitarbeiter:innen-Netzwerke\n\n**Deine Verfügbarkeit:**\nAls Werkstudent:in bist du ab sofort für bis zu 20 Stunden pro Woche verfügbar, wobei deine Arbeitszeit flexibel gestaltet werden kann. In den Semesterferien sind nach Absprache bis zu 40 Stunden pro Woche möglich. Wir suchen Studierende für eine langfristige Zusammenarbeit für mindestens 6 Monate - sehr gerne auch länger.\n  \n  \n**Gleiche Chancen für alle:**\nWir freuen uns über Bewerbungen von Menschen, die so vielfältig sind wie wir – unabhängig von Alter, Behinderung, ethnischer Herkunft und Nationalität, Geschlecht, Religion, sexueller Orientierung oder sozialer Herkunft.\n**Noch Fragen?**\nAlle Infos zu unserem Bewerbungsprozess findest du in unseren\n****Bewerbungs-FAQs**\n.**\n**Dein Kontakt bei Fragen rund um Karrierethemen**\nUnser Team Talent Acquisition – Aleksandra, Anja, Julia, Lea, Lisa, Silja und ihre Teams – unterstützt dich gerne bei allen Fragen rund um deine Karriere bei Deloitte. Du erreichst uns per E-Mail unter career@deloitte.de oder telefonisch unter +49 211 87724111.\n  \n  \nJob-ID: 48949",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 94,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "cloud",
+      "bot",
+      "produktmanagement",
+      "erp",
+      "agile",
+      "operations"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, cloud, bot, produktmanagement, erp, agile.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-10-31)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent Product Strategy & Lifecycle Management (PLM) (m/w/d) role at Deloitte. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Deloitte is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Deloitte in this role."
       ]
     }
   },
@@ -7737,6 +7849,57 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about IVU Traffic Technologies is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support IVU Traffic Technologies in this role."
+      ]
+    }
+  },
+  {
+    "id": "a5f55b8f2a",
+    "title": "Werkstudent Innovation & KI (w/m/d)",
+    "company": "HiSolutions AG",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4469174374",
+    "source": "Linkedin",
+    "date_posted": "2026-10-31",
+    "date_found": "2026-10-31 18:51",
+    "salary": "",
+    "description": "**Wachstum braucht Freiheit.**\nWir sind eine unabhängige IT-Management- und IT-Security-Beratung, die dort ansetzt, wo Digitalisierung anspruchsvoll wird: bei Informationssicherheit, IT-Services und -Betrieb, sowie organisatorischer Transformation. Wir unterstützen unsere Kunden dabei, komplexe Herausforderungen zu meistern – individuell, strukturiert und mit einem klaren Blick für das Wesentliche.\n  \n  \nMindestens genauso wichtig wie unsere Projekte sind die Menschen bei HiSolutions. Wir glauben an Eigenverantwortung, Vertrauen und kontinuierliche Weiterentwicklung. Bei uns arbeitest Du in engagierten Teams, mit ausgeprägtem Pioniergeist. Wir fördern fachliches Wachstum ebenso wie persönliche Entwicklung und schaffen ein Arbeitsumfeld, in dem Offenheit, Qualität und gegenseitige Wertschätzung selbstverständlich sind.\n  \n  \n**Freue Dich auf spannende Aufgaben.**\n\n* Wirke bei KI- und Innovationsprojekten mit, hole Informationen ein und pflege unsere Sharepoint-Seite zum Thema Innovation\n* Bring Dich kreativ in die Ideenfindung ein, bewerte Innovationsansätze und bereite Projekt- sowie Entscheidungsvorlagen vor\n* koordiniere Meetings und interne Veranstaltungen\n* Sorge für Transparenz und Austausch rund um das Thema Wissensmanagement\n\n**Damit überzeugst Du uns.**\n\n* Immatrikuliert an einer deutschen Hochschule der Fachrichtung Wirtschaft oder IT oder eine vergleichbare Qualifikation\n* Erste Kenntnisse mit MS Sharepoint und MS Teams von Vorteil\n* Ausgeprägtes Interesse für innovative Themen in der IT, insbesondere für die Künstliche Intelligenz\n* Eigeninitiative, Motivation und eine selbstständige Arbeitsweise\n\n**Darüber hinaus haben wir noch viel zu bieten.**\n\n* In Bewegung bleiben: Wir fördern Deine Fitness-Mitgliedschaft und Deine Gesundheitsvorsorge.\n* Maximale Flexibilität: Wir ermöglichen die Vereinbarkeit von Studium und Job nach Deinen Bedürfnissen – mit Option des Mobilen Arbeitens.\n* Mitarbeiter werben Mitarbeiter: Wir wachsen stetig. Daher freuen wir uns über die Empfehlung potenzieller neuer Mitarbeitenden! Eine erfolgreiche Vermittlung honorieren wir großzügig.\n* Stärkung muss sein: Frisches Obst und kostenfreie Kalt- und Warmgetränke erhältst Du in unserer Cafeteria.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 62,
+    "language_req": "German Job Post (Check B1 Fit)",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "git",
+      "initiative"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: git, initiative.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-10-31)",
+    "applicants_num": 150,
+    "applicants_text": "🔴 125 applicants",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent Innovation & KI (w/m/d) role at HiSolutions AG. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about HiSolutions AG is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support HiSolutions AG in this role."
       ]
     }
   },
