@@ -149,8 +149,8 @@
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, llm, workflow, api, bot.",
     "days_ago": 5,
     "posted_ago": "5 days ago (2026-10-25)",
-    "applicants_num": 26,
-    "applicants_text": "🟢 26 applicants",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
       "selected_bullets": [
         "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
@@ -318,8 +318,8 @@
       "dashboard"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, workflow, git, bot, automatisierung, erp.",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-10-28)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-10-28)",
     "applicants_num": 36,
     "applicants_text": "🟡 36 applicants",
     "work_model": "Flexibles Office",
@@ -434,8 +434,8 @@
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, llm, api, git, product manager.",
     "days_ago": 2,
     "posted_ago": "⚡ 2 days ago (2026-10-28)",
-    "applicants_num": 96,
-    "applicants_text": "🟡 96 applicants",
+    "applicants_num": 62,
+    "applicants_text": "🟡 62 applicants",
     "work_model": "Hybrid (Home Office)",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -491,8 +491,8 @@
     "why_fits": "Strong Product Management fit. Matches keywords: ai, git, product manager, product management, product team, digital product.",
     "days_ago": 2,
     "posted_ago": "⚡ 2 days ago (2026-10-28)",
-    "applicants_num": 55,
-    "applicants_text": "🟡 55 applicants",
+    "applicants_num": 59,
+    "applicants_text": "🟡 59 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -546,8 +546,8 @@
       "cross-functional"
     ],
     "why_fits": "Strong Project Management fit. Matches keywords: ai, agent, erp, project management, stakeholder, coordination.",
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-10-29)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-10-29)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -717,8 +717,8 @@
       "quality assurance"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, product manager, product management, product operations, documentation, cross-functional.",
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-10-29)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-10-29)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -776,8 +776,8 @@
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, project manager, project management, stakeholder, documentation.",
     "days_ago": 1,
     "posted_ago": "🔥 1 day ago (2026-10-29)",
-    "applicants_num": 37,
-    "applicants_text": "🟡 37 applicants",
+    "applicants_num": 43,
+    "applicants_text": "🟡 43 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -998,10 +998,10 @@
       "erp"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, artificial intelligence, automation, workflow, automatisierung, erp.",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-10-28)",
-    "applicants_num": 52,
-    "applicants_text": "🟡 52 applicants",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-10-28)",
+    "applicants_num": 53,
+    "applicants_text": "🟡 53 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1056,9 +1056,9 @@
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, workflow, api, agent, tooling, product manager.",
     "days_ago": 0,
-    "posted_ago": "🔥 4 hours ago (2026-10-31)",
-    "applicants_num": 34,
-    "applicants_text": "🟢 34 applicants",
+    "posted_ago": "🔥 19 hours ago (2026-10-31)",
+    "applicants_num": 76,
+    "applicants_text": "🟡 76 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1110,8 +1110,8 @@
       "support"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, feature, saas, initiative, operations, support.",
-    "days_ago": 0,
-    "posted_ago": "🔥 10 hours ago (2026-10-31)",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-10-30)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -1164,8 +1164,8 @@
       "operations"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, automatisierung, erp, operations.",
-    "days_ago": 4,
-    "posted_ago": "4 days ago (2026-10-26)",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-10-26)",
     "applicants_num": 50,
     "applicants_text": "🟡 50 applicants",
     "tailored_preview": {
@@ -5223,6 +5223,58 @@
     }
   },
   {
+    "id": "81d3691377",
+    "title": "First Hire GTM - New Products (AI x Greentech) (m/f/d)",
+    "company": "Reonic",
+    "location": "Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4485342402",
+    "source": "Linkedin",
+    "date_posted": "2026-10-30",
+    "date_found": "2026-10-31 14:41",
+    "salary": "",
+    "description": "**You turn new ideas into revenue at Reonic. Find the opportunity, test it, make it happen.**\n\nLooking for a role where you don't just support growth but actually own it? This is for you. You'll work directly with installers to uncover real problems, turn those insights into new products and services, and take them from first idea to go-to-market. Working closely with our Venture Development team, you'll have the freedom and responsibility to figure out what works - and the pace to make it happen.\n\n***Please note that for this role, C2 German proficiency is required. This is a full-time, on-site position based in Berlin.***\n\n**What You’ll Do**\n\n* **Go-to-market for new products and services inside our software.**\n  Which installers need this service? How do we reach them? What can we charge? What are the selling points? You don't find the answers at your desk, you find them by trying things.\n* **Customer immersion and spotting new revenue streams.**\n  Daily conversations with installers to find out where their processes really hurt, pressure-test ideas against reality, and sell what you've built together with the Venture Development team.\n* **Commercial responsibility.**\n  You figure out which model works: commission, fixed price, bundled pricing, or a partner share. And you see early whether a channel has enough potential to keep pushing.\n* **Cross-functional execution.**\n  You pull sales, marketing, tech, and external partners together around your topic and keep it moving. You're the one who calls the next step and makes sure it happens.\n\n**What Makes You a Great Fit**\n\n* Native or C2-level German and fluent English.\n* You've already brought something to market, or at least tried: your own project, a campaign, a product during an internship. What matters isn't the outcome, it's that you got going.\n* Strong sense of ownership and impatient if things don't move fast.\n* You'd rather talk to customers than build a theory at your desk.\n* You're comfortable with open situations and get your own answers.\n* Top university background with a clear entrepreneurial streak.\n* First experience in sales, growth, or product is a plus, but not a must.\n\n**Why Join Us?**\n\n* Be part of one of the fastest growing VC-backed startup in Germany with 3000+ satisfied B2B customers.\n* A vibrant, collaborative office culture where great ideas happen face-to-face - we're a full in-person team (5 days/week) in a beautiful Berlin office near Hackescher Markt.\n* Enjoy opportunities for personal and professional growth.\n* Embrace the freedom to innovate and make quick changes in a dynamic team.\n* Perks include gym membership ,or Deutschlandticket, Uber Eats after 7pm, Uber home after 7:30pm, regular team events, and a MacBook.\n* Receive competitive pay.\n\nEven if you don’t meet every requirement, we encourage you to apply! Imposter syndrome shouldn't hold you back - we value talent and passion above all.\n\n**About Reonic**\n\nAt Reonic, we’re on a mission to simplify renewable technology with our AI operating system for renewable installers. Backed by top-tier investors and trusted by 3000+ business customers, we’re growing fast - and we need YOU to help us accommodate our new and existing customers.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 73,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "cross-functional",
+      "support"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, cross-functional, support.",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-10-30)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the First Hire GTM - New Products (AI x Greentech) (m/f/d) role at Reonic. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Reonic is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Reonic in this role."
+      ]
+    }
+  },
+  {
     "id": "98b2bfda09",
     "title": "Werkstudent*in Technical Customer Success - AI Products (m/w/d/x)",
     "company": "T-Systems International",
@@ -6145,6 +6197,63 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about BEW Berliner Energie und Wärme GmbH is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support BEW Berliner Energie und Wärme GmbH in this role."
+      ]
+    }
+  },
+  {
+    "id": "d5e8921817",
+    "title": "Associate Product Owner (m/w/d) Traineeprogramm",
+    "company": "CHECK24",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4422335862",
+    "source": "Linkedin",
+    "date_posted": "2026-10-31",
+    "date_found": "2026-10-31 14:41",
+    "salary": "",
+    "description": "**Über diesen Job**\nCHECK24 ist\n*das*\nVergleichsportal: Wir sind Marktführer und dynamisches Startup in einem. In agilen Teams treffen wir schnelle Entscheidungen und leben flache Hierarchien. Durch den gezielten Einsatz\n**modernster Tools und Technologien**\nsowie\n**State-of-the-Art-Methoden der KI**\ntreiben wir datengetriebene Innovationen voran – immer mit Blick auf den Mehrwert für unsere Kunden. So arbeiten wir täglich in mehr als 50 Produkten daran, die User Experience unserer über 20 Millionen Kunden kontinuierlich zu verbessern.\n  \n  \nDu willst Deine Karriere an der Schnittstelle von Technologie, Produktentwicklung und Strategie starten? Dann ist unser\n**Associate Product Owner (m/w/d) Traineeprogramm**\nbei der CHECK24 Strategy Hub GmbH der perfekte Einstieg für Dich.\n  \n  \nIn\n**zwei Jahren**\nlernst Du\n**drei CHECK24 Teams**\ninnerhalb unserer Produktwelten und zentralen Funktionen kennen. Du konzipierst, entwickelst und optimierst digitale Produkte mit hoher Sichtbarkeit – in engem Austausch mit Entwicklern und Data Scientists. Unter der Anwendung neuester Technologien (z.B. KI) übernimmst Du Verantwortung für Deine Projekte und arbeitest von Beginn an eng mit den\n**Entscheidungsträgern**\nzusammen.\n  \n  \nAls\n**Trainee**\nwirst Du durch Deinen\n**persönlichen C-Level-Mentor**\nbegleitet. Zudem tauschst Du Dich bei exklusiven Events und Workshops innerhalb unserer Community mit Gleichgesinnten aus und baust Dein Netzwerk auf. Unser Ziel ist es, Dich\n**persönlich und fachlich**\nzu challengen und auf das nächste Level zu bringen! Bist Du dabei?\n  \n  \n**Was Du mitbringst**\n\n* Du verfügst über einen exzellenten Masterabschluss mit bevorzugt technischer, naturwissenschaftlicher oder ingenieurwissenschaftlicher Ausrichtung (insb. Physik, Mathematik, Informatik, Elektrotechnik, Wirtschaftsinformatik oder Wirtschaftsingenieurwesen)\n* Hohe Eigeninitiative, Kompetenz und Ehrgeiz, Dich in komplexe Problemstellungen einzuarbeiten und innovative Lösungsansätze zu entwickeln\n* Du begeisterst Dich für innovative Technologien und hast ein ausgeprägtes technisches Interesse – besonders im Bereich der künstlichen Intelligenz. Für Themen wie Prompt Engineering, Feature Design und der Entwicklung mit modernen KI-Tools wie Lovable, Bolt oder Cursor hast Du eine Affinität\n* Du kommunizierst verhandlungssicher auf Deutsch und Englisch (mindestens C1-Level)\n\n**Zu Deinen Aufgaben zählen**\n\n* Zwei Jahre, drei Teams: In Deinem ersten Jahr stellst Du Dich den wechselnden Herausforderungen der zentralen Funktionen wie Customer Usability, Loyalty oder App in unserem Headquarter in München. Anschließend lernst Du weitere unserer Vergleichsprodukte und bundesweiten Standorte besser kennen\n* Kunden: Du nutzt gezielt Datenanalysen und KI, um Kundenbedürfnisse bestmöglich zu verstehen und entwickelst auf dieser Basis digitale Produkte und Services mit echtem Mehrwert für unsere Kunden\n* Digitale Produktentwicklung: Lerne alle Aspekte der digitalen Produktentwicklung kennen und setze Deine Konzepte in kleinen, agilen Teams an der Schnittstelle zu IT, Data Science und Design um\n* Künstliche Intelligenz: Du lernst den Einsatz von Large-Language-Models, Machine-Learning-Pipelines und Prompt-Engineering kennen und baust Features mit sichtbarem Impact\n\n**Was wir Dir bieten**\n**Entwicklung und Verantwortung**\n\n* Dein Einsatz zahlt sich aus – wir fördern Dein Talent und bieten Dir schnelle Aufstiegsmöglichkeiten\n* Ownership für Deine Themen – bringe eigene Ideen ein, probiere Neues aus und übernimm Verantwortung für echten Impact\n* Profitiere von internen Trainings durch spezialisierte Coaches sowie einem jährlichen Budget für externe Weiterbildungen\n\n**Team-Spirit und moderner Workspace**\n\n* Wir leben Teamgeist im Arbeitsalltag und darüber hinaus – sei es beim gemeinsamen Lunch, Kickern oder After-Work-Treffen – und feiern unsere Erfolge bei regelmäßigen Firmen- und Teamevents\n* Ein inspirierendes Umfeld – unser modernes Office bietet hochwertige Ausstattung wie MacBooks und höhenverstellbare Tische\n\n**Flexibilität und Balance**\n\n* Passe Dein Arbeitsmodell flexibel an Deine Lebenssituation an\n* Mit Deinem kostenlosen Deutschlandticket oder einem subventionierten Firmenfahrrad kommst Du stressfrei ins Büro\n* Halte Dich fit mit unseren internen Sportkursen oder nutze das bezuschusste externe Sportangebot (u.a. EGYM Wellpass) für den perfekten Ausgleich\n\nhttps://www.youtube.com/embed/6XHK1-lwMR4?si=J-OO5FOzmMnRbdtV",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 68,
+    "language_req": "German Job Post (Check B1 Fit)",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "prompt",
+      "git",
+      "bot",
+      "product owner",
+      "feature",
+      "agile",
+      "initiative"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, prompt, git, bot, product owner, feature.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-10-31)",
+    "applicants_num": 167,
+    "applicants_text": "🔴 167 applicants",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Associate Product Owner (m/w/d) Traineeprogramm role at CHECK24. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about CHECK24 is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support CHECK24 in this role."
       ]
     }
   },
