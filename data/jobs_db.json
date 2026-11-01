@@ -1301,6 +1301,62 @@
     }
   },
   {
+    "id": "624f05aa06",
+    "title": "Werkstudent (m/w/d) Digitalisierung & Data Analytics im Bereich General Service",
+    "company": "Knorr-Bremse AG",
+    "location": "Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4466670201",
+    "source": "Linkedin",
+    "date_posted": "2026-10-31",
+    "date_found": "2026-10-31 18:51",
+    "salary": "",
+    "description": "We believe that a change towards a better, more sustainable future of transportation is possible. That’s why we are so dedicated to developing safer, more efficient and innovative solutions that make our visions come to life. Who are we? More than 30,000 team-players from all around the world who drive progress through technical excellence and social responsibility.\n  \n  \nAls Werkstudent (m/w/d) unterstützen Sie die Digitalisierung unserer Fertigungs- und Logistikprozesse. Sie arbeiten an innovativen Lösungen in den Bereichen Data Analytics, Industrial IoT und Automatisierung und erhalten Einblicke in die gesamte Wertschöpfungskette eines internationalen Industrieunternehmens.\n  \n  \nZu Ihren Aufgaben gehören:\n  \n  \n\n* Entwicklung und Weiterentwicklung von Business-Intelligence-Anwendungen auf Basis von Qlik Sense\n* Konzeption und Umsetzung von Webanwendungen für interne Anwender\n* Mitarbeit an Digitalisierungs-, Datenanalyse- und IoT-Projekten im Produktionsumfeld\n* Analyse, Aufbereitung und Visualisierung von Produktions- und Logistikdaten\n* Entwicklung und Optimierung von Schnittstellen zwischen Maschinen, Datenbanken und IT-Systemen\n* Umsetzung von Automatisierungs- und Digitalisierungslösungen mit der Microsoft Power Platform\n* Unterstützung bei der Anbindung und Integration von Maschinen sowie Shopfloor-Systemen\n* Mitarbeit in Datenintegrations- und Analytics-Projekten\n* Aufnahme fachlicher Anforderungen sowie Umsetzung bis zur erfolgreichen Produktivsetzung\n* Analyse und Behebung von Fehlern sowie kontinuierliche Optimierung bestehender Anwendungen und Datenmodelle\n\nIhr Profil:\n  \n  \n\n* Laufendes Studium im Bereich Informatik, Wirtschaftsinformatik, Maschinenbau, Wirtschaftsingenieurwesen, Data Science oder einer vergleichbaren Fachrichtung\n* Interesse an Digitalisierung, Datenanalyse und Produktionsprozessen\n* Gute Kenntnisse in MS Excel und PowerPoint\n* Erste Erfahrungen mit Analyse- und Reporting-Tools wie Qlik Sense, Power BI oder SAP sind von Vorteil\n* Erste Kenntnisse in SQL, Python oder JavaScript sind wünschenswert\n* Sehr gute Deutsch- und gute Englischkenntnisse in Wort und Schrift\n* Strukturierte, analytische und selbstständige Arbeitsweise\n* Hohe Eigeninitiative, Zuverlässigkeit und Teamfähigkeit",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 97,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "automatisierung",
+      "erp",
+      "initiative",
+      "reporting",
+      "sql"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, automatisierung, erp, initiative, reporting.",
+    "days_ago": 1,
+    "posted_ago": "🔥 Yesterday (2026-10-31)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent (m/w/d) Digitalisierung & Data Analytics im Bereich General Service role at Knorr-Bremse AG. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Knorr-Bremse AG is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Knorr-Bremse AG in this role."
+      ]
+    }
+  },
+  {
     "id": "9d2a44bb43",
     "title": "Working Student – Finance / General Ledger / Intercompany Operations (all genders)",
     "company": "Zalando",
@@ -6183,6 +6239,58 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about 50Hertz Transmission GmbH is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support 50Hertz Transmission GmbH in this role."
+      ]
+    }
+  },
+  {
+    "id": "b210b05ff3",
+    "title": "Werkstudent (m/w/d) Technologie Scouting & Projektmanagement",
+    "company": "Builtech Group",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4429878688",
+    "source": "Linkedin",
+    "date_posted": "2026-11-01",
+    "date_found": "2026-11-01 15:19",
+    "salary": "",
+    "description": "**Über uns**\nDie\n**Builtech Unternehmensgruppe**\nist einer der führenden technischen Gebäudeausrüster im deutschsprachigen Raum. Wir verstehen uns als 360-Grad-Komplettanbieter, der die wesentlichen Gewerke im Bereich der TGA unter einem Dach vereint und die Gebäudewende aktiv gestaltet. Mit unseren aktuell ca. 2.050 Mitarbeitern erbringen wir jährlich über 550 Mio. € Gesamtleistung. Wir begeistern Kunden und Mitarbeitende mit unserer progressiven Denkweise und erstklassigen Umsetzungskompetenz dafür, TGA neu zu denken. Wir sind HANDWERK NEXT LEVEL!\n  \n  \nZur Verstärkung unseres Innovationsteams suchen wir einen Werkstudenten (m/w/d) für bis zu 20 Stunden pro Woche, der mit Neugier, analytischem Denken und Kreativität unsere Innovationsarbeit bereichern möchte. Du hast Freude daran, neue Ideen zu entwickeln, in tragfähige Konzepte zu überführen und diese im Team weiterzudenken? Dann bist du bei uns genau richtig!\n  \n  \n**Was du bei uns machst**\n\n* Gestalte die Konzeption, Durchführung und Nachverfolgung von Innovationsprojekten und Pilotvorhaben aktiv mit\n* Du recherchierst und analysierst technologische Entwicklungen sowie deren Potenziale für die Baubranche\n* Bei der Konzeption und Weiterentwicklung unseres Innovation Operating Models unterstützt du uns\n* Du identifizierst relevante Akteure wie Start-ups, Forschungsinstitute und Technologiepartner und initiierst erste Kooperationen\n\n**Was du mitbringst**\n\n* Derzeit bist du in einem kaufmännischen oder technischen Studiengang eingeschrieben, idealerweise mit einem Schwerpunkt im Bereich Bau oder Innovation\n* Du besitzt ein ausgeprägtes Interesse an neuen Technologien, Trends, Geschäftsmodellen und Wandel, insbesondere im Handwerk\n* Ein versierter Umgang mit MS Office Anwendungen rundet Dein Profil ab\n* Du verfügst über sehr gute Deutschkenntnisse (mind. C1-Niveau) sowie gute Englischkenntnisse (mind. B2-Niveau)\n\n**Was du bekommst**\n\n* Arbeitsvertrag: Attraktive Bezahlung und Vertrauensarbeitszeit\n* Modernes Arbeiten: State of the Art Soft- und Hardware-Tools unterstützen Dich bei Deiner Tätigkeit\n* Food & Drinks: Wir versorgen Dich mit frischem Obst sowie Kaffee, Tee und weiteren Getränken\n* Builtech Akademie: Wir unterstützen und begleiten Dich bei Deiner persönlichen und fachlichen Entwicklung!\n* Firmenevents: Wir veranstalten regelmäßige Events, um unsere Erfolge zu feiern\n* Kultur: Du triffst auf eine offene Unternehmenskultur mit flachen Hierarchien und viel Gestaltungsspielraum\n* After Work: Genieß zusammen mit den Kollegen Deinen Feierabend mit Blick über Berlin\n* Standort: Wir bieten einen attraktiven, modernen, gut erreichbaren Arbeitsplatz in zentraler Lage am Ernst-Reuter-Platz\n* Benefits: Diverse Rabattangebote über Corporate Benefits, Fahrrad-Leasing\n\n**Werde Teil unserer Innovationsreise!**\n„Gutes Handwerk ist unser wichtigster Beitrag zur Nachhaltigkeit“ – unter diesem Motto arbeiten wir täglich daran, die Zukunft der technischen Gebäudeausrüstung neu zu denken. Vielfalt, Chancengleichheit und gegenseitiger Respekt sind für uns selbstverständlich.\n  \n  \nBereit, die TGA-Branche mitzugestalten?\n  \n  \nDann freuen wir uns auf deine Bewerbung!",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 66,
+    "language_req": "German Job Post (Check B1 Fit)",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "bot",
+      "erp",
+      "projektmanagement"
+    ],
+    "why_fits": "Strong Project Management fit. Matches keywords: bot, erp, projektmanagement.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-01)",
+    "applicants_num": 88,
+    "applicants_text": "🟡 88 applicants",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Worked embedded in an agile <strong>Product, Tech, Business Analytics, and Operations team</strong> to translate complex operational data into product features, evaluation tools, and scalable processes across <strong>9 international markets</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent (m/w/d) Technologie Scouting & Projektmanagement role at Builtech Group. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Builtech Group is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Builtech Group in this role."
       ]
     }
   },
