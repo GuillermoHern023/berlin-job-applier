@@ -99,6 +99,11 @@ def _fetch_single_linkedin_meta(job: Dict[str, Any]) -> Dict[str, Any]:
                 m_post = re.search(r'posted-time-ago[^>]*>([^<]+)<', html)
                 if m_post:
                     raw_posted_ago = " ".join(m_post.group(1).split())
+                if not job.get("description") or len(str(job.get("description")).strip()) < 50:
+                    m_desc = re.search(r'show-more-less-html__markup[^>]*>(.*?)</div>', html, re.DOTALL)
+                    if m_desc:
+                        clean_desc = re.sub(r'<[^>]+>', ' ', m_desc.group(1))
+                        job["description"] = " ".join(clean_desc.split())
         except Exception:
             pass
 

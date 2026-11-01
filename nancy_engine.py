@@ -740,7 +740,7 @@ def scrape_nancy_jobs(
                 results_wanted=results_wanted,
                 hours_old=hours_old,
                 country_indeed="Germany",
-                linkedin_fetch_description=True,
+                linkedin_fetch_description=False,
             )
             if df is None or df.empty:
                 continue

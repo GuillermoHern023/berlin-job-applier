@@ -33,8 +33,8 @@
       "sql"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, workflow, api, product operations, stakeholder, cross-functional.",
-    "days_ago": 7,
-    "posted_ago": "1 week ago (2026-10-23)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-10-23)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -147,8 +147,8 @@
       "erp"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, llm, workflow, api, bot.",
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-10-25)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-10-25)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -261,8 +261,8 @@
       "figma"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, cloud, product manager, product owner, roadmap, feature.",
-    "days_ago": 7,
-    "posted_ago": "1 week ago (2026-10-22)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-10-22)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -320,8 +320,8 @@
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, workflow, git, bot, automatisierung, erp.",
     "days_ago": 4,
     "posted_ago": "4 days ago (2026-10-28)",
-    "applicants_num": 40,
-    "applicants_text": "🟡 40 applicants",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -489,10 +489,10 @@
       "stakeholder"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, git, product manager, product management, product team, digital product.",
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-10-28)",
-    "applicants_num": 66,
-    "applicants_text": "🟡 66 applicants",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-10-28)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -774,10 +774,10 @@
       "reporting"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, project manager, project management, stakeholder, documentation.",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-10-29)",
-    "applicants_num": 53,
-    "applicants_text": "🟡 53 applicants",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-10-29)",
+    "applicants_num": 54,
+    "applicants_text": "🟡 54 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1055,10 +1055,10 @@
       "roadmap"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, workflow, api, agent, tooling, product manager.",
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-10-30)",
-    "applicants_num": 150,
-    "applicants_text": "🔴 140 applicants",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-10-30)",
+    "applicants_num": 152,
+    "applicants_text": "🔴 152 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1334,9 +1334,9 @@
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, automatisierung, erp, initiative, reporting.",
     "days_ago": 1,
-    "posted_ago": "🔥 Yesterday (2026-10-31)",
-    "applicants_num": 999,
-    "applicants_text": "LinkedIn (Click to view)",
+    "posted_ago": "🔥 1 day ago (2026-10-31)",
+    "applicants_num": 150,
+    "applicants_text": "🔴 118 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1353,6 +1353,58 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about Knorr-Bremse AG is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Knorr-Bremse AG in this role."
+      ]
+    }
+  },
+  {
+    "id": "99101492c1",
+    "title": "Working Student AI Automation & Support (d/f/m)",
+    "company": "Bettermile",
+    "location": "Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4483986989",
+    "source": "Linkedin",
+    "date_posted": "2026-11-01",
+    "date_found": "2026-11-01 21:42",
+    "salary": "",
+    "description": "What is working at Bettermile like? 🌟 We have a very supportive and appreciative working environment with a lot of autonomy, a flat hierarchy, and professional growth possibilities 🌍 We mean diversity and we put it in numbers: 40 languages, 40 nationalities, 40% women (vs. averagely 26% in tech industry), and yes, we do have Schlager-Fans among us 🚀 You can quickly take on responsibility without feeling left alone. Your team is always at your side 🎨 We mean it when we say “cutting edge” and have a high level of creative freedom in our everyday work 🏢 We work in a hybrid mode with weekly team days for better collaboration and nurturing interpersonal connections. When onsite - we work in a modern kid &amp; pet-friendly Better Space in the heart of Berlin-Kreuzberg ✈️ Remote work from anywhere for up to 12 weeks in total in a year 🛌 Enjoy 27 vacation days (with a 5-day week model) 🍎 Regular team breakfasts, fitness &amp; wellness classes, company runs, and other events. Fruits, snacks, drinks, and coffee with a variety of milk are a given - but yes, we have them 💡 Outstanding flexibility we are proud of and, of course, the best colleagues in the world! About the User Insights &amp; Support Team: Our team is like a navigation system for the successful experience of our users. We don't just improve performance. We consider individual needs to provide customized training and resources tailored specifically to our clients. Interaction is at the heart of what we do. We look forward to answering questions and getting to the bottom of uncertainties. We are proud to have an open door for feedback, because our customers' opinions drive change and improvement. We have a few pre-defined solutions, because we believe that every path should be unique. The UsIS team is more than ‘just’ support. We are comrades-in-arms, believing in the vision and encouraging each other to take each step with confidence. You will be taking care of Splitting your time between AI and automation projects (75%) and hands-on support (25%), working closely with our support and product teams. Maintaining and expanding the internal knowledge base for Fin, the AI agent that answers our customers’ questions in Intercom, our customer support platform. You’ll write and update articles, get facts verified by product owners, and keep content up to date. Reviewing real Fin conversations to spot failure patterns like wrong answers, missing content, or dead ends, fixing the root cause, and testing every change in Fin Operator or Betterbot before it goes live. Owning Fin’s escalation, routing, and automation logic, and implementing changes when the team wants the bot to behave differently. Helping our users directly by answering support requests, keeping you close to real customer questions and giving you firsthand insight into where Fin can improve. You check these boxes You’re an enrolled student based in Berlin, available for 20 hours per week. You have hands-on experience building workflows in n8n, Make, Zapier, or similar. Uni projects and side projects count too! You have a working understanding of how LLMs behave and where they tend to go wrong. You have an eye for accuracy and like to get things right. Checking facts comes naturally to you, and you’d rather ask a question than make a guess. You’re self-sufficient and enjoy taking ownership of your work, while staying open to ideas and feedback from your teammates. When something doesn’t work, you focus on finding a solution together. You’re fluent in English, written and spoken, and write clear, precise documentation. German is not required. Be a part of shaping a fast-growing industry and make an impact from day one. You’ll have the chance to take on responsibility early, with guidance and support from experienced mentors. We foster a learning culture, collaboration on equal footing, and quick decision-making that moves things forward. Currently, we’re proceeding only with candidates authorized to work in Germany or who already hold a Job Seeker Visa.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 97,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "automation",
+      "support"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, support.",
+    "days_ago": 0,
+    "posted_ago": "🔥 4 minutes ago (2026-11-01)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Working Student AI Automation & Support (d/f/m) role at Bettermile. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Bettermile is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Bettermile in this role."
       ]
     }
   },
@@ -2531,6 +2583,57 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about TikTok is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support TikTok in this role."
+      ]
+    }
+  },
+  {
+    "id": "93b59cba5d",
+    "title": "Werkstudent (w/m/d) - Agile Project Support within SAP Store",
+    "company": "SAP",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4424362533",
+    "source": "Linkedin",
+    "date_posted": "2026-11-01",
+    "date_found": "2026-11-01 21:42",
+    "salary": "",
+    "description": "Wir helfen die Welt zu verbessern Bei SAP halten wir es einfach: Du bringst dein Bestes mit, und wir holen das Beste aus dir heraus. Wir sind Macher, die über 20 Branchen und 80 % des weltweiten Handels beeinflussen – und wir brauchen deine einzigartigen Talente, um die Zukunft mitzugestalten. Die Arbeit ist herausfordernd – aber sie zählt. Du findest bei uns einen Ort, an dem du du selbst sein kannst, dein Wohlbefinden an erster Stelle steht und du wirklich dazugehört. Was hast du davon? Ständiges Lernen, Weiterentwicklung deiner Fähigkeiten, großartige Zusatzleistungen und ein Team, das möchte, dass du wächst und erfolgreich bist. Was du mitgestaltest Scrum-Master-Tätigkeiten: Unterstützung bei der Implementierung und Sicherstellung agiler Prozesse über verschiedene Teams hinweg. Moderation der Stakeholder-Kommunikation, Koordination der Teams sowie Gewährleistung der Einhaltung agiler Methoden innerhalb sämtlicher Teamstrukturen Test &amp; Dokumentation: Durchführung von Funktionstests neuer Features mit systematischer Erfassung und Dokumentation von Fehlern in Tracking-Systemen sowie Erstellung aussagekräftiger Testprotokolle und Bug-Reports Go-Live-Management: Planung, Koordination und Überwachung von Go-Live-Aktivitäten zur Sicherstellung eines erfolgreichen Übergangs in den Produktivbetrieb. Steuerung der Kommunikation sowie Umsetzung aller go-live-relevanten Maßnahmen Prozessoptimierung: Analyse und Optimierung von Geschäftsprozessen mit Schwerpunkt auf Defect-Management, Go-Live-Orchestrierung sowie der Identifikation weiterer Verbesserungspotenziale zur Steigerung der operativen Effizienz Was du mitbringst Aktuell immatrikuliert in einem Bachelor- oder Masterstudiengang im Bereich Wirtschaftsinformatik, Informationstechnologie, Business Administration oder einem vergleichbaren Studiengang Ausgeprägte Planungs- und Organisationsfähigkeiten mit nachweislicher Fähigkeit, komplexe Projekte zu strukturieren, Prioritäten effizient zu setzen sowie detaillierte Dokumentationen und Zeitpläne zu erstellen und zu pflegen Stark ausgeprägtes konzeptionelles und analytisches Denkvermögen mit der Fähigkeit, komplexe Problemstellungen zu analysieren, Ursachen zu identifizieren und strategische Lösungsansätze zu entwickeln Lösungsorientierte Denkweise mit der Fähigkeit, Prozessineffizienzen zu erkennen und praxisnahe Optimierungsmaßnahmen abzuleiten Kenntnisse agiler Methoden sowie ein gutes Verständnis des Scrum-Frameworks und der Umsetzung agiler Prozesse Sehr gute Kenntnisse in den Microsoft-Office-Anwendungen, insbesondere Excel, PowerPoint und Outlook Praktische Erfahrungen mit Softwareentwicklung / Programmierung (z. B. Java, Python, C++) sowie Atlassian-Tools (JIRA, Confluence) sind von Vorteil Sehr gute schriftliche und mündliche Englischkenntnisse Die regelmäßige Arbeit am Standort Berlin ist erforderlich Wo du hingehörst Deal Execution steuert den gesamten „Opportunity-to-Close“-Prozess – von der Angebotserstellung und Deal-Freigabe bis hin zu Vertragsabschluss und Fulfillment. Durch die Anwendung von Prinzipien des Next-Generation Cloud Selling optimiert das Team nicht nur Prozesse, sondern beschleunigt auch Vertragsabschlüsse und steigert die Erfolgsquoten signifikant, wodurch das Umsatzwachstum von SAP nachhaltig gefördert wird. Mit einem klaren Fokus auf Präzision und Effizienz verantwortet Deal Execution zentrale Prozesse wie Deal-Qualifizierung, Preisgestaltung, Vertragsmanagement sowie die Abwicklung von Verlängerungen und stellt dabei eine fristgerechte Umsatzrealisierung sowie die Einhaltung der IFRS15-Standards sicher. Das E-Commerce Platforms Team als Teil von Deal Execution verantwortet das technische Design sowie die Implementierung sämtlicher Features und Funktionalitäten innerhalb unserer digitalen Commerce-Plattformen. Anwendungen wie der SAP Store (www.sap.com/store) und der Partner Store tragen gemeinsam zur digitalen Distribution umfassender Softwarelösungen bei und ermöglichen einen nahtlosen Zugang zu unseren Angeboten über unterschiedliche Kundensegmente und Märkte hinweg. Unsere Stores dienen als Online-Vertriebskanäle, über die Kunden SAP- und Partnerlösungen aus den Bereichen Application Cloud, Analytics, Datenbanken und Technologieportfolios in einem einfachen Click-through-Prozess erwerben können. Deine Bewerbungsunterlagen sollten neben einem Anschreiben, tabellarischen Lebenslauf, aktuellen Notenspiegel und gültiger Immatrikulationsbescheinigung auch Kopien von Zwischen-, Schulabschluss- und, soweit vorhanden, Arbeitszeugnissen (Praktika) als Anlagen enthalten. Bitte beschreibe außerdem deine Erfahrungen und Kenntnisse in Fremdsprachen und Computerprogrammen/Programmiersprachen. Dies ist eine globale, strategische und bezahlte Werkstudentenstelle, die Studenten und Studentinnen die Möglichkeit bietet, sich beruflich zu orientieren. #Workingstudent #Werkstudent #Germany #Deutschland #Student #SAPGermanStudentsCareers #SAPNextGen Gib dein Bestes SAP-Innovationen helfen mehr als vierhunderttausend Kunden weltweit, effizienter zusammenzuarbeiten und Business Insight effektiver zu nutzen. SAP war ursprünglich für seine Führungsrolle in der ERP-Software (Enterprise Resource Planning) bekannt und hat sich zu einem Marktführer für End-to-End-Software für Geschäftsanwendungen und zugehörige Services für Datenbank, Analyse, intelligente Technologien und Erfahrungsmanagement entwickelt. Als Cloud-Unternehmen mit zweihundert Millionen Benutzern und mehr als einhunderttausend Mitarbeitern weltweit sind wir zielgerichtet und zukunftsorientiert, mit einer äußerst kollaborativen Teamethik und Engagement für die persönliche Entwicklung. Unabhängig davon, ob wir globale Branchen, Menschen oder Plattformen miteinander verbinden, stellen wir sicher, dass jede Herausforderung die Lösung erhält, die sie verdient. Bei SAP kannst du dein Bestes geben. Wir gewinnen durch Inklusion SAPs Kultur der Inklusion, der Fokus auf Gesundheit und Wohlbefinden sowie flexible Arbeitsmodelle stellen sicher, dass sich alle – unabhängig vom Hintergrund – einbezogen fühlt und ihr Bestes geben können. Bei SAP sind wir überzeugt davon, dass uns die einzigartigen Fähigkeiten und Eigenschaften, die jede Person mitbringt, stärker machen. Deshalb investieren wir in die Menschen bei SAP, um Selbstvertrauen zu stärken und allen zu helfen, ihr volles Potenzial zu entfalten. Unser Ziel ist es, alle Talente zu fördern und eine bessere Welt zu schaffen. Chancengleichheit und Barrierefreiheit SAP bekennt sich zu den Werten der Chancengleichheit am Arbeitsplatz und bietet im Fall von mit körperlichen und/oder geistigen Beeinträchtigungen barrierefreie Unterstützung bei der Bewerbung. Wenn du dich für eine Stelle bei SAP bewerben möchtest und Unterstützung oder besondere Hilfe beim Navigieren auf unserer Website oder beim Ausfüllen deiner Bewerbung benötigst, sende bitte eine E-Mail mit deiner Anfrage an das Recruiting Operations Team: Careers@sap.com. Anfragen auf angemessene Vorkehrungen werden im Einzelfall geprüft. Nur unbefristete Positionen sind gemäß den Teilnahmebedingungen in der SAP Referral Policy für das SAP-Mitarbeiterempfehlungsprogramm berechtigt. Für Positionen in der Berufsausbildung können besondere Bedingungen gelten. Einsatz von KI im Rekrutierungsprozess Weitere Informationen über den verantwortungsvollen Einsatz von KI in unserem Rekrutierungsprozess findest du in unseren Richtlinien zur ethischen Nutzung von KI im Rekrutierungsprozess. Bitte beachte, dass Verstöße gegen diese Richtlinien zum Ausschluss aus dem Bewerbungsprozess führen können. Requisition ID:453942 | Funktionsbereich:Information Technology | Reisetätigkeit:0 - 10% | Karrierestatus:Studenten | Anstellungsverhältnis:Teilzeit, befristet | Weitere Standorte:",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 93,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "agile",
+      "support"
+    ],
+    "why_fits": "Strong Project Management fit. Matches keywords: agile, support.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-01)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent (w/m/d) - Agile Project Support within SAP Store role at SAP. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about SAP is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support SAP in this role."
       ]
     }
   },
@@ -3982,6 +4085,57 @@
     }
   },
   {
+    "id": "448431957f",
+    "title": "AI Operations Associate (m/f/d)",
+    "company": "inca",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4483975617",
+    "source": "Linkedin",
+    "date_posted": "2026-11-01",
+    "date_found": "2026-11-01 17:56",
+    "salary": "",
+    "description": "The Role 👤 We deploy agentic AI systems that handle real insurance claims for DAX-listed insurers. Not demos. Not decks. Production. We need an AI operator to get into the trenches - operate pilots hands-on, identify where AI replaces manual work, and build the systems that make it scalable. You will become our internal expert on frontier AI - and Claude specifically. That's not a side responsibility. It's a core part of the job. You will work directly with the founders (ex-BCG PLs) and elite AI engineers (ex-Amazon, ex-Meta). You'll sit in rooms with C-level insurance executives, helping us deliver product excellence and scale accounts. But first, you'll process claims, fix edge cases, and ship, leveraging AI. Aufgaben What You'll Do 💼 Master the tools. You'll develop deep, hands-on proficiency with Claude: prompt engineering, context management, multi-step reasoning, structured outputs, agentic workflows. You'll know the difference between a prompt that works in a demo and one that holds up across 10,000 real claims. You'll track model releases, test new capabilities the week they drop, and form a clear-eyed view of what's actually better - and what's hype. Deliver. Support enterprise pilot launches - from first claim to full operational rollout. You'll be in the room when things go wrong, and you'll be the one who fixes them. You'll learn what separates a pilot that converts into a multi-million € annual contract from one that stalls - and you'll build the operational muscle to make the former the default. Build. Every manual process is a target. You'll map workflows, identify failure points, and design automated systems that don't need babysitting. That means writing SOPs, building review queues, configuring AI pipelines, and ensuring the output meets the quality bar of a DAX-listed insurer communicating with its customers. Quality here isn't a vibe - it's measurable, and you own the measurement. Scale. Once something works, your job is to make it run without you. You'll identify bottlenecks, compress cycle times, and hand off systems that are documented, reliable, and ready for the next 10x of volume. The best outcome is that what you built keeps working after you've moved on to the next problem. (Internship) → Year 1 → Year 2+ 📈 (Internship): You start at the source. You won't learn our processes from a manual, but through hands-on execution: structuring data, analyzing client feedback, and automating your first sub-processes. You'll get real exposure to how a VC-backed AI startup operates - the decisions, the trade-offs, the pace. Your goal is to understand how the business breathes at its core, build a track record, and see if there's a long-term fit. Year 1: You're in the details. Processing claims, supporting client reviews, building fully automated workflows. You'll deepen your AI expertise - mastering the tools inside-out, running experiments, iterating fast. You'll gain strategic context - C-level meetings, business model exposure, full pilot lifecycle - but you earn it through operational results. No shortcuts. Year 2+: Paths open based on what you build. Account Ownership - own a major enterprise account end-to-end: commercial relationship, delivery quality, expansion AI Solutions - build the platform and own the delivery model across all clients Back in the trenches - launch the next pilot, compress timelines further, reset the benchmark Qualifikation What You Bring 📄 Top academic track record or equivalent proof of raw horsepower 0-3 years of experience in high-intensity environments: consulting, banking, or a BizOps / strategy role at a VC-backed startup Real proficiency with Claude or comparable frontier AI tools - you've used them extensively, you know how to prompt well, and you have an intuition for where they fail Structured, analytical thinking; comfortable building models, interpreting data, and turning outputs into decisions Strong project management instincts - you track what's moving, flag what's stuck, and close the loop without being asked Exceptional written and verbal communication - you can write a crisp client memo and a clear internal Slack message with equal ease German and English fluency Non-Negotiables ❗ Client-first. The insurer is your client. Their success is your KPI. Their customer's experience is your quality standard. Quality-obsessed. AI output going to a DAX insurer's customers must be flawless. Every edge case matters. You don't ship and hope - you verify. Extreme ownership. You see a problem, you own it until it's solved. No hand-offs to nobody. No \"that's not my job.\" Benefits Why inca ⭐ Timing. We're at the earliest stage of a category-defining company. The people who join now shape what this becomes - the culture, the processes, the product. That window closes fast. Learning curve. You'll learn enterprise service delivery from ex-BCG PLs who've managed 7-figure accounts. You'll learn AI engineering from builders who've shipped at Amazon and Meta. And you'll develop a rare, compounding skill set: frontier AI expertise applied inside a regulated, high-stakes industry - at a moment when almost nobody has it. Real impact. No theater. No internal tools that nobody uses. Agentic AI handling real claims, at scale, for real customers. You'll see the output of your work in production within weeks. Ownership culture. Build a scalable system → get promoted to build the next one. We don't reward people for being busy. We reward people for building things that last. Compensation &amp; Details 💰 Competitive salary + meaningful equity | Berlin (on-site) | EU work authorization required",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 85,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "operations"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, operations.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-01)",
+    "applicants_num": 59,
+    "applicants_text": "🟡 59 applicants",
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the AI Operations Associate (m/f/d) role at inca. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about inca is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support inca in this role."
+      ]
+    },
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false
+  },
+  {
     "id": "541cf922c8",
     "title": "Venture Development Manager (m/w/d)",
     "company": "autarc (YC S24)",
@@ -4433,6 +4587,54 @@
         "What particularly excites me about Siemens is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Siemens in this role."
       ]
     }
+  },
+  {
+    "id": "014b9a5d1b",
+    "title": "Associate Consultant - Entry-Level Technology Consulting",
+    "company": "Veeva Systems",
+    "location": "Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4459701007",
+    "source": "Linkedin",
+    "date_posted": "2026-11-01",
+    "date_found": "2026-11-01 17:56",
+    "salary": "",
+    "description": "Veeva’s Consultant Development Program (CDP) is an accelerated pathway that transforms early-career professionals into high-impact consultants who deliver cloud and AI solutions, helping global Life Sciences companies bring life-changing therapies to patients. The Role You’ll work hands-on with innovative technology, collaborating directly with internal teams and external customers, implementing our products to solve complex business challenges. In this role, you’ll learn our industry-leading cloud platforms and work with cutting-edge AI solutions to transform how life sciences companies operate. Empowered from day one by a team-first culture, you will accelerate your career growth as a technical consultant who thrives in an environment where we work hard for our customers and each other. Now hiring for our April 2027 and September 2027 start dates. The Program As part of the Consultant Development Program, you will: Ramp up quickly. Your journey begins with an intensive, team-based onboarding program that combines hands-on learning, transparent feedback, and active collaboration to develop the consulting skills and industry knowledge to make an impact right away. Learn by doing. You won't be watching from the sidelines. You will take on real responsibility and work directly with customers to solve problems within your first three months. Thrive together. Grow alongside a supportive team of seasoned leaders and peers who actively champion your development through open communication and actionable feedback. Build your future. Advance from Associate to Consultant in less than 2 years. More importantly, you’ll develop the foundation for a successful, long-term career where you can continually expand your technical expertise, lead complex projects, and evolve with our global and diverse team. What You'll Do As part of our Professional Services team, you are a strategic partner guiding customers through implementation. We will teach you how our software works, and you will use that knowledge to design, configure, and deliver solutions that drive real business value. Your day-to-day will involve: Designing &amp; tailoring the software: You will lead the configuration of our platform to fit each customer's unique business model—setting up workflows, structuring data, and aligning system capabilities to requirements. Conducting discovery workshops: You will lead interactive discovery workshops with customer stakeholders to gather business requirements, map out existing workflows, and translate their vision into actionable technical specifications for deployment. Managing project scope &amp; execution: You will take ownership of core implementation deliverables by scoping requirements, building timeline estimates, and keeping project milestones on track from kick-off through go-live. Guiding the customer as an expert: You will lead the customer with best practices to ensure their business processes are optimized for maximum long-term value on our products. What We Are Looking For | We are open to graduates of a variety of backgrounds and look for a specific mindset: Drive: You thrive in a challenging, intense environment that rewards initiative and rapid learning. Curiosity: You have a genuine desire to be hands-on with software and master new technologies. Communication: You are fluent in English and German with excellent verbal and written communication skills. Analytical Mindset: You are a strong critical thinker with a proven track record of academic performance (in any degree/field of study). Integrity: Veeva is a Public Benefit Corporation (PBC) and a “do the right thing” company and we expect that from all employees. Work Ethic: A commitment to excellence and passion for working hard to achieve results. Travel: Willingness to travel as needed (up to 20-30% of the time). Experience: Recent bachelor’s or master’s degree graduate How We Hire | Our process is different from most. It is designed to be fast, efficient and respectful. Here are the steps: Apply: Submit your resume, a short cover letter, and take a quick personality test, unless you have already completed it with Veeva previously. Fast Response: We will notify you of your next step typically within one week. Interview &amp; Case: Interview with a Veeva leader. If successful, we will give you a real-world scenario (with 3 days to prepare) to present to our team. Offer: We make decisions quickly—usually within a week of your final presentation. What We Offer Starting Annual Salary: 48,000 EUR. Perform well, and in one year you’ll receive a compensation increase and participate in our bonus program. Hybrid Work Environment: We require Associate Consultants to live within reasonable commuting distance from Veeva's Frankfurt or Berlin office giving you easy access to in-person collaboration and support, skill development, and social opportunities as you launch your career. Long-term, our Work Anywhere policy allows you flexibility to work from the office or from your home. Work Authorization: Qualified candidates must be legally authorized to be employed in the European Union. Veeva does not provide sponsorship for employment visa status for this employment position. Veeva is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, sex, sexual orientation, gender identity or expression, religion, national origin or ancestry, age, disability, marital status, pregnancy, protected veteran status, protected genetic information, political affiliation, or any other characteristics protected by local laws, regulations, or ordinances. If you need assistance or accommodation due to a disability or special need when applying for a role or in our recruitment process, please contact us at talent_accommodations@veeva.com.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 77,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-01)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Associate Consultant - Entry-Level Technology Consulting role at Veeva Systems. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Veeva Systems is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Veeva Systems in this role."
+      ]
+    },
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false
   },
   {
     "id": "7e8eab292f",
