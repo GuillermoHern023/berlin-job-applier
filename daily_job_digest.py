@@ -26,7 +26,7 @@ DOCS_DIR = BASE_DIR / "docs"
 REPORT_TXT_PATH = BASE_DIR / "latest_job_digest.txt"
 DASHBOARD_HTML_PATH = BASE_DIR / "dashboard.html"
 ARTIFACT_DASHBOARD_PATH = Path(r"C:\Users\guill\.gemini\antigravity\brain\e708b6f5-3e3c-4683-86c2-48a58698cce4\job_dashboard.html")
-CURRENT_CONV_ARTIFACT_PATH = Path(r"C:\Users\guill\.gemini\antigravity\brain\769566fa-93ba-4c9a-8413-b6c6cda5b296\job_dashboard.html")
+CURRENT_CONV_ARTIFACT_PATH = Path(r"C:\Users\guill\.gemini\antigravity\brain\29e95607-8568-4826-8ddc-903bae52c544\job_dashboard.html")
 
 RECIPIENT_EMAILS = ["guillejhl@gmail.com", "schuetzenc@gmail.com"]
 GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1o2r4Qvn9SL7gOa05P-up9tiwnCXPmcnOG3kttL_H0Fk/edit"
