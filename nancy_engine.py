@@ -102,7 +102,7 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
 <style>
   @page {{
     size: A4;
-    margin: 11mm 12mm 11mm 12mm;
+    margin: 8mm 11mm 7mm 11mm;
   }}
   * {{
     box-sizing: border-box;
@@ -237,12 +237,16 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
     margin-bottom: 0;
   }}
   .footer-sig {{
-    margin-top: 6px;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-top: 4px;
+    padding-top: 3px;
     border-top: 1px solid #cbd5e1;
+  }}
+  .sig-date {{
+    font-size: 8.0pt;
+    color: #475569;
   }}
   .sig-block {{
     text-align: center;
@@ -299,6 +303,14 @@ def build_nancy_cv_html(profile: Dict[str, Any], custom_headline: Optional[str] 
         <p><strong>Film &amp; Audio:</strong> {profile["skills_de"].get("film_audio", "DaVinci Resolve · Wondershare Filmora · Adobe Audition CC 2019")}</p>
         <p><strong>Sprachen:</strong> {lang_items}</p>
         <p><strong>Nachweise &amp; Mobilität:</strong> {profile["skills_de"]["certificates"]}</p>
+      </div>
+    </div>
+
+    <div class="footer-sig">
+      <div class="sig-date">Berlin, den {today_str}</div>
+      <div class="sig-block">
+        <img src="{sig_uri}" alt="Unterschrift {p['short_name']}" />
+        <div class="sig-line">{p["full_name"]}</div>
       </div>
     </div>
   </div>

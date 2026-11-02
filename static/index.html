@@ -784,6 +784,14 @@
                 <div><strong>Nachweise &amp; Mobilität:</strong> Führerschein Klasse B · Gesundheitszeugnis</div>
               </div>
             </div>
+
+            <div style="margin-top: 6px; display: flex; justify-content: space-between; align-items: flex-end; padding-top: 3px; border-top: 1px solid #cbd5e1;">
+              <div style="font-size: 8.0pt; color: #475569;">Berlin, den ${today}</div>
+              <div style="text-align: center;">
+                <img src="files/nancy_assets/image1.png" alt="Unterschrift Nancy" onerror="this.style.display='none'" style="height: 26px; display: block; margin: 0 auto -2px auto;" />
+                <div style="font-size: 8.0pt; color: #475569; border-top: 1px solid #94a3b8; padding-top: 2px; min-width: 165px;">Nancy Thuy Dung Schütze</div>
+              </div>
+            </div>
           </div>
         `;
       }
@@ -959,8 +967,9 @@
       if (!printWin) return;
       const openTag = '<' + 'html><' + 'head><meta charset="UTF-8"><title>' + pdfTitle + '</title>';
       const styleTag = '<style>' +
-        '@page { size: A4 portrait; margin: 0mm !important; } ' +
-        'html, body { width: 210mm; margin: 0 !important; padding: 0 !important; background: #ffffff; color: #111827; -webkit-print-color-adjust: exact; print-color-adjust: exact; } ' +
+        '@page { size: A4 portrait; margin: 0; } ' +
+        '@media print { @page { size: A4 portrait; margin: 0; } html, body { margin: 0 !important; padding: 0 !important; } } ' +
+        'html, body { width: 210mm; margin: 0; padding: 0; background: #ffffff; color: #111827; -webkit-print-color-adjust: exact; print-color-adjust: exact; } ' +
         '.a4-cv-print-wrapper { padding: 8mm 11mm 7mm 11mm; box-sizing: border-box; width: 100%; }' +
         '</style></' + 'head><' + 'body>';
       const closeTag = '</' + 'body></' + 'html>';
@@ -1027,9 +1036,10 @@
       if (!printWin) return;
       const openTag = '<' + 'html><' + 'head><meta charset="UTF-8"><title>' + pdfTitle + '</title>';
       const styleTag = '<style>' +
-        '@page { size: A4 portrait; margin: 0mm !important; } ' +
-        'html, body { width: 210mm; margin: 0 !important; padding: 0 !important; background: #ffffff; color: #111827; font-family: Calibri, "Segoe UI", Arial, sans-serif; font-size: 11pt; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; } ' +
-        '.a4-print-wrapper { padding: 22mm 20mm 20mm 22mm; box-sizing: border-box; width: 100%; }' +
+        '@page { size: A4 portrait; margin: 0; } ' +
+        '@media print { @page { size: A4 portrait; margin: 0; } html, body { margin: 0 !important; padding: 0 !important; } } ' +
+        'html, body { width: 210mm; margin: 0; padding: 0; background: #ffffff; color: #111827; font-family: Calibri, "Segoe UI", Arial, sans-serif; font-size: 11pt; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; } ' +
+        '.a4-print-wrapper { padding: 20mm 20mm 18mm 20mm; box-sizing: border-box; width: 100%; }' +
         '</style></' + 'head><' + 'body>';
       const closeTag = '</' + 'body></' + 'html>';
       printWin.document.write('<!DOCTYPE html>' + openTag + styleTag + '<div class="a4-print-wrapper">' + docEl.innerHTML + '</div>' + closeTag);
@@ -1535,6 +1545,11 @@
       `;
 
       const savedDocHtml = localStorage.getItem('job_doc_content_' + job.id);
+      let activeDocHtml = defaultDocHtml;
+      // Invalidate stale or truncated cached cover letters (e.g. old 3-sentence stub)
+      if (savedDocHtml && savedDocHtml.length > 550 && !savedDocHtml.includes("bridge strategic planning with practical builder execution") && !savedDocHtml.includes("Rückgrat jedes erfolgreichen Teams") && !savedDocHtml.includes("ein reibungslos organisiertes Office bildet das Rückgrat")) {
+        activeDocHtml = savedDocHtml;
+      }
       const savedCvHtml = localStorage.getItem('job_cv_content_' + job.id);
       const defaultCvHtml = buildTailoredCvHtmlForJob(job);
 
@@ -1667,6 +1682,13 @@
                 <span>${t.open_google_docs_new}</span>
               </button>
 
+              <!-- Official PDF direct download -->
+              ${(job.cover_letter_url || job.cover_letter_pdf) ? `
+                <a href="${(job.cover_letter_url || job.cover_letter_pdf).replace(/^\/?/, '')}" download class="px-2 py-1 rounded bg-indigo-50 dark:bg-indigo-950/40 hover:bg-indigo-100 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 text-[11px] font-semibold flex items-center gap-1 shadow-2xs" title="Offizielles Backend-PDF direkt herunterladen">
+                  <span>📄 PDF</span>
+                </a>
+              ` : ''}
+
               <!-- Print / PDF -->
               <button onclick="printGoogleDoc('${job.id}')" class="px-2 py-1 rounded bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700 text-[11px] font-medium flex items-center gap-1" title="Drucken oder als PDF speichern">
                 <span>${t.print_pdf}</span>
@@ -1691,7 +1713,7 @@
 
           <!-- A4 Document Page Canvas (ContentEditable Google Doc) -->
           <div class="max-w-[700px] w-full bg-white text-gray-900 shadow-xl border border-gray-200 dark:border-slate-700 rounded-b-lg p-8 sm:p-12 min-h-[850px] font-sans leading-relaxed text-[13px] outline-none focus:ring-2 focus:ring-blue-400" id="liveGoogleDocA4_${job.id}" contenteditable="true" oninput="onDocContentInput('${job.id}')">
-            ${savedDocHtml || defaultDocHtml}
+            ${activeDocHtml}
           </div>
 
           <div class="text-[11px] text-gray-500 dark:text-gray-400 mt-2 text-center">
@@ -1725,6 +1747,12 @@
                   <button onclick="toggleBulletPicker('${job.id}')" class="px-2.5 py-1 rounded bg-amber-50 dark:bg-amber-950/50 hover:bg-amber-100 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-[11px] font-bold flex items-center gap-1 transition">
                     <span>${t.customize_bullets}</span>
                   </button>
+                ` : ''}
+
+                ${(job.cv_url || job.cv_pdf) ? `
+                  <a href="${(job.cv_url || job.cv_pdf).replace(/^\/?/, '')}" download class="px-2.5 py-1 rounded bg-emerald-50 dark:bg-emerald-950/50 hover:bg-emerald-100 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-[11px] font-semibold flex items-center gap-1 shadow-2xs" title="Maßgeschneidertes PDF direkt herunterladen">
+                    <span>📄 Tailored PDF</span>
+                  </a>
                 ` : ''}
 
                 <button onclick="printTailoredCv('${job.id}')" class="px-3 py-1 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition flex items-center gap-1 shadow-xs text-[11px]">
@@ -2196,9 +2224,14 @@
       const cleanJobTitle = jobTitle.replace(/\s*\(m\/w\/d\)/ig, '').replace(/\s*\(w\/m\/d\)/ig, '').replace(/\s*\(f\/m\/d\)/ig, '').trim();
       const subjectTitle = isGuillermo ? `Application for ${cleanJobTitle}` : `Bewerbung um eine Stelle als ${cleanJobTitle}`;
 
-      // Read currently customized text from textarea if user edited it on page
-      const textarea = document.getElementById('clDetailTextarea');
-      let rawText = textarea ? textarea.value : buildTailoredCoverLetter(job, false);
+      // Read live edited text from live Google Doc editor or fall back to rich tailored generator
+      const docEl = document.getElementById('liveGoogleDocA4_' + jobId);
+      let rawText = '';
+      if (docEl && docEl.innerText && docEl.innerText.trim().length > 100) {
+        rawText = docEl.innerText.trim();
+      } else {
+        rawText = buildTailoredCoverLetter(job, true, clLang);
+      }
 
       let bodyLines = rawText.split('\n');
       let salutationIndex = bodyLines.findIndex(l => l.startsWith('Sehr geehrt') || l.startsWith('Dear '));
