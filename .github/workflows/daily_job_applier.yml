@@ -62,22 +62,24 @@ jobs:
             ARGS="$ARGS --scrape"
           fi
 
-          # Exactly 1 email a day: Send email only on the 08:20 Berlin morning schedule
-          # All afternoon, evening, and on-demand website runs refresh the dashboard silently without email spam
+          # Exactly 1 email a day: Send email ONLY on the 08:20 Berlin morning schedule
+          # All other runs (afternoon, evening, manual workflow_dispatch) are silent by default
           if [ "${{ github.event_name }}" = "schedule" ]; then
             UTC_HOUR=$(date -u +%H)
-            if [ "$UTC_HOUR" != "07" ] && [ "$UTC_HOUR" != "06" ]; then
-              echo ">> Afternoon/Evening cycle: Refreshing dashboard silently without email to keep inbox clean."
-              ARGS="$ARGS --no-email"
+            if [ "$UTC_HOUR" = "07" ] || [ "$UTC_HOUR" = "06" ]; then
+              echo ">> Morning schedule (08:20 CET): Sending exactly 1 daily morning digest email."
+              ARGS="$ARGS --morning-digest"
             else
-              echo ">> Morning cycle: Sending 1 daily morning email digest."
+              echo ">> Afternoon/Evening schedule: Silent feed refresh (no email)."
+              ARGS="$ARGS --no-email"
             fi
           elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            if [ "${{ github.event.inputs.send_email }}" != "true" ]; then
-              echo ">> Manual on-demand run: Updating dashboard without email."
-              ARGS="$ARGS --no-email"
+            if [ "${{ github.event.inputs.send_email }}" = "true" ]; then
+              echo ">> Manual on-demand run: Explicitly requested email digest."
+              ARGS="$ARGS --send-email"
             else
-              echo ">> Manual on-demand run: Sending email digest as requested."
+              echo ">> Manual on-demand run: Updating dashboard silently (no email)."
+              ARGS="$ARGS --no-email"
             fi
           fi
 

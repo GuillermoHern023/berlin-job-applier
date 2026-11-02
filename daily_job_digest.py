@@ -680,7 +680,14 @@ def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs, recip
 
 def main():
     do_scrape = ("--no-scrape" not in sys.argv)
-    no_email = ("--no-email" in sys.argv)
+    
+    # Strictly enforce 1 morning email:
+    # Emails are sent ONLY if explicitly requested via --send-email, --morning-digest, or --email.
+    # Default behavior for any manual run, agent invocation, or background cron is NO EMAIL.
+    force_no_email = ("--no-email" in sys.argv)
+    allow_email = any(arg in sys.argv for arg in ["--send-email", "--email", "--morning-digest"])
+    should_send_email = allow_email and not force_no_email
+
     custom_recipients = None
 
     for arg in sys.argv:
@@ -705,9 +712,11 @@ def main():
     except Exception as e:
         print(f"  -> Google Sheets sync warning: {e}")
 
-    if not no_email:
+    if should_send_email:
         subject, plain_text, html_email = format_daily_job_email(g_jobs, n_jobs, recipients=custom_recipients)
         send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs, recipients=custom_recipients)
+    else:
+        print("  -> Email dispatch skipped (silent mode). Only the 08:20 CET morning run sends emails.")
 
 
 if __name__ == "__main__":
