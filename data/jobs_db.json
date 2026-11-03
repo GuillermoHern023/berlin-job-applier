@@ -149,8 +149,8 @@
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, workflow, git, bot, automatisierung, erp.",
     "days_ago": 6,
     "posted_ago": "6 days ago (2026-10-28)",
-    "applicants_num": 44,
-    "applicants_text": "🟡 44 applicants",
+    "applicants_num": 45,
+    "applicants_text": "🟡 45 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -318,10 +318,10 @@
       "stakeholder"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, git, product manager, product management, product team, digital product.",
-    "days_ago": 5,
-    "posted_ago": "5 days ago (2026-10-28)",
-    "applicants_num": 86,
-    "applicants_text": "🟡 86 applicants",
+    "days_ago": 6,
+    "posted_ago": "6 days ago (2026-10-28)",
+    "applicants_num": 91,
+    "applicants_text": "🟡 91 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -603,8 +603,8 @@
       "reporting"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, project manager, project management, stakeholder, documentation.",
-    "days_ago": 4,
-    "posted_ago": "4 days ago (2026-10-29)",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-10-29)",
     "applicants_num": 64,
     "applicants_text": "🟡 64 applicants",
     "work_model": "Flexibles Office",
@@ -831,8 +831,8 @@
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, artificial intelligence, automation, workflow, automatisierung, erp.",
     "days_ago": 6,
     "posted_ago": "6 days ago (2026-10-28)",
-    "applicants_num": 60,
-    "applicants_text": "🟡 60 applicants",
+    "applicants_num": 61,
+    "applicants_text": "🟡 61 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -886,8 +886,8 @@
       "roadmap"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, workflow, api, agent, tooling, product manager.",
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-10-30)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-10-30)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -1164,10 +1164,10 @@
       "sql"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, automatisierung, erp, initiative, reporting.",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-10-31)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-10-31)",
     "applicants_num": 150,
-    "applicants_text": "🔴 123 applicants",
+    "applicants_text": "🔴 124 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1331,8 +1331,8 @@
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, artificial intelligence, cloud, bot, agent, erp.",
     "days_ago": 7,
     "posted_ago": "1 week ago (2026-10-26)",
-    "applicants_num": 161,
-    "applicants_text": "🔴 161 applicants",
+    "applicants_num": 162,
+    "applicants_text": "🔴 162 applicants",
     "tailored_preview": {
       "selected_bullets": [
         "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
@@ -1912,6 +1912,63 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about Deloitte is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Deloitte in this role."
+      ]
+    }
+  },
+  {
+    "id": "b6b01de2b5",
+    "title": "Internship – Operations – DefenceTech (d/f/m)",
+    "company": "Project Q",
+    "location": "Berlin, BE, Germany",
+    "job_url": "https://t.gohiring.com/h/ff24db327a80d03c436e7e2c5957a3871edf89679fdccc7c106b2d1995ff7e92?source=Indeed",
+    "source": "Indeed",
+    "date_posted": "2026-11-03",
+    "date_found": "2026-11-03 21:10",
+    "salary": "",
+    "description": "#### **New Challenge**\n\n**About Us**\n\nProject Q GmbH (\"Q\") is a Germany-based DefenceTech company with offices in Berlin and Munich. We network market-available sensors, effectors, or situational awareness systems into a tactical IoT backbone that reliably provides armed forces and security agencies with cross-domain information superiority — automated, scalable, and cost-efficient.\n\nOur solutions integrate seamlessly into existing defence and maritime infrastructures, delivering fast data fusion and AI-enhanced analytics for robust situational awareness in dynamic environments. We build platform-agnostic systems that enable real interoperability across domains.\n\n**About the Team**\n\nQ`s Operations Team turns company’s strategy into reality: shipped hardware, working sites, processes and systems that hold up under pressure. We own the critical stuff in the background so engineering can engineer, sales can sell, and leadership can lead – without anyone getting stuck on a broken process, a missing part, or a spreadsheet held together by hope.\n\nIf something moves, gets ordered, built, tracked, or logged into a system – Operations is usually the reason it works.\n\n**Your Role**\n\nAs Intern Operations, you join our team with real responsibility from week one. You will work closely with our COO and Operations team, as well as with a wide range internal and external stakeholders. You will help us to shape processes that will scale with the company!\n\n**What you'll do**\n\n* **Procurement and supplier coordination:** Request and compare quotes, track lead times, and follow up with suppliers and vendors on orders and deliveries.\n* **Logistics and supply chain:** Coordinate shipments with logistics providers and customs, and keep order tracking and inventory accurate.\n* **Site operations:** Support the day-to-day operations as well as events at Berlin sites in Mitte and Tegel.\n* **Finance and compliance interfaces:** Prepare purchase orders, reconcile invoices with Finance, and support Legal/Compliance on export control documentation and security procedures.\n* **Process improvement:** Spot bottlenecks in our operational workflows and turn messy, ambiguous tasks into clear, repeatable processes.\n* **Documentation and workflows:** Keep documents, inventory records, and our internal tools (e.g. Confluence, Jira, ERP) up to date.\n\n**You should apply if you**\n\n* Have ongoing or completed study in supply chain management, business administration, industrial engineering or another technical field.\n* Are available to work full-time for at least 3 months, ideally 6, starting from December 2026.\n* Take ownership: you drive tasks to completion without being chased and flag problems early.\n* Think in structures and bring order to ambiguous work, with a sharp eye for detail.\n* Adapt easily to shifting priorities in a startup environment.\n* Handle sensitive information with discretion and integrity.\n* Are interested working in the defence sector and genuinely motivated to contribute to European safety.\n* Speak German at least at C1 level, and English at least at B2 level.\n\n**You'd be a great fit with**\n\n* Prior internship or part-time work in operations, procurement, logistics, supply chain, or project management.\n* Experience in a startup, scale-up, or hardware/manufacturing environment.\n* Solid Excel or Google Sheets skills, including pivot tables and lookups.\n* Familiarity with ERP, inventory, or project tools such as Confluence, and Jira.\n* Interest in staying with us longer, for example as a working student after your internship or a permanent employee.\n\n**We offer**\n\n* The chance to be a part of our growth story and work on technology that strengthens European security and defence capability.\n* A varied role with real responsibility, based in Berlin-Mitte and Berlin-Tegel.\n* Flat hierarchies and a pleasant working environment.\n* Opportunities for professional and personal development.\n* 2.5 days of paid vacation per month of your internship (equivalent to 30 days per year).\n\n#### **About us**\n\nQ is a European defence-tech company pioneering the Internet of Defence with modular, scalable and interoperable sensor and intelligence solutions.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "cx_operations",
+    "category_label": "Business & Data Operations",
+    "match_score": 94,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "workflow",
+      "bot",
+      "erp",
+      "project management",
+      "stakeholder",
+      "coordination",
+      "documentation"
+    ],
+    "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, workflow, bot, erp, project management, stakeholder.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-03)",
+    "applicants_num": 999,
+    "applicants_text": "Direct Portal (No counter)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Internship – Operations – DefenceTech (d/f/m) role at Project Q. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. My key initiatives include optimizing an international AI voice bot that scaled to route millions of calls (raising inbound answer rates from 65% to 85%), as well as structuring retrieval knowledge bases for an AI chatbot handling 30,000+ monthly customer chats. To empower operational teams, I built an automated multi-market knowledge base, an AI QA review web application, and API-driven customer communication tools.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Project Q is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Project Q in this role."
       ]
     }
   },
@@ -4412,6 +4469,159 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Embedded in an agile cross-functional product environment, I helped scale our conversational AI tooling across 9 international markets, routing millions of calls while improving answer rates by 20%. To support our operational workflows, I have designed and deployed internal evaluation tools, including an AI conversation QA web platform with bulk review pipelines, a centralized review management portal versioned via GitHub, and automated dispatch workflows.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about Zertificon Solutions GmbH is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Zertificon Solutions GmbH in this role."
+      ]
+    }
+  },
+  {
+    "id": "78f105b75a",
+    "title": "Program Manager - Executive Programs (m/f/x)",
+    "company": "ESMT Berlin",
+    "location": "Berlin, BE, Germany",
+    "job_url": "https://jobs.esmt.berlin/en?id=acfc09",
+    "source": "Indeed",
+    "date_posted": "2026-11-03",
+    "date_found": "2026-11-03 21:10",
+    "salary": "",
+    "description": "**ESMT Berlin** offers masters, MBA, and PhD programs, as well as executive education across its campus in Berlin, various locations around the world, online, and in an online blended format. We strongly believe in cross-team collaboration to achieve our mission to develop entrepreneurial leaders who think globally and act responsibly.\n\nFor our executive education programs, which are ranked # 5 in the world for customized executive education programs, according to the Financial Times Executive Education Ranking 2026, we are looking for an additional team member in our Executive Programs team who focuses on ESMTs open enrollment and customized programs.\n  \n  \nJoin our executive education team as a\n  \n  \n**Program Manager - Executive Programs [Event Manager / Project Manager]**\n  \n[m/f/x, full-time (40 hours)]\n  \n  \nand help shape the future by bringing your expertise and passion to ESMT.\n  \n  \n*Please note: this position requires German language proficiency of at least B2 level (upper intermediate). Candidates who do not meet this language requirement will not be considered for further stages in the selection process.*\n\n**How you will make a difference**\n----------------------------------\n\n* As a Program Manager, you will be responsible for all organizational aspects of our open and customized executive education programs that take place as in-person, online, hybrid, or blended programs. You will work in a tandem with a program director responsible for program content and design.\n* You drive the planning process and work closely with multiple stakeholders (e.g. program directors, customers, participants, faculty, service providers, facilities, catering etc.) to deliver a high quality executive education program and ensure a highly professional and seamless delivery.\n* You are the first point of contact for our executive education participants during program preparation and program delivery.\n* You manage program operations. This includes preparing documentation, purchasing learning materials, uploading content to the learning management system, managing budgets, contracts, reporting, and billing.\n* After the program, you conduct evaluation surveys and leverage insights to improve the program, courses and processes.\n* You ensure our quality and service standards are met across all project phases - from preparation to implementation and follow-up.\n\n**What makes you a great fit. You are qualified for this position, because you**\n--------------------------------------------------------------------------------\n\n* Have professional experience organizing events, conventions, or educational programs.\n* Have excellent organizational and time management skills; are able to work independently and can keep calm under pressure while balancing multiple priorities.\n* Enjoy interacting with different target groups (from young talents to C-level). Your communication and interpersonal skills are excellent.\n* Are passionate about providing excellent learning experience for our participants. Your service-orientation, solution-oriented thinking and your attention to detail set you apart.\n* Are an excellent team player, have a hands-on attitude, and a good sense of humor.\n* Welcome the opportunity to travel for work within and outside of Germany.\n* Are proficient in Microsoft Office tools. Experience with project planning tools, video conferencing tools (Zoom, Teams, WebEx) or learning management systems is a plus.\n* Are fluent in English (the business language at the school is English) and German (at least C1 level).\n\n**Why you will love working with us**\n-------------------------------------\n\nDiscover the perks and culture that make our workplace special.\n\n*Health and Well-Being*\n\n* Flexible remote work, including up to 15 days abroad per year\n* Ergonomic office equipment and access to university sports across Berlin\n* Subsidized meals at the campus restaurant\n\n*Financial Benefits*\n\n* Subsidized public transportation ticket and leasing options of bicycles/e-bikes\n* Company pension scheme with Allianz\n\n*Personal Development*\n\n* Access to LinkedIn Learning\n* On-campus German and English courses in small groups\n* Participation in ESMT’s Executive Education and degree programs\n\n**What makes this more than just a job**\n\nESMT offers a collegial and international work environment, with employees representing more than 55 nationalities. We encourage a self-driven mind-set and contributions that create meaningful and lasting impact. We are proud to be an equal opportunity employer, committed to fostering a fair and inclusive workplace where individuals of all identities and backgrounds are welcomed and valued. Fostering diversity, equity, and inclusion enriches our employees, students, and broader community.\n\nYou will work on our campus in Berlin-Mitte. Get here by public transport or bike and enjoy your lunches in our private restaurant and café or next to the beautiful Spree. Make use of our big garden and enjoy coffee and tea on the house with your team.Our vibrant community comes together through activities and events like Lucky Lunch, Wednesday Cookies, Orientation Days for new employees, Summer Party and Year End Event, our talented ESMT choir, and much more.\n\n**We are looking forward to receiving your application!**\n---------------------------------------------------------\n\nPlease submit your application by using our online application system, including:\n\n* Motivation letter\n* CV with relevant certificates and references\n* Salary expectations and possible start date.\n\nFor further questions please contact:ESMT Berlin I Friederike Rathjens I Human Resources Manager I Schlossplatz 1 I 10178 Berlin I Tel: 030 21231 0 I\n\n  \n\n###### **Scope of activities**\n\nOther\n\n###### **Career level**\n\nProfessional\n\n###### **Working time**\n\nFull time\n\n###### **Locations**\n\nSchlossplatz 1, 10178 Berlin, Germany\n  \nHybrid work\n\n### **Contact**\n\n**Friederike Rathjens**:\n\n030 - 212 31 0",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 85,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "llm",
+      "evaluation",
+      "erp",
+      "project manager",
+      "program manager",
+      "stakeholder",
+      "documentation"
+    ],
+    "why_fits": "Strong Project Management fit. Matches keywords: ai, llm, evaluation, erp, project manager, program manager.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-03)",
+    "applicants_num": 999,
+    "applicants_text": "Direct Portal (No counter)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Program Manager - Executive Programs (m/f/x) role at ESMT Berlin. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about ESMT Berlin is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support ESMT Berlin in this role."
+      ]
+    }
+  },
+  {
+    "id": "4f2247536a",
+    "title": "Working Student (f/m/d) - SAP Signavio Product Excellence",
+    "company": "SAP",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4477975835",
+    "source": "Linkedin",
+    "date_posted": "2026-11-03",
+    "date_found": "2026-11-03 21:11",
+    "salary": "",
+    "description": "We help the world run better At SAP, we keep it simple: you bring your best to us, and we'll bring out the best in you. We're builders touching over 20 industries and 80% of global commerce, and we need your unique talents to help shape what's next. The work is challenging – but it matters. You'll find a place where you can be yourself, prioritize your wellbeing, and truly belong. What's in it for you? Constant learning, skill growth, great benefits, and a team that wants you to grow and succeed. What You´ll Build Work closely with the Product Excellence team to support cross-product initiatives and day-to-day product management activities Help coordinate and run programs and processes with relevant stakeholders, and assist in collecting results and insights Support onboarding and upskilling activities for the Product Management Group (e.g., documentation, sessions, materials) Assist the team in improving efficiency of initiatives and contribute to special projects as needed Try out AI tools on real tasks (e.g. summarizing research, drafting specs, sorting feedback) and share what works Build simple prompt templates and how-to guides for the team Pull together basic numbers and reports Keep internal documentation up to date Help coordinate cross-functional teams and track actions to ensure timely delivery of outcomes What You Bring At least 1 year' experience with data and products in a SaaS company Bachelor's degree in a quantitative subject (computer science, physics, mathematics, engineering, …) or marketing/business management Excellent English communication skills Prior experience in stakeholder coordination Excellent analytical and problem-solving skills Very good knowledge of MS Office Ability to contribute both independently and as part of a team Ability to deliver with tight deadlines Excellent follow-up skills You use AI tools (e.g. ChatGPT, Claude, Copilot) for studies or projects and enjoy trying new ways to use them Organized, curious and a clear communicator Excellent listening, communication, interpersonal and presentation skills Excellent presentation skills (must have) Ability to identify and leverage any opportunity of improvement using AI &amp; Automation A Plus Experience working in a product team You can also perform quantitative analysis on complex data sets On-site/Remote/Hybrid Remote/Hybrid (Location: Berlin preferred) Where you belong Product Excellence Product Excellence is a team under the SAP Signavio functional unit where we enable product teams to build exceptional products that delight users and achieve business goals by championing a customer-centric and data-driven approach to product management. We provide essential frameworks, tools and best practices necessary to craft strong product strategies, make informed decisions, and execute effectively. By fostering a culture of continuous improvement, we ensure sustained innovation and excellence across the organization The Product Excellence team comprises multiple specialized sub-units that collectively enable high-performing, scalable, and customer-centric product teams. These include Business Analytics, which provides data-driven insights to support informed decision-making; Practices and Programs Management, which establishes governance, drives execution discipline, and ensures alignment across initiatives; and Curation of Best Practices, focused on defining, standardizing, and continuously improving processes to enable smooth project execution across cross-functional teams. In addition, the team focuses on Voice of Customer initiatives to systematically capture, analyze, and embed customer feedback into product strategy and delivery. We also manage onboarding and upskilling programs to accelerate new team members’ productivity and continuously enhance the capabilities of existing talent. Finally, the team emphasizes the optimal utilization of available tools, frameworks, and resources to improve operational efficiency, reduce friction, and enable product teams to focus on delivering maximum value. Your set of application documents should contain a cover letter, a resume in table form, school leaving certificates, certificate of enrollment, current university transcript of records, copies of any academic degrees already earned, and if available, references from former employers (including internships). Please also describe your experience and skills in foreign languages and computer programs / programming languages. This is a SAP global, strategic, paid working student position that provides students with opportunities to find purpose in their careers. #Workingstudent #Werkstudent #Germany #Deutschland #Student #SAPGermanStudentsCareers #SAPNextGen Bring out your best SAP innovations help more than four hundred thousand customers worldwide work together more efficiently and use business insight more effectively. Originally known for leadership in enterprise resource planning (ERP) software, SAP has evolved to become a market leader in end-to-end business application software and related services for database, analytics, intelligent technologies, and experience management. As a cloud company with two hundred million users and more than one hundred thousand employees worldwide, we are purpose-driven and future-focused, with a highly collaborative team ethic and commitment to personal development. Whether connecting global industries, people, or platforms, we help ensure every challenge gets the solution it deserves. At SAP, you can bring out your best. We win with inclusion SAP’s culture of inclusion, focus on health and well-being, and flexible working models help ensure that everyone – regardless of background – feels included and can run at their best. At SAP, we believe we are made stronger by the unique capabilities and qualities that each person brings to our company, and we invest in our employees to inspire confidence and help everyone realize their full potential. We ultimately believe in unleashing all talent and creating a better world. SAP is committed to the values of Equal Employment Opportunity and provides accessibility accommodations to applicants with physical and/or mental disabilities. If you are interested in applying for employment with SAP and are in need of accommodation or special assistance to navigate our website or to complete your application, please send an e-mail with your request to Recruiting Operations Team: Careers@sap.com. For SAP employees: Only permanent roles are eligible for the SAP Employee Referral Program, according to the eligibility rules set in the SAP Referral Policy. Specific conditions may apply for roles in Vocational Training. AI Usage in the Recruitment Process For information on the responsible use of AI in our recruitment process, please refer to our Guidelines for Ethical Usage of AI in the Recruiting Process. Please note that any violation of these guidelines may result in disqualification from the hiring process. Requisition ID: 454868 | Work Area: Solution and Product Management | Expected Travel: 0 - 10% | Career Status: Student | Employment Type: Limited Part Time | Additional Locations:",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 85,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-03)",
+    "applicants_num": 179,
+    "applicants_text": "🔴 179 applicants",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Working Student (f/m/d) - SAP Signavio Product Excellence role at SAP. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about SAP is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support SAP in this role."
+      ]
+    }
+  },
+  {
+    "id": "299825dcde",
+    "title": "Werkstudent Prozess- und Service-Management (w/m/d)",
+    "company": "KPMG IT Service GmbH",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4435414630",
+    "source": "Linkedin",
+    "date_posted": "2026-11-03",
+    "date_found": "2026-11-03 21:11",
+    "salary": "",
+    "description": "Begleite KPMG bei den zukünftigen Herausforderungen unserer Kunden und Kundinnen. Begeistere auch Du Dich für die Vielfalt unserer Fragestellungen - und mach gemeinsam mit uns den Unterschied. Die KPMG IT Service GmbH ist die IT-Beratung und -Dienstleistung der KPMG AG Wirtschaftsprüfungsgesellschaft. Du verantwortest gemeinsam mit Deinem Team die IT-Infrastruktur und unterstützt die Fachabteilungen bei der Bereitstellung von effizienz- und effektivitätssteigernder Business Software. Deine Aufgaben Du möchtest verstehen, wie die IT-Infrastruktur eines global agierenden Konzerns funktioniert? Dann bewirb Dich jetzt und bringe Dich ein: Implementierung: Du unterstützt bei der Implementierung und Optimierung von ITSM-Prozessen in ServiceNow. Dokumentation: Du erstellst und pflegst Dokumentationen zu IT-Prozessen und -Systemen. Projektunterstützung: Du unterstützt das IT-Service-Management bei Projekten und operativen Betriebsaufgaben. Inhalte: Du erarbeitest Inhalte für interne SharePoint-Seiten und User Guidance. Reports: Du erstellst und pflegst Reports und Analysen zur Sicherstellung der Datenqualität. Dein Profil Studium: Du bist in einem Studium der Wirtschaftsinformatik, Betriebswirtschaftslehre oder einem vergleichbaren Studiengang immatrikuliert und hast ein starkes Interesse an IT. Erfahrung: Du befindest Dich mindestens im 3. Semester oder hast bereits relevante praktische Erfahrungen gesammelt. Analytische Fähigkeiten: Du kannst komplexe (IT-)Probleme analysieren und kreative Lösungen entwickeln. Kommunikation: Du verfügst über gute schriftliche und mündliche Kommunikationsfähigkeiten in Deutsch und Englisch. Teamarbeit und Proaktivität: Du arbeitest gerne im Team, gehst offen auf andere zu und hast eine proaktive Herangehensweise an Aufgaben. Deine Benefits Willkommen im Team Damit Du von Beginn an voll bei uns durchstarten kannst, begleiten wir Dich mit strukturierten Onboarding-Maßnahmen während der gesamten Orientierungsphase. Dabei steht Dir immer eine persönliche Ansprechperson zur Seite. Flexibel &amp; erfolgreich Bei uns kannst Du Studium und erste Praxiserfahrung bequem vereinbaren. Dabei erhältst Du intensive Einblicke in die Arbeitswelt bei KPMG. In Absprache mit Deinem Team kannst Du Deine Arbeitszeit flexibel gestalten. So kommt Dein Studium nicht zu kurz. Feedback &amp; Entwicklung Vom ersten Tag an bist Du fester Bestandteil des Teams und übernimmst Verantwortung in herausfordernden (Teil-) Projekten. Mit regelmäßigem Feedback fördern wir zudem Deine persönliche und fachliche Weiterentwicklung. Wertvolles Karrierenetzwerk Bei unseren YOUnior .Network-Aktivitäten stehen Vernetzung und der gemeinsame Austausch zwischen Auszubildenden, Dual Studierenden, Praktikanten/Praktikantinnen und Werkstudenten/Werkstudentinnen im Fokus. Die abgebildeten Leistungen können je nach Position und Standort leicht variieren.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 85,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-03)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Worked embedded in an agile <strong>Product, Tech, Business Analytics, and Operations team</strong> to translate complex operational data into product features, evaluation tools, and scalable processes across <strong>9 international markets</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent Prozess- und Service-Management (w/m/d) role at KPMG IT Service GmbH. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about KPMG IT Service GmbH is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support KPMG IT Service GmbH in this role."
       ]
     }
   },
@@ -7823,6 +8033,59 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about mamgo | Talente 🔗 Jobs is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support mamgo | Talente 🔗 Jobs in this role."
+      ]
+    }
+  },
+  {
+    "id": "65ede356a6",
+    "title": "Office Management Working Student (D/F/M)",
+    "company": "SEEK Development",
+    "location": "Berlin, BE, Germany",
+    "job_url": "https://t.gohiring.com/h/c3fb89f77c01365e69e8a0048fb4f4425a67e14fa76b727eb53d1781f6f07f0f?source=Indeed",
+    "source": "Indeed",
+    "date_posted": "2026-11-03",
+    "date_found": "2026-11-03 21:10",
+    "salary": "",
+    "description": "#### **WORK WITH US!**\n\n**About SEEK Development**\n\nSEEK is a social impact consulting group that supports its clients to be a force for global human development, working across global health, climate adaptation, education and gender. Our portfolio of services includes strategy and policy development, organisational effectiveness, development finance, resource mobilisation and strategic advocacy.\n\nGlobal health is our core portfolio and the area we are most widely known for across the ecosystem, serving major players spanning foundations, multilateral organisations, product-development partnerships, governments, civil society and the private sector.\n\nWe combine top management consulting approaches with cutting-edge global health and development ecosystem knowledge. We offer a fast-paced, stimulating and international work environment, allowing each team member to professionally develop and grow in their mission to make positive and lasting contributions to a more equitable and sustainable world.\n\n#### **ABOUT YOUR ROLE**\n\nSEEK’s Finance and Operations team is the backbone of our organization that is dedicated to working for a world where everyone, everywhere can thrive and realize their potential.  \nIn this important role as **Office Management Working Student (D/F/M**) you will take ownership of our office operations. You will be the go-to person for employee inquiries and be the one who masters the office / meeting room IT infrastructure – in short: You are running the office!\n\n**Duties and responsibilities**\n\n  \n\n* Be the go-to person for the office community. Handle administrative duties, answer questions and make the office feel like home for our international team. This role requires that you are physically present in the office during your work time.\n* Procure non-IT office supplies, manage inventory and place orders.\n* Plan and maintain workspaces (office, kitchen, workstations) and manage provider contracts (e.g. rent, energy, insurance).\n* Support health and safety organisation and compliance with authorities (TÜV, VBG, quarterly H&S meeting), and coordinate data protection with the data protection officer.\n* Manage incoming and outgoing mail and deliveries, greet visitors and handle digital and physical document filing.\n* Act as contact for our external IT helpdesk and manage IT inventory, orders and maintenance requests.\n* Organise recurring team events, including calendar, bookings and gifts.\n* Run ad-hoc projects and help improve our administrative processes and digital tools.\n\n#### **ABOUT YOU**\n\nYou are the heart of the office, driven by a passion for ensuring that the needs of our team are met with care and efficiency. With a can-do attitude and hands-on approach, you solve problems proactively and keep everything running smoothly. Your organizational and digital skills, attention to detail, and fluent German and English language skills make you a key player in our team’s success. Strong communication skills and a positive mindset define your interactions at all levels. You enjoy the buzz of a young, excited team.\n\n**What makes you a great fit for this exciting role:**\n\n* You have experience working in a fast-paced environment in a similar role.\n* You enjoy the advantage of digitalization and executing clear processes\n* You have an excellent command of all MS tools (Teams, SharePoint, etc)\n* You enjoy learning and keen to further improve process\n* You communicate fluently in German and English.\n* You are aware that teamwork makes the dream work. Spiced by effective self-organisation!\n* Active student status required\n\n#### **WHAT WE HAVE TO OFFER**\n\n* International environment\n* Passionate, dynamic, and values-driven team of colleagues\n* Strong focus on individual professional development with hands-on mentorship and training to see you thrive\n* Female leadership and diverse team\n* BVG company ticket, Jobrad program, Urban Sports Club\n\n#### **DIVERSITY STATEMENT**\n\nAs an equal opportunity employer, we at SEEK are committed to a diverse, inclusive and healthy work environment. We welcome applications from all qualified candidates regardless of ethnicity, color, ancestry, religion, gender, national origin, sexual orientation, age, citizenship, marital status, disability or gender identity.\n\n#### **APPLICATION DEADLINE + START DATE**\n\nasap\n\n#### **YOUR CANDIDATE JOURNEY**\n\nPlease submit your application (CV, cover letter, job references).\n\nWe will screen applications on a rolling basis - selected candidates will be invited for our interview process including multiple stages:\n\n* We will check your application documents and get back to you in a timely manner\n* Introductory call with HR via video call - 30 minutes\n* Interview with our COO & FNO colleauge- 60 minutes\n* Meet the team: visit our office and talk to some members of our Team - 30 minutes\n* Offer\n\n#### **About us**\n\nWe are **SEEK**ers of a world where everyone, everywhere can thrive and realize their potential. As a social impact consulting group, we support our clients to be a force for global human development with a focus on global health, education, climate adaptation, education, and gender. **SEEK**’s portfolio of services includes strategy and policy development; development finance, resource mobilization and strategic advocacy; and organizational effectiveness.  \nIn our work, we combine top management consulting approaches with cutting-edge knowledge of the global health and development ecosystem. As part of our work, we run the Donor Tracker platform, a free, online resource that unlocks advocacy potential by providing access to high-quality strategic information on development financing and policy.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 55,
+    "language_req": "German C1/Fluent Required",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "operations",
+      "support"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, operations, support.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-03)",
+    "applicants_num": 999,
+    "applicants_text": "Direct Portal (No counter)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Office Management Working Student (D/F/M) role at SEEK Development. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about SEEK Development is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support SEEK Development in this role."
       ]
     }
   },
