@@ -61,10 +61,10 @@
       "company": "SERS Rechtsanwaltsgesellschaft mbH",
       "location": "Berlin",
       "bullets": [
-        "Eigenverantwortliche Organisation und Steuerung des gesamten Kanzlei- und Sekretariatsbetriebs.",
-        "Professionelle schriftliche und telefonische Kommunikation mit Mandanten, Gerichten und Behörden auf Deutsch und Englisch (C2).",
-        "Strukturierte Dokumentenorganisation, Fristenkontrolle, Aktenführung sowie vorbereitende Buchhaltung und Rechnungserstellung.",
-        "Kontinuierliche Prozessoptimierung, Digitalisierung von Büroabläufen und Qualitätsmanagement."
+        "Eigenverantwortliche Organisation und Steuerung des gesamten Kanzlei-, Termin- und Sekretariatsbetriebs.",
+        "Professionelle Mandanten- und Behördenkommunikation auf Deutsch und Englisch (C2).",
+        "Fristenkontrolle, strukturierte Aktenführung, vorbereitende Buchhaltung und Rechnungsstellung.",
+        "Kontinuierliche Digitalisierung und Prozessoptimierung administrativer Büroabläufe."
       ]
     },
     {
@@ -73,10 +73,9 @@
       "company": "zett.events",
       "location": "Berlin",
       "bullets": [
-        "Kaufmännische und organisatorische Planung von Projekten inklusive Personal-, Event- und Budgetsteuerung.",
-        "Interne Koordination, Einsatzplanung sowie Mitarbeiterabrechnungen für Werkstudierende und Aushilfen.",
-        "Eigenständige Angebotskalkulation und Rechnungserstellung sowie Kunden- und Dienstleisterbetreuung.",
-        "Weiterentwicklung interner Verwaltungsstrukturen durch Digitalisierung und Prozessoptimierung."
+        "Kaufmännische Projektorganisation inklusive Personal-, Event- und Budgetkoordination.",
+        "Einsatzplanung, Dienstleistersteuerung und Mitarbeiterabrechnungen für Werkstudierende.",
+        "Eigenständige Angebotskalkulation, Rechnungserstellung und Kundenbetreuung."
       ]
     },
     {
@@ -85,8 +84,8 @@
       "company": "Verschiedene Event- und Promotionagenturen",
       "location": "Berlin & bundesweit",
       "bullets": [
-        "Vor-Ort-Teamleitung: Check-In, Briefing und Koordination der Einsatzteams bei Messen, Kongressen und Corporate Events.",
-        "Direkte Ansprechpartnerin für Auftraggeber vor Ort sowie Sicherstellung eines reibungslosen Serviceablaufs."
+        "Vor-Ort-Teamleitung: Check-In, Briefing und Steuerung der Serviceteams bei Kongressen & Messen.",
+        "Direkte Ansprechpartnerin für Auftraggeber vor Ort zur Sicherstellung reibungsloser Abläufe."
       ]
     },
     {
@@ -95,28 +94,27 @@
       "company": "Vergleich.org (VGL Publishing AG)",
       "location": "Berlin",
       "bullets": [
-        "Recruiting, Vertragsabwicklung und Onboarding neuer Freelancer sowie Koordination externer Dienstleister.",
-        "Qualitätssicherung, Lektorat von Produkttexten sowie technische Pflege von XML- und HTML-Dateien."
+        "Recruiting, Vertragsabwicklung und Onboarding von Freelancern sowie Dienstleisterkoordination.",
+        "Qualitätssicherung von Produkttexten sowie redaktionelle Pflege von HTML- und XML-Dateien."
       ]
     },
     {
       "dates": "2019 – 2022",
-      "title": "Duale Studentin – Front & Back Office / Hospitality Management",
-      "company": "Accor Hotels (Novotel Suites, Ibis & Ibis Budget)",
+      "title": "Duale Studentin – Front & Back Office / Hospitality",
+      "company": "Accor Hotels (Novotel Suites, Ibis)",
       "location": "Berlin",
       "bullets": [
-        "Operative Steuerung im Front- und Back-Office, Guest Relations sowie professionelles Beschwerdemanagement.",
-        "Mitwirkung in der Buchhaltung und Vertragsverwaltung sowie stellvertretende Leitung im Bereich Housekeeping."
+        "Operative Steuerung im Front- und Back-Office, Gästebetreuung und Reklamationsmanagement.",
+        "Mitwirkung in Buchhaltung und Vertragsverwaltung sowie stellv. Leitung im Housekeeping."
       ]
     },
     {
       "dates": "2013 – 2025",
       "title": "Kaufmännische Mitarbeit, Einkauf & Kundenbetreuung",
-      "company": "Obst- und Gemüse Karow (Einzelhandels-Familienbetrieb)",
+      "company": "Obst- und Gemüse Karow (Familienbetrieb)",
       "location": "Berlin",
       "bullets": [
-        "Unterstützung in Einkauf, Warenlogistik, Bestandskontrolle und laufender Qualitätssicherung.",
-        "Persönliche Kundenbetreuung, Lieferantenkoordination sowie vorbereitende Kassen- und Tagesabrechnung."
+        "Warenlogistik, Einkauf, Bestandskontrolle, Kundenbetreuung sowie Kassen- und Tagesabrechnung."
       ]
     }
   ],
@@ -131,7 +129,7 @@
       "dates": "2019 – 2023",
       "degree": "B.A. Business Administration (Duales Studium)",
       "institution": "VICTORIA – Internationale Hochschule, Berlin (Praxispartner: Accor Hotels)",
-      "details": "Vertiefung: Hotel- & Tourismusmanagement | Auslandssemester 2021–2022: Universidad de Girona, Spanien (Marketing & PR)"
+      "details": "Vertiefung: Hotel- & Tourismusmanagement | Auslandssemester: Universidad de Girona (Spanien)"
     },
     {
       "dates": "2013 – 2019",
@@ -141,9 +139,8 @@
     }
   ],
   "skills_de": {
-    "office_management": "Office Management & Organisation · Projektleitung, Teamführung & Koordination · Eventplanung · Personalplanung · Abrechnungswesen · Front Office Operations · Stakeholder-Management · IT-Prozessoptimierung & Implementierung · Marketing & Videoediting",
-    "it_software": "Microsoft Office (Word, Excel, PowerPoint – Fortgeschritten) · HTML, CSS, Python (Grundlagen)",
-    "film_audio": "DaVinci Resolve · Wondershare Filmora · Adobe Audition CC 2019",
+    "office_management": "Office Management & Organisation · Projektleitung & Teamkoordination · Event- & Terminplanung · Personalabrechnung · Front Office · Stakeholder-Management · Prozessoptimierung",
+    "it_software": "Microsoft 365 (Word, Excel, PowerPoint – Fortgeschritten) · HTML/CSS, Python · DaVinci Resolve · Wondershare Filmora · Adobe Audition CC",
     "certificates": "Führerschein Klasse B · Gesundheitszeugnis"
   },
   "languages_de": [

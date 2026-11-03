@@ -295,10 +295,11 @@ def build_nancy_cv_docx(
     skills_lines = [
         f"<strong>Office & Organisation:</strong> {profile['skills_de']['office_management']}",
         f"<strong>Software & IT:</strong> {profile['skills_de']['it_software']}",
-        f"<strong>Film & Audio:</strong> {profile['skills_de'].get('film_audio', 'DaVinci Resolve · Wondershare Filmora · Adobe Audition CC 2019')}",
         f"<strong>Sprachen:</strong> {lang_str}",
         f"<strong>Nachweise & Mobilität:</strong> {profile['skills_de']['certificates']}",
     ]
+    if profile["skills_de"].get("film_audio"):
+        skills_lines.insert(2, f"<strong>Film & Audio:</strong> {profile['skills_de']['film_audio']}")
     for s_line in skills_lines:
         ps = doc.add_paragraph()
         ps.paragraph_format.space_before = Pt(0)
