@@ -26,7 +26,7 @@ DOCS_DIR = BASE_DIR / "docs"
 REPORT_TXT_PATH = BASE_DIR / "latest_job_digest.txt"
 DASHBOARD_HTML_PATH = BASE_DIR / "dashboard.html"
 ARTIFACT_DASHBOARD_PATH = Path(r"C:\Users\guill\.gemini\antigravity\brain\e708b6f5-3e3c-4683-86c2-48a58698cce4\job_dashboard.html")
-CURRENT_CONV_ARTIFACT_PATH = Path(r"C:\Users\guill\.gemini\antigravity\brain\69fafd07-ceac-4759-9069-88136837017e\job_dashboard.html")
+CURRENT_CONV_ARTIFACT_PATH = Path(r"C:\Users\guill\.gemini\antigravity\brain\7f3fcb99-c461-43e3-8c02-7a2750722f75\job_dashboard.html")
 
 RECIPIENT_EMAILS = ["guillejhl@gmail.com", "schuetzenc@gmail.com"]
 GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1o2r4Qvn9SL7gOa05P-up9tiwnCXPmcnOG3kttL_H0Fk/edit"
@@ -666,13 +666,25 @@ def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs, recip
                 msg.attach(part)
 
         print(f"  -> Dispatching HTML email + {len(attachments)} CV/CL attachments via {smtp_host}:{smtp_port} to {recipients_str}...")
-        server = smtplib.SMTP(smtp_host, smtp_port, timeout=20)
-        server.starttls()
-        server.login(smtp_user, smtp_pass)
-        server.sendmail(sender_email, target_recipients, msg.as_string())
-        server.quit()
-        print(f"[SUCCESS] Rich HTML Job Digest + CV attachments sent to {recipients_str}!")
-        return True
+        import time
+        max_attempts = 3
+        last_err = None
+        for attempt in range(1, max_attempts + 1):
+            try:
+                server = smtplib.SMTP(smtp_host, smtp_port, timeout=60)
+                server.ehlo()
+                server.starttls()
+                server.ehlo()
+                server.login(smtp_user, smtp_pass)
+                server.sendmail(sender_email, target_recipients, msg.as_string())
+                server.quit()
+                print(f"[SUCCESS] Rich HTML Job Digest + CV attachments sent to {recipients_str}!")
+                return True
+            except Exception as e:
+                last_err = e
+                print(f"  -> SMTP attempt {attempt}/{max_attempts} failed ({e}), retrying in 3s...")
+                time.sleep(3)
+        raise last_err
     except Exception as e:
         print(f"[ERROR] SMTP send failed: {e}")
         return False
