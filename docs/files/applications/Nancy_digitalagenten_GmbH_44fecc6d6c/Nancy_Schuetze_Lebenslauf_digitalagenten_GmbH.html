@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Lebenslauf - Nancy Thuy Dung Schütze</title>
+<style>
+  @page {
+    size: A4;
+    margin: 8mm 12mm 8mm 12mm;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    font-size: 8.1pt;
+    line-height: 1.20;
+    color: #1e293b;
+    background: #fff;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #1e3a8a;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+  }
+  .header-info {
+    flex: 1;
+    padding-right: 14px;
+  }
+  .header-info h1 {
+    font-size: 16pt;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: 0.2px;
+    margin-bottom: 1px;
+    line-height: 1.1;
+  }
+  .header-info .motto {
+    font-size: 8.9pt;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 1.5px;
+  }
+  .header-info .about-me {
+    font-size: 8.0pt;
+    color: #475569;
+    margin-bottom: 3px;
+    line-height: 1.18;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1.5px 16px;
+    font-size: 8.0pt;
+    color: #334155;
+  }
+  .contact-grid a {
+    color: #1e3a8a;
+    text-decoration: underline;
+  }
+  .photo-box img {
+    width: 70px;
+    height: 88px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1.5px solid #cbd5e1;
+    display: block;
+  }
+  .section-block {
+    margin-bottom: 3.5px;
+  }
+  .section-title {
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #1e3a8a;
+    border-bottom: 1.2px solid #cbd5e1;
+    padding-bottom: 1.5px;
+    margin-bottom: 3px;
+  }
+  .row-item {
+    display: flex;
+    margin-bottom: 2.5px;
+  }
+  .row-item:last-child {
+    margin-bottom: 0;
+  }
+  .left-col {
+    width: 14%;
+    font-size: 7.9pt;
+    font-weight: 600;
+    color: #475569;
+    padding-right: 6px;
+    flex-shrink: 0;
+  }
+  .right-col {
+    width: 86%;
+  }
+  .exp-header {
+    margin-bottom: 0.5px;
+  }
+  .exp-title {
+    font-weight: 700;
+    font-size: 8.7pt;
+    color: #0f172a;
+  }
+  .exp-company {
+    font-size: 8.3pt;
+    color: #334155;
+  }
+  ul.bullet-list {
+    padding-left: 13px;
+    margin-top: 0.5px;
+  }
+  ul.bullet-list li {
+    margin-bottom: 0.5px;
+    font-size: 8.0pt;
+    line-height: 1.18;
+  }
+  .edu-row {
+    margin-bottom: 2.5px;
+  }
+  .edu-degree {
+    font-size: 8.5pt;
+    color: #0f172a;
+  }
+  .edu-details {
+    font-size: 7.9pt;
+    color: #475569;
+    margin-top: 0.5px;
+  }
+  .skills-box p {
+    margin-bottom: 1.8px;
+    font-size: 8.0pt;
+    line-height: 1.20;
+  }
+  .skills-box p:last-child {
+    margin-bottom: 0;
+  }
+  .footer-sig {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 2px;
+    border-top: 1px solid #cbd5e1;
+  }
+  .sig-date {
+    font-size: 7.9pt;
+    color: #475569;
+  }
+  .sig-block {
+    text-align: center;
+  }
+  .sig-block img {
+    height: 24px;
+    display: block;
+    margin: 0 auto -2px auto;
+  }
+  .sig-line {
+    font-size: 7.9pt;
+    color: #475569;
+    border-top: 1px solid #94a3b8;
+    padding-top: 1px;
+    min-width: 155px;
+  }
+</style>
+</head>
+<body>
+  <div>
+    <div class="header-container">
+      <div class="header-info">
+        <h1>Nancy Thuy Dung Schütze</h1>
+        <div class="motto">Energiegeladen · Lösungsorientiert · Lebensfroh</div>
+        <div class="about-me">Als Organisationstalent arbeite ich eigenständig, strukturiert und kreativ und bringe mit meiner positiven Art einen humorvollen Alltag.</div>
+        <div class="contact-grid">
+          <span><strong>Adresse:</strong> Teichbergstr. 17, 13125 Berlin</span>
+          <span><strong>Mobil:</strong> +49 15237164097</span>
+          <span><strong>E-Mail:</strong> schuetzenancy@gmx.de</span>
+          <span><strong>Geboren:</strong> 17.08.2001 in Berlin | Staatsangehörigkeit: Deutsch</span>
+          <span style="grid-column: span 2;"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/schuetzenancy/" target="_blank">linkedin.com/in/schuetzenancy</a></span>
+        </div>
+      </div>
+      <div class="photo-box">
+        <img src="file:///home/runner/work/berlin-job-applier/berlin-job-applier/data/nancy_assets/image2.png" alt="Bewerbungsfoto Nancy Schütze" />
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">Berufserfahrung</div>
+      
+        <div class="row-item">
+          <div class="left-col">2025 – 2026</div>
+          <div class="right-col">
+            <div class="exp-header">
+              <span class="exp-title">Office Managerin & Kanzleiassistenz</span>
+              <span class="exp-company"> | <strong>SERS Rechtsanwaltsgesellschaft mbH</strong>, Berlin</span>
+            </div>
+            <ul class="bullet-list"><li>Eigenverantwortliche Organisation und Steuerung des gesamten Kanzlei-, Termin- und Sekretariatsbetriebs.</li>
+<li>Professionelle Mandanten- und Behördenkommunikation auf Deutsch und Englisch (C2).</li>
+<li>Fristenkontrolle, strukturierte Aktenführung, vorbereitende Buchhaltung und Rechnungsstellung.</li>
+<li>Kontinuierliche Digitalisierung und Prozessoptimierung administrativer Büroabläufe.</li></ul>
+          </div>
+        </div>
+        
+        <div class="row-item">
+          <div class="left-col">2023 – 2025</div>
+          <div class="right-col">
+            <div class="exp-header">
+              <span class="exp-title">Junior Projektleitung & Office Operations</span>
+              <span class="exp-company"> | <strong>zett.events</strong>, Berlin</span>
+            </div>
+            <ul class="bullet-list"><li>Kaufmännische Projektorganisation inklusive Personal-, Event- und Budgetkoordination.</li>
+<li>Einsatzplanung, Dienstleistersteuerung und Mitarbeiterabrechnungen für Werkstudierende.</li>
+<li>Eigenständige Angebotskalkulation, Rechnungserstellung und Kundenbetreuung.</li></ul>
+          </div>
+        </div>
+        
+        <div class="row-item">
+          <div class="left-col">2019 – heute</div>
+          <div class="right-col">
+            <div class="exp-header">
+              <span class="exp-title">Teamleitung Events, Hostess & Promotion (Nebenberuflich)</span>
+              <span class="exp-company"> | <strong>Verschiedene Event- und Promotionagenturen</strong>, Berlin & bundesweit</span>
+            </div>
+            <ul class="bullet-list"><li>Vor-Ort-Teamleitung: Check-In, Briefing und Steuerung der Serviceteams bei Kongressen & Messen.</li>
+<li>Direkte Ansprechpartnerin für Auftraggeber vor Ort zur Sicherstellung reibungsloser Abläufe.</li></ul>
+          </div>
+        </div>
+        
+        <div class="row-item">
+          <div class="left-col">2021 – 2022</div>
+          <div class="right-col">
+            <div class="exp-header">
+              <span class="exp-title">Werkstudentin Qualitätsmanagement, Recruiting & PR</span>
+              <span class="exp-company"> | <strong>Vergleich.org (VGL Publishing AG)</strong>, Berlin</span>
+            </div>
+            <ul class="bullet-list"><li>Recruiting, Vertragsabwicklung und Onboarding von Freelancern sowie Dienstleisterkoordination.</li>
+<li>Qualitätssicherung von Produkttexten sowie redaktionelle Pflege von HTML- und XML-Dateien.</li></ul>
+          </div>
+        </div>
+        
+        <div class="row-item">
+          <div class="left-col">2019 – 2022</div>
+          <div class="right-col">
+            <div class="exp-header">
+              <span class="exp-title">Duale Studentin – Front & Back Office / Hospitality</span>
+              <span class="exp-company"> | <strong>Accor Hotels (Novotel Suites, Ibis)</strong>, Berlin</span>
+            </div>
+            <ul class="bullet-list"><li>Operative Steuerung im Front- und Back-Office, Gästebetreuung und Reklamationsmanagement.</li>
+<li>Mitwirkung in Buchhaltung und Vertragsverwaltung sowie stellv. Leitung im Housekeeping.</li></ul>
+          </div>
+        </div>
+        
+        <div class="row-item">
+          <div class="left-col">2013 – 2025</div>
+          <div class="right-col">
+            <div class="exp-header">
+              <span class="exp-title">Kaufmännische Mitarbeit, Einkauf & Kundenbetreuung</span>
+              <span class="exp-company"> | <strong>Obst- und Gemüse Karow (Familienbetrieb)</strong>, Berlin</span>
+            </div>
+            <ul class="bullet-list"><li>Warenlogistik, Einkauf, Bestandskontrolle, Kundenbetreuung sowie Kassen- und Tagesabrechnung.</li></ul>
+          </div>
+        </div>
+        
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">Bildungsweg</div>
+      
+        <div class="row-item edu-row">
+          <div class="left-col">seit 2026</div>
+          <div class="right-col">
+            <div class="edu-degree"><strong>B.Sc. Informatik (Studium)</strong> | Technische Universität Berlin (Campus Charlottenburg / Zoologischer Garten)</div>
+            <div class="edu-details">Aktives Vollzeitstudium direkt am Standort Zoologischer Garten / Ernst-Reuter-Platz</div>
+          </div>
+        </div>
+        
+        <div class="row-item edu-row">
+          <div class="left-col">2019 – 2023</div>
+          <div class="right-col">
+            <div class="edu-degree"><strong>B.A. Business Administration (Duales Studium)</strong> | VICTORIA – Internationale Hochschule, Berlin (Praxispartner: Accor Hotels)</div>
+            <div class="edu-details">Vertiefung: Hotel- & Tourismusmanagement | Auslandssemester: Universidad de Girona (Spanien)</div>
+          </div>
+        </div>
+        
+        <div class="row-item edu-row">
+          <div class="left-col">2013 – 2019</div>
+          <div class="right-col">
+            <div class="edu-degree"><strong>Allgemeine Hochschulreife (Abitur – Gesamtnote: 1,7)</strong> | Robert-Havemann-Gymnasium, Berlin</div>
+            
+          </div>
+        </div>
+        
+    </div>
+
+    <div class="section-block" style="margin-bottom: 0;">
+      <div class="section-title">Fachkompetenzen &amp; IT-Kenntnisse</div>
+      <div class="skills-box">
+        <p><strong>Office &amp; Organisation:</strong> Office Management & Organisation · Projektleitung & Teamkoordination · Event- & Terminplanung · Personalabrechnung · Front Office · Stakeholder-Management · Prozessoptimierung</p>
+        <p><strong>Software &amp; IT:</strong> Microsoft 365 (Word, Excel, PowerPoint – Fortgeschritten) · HTML/CSS, Python · DaVinci Resolve · Wondershare Filmora · Adobe Audition CC</p>
+        
+        <p><strong>Sprachen:</strong> <strong>Deutsch:</strong> Muttersprache &nbsp;&bull;&nbsp; <strong>Vietnamesisch:</strong> Muttersprache &nbsp;&bull;&nbsp; <strong>Englisch:</strong> C2 Proficient &nbsp;&bull;&nbsp; <strong>Spanisch:</strong> B1-Modulzeugnis &nbsp;&bull;&nbsp; <strong>Katalanisch:</strong> A1-Zertifikat</p>
+        <p><strong>Nachweise &amp; Mobilität:</strong> Führerschein Klasse B · Gesundheitszeugnis</p>
+      </div>
+    </div>
+
+    <div class="footer-sig">
+      <div class="sig-date">Berlin, den 06.11.2026</div>
+      <div class="sig-block">
+        <img src="file:///home/runner/work/berlin-job-applier/berlin-job-applier/data/nancy_assets/image3.png" alt="Unterschrift Nancy Schütze" />
+        <div class="sig-line">Nancy Thuy Dung Schütze</div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
