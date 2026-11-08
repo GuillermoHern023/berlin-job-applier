@@ -940,7 +940,7 @@
     "days_ago": 7,
     "posted_ago": "1 week ago (2026-10-29)",
     "applicants_num": 150,
-    "applicants_text": "🔴 112 applicants",
+    "applicants_text": "🔴 113 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1160,8 +1160,8 @@
       "tableau"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: api, automatisierung, kpi, reporting, dashboard, sql.",
-    "days_ago": 4,
-    "posted_ago": "4 days ago (2026-10-29)",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-10-29)",
     "applicants_num": 29,
     "applicants_text": "🟢 29 applicants",
     "work_model": "Flexibles Office",
@@ -1385,8 +1385,8 @@
       "operations"
     ],
     "why_fits": "Strong Project Management fit. Matches keywords: ai, automation, api, tooling, project management, coordination.",
-    "days_ago": 7,
-    "posted_ago": "1 week ago (2026-10-30)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-10-30)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -3041,6 +3041,156 @@
     }
   },
   {
+    "id": "96b838ed8c",
+    "title": "Working Student (f/m/d)  Project Management Excellence",
+    "company": "Siemens",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4487310797",
+    "source": "Linkedin",
+    "date_posted": "2026-11-06",
+    "date_found": "2026-11-08 19:25",
+    "salary": "",
+    "description": "If you really want to make a difference – make it with us Siemens Mobility is a separately managed company of Siemens AG and has been a leading supplier in the field of mobility for over 160 years. Our core business includes rail vehicles, rail automation and electrification solutions, turnkey systems and related services. We have always been very innovative in making traveling faster, safer and more comfortable. Today, we need new solutions to new challenges such as climate change and rising populations worldwide. That's what drives us. That's why we shape mobility with passion, always being one step ahead. Through digitalization, we make infrastructures smart and create opportunities that get us from A to B sustainably and seamlessly. Our over 40,000 employees are pioneers in mobility who help to keep the world moving. What do you contribute? In this role, you combine project management, digitalization and Artificial Intelligence. You bring your own ideas and help us develop innovative solutions, identify new opportunities to simplify processes, leverage knowledge and continuously improve the way we manage projects. You support Project Management Excellence initiatives, collaborating with colleagues and stakeholders from different countries, functions and businesses. Furthermore, you contribute to optimizing project management processes, methods, tools and standards while identifying opportunities for improvement. You explore innovative applications of Artificial Intelligence in project management and support the development, testing and implementation of AI-powered solutions, agents and dashboards. Additionally, you help automate recurring tasks, improve access to knowledge and promote data-driven decision-making in project management. You support the preparation of workshops, project reviews, assessments, and training sessions and support their organizational and content-related execution. Moreover, you support the development of training concepts and knowledge-sharing resources for our international Project Management community and promote the exchange of best practices. You coordinate cross-country initiatives, follow up on agreed action items, and contribute your own ideas to ensure sustainable improvements. What do you bring along? You are currently studying Business Administration, Industrial Engineering, Engineering, Project Management, Business Informatics, Data Science, Artificial Intelligence or a comparable field. You are passionate about project management and Project Management Excellence and ideally have gained initial practical experience in project management, a PMO or a project-oriented environment. Furthermore, you are enthusiastic about Artificial Intelligence and digitalization and have gained initial hands-on experience with generative AI applications such as Microsoft Copilot. Ideally, you have basic knowledge of Power BI and other digitalization tools and enjoy helping us put innovative solutions into practice. Additionally, you are confident in using Microsoft 365, particularly PowerPoint and Excel, and can present complex information in a clear and compelling way. Moreover, you communicate confidently with different stakeholders, enjoy working in international teams and have very good English skills as well as basic German language skills. What do we offer you? Inclusion &amp; Diversity At Siemens Mobility, we're committed to fighting injustice and inequality. At our company, you will find an environment where you can be yourself and belong. Purpose We are pioneers in mobility. At Siemens Mobility, you will actively contribute to the transformation of transportation and climate protection in a market of the future, because our transportation solutions reduce CO2 emissions all over the world. Mobile working /Remote working With us, you will have the opportunity to work hybrid. This means that you can work remotely to a considerable extent. We have officially regulated this through a company agreement. Attractive conditions With us you will receive an attractive salary. You start with about 15€ per hour and from the 7th month on about 19€. You Can Find An Overview Of Our Benefits Here. How do you get in touch with us? www.siemens.de/mobility if you would like to find out more about Siemens Mobility before applying. Www.siemens.com/global/en/company/jobs/faq.html if you would like to obtain more information about the application process. +49 (9131) 17 5243-0 if you would like to clarify further questions about the position via our applicant hotline. www.siemens.com/mobility-jobs if you would like more information about jobs and careers at Siemens. As an equal-opportunity employer we are happy to consider applications from individuals with disabilities. The contact person handling this job ad is Ms. Christin Hitz.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 89,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "project management"
+    ],
+    "why_fits": "Strong Project Management fit. Matches keywords: project management.",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-06)",
+    "applicants_num": 88,
+    "applicants_text": "🟡 88 applicants",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Working Student (f/m/d)  Project Management Excellence role at Siemens. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Siemens is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Siemens in this role."
+      ]
+    }
+  },
+  {
+    "id": "2a12a2ec29",
+    "title": "Werkstudent (w/m/d) Project Management Excellence",
+    "company": "Siemens",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4487327001",
+    "source": "Linkedin",
+    "date_posted": "2026-11-06",
+    "date_found": "2026-11-08 19:25",
+    "salary": "",
+    "description": "Gemeinsam machen wir den Unterschied Siemens Mobility ist ein eigenständig geführtes Unternehmen der Siemens AG und seit über 160 Jahren ein führender Anbieter im Bereich Mobilität. Zu unserem Kerngeschäft gehören Schienenfahrzeuge, Bahnautomatisierungs- und Elektrifizierungslösungen, schlüsselfertige Systeme sowie die dazugehörigen Serviceleistungen. Wir waren schon immer sehr innovativ, um Reisen schneller, sicherer und komfortabler zu machen. Heute brauchen wir neue Lösungen für neue Herausforderungen wie den Klimawandel und weltweit steigende Bevölkerungszahlen. Das ist es, was uns antreibt. Deshalb gestalten wir Mobilität mit Leidenschaft und sind immer einen Schritt voraus. Durch Digitalisierung machen wir Infrastrukturen intelligent und schaffen Möglichkeiten, die uns nachhaltig und nahtlos von A nach B bringen. Unsere über 40.000 Mitarbeitenden sind Pioniere im Mobilitätswesen, die dabei helfen, die Welt in Bewegung zu halten. Was trägst Du bei? In dieser Position verbindest Du Projektmanagement, Digitalisierung und Künstliche Intelligenz. Du bringst eigene Ideen ein und hilfst uns, neue Möglichkeiten zur Prozessvereinfachung, Wissensnutzung und kontinuierlichen Verbesserung zu erschließen. Du unterstützt Initiativen im Bereich Project Management Excellence und arbeitest eng mit Kolleginnen und Kollegen sowie Stakeholdern aus verschiedenen Ländern, Funktionen und Geschäftsbereichen zusammen. Außerdem wirkst Du an der Optimierung von Projektmanagementprozessen, Methoden, Tools und Standards mit und identifizierst konkrete Verbesserungspotenziale. Du erkundest innovative Einsatzmöglichkeiten von Künstlicher Intelligenz im Projektmanagement und unterstützt die Entwicklung, Erprobung und Implementierung KI-gestützter Lösungen, Agents und Dashboards. Zusätzlich hilfst Du, wiederkehrende Aufgaben zu automatisieren, den Zugang zu Wissen zu verbessern und datenbasierte Entscheidungen im Projektmanagement zu fördern. Du unterstützt die Vorbereitung von Workshops, Projektbewertungen, Assessments und Trainings und wirkst bei deren organisatorischer und inhaltlicher Durchführung mit. Darüber hinaus entwickelst Du Trainingskonzepte und Wissensmaterialien für unsere internationale Project-Management-Community und förderst den Austausch von Best Practices. Du koordinierst länderübergreifende Initiativen, verfolgst vereinbarte Maßnahmen nach und bringst eigene Ideen ein, um nachhaltige Verbesserungen zu erzielen. Was bringst Du mit? Du studierst Betriebswirtschaftslehre, Wirtschaftsingenieurwesen, Ingenieurwissenschaften, Projektmanagement, Wirtschaftsinformatik, Data Science, Künstliche Intelligenz oder einen vergleichbaren Studiengang. Du begeisterst Dich für Projektmanagement und Project Management Excellence und hast idealerweise erste praktische Erfahrungen im Projektmanagement, PMO oder einem projektorientierten Umfeld gesammelt. Außerdem interessierst Du Dich für Künstliche Intelligenz und Digitalisierung und hast bereits erste praktische Erfahrungen mit generativen KI-Anwendungen wie Microsoft Copilot gesammelt. Idealerweise bringst Du erste Kenntnisse in Power BI und weiteren Digitalisierungstools mit und unterstützt uns gerne dabei, innovative Lösungen in die Praxis umzusetzen. Zusätzlich gehst Du sicher mit Microsoft 365 um, insbesondere mit PowerPoint und Excel, und bereitest komplexe Informationen verständlich und überzeugend auf. Darüber hinaus kommunizierst Du souverän mit unterschiedlichen Stakeholdern, arbeitest gerne in internationalen Teams und verfügst über sehr gute Englischkenntnisse sowie grundlegende Deutschkenntnisse. Was bieten wir Dir? Inklusion &amp; Vielfalt Bei Siemens Mobility setzen wir uns engagiert für Gerechtigkeit und Gleichberechtigung ein. Vielfalt bereichert unser Team und fördert innovative Lösungen. Wir freuen uns über Bewerbungen von Menschen mit Behinderung. Purpose Wir sind Pioniere der Mobilität. Bei uns trägst Du in einem Zukunftsmarkt aktiv zu Verkehrswende und Klimaschutz bei, weil unsere Transportlösungen in aller Welt den CO2-Ausstoß verringern. Mobiles Arbeiten /Remote Working Bei uns hast Du die Möglichkeit, hybrid zu arbeiten. Das bedeutet, dass Du zu einem erheblichen Anteil mobil tätig sein kannst. Dies haben wir durch eine Betriebsvereinbarung offiziell geregelt. Attraktive Konditionen Bei uns erhältst Du eine attraktive Vergütung. Du startest mit circa 15 € je Stunde und erhältst ab dem 7. Monat circa 19 €. Eine Übersicht über unsere Benefits findest Du hier. Wie trittst Du mit uns in Kontakt? www.siemens.de/mobility wenn Du vor Deiner Bewerbung mehr über Siemens Mobility erfahren möchtest. www.siemens.com/de/de/unternehmen/jobs/faq.html wenn Du Informationen rund um das Thema Bewerbung mittels unseres FAQ’s einholen möchtest. +49 (9131) 17 5243-0 wenn Du über unsere Bewerberhotline weitere Fragen zur Stelle klären möchtest. www.siemens.com/mobility-jobs wenn Du mehr Informationen zu Jobs &amp; Karriere bei Siemens erhalten möchtest. Wir legen Wert auf Chancengleichheit und freuen uns über Bewerbungen von Menschen mit Behinderung. Ansprechpartner für diese Stellenausschreibung ist Frau Christin Hitz.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 89,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "project management"
+    ],
+    "why_fits": "Strong Project Management fit. Matches keywords: project management.",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-06)",
+    "applicants_num": 48,
+    "applicants_text": "🟡 48 applicants",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent (w/m/d) Project Management Excellence role at Siemens. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Siemens is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Siemens in this role."
+      ]
+    }
+  },
+  {
+    "id": "0f0d49801d",
+    "title": "Working Student – Talent & Operations",
+    "company": "Apheris",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4487784999",
+    "source": "Linkedin",
+    "date_posted": "2026-11-05",
+    "date_found": "2026-11-08 19:25",
+    "salary": "",
+    "description": "About Apheris At Apheris, we are building the future of how AI is applied in pharmaceutical R&amp;D. We enable leading pharmaceutical teams to discover and develop drugs faster. We host the industry’s largest federated data networks for drug discovery AI, spanning co-folding, ADMET, and antibody developability. Across these networks, models are trained on proprietary industry datasets to achieve higher performance and broader applicability while keeping data control and IP protected. We deliver these superior models through drug discovery applications that enable teams to run them at scale, further customize them, and integrate them into existing R&amp;D workflows. AI Structural Biology (AISB) Network: Pharmaceutical companies collaborate in the field of co-folding, structure-based binding affinity predictions and antibody design. ADMET Network: Pharmaceutical and biotech companies collaborate to improve small-molecule property prediction and expand into further drug modalities. Antibody Developability Network: Pharma partners collaborate to federate historical and purpose-built antibody developability data sets for secure ML training, without data leaving each partner’s environment. About The Role As our Working Student – Talent &amp; Operations, you’ll support our People, Operations and Talent Acquisition work from our Berlin office. A big part of the role is behind-the-scenes operational work: keeping our systems, records and processes in good order so the rest of the team can move quickly. It suits someone who likes structure, gets things over the line, and already uses AI tools as a normal part of how they work What you will do Talent Acquisition support Process inbound applications in our ATS (Personio) and keep candidate records clean and up to date Coordinate the candidate journey end-to-end, ensuring timely interview scheduling and clear communication on next steps to maintain a smooth and positive candidate experience Manage the careers inbox and respond to candidate questions Operations support Keep our operational backbone running, from accurate data in Personio and our trackers to tidy shared drives and up-to-date process documentation Use AI tools to speed up everyday work, such as drafting candidate communications, cleaning up spreadsheets and writing up processes, and suggest where repetitive admin could be simplified or automated Support logistics for team events and offsites Support the reorganization of our SharePoint drive so documents are easy to find Help bring our sustainability and CO₂ reporting up to date HR support Pick up tasks on ongoing People and company projects Help coordinate onboarding emails and pre-start communication for new joiners Document processes as you go so they are easy to hand over What we expect from you Enrolled in a bachelor’s or master’s programme in HR, Business, Psychology, Communications or a related field, with graduation expected in 2027 Prior experience in HR, recruiting, office management or operations (e.g. an internship or previous working student role) Based in Berlin and able to work from our office two days a week Comfortable with operational and admin work: data upkeep, documentation and process detail make up much of the job, and you take pride in getting them right Very organised, reliable and detail-oriented; you follow things through without being chased Confident, regular user of AI tools such as ChatGPT, Claude or Copilot for drafting, research, summarising or working with data Comfortable with Microsoft Office (Excel, SharePoint, Outlook); experience with Personio is a plus Clear, friendly written and spoken communication in English; German is a plus Discretion when handling confidential candidate and employee information What we offer you Flexible working hours that fit around your studies (20 hours per week), with a flexible hybrid setup including two days per week in the office. Real ownership of tasks from day one and close collaboration with the People &amp; Operations team (Shaked, Erin and Joe) Plenty of room to grow personally and professionally and shape your own role A modern office in Berlin, monthly happy-hours, and social allowance Strong learning and development opportunities in a fast-growing AI company Office Days at our Berlin HQ or a different European location (3x a year) Logistics Initial Screening: If your application matches our requirements, we invite you to an initial video call to explore the fit. In this 30-45-minute interview, you will get to know us and the role. The interviewer will be interested in your relevant experiences and skills, as well as answering any questions on the company and the role itself that you may have. Deep Dive: In this phase, the people team will assess your skills and knowledge required for the role by asking you about meaningful experiences or your solutions for specific scenarios in line with the role we are staffing.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "cx_operations",
+    "category_label": "Business & Data Operations",
+    "match_score": 89,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "operations"
+    ],
+    "why_fits": "Strong Business & Data Operations fit. Matches keywords: operations.",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-05)",
+    "applicants_num": 99,
+    "applicants_text": "🟡 99 applicants",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Working Student – Talent & Operations role at Apheris. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. My key initiatives include optimizing an international AI voice bot that scaled to route millions of calls (raising inbound answer rates from 65% to 85%), as well as structuring retrieval knowledge bases for an AI chatbot handling 30,000+ monthly customer chats. To empower operational teams, I built an automated multi-market knowledge base, an AI QA review web application, and API-driven customer communication tools.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Apheris is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Apheris in this role."
+      ]
+    }
+  },
+  {
     "id": "7402803a1d",
     "title": "Project Management Internship — Data Economy",
     "company": "T-Mobile",
@@ -4582,6 +4732,54 @@
     }
   },
   {
+    "id": "e1d7c19229",
+    "title": "Werkstudent:in Finance & Controlling / Buchhaltung (m/w/d)",
+    "company": "CheckCars24.de",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4486592947",
+    "source": "Linkedin",
+    "date_posted": "2026-11-05",
+    "date_found": "2026-11-08 19:25",
+    "salary": "",
+    "description": "Gestalte mit uns die nächsten Schritte von CheckCars24. Zahlen schaffen Transparenz. Und gute Entscheidungen entstehen dort, wo Zahlen nicht nur aufbereitet, sondern verstanden, hinterfragt und in den richtigen unternehmerischen Kontext gesetzt werden . Für unseren Finance-Bereich suchen wir zum nächstmöglichen Zeitpunkt studentische Verstärkung im Bereich Finance &amp; Controlling / Buchhaltung (m/w/d) . Gesucht ist eine Persönlichkeit, die analytische Stärke, hohe Sorgfalt und ein ausgeprägtes Verständnis für Zahlen und wirtschaftliche Zusammenhänge mitbringt. In dieser Position übernimmst du von Beginn an Verantwortung und arbeitest nah an zentralen unternehmerischen Entscheidungen . In direkter Zusammenarbeit mit unserem Head of Transformation bereitest du relevante Finanz- und Unternehmensdaten auf und unterstützt mit fundierten Analysen, Einschätzungen und Entscheidungsvorlagen. Gleichzeitig wirkst du aktiv an der Weiterentwicklung unserer Strukturen, Prozesse und Steuerungsmechanismen mit. Damit bist du nicht nur Teil unseres Finance-Bereichs, sondern gestaltest die Transformation und Weiterentwicklung von CheckCars24 unmittelbar mit . Deine Arbeit trägt dazu bei, Entwicklungen frühzeitig zu erkennen, Entscheidungen auf eine belastbare Datengrundlage zu stellen und Veränderungen gezielt voranzutreiben. Dafür suchen wir analytische Stärke, ein sehr gutes Zahlenverständnis und echte Eigenverantwortung . Genauso wichtig sind für uns absolute Verlässlichkeit, Diskretion und Integrität. Denn in dieser Position erhältst du Einblick in sensible Finanz- und Unternehmensdaten sowie in zentrale wirtschaftliche Zusammenhänge. Wenn du dein Studium mit anspruchsvoller Praxiserfahrung verbinden, früh Verantwortung übernehmen und aktiv daran mitwirken möchtest, wie finanzielle Steuerung und unternehmerische Transformation in der Praxis zusammenspielen, möchten wir dich kennenlernen. Das sind deine Aufgaben Du unterstützt im operativen Controlling sowie in der vorbereitenden und laufenden Buchhaltung Du arbeitest Zahlen, Auswertungen und Finanzdaten sauber, strukturiert und nachvollziehbar auf Du unterstützt bei Monatsauswertungen, Reportings, Kostenübersichten und Soll-Ist-Vergleichen Du prüfst Daten auf Plausibilität, Vollständigkeit und Abweichungen und gehst Auffälligkeiten konsequent nach Du unterstützt bei der Aufbereitung von Entscheidungsgrundlagen und Analysen für unseren Head of Transformation Du arbeitest mit großen und kleinen Zahlen, verschiedenen Datenquellen und Excel-Auswertungen und sorgst dafür, dass daraus ein klares Gesamtbild entsteht Du übernimmst nach deiner Einarbeitung eigene Themen und Verantwortungsbereiche Du hilfst uns dabei, bestehende Finance-Prozesse sauberer, transparenter und effizienter zu machen Du arbeitest eng mit angrenzenden Unternehmensbereichen zusammen und sorgst dafür, dass relevante Zahlen dort ankommen, wo sie gebraucht werden Das bringst Du mit Uns ist weniger wichtig, wie viele Stationen bereits in deinem Lebenslauf stehen. Entscheidend ist, wie du denkst und arbeitest. Du studierst idealerweise BWL, Finance, Controlling, Accounting, Wirtschaftswissenschaften oder einen vergleichbaren Studiengang Du hast ein außergewöhnlich gutes Zahlenverständnis und erkennst Zusammenhänge schnell Du bist analytisch stark und hast Spaß daran, Dingen wirklich auf den Grund zu gehen Excel liegt dir: Formeln, Pivot-Tabellen und größere Datenmengen schrecken dich nicht ab Du arbeitest extrem sorgfältig, strukturiert und zuverlässig Wenn eine Zahl nicht stimmen kann, lässt du sie nicht einfach stehen, sondern willst wissen, warum Du denkst mit, stellst die richtigen Fragen und wartest nicht darauf, dass dir jeder einzelne Arbeitsschritt erklärt wird Du lernst schnell und kannst neue Zusammenhänge eigenständig erfassen Du gehst mit vertraulichen Finanz- und Unternehmensdaten absolut diskret und integer um Du übernimmst Verantwortung für die Qualität deiner Arbeit und stehst zu Fehlern, statt sie zu verstecken Sehr gute Deutschkenntnisse setzen wir voraus Du musst noch nicht alles können. Aber du solltest unbedingt alles verstehen wollen. Was uns bei dieser Position besonders wichtig ist Integrität ist für uns nicht verhandelbar. Du wirst mit sensiblen Unternehmensdaten, finanziellen Informationen und internen Auswertungen arbeiten. Deshalb suchen wir jemanden, auf den wir uns fachlich und persönlich zu 100 % verlassen können . Wir suchen kein fertiges Finance-Profil mit zehn Jahren Berufserfahrung. Wir suchen ein echtes Nachwuchstalent mit Potenzial : wach im Kopf, schnell im Verständnis, gewissenhaft in der Umsetzung und mit echtem Interesse daran, zu verstehen, wie Zahlen und unternehmerische Entscheidungen zusammenhängen. Arbeitszeit &amp; Arbeitsort Werkstudententätigkeit neben deinem Studium Einsatzort: Berlin, Ernst-Reuter-Platz 8 Persönliche und strukturierte Einarbeitung Enge Zusammenarbeit mit unserem Head of Transformation Idealerweise kannst du schnellstmöglich starten , damit eine direkte Übergabe und Einarbeitung durch deinen Vorgänger möglich ist Das bieten wir dir Keine typische Werkstudentenstelle: Du bekommst echten Einblick in Finance, Controlling und Unternehmenssteuerung Direkte Zusammenarbeit mit einer zentralen Schnittstelle unserer Unternehmensentwicklung Eine fundierte Einarbeitung und anschließend echte Verantwortung Kurze Entscheidungswege und die Möglichkeit, eigene Ideen einzubringen Viel Lernkurve für alle, die langfristig in Finance, Controlling, Accounting oder Unternehmenssteuerung arbeiten möchten Moderne Ausstattung Ein digitales Arbeitsumfeld und direkte Kommunikation Diverse, multikulturelle Teams und eine unkomplizierte Du-Kultur Klingt nach dir? Dann möchten wir dich kennenlernen. Uns interessiert nicht nur dein Lebenslauf. Wir möchten vor allem wissen, wie du denkst, wie du mit Zahlen umgehst und ob du Lust hast, Verantwortung zu übernehmen. Bei Eignung laden wir dich telefonisch oder per E-Mail zu einem Vorstellungsgespräch ein. Sind wir beide überzeugt? Dann kannst du schnellstmöglich durchstarten . Wir leben eine offene Kultur und setzen uns über Konventionen wie Siezen oder einen Dresscode hinweg. Bei uns sind Bewerbungen unabhängig von Geschlecht, ethnischer Herkunft, Religion, Alter, sexueller Identität, Behinderung oder anderen persönlichen Merkmalen willkommen. Solltest du Fragen zum Stellenangebot oder zum Bewerbungsprozess haben, steht dir unser Recruiting-Team unter bewerbung@checkcars24.de gerne zur Verfügung. Wir freuen uns auf dich! Über uns Die CheckCars24 GmbH ist ein modernes, dynamisches E-Commerce Unternehmen mit Sitz in Berlin. Unsere Mission? Den Fahrzeugkauf neu denken - einfacher, transparenter und kundenfreundlicher als je zuvor! Mit einem Bestand von über 20.000 sofort verfügbaren Neu- und Jahreswagen aus über 33 verschiedenen Marken bieten wir unseren Kunden attraktive Konditionen. Um unser Team weiter zu verstärken, suchen wir engagierte Mitarbeiter, die gemeinsam mit uns die Zukunft des Online-Autokaufs gestalten möchten.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 85,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-05)",
+    "applicants_num": 31,
+    "applicants_text": "🟢 31 applicants",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent:in Finance & Controlling / Buchhaltung (m/w/d) role at CheckCars24.de. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about CheckCars24.de is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support CheckCars24.de in this role."
+      ]
+    }
+  },
+  {
     "id": "96c03a198d",
     "title": "Werkstudent (m/w/d) KI-Automatisierung 1",
     "company": "Telefónica Germany",
@@ -6045,6 +6243,56 @@
     }
   },
   {
+    "id": "296058dbde",
+    "title": "Duales Studium der BWL Schwerpunkt Industrie (B.A.), Team Projekt Management Office (w/m/d)",
+    "company": "50Hertz Transmission GmbH",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4485555556",
+    "source": "Linkedin",
+    "date_posted": "2026-11-04",
+    "date_found": "2026-11-08 19:25",
+    "salary": "",
+    "description": "Wir sind 50Hertz – einer der vier Übertragungs­netzbetreiber (ÜNB) in Deutschland. Zusammen mit dem belgischen Stromnetz­betreiber Elia (Brüssel) bilden wir die international tätige Elia Group. Bei 50Hertz arbeiten über 2.100 Menschen daran, dass Strom über große Entfernungen jederzeit zuverlässig, verlustarm und optimal gesteuert fließt. Als ÜNB übernehmen wir in gesell­schaftlicher, technischer und wirtschaftlicher Hinsicht eine zentrale Moderatoren­rolle bei der Verwirklichung der Energiewende. Unser Ziel: Bis zum Jahr 2032 wollen wir 100 Prozent Erneuerbare Energien sicher und bezahlbar in Netz und System integrieren. Innovativ Wir treiben die Energie­wende mit zukunfts­weisenden Technologien und kreativen Lösungen voran. Dabei denken wir heute schon an über­morgen und sind bereit, neue Wege zu gehen. Divers Bei uns arbeiten Menschen aus unterschied­lichen Kulturen und mit viel­fältigen Talenten zusammen, um gemeinsam Großes zu erreichen. Dabei sehen wir Vielfalt in jeder Dimension immer als Chance. Verantwortungsvoll Wir tragen Verantwortung für eine zuverlässige Stromversorgung und den nachhaltigen Ausbau des Stromnetzes. Um diese Aufgabe zu meistern, ist es für uns selbstverständlich, auch füreinander Verant­wortung zu übernehmen. Gemeinschaftlich Unsere starke Gemein­schaft und wert­schätzende Zusammenarbeit sichern den Erfolg unserer Mission. Deshalb fördern wir aktiv die individuellen Stärken und Interessen unserer Mitarbeitenden und unterstützen die persön­liche Weiterentwicklung. Gemeinsam zum Ziel Wir sind in großer Mission unterwegs: Keep the lights on! Hilf uns, erneuerbare Energie ins Stromübertragungs­netz zu integrieren, die Energie­wende zu digitalisieren und die Strom­versorgung für mehr als 18 Mio. Menschen zu sichern. Als Teil von 50Hertz redest du nicht nur über die Energiewende, du machst sie, indem du deine Ideen aktiv einbringst. Dabei begleiten wir deine Ausbildung / dein duales Studium und unterstützen dich im Erwerb der erforderlichen Kompetenzen für deinen späteren Berufsweg. Duales Studium der BWL Schwerpunkt Industrie (B.A.), Team Projekt Management Office (w/m/d) 50Hertz Transmission GmbH – ein Unternehmen der europäischen Elia Group • Ausbildung / Duales Studium • Berlin • Befristet Vollzeit (37 Stunden pro Woche) Heidestraße 2, 10557 Berlin Start: September 2027 (inkl. Vorpraktikum für ein umfangreiches Onboarding) Befristet Stellen-ID: 11629 Dich elektrisieren wirtschaftliche Zusammenhänge und du möchtest ein breites Wissen in verschiedenen Unternehmensbereichen aufbauen? Du möchtest mit deinem abstrakten und analytischen Denkvermögen sowie deinem Organisationstalent unternehmerische Abläufe verstehen, optimieren &amp; strukturieren und dabei einen gesellschaftlichen Mehrwert schaffen? Aufgaben Absolviere gemeinsam mit 50Hertz dein duales Studium der Betriebswirtschaftslehre im Schwerpunkt Industrie und sammle wertvolle Erfahrung bei dem Übertragungsnetzbetreiber für Nord/Ost-Deutschland und lege den Grundstein für deine höchstspannende berufliche Entwicklung. Dafür bist du im Team Projekt Management Office angesiedelt. Höchstspannung ist garantiert! Deine Aufgaben – ein Blick in die Praxis Im Rahmen deines dualen Studiums lernst und trägst du je nach Einsatzbereich dazu bei, Die Energiewende durch die Begleitung großer Infrastrukturprojekte im Bereich der Onshore/Offshore-Netzanbindungen aktiv mitzugestalten, Die Planung und Steuerung von Projekten insbesondere hinsichtlich Termine, Kosten, Risiken und Qualität zu unterstützen, Projektkennzahlen auszuwerten, Reportings zu erstellen und fundierte Entscheidungsgrundlagen für das Projektmanagement bereitzustellen, Eigene Aufgaben und Teilprojekte im Projektmanagement eigenverantwortlich zu übernehmen, Bereichsübergreifend mit verschiedenen Fachbereichen zusammenzuarbeiten und ein umfassendes Verständnis komplexer Projektzusammenhänge aufzubauen. Der Studiengang Betriebswirtschaftslehre (BWL) mit Schwerpunkt Industrie vermittelt dir übergreifendes Wissen zur wirtschaftlichen Steuerung von Betrieben und den Funktionsweisen des dienstleistungsorientierten Managements. Innerhalb deines 3-jährigen Studiums wechselst du alle drei Monate zwischen den Praxisphasen bei 50Hertz und den Studienphasen bei unserem Kooperationspartner, der Hochschule für Wirtschaft und Recht Berlin. Profil Abitur oder passende Fachhochschulreife mit (bevorstehendem) gutem bis sehr gutem Abschluss, Interesse an der Energiewende und Spaß im professionellen Umgang mit den modernen Kommunikationsmitteln sowie IT, Motivation, Neues zu lernen und Verantwortung für erste eigene Projekte zu übernehmen, Pflichtbewusstsein, strukturierte Herangehensweise und Eigeninitiative, Freude am Arbeiten im Team und mit modernen IT-Systemen, Gute bis sehr gute Kenntnisse der deutschen (C1) und englischen Sprache in Wort und Schrift (B2). Wir bieten Fokus auf deine Aus­bildung Kostenübernahme von Ausbildungsgebühren und Pflichtlektüre, finanzielle Prämie bei entsprechenden Noten, individuelle Betreuung und Mitgestaltung Modernes Equipment ab Tag 1 Eigener Laptop und ein neues iPhone als Diensthandy (auch privat nutzbar) Sicherheit für deine Ausbildung Zukunftssicherer Arbeitsplatz und eine Übernahmegarantie bei entsprechenden Leistungen Work-Life-Balance Flexible Arbeitszeiten und die Möglichkeit zum mobilen Arbeiten, Arbeitszeit: 37 Wochenstunden (Vollzeit) sowie 30 Tage Urlaub Unter­stützende Leis­tungen Zuschüsse für Fahrtkosten, Mietkosten und Urlaubsbeihilfen. Kostenerstattungen für Sehhilfen, Arzneimittel, Zahnreinigung, jährlicher Lehrmittelzuschuss u. v. m. Attraktive Ver­gütung 1. Jahr: 1.370,00 €, 2. Jahr: 1.420,00 €, 3. Jahr: 1.500,00 € und ein jährliches 13. Monatsgehalt Innovatives Arbeitsumfeld Helle, ergonomische und technisch erstklassig ausgestattete Arbeitsplätze sowie flexible Arbeitsplatzwahl für mehr Kreativität und Teamwork Important note Please be advised that a valid work permit for Germany is required for non-EU citizens. Unfortunately, applications without a valid work permit and sufficient German language skills may not be considered. LNKD1_DE",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "product_management",
+    "category_label": "Product Management",
+    "match_score": 71,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "erp"
+    ],
+    "why_fits": "Strong Product Management fit. Matches keywords: erp.",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-04)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Duales Studium der BWL Schwerpunkt Industrie (B.A.), Team Projekt Management Office (w/m/d) role at 50Hertz Transmission GmbH. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Embedded in an agile cross-functional product environment, I helped scale our conversational AI tooling across 9 international markets, routing millions of calls while improving answer rates by 20%. To support our operational workflows, I have designed and deployed internal evaluation tools, including an AI conversation QA web platform with bulk review pipelines, a centralized review management portal versioned via GitHub, and automated dispatch workflows.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about 50Hertz Transmission GmbH is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support 50Hertz Transmission GmbH in this role."
+      ]
+    }
+  },
+  {
     "id": "12199226e9",
     "title": "Werkstudent:in IT-Development",
     "company": "Deutsche Bahn",
@@ -6663,6 +6911,54 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about Taxfix is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Taxfix in this role."
+      ]
+    }
+  },
+  {
+    "id": "dd5e7762ce",
+    "title": "Praktikum Strategische Baubarkeit (w/m/d)",
+    "company": "Enpal",
+    "location": "Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4487763200",
+    "source": "Linkedin",
+    "date_posted": "2026-11-05",
+    "date_found": "2026-11-08 19:25",
+    "salary": "",
+    "description": "Unser Ziel ist eine Solaranlage auf jedem Dach, ein Speicher in jedem Haus und ein E-Auto in jeder Garage. Enpal macht das möglich mit einer integrierten Gesamtlösung für dezentrale Energie – von Solaranlage und Batteriespeicher über Wallbox, Smart Meter bis zur Wärmepumpe. Herzstück ist unsere KI-gestützte Plattform Enpal.One+, die tausende Systeme intelligent vernetzt und Strombezug sowie -einspeisung effizient am Energiemarkt optimiert. Bist Du bereit für Lösungen, die mehr als nur ein Versprechen sind und täglich echte Lebensqualität in tausende Haushalte bringen? Was du bei Enpal gestaltest, liefert morgen sauberen Strom und verändert nachhaltig, wie wir Energie nutzen. Deine Aufgaben Du verantwortest strategische Projekte im Bereich Baubarkeit von der ersten Analyse bis zur Umsetzung. Du analysierst unseren Sales- und Operations-Funnel und identifizierst, an welchen Stellen und aus welchen Gründen wir bei Kund:innen nicht bauen können. Du bewertest den Impact unterschiedlicher Initiativen, erstellst Business Cases und leitest daraus Prioritäten ab. Du identifizierst innovative Bautechnologien und Prozesse im Bereich erneuerbarer Energien und bringst sie gemeinsam mit dem Team in die Umsetzung. Du steuerst die Realisierung mit Operations, Technik, Software und externen Partnern, bis die Lösung im Tagesgeschäft funktioniert. Du bewegst dich an der Schnittstelle von Prozessen, technischen Fragestellungen und Softwarethemen und bringst die richtigen Beteiligten zusammen. Du bist Teil eines kleinen, agilen Teams, übernimmst früh Verantwortung für eigene Themen und siehst unmittelbar, was deine Arbeit bewirkt. Dein Profil Du studierst, befindest dich im Gap Year oder hast dein Studium kürzlich abgeschlossen, wobei die Fachrichtung zweitrangig ist. Du hast bereits praktische Erfahrung gesammelt, idealerweise in einem Startup oder Scale-up, einer Beratung oder im Banking. Du bist umsetzungsstark, packst Themen an und bringst sie zum Abschluss. Du gehst strukturiert vor, denkst in Prozessen und behältst auch bei mehreren Projekten parallel den Überblick. Du arbeitest dich schnell in neue Themen ein, auch wenn sie technisch werden. Du sprichst fließend Deutsch und Englisch und kommunizierst klar und überzeugend mit Stakeholdern aus unterschiedlichsten Bereichen. Du möchtest nah am Geschehen sein und echten Impact haben und hast Lust, 3 bis 6 Monate mit dem Team vor Ort in Berlin zu arbeiten. Du bist interessiert, auch wenn du nicht alle Anforderungen erfüllst? Bewirb dich trotzdem! Wir freuen uns darauf, dein Potenzial zu entdecken - unabhängig davon, ob deine Erfahrung jede einzelne Voraussetzung erfüllt. ☀️ Darauf kannst Du Dich freuen Arbeite in Deutschlands erstem grünen Unicorn - Gestalte aktiv die solare Energiewende mit. Die Sonne scheint auf der ganzen Welt - Bei Enpal arbeitest du mit einem hochmotivierten, diversen Team aus über 65 Nationalitäten. Das ideale Setup für deinen Fokus - Wir sind überzeugt, dass exzellente Ergebnisse dort entstehen, wo die Bedingungen stimmen. Deshalb setzen wir auf ein hybrides Arbeitskonzept, das dir die Freiheit gibt, immer genau so zu arbeiten, wie es am besten zu deinen Aufgaben passt. Du brauchst neue Impulse auf internationalem Niveau? Mit Workflex bieten wir, abhängig von deiner Verantwortung, die Möglichkeit, deine Tätigkeit bis zu 30 Tage im Jahr ins Ausland zu verlegen. Grown-up Business &amp; Startup Spirit - In unserem modernen Office in Berlin-Friedrichshain findest du von höhenverstellbaren Tischen, Tischtennisplatte bis gefüllten Getränkekühlschränken und Barista-Coffee alles was das Herz begehrt. Dein Kick-start bei Enpal - Onboarding-Tag mit Welcome Bag, Buddy-Programm und einem Team, das dich wirklich abholt. Bleib auf dem Laufenden &amp; gestalte mit - Transparente All-Hands, kurze Entscheidungswege und eine offene Feedback-Kultur, denn ohne Fehler gibt es keinen Fortschritt. Energiewende geht nur gemeinsam - Bei Enpal erwartet dich ein legendärer Teamspirit und unvergessliche Team- und Companyevents. Dein Extra-Boost - 29 Urlaubstage + je ein freier Tag an Heilig Abend &amp; Silvester, vergünstigte Mitgliedschaft bei Wellhub und Corporate Benefits. Alles, was dir hilft, Arbeit und Leben gut zu verbinden. Wir bei Enpal sind stolz auf die Vielfältigkeit unseres Teams. Weder bei der Einstellung noch während des Beschäftigungsverhältnisses werden Entscheidungen auf Basis von Hautfarbe, Religion oder religiösen Glaubens, ethnischer oder nationaler Herkunft, Nationalität, Geschlechteridentität, sexuelle Orientierung, Behinderung oder Alter getroffen. Enpal steht für einen sicheren Arbeitsplatz und geht gegen Diskriminierung und Belästigung jeglicher Art vor.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 67,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-05)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Worked embedded in an agile <strong>Product, Tech, Business Analytics, and Operations team</strong> to translate complex operational data into product features, evaluation tools, and scalable processes across <strong>9 international markets</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Praktikum Strategische Baubarkeit (w/m/d) role at Enpal. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Enpal is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Enpal in this role."
       ]
     }
   },
