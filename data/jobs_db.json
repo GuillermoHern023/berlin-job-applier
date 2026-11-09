@@ -676,6 +676,63 @@
     }
   },
   {
+    "id": "b5d65cc281",
+    "title": "Working Student IT Solutions Management (m/f/x)",
+    "company": "Scalable",
+    "location": "Berlin, BE, Germany",
+    "job_url": "https://jobs.smartrecruiters.com/ScalableGmbH/744000160638928-working-student-it-solutions-management-m-f-x-",
+    "source": "Indeed",
+    "date_posted": "2026-11-09",
+    "date_found": "2026-11-09 18:34",
+    "salary": "",
+    "description": "**Company Description**\n\nScalable Capital is a leading digital investment and banking platform with a full banking licence, empowering people across Europe to shape their own finances. Scalable Broker makes it easy and affordable for clients to invest professionally in stocks, ETFs, cryptocurrencies, and derivatives, as well as set up savings plans. Scalable Wealth, the digital wealth management service, offers clients professional investment in ETF portfolios, and is also adopted as a white-label solution by banks and other B2B partners. The company’s offerings are rounded off by attractive interest rates, loans, and private equity. With the European Investor Exchange, Scalable Capital offers an exchange specifically for retail investors. Over one million clients have already entrusted more than €30 billion to the platform.  \n  \nFounded in 2014, Scalable Capital now employs over 700 people across Munich, Berlin, Vienna, Milan, and London. Together with the founding and management team, including Erik Podzuweit and Florian Prucker, they are working on a new generation of financial services.\n\nVisit our finance blog or check out our Social Media channels to find out what our Expert Teams have to say.  \n  \nOur Company Values guide us every day in how we work and collaborate. To learn more about them, you can find our values here (English).\n\n **Job Description**\n\n* Assist with the discovery and processing of requests for new services and IT solutions\n* Act as a bridge between business units, technical teams, and 2nd-Line control functions\n* Verify that IT, security, and compliance requirements are consistently considered across all requests\n* Conduct follow-up and clarification sessions with business owners to ensure the full scope of their use case is understood\n* Work closely with the IT Vendor Management team to help coordinate the evaluation of new solutions\n* Support the continuous development, documentation, and improvement of internal processes to increase efficiency and transparency for all stakeholders\n\n **Qualifications**\n\n* Currently studying Business Informatics, Finance, Computer Science, Business Administration, or a related field\n* Passionate about IT architecture or financial operations (a blend of both technical and financial acumen is a strong plus)\n* Good understanding of business information systems, data structures, and general IT/ security principles\n* Familiarity with project and documentation management tools is a plus\n* Basic understanding of, or strong willingness to learn about, European banking regulations and compliance frameworks (e.g. DORA, MaRisk, GDPR)\n* Enthusiastic to learn and take on new challenges across a variety of topics\n* Strong written and verbal communication skills in English, German is a plus\n\n **Additional Information**  \n\n* Be part of one of the fastest-growing and most visible Fintech startups in Europe, creating innovative services that have a substantial impact on the lives of our customers\n* The ability to work with an international, diverse, inclusive, and ever-growing team that loves creating the best products for our clients\n* Enjoy an office in the heart of Munich, located in a lively neighbourhood and close to the English garden\n* All internships are worth the same with us: we also remunerate mandatory internships\n* Learn and grow by joining our in-house knowledge sharing sessions\n* Work productively with the latest hardware and tools\n* Free subscription to the PRIME+ Broker",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 96,
+    "language_req": "English + Basic/B1 German OK",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "evaluation",
+      "api",
+      "git",
+      "bot",
+      "stakeholder",
+      "documentation",
+      "operations"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, evaluation, api, git, bot, stakeholder.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-09)",
+    "applicants_num": 999,
+    "applicants_text": "Direct Portal (No counter)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Working Student IT Solutions Management (m/f/x) role at Scalable. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Scalable is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Scalable in this role."
+      ]
+    }
+  },
+  {
     "id": "9353af0016",
     "title": "Werkstudent (m/w/d) Projektmanagement Bau",
     "company": "Turner & Townsend",
@@ -1254,8 +1311,8 @@
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, support.",
     "days_ago": 5,
     "posted_ago": "5 days ago (2026-11-04)",
-    "applicants_num": 999,
-    "applicants_text": "LinkedIn (Click to view)",
+    "applicants_num": 57,
+    "applicants_text": "🟡 57 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -4829,6 +4886,153 @@
     }
   },
   {
+    "id": "0226201911",
+    "title": "(Junior) Technical Product Owner (f/m/d) – Virtual Appliance & Container Platform",
+    "company": "Zertificon Solutions GmbH",
+    "location": "Neukölln, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4486584842",
+    "source": "Linkedin",
+    "date_posted": "2026-11-05",
+    "date_found": "2026-11-09 18:34",
+    "salary": "",
+    "description": "Zertificon Solutions – Software Manufacturer since 2004. We are IT security specialists: our products encrypt business communications. More than 25% of the 100 highest-revenue companies in Germany, as well as hundreds of medium-sized enterprises across all industries, already use our Z1 encryption solutions. We have big plans and continue to grow steadily. Nearly 140 employees are already working with us in Neukölln. Join our professional, highly qualified team: take on challenges, share your knowledge, learn new things, and discover your potential! Responsibilities We are looking for a Technical Product Owner with a strong technical mindset to drive the evolution of our Z1 Appliance – the virtual foundation for our server-based security products and services. The Z1 Appliance is a core part of our B2B offering: Historically based on Debian Linux, it is now evolving into a modern container-based platform. As the central interface between development and business teams, you gather requirements from stakeholders and the market and translate them into clear project specifications In alignment with our company goals and in close collaboration with the business teams, you develop and own the vision and roadmap for your platform components You break down complex feature ideas into epics and user stories with clear acceptance criteria You keep the backlog consistently up to date and well prioritized for your development team To ensure strong usability, you create lightweight mockups yourself and coordinate mockups and prototypes for larger features with our UI/UX designers You conduct market and competitive analyses to support the platform strategy You maintain technology partnerships with virtualization and cloud infrastructure providers and build new collaborations Qualifications You have at least 2 years of experience as a Product Owner, Product Manager, or in a similar role within an agile team You bring a strong technical understanding Writing epics, user stories, and bug reports comes naturally to you You are familiar with Debian Linux as well as modern technologies such as microservices , container technologies (Docker Swarm, Kubernetes), and cloud infrastructures Concepts such as clustering, load balancing, multi-tenancy, storage services, and high availability are not new to you Very good English skills (at least C1) enable smooth collaboration in international teams Nice to Have Understanding of the design and operation of SaaS infrastructures Hands-on experience with UX mockup tools such as Figma or Adobe XD German language skills Our offer Flexible hours and home office options Mobility: free Germany-wide public transport ticket, bike leasing, or parking Subsidies for meals: (e.g., delivery services) and home office internet Urban Sports Club membership for flexible fitness and wellness Office perks: rooftop terraces &amp; green courtyard, organic fruit and drinks, personal packages accepted at the office Get-togethers: monthly Pizza Friday, regular team events, big summer party Responsible leadership: structured onboarding, regular feedback, clear goals Innovative without startup risk: profitable for 20+ years, self-funded innovation with strong global potential International team: 120+ colleagues from 30+ countries, open and collaborative culture If that resonates with you, we’d love to hear from you. Want to know more? Please have a look at our Work at Zertificon page: https://www.zertificon.com/en/it-jobs-berlin/work-at-zertificon Questions? You can reach our HR team at jobs@zertificon.com",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 85,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "product owner"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, product owner.",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-05)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the (Junior) Technical Product Owner (f/m/d) – Virtual Appliance & Container Platform role at Zertificon Solutions GmbH. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Embedded in an agile cross-functional product environment, I helped scale our conversational AI tooling across 9 international markets, routing millions of calls while improving answer rates by 20%. To support our operational workflows, I have designed and deployed internal evaluation tools, including an AI conversation QA web platform with bulk review pipelines, a centralized review management portal versioned via GitHub, and automated dispatch workflows.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Zertificon Solutions GmbH is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Zertificon Solutions GmbH in this role."
+      ]
+    }
+  },
+  {
+    "id": "80299bfdc2",
+    "title": "Working Student Category Mgmt. (f/m/d)",
+    "company": "eBay",
+    "location": "Berlin Metropolitan Area",
+    "job_url": "https://www.linkedin.com/jobs/view/4485017895",
+    "source": "Linkedin",
+    "date_posted": "2026-11-03",
+    "date_found": "2026-11-09 18:34",
+    "salary": "",
+    "description": "Über eBay eBay Inc. (Nasdaq: EBAY) ist ein weltweit führendes Handelsunternehmen, das Millionen Käufer*innen und Verkäufer*innen in mehr als 190 Märkten auf der ganzen Welt verbindet und wirtschaftliche Möglichkeiten für einzelne Menschen, Entrepreneur*innen sowie Unternehmen und Organisationen jeder Größe schafft. eBay wurde 1995 in San José, Kalifornien, gegründet und ist einer der größten und dynamischsten Marktplätze der Welt, mit einer einzigartigen Auswahl. Im Jahr 2023 ermöglichte eBay über seine Plattform ein Handelsvolumen von mehr als 73 Milliarden US-Dollar. Weitere Informationen über das Unternehmen und sein globales Portfolio finden Sie unter www.ebayinc.com. Werkstudent (m/w/d) Category Management – Re-Store &amp; Refurbished Dreilinden (bei Berlin) | Hybrides Arbeitsmodell | Ab 15. Januar | 20 Stunden pro Woche | Vorzugsweise mindestens 12 Monate | Immatrikulation an einer Hochschule oder Universität notwending | 19 760 p.a. Gehalt Über das Team und die Rolle Du interessierst dich für E-Commerce, nachhaltigen Konsum und innovative Geschäftsmodelle? Dann werde Teil unseres deutschen Category Management Teams für Re-Store &amp; Refurbished bei eBay! Unser Team treibt das Wachstum des Recommerce-Geschäfts in den Bereichen Elektronik, Haus &amp; Garten, Medien und Sport voran. Gemeinsam mit gewerblichen Verkäufern, Marken und strategischen Partnern arbeiten wir daran, das Angebot an gebrauchten, retournierten und wiederaufbereiteten Produkten auszubauen und neue Geschäftspotenziale zu erschließen. Du unterstützt erfahrene Category Manager bei strategischen und operativen Projekten und übernimmst Verantwortung für eigene Aufgaben. Deine Aufgaben Category Management &amp; Business Development: Unterstützung bei Wachstumsinitiativen und strategischen Projekten im Recommerce-Bereich Inventarausbau: Identifikation neuer Geschäftspotenziale, Verkäufer und Inventarquellen zur Stärkung unseres Re-Store &amp; Refurbished Angebots Seller &amp; Partner Management: Kommunikation mit gewerblichen Verkäufern und Geschäftspartnern sowie Vorbereitung strategischer Kundenmeetings Eventmanagement: Unterstützung bei der Planung und Organisation von Branchenveranstaltungen, Industrieevents und Partnertreffen Datenanalyse: Eigenständige Markt-, Wettbewerbs- und Performanceanalysen sowie Erstellung von Präsentationen und Business Cases Projektmanagement: Operative Betreuung ausgewählter Programme, insbesondere des Refurbished-Programms, sowie Nutzung interner eBay-Tools und Unterstützung bei Projekten zur Steigerung der Kundenzufriedenheit und zur Stärkung des Kundenvertrauens Dein Profil Laufendes Studium, idealerweise in Wirtschaftswissenschaften, Wirtschaftsinformatik, Wirtschaftsingenieurwesen oder einem vergleichbaren Studiengang Unternehmerisches Denken, analytische Fähigkeiten und Interesse an E-Commerce, Recommerce und nachhaltigen Geschäftsmodellen Selbstständige, strukturierte Arbeitsweise, Eigeninitiative und Organisationstalent Kommunikationsstärke, Teamgeist und Freude an der Zusammenarbeit mit Geschäftspartnern Sehr gute Kenntnisse in Excel, PowerPoint und MS Office bzw. Google Workspace; SQL-Kenntnisse sind von Vorteil Sehr gute Deutsch- und Englischkenntnisse in Wort und Schrift Zusätzliche Informationen Bei eBay fördern wir Chancengleichheit. Alle qualifizierten Bewerber*innen werden ohne Rücksicht auf ethnische oder nationale Herkunft, Hautfarbe, Religion, Geschlecht, sexuelle Orientierung, Geschlechtsidentität, und Behinderung oder einen anderen rechtlich geschützten Status bei der Einstellung berücksichtigt. Wende dich bitte unter talent@ebay.com an uns, sofern du Bedürfnisse hast, auf die wir insbesondere eingehen sollten. Wir werden uns bemühen, so schnell wie möglich zu antworten. Wir verwenden Cookies, um Nutzungserlebnisse zu verbessern, und setzen im Bewerbungsprozess möglicherweise KI-unterstützte Tools für administrative Aufgaben ein. Weitere Informationen, wie wir personenbezogenen Daten verarbeiten und KI verantwortungsvoll einsetzen, sind in unserer Talent Datenschutzerklärung im Privacy Center sowie in unseren KI-Richtlinien für den Einstellungsprozess zu finden.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 85,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "days_ago": 6,
+    "posted_ago": "6 days ago (2026-11-03)",
+    "applicants_num": 43,
+    "applicants_text": "🟡 43 applicants",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Worked embedded in an agile <strong>Product, Tech, Business Analytics, and Operations team</strong> to translate complex operational data into product features, evaluation tools, and scalable processes across <strong>9 international markets</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Working Student Category Mgmt. (f/m/d) role at eBay. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about eBay is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support eBay in this role."
+      ]
+    }
+  },
+  {
+    "id": "1be7c21837",
+    "title": "Werkstudent Projektportfoliomanagement & Analytics (w/m/d)",
+    "company": "KPMG IT Service GmbH",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4484545374",
+    "source": "Linkedin",
+    "date_posted": "2026-11-03",
+    "date_found": "2026-11-09 18:34",
+    "salary": "",
+    "description": "Begleite KPMG bei den zukünftigen Herausforderungen unserer Kunden und Kundinnen. Begeistere auch Du Dich für die Vielfalt unserer Fragestellungen - und mach gemeinsam mit uns den Unterschied. Die KPMG IT Service GmbH ist die IT-Beratung und -Dienstleistung der KPMG AG Wirtschaftsprüfungsgesellschaft. Du verantwortest gemeinsam mit Deinem Team die IT-Infrastruktur und unterstützt die Fachabteilungen bei der Bereitstellung von effizienz- und effektivitätssteigernder Business Software. Deine Aufgaben Du möchtest neue IT-Trends kennenlernen und Deine Expertise im IT-Bereich weiterentwickeln? Dann kannst Du Dich ab sofort hier einbringen: Du unterstützt das Portfoliomanagement Team innerhalb der Abteilung IT-Service Management im Rahmen der Ausarbeitung regelmäßiger Reportings und im Ausbau der No-Code Infrastruktur. Du identifizierst Anforderungen über die Modellierung von Analysen bis hin zur Visualisierung der Ergebnisse. Eigenständig entwickelst Du KPI-Dashboards mithilfe der entsprechenden Reporting-Tools. Bei der Automatisierung von Business Prozessen mithilfe von NoCode / LowCode-Anwendungen wirkst Du mit und unterstützt die Entwicklung. Dein Profil Werkstudent (w/m/d) Projektportfoliomanagement &amp; Analytics wirst Du bei uns mit einem Studium der (Wirtschafts-)Informatik, Mathematik, Physik, Ingenieurwissenschaften oder einer vergleichbaren Studienrichtung. Du bringst eine hohe IT-Affinität und erste Praxiserfahrung im IT-Umfeld mit. Du verfügst über grundlegende Kenntnisse in Advanced-Analytics-Methoden sowie praktische Erfahrung mit entsprechenden Tools (z.B. Alteryx). Idealerweise besitzt Du erste Erfahrungen mit Datenvisualisierungs- und Automatisierungs-Tools wie z.B. Tableau, Power BI, Microsoft Power Platform (App, Flow, Automate etc.). Erfahrungen mit Webstandards und APIs wie z. B. REST, CSS, XML oder SQL kannst Du ebenfalls nachweisen. Darüber hinaus bringst Du Grundkenntnisse in C#, Visual Studio und Python mit. Analytisches Denkvermögen und methodisches Vorgehen zeichnen Dich aus. Du verfügst über sehr gute Deutsch- und Englischkenntnisse. Deine Benefits Willkommen im Team Damit Du von Beginn an voll bei uns durchstarten kannst, begleiten wir Dich mit strukturierten Onboarding-Maßnahmen während der gesamten Orientierungsphase. Dabei steht Dir immer eine persönliche Ansprechperson zur Seite. Flexibel &amp; erfolgreich Bei uns kannst Du Studium und erste Praxiserfahrung bequem vereinbaren. Dabei erhältst Du intensive Einblicke in die Arbeitswelt bei KPMG. In Absprache mit Deinem Team kannst Du Deine Arbeitszeit flexibel gestalten. So kommt Dein Studium nicht zu kurz. Feedback &amp; Entwicklung Vom ersten Tag an bist Du fester Bestandteil des Teams und übernimmst Verantwortung in herausfordernden (Teil-) Projekten. Mit regelmäßigem Feedback fördern wir zudem Deine persönliche und fachliche Weiterentwicklung. Wertvolles Karrierenetzwerk Bei unseren YOUnior .Network-Aktivitäten stehen Vernetzung und der gemeinsame Austausch zwischen Auszubildenden, Dual Studierenden, Praktikanten/Praktikantinnen und Werkstudenten/Werkstudentinnen im Fokus. Die abgebildeten Leistungen können je nach Position und Standort leicht variieren.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 85,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "days_ago": 6,
+    "posted_ago": "6 days ago (2026-11-03)",
+    "applicants_num": 29,
+    "applicants_text": "🟢 29 applicants",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent Projektportfoliomanagement & Analytics (w/m/d) role at KPMG IT Service GmbH. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. My key initiatives include optimizing an international AI voice bot that scaled to route millions of calls (raising inbound answer rates from 65% to 85%), as well as structuring retrieval knowledge bases for an AI chatbot handling 30,000+ monthly customer chats. To empower operational teams, I built an automated multi-market knowledge base, an AI QA review web application, and API-driven customer communication tools.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about KPMG IT Service GmbH is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support KPMG IT Service GmbH in this role."
+      ]
+    }
+  },
+  {
     "id": "96c03a198d",
     "title": "Werkstudent (m/w/d) KI-Automatisierung 1",
     "company": "Telefónica Germany",
@@ -4955,8 +5159,8 @@
       "erp"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: erp.",
-    "days_ago": 0,
-    "posted_ago": "🔥 Today (2026-11-08)",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-08)",
     "applicants_num": 57,
     "applicants_text": "🟡 57 applicants",
     "work_model": "Flexibles Office",
@@ -5569,6 +5773,54 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about zeb consulting is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support zeb consulting in this role."
+      ]
+    }
+  },
+  {
+    "id": "e3aed4bdf6",
+    "title": "Intern Venture Building (m/w/d)",
+    "company": "suhm ventures GmbH",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4487278318",
+    "source": "Linkedin",
+    "date_posted": "2026-11-04",
+    "date_found": "2026-11-09 18:34",
+    "salary": "",
+    "description": "Intern Venture Building (m/w/d) Über uns Die meisten Menschen, die gründen könnten, tun es nie. Nicht, weil ihnen der Mut fehlt, sondern weil die Idee fehlt, die Fachtiefe in dem einen entscheidenden Bereich — oder schlicht das Geld, um ein Jahr ohne Gehalt durchzuhalten. Der Weg, den man in Podcasts hört — Idee, Runde, Wachstum — ist die Ausnahme. Die allermeisten kommen dort nie an, und viele von ihnen wären gute Unternehmer geworden. Genau hier setzen wir an. suhm ventures ist ein Venture Studio in Berlin. Wir investieren nicht in fremde Unternehmen, wir gründen selbst: Idee, Kapital, Team und operative Führung kommen aus einem Haus. Finanziert wird aus eigenem Cash — ohne Runde, die wir rechtfertigen müssen, und ohne Fonds, der eine Story braucht. Über fünfzehn Jahre Venture-Building-Erfahrung stecken in dem, was wir hier tun, aufgebaut in Leadgenerierung, E-Commerce, Service- und Agency-Modellen sowie Marktplätzen. Wir schreiben keine Schecks und schauen zu, sondern bauen den ersten Kanal, führen die ersten Verkaufsgespräche und sitzen in denselben Zahlen wie Du. Wenn ein Thema nicht funktioniert, ist das auch unser Problem. Wir arbeiten in Drei-Monats-Sprints mit klaren Abbruchkriterien. Jedes Jahr testen wir drei bis fünf Ideen ernsthaft an — mit echtem Budget und echtem Traffic. Das Ziel ist nicht das nächste Einhorn. Das wäre schön, ist aber nicht der Plan. Wir bauen profitable Unternehmen, die aus eigener Kraft leben — und die Leute, die sie führen. Es war noch nie so günstig, ein Unternehmen zu bauen. Was vor drei Jahren zwanzig Leute gebraucht hat, schafft heute eine Handvoll Menschen mit den richtigen Werkzeugen. Jetzt ist der richtige Zeitpunkt einzusteigen. Über die Rolle Du willst in die erste Reihe, wenn Geschäftsideen entstehen, getestet und verworfen werden — und nicht nur zusehen, sondern selbst gestalten? Als Venture Building Intern (m/w/d) arbeitest Du über mehrere Ventures hinweg dort, wo der Hebel gerade am größten ist: Kanalaufbau, Prozessdesign, Analytics, Produkt, KI. Du bekommst eigene Themen mit eigenen Zahlen — kein Recherche-Praktikum, keine Zuarbeit auf Zuruf. Das ist der schnellste Weg, die volle Breite des Unternehmensaufbaus zu sehen. Und der übliche Weg in eine Entrepreneur-in-Residence-Rolle bei uns: Wer überzeugt, bekommt das Angebot. Formale Voraussetzungen gibt es keine. Was zählt, ist unternehmerischer Antrieb — und die Bereitschaft, sich schnell in Themen einzuarbeiten, von denen Du gestern noch nichts wusstest. Deine Aufgaben Markt- und Wettbewerbsanalysen. Du prüfst Ideen aus unserer Pipeline auf Marktgröße, Zahlungsbereitschaft und bestehende Anbieter — und leitest daraus eine Empfehlung ab, die eine Entscheidung trägt. Validierung und Prototyping. Du baust Landingpages, formulierst Angebote, steuerst kleine Werbebudgets und wertest aus, ob jemand tatsächlich kauft. Nicht Interesse — Umsatz oder verbindliche Zusagen. Kanalaufbau und Performance. Du unterstützt beim Aufbau von Akquisekanälen über Paid und Organic, misst auf Deckungsbeitrag und erkennst früh, wo Effizienz verloren geht. Analytics und Reporting. Du baust Auswertungen, die täglich laufen statt monatlich, und sorgst dafür, dass Entscheidungen auf Zahlen basieren statt auf Meinungen. Prozessdesign und Automatisierung. Du setzt mit KI und No-Code Abläufe auf, die Arbeit sparen, bevor sie Menschen kostet. Arbeit direkt mit der Gründung. Du bist bei Priorisierungen dabei, bereitest Entscheidungen vor und siehst, wie unternehmerische Abwägungen tatsächlich getroffen werden. Das bringst Du mit Unternehmerisches Interesse. Du verfolgst, wie Geschäfte gebaut werden, und hast idealerweise schon selbst etwas versucht — ein Projekt, ein Shop, eine Nebentätigkeit. Auch wenn es nicht funktioniert hat. Analytisches Denken. Du bist sicher mit Zahlen, erfasst Zusammenhänge schnell und triffst Entscheidungen datenbasiert. Eigeninitiative und Hands-on-Mentalität. Du wartest nicht auf Freigabe, um anzufangen, und verlierst auch bei mehreren Themen nicht den Überblick. Technologieaffinität. Du arbeitest gern mit KI, Automatisierung und Analytics und optimierst Prozesse durch smarte Lösungen statt durch mehr Aufwand. Kommunikationsstärke. Du stellst komplexe Sachverhalte klar dar — schriftlich wie mündlich, auf Deutsch und idealerweise auch auf Englisch. Haltung. Du suchst Feedback, weil es Dich schneller macht. Du übernimmst Verantwortung auch dann, wenn es unbequem wird. Und Du bist Dir für nichts zu schade. Was wir Dir bieten Faire Vergütung. Bezahltes Praktikum, marktgerecht und leistungsbezogen. Ausbildung von Operatorn, nicht von Betreuern. Du lernst Kanalaufbau, Unit Economics, Vertriebslogik und Prozessdesign von Leuten, die das mehrfach selbst gebaut haben — und die sich die Zeit nehmen, es Dir zu erklären. Operative Verantwortung ab dem ersten Monat. Du wirst direkt in unsere laufenden Ventures eingebunden und bekommst eigene Themen mit eigenen Zahlen. Unternehmensaufbau aus nächster Nähe. Du erlebst, wie aus Ideen Geschäfte werden — und wie die meisten davon sterben. Beides bekommt man selten so ungeschminkt zu sehen. Feedback in kurzen Abständen. Direkt, konkret und früh genug, dass Du innerhalb Deiner Zeit bei uns tatsächlich besser wirst. Ein klarer Weg danach. Wer überzeugt, bekommt das Angebot für eine Entrepreneur-in-Residence-Rolle. Das ist der übliche Weg, nicht die Ausnahme. Zugang zum Netzwerk. Operator, Co-Investoren und Gründer aus unserem Umfeld — inklusive der Möglichkeit, mit Menschen zu sprechen, die den Weg schon gegangen sind. Bereit, Unternehmensaufbau von innen zu sehen? Kein Anschreiben. Schick uns Deinen Lebenslauf oder Dein LinkedIn-Profil und beantworte zwei Fragen: Was hast Du schon gebaut? Und warum willst Du das hier? karim@suhm-ventures.com Wir lesen jede Bewerbung selbst und melden uns mit einer echten Antwort — auch wenn sie Nein lautet.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 77,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-11-04)",
+    "applicants_num": 38,
+    "applicants_text": "🟡 38 applicants",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Intern Venture Building (m/w/d) role at suhm ventures GmbH. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about suhm ventures GmbH is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support suhm ventures GmbH in this role."
       ]
     }
   },
@@ -6232,6 +6484,56 @@
     }
   },
   {
+    "id": "ee38dae218",
+    "title": "Product Owner Client Acquisition",
+    "company": "Agência Lynx",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4485812783",
+    "source": "Linkedin",
+    "date_posted": "2026-11-05",
+    "date_found": "2026-11-09 18:34",
+    "salary": "",
+    "description": "As Product Owner Client Acquisition , you help the squad optimise the journey from qualified lead through onboarding, account opening, funding and activation. You’ll analyse where clients drop off, translate opportunities into backlog items, and work closely with Engineering, Design, Marketing, Data, Compliance and Operations to fix them. This is an entry-level product role for mid-career professionals eager to learn product ownership in a conversion-critical part of the business. What You’ll Do Support the Product Manager with backlog maintenance, sprint prep and progress tracking. Translate strategy into epics, user stories and acceptance criteria for onboarding and activation. Analyse onboarding, funding and activation journeys to identify friction and drop-off. Gather requirements from Marketing, Sales, Data, Design, Engineering and Compliance. Maintain backlog quality so stories meet the Definition of Ready before sprint planning. Help interpret conversion, onboarding and activation performance data. Who You Are You’re curious about onboarding and conversion optimisation, and ready to grow your product craft. 2-5 years in product ownership, business analysis, marketing operations, digital marketing, QA or analytics. Good understanding of digital marketing, onboarding processes and activation journeys. Experience with BI. Fluent English and at least one local LYNX-market language. Nice to have Experience within fintech, brokerage or financial services. Experience with onboarding, customer acquisition or activation optimisation. Experience with customer data platforms or marketing technology integrations. What We Offer A competitive salary based on experience. Flexible working hours at our office in the heart of the city. A fixed 13th-month salary. Pension scheme for NL/DE/BE. Travel expense reimbursement. An annual training budget of €2,000, freely allocated to your professional development. Team outings, social drinks, and an annual weekend trip with the entire team. Who We Are “LYNX helps you invest in yourself.” “Working at LYNX means joining the LYNX family.” “The development opportunities make LYNX the best place to work.” This is what our employees say about LYNX, and it reflects exactly what we aim to offer: an environment where you can get the best out of yourself. From our offices in Amsterdam, Ghent, Berlin, and Prague, we work every day to provide private and professional clients with the best trading opportunities through a fast, user-friendly, and reliable platform. LYNX is an international FinTech company where around 300 colleagues contribute to client success across Europe in an informal, collaborative, and growth-oriented environment. We’re an equal-opportunity employer. We welcome applications from all suitably qualified and eligible candidates without attention to gender identity/expression, age, racial, ethnic and cultural background, religion and beliefs, sexual orientation/identity, disability or neurodiversity.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "product_management",
+    "category_label": "Product Management",
+    "match_score": 71,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "product owner"
+    ],
+    "why_fits": "Strong Product Management fit. Matches keywords: product owner.",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-05)",
+    "applicants_num": 71,
+    "applicants_text": "🟡 71 applicants",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Product Owner Client Acquisition role at Agência Lynx. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Embedded in an agile cross-functional product environment, I helped scale our conversational AI tooling across 9 international markets, routing millions of calls while improving answer rates by 20%. To support our operational workflows, I have designed and deployed internal evaluation tools, including an AI conversation QA web platform with bulk review pipelines, a centralized review management portal versioned via GitHub, and automated dispatch workflows.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Agência Lynx is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Agência Lynx in this role."
+      ]
+    }
+  },
+  {
     "id": "12199226e9",
     "title": "Werkstudent:in IT-Development",
     "company": "Deutsche Bahn",
@@ -6790,6 +7092,54 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about koakult GmbH is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support koakult GmbH in this role."
+      ]
+    }
+  },
+  {
+    "id": "93567ff824",
+    "title": "Business Analyst (m/w/d)",
+    "company": "VÖB-Service GmbH",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4488856251",
+    "source": "Linkedin",
+    "date_posted": "2026-11-09",
+    "date_found": "2026-11-09 18:34",
+    "salary": "",
+    "description": "Wir sind eine Manufaktur für Speziallösungen in der Kreditwirtschaft . Unsere rund 100 Mitarbeiterinnen und Mitarbeiter sind Expertinnen und Experten in den unterschiedlichsten Fachdisziplinen und entwickeln Produkte und Dienstleistungen in enger Zusammenarbeit mit unseren Kunden und Partnerunternehmen. Wir tragen mit unserer täglichen Arbeit entscheidend mit dazu bei, dass unsere Kunden ihre spezifischen betriebswirtschaftlichen und regulatorischen Anforderungen erfüllen. Werde ein Teil unseres Teams und verstärke unsere Abteilung Fördergeschäft Beratungssoftware am Standort Berlin zum frühestmöglichen Zeitpunkt als Business Analyst (m/w/d) unbefristet und in Vollzeit. Du liebst es, Anforderungen zu durchdringen, komplexe Sachverhalte verständlich zu machen und aus Ideen funktionierende Lösungen entstehen zu lassen? Du bewegst dich souverän zwischen Kunden, Fachbereich und Entwicklungsteam – und fühlst dich in beiden Welten zuhause? Dann könnte das hier genau deine nächste Herausforderung sein. Deine Aufgabenschwerpunkte ∶ Du bist mitverantwortlich für die Weiterentwicklung unserer Finanzierungssoftware. Du nimmst Anforderungen unserer Kunden strukturiert auf und erarbeitest die fachliche Konzeption. Du analysierst fachliche Vorgaben in Zusammenarbeit mit unseren Content-Redakteuren und übersetzt sie in umsetzungsreife Tickets für unser Entwicklerteam. Du kommunizierst gerne aktiv mit unseren IT-Entwicklern und den (Vertriebs-)Kolleginnen und Kollegen. Du testest die Software auf Herz und Nieren und erteilst die Freigabe zum Go-live. Du unterstützt den Support für unsere Softwareprodukte. Dein Profil ∶ Idealerweise hast Du ein abgeschlossenes Bachelorstudium der Wirtschaftswissenschaften / im IT-Bereich oder eine Ausbildung zum Bankkaufmann/-kauffrau in der Tasche. Alternativ hast Du Dir in der Praxis bereits detaillierte Kenntnisse in der Softwareentwicklung angeeignet. Erste Berufserfahrungen hast Du bereits gesammelt. Ein sehr gutes technisches Verständnis und Freude an digitalen Lösungen sowie sichere deutsche Sprachkenntnisse (Level C1) sind Deine Basis. Kreativität, Engagement, Zuverlässigkeit, Verantwortungsbewusstsein, Teamorientierung und Kommunikationsstärke zeichnen Dich aus. Wir bieten Dir ∶ ein vielseitiges und zukunftsorientiertes Aufgabengebiet in unserem Team. eine Rolle mit viel Gestaltungsspielraum und Verantwortung. ein Umfeld, das analytisches Denken genauso schätzt wie pragmatische Lösungsorientierung. ein attraktives Vergütungspaket mit Mitarbeitervergünstigungen (u. a. Deutschlandticket und JobRad). mobiles Arbeiten mit grundsätzlich 50 Prozent Mindest-Präsenz im Büro. Unterstützung Deiner beruflichen Entwicklung durch gezielte Qualifikations- und Weiterbildungsmaßnahmen. die Vereinbarkeit von Familie und Karriere durch z. B. flexible Arbeitszeitmodelle. regelmäßige Mitarbeiterevents. Haben wir dein Interesse geweckt? Dann besuche gerne unser Unternehmensportal „VÖB-Service als Arbeitgeber“ . Dort kannst du deine aussagekräftige Bewerbung, unter Angabe Deiner Gehaltsvorstellungen und des frühestmöglichen Eintrittstermins, bis zum 6.12.2026* als PDF-Datei hochladen. Bewerbungen nach diesem Datum können leider nicht berücksichtigt werden. Jetzt bewerben",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 67,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-09)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Business Analyst (m/w/d) role at VÖB-Service GmbH. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about VÖB-Service GmbH is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support VÖB-Service GmbH in this role."
       ]
     }
   },
@@ -7388,6 +7738,59 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about Think3DDD is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Think3DDD in this role."
+      ]
+    }
+  },
+  {
+    "id": "6e120e1f04",
+    "title": "Meeting and Events Intern",
+    "company": "The Social Hub",
+    "location": "Berlin, BE, Germany",
+    "job_url": "https://grnh.se/h392g5y2teu",
+    "source": "Indeed",
+    "date_posted": "2026-11-09",
+    "date_found": "2026-11-09 18:34",
+    "salary": "",
+    "description": "Do you have a commercial mindset and get energy from working with people? Are you structured and do you love to advise others when it comes to the organization and planning of meetings and events?\n\n**Your mission, should you choose to accept it…**\n\nAs our brand-new Meeting & Events Intern, you support in driving commercial results for all our revenue streams and coordinate the Meeting & Event bookings for our location in Berlin.\n\nNo one does it better when it comes to selling the TSH concept and all of our products and services to our guests. You'll make sure that people will easily find us and come to connect in our hotel to experience our 'one of a kind', unique spaces. You'll be working to sell our meeting rooms, our awesome hotel rooms or a fabulous dinner at our restaurant. On top of that, your goal is to make each guest return and you do this by delivering the best TSH guest-experience.\n\n**In case you don't know who we are (ahem):**\n\nRedefining hybrid hospitality since 2012, TSH sets standards on a global scale. Offering a community driven, socially inspired hotel concept with student accommodation, as well as long and short hotel-stay options, eat & drink, gym and rooftop bar facilities and coworking for every demographic, the brand's success is unprecedented. With 16 hotels in 6 countries and plans to open at least 3 more locations each year until 2026, TSH is a fun, creative and inspiring environment where everyone can work, stay, learn and play. Thanks to an exceptional international team of changemakers, our one goal is to make society a better place for everyone.\n\n**What You'll Do:**\n\n* You'll assist with answering questions and making bookings for our Commercial Partnerships. This happens through various channels such as: telephone, third parties and e-mails.\n* You'll help with the development of customer accounts to drive business into our TSH Berlin property and to increase market/customer share in all revenue streams.\n* You'll work within current business strategies and recognizing potential opportunities.\n* From admin to hosting, you'll do it all. You'll prepare, update and file all correspondence.\n* You'll prepare the meeting & events functions sheet with completed final and accurate details for our banqueting department.\n* You'll host meetings together with the banqueting department/stakeholders.\n* You're responsible for maintaining an effective follow-up system to secure business and provide an after sales service in order to secure repeat business.\n* You'll assist our heroes in Finance to ensure a smooth ride - from invoicing down to payments.\n* You'll compile statistics and reporting for our cluster management and commercial teams.\n* You'll support with the creation and roll out of the local commercial strategy.\n\n**Who You Are:**\n\n* You're currently enrolled in university.\n* You're fluent in German and English with excellent communications skills (verbal as well as written).\n* You have a positive, can-do attitude towards working within a team.\n* You're highly organised and with a high level of attention to detail.\n* You're a multi-tasker with strong problem-solving skills and a hands-on mentality\n* You're sales driven and commercially savvy. Cross and upselling is a second nature to you.\n* You're extremely guest and service oriented.\n* You're studying within the EU.\n\n**What We Offer:**\n\n* An amazing work environment with a fantastic vibe and lots of positive energy.\n* On the job coaching and guidance.\n* Monthly compensation for your internship.\n* The opportunity to work and learn at a dynamic, young, international organisation; we're a real game changer in the hospitality industry.\n* A first glimpse into the world of Hospitality with one of the most innovative players in the market.\n* Access to the amazing TSH facilities, including our awesome restaurant and gym. And did we mention you also get a discount on Hotel stays and Food and Drinks?\n* A wonderful workplace to call home with, dare we say it, fun colleagues.\n\nWhere people come together, committed to providing the best space, experience and coworking space for our community and even more so, the people who work for TSH. With everything from mental health support to leadership training and more, we are there to help you grow as much as we do as a company. We promote a workplace where society comes together to do better and we do this no matter the age, gender, sexual orientation, ethnicity, and national origin. Your fascinating characteristics is what make us different, so come as you are.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "cx_operations",
+    "category_label": "Business & Data Operations",
+    "match_score": 47,
+    "language_req": "German C1/Fluent Required",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai",
+      "stakeholder",
+      "reporting",
+      "support"
+    ],
+    "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, stakeholder, reporting, support.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-09)",
+    "applicants_num": 999,
+    "applicants_text": "Direct Portal (No counter)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Meeting and Events Intern role at The Social Hub. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. My key initiatives include optimizing an international AI voice bot that scaled to route millions of calls (raising inbound answer rates from 65% to 85%), as well as structuring retrieval knowledge bases for an AI chatbot handling 30,000+ monthly customer chats. To empower operational teams, I built an automated multi-market knowledge base, an AI QA review web application, and API-driven customer communication tools.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about The Social Hub is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support The Social Hub in this role."
       ]
     }
   },
