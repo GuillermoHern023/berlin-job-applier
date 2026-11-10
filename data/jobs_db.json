@@ -434,7 +434,7 @@
     "days_ago": 7,
     "posted_ago": "1 week ago (2026-10-31)",
     "applicants_num": 150,
-    "applicants_text": "🔴 127 applicants",
+    "applicants_text": "🔴 128 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1136,10 +1136,10 @@
       "projektmanagement"
     ],
     "why_fits": "Strong Project Management fit. Matches keywords: project management, projektmanagement.",
-    "days_ago": 0,
-    "posted_ago": "🔥 21 hours ago (2026-11-10)",
-    "applicants_num": 38,
-    "applicants_text": "🟡 38 applicants",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-09)",
+    "applicants_num": 43,
+    "applicants_text": "🟡 43 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1241,7 +1241,7 @@
     "days_ago": 7,
     "posted_ago": "1 week ago (2026-10-31)",
     "applicants_num": 150,
-    "applicants_text": "🔴 127 applicants",
+    "applicants_text": "🔴 128 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -2819,6 +2819,56 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. My key initiatives include optimizing an international AI voice bot that scaled to route millions of calls (raising inbound answer rates from 65% to 85%), as well as structuring retrieval knowledge bases for an AI chatbot handling 30,000+ monthly customer chats. To empower operational teams, I built an automated multi-market knowledge base, an AI QA review web application, and API-driven customer communication tools.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about Aira is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Aira in this role."
+      ]
+    }
+  },
+  {
+    "id": "5cfe41281d",
+    "title": "Working Student – Applied AI (all genders)",
+    "company": "Boston Consulting Group (BCG)",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4462963726",
+    "source": "Linkedin",
+    "date_posted": "2026-11-10",
+    "date_found": "2026-11-10 21:36",
+    "salary": "",
+    "description": "Locations : München | Düsseldorf | Berlin Who We Are Our strategy? To be anything but typical strategy consultants! Our unconventional nature is embedded deep in our DNA. Over 60 years ago, BCG shook up the world of strategy consulting. Now, it has grown to become one of the world leaders in the field. How do we manage to stay ahead of the pack? The answer is simple: by reinventing ourselves every day and providing a home with diverse career opportunities to the best talent and most creative minds all over the world. And by giving you the chance to make an impact in business and society. BCG stands for authenticity, exceptional work, and strong integrity. Once you’ve become part of the Group, we’ll help you find your path, unleash your potential, effect change, and advance the world. #jointhegroup Our most vital resource is our people. That’s why Human Resources is one of our most important teams: From recruiting to career development for BCGers, from training and mobility support to staffing (assigning our consultants to client casework), the Human Resources Team plays a decisive role in making BCG not just a company, but a Group in which every employee can become their best. What You'll Do As a Working Student in the CE Applied AI Team, you will support the hands-on deployment of AI tools into real case team workflows, helping to translate concrete business needs into practical, lightweight AI-enabled solutions that improve day-to-day project work. Your Key Responsibilities Will Include Supporting AI tool deployment You will help configure and adapt AI tools for selected case teams, including setting up custom GPTs, assisting with prompt optimization, and supporting simple API-based integrations. Building and testing prototypes You will develop small prototypes and automations to test new use cases, iterate them based on feedback, and refine solutions into usable setups. Assisting with agent and workflow design You will contribute to the design and optimization of AI-supported workflows, including basic prompt engineering and structured experimentation with different tools. Providing operational support You will support consultants with technical questions, troubleshooting, and onboarding to AI-enabled workflows, ensuring smooth integration into project work. Exploring new GenAI capabilities You will test new AI features and tools and help assess their relevance for internal and case-related use cases. What You'll Bring You are currently enrolled in a full-time bachelor’s or master’s program in computer science, data science, business informatics, or a related field. You have some experience with AI tools and workflows, ideally including API integrations and prompt engineering; experience with tools such as Claude, Cursor, or n8n is a plus. You have programming knowledge (Python, JavaScript, or similar) You have strong analytical skills and a keen interest in AI-driven process automation. You are fluent in English and German. YOU’RE GOOD AT You build before you polish. You default to “let me try it” instead of “let me research it.” You move fast, iterate quickly, and prefer a rough prototype today over a perfect plan next week. You have likely hacked together scripts or lightweight tools to automate something simply because it was faster to build than to wait. You are hands-on with Python, APIs, and LLMs. You do not need to be a senior engineer, but you can write a working Python script, call an API, and prompt an LLM effectively. Experience with tools such as Claude, Cursor, or n8n is a plus. What matters most is that you learn new tools quickly and apply them pragmatically. You bridge technology and business. You do more than code. You translate messy, ambiguous business problems into structured, automatable workflows. You are comfortable speaking with nontechnical stakeholders, clarifying what they actually need rather than just what they ask for, and delivering solutions that create tangible value. You are self-directed and dependable. With limited hours available, you make every session count. You absorb context quickly, work independently between check-ins, and communicate proactively when you are blocked or when you have delivered. You require minimal guidance and manage your time responsibly. You are genuinely curious about GenAI and its real-world impact. You experiment with AI tools in your own time, whether building agents, automating personal workflows, or testing what is possible. You see AI as a lever for step-change impact, not incremental improvement. Who You'll Work With You will work autonomously while staying in close alignment with the Applied AI Team and other key stakeholders driving AI adoption at BCG. You will work under the direction of the CE Applied AI Lead, who will provide strategic guidance and ensure a smooth onboarding experience. In addition, you will provide operational support for case teams, assisting with AI-driven workflow optimizations, remote troubleshooting, and hands-on AI tool configuration to ensure seamless integration into day-to-day project work. Additional info WHAT WE OFFER YOU* Free beverages, fresh fruit, snacks, and cereal are available every day. Stop by our coffee machines and treat yourself to your favorite hot drinks! Our terrace will invite you to relax with a great view of the city. Regular after-work events are organized for team building and fun—we’d love to have you join us! As a dynamic, internationally active company, the diverse work environment at BCG will inspire you. New ways of working? They’re nothing new to us. Our employees use hybrid models that combine on-site and remote work, supported by digital collaboration tools. Our in-house gym is well equipped and free for you to use any time. Great location: Right in the heart of the city, our office is close by and easy to reach. Benefits may vary by location. Boston Consulting Group is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, age, religion, sex, sexual orientation, gender identity / expression, national origin, disability, protected veteran status, or any other characteristic protected under national, provincial, or local law, where applicable, and those with criminal histories will be considered in a manner consistent with applicable state and local laws. BCG is an E - Verify Employer. Click here for more information on E-Verify.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 89,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "ai"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-10)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Working Student – Applied AI (all genders) role at Boston Consulting Group (BCG). Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Boston Consulting Group (BCG) is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Boston Consulting Group (BCG) in this role."
       ]
     }
   },
@@ -4746,6 +4796,102 @@
     }
   },
   {
+    "id": "09f5e2cbfd",
+    "title": "Werkstudent Datenanalyse (m/w/d)",
+    "company": "BSH Home Appliances Group",
+    "location": "Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4480456403",
+    "source": "Linkedin",
+    "date_posted": "2026-11-10",
+    "date_found": "2026-11-10 21:37",
+    "salary": "",
+    "description": "Tomorrow is our home. Steig ein und nutze deine Chance zu wachsen – mit der BSH Hausgeräte Gruppe: Als führender Hersteller von Hausgeräten und erstklassigen Lösungen bringen wir Dinge voran, um Menschen den Alltag zu erleichtern. Mit unseren Globalmarken Bosch, Siemens, Gaggenau und Neff, sowie unseren lokalen Marken steht dir die ganze Welt der Möglichkeiten offen. Wir bestärken Menschen darin, ihr Potenzial zu entwickeln und kontinuierlich zu lernen. Denn wir glauben, dass gute Arbeit dann entsteht, wenn man tut, was man liebt. Begleite uns auf diesem Weg und gib deiner Karriere ein Zuhause. BSH Hausgeräte GmbH | Job-ID: 76047825 | Teilzeit | ab Dezember 2026 Berlin Deine Aufgabe Du Verfügst Bereits Über Theoretisches Fachwissen Und Möchtest Dieses Nun Gerne Durch Praktische Erfahrungen In Einem Dynamischen Unternehmen Ergänzen? Dann Unterstütze Uns Mit Deinem Talent Und Know-how Bei Folgenden Aufgaben Unterstützung bei der Datenanalyse, -pflege und –bereinigung von Produktdaten und Prozessdokumentationen Programmierung von Algorithmen mit Python zur Unterstützung der Datenverwaltung, Standardisierung und KI Nutzung Erstellung von Auswertungen in PowerBI Dashboards und Aufbereiten/Präsentieren der Ergebnisse zur Entscheidungsunterstützung Erstellung von Trainingsunterlagen, Userdokumentationen in Wiki und Unterstützung der Anforderungsaufnahme Analyse des Potentials von KI-Tools für Produktdatenmanagement, die Automatisierung von Routinetätigkeiten und Muster-/Abnormalitätenerkennung Dein Profil Studium im Bereich Data Science, Statistik, Informatik, Engineering oder einem verwandten Studiengang Sicherer Umgang mit Power BI und Excel; grundlegende SQL-Kenntnisse; Kenntnisse in KI-Tools und Programmierung (Python, C#, Java) Analytische Denkweise, Teamorientierung, Lernbereitschaft und hohe Genauigkeit im Arbeiten Deine Vorteile Attraktive Arbeitgeberleistungen und Vergütung (Eingruppierung nach Tarifvertrag der IG Metall) Flexible Gestaltung der Arbeitszeit mittels Zeitkonto Möglichkeit zum mobilen Arbeiten nach individueller Absprache (max. 50 % der Arbeitszeit) Arbeiten in einem inspirierenden Team mit Hands-on-Mentalität Zusammenarbeit auf Augenhöhe sowie wertschätzende Arbeitsatmosphäre Weitere Informationen? Besuche uns hier bsh-group.com/de/de/karriere. Wir würden uns freuen, dich in unserem Team willkommen zu heißen!",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 85,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-10)",
+    "applicants_num": 169,
+    "applicants_text": "🔴 169 applicants",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Werkstudent Datenanalyse (m/w/d) role at BSH Home Appliances Group. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about BSH Home Appliances Group is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support BSH Home Appliances Group in this role."
+      ]
+    }
+  },
+  {
+    "id": "186cef9ff6",
+    "title": "Praktikant / Werkstudent IT Audit & IT Assurance - Data Analytics (m/w/d)",
+    "company": "Deloitte",
+    "location": "Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4262628777",
+    "source": "Linkedin",
+    "date_posted": "2026-11-10",
+    "date_found": "2026-11-10 21:37",
+    "salary": "",
+    "description": "Deloitte bietet führende Prüfungs- und Beratungsleistungen in Audit &amp; Assurance, Tax &amp; Legal, Consulting und Advisory - für nahezu 90 % der Fortune Global 500® und zahlreiche private Unternehmen. Wir liefern innovative Denkansätze, lösen komplexe Herausforderungen und fördern nachhaltiges Wachstum. Mit rund 470.000 Mitarbeitenden weltweit eröffnen wir hervorragende Karrierechancen - getragen von einem starken „Wir“ und einer Vielfalt an Perspektiven und Fähigkeiten. Du willst im Bereich Audit &amp; Assurance - IT Audit &amp; IT Assurance zu Transformationsprozessen und verlässlicher Informationsverarbeitung prüfen und beraten? Unser Team schafft Vertrauen in die IT-Risikomanagementlösungen und IT-Governance-Systeme unserer Mandanten. Sichere unseren gemeinsamen Erfolg und mach mit uns den Unterschied: als Praktikant / Werkstudent IT Audit &amp; IT Assurance - Data Analytics (m/w/d). Standorte: Berlin , Düsseldorf , Frankfurt (Main) , Hamburg , Hannover , Köln , Mannheim , München , Nürnberg und Stuttgart . Dein Impact: Als Werkstudent / Praktikant IT Audit &amp; IT Assurance - Data Analytics (m/w/d) bringst du dich in eine große Bandbreite spannender Themen ein - von Risikomanagement und IT-Prüfungen über Prozessoptimierung und Treasury Management bis hin zu digitaler Transformation, Prozessüberwachung oder der bilanziellen Abbildung von Finanzinstrumenten. Analysen: Du unterstützt unser Team bei der Erarbeitung und Durchführung anspruchsvoller Datenanalysen. Hands-on-Einstieg: Dabei führst du selbstständig Auswertungen durch. Konzepte: Auch bei der Ausarbeitung von Lösungskonzepten stehst du uns tatkräftig zur Seite. Teamwork: Schnell wirst du dabei zum festen Teil eines multidisziplinären Teams. Dein Skillset: Student:in eines Studiengangs mit wirtschaftswissenschaftlicher bzw. informationstechnischer Ausrichtung Gutes Verständnis betriebswirtschaftlicher Zusammenhänge Ausgeprägter Teamgeist und Spaß an komplexen Aufgaben Hohe Kommunikationsstärke sowie Deutsch und Englisch sehr gut in Wort und Schrift Deine Chance: Echte Verantwortung für eigene Aufgabenpakete innerhalb unserer Projekte, die du selbständig bearbeitest Persönliche:r Mentor:in in deinem Team, der/die dir mit Rat und Tat zur Seite steht und dich mit umfassendem Know-how unterstützt Ein chancenreiches und internationales Umfeld, das dir einmalige Einblicke in die Arbeit des weltweit größten Prüfungs- und Beratungsunternehmens bietet Work-Life-Balance in einem innovativen Unternehmensumfeld, das dir Gesundheitstage, Mitarbeiter:innen-Events und vieles mehr bietet Bereichsübergreifendes Networking im Deloitte Student Network mit exklusiven Vorträgen und regelmäßigem Austausch beim Praktikant:innen-Stammtisch Vielfältige Gestaltungsspielräume und aktive Förderung einer inklusiven Unternehmenskultur – u. a. durch unsere Diversity &amp; Inclusion Mitarbeiter:innen-Netzwerke Deine Verfügbarkeit: Als Praktikant:in / Werkstudent:in bist du idealerweise ab sofort für einen Zeitraum von mindestens 3 Monaten verfügbar. Gleiche Chancen für alle: Wir freuen uns über Bewerbungen von Menschen, die so vielfältig sind wie wir - unabhängig von Alter, Behinderung, ethnischer Herkunft und Nationalität, Geschlecht, Religion, sexueller Orientierung oder sozialer Herkunft. Noch Fragen? Alle Infos zu unserem Bewerbungsprozess findest du in unseren Bewerbungs-FAQs. Bewerbungsfrist: Solange der Job angezeigt wird, kannst du dich schnell und bequem online bewerben. Jobs werden häufig an verschiedenen Standorten mehrfach besetzt und du kannst flexibel jeden Monat beginnen - sofern nicht im Stellentext genannt, gibt es keinen Bewerbungsschluss. Dein Kontakt bei Fragen rund um Karrierethemen Unser Team Talent Acquisition – Aleksandra, Anja, Julia, Lea, Lisa, Silja und ihre Teams – unterstützt dich gerne bei allen Fragen rund um deine Karriere bei Deloitte. Du erreichst uns per E-Mail unter career@deloitte.de oder telefonisch unter +49 211 87724111. Job-ID: 49013",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 85,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-10)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Praktikant / Werkstudent IT Audit & IT Assurance - Data Analytics (m/w/d) role at Deloitte. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Deloitte is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Deloitte in this role."
+      ]
+    }
+  },
+  {
     "id": "96c03a198d",
     "title": "Werkstudent (m/w/d) KI-Automatisierung 1",
     "company": "Telefónica Germany",
@@ -5048,6 +5194,56 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about ING Deutschland is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support ING Deutschland in this role."
+      ]
+    }
+  },
+  {
+    "id": "37a1169d19",
+    "title": "Revenue Operations Intern (w/m/d)",
+    "company": "LIQID",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4489492899",
+    "source": "Linkedin",
+    "date_posted": "2026-11-10",
+    "date_found": "2026-11-10 21:36",
+    "salary": "",
+    "description": "Deine Rolle Als Revenue Operations Intern (w/m/d) bei LIQID wirst du: Reports und Dashboards in HubSpot und Omni für Sales, Relationship Management und das Leadership-Team aufbauen und laufend weiterentwickeln. Du bist erste Anlaufstelle für Fragen und Anliegen von HubSpot-Nutzer:innen, dokumentierst Lösungen und Konfigurationen und hilfst dabei, das System verständlich und effizient zu nutzen. Darüber hinaus übernimmst du Aufgaben im Bereich Datenqualität: Du identifizierst und behebst Duplikate, leerstehende oder ungenutzte Properties sowie fehlerhafte Ansichten direkt an der Ursache. Du unterstützt den oder die RevOps Manager:in bei der HubSpot-Administration – etwa bei Nutzer:innen, Teams und Properties – sowie bei der Bereinigung nach der Salesforce-Migration. Zudem arbeitest du mit den kommerziellen Teams an kleinen Projekten: Du nimmst Anforderungen auf, entwickelst daraus Lösungen und begleitest sie bis zur Umsetzung, einschließlich einfacher Automatisierungen, die vor dem Go-live geprüft werden. Die Position ist ab Januar 2027 zu besetzen. Das erwartet dich bei uns: Teamübergreifende Einblicke: Du arbeitest eng mit Sales, Relationship Management und dem Leadership-Team zusammen und lernst, wie Revenue Operations die operativen Abläufe eines wachsenden Fintechs unterstützt. Datenbasierte Entscheidungen: Du erstellst und pflegst Reports und Dashboards in HubSpot und Omni und hilfst unseren Teams, fundierte Entscheidungen auf Basis verlässlicher Daten zu treffen. Operative Unterstützung: Du unterstützt unsere Teams bei Fragen rund um HubSpot, dokumentierst Lösungen und hilfst dabei, Hindernisse im Arbeitsalltag zu beseitigen. Eigene Projekte: Du begleitest kleinere Projekte von der Anforderungsaufnahme bis zur Umsetzung – von Prozessverbesserungen bis hin zu einfachen Automatisierungen, die vor dem Go-live gemeinsam geprüft werden. Datenqualität und CRM: Du verbesserst die Qualität unserer CRM-Daten und unterstützt bei der HubSpot-Administration sowie bei der Bereinigung nach der Salesforce-Migration. Praxisnahes Lernen: Du erlebst hautnah, wie aus Daten, Prozessen und technischen Lösungen konkrete Verbesserungen entstehen – in einem Unternehmen, das über 4 Milliarden Euro an Vermögen verwaltet. Das bringst du mit: Du hast dein Studium in Betriebswirtschaft, Volkswirtschaft, Wirtschaftsinformatik, Data Science oder einem vergleichbaren Fach vor Kurzem abgeschlossen. Du hast bereits erste praktische Erfahrungen gesammelt – etwa durch ein Praktikum, eine Werkstudierendentätigkeit, eine studentische Initiative oder ein Ehrenamt. Idealerweise hattest du dabei Berührungspunkte mit Vertrieb, Finanzen oder Datenanalyse. Du gehst sicher mit Excel oder Google Sheets um und hast bereits erste praktische Erfahrungen mit einem CRM-System wie HubSpot oder Salesforce gesammelt. Du denkst strukturiert und analytisch und priorisierst Aufgaben danach, welchen Mehrwert sie für das Unternehmen schaffen. Du kommunizierst klar und verständlich – schriftlich wie mündlich und auch mit Kolleg:innen ohne technischen Hintergrund. Du übernimmst Verantwortung für deine Aufgaben, bringst sie eigenständig zum Abschluss und dokumentierst deine Ergebnisse nachvollziehbar. Du bist neugierig, möchtest dazulernen und fragst nach, wenn etwas unklar ist. Du verfügst über Deutschkenntnisse auf mindestens B2-Niveau, idealerweise C1, sowie Englischkenntnisse auf C1-Niveau. Damit punktest du zusätzlich Grundkenntnisse in SQL sowie erste Erfahrungen mit einem Business-Intelligence-Tool wie Omni, Looker, Power BI oder Tableau. Erfahrung im direkten Kundenkontakt. Erste Erfahrungen mit der Erstellung automatisierter Workflows, beispielsweise mit n8n, Zapier oder Make. Erfahrung mit der Einführung von KI-Tools in einem Unternehmen oder einer Organisation. Interesse an Finanzthemen oder Vermögensverwaltung. Zertifizierungen der HubSpot Academy. Erfüllst du nicht alle Bedingungen ? Bewirb dich trotzdem! Wir freuen uns auf deine Bewerbung. Das bieten wir dir Diversität: Flache Hierarchien und kulturelle Offenheit machen dich vom ersten Tag an zu einem integralen Teil unseres vielfältigen Teams internationaler Talente. Flexibilität: Wir machen dein Leben nicht komplizierter, sondern einfacher. Mit flexiblen Arbeitsmodellen, Arbeitszeiten und mobilem Arbeiten findest du die Balance, die zu dir passt. 24 Urlaubstage sowie zwei zusätzliche freie Tage am 24. und 31. Dezember sorgen für ausreichend Erholung. Wertschätzung: Du gestaltest mit uns die Zukunft des digitalen Wealth Managements – in einem innovativen, mehrfach ausgezeichneten Unternehmen mit hoher Markt­relevanz und viel Raum für deine Ideen. Ausstattung: MacBook, Kopfhörer und Bildschirm gehören bei uns selbstverständlich dazu. Well-being: Mittagessen budget von bis zu 112,50 € im Monat sowie regionale Bio-Produkte halten dich in unserem Büro am Ku’damm fit – und unsere Gesundheitsinitiativen wie Beachvolleyball, die Soccer Startup League oder unser Health Assistance Program sorgen darüber hinaus für dein Wohlbefinden. So geht es für dich weiter Erstes virtuelles Kennenlernen mit einem Talent Partner: Wir tauschen uns aus, ob Deine Erfahrungen und Erwartungen an die Position mit unseren Anforderungen übereinstimmen. Persönliches Interview mit dem Hiring Manager: Wir tauchen tiefer in die Rolle und Entwicklungsmöglichkeiten ein und lösen gemeinsam ein Alltagsproblem für praktische Einblicke in Deine zukünftige Arbeit. Über uns Wir sind LIQID, einer der führenden digitalen Vermögensverwalter in Europa und eines der am schnellsten wachsenden deutschen Fintechs. Unsere Mission ist es, gleiche Bedingungen für wohlhabende Anlegerinnen und Anleger zu schaffen, indem wir ihnen Zugang zu Expertise und Anlagelösungen ermöglichen, die ihnen bisher verschlossen waren. Dabei setzen wir auf ein Gleichgewicht zwischen Mensch, Umwelt und Profit. Wir bieten unseren Kundinnen und Kunden umfassende Anlagelösungen – von erstklassiger Vermögensverwaltung bis hin zu kuratierten Portfolios aus den weltweit besten Private-Equity- und Venture-Capital-Fonds. Mit einem betreuten Vermögen von über 4 Milliarden Euro gehören wir schon jetzt zu den führenden Vermögensverwaltern in Deutschland. In unserer weiteren Entwicklung arbeiten wir mit starken und erfahrenen Partnern wie LGT, Toscafund, HQ Trust und Project A zusammen. LIQID ist ein Arbeitgeber, der für Chancengleichheit steht. Alle qualifizierten Bewerbungen werden ohne Rücksicht auf Hautfarbe, Alter, Religion, Geschlecht, ethnische und nationale Herkunft, Behinderung oder aufgrund von anderen durch Gleichbehandlungsgesetze geschützte Eigenschaften berücksichtigt.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "cx_operations",
+    "category_label": "Business & Data Operations",
+    "match_score": 81,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "operations"
+    ],
+    "why_fits": "Strong Business & Data Operations fit. Matches keywords: operations.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-10)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Revenue Operations Intern (w/m/d) role at LIQID. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. My key initiatives include optimizing an international AI voice bot that scaled to route millions of calls (raising inbound answer rates from 65% to 85%), as well as structuring retrieval knowledge bases for an AI chatbot handling 30,000+ monthly customer chats. To empower operational teams, I built an automated multi-market knowledge base, an AI QA review web application, and API-driven customer communication tools.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about LIQID is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support LIQID in this role."
       ]
     }
   },
@@ -5846,6 +6042,57 @@
     }
   },
   {
+    "id": "c9320601d6",
+    "title": "Praktikum Projektmanagement digitale Nebenfahrzeuge (w/m/d)",
+    "company": "Deutsche Bahn",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4481545755",
+    "source": "Linkedin",
+    "date_posted": "2026-11-10",
+    "date_found": "2026-11-10 21:36",
+    "salary": "",
+    "description": "Die Deutsche Bahn bietet deutschlandweit über 500 Berufe und vielfältige Einstiegsmöglichkeiten für Student:innen und Absolvent:innen. Mehr als 1.400 Praktikant:innen, Werkstudent:innen, Direkteinsteiger:innen und Trainees lernen uns jährlich als dynamische und innovative Arbeitgeberin kennen. Sei dabei und hilf uns, die DB nach vorne zu bringen – und deine Karriere gleich mit. Zum nächstmöglichen Zeitpunkt suchen wir dich für ein Praktikum Projektmanagement digitale Nebenfahrzeuge (w/m/d) für mindestens fünf Monate in Vollzeit bei der DB InfraGO AG am Standort Berlin Deine Aufgaben: Du unterstützt das Projektmanagement in den Themenfeldern datenbasierte Instandhaltung von Nebenfahrzeugen sowie der Ausrüstung von Nebenfahrzeugen mit Telematik und Sensorik Bei der Planung, Steuerung und Umsetzung von Projekten wirkst du aktiv mit und behältst Aufgaben, Termine, Zuständigkeiten, Risiken und offene Entscheidungen im Blick Du koordinierst die Zusammenarbeit mit Fachbereichen, IT, Instandhaltung und Lieferanten und bereitest Abstimmungen, Workshops sowie Entscheidungen zielgerichtet vor und nach Darüber hinaus unterstützt du die Entwicklung und Umsetzung von Use Cases für die zustandsorientierte Instandhaltung und hilfst dabei, Fahrzeugdaten in konkrete Verbesserungen für Verfügbarkeit und Betrieb zu übersetzen Bei der Erfassung und Aufbereitung von Anforderungen an Telematik-, Sensorik-, Hard- und Softwarelösungen sowie bei deren Auswahl, Erprobung und Einführung wirkst du mit Eigenständig übernimmst du Arbeitspakete, erstellst Projektunterlagen, dokumentierst Ergebnisse nachvollziehbar und verfolgst vereinbarte Maßnahmen konsequent nach Technisches Grundverständnis sowie Interesse an Fahrzeugtechnik, Telematik, Sensorik oder datenbasierter Instandhaltung helfen dir bei der Einordnung der Themen; vertiefte Fachkenntnisse sind nicht erforderlich Dein Profil: Du studierst Wirtschaftsingenieurwesen, Wirtschaftsinformatik, Betriebswirtschaft, Projektmanagement, Maschinenbau, Fahrzeugtechnik oder einen vergleichbaren Studiengang Organisationsgeschick, eine strukturierte Arbeitsweise sowie die Fähigkeit, auch bei mehreren Beteiligten, parallelen Aufgaben und wechselnden Anforderungen den Überblick zu behalten, zeichnen dich aus Du kommunizierst verbindlich, hörst unterschiedliche Perspektiven an und kannst auch in anspruchsvollen Abstimmungen sachlich und lösungsorientiert vermitteln Konflikte gehst du konstruktiv an, arbeitest auf tragfähige Lösungen hin und hältst Vereinbarungen klar fest und verfolgst diese nach Du arbeitest sicher mit Microsoft 365 und nutzt Copilot gezielt zur Unterstützung deiner Aufgaben. Zudem bereitest du Inhalte strukturiert auf und erstellst ansprechende Präsentationsunterlagen Sehr gute Deutschkenntnisse (mindestens C1-Niveau) sowie gute Englischkenntnisse runden dein Profil ab Für deine Bewerbung benötigen wir kein Anschreiben. Das ist uns wichtig: Unser Anspruch ist es, allen Kandidat:innen bei gleicher Eignung die gleichen Chancen für den Einstieg bei uns zu bieten. Wir fördern aktiv die Vielfalt und das Miteinander in unseren Teams. Wir schätzen jede Bewerbung, unabhängig von Geschlecht, Nationalität, ethnischer und sozialer Herkunft, Religion, Weltanschauung, Behinderung, Alter, Dauer der Arbeitslosigkeit sowie sexueller Orientierung und Identität. Benefits: Über Teamgrenzen hinweg: Der Austausch mit anderen Studierenden, z.B. durch unser vielfältiges Event- und Vernetzungsangebot, verschafft dir konzernweit hilfreiche Kontakte. Dein Team arbeitet dich ein, begleitet dich und sorgt mit gezieltem Feedback für deine persönliche Weiterentwicklung. Woran wir arbeiten, was wir besser machen wollen – das wirst du schnell herausfinden. Denn bei uns erlebst du einen Großkonzern auf Augenhöhe und arbeitest an spannenden und aktuellen Projekten. Chancengleichheit und selbstbestimmte Teilhabe Schwerbehinderter und Gleichgestellter sowie eine respektvolle Zusammenarbeit sind innerhalb des DB Konzerns fest verankerte Grundsätze. Deshalb werden schwerbehinderte und gleichgestellte Bewerber:innen bei gleicher Eignung bevorzugt berücksichtigt.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 75,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "git",
+      "projektmanagement"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: git, projektmanagement.",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-10)",
+    "applicants_num": 32,
+    "applicants_text": "🟢 32 applicants",
+    "work_model": "Flexibles Office",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Praktikum Projektmanagement digitale Nebenfahrzeuge (w/m/d) role at Deutsche Bahn. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about Deutsche Bahn is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Deutsche Bahn in this role."
+      ]
+    }
+  },
+  {
     "id": "582d5d750a",
     "title": "Praktikant Digitale Portfoliosteuerung & Produktentwicklung (m/w/d)",
     "company": "ENERTRAG",
@@ -6596,6 +6843,56 @@
     }
   },
   {
+    "id": "bd96fe07e9",
+    "title": "Project Management Office (m/w/d)",
+    "company": "mamgo | Talente 🔗 Jobs",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4488829322",
+    "source": "Linkedin",
+    "date_posted": "2026-11-09",
+    "date_found": "2026-11-10 21:36",
+    "salary": "",
+    "description": "Für unseren Kunden besetzen wir ab sofort folgende Position: Aufgabenprofil Unterstützung von Projektleitung und Programmmanagement bei der Steuerung eines strategischen IT-Transformations- und Rollout-Programms mit mehreren Teilprojekten Erstellung und Nachverfolgung von Projekt-, Termin-, Cutover- und Meilensteinplänen sowie KPI-Reportings, Projektcontrolling und Risikomanagement Organisation und Moderation von Projektmeetings, Workshops und Steuerungsgremien inklusive Tracking von Aufgaben, Abhängigkeiten und Beschlüssen Stakeholder- und Schnittstellenmanagement zwischen Fachbereichen, IT, Projektteams, Lieferanten und externen Partnern sowie Begleitung von Go-Live-, Transition- und Hypercare-Phasen Qualifikationsprofil Studium oder vergleichbare Qualifikation im IT- oder Wirtschaftsumfeld Mindesten 5 Jahre Erfahrung als PMO, im IT-Projektmanagement oder Programmmanagement Kenntnisse in Jira, Confluence sowie agilen Projektmethoden Erfahrung in Reporting, Projektcontrolling und Budgettracking Sehr gute Deutsch- und Englischkenntnisse Automotive-Erfahrung von Vorteil, idealerweise Mercedes-Benz-Umfeld Wir bieten Attraktive Mitarbeiterrabatte für Fitnessangebote, Markenprodukte und diverse Freizeitaktivitäten Flexible Arbeitszeiten sowie ein Arbeitszeitkonto mit Überstundenausgleich 30 Tage Jahresurlaub mit flexibler Urlaubsplanung Home-Office: 2 Tage pro Woche Wochenarbeitszeit: 38 Stunden Laufzeit: 3 Jahre in Arbeitnehmerüberlassung Über YER Deutschland Egal ob als Junior, Professional oder Führungskraft: Wir begleiten den gesamten Karriereweg. Bundesweit warten attraktive Jobs, insbesondere in den Bereichen Mobility, Tech und Energy. Unser Ziel ist es dabei stets, das Perfect Match zwischen Talenten und Unternehmen zu finden. Als Teil der YER Group wächst unser Angebot an internationalen Services stetig weiter und eröffnet auch berufliche Perspektiven über Ländergrenzen hinweg. Ob im Einsatz bei einem renommierten Kundenunternehmen oder im internen Team von YER - bei uns beginnt der Weg zum Traumjob! Interessiert? Dann freuen wir uns über eine aussagekräftige Bewerbung inkl. Gehaltsvorstellung und frühestem Eintrittstermin über unser Onlineportal.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 71,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [
+      "project management"
+    ],
+    "why_fits": "Strong Project Management fit. Matches keywords: project management.",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-09)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Created a <strong>real-time cross-country collaboration knowledge base</strong> enabling live cross-border agent support during customer calls (e.g., Netherlands agents assisting Belgium operations in real time), standardizing multi-market workflows.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>.",
+        "Worked embedded in an agile <strong>Product, Tech, Business Analytics, and Operations team</strong> to translate complex operational data into product features, evaluation tools, and scalable processes across <strong>9 international markets</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Project Management Office (m/w/d) role at mamgo | Talente 🔗 Jobs. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about mamgo | Talente 🔗 Jobs is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support mamgo | Talente 🔗 Jobs in this role."
+      ]
+    }
+  },
+  {
     "id": "bb4eb6ef5f",
     "title": "Werkstudent (d/w/m) Data Analytics Operations",
     "company": "Konzern Versicherungskammer",
@@ -7136,6 +7433,54 @@
         "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
         "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
         "What particularly excites me about Deutsche Bahn is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support Deutsche Bahn in this role."
+      ]
+    }
+  },
+  {
+    "id": "ab229331cb",
+    "title": "Consultant Data Analytics Global Transformation Tax (w/m/d)",
+    "company": "PwC Deutschland",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4487902703",
+    "source": "Linkedin",
+    "date_posted": "2026-11-09",
+    "date_found": "2026-11-10 21:37",
+    "salary": "",
+    "description": "Für unseren Geschäftsbereich Steuerberatung suchen wir dich zum nächstmöglichen Zeitpunkt als Consultant Data Analytics Global Transformation Tax (w/m/d). Das erwartet dich Team – Als Teil unseres Global Transformation Tax Teams arbeitest du gemeinsam mit Kolleg:innen aus Tax, Tech und Finance an innovativen End-to-End-Lösungen, die Unternehmen fit für externe regulatorische Anforderungen und die interne Transformation machen. Analyse – Du entwickelst clevere, pragmatische Lösungsansätze zur Strukturierung, Verarbeitung und Validierung von Finanzdaten. Automatisierung – Mit Tools wie der Microsoft Power Platform oder Alteryx entwickelst du smarte Workflows und Prototypen – z. B. für Pillar 2, Tax Control Frameworks oder andere Compliance-Herausforderungen. Visualisierung – Du kreierst interaktive Dashboards und Reports in Power BI, die für die Steuerfunktion und das Management aus Finanzdaten wertvolle Erkenntnisse generieren. Integration – Du verknüpfst Tools, Datenquellen und Systeme – sei es via API, komplexer Datenmodelle oder Connector. Das bringst du mit Du hast deinen Masterabschluss in (Wirtschafts-)Informatik oder eines vergleichbaren Studiengangs (bald) abgeschlossen. Du hast bereits erste Erfahrung z. B. durch Praktika, Uni-Projekte oder Selbststudium mit Datenverarbeitung, Datenmodellierung und -visualisierung und verfügst über solide Kenntnisse in Power BI, Power Automate, Power Apps und idealerweise Python. Du liebst es, mit Zahlen zu arbeiten, Tools auszuprobieren und kreative Lösungen zu finden. Du bringst Neugier, Eigeninitiative und echten Teamgeist mit. Du beherrschst die Sprache Deutsch auf dem Level C2 und verfügst über sehr gute Englischkenntnisse in Wort und Schrift. Deine Benefits Flexibilität – In Abstimmung mit deinem Team erwartet dich ein Mix aus gemeinsamen Bürotagen und Home Office. Dabei gibt es keine Kernarbeitszeiten – im Rahmen der betrieblichen Anforderungen und arbeitsrechtlichen Vorgaben kannst du deine Arbeitszeit flexibel gestalten. Zusätzlich hast du die Möglichkeit, temporär in über 40 Ländern zu arbeiten. Berufsexamen – Durch unsere interne Academy, internationale Erfahrungen durch Secondments und kontinuierliches Mentoring entwickelst du dich stetig weiter. Zusätzlich unterstützen wir dich bei dem Erlangen der Berufsexamina: Wirtschaftsprüfer:in, Voll-WP, Steuerberater:in und Aktuar:in. Freizeit – Überstunden kannst du auf deinem Jahresarbeitszeitenkonto (JAZ) sammeln und nach arbeitsintensiven Phasen durch Freizeit ausgleichen. Restliche Überstunden werden einmal jährlich ausgezahlt. Zusätzlich stehen dir 30 Urlaubstage im Kalenderjahr zur Verfügung. Gesundheit – Deine Gesundheit liegt uns am Herzen: Neben einer eigenen betrieblichen Krankenkasse bieten wir auch Vorsorgeuntersuchungen sowie Sportangebote an. Nimm an unserem kostenlosen Betriebssportprogramm teil oder profitiere von vergünstigten Beiträgen in diversen Fitnessstudios oder einer Urban Sports Club-Mitgliedschaft. Das ist noch nicht alles – Wir möchten ein positives Arbeitsumfeld schaffen: Ein Umfeld, in dem flexibles und kreatives Arbeiten möglich ist, in dem Arbeit anerkannt und Leistung honoriert wird und auf das wir stolz sind. Alle Benefits findest du auf unserer Karriereseite. Bei PwC Deutschland arbeiten wir daran, entscheidende Herausforderungen zu lösen, nachhaltige Ergebnisse zu schaffen und das Vertrauen in die Wirtschaft und Gesellschaft auszubauen. Als Teil unseres Corporate Tax Teams behältst du bei nationalen und internationalen Steuerthemen den Durchblick für unsere Mandanten: Von der Buchführung und Steuererklärung über Restrukturierungen bis hin zu grenzüberschreitenden Transaktionen. Dafür sind deine Expertise und deine Ideen gefragt. Mit einem tollen Team an deiner Seite erlebst du eine erfrischende Mischung aus der Arbeit mit Zahlen und dem direkten Kontakt zu unseren Mandanten. Kontakt Du hast Fragen zu dieser Position oder deiner Bewerbung? Melde dich gerne bei Alisa Kullmann unter +49 69 95852697.",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 67,
+    "language_req": "English Friendly",
+    "extracted_pay": "Not listed",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-09)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Designed and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> featuring <strong>automated workflows and bulk-review evaluation pipelines</strong>, enabling agents to audit and benchmark AI quality significantly faster.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, custom databases, and AI knowledge / vector databases</strong>, overseeing deployment and retrieval improvements handling <strong>30,000+ monthly conversations</strong>.",
+        "Performed <strong>quantitative analysis on complex, unstructured multi-market datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel, building automated <strong>company-wide KPI reporting and dashboards</strong> in collaboration with 3 project managers.",
+        "Led AI integrations and continuous optimization of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional <strong>product team</strong>, routing <strong>millions of calls</strong>, boosting inbound answer rates from <strong>65% to 85% (+20%)</strong>, and raising call-to-booking conversion to <strong>57.8% (+25%)</strong>.",
+        "Built a centralized <strong>Google Reviews &amp; Trustpilot management web portal</strong> (versioned via <strong>Git/GitHub</strong>) with template-based smart reply suggestions, turning manual review discovery into a <strong>one-click approval workflow</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to express my strong interest in the Consultant Data Analytics Global Transformation Tax (w/m/d) role at PwC Deutschland. Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, I have learned that the greatest value comes from combining analytical rigor with practical builder execution. With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, I am eager to contribute this hands-on, problem-solving mindset to your team.",
+        "In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality.",
+        "Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1).",
+        "What particularly excites me about PwC Deutschland is the opportunity to bring this mix of analytical curiosity and builder execution to your team. Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support PwC Deutschland in this role."
       ]
     }
   },
