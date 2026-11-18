@@ -51,11 +51,6 @@
       background-color: #1b263b !important;
       box-shadow: 0 0 0 1px #38bdf8, 0 4px 12px rgba(0, 0, 0, 0.3) !important;
     }
-    .dark.user-nancy .portal-card.active-job {
-      border-color: #f472b6 !important;
-      background-color: #2b1728 !important;
-      box-shadow: 0 0 0 1px #f472b6, 0 4px 12px rgba(0, 0, 0, 0.3) !important;
-    }
     .portal-card {
       background: #ffffff;
       border: 1px solid #e5e7eb;
@@ -72,11 +67,6 @@
       background-color: #f8fafd;
       box-shadow: 0 0 0 1px #0a66c2, 0 4px 6px -1px rgba(10, 102, 194, 0.1);
     }
-    .user-nancy .portal-card.active-job {
-      border-color: #db2777 !important;
-      background-color: #fdf2f8;
-      box-shadow: 0 0 0 1px #db2777, 0 4px 6px -1px rgba(219, 39, 119, 0.1);
-    }
     /* Scrollbars */
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
@@ -84,7 +74,7 @@
     ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
   </style>
 </head>
-<body class="min-h-full flex flex-col user-nancy" id="appBody">
+<body class="min-h-full flex flex-col user-guillermo" id="appBody">
 
   <!-- Top Global Navigation Bar (LinkedIn Style) -->
   <header class="sticky top-0 z-40 bg-white dark:bg-[#141b26] border-b border-gray-200 dark:border-slate-800 shadow-sm transition-colors">
@@ -104,14 +94,10 @@
 
         <div class="h-6 w-px bg-gray-200 mx-1"></div>
 
-        <!-- User Toggle Switcher (Nancy vs Guillermo) -->
         <div class="flex items-center bg-gray-100 dark:bg-slate-800/90 p-0.5 rounded-lg border border-gray-200 dark:border-slate-700 text-xs font-semibold">
-          <button id="userTabNancy" onclick="switchUser('nancy')" class="px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-white text-pink-700 shadow-sm">
-            <span>👩 Nancy (Office &amp; Assistenz)</span>
-          </button>
-          <button id="userTabGuillermo" onclick="switchUser('guillermo')" class="px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-600 hover:text-gray-900">
+          <span id="userTabGuillermo" class="px-3 py-1.5 rounded-md flex items-center gap-1.5 bg-white dark:bg-[#17253b] text-blue-700 dark:text-blue-300 shadow-sm font-bold">
             <span>👨 Guillermo (PM &amp; AI)</span>
-          </button>
+          </span>
         </div>
       </div>
 
@@ -143,7 +129,7 @@
           <span>📗 Google Sheet ↗</span>
         </a>
 
-        <a id="navMasterCvBtn" href="files/Nancy_Schuetze_Lebenslauf_Master.pdf" download class="px-3 py-1.5 text-xs font-semibold bg-gray-900 hover:bg-gray-800 text-white rounded-md transition flex items-center gap-1.5 shadow-sm">
+        <a id="navMasterCvBtn" href="files/Guillermo_Hernandez_CV_Master.pdf" download class="px-3 py-1.5 text-xs font-semibold bg-gray-900 hover:bg-gray-800 text-white rounded-md transition flex items-center gap-1.5 shadow-sm">
           <span>📄 Master-CV PDF</span>
         </a>
       </div>
@@ -272,7 +258,7 @@
             <a href="https://de.indeed.com/profile" target="_blank" class="px-3 py-1.5 rounded-md bg-[#003a9b] hover:bg-[#002f7d] text-white font-semibold transition flex items-center gap-1.5">
               <span>🚀 Zu deinem Indeed-Profil ↗</span>
             </a>
-            <a id="modalDownloadMasterBtn" href="files/Nancy_Schuetze_Lebenslauf_Master.pdf" download class="px-3 py-1.5 rounded-md bg-white hover:bg-gray-50 text-gray-800 border border-gray-300 font-semibold transition">
+            <a id="modalDownloadMasterBtn" href="files/Guillermo_Hernandez_CV_Master.pdf" download class="px-3 py-1.5 rounded-md bg-white hover:bg-gray-50 text-gray-800 border border-gray-300 font-semibold transition">
               📄 Master-Lebenslauf herunterladen
             </a>
           </div>
@@ -287,7 +273,7 @@
           </p>
           <div class="p-3 bg-white rounded border border-purple-200 text-center my-1.5">
             <a id="autofillBookmarkletLink" href="#" class="inline-block px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-95 text-white font-bold rounded shadow cursor-grab text-xs">
-              ⚡ Nancy 1-Klick Autofill (In Lesezeichenleiste ziehen)
+              ⚡ Guillermo 1-Klick Autofill (In Lesezeichenleiste ziehen)
             </a>
           </div>
           <p class="text-[11px] text-gray-500">
@@ -311,7 +297,6 @@
     const I18N = {
       de: {
         brand_sub: "Indeed & LinkedIn Career Command",
-        tab_nancy: "👩 Nancy (Office & Assistenz)",
         tab_guillermo: "👨 Guillermo (PM & AI)",
         find_more_jobs: "Mehr Jobs finden (+50)",
         scouting_jobs: "Suche auf Indeed...",
@@ -389,7 +374,6 @@
       },
       en: {
         brand_sub: "Indeed & LinkedIn Career Command",
-        tab_nancy: "👩 Nancy (Office & Admin)",
         tab_guillermo: "👨 Guillermo (PM & AI)",
         find_more_jobs: "Find More Jobs (+50)",
         scouting_jobs: "Scouting Indeed...",
@@ -506,8 +490,6 @@
       if (flag) flag.textContent = currentLang === 'de' ? '🇩🇪' : '🇬🇧';
       if (label) label.textContent = currentLang.toUpperCase();
 
-      const nancyBtn = document.getElementById('userTabNancy');
-      if (nancyBtn) nancyBtn.innerHTML = `<span>${t.tab_nancy}</span>`;
       const guillermoBtn = document.getElementById('userTabGuillermo');
       if (guillermoBtn) guillermoBtn.innerHTML = `<span>${t.tab_guillermo}</span>`;
 
@@ -644,156 +626,6 @@
     function buildTailoredCvHtmlForJob(job) {
       const isGuillermo = (activeUser === 'guillermo');
       const desc = (`${job.title || ''} ${job.description || ''} ${job.why_fits || ''}`).toLowerCase();
-
-      if (!isGuillermo) {
-        // Nancy's authentic, job-tailored 1-page German Lebenslauf matching data/nancy_profile.json & nancy_engine.py
-        const isAcct = desc.includes('buchhalt') || desc.includes('rechnung') || desc.includes('datev') || desc.includes('finance') || desc.includes('steuer');
-        const isEvt = desc.includes('event') || desc.includes('veranstaltung') || desc.includes('marketing') || desc.includes('produktion') || desc.includes('tv') || desc.includes('medien');
-        const isHr = desc.includes('hr') || desc.includes('personal') || desc.includes('recruiting') || desc.includes('onboarding') || desc.includes('people');
-        const isKanzlei = desc.includes('kanzlei') || desc.includes('anwalt') || desc.includes('recht') || desc.includes('notar') || desc.includes('jurist');
-
-        let focusMotto = 'Energiegeladen · Lösungsorientiert · Lebensfroh — Office Management & Projektsteuerung';
-        if (isKanzlei) focusMotto = 'Energiegeladen · Lösungsorientiert · Strukturstark — Kanzleiorganisation & Office Management';
-        else if (isEvt) focusMotto = 'Energiegeladen · Kreativ · Organisationsstark — Event-Projektleitung, Produktion & Office Operations';
-        else if (isHr) focusMotto = 'Energiegeladen · Kommunikativ · Strukturstark — Recruiting, Onboarding & Office Operations';
-        else if (isAcct) focusMotto = 'Energiegeladen · Präzise · Lösungsorientiert — Backoffice, Abrechnungswesen & Administration';
-
-        return `
-          <div style="font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif; color: #1e293b; line-height: 1.20; font-size: 8.1pt;">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 4px; margin-bottom: 4px;">
-              <div style="flex: 1; padding-right: 14px;">
-                <div style="font-size: 16pt; font-weight: 700; color: #0f172a; letter-spacing: 0.2px; margin-bottom: 1px; line-height: 1.1;">Nancy Thuy Dung Schütze</div>
-                <div style="font-size: 8.9pt; font-weight: 700; color: #1e3a8a; margin-bottom: 1.5px;">${focusMotto}</div>
-                <div style="font-size: 8.0pt; color: #475569; margin-bottom: 3px; line-height: 1.18;">Als Organisationstalent arbeite ich eigenständig, strukturiert und kreativ und bringe mit meiner positiven Art einen humorvollen Alltag.</div>
-                <div style="display: grid; grid-template-columns: auto auto; gap: 1.5px 16px; font-size: 8.0pt; color: #334155;">
-                  <span><strong>Adresse:</strong> Teichbergstr. 17, 13125 Berlin</span>
-                  <span><strong>Mobil:</strong> +49 15237164097</span>
-                  <span><strong>E-Mail:</strong> schuetzenancy@gmx.de</span>
-                  <span><strong>Geboren:</strong> 17.08.2001 in Berlin | Deutsch</span>
-                  <span style="grid-column: span 2;"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/schuetzenancy/" target="_blank" style="color: #1e3a8a; text-decoration: underline;">linkedin.com/in/schuetzenancy</a></span>
-                </div>
-              </div>
-              <div style="flex-shrink: 0;">
-                <img src="files/nancy_assets/image2.png" alt="Nancy Schütze" onerror="this.style.display='none'" style="width: 70px; height: 88px; object-fit: cover; border-radius: 4px; border: 1.5px solid #cbd5e1; display: block;" />
-              </div>
-            </div>
-
-            <div style="margin-bottom: 3.5px;">
-              <div style="font-size: 8.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1e3a8a; border-bottom: 1.2px solid #cbd5e1; padding-bottom: 1.5px; margin-bottom: 3px;">Berufserfahrung</div>
-              
-              <div style="display: flex; margin-bottom: 2.5px;">
-                <div style="width: 14%; font-size: 7.9pt; font-weight: 600; color: #475569; padding-right: 6px; flex-shrink: 0;">2025 – 2026</div>
-                <div style="width: 86%;">
-                  <div><span style="font-weight: 700; font-size: 8.7pt; color: #0f172a;">Office Managerin &amp; Kanzleiassistenz</span> &nbsp;<span style="font-size: 8.3pt; color: #334155;">| <strong>SERS Rechtsanwaltsgesellschaft mbH</strong>, Berlin</span></div>
-                  <ul style="padding-left: 13px; margin: 0.5px 0 0 0; font-size: 8.0pt; line-height: 1.18; list-style-type: disc;">
-                    <li style="margin-bottom: 0.5px;">Eigenverantwortliche Organisation und Steuerung des gesamten Kanzlei-, Termin- und Sekretariatsbetriebs.</li>
-                    <li style="margin-bottom: 0.5px;">Professionelle Mandanten- und Behördenkommunikation auf Deutsch und Englisch (C2).</li>
-                    <li style="margin-bottom: 0.5px;">Fristenkontrolle, strukturierte Aktenführung, vorbereitende Buchhaltung und Rechnungsstellung.</li>
-                    <li style="margin-bottom: 0.5px;">Kontinuierliche Digitalisierung und Prozessoptimierung administrativer Büroabläufe.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div style="display: flex; margin-bottom: 2.5px;">
-                <div style="width: 14%; font-size: 7.9pt; font-weight: 600; color: #475569; padding-right: 6px; flex-shrink: 0;">2023 – 2025</div>
-                <div style="width: 86%;">
-                  <div><span style="font-weight: 700; font-size: 8.7pt; color: #0f172a;">Junior Projektleitung &amp; Office Operations</span> &nbsp;<span style="font-size: 8.3pt; color: #334155;">| <strong>zett.events</strong>, Berlin</span></div>
-                  <ul style="padding-left: 13px; margin: 0.5px 0 0 0; font-size: 8.0pt; line-height: 1.18; list-style-type: disc;">
-                    <li style="margin-bottom: 0.5px;">Kaufmännische Projektorganisation inklusive Personal-, Event- und Budgetkoordination.</li>
-                    <li style="margin-bottom: 0.5px;">Einsatzplanung, Dienstleistersteuerung und Mitarbeiterabrechnungen für Werkstudierende.</li>
-                    <li style="margin-bottom: 0.5px;">Eigenständige Angebotskalkulation, Rechnungserstellung und Kundenbetreuung.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div style="display: flex; margin-bottom: 2.5px;">
-                <div style="width: 14%; font-size: 7.9pt; font-weight: 600; color: #475569; padding-right: 6px; flex-shrink: 0;">2019 – heute</div>
-                <div style="width: 86%;">
-                  <div><span style="font-weight: 700; font-size: 8.7pt; color: #0f172a;">Teamleitung Events, Hostess &amp; Promotion (Nebenberuflich)</span> &nbsp;<span style="font-size: 8.3pt; color: #334155;">| <strong>Verschiedene Agenturen</strong>, Berlin &amp; bundesweit</span></div>
-                  <ul style="padding-left: 13px; margin: 0.5px 0 0 0; font-size: 8.0pt; line-height: 1.18; list-style-type: disc;">
-                    <li style="margin-bottom: 0.5px;">Vor-Ort-Teamleitung: Check-In, Briefing und Steuerung der Serviceteams bei Kongressen &amp; Messen.</li>
-                    <li style="margin-bottom: 0.5px;">Direkte Ansprechpartnerin für Auftraggeber vor Ort zur Sicherstellung reibungsloser Abläufe.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div style="display: flex; margin-bottom: 2.5px;">
-                <div style="width: 14%; font-size: 7.9pt; font-weight: 600; color: #475569; padding-right: 6px; flex-shrink: 0;">2021 – 2022</div>
-                <div style="width: 86%;">
-                  <div><span style="font-weight: 700; font-size: 8.7pt; color: #0f172a;">Werkstudentin Qualitätsmanagement, Recruiting &amp; PR</span> &nbsp;<span style="font-size: 8.3pt; color: #334155;">| <strong>Vergleich.org (VGL Publishing AG)</strong>, Berlin</span></div>
-                  <ul style="padding-left: 13px; margin: 0.5px 0 0 0; font-size: 8.0pt; line-height: 1.18; list-style-type: disc;">
-                    <li style="margin-bottom: 0.5px;">Recruiting, Vertragsabwicklung und Onboarding von Freelancern sowie Dienstleisterkoordination.</li>
-                    <li style="margin-bottom: 0.5px;">Qualitätssicherung von Produkttexten sowie redaktionelle Pflege von HTML- und XML-Dateien.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div style="display: flex; margin-bottom: 2.5px;">
-                <div style="width: 14%; font-size: 7.9pt; font-weight: 600; color: #475569; padding-right: 6px; flex-shrink: 0;">2019 – 2022</div>
-                <div style="width: 86%;">
-                  <div><span style="font-weight: 700; font-size: 8.7pt; color: #0f172a;">Duale Studentin – Front &amp; Back Office / Hospitality</span> &nbsp;<span style="font-size: 8.3pt; color: #334155;">| <strong>Accor Hotels</strong>, Berlin</span></div>
-                  <ul style="padding-left: 13px; margin: 0.5px 0 0 0; font-size: 8.0pt; line-height: 1.18; list-style-type: disc;">
-                    <li style="margin-bottom: 0.5px;">Operative Steuerung im Front- und Back-Office, Gästebetreuung und Reklamationsmanagement.</li>
-                    <li style="margin-bottom: 0.5px;">Mitwirkung in Buchhaltung und Vertragsverwaltung sowie stellv. Leitung im Housekeeping.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div style="display: flex;">
-                <div style="width: 14%; font-size: 7.9pt; font-weight: 600; color: #475569; padding-right: 6px; flex-shrink: 0;">2013 – 2025</div>
-                <div style="width: 86%;">
-                  <div><span style="font-weight: 700; font-size: 8.7pt; color: #0f172a;">Kaufmännische Mitarbeit, Einkauf &amp; Kundenbetreuung</span> &nbsp;<span style="font-size: 8.3pt; color: #334155;">| <strong>Obst- und Gemüse Karow (Familienbetrieb)</strong>, Berlin</span></div>
-                  <ul style="padding-left: 13px; margin: 0.5px 0 0 0; font-size: 8.0pt; line-height: 1.18; list-style-type: disc;">
-                    <li>Warenlogistik, Einkauf, Bestandskontrolle, Kundenbetreuung sowie Kassen- und Tagesabrechnung.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div style="margin-bottom: 3.5px;">
-              <div style="font-size: 8.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1e3a8a; border-bottom: 1.2px solid #cbd5e1; padding-bottom: 1.5px; margin-bottom: 3px;">Bildungsweg</div>
-              <div style="display: flex; margin-bottom: 2.5px;">
-                <div style="width: 14%; font-size: 7.9pt; font-weight: 600; color: #475569;">seit 2026</div>
-                <div style="width: 86%;">
-                  <div style="font-size: 8.5pt; color: #0f172a;"><strong>B.Sc. Informatik (Studium)</strong> | Technische Universität Berlin (Campus Charlottenburg / Zoo)</div>
-                  <div style="font-size: 7.9pt; color: #475569;">Aktives Vollzeitstudium direkt am Standort Zoologischer Garten / Ernst-Reuter-Platz</div>
-                </div>
-              </div>
-              <div style="display: flex; margin-bottom: 2.5px;">
-                <div style="width: 14%; font-size: 7.9pt; font-weight: 600; color: #475569;">2019 – 2023</div>
-                <div style="width: 86%;">
-                  <div style="font-size: 8.5pt; color: #0f172a;"><strong>B.A. Business Administration (Duales Studium)</strong> | VICTORIA – Internationale Hochschule Berlin (Praxis: Accor)</div>
-                  <div style="font-size: 7.9pt; color: #475569;">Vertiefung: Hotel- &amp; Tourismusmanagement | Auslandssemester: Universidad de Girona (Spanien)</div>
-                </div>
-              </div>
-              <div style="display: flex;">
-                <div style="width: 14%; font-size: 7.9pt; font-weight: 600; color: #475569;">2013 – 2019</div>
-                <div style="width: 86%;">
-                  <div style="font-size: 8.5pt; color: #0f172a;"><strong>Allgemeine Hochschulreife (Abitur – Note: 1,7)</strong> | Robert-Havemann-Gymnasium, Berlin</div>
-                </div>
-              </div>
-            </div>
-
-            <div style="margin-bottom: 0;">
-              <div style="font-size: 8.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #1e3a8a; border-bottom: 1.2px solid #cbd5e1; padding-bottom: 1.5px; margin-bottom: 3px;">Fachkompetenzen &amp; IT-Kenntnisse</div>
-              <div style="font-size: 8.0pt; line-height: 1.20;">
-                <div style="margin-bottom: 1.8px;"><strong>Office &amp; Organisation:</strong> Office Management &amp; Organisation · Projektleitung &amp; Teamkoordination · Event- &amp; Terminplanung · Personalabrechnung · Front Office · Stakeholder-Management · Prozessoptimierung</div>
-                <div style="margin-bottom: 1.8px;"><strong>Software &amp; IT:</strong> Microsoft 365 (Word, Excel, PowerPoint – Fortgeschritten) · HTML/CSS, Python · DaVinci Resolve · Wondershare Filmora · Adobe Audition CC</div>
-                <div style="margin-bottom: 1.8px;"><strong>Sprachen:</strong> <strong>Deutsch</strong> (Muttersprache) &nbsp;&bull;&nbsp; <strong>Vietnamesisch</strong> (Muttersprache) &nbsp;&bull;&nbsp; <strong>Englisch</strong> (C2 Proficient) &nbsp;&bull;&nbsp; <strong>Spanisch</strong> (B1-Modulzeugnis) &nbsp;&bull;&nbsp; <strong>Katalanisch</strong> (A1-Zertifikat)</div>
-                <div><strong>Nachweise &amp; Mobilität:</strong> Führerschein Klasse B · Gesundheitszeugnis</div>
-              </div>
-            </div>
-
-            <div style="margin-top: 4px; display: flex; justify-content: space-between; align-items: flex-end; padding-top: 2px; border-top: 1px solid #cbd5e1;">
-              <div style="font-size: 7.9pt; color: #475569;">Berlin, den ${today}</div>
-              <div style="text-align: center;">
-                <img src="files/nancy_assets/image3.png" alt="Unterschrift Nancy" onerror="this.style.display='none'" style="height: 24px; display: block; margin: 0 auto -2px auto;" />
-                <div style="font-size: 7.9pt; color: #475569; border-top: 1px solid #94a3b8; padding-top: 1px; min-width: 155px;">Nancy Thuy Dung Schütze</div>
-              </div>
-            </div>
-          </div>
-        `;
-      }
 
       // Guillermo's tailored 1-page A4 CV
       const allPool = (window.STATIC_STATE && window.STATIC_STATE.all_auto1_bullets) ? window.STATIC_STATE.all_auto1_bullets : [];
@@ -958,9 +790,7 @@
       const job = allJobs.find(j => j.id === jobId);
       const isGuillermo = (activeUser === 'guillermo');
       const rawComp = (job && job.company ? job.company : 'Company').replace(/[^a-zA-Z0-9äöüÄÖÜß_-]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
-      const pdfTitle = isGuillermo
-        ? ('Guillermo_Hernandez_CV_' + rawComp)
-        : ('Nancy_Schuetze_Lebenslauf_' + rawComp);
+      const pdfTitle = 'Guillermo_Hernandez_CV_' + rawComp;
 
       const printWin = window.open('', '_blank');
       if (!printWin) return;
@@ -1027,9 +857,7 @@
       const job = allJobs.find(j => j.id === jobId);
       const isGuillermo = (activeUser === 'guillermo');
       const rawComp = (job && job.company ? job.company : 'Unternehmen').replace(/[^a-zA-Z0-9äöüÄÖÜß_-]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
-      const pdfTitle = isGuillermo
-        ? ('Guillermo_Hernandez_Cover_Letter_' + rawComp)
-        : ('Nancy_Schuetze_Anschreiben_' + rawComp);
+      const pdfTitle = 'Guillermo_Hernandez_Cover_Letter_' + rawComp;
 
       const printWin = window.open('', '_blank');
       if (!printWin) return;
@@ -1047,10 +875,9 @@
       setTimeout(() => { printWin.print(); }, 250);
     }
 
-    let activeUser = 'nancy';
+    let activeUser = 'guillermo';
     let isLiveBackend = false;
     let guillermoJobs = [];
-    let nancyJobs = [];
     let currentStatusFilter = 'ACTIVE';
     let selectedJobId = null;
 
@@ -1072,18 +899,9 @@
 
     function init() {
       updateThemeToggleUi();
-      const hash = window.location.hash || '';
-      if (hash.includes('guillermo')) {
-        activeUser = 'guillermo';
-      } else {
-        activeUser = 'nancy';
-      }
-
       if (window.STATIC_STATE) {
         guillermoJobs = window.STATIC_STATE.jobs || [];
-        nancyJobs = window.STATIC_STATE.nancy_jobs || [];
         applyLocalStatusOverrides(guillermoJobs, 'guillermo');
-        applyLocalStatusOverrides(nancyJobs, 'nancy');
       }
 
       applyUserTheme();
@@ -1093,43 +911,12 @@
 
     function applyUserTheme() {
       const body = document.getElementById('appBody');
-      const tabN = document.getElementById('userTabNancy');
-      const tabG = document.getElementById('userTabGuillermo');
+      if (body) body.className = 'min-h-full flex flex-col user-guillermo';
       const masterBtn = document.getElementById('navMasterCvBtn');
-
-      const isDark = document.documentElement.classList.contains('dark');
-      if (activeUser === 'nancy') {
-        body.className = 'min-h-full flex flex-col user-nancy';
-        tabN.className = isDark 
-          ? 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-[#2b1728] text-pink-300 shadow-sm font-bold border border-pink-500/30'
-          : 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-white text-pink-700 shadow-sm font-bold';
-        tabG.className = isDark
-          ? 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-400 hover:text-gray-200 font-medium'
-          : 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-600 hover:text-gray-900 font-medium';
-        if (masterBtn) {
-          masterBtn.href = 'files/Nancy_Schuetze_Lebenslauf_Master.pdf';
-          masterBtn.innerHTML = '<span>📄 Nancys Lebenslauf PDF</span>';
-        }
-      } else {
-        body.className = 'min-h-full flex flex-col user-guillermo';
-        tabG.className = isDark
-          ? 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-[#17253b] text-blue-300 shadow-sm font-bold border border-blue-500/30'
-          : 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 bg-white text-blue-700 shadow-sm font-bold';
-        tabN.className = isDark
-          ? 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-400 hover:text-gray-200 font-medium'
-          : 'px-3 py-1.5 rounded-md transition flex items-center gap-1.5 text-gray-600 hover:text-gray-900 font-medium';
-        if (masterBtn) {
-          masterBtn.href = 'files/Guillermo_Hernandez_CV_Master.pdf';
-          masterBtn.innerHTML = '<span>📄 Guillermos CV PDF</span>';
-        }
+      if (masterBtn) {
+        masterBtn.href = 'files/Guillermo_Hernandez_CV_Master.pdf';
+        masterBtn.innerHTML = '<span>📄 Guillermos CV PDF</span>';
       }
-    }
-
-    function switchUser(u) {
-      activeUser = u;
-      applyUserTheme();
-      selectedJobId = null;
-      renderJobs();
     }
 
     function applyLocalStatusOverrides(list, userKey) {
@@ -1142,7 +929,7 @@
     }
 
     function getActiveJobs() {
-      return activeUser === 'nancy' ? nancyJobs : guillermoJobs;
+      return guillermoJobs;
     }
 
     async function loadLiveState() {
@@ -1159,9 +946,7 @@
         const data = await res.json();
         isLiveBackend = true;
         guillermoJobs = data.jobs || [];
-        nancyJobs = data.nancy_jobs || [];
         applyLocalStatusOverrides(guillermoJobs, 'guillermo');
-        applyLocalStatusOverrides(nancyJobs, 'nancy');
         renderJobs();
       } catch (e) {
         isLiveBackend = false;
@@ -1198,7 +983,7 @@
       }
 
       const tabs = [
-        { id: 'tabActive', active: currentStatusFilter === 'ACTIVE', activeClass: (activeUser === 'nancy' ? 'bg-pink-600' : 'bg-[#0a66c2]') + ' text-white font-bold shadow-sm' },
+        { id: 'tabActive', active: currentStatusFilter === 'ACTIVE', activeClass: 'bg-[#0a66c2]' + ' text-white font-bold shadow-sm' },
         { id: 'tabApplied', active: currentStatusFilter === 'Applied', activeClass: 'bg-emerald-600 text-white font-bold shadow-sm' },
         { id: 'tabNotInterested', active: currentStatusFilter === 'NOT_INTERESTED', activeClass: 'bg-rose-600 text-white font-bold shadow-sm' },
         { id: 'tabAll', active: currentStatusFilter === 'ALL', activeClass: 'bg-gray-800 text-white font-bold shadow-sm' },
@@ -1454,15 +1239,15 @@
       // Generate bespoke cover letter with resolved recipient address
       const addr = getResolvedJobAddress(job);
       const clFormat = localStorage.getItem('cl_format_pref') || 'full';
-      const clLang = localStorage.getItem('cl_lang_pref_' + job.id) || (activeUser === 'guillermo' ? 'en' : (currentLang === 'en' ? 'en' : 'de'));
+      const clLang = localStorage.getItem('cl_lang_pref_' + job.id) || 'en';
       const clText = buildTailoredCoverLetter(job, clFormat === 'full', clLang);
 
       // Pre-compute A4 HTML document for the Google Doc editor
       const isGuillermo = (activeUser === 'guillermo');
-      const senderName = isGuillermo ? "Guillermo Hernandez" : "Nancy Schütze";
-      const senderAddr = isGuillermo ? "Söhtstraße 16, 12203 Berlin" : "Teichbergstr. 17, 13125 Berlin";
-      const senderPhone = isGuillermo ? "Mobil: +49 176 8513 6597" : "Mobil: +49 1523 71 64 097";
-      const senderEmail = isGuillermo ? "E-Mail: guillejhl@gmail.com" : "E-Mail: schuetzenancy@gmx.de";
+      const senderName = "Guillermo Hernandez";
+      const senderAddr = "Söhtstraße 16, 12203 Berlin";
+      const senderPhone = "Mobil: +49 176 8513 6597";
+      const senderEmail = "E-Mail: guillejhl@gmail.com";
       const compName = addr.company || job.company || "Unternehmen";
       const compDept = addr.department || "Personalabteilung / Recruiting-Team";
       const compStreet = addr.street || "Standort Berlin";
@@ -1758,7 +1543,7 @@
                   <span>${t.print_cv_pdf}</span>
                 </button>
 
-                <a href="${isGuillermo ? 'files/Guillermo_Hernandez_CV_Master.pdf' : 'files/Nancy_Schuetze_Lebenslauf_Master.pdf'}" download class="px-2 py-1 rounded bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700 text-[11px] font-medium">
+                <a href="files/Guillermo_Hernandez_CV_Master.pdf" download class="px-2 py-1 rounded bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700 text-[11px] font-medium">
                   <span>📄 Master PDF</span>
                 </a>
 
@@ -1896,7 +1681,7 @@
             
             <div class="text-[11px] text-gray-500 flex flex-wrap items-center justify-between gap-2">
               <span>${t.cl_hint}</span>
-              <a href="${activeUser === 'guillermo' ? 'files/Guillermo_Hernandez_CV_Master.pdf' : 'files/Nancy_Schuetze_Lebenslauf_Master.pdf'}" download class="font-semibold text-blue-600 hover:underline">
+              <a href="files/Guillermo_Hernandez_CV_Master.pdf" download class="font-semibold text-blue-600 hover:underline">
                 ${t.download_resume}
               </a>
             </div>
@@ -2210,10 +1995,10 @@
       const today = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
 
       const isGuillermo = (activeUser === 'guillermo');
-      const senderName = isGuillermo ? "Guillermo Hernandez" : "Nancy Schütze";
-      const senderAddr = isGuillermo ? "Söhtstraße 16, 12203 Berlin" : "Teichbergstr. 17, 13125 Berlin";
-      const senderPhone = isGuillermo ? "Mobil: +49 176 8513 6597" : "Mobil: +49 1523 71 64 097";
-      const senderEmail = isGuillermo ? "E-Mail: guillejhl@gmail.com" : "E-Mail: schuetzenancy@gmx.de";
+      const senderName = "Guillermo Hernandez";
+      const senderAddr = "Söhtstraße 16, 12203 Berlin";
+      const senderPhone = "Mobil: +49 176 8513 6597";
+      const senderEmail = "E-Mail: guillejhl@gmail.com";
 
       const compName = addr.company || job.company || "Unternehmen";
       const compStreet = addr.street || "Standort Berlin";
@@ -2362,7 +2147,7 @@
 
       const blob = await Packer.toBlob(doc);
       const cleanComp = (compName || "Firma").replace(/[^a-zA-Z0-9_-]/g, '_').substring(0, 30);
-      const cleanUser = isGuillermo ? "Guillermo_Hernandez" : "Nancy_Schuetze";
+      const cleanUser = "Guillermo_Hernandez";
       const filename = `${cleanUser}_Anschreiben_${cleanComp}.docx`;
 
       saveBlobAs(blob, filename);
@@ -2395,7 +2180,6 @@
     }
 
     function buildTailoredCoverLetter(job, includeHeader = true, clLang = null) {
-      const lang = clLang || (currentLang === 'en' && activeUser === 'nancy' ? 'en' : 'de');
       const addr = getResolvedJobAddress(job);
       const today = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
 
@@ -2403,8 +2187,6 @@
       if (includeHeader) {
         if (activeUser === 'guillermo') {
           header = `Guillermo Hernandez\nSöhtstraße 16 · 12203 Berlin\nTel: +49 176 85136597 · E-Mail: guillejhl@gmail.com\n\n${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}\n\nBerlin, ${today}\n\nApplication for ${job.title || 'Product / Project Management'}\n\n`;
-        } else {
-          header = `Nancy Schütze\nTeichbergstr. 17 · 13125 Berlin\nTel: +49 15237164097 · E-Mail: schuetzenancy@gmx.de\n\n${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}\n\nBerlin, ${today}\n\nBewerbung als ${job.title || 'Werkstudentin'}\n\n`;
         }
       }
 
@@ -2475,69 +2257,6 @@
         return header + `Dear Hiring Team at ${comp},\n\n${p1}\n\n${p2}\n\n${p3}\n\n${p4}\n\nSincerely,\nGuillermo Hernandez`;
       }
 
-      const comp = addr.company || job.company || (lang === 'en' ? 'your company' : 'Ihrem Unternehmen');
-      const rawTitle = job.title || (lang === 'en' ? 'Office Management Working Student' : 'Werkstudentin Office Management (m/w/d)');
-      const cleanTitle = rawTitle.replace(/\s*\(m\/w\/d\)/ig, '').replace(/\s*\(w\/m\/d\)/ig, '').replace(/\s*\(f\/m\/d\)/ig, '').replace(/\s*\(m\/f\/d\)/ig, '').replace(/\s*\(all genders\)/ig, '').trim();
-      const desc = (`${rawTitle} ${job.description || ''} ${job.why_fits || ''}`).toLowerCase();
-
-      const isAcct = desc.includes('buchhalt') || desc.includes('rechnung') || desc.includes('datev') || desc.includes('finance') || desc.includes('steuer') || desc.includes('abrechnung') || desc.includes('kaufmännisch');
-      const isEvt = desc.includes('event') || desc.includes('veranstaltung') || desc.includes('catering') || desc.includes('produktion') || desc.includes('tv') || desc.includes('marketing') || desc.includes('pr ') || desc.includes('medien') || desc.includes('hospitality');
-      const isHr = desc.includes('hr') || desc.includes('personal') || desc.includes('onboarding') || desc.includes('recruiting') || desc.includes('people') || desc.includes('talent');
-      const isKanzlei = desc.includes('kanzlei') || desc.includes('anwalt') || desc.includes('recht') || desc.includes('notar') || desc.includes('jurist') || desc.includes('fristen');
-
-      if (lang === 'en' && activeUser === 'nancy') {
-        let enHeader = '';
-        if (includeHeader) {
-          enHeader = `Nancy Thuy Dung Schütze\nTeichbergstr. 17 · 13125 Berlin\nMobil: +49 1523 71 64 097 · Email: schuetzenancy@gmx.de\n\n${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}\n\nBerlin, ${today}\n\nApplication for ${cleanTitle}\n\n`;
-        }
-
-        let enRoleHook = "combining structured office management, commercial project control, and proactive team support";
-        if (isKanzlei) enRoleHook = "managing legal secretariat operations, bilingual client and authority correspondence, and strict deadline control";
-        else if (isEvt) enRoleHook = "planning and executing corporate events, coordinating production schedules and vendors, and steering commercial budgets";
-        else if (isHr) enRoleHook = "driving recruiting, freelancer and staff onboarding, roster scheduling, and people operations";
-        else if (isAcct) enRoleHook = "handling preparatory bookkeeping, quote and invoice calculation, contract administration, and structured back-office operations";
-
-        let enP1 = `I am writing to apply with great enthusiasm for the ${cleanTitle} position at ${comp}. Having already held end-to-end responsibility as an Office Manager & Legal Assistant at a Berlin law firm and as a Junior Project Lead & Office Operations Manager at an event agency, I know firsthand how essential ${enRoleHook} is to a high-performing team. With a completed Bachelor of Arts in Business Administration (dual degree program in Berlin) and my current B.Sc. Computer Science studies at Technical University of Berlin (TU Berlin, Charlottenburg campus), I bring both seasoned commercial execution and strong digital process skills to support ${comp} from day one.`;
-
-        let enP2 = `In my most recent position as Office Manager & Legal Assistant at SERS Rechtsanwaltsgesellschaft mbH in Berlin (2025–2026), I independently organized and steered the firm’s entire secretariat and office operations. My daily responsibilities encompassed written and telephone correspondence with clients, courts, and public authorities in native German and C2-level English, structured document and deadline control, preparatory bookkeeping and invoicing, and continuous digitization of internal office workflows. Prior to that, as Junior Project Lead & Office Operations at zett.events (2023–2025), I managed commercial and organizational project planning—including budget control, quote calculation, invoicing, vendor management, and internal scheduling and payroll administration for working students and temporary staff.`;
-
-        let enP3 = ``;
-        if (isHr) {
-          enP3 = `Additionally, during my tenure as a Working Student in Quality Management, Recruiting & PR at Vergleich.org (VGL Publishing AG), I independently handled recruiting, contract processing, and onboarding of new freelancers while coordinating external partners. Paired with my three-year dual B.A. study program with Accor Hotels in Berlin (where I managed front- and back-office operations, guest relations, and accounting support) and my ongoing B.Sc. in Computer Science at TU Berlin, I bridge strong people and organizational skills with advanced IT proficiency (MS Office 365, HTML/CSS, Python basics, and process automation).`;
-        } else if (isEvt) {
-          enP3 = `Complementing my agency work at zett.events, I have served as an on-site Event Team Lead since 2019 for trade fairs, congresses, and corporate events across Berlin, overseeing team briefings, check-in workflows, and direct client liaison. Furthermore, from my dual B.A. degree in Business Administration with Accor Hotels (including a Marketing & PR semester abroad at Universidad de Girona, Spain) and my work at Vergleich.org, I bring hands-on experience in hospitality, PR, quality assurance, and media editing (DaVinci Resolve, Wondershare Filmora, Adobe Audition CC), alongside advanced MS Office and IT process optimization skills from my current B.Sc. studies at TU Berlin.`;
-        } else {
-          enP3 = `Earlier stations in my career further broadened my commercial and administrative toolkit: as a Working Student at Vergleich.org (VGL Publishing AG), I managed recruiting, contract administration, quality assurance, and XML/HTML file maintenance, while during my dual B.A. degree with Accor Hotels in Berlin, I steered front- and back-office operations, contract administration, and preparatory accounting. Studying B.Sc. Computer Science at TU Berlin (directly at Zoologischer Garten / Charlottenburg) allows me to combine this commercial background with strong IT affinity (advanced Excel/Word/PowerPoint, HTML/CSS/Python basics, workflow digitization). I communicate fluently in German (native), Vietnamese (native), English (C2 Proficient), and Spanish (B1), and am flexibly available for 15 to 20 hours per week.`;
-        }
-
-        let enP4 = `I would be delighted to bring my structured, solution-oriented approach and positive energy to your team at ${comp} as ${cleanTitle}. Thank you very much for your time and consideration—I look forward to the opportunity of a personal interview.`;
-
-        return enHeader + `Dear Recruiting Team at ${comp},\n\n${enP1}\n\n${enP2}\n\n${enP3}\n\n${enP4}\n\nSincerely,\nNancy Schütze`;
-      }
-
-      // Full, deeply tailored 4-paragraph German DIN 5008 Anschreiben for Nancy
-      let deRoleHook = "ein reibungslos organisiertes Office, strukturierte kaufmännische Prozesse und eine proaktive Teamunterstützung";
-      if (isKanzlei) deRoleHook = "eine präzise Kanzlei- und Sekretariatsorganisation, verlässliche Fristenkontrolle sowie eine souveräne Mandantenkommunikation";
-      else if (isEvt) deRoleHook = "eine durchdachte Projekt- und Eventorganisation, präzise Budget- und Dienstleistersteuerung sowie kreative Umsetzungsstärke";
-      else if (isHr) deRoleHook = "strukturierte Recruiting- und Onboarding-Prozesse, verlässliche Personaleinsatzplanung und eine herzliche Teamkultur";
-      else if (isAcct) deRoleHook = "gewissenhafte vorbereitende Buchhaltung, präzise Angebots- undchnungsabwicklung sowie strukturierte Backoffice-Prozesse".replace("undchnungs", "und Rechnungs");
-
-      let deP1 = `mit großem Interesse bewerbe ich mich bei ${comp} als ${cleanTitle}. Da ich bereits als Office Managerin & Kanzleiassistenz in einer Berliner Rechtsanwaltskanzlei sowie als Junior Projektleiterin & Office Operations in einer Eventagentur die Gesamtverantwortung für Sekretariat, Backoffice und kaufmännische Abläufe übernommen habe, weiß ich aus der Praxis, wie entscheidend ${deRoleHook} für den gemeinsamen Erfolg sind. Mit meinem abgeschlossenen dualen Bachelorstudium in Business Administration (B.A.) und meinem aktuellen Zweitstudium der Informatik (B.Sc.) an der Technischen Universität Berlin bringe ich genau die Verbindung aus kaufmännischer Routine, Organisationstalent und digitaler Prozessstärke mit, um Ihr Team ab dem ersten Tag wirksam zu entlasten.`;
-
-      let deP2 = `In meiner jüngsten Position als Office Managerin & Kanzleiassistenz bei der SERS Rechtsanwaltsgesellschaft mbH in Berlin (2025–2026) habe ich den gesamten Kanzlei- und Sekretariatsbetrieb eigenverantwortlich gesteuert. Zu meinen täglichen Kernaufgaben zählten die schriftliche und telefonische Korrespondenz mit Mandanten, Gerichten und Behörden auf Deutsch (Muttersprache) und Englisch (C2), die strukturierte Dokumenten- und Fristenorganisation, die vorbereitende Buchhaltung und Rechnungserstellung sowie die Digitalisierung interner Büroabläufe. Zuvor verantwortete ich als Junior Projektleitung & Office Operations bei zett.events (2023–2025) die kaufmännische und organisatorische Planung von Projekten inklusive Budget-, Event- und Personalsteuerung, eigenständiger Angebotskalkulation sowie der Einsatzplanung und Abrechnung für Werkstudierende und Aushilfen.`;
-
-      let deP3 = ``;
-      if (isHr) {
-        deP3 = `Darüber hinaus konnte ich bereits als Werkstudentin im Bereich Qualitätsmanagement, Recruiting & PR bei Vergleich.org (VGL Publishing AG) fundierte Erfahrung im Recruiting, in der Vertragsabwicklung und im Onboarding neuer Freelancer sowie in der Steuerung externer Dienstleister sammeln. Ergänzt durch mein duales B.A.-Studium bei Accor Hotels in Berlin (Front- & Back-Office, Vertragsverwaltung und Buchhaltung) sowie mein aktuelles Informatikstudium an der TU Berlin (Campus Charlottenburg / Zoologischer Garten) verbinde ich hohe Menschenkenntnis und Kommunikationsstärke mit ausgeprägter IT-Affinität (MS Office 365 auf Fortgeschrittenen-Niveau, digitale Akten- und Prozessoptimierung sowie Grundlagen in HTML, CSS und Python). Als Muttersprachlerin in Deutsch und Vietnamesisch mit verhandlungssicherem Englisch (C2) und gutem Spanisch (B1) stehe ich Ihnen flexibel mit 15 bis 20 Wochenstunden zur Verfügung.`;
-      } else if (isEvt) {
-        deP3 = `Ergänzend zu meiner Projektleitung bei zett.events bin ich seit 2019 nebenberuflich als Vor-Ort-Teamleiterin bei Messen, Kongressen und Corporate Events tätig, wo ich das Briefing und die Koordination der Einsatzteams sowie die direkte Betreuung der Auftraggeber verantworte. Aus meinem dualen Bachelorstudium (B.A. Business Administration) bei Accor Hotels in Berlin – inklusive eines Auslandssemesters im Schwerpunkt Marketing & PR an der Universidad de Girona in Spanien – sowie meiner Tätigkeit bei Vergleich.org (Qualitätsmanagement & PR) bringe ich zudem fundierte Erfahrung in Guest Relations, Text- und Qualitätsmanagement sowie im Video- und Audio-Editing (DaVinci Resolve, Wondershare Filmora, Adobe Audition CC) mit. Durch mein laufendes Studium an der TU Berlin (Standort Charlottenburg / Zoo) bin ich mit 15 bis 20 Wochenstunden zeitlich und örtlich besonders flexibel einsatzbereit.`;
-      } else {
-        deP3 = `Weitere wertvolle Praxiserfahrung sammelte ich als Werkstudentin bei Vergleich.org (VGL Publishing AG) im Recruiting, in der Vertragsabwicklung, Qualitätssicherung und technischen Datenpflege (XML/HTML) sowie während meines dreijährigen dualen Bachelorstudiums bei Accor Hotels in Berlin, wo ich das operative Front- und Back-Office, das Beschwerdemanagement sowie die vorbereitende Buchhaltung und Vertragsverwaltung unterstützte. Durch mein laufendes Studium (B.Sc. Informatik) an der Technischen Universität Berlin direkt am Standort Charlottenburg / Zoologischer Garten verbinde ich diese mehrjährige kaufmännische Berufserfahrung mit hoher digitaler Kompetenz (fortgeschrittenes MS Office, IT-Prozessoptimierung sowie HTML/CSS/Python-Grundlagen). Neben Deutsch und Vietnamesisch als Muttersprachen kommuniziere ich verhandlungssicher auf Englisch (C2) sowie auf Spanisch (B1) und bin mit 15 bis 20 Wochenstunden flexibel einsetzbar.`;
-      }
-
-      let deP4 = `Gerne möchte ich meine strukturierte, lösungsorientierte Arbeitsweise und meine positive Energie bei ${comp} als ${cleanTitle} einbringen. Über die Einladung zu einem persönlichen Kennenlernen freue ich mich sehr.`;
-
-      return header + `Sehr geehrtes Recruiting-Team von ${comp},\n\n${deP1}\n\n${deP2}\n\n${deP3}\n\n${deP4}\n\nMit freundlichen Grüßen\nNancy Schütze`;
     }
 
     function copyGeneratedCoverLetter(jobId) {
@@ -2582,11 +2301,11 @@
     }
 
     function openAutofillModal() {
-      const bookmarkletCode = "javascript:(function(){const info={firstName:'Nancy',lastName:'Schütze',fullName:'Nancy Schütze',email:'schuetzenancy@gmx.de',phone:'+4915237164097',city:'Berlin',zip:'13125',linkedin:'https://www.linkedin.com/in/schuetzenancy/',hours:'15-20',start:'Ab sofort'};document.querySelectorAll('input,textarea,select').forEach(el=>{const n=(el.name||el.id||el.placeholder||el.getAttribute('aria-label')||'').toLowerCase();if(!el.value){if(n.includes('first')||n.includes('vorname'))el.value=info.firstName;else if(n.includes('last')||n.includes('nachname'))el.value=info.lastName;else if(n.includes('name')&&!n.includes('user'))el.value=info.fullName;else if(n.includes('mail'))el.value=info.email;else if(n.includes('phone')||n.includes('tel')||n.includes('mobil'))el.value=info.phone;else if(n.includes('city')||n.includes('stadt')||n.includes('ort'))el.value=info.city;else if(n.includes('zip')||n.includes('plz'))el.value=info.zip;else if(n.includes('linkedin'))el.value=info.linkedin;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));}});alert('✨ Formulardaten erfolgreich ausgefüllt!');})();";
+      const bookmarkletCode = "javascript:(function(){const info={firstName:'Guillermo',lastName:'Hernandez Lopez',fullName:'Guillermo Hernandez',email:'guillejhl@gmail.com',phone:'+4917685136597',city:'Berlin',zip:'12203',linkedin:'https://www.linkedin.com/in/guillermo-hernandez-lopez/',hours:'20',start:'Ab sofort'};document.querySelectorAll('input,textarea,select').forEach(el=>{const n=(el.name||el.id||el.placeholder||el.getAttribute('aria-label')||'').toLowerCase();if(!el.value){if(n.includes('first')||n.includes('vorname'))el.value=info.firstName;else if(n.includes('last')||n.includes('nachname'))el.value=info.lastName;else if(n.includes('name')&&!n.includes('user'))el.value=info.fullName;else if(n.includes('mail'))el.value=info.email;else if(n.includes('phone')||n.includes('tel')||n.includes('mobil'))el.value=info.phone;else if(n.includes('city')||n.includes('stadt')||n.includes('ort'))el.value=info.city;else if(n.includes('zip')||n.includes('plz'))el.value=info.zip;else if(n.includes('linkedin'))el.value=info.linkedin;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));}});alert('✨ Formulardaten erfolgreich ausgefüllt!');})();";
       const bLink = document.getElementById('autofillBookmarkletLink');
       if (bLink) {
         bLink.href = bookmarkletCode;
-        bLink.textContent = activeUser === 'nancy' ? '⚡ Nancy 1-Klick Autofill' : '⚡ Guillermo 1-Click Autofill';
+        bLink.textContent = '⚡ Guillermo 1-Click Autofill';
       }
       document.getElementById('autofillModal').classList.remove('hidden');
     }

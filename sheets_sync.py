@@ -132,11 +132,8 @@ def check_gsheets_auth() -> bool:
 
 def sync_jobs_to_google_sheet(
     guillermo_jobs: List[Dict[str, Any]],
-    nancy_jobs: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     csv_path = export_local_csv(guillermo_jobs, "Job_Tracker_Quick_Apply.csv")
-    if nancy_jobs is not None:
-        export_local_csv(nancy_jobs, "Nancy_Job_Tracker_Quick_Apply.csv")
 
     if not check_gsheets_auth():
         return {
@@ -156,35 +153,19 @@ def sync_jobs_to_google_sheet(
         return bool(u and u.lower() not in ["nan", "none", "null", ""] and (u.startswith("http://") or u.startswith("https://")) and "google.com/search" not in u)
 
     guillermo_jobs = [j for j in guillermo_jobs if has_apply_url(j)]
-    if nancy_jobs is not None:
-        nancy_jobs = [j for j in nancy_jobs if has_apply_url(j)]
 
-    # Preserve any manual status edits made by Nancy or Guillermo in Google Sheets
+    # Preserve any manual status edits made in Google Sheets
     g_statuses = fetch_existing_sheet_statuses(sheet_id, "Guillermo - PM & AI")
     for j in guillermo_jobs:
         k = f"{str(j.get('company','')).strip().lower()}|{str(j.get('title','')).strip().lower()}"
         if k in g_statuses:
             j["status"] = g_statuses[k]
 
-    if nancy_jobs is not None:
-        n_statuses = fetch_existing_sheet_statuses(sheet_id, "Nancy - Office Mgmt (Zoo)")
-        for j in nancy_jobs:
-            k = f"{str(j.get('company','')).strip().lower()}|{str(j.get('title','')).strip().lower()}"
-            if k in n_statuses:
-                j["status"] = n_statuses[k]
-
     g_rows = [SHEET_HEADERS] + [_job_to_row(j) for j in guillermo_jobs]
     batch_payload = [
         {"op": "clear", "range": "'Guillermo - PM & AI'!A1:P500"},
         {"op": "write", "range": "'Guillermo - PM & AI'!A1", "data": g_rows},
     ]
-
-    if nancy_jobs is not None:
-        n_rows = [SHEET_HEADERS] + [_job_to_row(j) for j in nancy_jobs]
-        batch_payload.extend([
-            {"op": "clear", "range": "'Nancy - Office Mgmt (Zoo)'!A1:P500"},
-            {"op": "write", "range": "'Nancy - Office Mgmt (Zoo)'!A1", "data": n_rows},
-        ])
 
     batch_file = DATA_DIR / "sheets_batch_sync.json"
     with open(batch_file, "w", encoding="utf-8") as f:
@@ -206,7 +187,7 @@ def sync_jobs_to_google_sheet(
 
     return {
         "synced": True,
-        "rows_written": len(guillermo_jobs) + (len(nancy_jobs) if nancy_jobs else 0),
+        "rows_written": len(guillermo_jobs),
         "spreadsheet_id": sheet_id,
         "spreadsheet_url": settings["spreadsheet_url"],
         "local_csv": str(csv_path),

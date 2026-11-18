@@ -28,7 +28,7 @@ DASHBOARD_HTML_PATH = BASE_DIR / "dashboard.html"
 ARTIFACT_DASHBOARD_PATH = Path(r"C:\Users\guill\.gemini\antigravity\brain\e708b6f5-3e3c-4683-86c2-48a58698cce4\job_dashboard.html")
 CURRENT_CONV_ARTIFACT_PATH = Path(r"C:\Users\guill\.gemini\antigravity\brain\32be1096-bb4f-4bfd-97b7-f355250ca926\job_dashboard.html")
 
-RECIPIENT_EMAILS = ["guillejhl@gmail.com", "schuetzenc@gmail.com"]
+RECIPIENT_EMAILS = ["guillejhl@gmail.com"]
 GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1o2r4Qvn9SL7gOa05P-up9tiwnCXPmcnOG3kttL_H0Fk/edit"
 REMOTE_WEB_URL = os.environ.get("JOB_DASHBOARD_URL", "https://guillermohern023.github.io/berlin-job-applier/")
 
@@ -38,15 +38,6 @@ from tailor import (
     select_tailored_content,
     generate_job_application_bundle,
 )
-from nancy_engine import (
-    load_nancy_profile,
-    score_nancy_job,
-    select_nancy_tailored_content,
-    generate_nancy_application_bundle,
-    generate_nancy_master_cv,
-    scrape_nancy_jobs,
-)
-from nancy_docx_generator import build_nancy_cv_docx
 from sheets_sync import sync_jobs_to_google_sheet
 
 
@@ -179,10 +170,9 @@ def prune_and_refresh_job_ages(jobs, max_days=10):
 
 def run_fresh_scrape_if_requested(do_scrape: bool):
     g_jobs = load_json(DATA_DIR / "jobs_db.json", [])
-    n_jobs = load_json(DATA_DIR / "nancy_jobs_db.json", [])
 
     if do_scrape:
-        print("[1/5] Running live LinkedIn & Indeed scrape for Guillermo & Nancy...")
+        print("[1/5] Running live LinkedIn & Indeed scrape for Guillermo...")
         from scraper import run_job_scrape
         try:
             res_g = run_job_scrape(
@@ -203,55 +193,25 @@ def run_fresh_scrape_if_requested(do_scrape: bool):
         except Exception as e:
             print(f"  -> Warning during Guillermo scrape: {e}")
 
-        try:
-            res_n = scrape_nancy_jobs(
-                search_terms=[
-                    "Werkstudent Office Management",
-                    "Werkstudent Teamassistenz",
-                    "Werkstudent Assistenz",
-                    "Werkstudent Backoffice",
-                    "Office Manager Teilzeit",
-                    "Working Student Office Management",
-                    "Working Student Team Assistant",
-                    "Werkstudent Verwaltung",
-                    "Werkstudent HR Assistenz",
-                    "Werkstudent Event Organisation",
-                ],
-                location="Berlin, Germany",
-                results_wanted=15,
-                hours_old=168,
-            )
-            n_jobs = load_json(DATA_DIR / "nancy_jobs_db.json", n_jobs)
-            print(f"  -> Nancy scrape complete (+{res_n.get('added_count', 0)} new roles, {len(n_jobs)} total).")
-        except Exception as e:
-            print(f"  -> Warning during Nancy scrape: {e}")
-
     # Enforce strict freshness policy: prune anything older than 1.5 weeks (10 days)
     g_jobs, g_pruned = prune_and_refresh_job_ages(g_jobs, max_days=10)
-    n_jobs, n_pruned = prune_and_refresh_job_ages(n_jobs, max_days=10)
-    print(f"  -> Job Lifecycle Audit: Pruned {g_pruned} stale Guillermo jobs and {n_pruned} stale Nancy jobs (>1.5 weeks / 10 days old).")
-    print(f"  -> Active Fresh Jobs: {len(g_jobs)} for Guillermo, {len(n_jobs)} for Nancy.")
+    print(f"  -> Job Lifecycle Audit: Pruned {g_pruned} stale jobs (>1.5 weeks / 10 days old).")
+    print(f"  -> Active Fresh Jobs: {len(g_jobs)}.")
     from metadata_enricher import enrich_jobs_metadata
     print("  -> Fetching live applicant counts and posting ages...")
     enrich_jobs_metadata(g_jobs[:25], force_refresh=True)
-    enrich_jobs_metadata(n_jobs[:25], force_refresh=True)
     enrich_jobs_metadata(g_jobs, force_refresh=False)
-    enrich_jobs_metadata(n_jobs, force_refresh=False)
 
     save_json(DATA_DIR / "jobs_db.json", g_jobs)
-    save_json(DATA_DIR / "nancy_jobs_db.json", n_jobs)
 
-    return g_jobs, n_jobs
+    return g_jobs
 
 
-def ensure_top_jobs_tailored(g_jobs, n_jobs):
+def ensure_top_jobs_tailored(g_jobs):
     print("[2/5] Ensuring Master CVs (PDF + Word) and Top Matches have Tailored 1-Page Bundles...")
     g_profile = load_master_profile()
-    n_profile = load_nancy_profile()
 
     generate_master_cv()
-    generate_nancy_master_cv()
-    build_nancy_cv_docx(n_profile, OUTPUT_DIR / "Nancy_Schuetze_Lebenslauf_Master.docx")
 
     # Auto-tailor top 8 Guillermo jobs if not yet tailored
     g_tailored_count = 0
@@ -277,35 +237,11 @@ def ensure_top_jobs_tailored(g_jobs, n_jobs):
             "cover_letter_paragraphs": j.get("cover_letter_paragraphs") or t.get("cover_letter_paragraphs", []),
         }
 
-    # Auto-tailor top 6 Nancy jobs if not yet tailored
-    n_tailored_count = 0
-    for j in n_jobs:
-        if j.get("cv_url"):
-            n_tailored_count += 1
-            continue
-        if n_tailored_count < 6 and j.get("match_score", 0) >= 75:
-            bundle = generate_nancy_application_bundle(j)
-            j["cv_pdf"] = bundle.get("cv_pdf", "")
-            j["cover_letter_pdf"] = bundle.get("cover_letter_pdf", "")
-            j["cv_url"] = bundle["cv_url"]
-            j["cover_letter_url"] = bundle["cover_letter_url"]
-            if j.get("status") == "New":
-                j["status"] = "Ready to Apply"
-            n_tailored_count += 1
-
-    for j in n_jobs:
-        t = select_nancy_tailored_content(j, n_profile)
-        j["tailored_preview"] = {
-            "selected_bullets": [],
-            "cover_letter_paragraphs": j.get("cover_letter_paragraphs") or t.get("cover_letter_paragraphs", []),
-        }
-
     save_json(DATA_DIR / "jobs_db.json", g_jobs)
-    save_json(DATA_DIR / "nancy_jobs_db.json", n_jobs)
-    return g_jobs, n_jobs
+    return g_jobs
 
 
-def build_independent_website(g_jobs, n_jobs):
+def build_independent_website(g_jobs):
     """
     Builds a 100% independent static website inside docs/ (ready for GitHub Pages, Netlify, Vercel)
     and standalone dashboard.html with all jobs, tailored previews, and PDF/DOCX files bundled.
@@ -331,19 +267,10 @@ def build_independent_website(g_jobs, n_jobs):
         "spreadsheet_url": GOOGLE_SHEET_URL,
         "all_auto1_bullets": all_auto1_bullets,
         "jobs": g_jobs,
-        "nancy_jobs": n_jobs,
     }
 
     if (STATIC_DIR / "docx.umd.js").exists():
         shutil.copy2(STATIC_DIR / "docx.umd.js", DOCS_DIR / "docx.umd.js")
-    nancy_assets_src = DATA_DIR / "nancy_assets"
-    if nancy_assets_src.exists():
-        for target_base in [OUTPUT_DIR, DOCS_DIR / "files", BASE_DIR / "files"]:
-            target_assets = target_base / "nancy_assets"
-            if target_assets.exists():
-                shutil.rmtree(target_assets)
-            shutil.copytree(nancy_assets_src, target_assets)
-
     template_html = (STATIC_DIR / "index.html").read_text(encoding="utf-8")
     safe_json = json.dumps(static_state, ensure_ascii=False).replace("</", "<\\/")
     state_script = f"<script>window.STATIC_STATE = {safe_json};</script>"
@@ -361,13 +288,12 @@ def build_independent_website(g_jobs, n_jobs):
     print(f"  -> Independent site built at: {DOCS_DIR / 'index.html'} and {DASHBOARD_HTML_PATH}")
 
 
-def build_job_cards_email_html(jobs_list, is_nancy=False, limit=6):
+def build_job_cards_email_html(jobs_list, limit=6):
     rows_html = []
     # 1. Filter out jobs that the user is not interested in, archived, or already applied to
     active_jobs = [
         j for j in jobs_list
         if str(j.get("status", "")).lower() not in ["applied", "not interested", "archived", "rejected"]
-        and not (is_nancy and j.get("is_100_onsite"))
     ]
 
     # 2. Sort by Freshness first (days_ago 0 = Today, 1 = Yesterday), then by match_score
@@ -380,9 +306,9 @@ def build_job_cards_email_html(jobs_list, is_nancy=False, limit=6):
     sorted_jobs = sorted(active_jobs, key=sort_key)
     top_jobs = sorted_jobs[:limit]
 
-    accent = "#db2777" if is_nancy else "#4f46e5"
-    badge_bg = "#fdf2f8" if is_nancy else "#eef2ff"
-    badge_fg = "#9d174d" if is_nancy else "#3730a3"
+    accent = "#4f46e5"
+    badge_bg = "#eef2ff"
+    badge_fg = "#3730a3"
 
     for idx, j in enumerate(top_jobs, 1):
         days_ago = j.get("days_ago", 99)
@@ -398,9 +324,7 @@ def build_job_cards_email_html(jobs_list, is_nancy=False, limit=6):
         posted = j.get("posted_ago") or j.get("date_posted") or "Recent"
         apps = j.get("applicants_text") or "Direct Portal"
         edited = "✅ CV & CL Edited" if j.get("cv_url") else "⏳ Ready to Tailor"
-        if is_nancy and j.get("cv_url"):
-            edited = "✅ Lebenslauf & Anschreiben bereit"
-        lang_fit = j.get("language_req") or ("📍 Near Zoo" if is_nancy else "🇬🇧 English Friendly")
+        lang_fit = j.get("language_req") or "🇬🇧 English Friendly"
         url = j.get("job_url", GOOGLE_SHEET_URL)
         why = j.get("why_fits", "")
 
@@ -433,10 +357,10 @@ def build_job_cards_email_html(jobs_list, is_nancy=False, limit=6):
                   </td>
                   <td valign="middle" align="right" width="135" style="min-width: 125px;">
                     <a href="{url}" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: {accent}; color: #ffffff !important; font-size: 12px; font-weight: 800; text-decoration: none; padding: 10px 14px; border-radius: 8px; text-align: center;">
-                      {"⚡ Bewerben ➔" if is_nancy else "⚡ Quick Apply ➔"}
+                      ⚡ Quick Apply ➔
                     </a>
-                    <a href="{REMOTE_WEB_URL}#user={'nancy' if is_nancy else 'guillermo'}" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 6px; font-size: 11px; color: #94a3b8; text-decoration: underline; text-align: center;">
-                      ❌ {"Nicht interessiert" if is_nancy else "Not Interested"}
+                    <a href="{REMOTE_WEB_URL}#user=guillermo" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 6px; font-size: 11px; color: #94a3b8; text-decoration: underline; text-align: center;">
+                      ❌ Not Interested
                     </a>
                   </td>
                 </tr>
@@ -448,23 +372,19 @@ def build_job_cards_email_html(jobs_list, is_nancy=False, limit=6):
     return "\n".join(rows_html)
 
 
-def format_daily_job_email(g_jobs, n_jobs, recipients=None):
+def format_daily_job_email(g_jobs, recipients=None):
     target_recipients = recipients or RECIPIENT_EMAILS
     today_str = datetime.now().strftime("%b %d, %Y")
     g_ready = sum(1 for j in g_jobs if j.get("cv_url"))
-    n_ready = sum(1 for j in n_jobs if j.get("cv_url"))
     g_fresh = [j for j in g_jobs if (j.get("days_ago") or 99) <= 7 and not ("C1" in (j.get("language_req") or ""))]
     if len(g_fresh) < 5:
         g_fresh = g_jobs[:5]
-    n_fresh = [j for j in n_jobs if (j.get("days_ago") or 99) <= 10]
-    if len(n_fresh) < 5:
-        n_fresh = n_jobs[:5]
 
-    subject = f"🚀 Daily Berlin Job Applier Digest ({today_str}): {len(g_fresh)} Top PM/AI Roles + {len(n_fresh)} Office Mgmt Roles Near Zoo"
+    subject = f"🚀 Daily Berlin Job Applier Digest ({today_str}): {len(g_fresh)} Top PM/AI Roles"
 
     plain_lines = [
         f"=== DAILY BERLIN JOB APPLIER & CV TAILOR DIGEST ({today_str}) ===",
-        f"Live Google Sheet (Guillermo & Nancy Tabs): {GOOGLE_SHEET_URL}",
+        f"Live Google Sheet: {GOOGLE_SHEET_URL}",
         f"Independent Web Dashboard: {REMOTE_WEB_URL}",
         "",
         f"--- 👨‍💻 GUILLERMO: TOP WORKING STUDENT PM / PRODUCT / AI ROLES ({g_ready} Pre-Tailored PDFs Ready) ---",
@@ -476,19 +396,9 @@ def format_daily_job_email(g_jobs, n_jobs, recipients=None):
             f"   Apply: {j.get('job_url')}"
         )
 
-    plain_lines.append("")
-    plain_lines.append(f"--- 👩‍💼 NANCY: TOP OFFICE MANAGEMENT ROLES NEAR ZOOLOGISCHER GARTEN ({n_ready} Pre-Tailored PDFs Ready) ---")
-    for idx, j in enumerate(n_fresh[:5], 1):
-        plain_lines.append(
-            f"{idx}. [{j.get('match_score')}%] {j.get('title')} @ {j.get('company')} ({j.get('location')}) | "
-            f"{j.get('posted_ago', 'Recent')} | {j.get('applicants_text', 'Direct')} | Edited: {'YES' if j.get('cv_url') else 'NO'}\n"
-            f"   Apply: {j.get('job_url')}"
-        )
-
     plain_text = "\n".join(plain_lines)
 
-    g_cards_html = build_job_cards_email_html(g_fresh, is_nancy=False, limit=5)
-    n_cards_html = build_job_cards_email_html(n_fresh, is_nancy=True, limit=5)
+    g_cards_html = build_job_cards_email_html(g_fresh, limit=5)
 
     html_email = f"""<!DOCTYPE html>
 <html>
@@ -510,10 +420,10 @@ def format_daily_job_email(g_jobs, n_jobs, recipients=None):
                 🤖 Automated Daily Berlin Job Applier &amp; CV Tailor
               </div>
               <h1 style="margin: 0 0 6px 0; font-size: 22px; font-weight: 900; color: #ffffff;">
-                Guillermo &amp; Nancy — Daily Job Matches
+                Guillermo — Daily Job Matches
               </h1>
               <p style="margin: 0; color: #94a3b8; font-size: 13px;">
-                {today_str} • {len(g_jobs)} Roles Tracked for Guillermo ({g_ready} Tailored) • {len(n_jobs)} Roles Tracked for Nancy ({n_ready} Tailored)
+                {today_str} • {len(g_jobs)} Roles Tracked for Guillermo ({g_ready} Tailored)
               </p>
             </td>
           </tr>
@@ -525,7 +435,7 @@ def format_daily_job_email(g_jobs, n_jobs, recipients=None):
                 <tr>
                   <td width="50%" style="padding-right: 6px; padding-bottom: 10px;">
                     <a href="{GOOGLE_SHEET_URL}" target="_blank" rel="noopener noreferrer" style="display: block; background-color: #059669; color: #ffffff !important; font-size: 13px; font-weight: 800; text-decoration: none; padding: 12px 10px; border-radius: 8px; text-align: center;">
-                      📗 Open Live Google Sheet (2 Tabs) ➔
+                      📗 Open Live Google Sheet ➔
                     </a>
                   </td>
                   <td width="50%" style="padding-left: 6px; padding-bottom: 10px;">
@@ -554,24 +464,6 @@ def format_daily_job_email(g_jobs, n_jobs, recipients=None):
             </td>
           </tr>
 
-          <!-- Nancy Section -->
-          <tr>
-            <td style="padding: 12px 20px 20px 20px;">
-              <div style="border-top: 2px solid #f1f5f9; padding-top: 18px; font-size: 16px; font-weight: 900; color: #831843; margin-bottom: 4px;">
-                👩‍💼 Nancy's Top Office Management Matches (Near Zoologischer Garten / City West)
-              </div>
-              <div style="font-size: 12px; color: #64748b; margin-bottom: 14px;">
-                Prioritized for Charlottenburg, Savignyplatz, Kurfürstendamm &amp; Zoologischer Garten (right next to TU Berlin).
-              </div>
-              {n_cards_html}
-              <div style="text-align: center; margin-top: 12px;">
-                <a href="{REMOTE_WEB_URL}/?user=nancy" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #fce7f3; color: #9d174d !important; border: 1px solid #f9a8d4; font-size: 12px; font-weight: 800; text-decoration: none; padding: 10px 18px; border-radius: 8px;">
-                  👩‍💼 Open Nancy's Direct Web Tab ➔
-                </a>
-              </div>
-            </td>
-          </tr>
-
           <!-- Footer -->
           <tr>
             <td style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; padding: 14px 20px; text-align: center; color: #94a3b8; font-size: 11px; line-height: 1.6;">
@@ -591,7 +483,7 @@ def format_daily_job_email(g_jobs, n_jobs, recipients=None):
     return subject, plain_text, html_email
 
 
-def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs, recipients=None):
+def send_job_digest_email(subject, plain_text, html_email, g_jobs, recipients=None):
     target_recipients = recipients or RECIPIENT_EMAILS
     smtp_host = os.environ.get("SMTP_HOST")
     smtp_port = int(os.environ.get("SMTP_PORT", 587))
@@ -637,10 +529,8 @@ def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs, recip
         # Attach Master PDFs + #1 Top Tailored CV & Cover Letter for each
         attachments = [
             OUTPUT_DIR / "Guillermo_Hernandez_CV_Master.pdf",
-            OUTPUT_DIR / "Nancy_Schuetze_Lebenslauf_Master.pdf",
-            OUTPUT_DIR / "Nancy_Schuetze_Lebenslauf_Master.docx",
         ]
-        # Add #1 tailored job PDF for Guillermo & Nancy if available
+        # Add #1 tailored job PDF for Guillermo if available
         for j in g_jobs:
             p_cv = j.get("cv_pdf") or j.get("cv_pdf_path")
             p_cl = j.get("cover_letter_pdf") or j.get("cover_letter_pdf_path")
@@ -649,15 +539,6 @@ def send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs, recip
                 if p_cl and Path(p_cl).exists():
                     attachments.append(Path(p_cl))
                 break
-        for j in n_jobs:
-            p_cv = j.get("cv_pdf") or j.get("cv_pdf_path")
-            p_cl = j.get("cover_letter_pdf") or j.get("cover_letter_pdf_path")
-            if p_cv and Path(p_cv).exists():
-                attachments.append(Path(p_cv))
-                if p_cl and Path(p_cl).exists():
-                    attachments.append(Path(p_cl))
-                break
-
         for file_path in attachments:
             if file_path.exists():
                 with open(file_path, "rb") as fp:
@@ -705,28 +586,25 @@ def main():
     for arg in sys.argv:
         if arg == "--only-guillermo":
             custom_recipients = ["guillejhl@gmail.com"]
-        elif arg == "--only-nancy":
-            custom_recipients = ["schuetzenc@gmail.com"]
         elif arg.startswith("--recipient="):
             custom_recipients = [arg.split("=", 1)[1].strip()]
 
-    g_jobs, n_jobs = run_fresh_scrape_if_requested(do_scrape=do_scrape)
-    g_jobs, n_jobs = ensure_top_jobs_tailored(g_jobs, n_jobs)
-    build_independent_website(g_jobs, n_jobs)
+    g_jobs = run_fresh_scrape_if_requested(do_scrape=do_scrape)
+    g_jobs = ensure_top_jobs_tailored(g_jobs)
+    build_independent_website(g_jobs)
 
-    print("[4/5] Syncing both tabs to Google Sheets...")
+    print("[4/5] Syncing to Google Sheets...")
     try:
-        res = sync_jobs_to_google_sheet(g_jobs, n_jobs)
+        res = sync_jobs_to_google_sheet(g_jobs)
         print(f"  -> Google Sheets synced: {res.get('rows_written')} total rows ({res.get('spreadsheet_url')}).")
         # Save back any preserved statuses from Google Sheets to disk
         save_json(DATA_DIR / "jobs_db.json", g_jobs)
-        save_json(DATA_DIR / "nancy_jobs_db.json", n_jobs)
     except Exception as e:
         print(f"  -> Google Sheets sync warning: {e}")
 
     if should_send_email:
-        subject, plain_text, html_email = format_daily_job_email(g_jobs, n_jobs, recipients=custom_recipients)
-        send_job_digest_email(subject, plain_text, html_email, g_jobs, n_jobs, recipients=custom_recipients)
+        subject, plain_text, html_email = format_daily_job_email(g_jobs, recipients=custom_recipients)
+        send_job_digest_email(subject, plain_text, html_email, g_jobs, recipients=custom_recipients)
     else:
         print("  -> Email dispatch skipped (silent mode). Only the 08:20 CET morning run sends emails.")
 
