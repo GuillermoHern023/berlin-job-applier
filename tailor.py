@@ -504,17 +504,23 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
         if "new_project" in b["tags"]:
             b_score += 10
         # Extra boost if specific words match
-        if b["id"] == "qa_review_platform" and any(w in desc_lower for w in ["qa", "quality", "audit", "review", "evaluation", "ai", "product", "tool"]):
+        if b["id"] == "qa_review_platform" and any(w in desc_lower for w in ["qa", "quality", "audit", "review", "evaluation", "ai", "product", "tool", "n8n"]):
             b_score += 25
-        if b["id"] == "chatbot_kb_maintenance" and any(w in desc_lower for w in ["vector", "database", "knowledge", "rag", "chatbot", "llm"]):
+        if b["id"] == "faq_voicebot_maintenance" and any(w in desc_lower for w in ["parloa", "elevenlabs", "voice", "speech", "prompt", "faq", "conversational", "stt", "tts"]):
             b_score += 25
         if b["id"] == "kpi_reporting" and any(w in desc_lower for w in ["sql", "redash", "quantitative", "complex", "data", "kpi", "reporting", "analytics"]):
             b_score += 25
-        if b["id"] == "cross_country_kb" and any(w in desc_lower for w in ["knowledge", "documentation", "international", "cross", "operations", "support"]):
-            b_score += 20
-        if b["id"] == "price_lead_email_tool" and any(w in desc_lower for w in ["automation", "api", "rest", "low-code", "email", "crm", "lead", "workflow"]):
+        if b["id"] == "contract_amendment_tool" and any(w in desc_lower for w in ["contract", "legal", "document", "form", "pdf", "vertrag", "admin", "process"]):
             b_score += 25
-        if b["id"] == "reviews_portal" and any(w in desc_lower for w in ["customer", "review", "trustpilot", "git", "github", "portal"]):
+        if b["id"] == "price_lead_email_tool" and any(w in desc_lower for w in ["automation", "api", "rest", "low-code", "email", "crm", "lead", "workflow", "n8n", "freshdesk"]):
+            b_score += 25
+        if b["id"] == "reviews_portal" and any(w in desc_lower for w in ["customer", "review", "trustpilot", "google", "git", "github", "portal"]):
+            b_score += 25
+        if b["id"] == "feedback_review_automation" and any(w in desc_lower for w in ["feedback", "branch", "filiale", "nps", "review", "categor", "customer feedback"]):
+            b_score += 20
+        if b["id"] == "compass_knowledge_base" and any(w in desc_lower for w in ["knowledge", "wiki", "documentation", "confluence", "notion", "search", "assistant"]):
+            b_score += 20
+        if b["id"] == "overall_impact_summary" and any(w in desc_lower for w in ["impact", "hours", "fte", "efficiency", "initiative", "delivered", "scale"]):
             b_score += 20
         scored_bullets.append((b_score, b))
 
@@ -532,33 +538,34 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
     # Build concise, high-impact Cover Letter paragraphs (Strict 1-Page A4 Guarantee ~220 words)
     if cat_id == "ai_automation":
         project_highlight = (
-            "I drive the rollout and tuning of our AI voice bot across 9 markets (routing millions of calls and lifting answer rates to 85%), while managing knowledge bases for a chatbot handling 30,000+ monthly conversations. "
-            "To streamline model evaluation, I built an internal AI QA web tool with bulk-review pipelines and REST API automations."
+            "I manage voicebot prompting and knowledge architecture using Parloa and ElevenLabs (routing millions of calls and lifting answer rates to 85%), "
+            "and built an internal AI Conversation QA web tool with n8n workflow logic enabling automated bulk-review of 21,833+ conversations."
         )
     elif cat_id == "product_management":
         project_highlight = (
-            "I helped scale our conversational AI products across 9 international markets, routing millions of calls while improving answer rates by 20% and booking conversion to 57.8%. "
-            "To support our operational workflows, I designed and shipped an internal AI QA evaluation web tool with bulk-review pipelines and a centralized customer review portal."
+            "I designed and rolled out an AI-assisted Google Reviews & Trustpilot web portal across 9 markets saving ~443 hours (~1.2 FTE/month), "
+            "engineered automated contract generation engines saving 190+ hours on 2,864 contracts, and scaled conversational voicebots routing millions of calls."
         )
     elif cat_id == "cx_operations":
         project_highlight = (
-            "I supported scaling our AI voice bot across 9 markets to route millions of calls (raising inbound answer rates from 65% to 85%), while maintaining retrieval knowledge bases for an AI chatbot handling 30,000+ monthly inquiries. "
-            "To empower operational teams, I built an automated multi-market knowledge base and custom REST API communication utilities."
+            "I built a centralized Google Reviews & Trustpilot AI management portal saving ~443 hours (~1.2 FTE/month), "
+            "automated customer feedback categorization across ~260 branch locations, and engineered multi-market n8n offer email workflows integrated with Freshdesk."
         )
     else:  # project_management default
         project_highlight = (
-            "I supported the rollout of an AI voice bot across 9 markets routing millions of calls and lifting answer rates by 20%. "
-            "I also oversee knowledge architecture for an AI chatbot handling 30,000+ monthly inquiries, and built internal web tools—including an AI QA evaluation platform and automated REST API offer engines—to standardize team delivery."
+            "I drove the rollout and optimization of an AI voice bot across 9 markets, engineered an automated Contract Amendment (Änderungsvertrag) tool "
+            "saving 190+ hours across 2,864 contracts, and built an internal AI QA evaluation platform with n8n to streamline cross-market delivery."
         )
 
     paragraphs = [
         (
             f"I am writing to apply for the {job_title} role at {company}. "
-            f"With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and hands-on experience at Auto1 Group scaling AI tools and data workflows, "
+            f"With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and hands-on experience at AUTO1 Group engineering internal tools and workflow automations, "
             f"I combine analytical rigor with proactive builder execution to deliver immediate value to your team."
         ),
         (
-            f"In my current role as a Junior Project Manager at Auto1 Group in Berlin, I collaborate closely with product managers, engineers, and regional leads across nine European markets. "
+            f"In my role as Junior Project Manager at AUTO1 Group in Berlin (where I have worked since 2024), I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. "
+            f"In 2026 alone, I have delivered 10 automation and internal tooling initiatives that have saved over 1,070 hours (~1.9 FTE/month measured, with over 5 FTEs total estimated impact). "
             f"{project_highlight}"
         ),
         (

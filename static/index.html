@@ -492,7 +492,7 @@
       localStorage.setItem('app_lang', 'en');
     }
 
-    const CV_LAYOUT_VERSION = 'v6_no_empty_space_vector_pdf';
+    const CV_LAYOUT_VERSION = 'v7_raise_projects_auto1_pool';
     if (localStorage.getItem('cv_layout_version') !== CV_LAYOUT_VERSION) {
       for (let i = localStorage.length - 1; i >= 0; i--) {
         const k = localStorage.key(i);
@@ -2748,13 +2748,13 @@
             ? `Guillermo Hernandez\nSöhtstraße 16 · 12203 Berlin\nMobil: +49 176 8513 6597 · E-Mail: guillejhl@gmail.com\n\n${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}\n\nBerlin, ${today}\n\nBewerbung als ${cleanTitle}\n\n`
             : '';
 
-          let deP2 = `In meiner Rolle als Junior Project Manager bei der AUTO1 Group in Berlin arbeite ich eng mit Product Managern, Entwicklern und regionalen Operations-Teams in 9 europäischen Märkten zusammen. Dabei habe ich den Rollout und die Optimierung unseres KI-Voicebots über 9 Ländermärkte begleitet (Millionen geroutete Anrufe, Steigerung der Annahmequote von 65 % auf 85 % und Buchungskonversion auf 57,8 %) sowie Wissensdatenbanken für einen KI-Chatbot mit 30.000+ monatlichen Anfragen betreut.`;
+          let deP2 = `In meiner Rolle als Junior Project Manager bei der AUTO1 Group (seit 2024) habe ich allein im Jahr 2026 10 interne Tooling- und Automatisierungs-Initiativen umgesetzt, die über 1.070 Arbeitsstunden (~1,9 FTE/Monat gemessen, geschätzt über 5 FTEs) über 9 europäische Märkte hinweg eingespart haben.`;
           if (isProdOps) {
-            deP2 += ` Zudem habe ich interne Web-Tools konzipiert und ausgerollt – darunter eine KI-QA-Evaluierungsplattform mit Bulk-Review-Pipelines und ein automatisiertes Kundenbewertungs-Portal.`;
+            deP2 += ` Dazu gehören ein KI-gestütztes Google Reviews & Trustpilot-Portal (~443 h Ersparnis), ein automatisiertes Vertragsänderungs-Tool (190+ h Ersparnis auf 2.864 Verträgen) sowie die Skalierung unserer KI-Voicebots.`;
           } else if (isData) {
-            deP2 += ` Zudem führe ich quantitative Analysen auf komplexen Datensätzen mit SQL (Redash) und Advanced Excel durch und erstelle automatisierte KPI-Dashboards in Looker Studio und Tableau.`;
+            deP2 += ` Dazu gehören quantitative Analysen mit SQL (Redash) und Live-Dashboards, n8n-automatisierte QA-Evaluierungs-Pipelines für 21.833+ Konversationen sowie automatisierte Branch-Feedback-Auswertungen.`;
           } else {
-            deP2 += ` Zudem habe ich länderübergreifende Echtzeit-Wissensdatenbanken und automatisierte REST-API-Workflows entwickelt, die manuelle Prozesszeiten drastisch verkürzen.`;
+            deP2 += ` Dazu gehören die Betreuung der Voicebot-Prompts via Parloa & ElevenLabs, die Einführung der Compass-Wissensdatenbank und automatisierte n8n-Workflows mit Freshdesk.`;
           }
 
           return deHeader +
@@ -2774,22 +2774,20 @@
 
         let p1 = `I am writing to apply for the ${cleanTitle} role at ${comp}. With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and hands-on experience at AUTO1 Group ${focusSnippet}, I combine analytical rigor with proactive builder execution to deliver immediate value to your team.`;
 
-        let p2 = `At AUTO1 Group, I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. `;
+        let p2 = `In my role as Junior Project Manager at AUTO1 Group in Berlin (where I have worked since 2024), I have delivered 10 automation and internal tooling initiatives in 2026 alone—saving over 1,070 hours (~1.9 FTE/month measured, with over 5 FTEs total estimated impact) across 9 European markets. `;
         if (isProdOps) {
-          p2 += `I helped scale our conversational AI products across 9 markets, routing millions of calls while lifting answer rates from 65% to 85% (+20%) and booking conversion to 57.8%. To accelerate operations, I designed and shipped an internal AI Conversation QA evaluation web platform with bulk-review pipelines and a centralized review management portal.`;
+          p2 += `This includes designing an AI-assisted Google Reviews & Trustpilot management web portal saving ~443 hours (~1.2 FTE/month), scaling conversational voicebots across 9 markets, and engineering automated contract generation engines saving 190+ hours across 2,864 contracts.`;
         } else if (isAiAuto) {
-          p2 += `I drive the rollout and tuning of our AI voice bot across 9 markets (routing millions of calls and lifting answer rates to 85%) while maintaining vector and retrieval knowledge bases for an AI chatbot handling 30,000+ monthly conversations. To ensure quality, I built an internal AI QA evaluation tool with bulk-review pipelines and REST API automations.`;
+          p2 += `This includes managing voicebot prompting and knowledge architecture across 9 markets using Parloa and ElevenLabs (routing millions of calls), as well as building an internal AI QA web tool with n8n workflow logic that enabled automated bulk-review of 21,833+ conversations (~125 h saved).`;
         } else if (isData) {
-          p2 += `I perform quantitative analysis on complex multi-market datasets using SQL (Redash) and Advanced Excel, building company-wide KPI dashboards across Looker Studio and Tableau that guided voicebot and chatbot optimization across millions of interactions. Where tools fell short, I built lightweight REST API automations to eliminate manual bottlenecks.`;
+          p2 += `This includes querying SQL in Redash and building live dashboards (Looker Studio, Tableau) covering 760k+ interactions, automating customer feedback categorization across ~260 branch locations (~290 h saved), and creating n8n data pipelines to eliminate manual bottlenecks.`;
         } else {
-          p2 += `I supported scaling our AI voice bot across 9 markets to route millions of calls (lifting answer rates to 85%), while managing knowledge architecture for a customer chatbot handling 30,000+ monthly inquiries and building custom web tools—including an AI QA platform and automated REST API offer engines—to streamline delivery.`;
+          p2 += `This includes driving the rollout of our AI voice bot across 9 markets, launching the multi-country 'Compass' knowledge base with an AI Assistant, and engineering automated contract amendment tools saving 190+ hours across 2,864 contracts.`;
         }
 
         let p3 = `Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean processes. Whether querying SQL in Redash, building live dashboards, or prototyping internal tools with JavaScript/REST APIs, I bridge strategy with execution. Earlier project work at Franz Schneider Brakel (FSB) further sharpened my stakeholder alignment. Fluent in English (C1/C2) and Spanish (native), with professional German (B1), I am available 20 hours/week in Berlin.`;
 
         let p4 = `What excites me most about ${comp} is the opportunity to bring this mix of product operations discipline, SQL analytics, and builder execution to your team in the ${cleanTitle} role. Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview.`;
-
-        return header + `Dear Hiring Team at ${comp},\n\n${p1}\n\n${p2}\n\n${p3}\n\n${p4}\n\nSincerely,\nGuillermo Hernandez`;
 
         return header + `Dear Hiring Team at ${comp},\n\n${p1}\n\n${p2}\n\n${p3}\n\n${p4}\n\nSincerely,\nGuillermo Hernandez`;
       }

@@ -427,7 +427,7 @@ def generate_master_cv() -> Path:
         for b in profile["auto1_bullet_pool"]
         if b["id"] in [
             "voicebot_rollout",
-            "chatbot_kb_maintenance",
+            "faq_voicebot_maintenance",
             "qa_review_platform",
             "kpi_reporting",
             "price_lead_email_tool",

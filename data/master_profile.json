@@ -29,16 +29,22 @@
       "html": "Managed the <strong>end-to-end rollout, stakeholder alignment, and continuous optimization</strong> of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional product team, routing <strong>millions of calls</strong>, increasing inbound answer rates by <strong>over 80%</strong>, and lifting call-to-booking conversion by <strong>over 50%</strong>."
     },
     {
-      "id": "chatbot_kb_maintenance",
+      "id": "faq_voicebot_maintenance",
       "tags": ["ai_automation", "product_management", "cx_operations", "core"],
-      "priority": 96,
-      "html": "Implemented, structured, and maintained an <strong>AI chatbot, voicebot prompting &amp; FAQs, and AI knowledge bases</strong>, coordinating multi-market releases and answer-accuracy improvements across <strong>hundreds of thousands of customer conversations</strong>."
+      "priority": 98,
+      "html": "Managed <strong>voicebot FAQ maintenance, prompting, and knowledge architecture</strong> using <strong>Parloa &amp; ElevenLabs</strong>, serving as the central review authority for all prompt and knowledge updates across 9 European markets."
     },
     {
       "id": "qa_review_platform",
       "tags": ["product_management", "ai_automation", "project_management", "cx_operations", "new_project"],
+      "priority": 95,
+      "html": "Scoped operational bottlenecks and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> with <strong>n8n workflow logic</strong>, enabling AI bulk-review of <strong>21,833+ conversations</strong> and saving <strong>~125 hours (~0.34 FTE/month)</strong>."
+    },
+    {
+      "id": "reviews_portal",
+      "tags": ["cx_operations", "product_management", "ai_automation", "new_project"],
       "priority": 94,
-      "html": "Scoped operational bottlenecks and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> with <strong>automated workflows and bulk-review evaluation pipelines</strong>, standardizing how cross-market teams audit and benchmark AI quality."
+      "html": "Built and rolled out a centralized <strong>Google Reviews &amp; Trustpilot AI management web portal</strong> across 9 markets, generating smart replies and saving <strong>~443 hours (~1.2 FTE/month)</strong> with a one-click approval workflow."
     },
     {
       "id": "kpi_reporting",
@@ -47,28 +53,34 @@
       "html": "Partnered with <strong>3 project managers</strong> to track <strong>project milestones and multi-market KPIs</strong>, performing <strong>quantitative analysis on complex datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel to build automated company-wide dashboards."
     },
     {
-      "id": "cross_country_kb",
-      "tags": ["project_management", "cx_operations", "product_management", "new_project"],
-      "priority": 90,
-      "html": "Led <strong>cross-border process standardization</strong> by creating a <strong>real-time cross-country collaboration knowledge base</strong> across European markets, enabling live cross-border agent support during customer calls."
+      "id": "contract_amendment_tool",
+      "tags": ["project_management", "cx_operations", "ai_automation", "new_project"],
+      "priority": 92,
+      "html": "Engineered an automated <strong>Contract Amendment (Änderungsvertrag) Tool</strong> combining digital forms and PDF generation scripts for DE &amp; AT, saving <strong>190+ hours across 2,864 contracts</strong>."
     },
     {
       "id": "price_lead_email_tool",
       "tags": ["ai_automation", "product_management", "cx_operations", "new_project"],
+      "priority": 91,
+      "html": "Developed an <strong>automated Price-Lead Offer Email engine</strong> in <strong>n8n</strong> integrating internal admin systems, <strong>Freshdesk APIs, and low-code workflows</strong> to extract customer data and auto-generate personalized offer emails."
+    },
+    {
+      "id": "feedback_review_automation",
+      "tags": ["cx_operations", "data_reporting", "ai_automation", "new_project"],
       "priority": 89,
-      "html": "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails."
+      "html": "Automated <strong>customer feedback classification</strong> across <strong>~260 branch locations</strong> using custom data pipelines, compiling executive branch reports and saving <strong>~290 hours (~0.16 FTE/month)</strong>."
     },
     {
-      "id": "reviews_portal",
-      "tags": ["cx_operations", "product_management", "ai_automation", "new_project"],
-      "priority": 86,
-      "html": "Built and rolled out a centralized <strong>Google Reviews &amp; Trustpilot web portal</strong> in <strong>Google Apps Script</strong> with template-based smart reply suggestions, aligning operations teams onto a <strong>one-click approval workflow</strong>."
-    },
-    {
-      "id": "cross_functional",
-      "tags": ["project_management", "product_management", "core"],
+      "id": "compass_knowledge_base",
+      "tags": ["project_management", "cx_operations", "product_management", "new_project"],
       "priority": 88,
-      "html": "Worked embedded in an agile <strong>Product, Tech, Business Analytics, and Operations team</strong> to translate complex operational data into product features, evaluation tools, and scalable processes across <strong>9 international markets</strong>."
+      "html": "Designed and launched <strong>'Compass'</strong>, a centralized multi-country <strong>knowledge base with an AI Assistant and smart search</strong> across 9 countries, eliminating redundant documentation friction."
+    },
+    {
+      "id": "overall_impact_summary",
+      "tags": ["project_management", "product_management", "ai_automation", "core"],
+      "priority": 87,
+      "html": "Delivered <strong>10 internal tooling &amp; automation initiatives</strong> in 2026 saving <strong>~1,070+ hours (~1.9 FTE/mo measured, 5+ FTE estimated impact)</strong> across 9 European markets."
     }
   ],
   "experience": [
@@ -140,8 +152,8 @@
       "SQL Reporting & Disorganized Data Structuring",
       "Cross-Functional Stakeholder Management"
     ],
-    "technical": "SQL (Redash Querying & Complex Dataset Analysis) | REST APIs & System Integrations | Git, GitHub & Cloud Platforms | AI Knowledge Bases, Voicebot/Chatbot Prompting & QA Evaluation Tools | Low-Code Automation & Google Apps Script (JavaScript)",
-    "software": "Redash (SQL), GitHub / Git, Looker Studio, Tableau, Advanced Excel & Google Sheets, Google Apps Script, Figma, Freshdesk, C# (Unity)"
+    "technical": "n8n Workflow Automation | SQL (Redash Querying & Complex Dataset Analysis) | REST APIs & System Integrations | Git, GitHub & Cloud Platforms | Parloa & ElevenLabs Voicebots | Vector Databases, AI Prompting & QA Tools | Google Apps Script (JavaScript)",
+    "software": "n8n, Redash (SQL), GitHub / Git, Looker Studio, Tableau, Parloa, ElevenLabs, Freshdesk, Advanced Excel & Google Sheets, Google Apps Script, Figma, C# (Unity)"
   },
   "languages": [
     { "language": "SPANISH", "level": "Native Speaker" },
