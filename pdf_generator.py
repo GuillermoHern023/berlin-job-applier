@@ -431,7 +431,7 @@ def generate_master_cv() -> Path:
             "qa_review_platform",
             "kpi_reporting",
             "price_lead_email_tool",
-            "cross_country_kb",
+            "reviews_portal",
         ]
     ][:6]
     html = build_cv_html(profile, selected_auto1_bullets=bullets)
