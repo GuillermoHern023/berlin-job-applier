@@ -136,8 +136,8 @@ def build_cv_html(
   }}
   fieldset.section-box {{
     border: 1px solid #333;
-    padding: 6px 12px 7px 12px;
-    margin-bottom: 5.5px;
+    padding: 5px 12px 6px 12px;
+    margin-bottom: 4px;
   }}
   fieldset.section-box legend {{
     font-family: Arial, Helvetica, sans-serif;
@@ -436,7 +436,13 @@ def generate_master_cv() -> Path:
     ][:6]
     html = build_cv_html(profile, selected_auto1_bullets=bullets)
     out_path = OUTPUT_DIR / "Guillermo_Hernandez_CV_Master.pdf"
-    return render_html_to_pdf(html, out_path)
+    render_html_to_pdf(html, out_path)
+    for dest in [BASE_DIR / "docs" / "files", BASE_DIR / "files"]:
+        dest.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(out_path, dest / out_path.name)
+        if (OUTPUT_DIR / "Guillermo_Hernandez_CV_Master.html").exists():
+            shutil.copy2(OUTPUT_DIR / "Guillermo_Hernandez_CV_Master.html", dest / "Guillermo_Hernandez_CV_Master.html")
+    return out_path
 
 
 if __name__ == "__main__":

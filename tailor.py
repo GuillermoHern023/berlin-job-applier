@@ -49,14 +49,16 @@ ROLE_CATEGORIES = {
 }
 
 
-def detect_language_requirement(title: str, description: str) -> Tuple[str, int]:
+def detect_language_requirement(title: str, description: str) -> Tuple[str, int, bool]:
     """
-    Returns (label, score_adjustment)
+    Evaluates whether a job is realistically accessible for Guillermo
+    (Native Spanish, C1/C2 Fluent English, B1 Working German).
+    Returns (label, score_adjustment, is_english_b1_friendly)
     """
     title_l = title.lower()
     text = f"{title} {description}".lower()
 
-    # Check if title explicitly requires a language Guillermo doesn't speak
+    # 1. Foreign languages Guillermo doesn't speak
     other_langs = [
         "nordic", "swedish", "danish", "norwegian", "finnish", "arabic", "dutch",
         "polish", "italian", "turkish", "russian", "japanese", "chinese", "mandarin",
@@ -64,39 +66,47 @@ def detect_language_requirement(title: str, description: str) -> Tuple[str, int]
     ]
     for ol in other_langs:
         if ol in title_l:
-            return (f"Requires {ol.capitalize()}", -40)
+            return (f"Requires {ol.capitalize()}", -40, False)
 
     if "spanish" in title_l or "spanisch" in title_l:
-        return ("Spanish + English (Native Fit!)", +18)
+        return ("Spanish + English (Native Fit!)", +20, True)
 
-    strict_german_patterns = [
-        r"c1\s*(?:or\s*c2\s*)?german",
-        r"german\s*\(?c1",
-        r"german\s*\(?c2",
-        r"fluent\s+in\s+german",
-        r"fluent\s+german",
-        r"native\s+german",
-        r"verhandlungssicher(?:es)?\s+deutsch",
-        r"fließend(?:es)?\s+deutsch",
+    # 2. Strict C1 / C2 / Fluent / Verhandlungssicher German requirement
+    strict_c1_patterns = [
+        r"verhandlungssicher",
+        r"c1[- ]?(?:level|niveau)?",
+        r"c2[- ]?(?:level|niveau)?",
+        r"mindestens\s+c1",
+        r"sehr\s+gute[sn]?\s+deutsch",
+        r"deutsch[^\.\n;]{0,40}sehr\s+gut",
+        r"sehr\s+gut[^\.\n;]{0,40}deutsch",
+        r"flie[ßss]end[^\.\n;]{0,30}deutsch",
+        r"deutsch[^\.\n;]{0,30}flie[ßss]end",
         r"deutsch\s+auf\s+muttersprach",
-        r"deutschkenntnisse\s+auf\s+c1",
+        r"native\s+german",
+        r"fluent\s+(?:in\s+)?german",
         r"excellent\s+german",
+        r"business\s+fluent\s+german",
     ]
-    for pat in strict_german_patterns:
+    for pat in strict_c1_patterns:
         if re.search(pat, text):
-            return ("German C1/Fluent Required", -25)
+            return ("Requires C1/Fluent German (B1 Risk)", -35, False)
 
-    # Check if the entire job description is written in German without mentioning English
-    german_stop_words = len(re.findall(r"\b(und|oder|für|mit|deine|aufgaben|wir|suchen|arbeit|studium)\b", text))
-    english_stop_words = len(re.findall(r"\b(and|with|your|tasks|we|looking|working|student|experience|team)\b", text))
+    # 3. Analyze language density
+    de_words = len(re.findall(r"\b(und|oder|für|mit|deine|aufgaben|wir|suchen|arbeit|studium|über|uns|dich)\b", text))
+    en_words = len(re.findall(r"\b(and|with|your|tasks|we|looking|working|student|experience|team|about|you)\b", text))
 
-    if german_stop_words > 12 and english_stop_words < 4:
-        return ("German Job Post (Check B1 Fit)", -15)
+    # If explicitly English friendly or German optional
+    if re.search(r"german\s*(?:is\s+a\s+plus|is\s+beneficial|is\s+optional|not\s+required|b1|basic)", text) or re.search(r"working\s+language\s+(?:is\s+)?english", text):
+        return ("English + Basic/B1 German OK", +15, True)
 
-    if re.search(r"english\s*(?:and|&|/)\s*german", text) or re.search(r"german\s*(?:is\s+a\s+plus|b1|b2|basic|beneficial)", text):
-        return ("English + Basic/B1 German OK", +8)
+    if en_words > de_words * 1.5 or (en_words >= 15 and de_words < 5):
+        return ("English Friendly (B1 OK)", +15, True)
 
-    return ("English Friendly", +10)
+    if de_words > en_words:
+        return ("German Working Language (B1 Challenging)", -20, False)
+
+    return ("English Friendly (B1 OK)", +10, True)
 
 
 def calculate_commute_from_sohtstrasse(job: Dict[str, Any]) -> Dict[str, Any]:
@@ -442,7 +452,7 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
     base_score += keyword_bonus
 
     # Language check
-    lang_label, lang_adj = detect_language_requirement(title, description)
+    lang_label, lang_adj, is_b1_friendly = detect_language_requirement(title, description)
     base_score += lang_adj
 
     # Location check
@@ -475,6 +485,7 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
         "category_label": best_cat_label,
         "match_score": final_score,
         "language_req": lang_label,
+        "is_english_friendly": is_b1_friendly,
         "extracted_pay": compensation_info["display"],
         "matched_keywords": matched_keywords[:8],
         "why_fits": why_fits,
@@ -612,11 +623,20 @@ def generate_job_application_bundle(job: Dict[str, Any], custom_bullets: List[st
     cv_pdf_path = render_html_to_pdf(cv_html, job_dir / f"Guillermo_Hernandez_CV_{company_slug}.pdf")
     cl_pdf_path = render_html_to_pdf(cl_html, job_dir / f"Guillermo_Hernandez_Cover_Letter_{company_slug}.pdf")
 
+    # Also sync generated bundles to docs/files/applications and files/applications
+    base_dir = OUTPUT_DIR.parent
+    for dest_root in [base_dir / "docs" / "files" / "applications", base_dir / "files" / "applications"]:
+        target_dir = dest_root / folder_name
+        target_dir.mkdir(parents=True, exist_ok=True)
+        import shutil
+        shutil.copy2(cv_pdf_path, target_dir / cv_pdf_path.name)
+        shutil.copy2(cl_pdf_path, target_dir / cl_pdf_path.name)
+
     return {
         "folder": str(job_dir),
         "cv_pdf": str(cv_pdf_path),
         "cover_letter_pdf": str(cl_pdf_path),
-        "cv_url": f"/files/applications/{folder_name}/{cv_pdf_path.name}",
-        "cover_letter_url": f"/files/applications/{folder_name}/{cl_pdf_path.name}",
+        "cv_url": f"files/applications/{folder_name}/{cv_pdf_path.name}",
+        "cover_letter_url": f"files/applications/{folder_name}/{cl_pdf_path.name}",
         "tailored": tailored,
     }

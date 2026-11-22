@@ -206,6 +206,10 @@
           <button onclick="setFilterStatus('ALL')" id="tabAll" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#30363d] border border-transparent dark:border-[#30363d] transition">
             📁 All Jobs (<span id="pillTotalCount">0</span>)
           </button>
+          <button onclick="toggleEnglishOnlyFilter()" id="btnEnglishOnlyToggle" class="px-2.5 py-1 rounded-full text-xs font-bold transition flex items-center gap-1 bg-emerald-600 text-white shadow-xs" title="Filter to English-friendly and B1-viable jobs only (hides C1/fluent German requirements)">
+            <span>🌐 English / B1 OK</span>
+            <span id="englishOnlyIcon">✓</span>
+          </button>
         </div>
 
         <div class="text-xs text-gray-500 dark:text-gray-400" id="showingCountLabel">
@@ -492,7 +496,7 @@
       localStorage.setItem('app_lang', 'en');
     }
 
-    const CV_LAYOUT_VERSION = 'v7_raise_projects_auto1_pool';
+    const CV_LAYOUT_VERSION = 'v10_sap_base_perfect_a4_lang_filter';
     if (localStorage.getItem('cv_layout_version') !== CV_LAYOUT_VERSION) {
       for (let i = localStorage.length - 1; i >= 0; i--) {
         const k = localStorage.key(i);
@@ -683,7 +687,7 @@
       const isGuillermo = (activeUser === 'guillermo');
       const desc = (`${job.title || ''} ${job.description || ''} ${job.why_fits || ''}`).toLowerCase();
 
-      // Guillermo's tailored 1-page A4 CV
+      // Guillermo's tailored 1-page A4 CV (Exact SAP CV base structure)
       const allPool = (window.STATIC_STATE && window.STATIC_STATE.all_auto1_bullets) ? window.STATIC_STATE.all_auto1_bullets : [];
       let chosenBullets = [];
       const customSaved = localStorage.getItem('job_custom_bullets_' + job.id);
@@ -692,13 +696,13 @@
       }
       if (!chosenBullets || chosenBullets.length === 0) {
         if (job.tailored_preview && job.tailored_preview.selected_bullets && job.tailored_preview.selected_bullets.length > 0) {
-          chosenBullets = job.tailored_preview.selected_bullets.slice(0, 5);
+          chosenBullets = job.tailored_preview.selected_bullets.slice(0, 6);
         } else {
-          chosenBullets = allPool.slice(0, 5).map(b => b.html);
+          chosenBullets = allPool.slice(0, 6).map(b => b.html);
         }
-      } else if (chosenBullets.length > 5) {
-        // Enforce max 5 Auto1 bullets for strict 1-page A4 guarantee
-        chosenBullets = chosenBullets.slice(0, 5);
+      } else if (chosenBullets.length > 6) {
+        // Strict 6 bullets matching SAP CV 1-page standard
+        chosenBullets = chosenBullets.slice(0, 6);
       }
 
       // Dynamic role subtitle & skill ordering tailored to the specific job
@@ -712,9 +716,9 @@
       else if (isData) roleFocus = 'Junior Project Manager (Business Operations & SQL Data Analytics)';
 
       let coreSkills = [
-        'Product Team Collaboration & Agile Delivery',
+        'Multi-Market Project Rollout & Agile Delivery',
         'Quantitative Analysis on Complex Datasets',
-        'AI Evaluation Tools & Vector / Knowledge Databases',
+        'AI Evaluation Tools, Prompting & Knowledge Bases',
         'Low-Code Workflow Automation & Internal Tooling',
         'SQL Reporting & Disorganized Data Structuring',
         'Cross-Functional Stakeholder Management'
@@ -726,12 +730,12 @@
       }
 
       return `
-        <div style="font-family: Georgia, 'Times New Roman', serif; font-size: 8.5pt; line-height: 1.28; color: #1a1a1a; background: #fff; box-sizing: border-box;">
-          <div style="border: 1px solid #333; padding: 7px 12px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: flex-start;">
+        <div style="font-family: Georgia, 'Times New Roman', serif; font-size: 8.45pt; line-height: 1.23; color: #1a1a1a; background: #fff; box-sizing: border-box;">
+          <div style="border: 1px solid #333; padding: 7px 12px; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: flex-start;">
             <div>
               <div style="font-size: 15pt; font-weight: bold; color: #111; margin-bottom: 2px;">Guillermo Jose Hernandez Lopez</div>
-              <div style="font-size: 8.5pt; color: #333;">Söhtstraße 16, 12203 Berlin, Germany</div>
-              <div style="font-size: 8.5pt; color: #333;">guillejhl@gmail.com</div>
+              <div style="font-size: 8.5pt; color: #333; margin-bottom: 0.5px;">Söhtstraße 16, 12203 Berlin, Germany</div>
+              <div style="font-size: 8.5pt; color: #333; margin-bottom: 0.5px;">guillejhl@gmail.com</div>
               <div style="font-size: 8.5pt; color: #333;">+49 176 85136597</div>
             </div>
             <div style="text-align: right;">
@@ -739,69 +743,72 @@
             </div>
           </div>
 
-          <fieldset style="border: 1px solid #333; padding: 6px 12px 6px 12px; margin-bottom: 5px;">
-            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 4px; margin-left: 4px; color: #111;">EXPERIENCE</legend>
+          <fieldset style="border: 1px solid #333; padding: 5px 12px 6px 12px; margin-bottom: 4px;">
+            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 5px; margin-left: 4px; color: #111; text-transform: uppercase;">EXPERIENCE</legend>
             
-            <div style="display: flex; margin-bottom: 4px;">
-              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 6px; flex-shrink: 0;">Sep 2024 – Present</div>
+            <div style="display: flex; margin-bottom: 3px;">
+              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 8px; flex-shrink: 0;">Sep 2024 – Present</div>
               <div style="width: 83%;">
                 <div style="font-weight: bold; font-size: 9pt; color: #111;">${roleFocus}</div>
-                <div style="font-size: 8.5pt; color: #222;"><strong>Auto1 Group</strong> &nbsp;Berlin, Germany</div>
-                <div style="font-size: 8.1pt; color: #444; margin-bottom: 1.5px;">Intern (Sept 2024 – Feb 2025) | Working Student (Mar 2025 – Present)</div>
-                <ul style="margin-top: 1px; padding-left: 14px; list-style-type: disc;">
-                  ${chosenBullets.map(b => `<li style="margin-bottom: 1.5px; font-size: 8.4pt; line-height: 1.25;">${b}</li>`).join('')}
+                <div style="font-size: 8.6pt; color: #222; margin-bottom: 0.5px;"><strong>Auto1 Group</strong> &nbsp;Berlin, Germany</div>
+                <div style="font-size: 8.2pt; color: #444; margin-bottom: 2px;">Intern (Sept 2024 – Feb 2025) | Working Student (Mar 2025 – Present)</div>
+                <ul style="margin-top: 1.5px; padding-left: 14px; list-style-type: disc;">
+                  ${chosenBullets.map(b => `<li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.24;">${b}</li>`).join('')}
                 </ul>
               </div>
             </div>
 
-            <div style="display: flex; margin-bottom: 4px;">
-              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 6px; flex-shrink: 0;">Oct 2023</div>
+            <div style="display: flex; margin-bottom: 3px;">
+              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 8px; flex-shrink: 0;">Oct 2023</div>
               <div style="width: 83%;">
                 <div style="font-weight: bold; font-size: 9pt; color: #111;">Customer Experience and Digital Innovation (Project Collaboration)</div>
-                <div style="font-size: 8.5pt; color: #222; margin-bottom: 1px;"><strong>Franz Schneider Brakel (FSB)</strong> &nbsp;Berlin, Germany</div>
-                <ul style="margin-top: 1px; padding-left: 14px; list-style-type: disc;">
-                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.25;">Conducted <strong>quantitative research and data analysis</strong> to propose a new subscription model that incentivized sustainability, boosting client engagement.</li>
-                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.25;">Designed webpages to communicate FSB's sustainable product standards and collaborated closely with product stakeholders to ensure alignment.</li>
+                <div style="font-size: 8.6pt; color: #222; margin-bottom: 0.5px;"><strong>Franz Schneider Brakel (FSB)</strong> &nbsp;Berlin, Germany</div>
+                <ul style="margin-top: 1.5px; padding-left: 14px; list-style-type: disc;">
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.24;">Conducted <strong>quantitative research and complex data analysis</strong> to propose a new service/subscription model that incentivized sustainability, <strong>boosting client engagement</strong>.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.24;">Designed webpages to communicate FSB's sustainable product standards, <strong>enhancing market differentiation</strong>.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.24;"><strong>Collaborated closely with product and business stakeholders</strong> across units to ensure alignment and effectiveness of digital initiatives.</li>
                 </ul>
               </div>
             </div>
 
-            <div style="display: flex; margin-bottom: 4px;">
-              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 6px; flex-shrink: 0;">Jan 2022 – Aug 2022</div>
+            <div style="display: flex; margin-bottom: 3px;">
+              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 8px; flex-shrink: 0;">Jan 2022 – Aug 2022</div>
               <div style="width: 83%;">
                 <div style="font-weight: bold; font-size: 9pt; color: #111;">Intern</div>
-                <div style="font-size: 8.5pt; color: #222; margin-bottom: 1px;"><strong>Fincas El Carmen</strong> &nbsp;Comayagua, Honduras</div>
-                <ul style="margin-top: 1px; padding-left: 14px; list-style-type: disc;">
-                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.25;">Managed <strong>inventory levels and purchasing decisions</strong> using quantitative analysis in Advanced Excel, achieving a <strong>15% increase</strong> in stock availability.</li>
-                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.25;">Collaborated with cross-functional teams to streamline workflows, <strong>reducing processing time by 20%</strong>.</li>
+                <div style="font-size: 8.6pt; color: #222; margin-bottom: 0.5px;"><strong>Fincas El Carmen</strong> &nbsp;Comayagua, Honduras</div>
+                <ul style="margin-top: 1.5px; padding-left: 14px; list-style-type: disc;">
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.24;">Managed <strong>inventory levels and purchasing decisions</strong> using <strong>quantitative analysis and Advanced Excel</strong>, resulting in a <strong>15% increase</strong> in stock accuracy and availability.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.24;">Analyzed and incorporated customer feedback to enhance service quality, <strong>leading to a 10% improvement in customer retention</strong>.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.24;">Collaborated with cross-functional teams to streamline operations, <strong>reducing processing time by 20%</strong>.</li>
                 </ul>
               </div>
             </div>
 
             <div style="display: flex;">
-              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 6px; flex-shrink: 0;">Jan 2020 – Dec 2021</div>
+              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 8px; flex-shrink: 0;">Jan 2020 – Dec 2021</div>
               <div style="width: 83%;">
                 <div style="font-weight: bold; font-size: 9pt; color: #111;">Product Supervisor</div>
-                <div style="font-size: 8.5pt; color: #222; margin-bottom: 1px;"><strong>Hotel la Posada de mi Viejo</strong> &nbsp;Comayagua, Honduras</div>
-                <ul style="margin-top: 1px; padding-left: 14px; list-style-type: disc;">
-                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.25;">Implemented customer-centric methodologies and workflows, leading to a 10% improvement in <strong>operational efficiency</strong>.</li>
-                  <li style="font-size: 8.4pt; line-height: 1.25;">Supervised process operations and quality assurance, resulting in a <strong>10% increase in customer satisfaction</strong>.</li>
+                <div style="font-size: 8.6pt; color: #222; margin-bottom: 0.5px;"><strong>Hotel la Posada de mi Viejo</strong> &nbsp;Comayagua, Honduras</div>
+                <ul style="margin-top: 1.5px; padding-left: 14px; list-style-type: disc;">
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.24;">Implemented <strong>customer-centric methodologies</strong> to supervise and enhance process operations.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.24;">Established comprehensive plan structures, leading to a 10% improvement in <strong>operational efficiency</strong> and staff productivity.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.24;">Implemented quality assurance, <strong>resulting in a 10% increase in customer satisfaction scores</strong>.</li>
                 </ul>
               </div>
             </div>
           </fieldset>
 
-          <fieldset style="border: 1px solid #333; padding: 6px 12px 6px 12px; margin-bottom: 5px;">
-            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 4px; margin-left: 4px; color: #111;">EDUCATION</legend>
-            <div style="display: flex; margin-bottom: 3px;">
-              <div style="width: 17%; font-size: 8.3pt; color: #333;">Sep 2025 – Aug 2027</div>
+          <fieldset style="border: 1px solid #333; padding: 5px 12px 6px 12px; margin-bottom: 4px;">
+            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 5px; margin-left: 4px; color: #111; text-transform: uppercase;">EDUCATION</legend>
+            <div style="display: flex; margin-bottom: 3.5px;">
+              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 8px; flex-shrink: 0;">Sep 2025 – Aug 2027</div>
               <div style="width: 83%;">
                 <div style="font-size: 8.6pt;"><strong>Master’s degree in International Business Management | University of Europe for Applied Sciences</strong></div>
                 <div style="font-size: 8.1pt; color: #333;">Berlin, Germany</div>
               </div>
             </div>
             <div style="display: flex;">
-              <div style="width: 17%; font-size: 8.3pt; color: #333;">Sep 2022 – Aug 2025</div>
+              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 8px; flex-shrink: 0;">Sep 2022 – Aug 2025</div>
               <div style="width: 83%;">
                 <div style="font-size: 8.6pt;"><strong>Bachelor’s degree in Digital Product Management | University of Europe for Applied Sciences</strong></div>
                 <div style="font-size: 8.1pt; color: #333;">Potsdam, Germany</div>
@@ -809,20 +816,20 @@
             </div>
           </fieldset>
 
-          <fieldset style="border: 1px solid #333; padding: 6px 12px 6px 12px; margin-bottom: 5px;">
-            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 4px; margin-left: 4px; color: #111;">SKILLS</legend>
+          <fieldset style="border: 1px solid #333; padding: 5px 12px 6px 12px; margin-bottom: 4px;">
+            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 5px; margin-left: 4px; color: #111; text-transform: uppercase;">SKILLS</legend>
             <div style="font-size: 8.35pt; line-height: 1.28;">
               <p style="margin-bottom: 2px;"><strong>Core Competencies:</strong> ${coreSkills.join(' | ')}</p>
-              <p style="margin-bottom: 2px;"><strong>Technical Skills:</strong> SQL (Redash Querying &amp; Complex Dataset Analysis) | REST APIs &amp; System Integrations | Git, GitHub &amp; Cloud Platforms | Vector Databases, Knowledge Bases &amp; AI QA Tools | Low-Code Automation &amp; JavaScript</p>
-              <p><strong>Software Proficiency:</strong> Redash (SQL), GitHub / Git, Looker Studio, Tableau, Advanced Excel &amp; Google Sheets, Figma, Freshdesk, C# (Unity)</p>
+              <p style="margin-bottom: 2px;"><strong>Technical Skills:</strong> SQL (Redash Querying &amp; Complex Dataset Analysis) | REST APIs &amp; System Integrations | Git, GitHub &amp; Cloud Platforms | AI Knowledge Bases, Voicebot/Chatbot Prompting &amp; QA Evaluation Tools | Low-Code Automation &amp; Google Apps Script (JavaScript)</p>
+              <p style="margin-bottom: 0;"><strong>Software Proficiency:</strong> Redash (SQL), GitHub / Git, Looker Studio, Tableau, Advanced Excel &amp; Google Sheets, Google Apps Script, Figma, Freshdesk, C# (Unity)</p>
             </div>
           </fieldset>
 
-          <fieldset style="border: 1px solid #333; padding: 6px 12px 6px 12px; margin-bottom: 0;">
-            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 4px; margin-left: 4px; color: #111;">LANGUAGES</legend>
+          <fieldset style="border: 1px solid #333; padding: 5px 12px 6px 12px; margin-bottom: 0;">
+            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 5px; margin-left: 4px; color: #111; text-transform: uppercase;">LANGUAGES</legend>
             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 2px 10px; font-size: 8.35pt;">
               <div><strong>SPANISH</strong> Native Speaker</div>
-              <div><strong>ENGLISH</strong> Professional (C1/C2)</div>
+              <div><strong>ENGLISH</strong> Professional Proficiency</div>
               <div><strong>GERMAN</strong> B1 Proficiency</div>
               <div><strong>FRENCH</strong> B1 Proficiency</div>
             </div>
@@ -890,52 +897,12 @@
             }
           }
         } catch (e) {
-          console.warn('Backend tailor call failed, falling back to client-side:', e);
+          console.warn('Backend tailor call failed, falling back to vector print dialog:', e);
         }
       }
 
-      // 3. Client-side instant A4 PDF export using html2pdf (NO clipping or maxHeight overflow)
-      const cvEl = document.getElementById('liveCvA4_' + jobId);
-      if (typeof html2pdf !== 'undefined' && cvEl) {
-        showToast(currentLang === 'en' ? '⏳ Generating clean 1-Page A4 PDF...' : '⏳ Erstelle 1-Seiten A4 PDF...');
-
-        const wrapper = document.createElement('div');
-        wrapper.style.position = 'fixed';
-        wrapper.style.left = '-9999px';
-        wrapper.style.top = '0';
-        wrapper.style.width = '794px';
-        wrapper.style.background = '#ffffff';
-
-        const inner = document.createElement('div');
-        inner.innerHTML = cvEl.innerHTML;
-        inner.style.width = '794px';
-        inner.style.padding = '18px 24px';
-        inner.style.boxSizing = 'border-box';
-        inner.style.background = '#ffffff';
-        inner.style.color = '#111827';
-
-        wrapper.appendChild(inner);
-        document.body.appendChild(wrapper);
-
-        const opt = {
-          margin: 0,
-          filename: pdfTitle + '.pdf',
-          image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: { scale: 2, useCORS: true, logging: false },
-          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        };
-
-        html2pdf().set(opt).from(inner).save().then(() => {
-          document.body.removeChild(wrapper);
-          showToast(currentLang === 'en' ? '✅ 1-Page CV PDF downloaded!' : '✅ 1-Seiten CV PDF heruntergeladen!');
-        }).catch(err => {
-          if (wrapper.parentNode) document.body.removeChild(wrapper);
-          console.warn('html2pdf error:', err);
-          printTailoredCv(jobId);
-        });
-        return;
-      }
-
+      // 3. Native vector 1-page A4 print dialog (no html2pdf raster distortion or margin shrinkage)
+      showToast(currentLang === 'en' ? '🖨️ Opening 1-Page Vector PDF dialog (Choose "Save as PDF")...' : '🖨️ Öffne 1-Seiten Vektor-PDF ("Als PDF speichern")...');
       printTailoredCv(jobId);
     }
 
@@ -1046,10 +1013,10 @@
       if (!printWin) return;
       const openTag = '<' + 'html><' + 'head><meta charset="UTF-8"><title>' + pdfTitle + '</title>';
       const styleTag = '<style>' +
-        '@page { size: A4 portrait; margin: 0; } ' +
-        '@media print { @page { size: A4 portrait; margin: 0; } html, body { margin: 0 !important; padding: 0 !important; } } ' +
-        'html, body { width: 210mm; margin: 0; padding: 0; background: #ffffff; color: #111827; -webkit-print-color-adjust: exact; print-color-adjust: exact; } ' +
-        '.a4-cv-print-wrapper { padding: 8mm 12mm 8mm 12mm; box-sizing: border-box; width: 100%; }' +
+        '@page { size: A4 portrait; margin: 7mm 11mm 6.5mm 11mm; } ' +
+        '@media print { @page { size: A4 portrait; margin: 7mm 11mm 6.5mm 11mm; } html, body { margin: 0 !important; padding: 0 !important; } } ' +
+        'html, body { width: 100%; margin: 0; padding: 0; background: #ffffff; color: #111827; -webkit-print-color-adjust: exact; print-color-adjust: exact; } ' +
+        '.a4-cv-print-wrapper { width: 100%; box-sizing: border-box; }' +
         '</style></' + 'head><' + 'body>';
       const closeTag = '</' + 'body></' + 'html>';
       printWin.document.write('<!DOCTYPE html>' + openTag + styleTag + '<div class="a4-cv-print-wrapper">' + cvEl.innerHTML + '</div>' + closeTag);
@@ -1159,6 +1126,43 @@
     let guillermoJobs = [];
     let currentStatusFilter = 'ACTIVE';
     let selectedJobId = null;
+    let onlyEnglishFriendly = localStorage.getItem('filter_english_only') !== 'false';
+
+    function isJobEnglishB1Friendly(job) {
+      if (!job) return true;
+      if (typeof job.is_english_friendly === 'boolean') {
+        return job.is_english_friendly;
+      }
+      const desc = (`${job.title || ''} ${job.description || ''} ${job.why_fits || ''} ${job.language_requirement || ''}`).toLowerCase();
+      if (desc.includes('c1') || desc.includes('verhandlungssicher') || desc.includes('muttersprach') || desc.includes('fließend deutsch')) {
+        return false;
+      }
+      return true;
+    }
+
+    function toggleEnglishOnlyFilter() {
+      onlyEnglishFriendly = !onlyEnglishFriendly;
+      localStorage.setItem('filter_english_only', onlyEnglishFriendly ? 'true' : 'false');
+      updateEnglishFilterButton();
+      renderJobs();
+      showToast(onlyEnglishFriendly 
+        ? '🌐 Filter: Showing English-friendly & B1-viable jobs only' 
+        : '🌍 Showing all jobs (including C1 German requirements)');
+    }
+
+    function updateEnglishFilterButton() {
+      const btn = document.getElementById('btnEnglishOnlyToggle');
+      if (!btn) return;
+      if (onlyEnglishFriendly) {
+        btn.className = 'px-2.5 py-1 rounded-full text-xs font-bold transition flex items-center gap-1 bg-emerald-600 text-white shadow-xs';
+        btn.innerHTML = '<span>🌐 English / B1 OK</span><span id="englishOnlyIcon">✓</span>';
+        btn.title = 'Active: Showing only English-friendly and B1-viable jobs (Click to show all)';
+      } else {
+        btn.className = 'px-2.5 py-1 rounded-full text-xs font-medium transition flex items-center gap-1 bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#30363d] border border-transparent dark:border-[#30363d]';
+        btn.innerHTML = '<span>🌐 All Languages</span><span id="englishOnlyIcon">✕</span>';
+        btn.title = 'Inactive: Showing all jobs including C1 German requirements (Click to filter)';
+      }
+    }
 
     function toggleDarkMode() {
       const isDark = document.documentElement.classList.toggle('dark');
@@ -1179,6 +1183,7 @@
 
     function init() {
       updateThemeToggleUi();
+      updateEnglishFilterButton();
       if (window.STATIC_STATE) {
         guillermoJobs = window.STATIC_STATE.jobs || [];
         applyLocalStatusOverrides(guillermoJobs, 'guillermo');
@@ -1241,6 +1246,7 @@
     }
 
     function updateFilterTabs() {
+      updateEnglishFilterButton();
       const t = I18N[currentLang] || I18N.en;
       const tabActive = document.getElementById('tabActive');
       if (tabActive) {
@@ -1555,6 +1561,9 @@
           if (st !== 'applied') return false;
         }
 
+        // English / B1-Friendly Filter (Filters out jobs requiring C1/fluent German)
+        if (onlyEnglishFriendly && !isJobEnglishB1Friendly(j)) return false;
+
         // Commute Filter (Max 1h 10m from Söhtstraße 16)
         if (commuteFilter === 'MAX_70MIN') {
           const c = getJobCommute(j);
@@ -1663,6 +1672,16 @@
                   <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">
                     🏠 ${wm}
                   </span>
+
+                  ${isJobEnglishB1Friendly(j) ? `
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60" title="${j.language_requirement || 'English Friendly (B1 OK)'}">
+                      🌐 English (B1 OK)
+                    </span>
+                  ` : `
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-rose-50 dark:bg-rose-950/50 text-rose-800 dark:text-rose-300 border border-rose-200 dark:border-rose-800/60" title="${j.language_requirement || 'Requires C1 German'}">
+                      ⚠️ C1 German
+                    </span>
+                  `}
 
                   ${isIndeed ? `
                     <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-sky-50 dark:bg-sky-950/50 text-sky-800 dark:text-sky-300 border border-sky-200 dark:border-sky-800/60">
@@ -1893,6 +1912,10 @@
                   </span>
                   <span>&bull;</span>
                   <span>🕒 ${job.posted_ago || job.date_posted || 'Recently'}</span>
+                  <span>&bull;</span>
+                  <span class="font-semibold px-2 py-0.5 rounded-full border ${isJobEnglishB1Friendly(job) ? 'text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 border-emerald-200 dark:border-emerald-800/60' : 'text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/60 border-rose-200 dark:border-rose-800/60'}" title="${job.language_requirement || (isJobEnglishB1Friendly(job) ? 'English Friendly (B1 OK)' : 'Requires C1/Fluent German')}">
+                    ${isJobEnglishB1Friendly(job) ? '🌐 English (B1 OK)' : '⚠️ C1 German'}
+                  </span>
                 </div>
               </div>
             </div>
@@ -2071,7 +2094,7 @@
             ${isGuillermo ? `
               <div id="bulletPickerDrawer" class="hidden p-3 rounded-lg bg-gray-50 dark:bg-[#0d1117] border border-gray-200 dark:border-[#30363d] space-y-2 text-xs">
                 <div class="flex items-center justify-between">
-                  <span class="font-bold text-gray-800 dark:text-gray-200">🎯 Select AUTO1 Bullets (Recommended: 5 for Strict 1-Page A4 Fit):</span>
+                  <span class="font-bold text-gray-800 dark:text-gray-200">🎯 Select AUTO1 Bullets (Recommended: 6 for Strict 1-Page A4 Fit):</span>
                   <button onclick="applyCustomBulletsToJob('${job.id}')" class="px-3 py-1 rounded-md bg-blue-600 hover:bg-blue-700 text-white font-bold text-[11px] shadow-xs">
                     ⚡ Apply Selected Bullets to CV
                   </button>
@@ -2092,8 +2115,8 @@
             ` : ''}
           </div>
 
-          <!-- Editable 1-Page A4 CV Canvas -->
-          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl dark:shadow-[0_16px_40px_rgba(0,0,0,0.65)] border border-gray-200 dark:border-slate-600 rounded-b-xl p-5 sm:p-7 min-h-[520px] overflow-hidden outline-none focus:ring-2 focus:ring-emerald-400 box-border" id="liveCvA4_${job.id}" contenteditable="true" oninput="onCvContentInput('${job.id}')">
+          <!-- Editable 1-Page A4 CV Canvas (Matches SAP CV 1:1) -->
+          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl dark:shadow-[0_16px_40px_rgba(0,0,0,0.65)] border border-gray-200 dark:border-slate-600 rounded-b-xl p-4 sm:p-6 overflow-hidden outline-none focus:ring-2 focus:ring-emerald-400 box-border" id="liveCvA4_${job.id}" contenteditable="true" oninput="onCvContentInput('${job.id}')">
             ${activeCvHtml}
           </div>
 
