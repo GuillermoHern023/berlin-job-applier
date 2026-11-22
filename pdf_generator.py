@@ -136,8 +136,8 @@ def build_cv_html(
   }}
   fieldset.section-box {{
     border: 1px solid #333;
-    padding: 5px 12px 6px 12px;
-    margin-bottom: 4px;
+    padding: 6px 12px 7px 12px;
+    margin-bottom: 5.5px;
   }}
   fieldset.section-box legend {{
     font-family: Arial, Helvetica, sans-serif;
@@ -397,6 +397,10 @@ def render_html_to_pdf(html_content: str, output_pdf_path: Path) -> Path:
     with open(temp_html_path, "w", encoding="utf-8") as f:
         f.write(html_content)
 
+    tmp_pdf_path = output_pdf_path.with_name(f"_tmp_{os.getpid()}_{output_pdf_path.name}")
+    if tmp_pdf_path.exists():
+        tmp_pdf_path.unlink()
+
     browser_exe = find_browser_executable()
     cmd = [
         browser_exe,
@@ -405,10 +409,13 @@ def render_html_to_pdf(html_content: str, output_pdf_path: Path) -> Path:
         "--no-sandbox",
         "--disable-dev-shm-usage",
         "--no-pdf-header-footer",
-        f"--print-to-pdf={str(output_pdf_path.resolve())}",
+        f"--print-to-pdf={str(tmp_pdf_path.resolve())}",
         temp_html_path.resolve().as_uri(),
     ]
     subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if tmp_pdf_path.exists():
+        shutil.copy2(tmp_pdf_path, output_pdf_path)
+        tmp_pdf_path.unlink(missing_ok=True)
     return output_pdf_path
 
 
