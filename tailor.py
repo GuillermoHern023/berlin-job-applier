@@ -409,6 +409,43 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
+def detect_employment_type(title: str, description: str = "", raw_job_type: str = "") -> Tuple[str, str, bool, int]:
+    """
+    Classifies the role into student-legal employment contracts vs. full-time:
+    - WERKSTUDENT: Working student role (max 20h/wk, student visa legal, tax-advantaged) -> +18 pts
+    - INTERNSHIP: Intern / Praktikum (student compatible) -> +12 pts
+    - PART_TIME: Teilzeit / Part-time (student compatible if <= 20h) -> +10 pts
+    - FULL_TIME: Standard 40h/week Vollzeit contract (NOT legal for full-time enrolled students during semester) -> -25 pts penalty
+    Returns: (code, label, is_student_legal, score_adjustment)
+    """
+    t = (title or "").lower()
+    d = (description or "").lower()
+    jt = (raw_job_type or "").lower()
+
+    # 1. Explicit Working Student (Werkstudent) in title
+    if any(k in t for k in ["werkstudent", "working student", "studentische", "student assistant", "student "]):
+        return "WERKSTUDENT", "🎓 Werkstudent (Max 20h/wk)", True, 18
+    if "werkstudent" in t or "working student" in t:
+        return "WERKSTUDENT", "🎓 Werkstudent (Max 20h/wk)", True, 18
+
+    # 2. Internship / Praktikum in title
+    if any(k in t for k in ["intern", "praktikant", "praktikum", "internship", "ixp"]):
+        return "INTERNSHIP", "💼 Praktikum / Internship", True, 12
+
+    # 3. Part-Time / Teilzeit
+    if any(k in t for k in ["teilzeit", "part-time", "part time"]):
+        return "PART_TIME", "⏱️ Teilzeit (Part-Time)", True, 10
+    if any(k in jt for k in ["parttime", "part-time", "part_time"]):
+        return "PART_TIME", "⏱️ Teilzeit (Part-Time)", True, 10
+
+    # 4. Check description for explicit 20h/week working student contract specifications
+    if any(k in d for k in ["werkstudentenvertrag", "working student contract", "bis zu 20 stunden", "bis zu 20h", "max. 20h", "20h/woche", "20 stunden/woche", "während des semesters 20"]):
+        return "WERKSTUDENT", "🎓 Werkstudent (Max 20h/wk)", True, 18
+
+    # 5. Full-Time / Vollzeit roles (Junior Manager, Specialist, Associate, Analyst without student qualification)
+    return "FULL_TIME", "⚠️ Vollzeit (40h/wk - Not Student-Legal)", False, -25
+
+
 def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
     title = str(job.get("title") or "")
     company = str(job.get("company") or "")
@@ -437,15 +474,11 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
     best_cat_id = max(cat_scores, key=cat_scores.get) if any(cat_scores.values()) else "project_management"
     best_cat_label = ROLE_CATEGORIES[best_cat_id]["label"]
 
-    # 2. Base Match Score calculation
-    base_score = 52
-    # Working student / Intern / Junior bonus
-    if any(k in title_lower for k in ["working student", "werkstudent", "student", "studentische"]):
-        base_score += 18
-    elif any(k in title_lower for k in ["junior", "intern", "associate", "coordinator"]):
-        base_score += 10
-    elif any(k in title_lower for k in ["senior", "lead", "head of", "director", "principal", "vp"]):
-        base_score -= 30
+    # 2. Employment Type & Student Legal Check
+    contract_code, contract_label, is_student_legal, contract_adj = detect_employment_type(title, description, str(job.get("job_type") or ""))
+
+    # Base score incorporates contract compatibility
+    base_score = 52 + contract_adj
 
     # Add keyword points (capped)
     keyword_bonus = min(25, sum(cat_scores.values()) // 3)
@@ -486,6 +519,9 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
         "match_score": final_score,
         "language_req": lang_label,
         "is_english_friendly": is_b1_friendly,
+        "employment_type": contract_code,
+        "employment_label": contract_label,
+        "is_student_legal": is_student_legal,
         "extracted_pay": compensation_info["display"],
         "matched_keywords": matched_keywords[:8],
         "why_fits": why_fits,

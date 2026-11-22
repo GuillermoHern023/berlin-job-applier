@@ -21,7 +21,7 @@
     "category_label": "Business & Data Operations",
     "match_score": 99,
     "language_req": "English + Basic/B1 German OK",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai",
       "knowledge base",
@@ -70,7 +70,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "7961a25f30",
@@ -94,7 +97,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 99,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€18–22/h (~€1558–€1905/mo)",
     "matched_keywords": [
       "ai",
       "automation",
@@ -143,7 +146,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Enterprise (+premium)"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "4588c4e801",
@@ -165,9 +171,9 @@
     "synced_to_sheets": false,
     "category_id": "cx_operations",
     "category_label": "Business & Data Operations",
-    "match_score": 99,
+    "match_score": 72,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
     "matched_keywords": [
       "ai",
       "automation",
@@ -216,7 +222,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "ec28261ed0",
@@ -240,7 +249,7 @@
     "category_label": "Business & Data Operations",
     "match_score": 99,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "17.0-17.0 EUR (hourly",
+    "extracted_pay": "💰 €17/h (Listed)",
     "matched_keywords": [
       "ai",
       "workflow",
@@ -287,7 +296,10 @@
       "monthly_estimate": "~€1.472 – €1.472/mo (20h)",
       "source": "Employer Listed"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "3a6ce8bbde",
@@ -311,11 +323,16 @@
     "category_label": "AI Operations & Automation",
     "match_score": 99,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai",
+      "artificial intelligence",
       "automation",
-      "customer experience"
+      "chatbot",
+      "llm",
+      "knowledge base",
+      "workflow",
+      "api"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, artificial intelligence, automation, chatbot, llm, knowledge base.",
     "days_ago": 10,
@@ -355,7 +372,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "e46977b006",
@@ -379,7 +399,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 99,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai",
       "workflow",
@@ -428,7 +448,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "4669e0e997",
@@ -452,7 +475,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 99,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai",
       "workflow",
@@ -500,7 +523,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "b7c5883fbf",
@@ -524,10 +550,16 @@
     "category_label": "AI Operations & Automation",
     "match_score": 99,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai",
-      "automation"
+      "automation",
+      "llm",
+      "prompt",
+      "workflow",
+      "api",
+      "git",
+      "agent"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, llm, prompt, workflow, api.",
     "days_ago": 6,
@@ -567,7 +599,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "3f83528ebe",
@@ -591,10 +626,12 @@
     "category_label": "Business & Data Operations",
     "match_score": 50,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "kpi",
-      "reporting"
+      "reporting",
+      "sql",
+      "tableau"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: kpi, reporting, sql, tableau.",
     "days_ago": 9,
@@ -634,7 +671,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "d36dfa975d",
@@ -658,10 +698,16 @@
     "category_label": "AI Operations & Automation",
     "match_score": 72,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
+      "ai",
+      "workflow",
       "git",
-      "support"
+      "bot",
+      "automatisierung",
+      "erp",
+      "stakeholder",
+      "dashboard"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, workflow, git, bot, automatisierung, erp.",
     "days_ago": 4,
@@ -701,7 +747,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "c9e631ce0f",
@@ -721,13 +770,17 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "product_management",
-    "category_label": "Product Management",
+    "category_id": "cx_operations",
+    "category_label": "Business & Data Operations",
     "match_score": 53,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
+      "ai",
+      "workflow",
+      "automatisierung",
       "produktmanagement",
+      "operations",
       "support"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, workflow, automatisierung, produktmanagement, operations, support.",
@@ -768,7 +821,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "cc21886cab",
@@ -792,10 +848,16 @@
     "category_label": "AI Operations & Automation",
     "match_score": 99,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€18–22/h (~€1558–€1905/mo)",
     "matched_keywords": [
       "ai",
-      "product management"
+      "automation",
+      "llm",
+      "prompt",
+      "workflow",
+      "api",
+      "git",
+      "agent"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, llm, prompt, workflow, api.",
     "days_ago": 2,
@@ -835,7 +897,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Enterprise (+premium)"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "7c513f5aa6",
@@ -859,10 +924,16 @@
     "category_label": "AI Operations & Automation",
     "match_score": 99,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai",
-      "git"
+      "automation",
+      "workflow",
+      "git",
+      "cloud",
+      "agent",
+      "erp",
+      "sql"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, workflow, git, cloud, agent.",
     "days_ago": 4,
@@ -902,7 +973,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "0ebef963d6",
@@ -924,9 +998,9 @@
     "synced_to_sheets": false,
     "category_id": "cx_operations",
     "category_label": "Business & Data Operations",
-    "match_score": 96,
+    "match_score": 61,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
     "matched_keywords": [
       "ai",
       "git",
@@ -974,7 +1048,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "395e47f48f",
@@ -998,9 +1075,16 @@
     "category_label": "Product Management",
     "match_score": 53,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 €19/h (Listed in text)",
     "matched_keywords": [
-      "produktmanagement"
+      "ai",
+      "git",
+      "automatisierung",
+      "produktmanagement",
+      "erp",
+      "kpi",
+      "reporting",
+      "dashboard"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, git, automatisierung, produktmanagement, erp, kpi.",
     "days_ago": 10,
@@ -1039,7 +1123,10 @@
       "monthly_estimate": "~€1.676/mo (20h)",
       "source": "Job Description"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "cc05f5e5ca",
@@ -1063,9 +1150,14 @@
     "category_label": "Business & Data Operations",
     "match_score": 50,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [
-      "operations"
+      "git",
+      "stakeholder",
+      "projektmanagement",
+      "initiative",
+      "operations",
+      "reporting"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: git, stakeholder, projektmanagement, initiative, operations, reporting.",
     "days_ago": 10,
@@ -1105,7 +1197,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "40e91161d1",
@@ -1129,9 +1224,15 @@
     "category_label": "AI Operations & Automation",
     "match_score": 52,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [
-      "automatisierung"
+      "workflow",
+      "low-code",
+      "git",
+      "agent",
+      "automatisierung",
+      "initiative",
+      "reporting"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: workflow, low-code, git, agent, automatisierung, initiative.",
     "days_ago": 9,
@@ -1171,7 +1272,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "4bc6cbd786",
@@ -1195,7 +1299,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 89,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai"
     ],
@@ -1237,7 +1341,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "7e9459061c",
@@ -1261,7 +1368,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 94,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€18–22/h (~€1558–€1905/mo)",
     "matched_keywords": [
       "automation"
     ],
@@ -1303,7 +1410,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Enterprise (+premium)"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "5275e58422",
@@ -1327,7 +1437,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 89,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€18–22/h (~€1558–€1905/mo)",
     "matched_keywords": [
       "git"
     ],
@@ -1369,7 +1479,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Enterprise (+premium)"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "557f6b21db",
@@ -1393,7 +1506,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 94,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai"
     ],
@@ -1435,7 +1548,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "10030f9bc4",
@@ -1459,7 +1575,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 59,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 €17/h (Listed in text)",
     "matched_keywords": [
       "git"
     ],
@@ -1500,7 +1616,10 @@
       "monthly_estimate": "~€1.472/mo (20h)",
       "source": "Job Description"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "668282a67f",
@@ -1524,9 +1643,12 @@
     "category_label": "AI Operations & Automation",
     "match_score": 48,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€18–22/h (~€1558–€1905/mo)",
     "matched_keywords": [
-      "git"
+      "ai",
+      "git",
+      "erp",
+      "reporting"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, erp, reporting.",
     "days_ago": 6,
@@ -1566,7 +1688,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Enterprise (+premium)"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "5a8d51c3e8",
@@ -1586,12 +1711,16 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 49,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
+      "ai",
+      "automation",
+      "git",
+      "automatisierung",
       "projektmanagement"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, git, automatisierung, projektmanagement.",
@@ -1632,7 +1761,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "745daf2290",
@@ -1656,9 +1788,14 @@
     "category_label": "Product Management",
     "match_score": 50,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
-      "produktmanagement"
+      "ai",
+      "produktmanagement",
+      "initiative",
+      "reporting",
+      "dashboard",
+      "looker"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, produktmanagement, initiative, reporting, dashboard, looker.",
     "days_ago": 10,
@@ -1698,7 +1835,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "897f5224cc",
@@ -1722,9 +1862,13 @@
     "category_label": "AI Operations & Automation",
     "match_score": 49,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€18–22/h (~€1558–€1905/mo)",
     "matched_keywords": [
-      "git"
+      "ai",
+      "git",
+      "cloud",
+      "automatisierung",
+      "sql"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, cloud, automatisierung, sql.",
     "days_ago": 6,
@@ -1764,7 +1908,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Enterprise (+premium)"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "1b0f8d15f5",
@@ -1786,9 +1933,9 @@
     "synced_to_sheets": false,
     "category_id": "cx_operations",
     "category_label": "Business & Data Operations",
-    "match_score": 94,
+    "match_score": 96,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1700–2200/mo (Internship)",
     "matched_keywords": [
       "ai",
       "evaluation",
@@ -1837,7 +1984,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Enterprise"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "2ddc2be71a",
@@ -1857,13 +2007,20 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "ai_automation",
-    "category_label": "AI Operations & Automation",
+    "category_id": "cx_operations",
+    "category_label": "Business & Data Operations",
     "match_score": 56,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
-      "ai"
+      "ai",
+      "erp",
+      "stakeholder",
+      "coordination",
+      "documentation",
+      "reporting",
+      "dashboard",
+      "complex data"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, erp, stakeholder, coordination, documentation, reporting.",
     "days_ago": 5,
@@ -1903,7 +2060,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "5f0be02786",
@@ -1927,9 +2087,14 @@
     "category_label": "Business & Data Operations",
     "match_score": 99,
     "language_req": "English + Basic/B1 German OK",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
-      "operations"
+      "ai",
+      "workflow",
+      "documentation",
+      "operations",
+      "reporting",
+      "support"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, workflow, documentation, operations, reporting, support.",
     "days_ago": 5,
@@ -1969,7 +2134,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "b6786f823f",
@@ -1993,9 +2161,16 @@
     "category_label": "AI Operations & Automation",
     "match_score": 99,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
-      "git"
+      "ai",
+      "llm",
+      "workflow",
+      "git",
+      "erp",
+      "documentation",
+      "sql",
+      "support"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, llm, workflow, git, erp, documentation.",
     "days_ago": 5,
@@ -2035,7 +2210,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "6993c64e29",
@@ -2059,9 +2237,12 @@
     "category_label": "AI Operations & Automation",
     "match_score": 48,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [
-      "automatisierung"
+      "git",
+      "agent",
+      "automatisierung",
+      "initiative"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: git, agent, automatisierung, initiative.",
     "days_ago": 5,
@@ -2101,7 +2282,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "7cf776ea80",
@@ -2125,7 +2309,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 89,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [
       "automatisierung"
     ],
@@ -2167,7 +2351,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "aeb3289f8b",
@@ -2191,7 +2378,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 94,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€18–22/h (~€1558–€1905/mo)",
     "matched_keywords": [
       "ai"
     ],
@@ -2233,7 +2420,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Enterprise (+premium)"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "693fdf5137",
@@ -2257,7 +2447,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 89,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [
       "automatisierung"
     ],
@@ -2299,7 +2489,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "9b8a65e220",
@@ -2323,7 +2516,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 94,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai"
     ],
@@ -2365,7 +2558,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "7080b4da0f",
@@ -2389,7 +2585,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 44,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai",
       "workflow",
@@ -2433,7 +2629,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "358cd41dd5",
@@ -2457,7 +2656,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 94,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai"
     ],
@@ -2499,7 +2698,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "193b5f9bac",
@@ -2523,7 +2725,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 59,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [
       "automatisierung"
     ],
@@ -2565,7 +2767,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "1d2702eb2b",
@@ -2585,13 +2790,19 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "product_management",
-    "category_label": "Product Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 67,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
-      "erp"
+      "ai",
+      "workflow",
+      "git",
+      "bot",
+      "erp",
+      "sql",
+      "support"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, workflow, git, bot, erp, sql.",
     "days_ago": 3,
@@ -2631,7 +2842,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "5aca023df2",
@@ -2655,9 +2869,12 @@
     "category_label": "Product Management",
     "match_score": 48,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
-      "produktmanagement"
+      "bot",
+      "feature",
+      "produktmanagement",
+      "erp"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: bot, feature, produktmanagement, erp.",
     "days_ago": 3,
@@ -2697,7 +2914,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "8a38be68c1",
@@ -2721,7 +2941,7 @@
     "category_label": "Project Management",
     "match_score": 89,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [
       "projektmanagement"
     ],
@@ -2763,7 +2983,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "fb5fc73007",
@@ -2783,12 +3006,15 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 63,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
+      "git",
+      "bot",
+      "agent",
       "project management"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: git, bot, agent, project management.",
@@ -2829,7 +3055,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "2b7b092af1",
@@ -2853,9 +3082,11 @@
     "category_label": "AI Operations & Automation",
     "match_score": 46,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
-      "bot"
+      "ai",
+      "bot",
+      "erp"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, bot, erp.",
     "days_ago": 2,
@@ -2895,7 +3126,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "454d6672aa",
@@ -2919,7 +3153,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 89,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [
       "git"
     ],
@@ -2961,7 +3195,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "9353af0016",
@@ -2981,13 +3218,18 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 50,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
-      "projektmanagement"
+      "ai",
+      "git",
+      "bot",
+      "projektmanagement",
+      "reporting",
+      "support"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, bot, projektmanagement, reporting, support.",
     "days_ago": 1,
@@ -3027,7 +3269,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "90c3359296",
@@ -3051,7 +3296,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 94,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [
       "git"
     ],
@@ -3093,7 +3338,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "624f05aa06",
@@ -3117,7 +3365,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 89,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "git"
     ],
@@ -3159,7 +3407,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "00e0aa4cfb",
@@ -3179,13 +3430,19 @@
     "cover_letter_url": "/files/applications/Vogel_Communications_Group_Gmb_00e0aa4cfb/Guillermo_Hernandez_Cover_Letter_Vogel_Communications_Group_Gmb.pdf",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 52,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
-      "projektmanagement"
+      "ai",
+      "git",
+      "bot",
+      "agent",
+      "erp",
+      "projektmanagement",
+      "initiative"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, bot, agent, erp, projektmanagement.",
     "days_ago": 0,
@@ -3225,7 +3482,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "de4e255f7a",
@@ -3249,9 +3509,10 @@
     "category_label": "AI Operations & Automation",
     "match_score": 60,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
-      "git"
+      "git",
+      "bot"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: git, bot.",
     "days_ago": 2,
@@ -3291,7 +3552,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "f9a603f5dd",
@@ -3311,12 +3575,19 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 48,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "ai",
+      "api",
+      "git",
+      "cloud",
+      "agent",
+      "automatisierung"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, api, git, cloud, agent, automatisierung.",
     "days_ago": 10,
     "posted_ago": "10 days ago (2026-11-12)",
@@ -3355,7 +3626,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "1ddced3f64",
@@ -3375,12 +3649,19 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "cx_operations",
+    "category_label": "Business & Data Operations",
     "match_score": 48,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "ai",
+      "erp",
+      "initiative",
+      "kpi",
+      "dashboard",
+      "sql"
+    ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, erp, initiative, kpi, dashboard, sql.",
     "days_ago": 10,
     "posted_ago": "10 days ago (2026-11-12)",
@@ -3419,7 +3700,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "d3b22a2405",
@@ -3439,12 +3723,15 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 42,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "ai",
+      "bot"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, bot.",
     "days_ago": 10,
     "posted_ago": "10 days ago (2026-11-12)",
@@ -3483,7 +3770,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "62ddf69001",
@@ -3503,12 +3793,16 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 44,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "ai",
+      "bot",
+      "erp"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, bot, erp.",
     "days_ago": 8,
     "posted_ago": "8 days ago (2026-11-14)",
@@ -3547,7 +3841,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "0dc2cf6533",
@@ -3571,7 +3868,7 @@
     "category_label": "Project Management",
     "match_score": 85,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 9,
@@ -3611,7 +3908,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "822bce0fbf",
@@ -3631,12 +3931,21 @@
     "cover_letter_url": "files/applications/TeamViewer_822bce0fbf/Guillermo_Hernandez_Cover_Letter_TeamViewer.pdf",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 99,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 59,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "cloud",
+      "bot",
+      "agent",
+      "feature",
+      "initiative",
+      "operations"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, cloud, bot, agent, feature.",
     "days_ago": 10,
     "posted_ago": "10 days ago (2026-11-12)",
@@ -3675,7 +3984,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "989e4be508",
@@ -3699,7 +4011,7 @@
     "category_label": "Project Management",
     "match_score": 55,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 10,
@@ -3739,7 +4051,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "65fb5fc883",
@@ -3763,7 +4078,7 @@
     "category_label": "Project Management",
     "match_score": 85,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 6,
@@ -3803,7 +4118,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "ad99a9cf48",
@@ -3827,7 +4145,7 @@
     "category_label": "Project Management",
     "match_score": 85,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 6,
@@ -3867,7 +4185,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "f666af5865",
@@ -3889,10 +4210,12 @@
     "synced_to_sheets": false,
     "category_id": "product_management",
     "category_label": "Product Management",
-    "match_score": 42,
+    "match_score": 44,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [
+      "ai",
+      "git",
       "erp",
       "operations"
     ],
@@ -3934,7 +4257,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "43d2f71428",
@@ -3954,12 +4280,15 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 42,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "ai",
+      "git"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git.",
     "days_ago": 5,
     "posted_ago": "5 days ago (2026-11-17)",
@@ -3998,7 +4327,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "a927d149fb",
@@ -4018,12 +4350,14 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 56,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
+    "matched_keywords": [
+      "bot"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: bot.",
     "days_ago": 5,
     "posted_ago": "5 days ago (2026-11-17)",
@@ -4062,7 +4396,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "0ddf6ab117",
@@ -4082,12 +4419,19 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 48,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "ai",
+      "automatisierung",
+      "saas",
+      "initiative",
+      "operations",
+      "reporting"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automatisierung, saas, initiative, operations, reporting.",
     "days_ago": 4,
     "posted_ago": "4 days ago (2026-11-18)",
@@ -4126,7 +4470,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "701dc18625",
@@ -4146,14 +4493,20 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "ai_automation",
-    "category_label": "AI Operations & Automation",
-    "match_score": 56,
+    "category_id": "product_management",
+    "category_label": "Product Management",
+    "match_score": 21,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
     "matched_keywords": [
       "ai",
-      "product owner"
+      "cloud",
+      "product manager",
+      "product owner",
+      "roadmap",
+      "feature",
+      "ux",
+      "figma"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, cloud, product manager, product owner, roadmap, feature.",
     "days_ago": 10,
@@ -4193,7 +4546,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "de487c1d5b",
@@ -4213,12 +4569,18 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "cx_operations",
+    "category_label": "Business & Data Operations",
     "match_score": 61,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "git",
+      "kpi",
+      "reporting",
+      "dashboard",
+      "tableau"
+    ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: git, kpi, reporting, dashboard, tableau.",
     "days_ago": 4,
     "posted_ago": "4 days ago (2026-11-18)",
@@ -4257,7 +4619,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "fce1945c50",
@@ -4281,7 +4646,7 @@
     "category_label": "Project Management",
     "match_score": 85,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 4,
@@ -4321,7 +4686,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "9927096041",
@@ -4345,7 +4713,7 @@
     "category_label": "Project Management",
     "match_score": 90,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 8,
@@ -4385,7 +4753,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "8278809328",
@@ -4405,14 +4776,19 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "ai_automation",
-    "category_label": "AI Operations & Automation",
-    "match_score": 46,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 11,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
     "matched_keywords": [
       "ai",
-      "project manager"
+      "automatisierung",
+      "erp",
+      "project manager",
+      "stakeholder",
+      "projektmanagement",
+      "initiative"
     ],
     "why_fits": "Strong Project Management fit. Matches keywords: ai, automatisierung, erp, project manager, stakeholder, projektmanagement.",
     "days_ago": 4,
@@ -4452,7 +4828,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "528a33f2d0",
@@ -4474,11 +4853,15 @@
     "synced_to_sheets": false,
     "category_id": "cx_operations",
     "category_label": "Business & Data Operations",
-    "match_score": 45,
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
     "matched_keywords": [
+      "ai",
+      "stakeholder",
+      "initiative",
       "operations",
+      "kpi",
       "business operations"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, stakeholder, initiative, operations, kpi, business operations.",
@@ -4519,7 +4902,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "06d851c0fd",
@@ -4539,12 +4925,18 @@
     "cover_letter_url": "files/applications/Allego_06d851c0fd/Guillermo_Hernandez_Cover_Letter_Allego.pdf",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 96,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "ai",
+      "api",
+      "stakeholder",
+      "complex data",
+      "support"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, api, stakeholder, complex data, support.",
     "days_ago": 4,
     "posted_ago": "4 days ago (2026-11-18)",
@@ -4583,7 +4975,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "94274c29ea",
@@ -4603,12 +4998,17 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 60,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "bot",
+      "reporting"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, bot, reporting.",
     "days_ago": 4,
     "posted_ago": "4 days ago (2026-11-18)",
@@ -4647,7 +5047,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "7430d95350",
@@ -4671,7 +5074,7 @@
     "category_label": "Project Management",
     "match_score": 85,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 4,
@@ -4711,7 +5114,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "d15fd94821",
@@ -4735,7 +5141,7 @@
     "category_label": "Project Management",
     "match_score": 85,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 6,
@@ -4775,7 +5181,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "9b8ddff58c",
@@ -4799,7 +5208,7 @@
     "category_label": "Project Management",
     "match_score": 85,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 4,
@@ -4839,7 +5248,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "9b572a70bc",
@@ -4861,12 +5273,17 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 61,
+    "match_score": 26,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
     "matched_keywords": [
+      "ai",
       "git",
-      "digital product"
+      "bot",
+      "digital product",
+      "feature",
+      "stakeholder",
+      "projektmanagement"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, bot, digital product, feature, stakeholder.",
     "days_ago": 3,
@@ -4906,7 +5323,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "947d4ed0d1",
@@ -4926,12 +5346,16 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "cx_operations",
+    "category_label": "Business & Data Operations",
     "match_score": 59,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "kpi",
+      "sql",
+      "support"
+    ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: kpi, sql, support.",
     "days_ago": 3,
     "posted_ago": "⚡ 3 days ago (2026-11-19)",
@@ -4970,7 +5394,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "66732fea9e",
@@ -4994,7 +5421,7 @@
     "category_label": "Project Management",
     "match_score": 85,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 2,
@@ -5034,7 +5461,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "13ca04e9a1",
@@ -5058,7 +5488,7 @@
     "category_label": "Project Management",
     "match_score": 85,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 2,
@@ -5098,7 +5528,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "546e4b39d9",
@@ -5122,7 +5555,7 @@
     "category_label": "Project Management",
     "match_score": 85,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 2,
@@ -5162,7 +5595,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "12199226e9",
@@ -5182,12 +5618,21 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 65,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "cloud",
+      "bot",
+      "agent",
+      "automatisierung",
+      "initiative",
+      "sql"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, cloud, bot, agent, automatisierung.",
     "days_ago": 2,
     "posted_ago": "⚡ 2 days ago (2026-11-20)",
@@ -5226,7 +5671,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "fcd9437968",
@@ -5250,7 +5698,7 @@
     "category_label": "Project Management",
     "match_score": 85,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 2,
@@ -5290,7 +5738,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "ab72ed200c",
@@ -5312,11 +5763,17 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 63,
+    "match_score": 28,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
     "matched_keywords": [
       "ai",
+      "workflow",
+      "agent",
+      "automatisierung",
+      "erp",
+      "rollout",
+      "initiative",
       "operations"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, workflow, agent, automatisierung, erp, rollout.",
@@ -5357,7 +5814,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "57a8595f65",
@@ -5377,12 +5837,16 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 59,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
+    "matched_keywords": [
+      "git",
+      "erp",
+      "projektmanagement"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: git, erp, projektmanagement.",
     "days_ago": 5,
     "posted_ago": "5 days ago (2026-11-17)",
@@ -5421,7 +5885,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "d5e8921817",
@@ -5443,12 +5910,18 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 48,
+    "match_score": 13,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€50k–62k/yr (Junior/Associate)",
     "matched_keywords": [
       "ai",
-      "product owner"
+      "prompt",
+      "git",
+      "bot",
+      "product owner",
+      "feature",
+      "agile",
+      "initiative"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, prompt, git, bot, product owner, feature.",
     "days_ago": 0,
@@ -5488,7 +5961,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "810bdeeee5",
@@ -5508,12 +5984,20 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 49,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€18–22/h (~€1558–€1905/mo)",
+    "matched_keywords": [
+      "ai",
+      "cloud",
+      "bot",
+      "produktmanagement",
+      "erp",
+      "agile",
+      "operations"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, cloud, bot, produktmanagement, erp, agile.",
     "days_ago": 0,
     "posted_ago": "🔥 Today (2026-11-22)",
@@ -5552,7 +6036,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Enterprise (+premium)"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "9b871677c8",
@@ -5572,12 +6059,16 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 59,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
+    "matched_keywords": [
+      "automatisierung",
+      "erp",
+      "tableau"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: automatisierung, erp, tableau.",
     "days_ago": 0,
     "posted_ago": "🔥 Today (2026-11-22)",
@@ -5616,7 +6107,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "cc79f4bc6b",
@@ -5640,9 +6134,15 @@
     "category_label": "Product Management",
     "match_score": 97,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
-      "product management"
+      "ai",
+      "product management",
+      "feature",
+      "erp",
+      "coordination",
+      "documentation",
+      "data analysis"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, product management, feature, erp, coordination, documentation.",
     "days_ago": 3,
@@ -5682,7 +6182,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "651ab0a756",
@@ -5704,9 +6207,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 88,
+    "match_score": 63,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
       "ai",
       "automation",
@@ -5755,7 +6258,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "70459b749c",
@@ -5777,9 +6283,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 88,
+    "match_score": 63,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "50000.0-65000.0 EUR (yearly",
+    "extracted_pay": "💰 €50k–65k/yr (Listed)",
     "matched_keywords": [
       "ai",
       "artificial intelligence",
@@ -5827,7 +6333,10 @@
       "monthly_estimate": "~€4.166 – €5.416/mo",
       "source": "Employer Listed"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "fd281d7977",
@@ -5849,9 +6358,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 38,
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
     "matched_keywords": [
       "ai",
       "bot",
@@ -5897,7 +6406,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "5f2a2795a5",
@@ -5919,11 +6431,18 @@
     "synced_to_sheets": false,
     "category_id": "product_management",
     "category_label": "Product Management",
-    "match_score": 99,
+    "match_score": 67,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
     "matched_keywords": [
-      "product manager"
+      "ai",
+      "api",
+      "git",
+      "product manager",
+      "product management",
+      "digital product",
+      "user story",
+      "figma"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, api, git, product manager, product management, digital product.",
     "days_ago": 10,
@@ -5963,7 +6482,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "7830d41eac",
@@ -5985,11 +6507,18 @@
     "synced_to_sheets": false,
     "category_id": "product_management",
     "category_label": "Product Management",
-    "match_score": 49,
+    "match_score": 14,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
     "matched_keywords": [
-      "product owner"
+      "ai",
+      "git",
+      "product management",
+      "product owner",
+      "feature",
+      "ux",
+      "backlog",
+      "stakeholder"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, git, product management, product owner, feature, ux.",
     "days_ago": 10,
@@ -6029,7 +6558,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "ca1bd2116d",
@@ -6051,11 +6583,17 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 44,
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
     "matched_keywords": [
-      "ai"
+      "ai",
+      "git",
+      "automatisierung",
+      "agile",
+      "initiative",
+      "operations",
+      "customer experience"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, automatisierung, agile, initiative, operations.",
     "days_ago": 10,
@@ -6095,7 +6633,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "c1de311e78",
@@ -6117,9 +6658,9 @@
     "synced_to_sheets": false,
     "category_id": "cx_operations",
     "category_label": "Business & Data Operations",
-    "match_score": 81,
+    "match_score": 83,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [
       "operations"
     ],
@@ -6161,7 +6702,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "51242538be",
@@ -6183,9 +6727,9 @@
     "synced_to_sheets": false,
     "category_id": "product_management",
     "category_label": "Product Management",
-    "match_score": 81,
+    "match_score": 46,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€42k–50k/yr (Junior/Associate)",
     "matched_keywords": [
       "product manager"
     ],
@@ -6227,7 +6771,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "0aaa587912",
@@ -6249,11 +6796,17 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 94,
+    "match_score": 96,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [
-      "automation"
+      "ai",
+      "automation",
+      "workflow",
+      "agent",
+      "erp",
+      "rollout",
+      "reporting"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, workflow, agent, erp, rollout.",
     "days_ago": 8,
@@ -6293,7 +6846,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "abfeb18c41",
@@ -6317,9 +6873,16 @@
     "category_label": "Business & Data Operations",
     "match_score": 99,
     "language_req": "English + Basic/B1 German OK",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1700–2200/mo (Internship)",
     "matched_keywords": [
-      "operations"
+      "ai",
+      "artificial intelligence",
+      "cloud",
+      "bot",
+      "agent",
+      "erp",
+      "project management",
+      "stakeholder"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, artificial intelligence, cloud, bot, agent, erp.",
     "days_ago": 6,
@@ -6359,7 +6922,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Enterprise"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "efa08ae857",
@@ -6381,11 +6947,18 @@
     "synced_to_sheets": false,
     "category_id": "product_management",
     "category_label": "Product Management",
-    "match_score": 95,
+    "match_score": 97,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [
-      "product management"
+      "ai",
+      "bot",
+      "agent",
+      "product manager",
+      "product management",
+      "feature",
+      "erp",
+      "sql"
     ],
     "why_fits": "Strong Product Management fit. Matches keywords: ai, bot, agent, product manager, product management, feature.",
     "days_ago": 7,
@@ -6425,7 +6998,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "172ebe8603",
@@ -6447,11 +7023,18 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 52,
+    "match_score": 17,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
     "matched_keywords": [
-      "ai"
+      "ai",
+      "api",
+      "git",
+      "bot",
+      "automatisierung",
+      "erp",
+      "stakeholder",
+      "rollout"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, api, git, bot, automatisierung, erp.",
     "days_ago": 5,
@@ -6491,7 +7074,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "7fa1878149",
@@ -6513,9 +7099,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 81,
+    "match_score": 46,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€42k–50k/yr (Junior/Associate)",
     "matched_keywords": [
       "git"
     ],
@@ -6557,7 +7143,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "cc90f0cb1f",
@@ -6579,11 +7168,18 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 98,
+    "match_score": 99,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [
-      "project management"
+      "ai",
+      "automation",
+      "api",
+      "tooling",
+      "project management",
+      "coordination",
+      "documentation",
+      "operations"
     ],
     "why_fits": "Strong Project Management fit. Matches keywords: ai, automation, api, tooling, project management, coordination.",
     "days_ago": 1,
@@ -6623,7 +7219,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "618d745d5c",
@@ -6643,12 +7242,16 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
     "match_score": 39,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
+    "matched_keywords": [
+      "git",
+      "bot",
+      "erp"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: git, bot, erp.",
     "days_ago": 10,
     "posted_ago": "10 days ago (2026-11-12)",
@@ -6687,7 +7290,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "5af7d97705",
@@ -6709,9 +7315,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 85,
+    "match_score": 60,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "45000.0-55000.0 EUR (yearly",
+    "extracted_pay": "💰 €45k–55k/yr (Listed)",
     "matched_keywords": [
       "ai",
       "api",
@@ -6759,7 +7365,10 @@
       "monthly_estimate": "~€3.750 – €4.583/mo",
       "source": "Employer Listed"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "83109ad3a9",
@@ -6783,7 +7392,7 @@
     "category_label": "Project Management",
     "match_score": 80,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 4,
@@ -6823,7 +7432,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "e899913d4d",
@@ -6847,7 +7459,7 @@
     "category_label": "Project Management",
     "match_score": 80,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 4,
@@ -6887,7 +7499,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "50ab2ae962",
@@ -6909,9 +7524,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 84,
+    "match_score": 59,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
       "ai",
       "artificial intelligence",
@@ -6959,7 +7574,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "dfc93a238e",
@@ -6979,12 +7597,17 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 87,
+    "category_id": "cx_operations",
+    "category_label": "Business & Data Operations",
+    "match_score": 52,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
+    "matched_keywords": [
+      "ai",
+      "dashboard",
+      "sql",
+      "tableau"
+    ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, dashboard, sql, tableau.",
     "days_ago": 10,
     "posted_ago": "10 days ago (2026-11-12)",
@@ -7023,7 +7646,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "ff8e0aa945",
@@ -7043,12 +7669,21 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 42,
+    "category_id": "cx_operations",
+    "category_label": "Business & Data Operations",
+    "match_score": 44,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€1700–2200/mo (Internship)",
+    "matched_keywords": [
+      "ai",
+      "api",
+      "stakeholder",
+      "dashboard",
+      "sql",
+      "data analysis",
+      "process improvement",
+      "support"
+    ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, api, stakeholder, dashboard, sql, data analysis.",
     "days_ago": 7,
     "posted_ago": "7 days ago (2026-11-15)",
@@ -7087,7 +7722,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Enterprise"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "370145dca6",
@@ -7107,12 +7745,19 @@
     "cover_letter_url": "files/applications/Lyceum_370145dca6/Guillermo_Hernandez_Cover_Letter_Lyceum.pdf",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 90,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 92,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
+    "matched_keywords": [
+      "ai",
+      "cloud",
+      "roadmap",
+      "feature",
+      "cross-functional",
+      "support"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, cloud, roadmap, feature, cross-functional, support.",
     "days_ago": 6,
     "posted_ago": "6 days ago (2026-11-16)",
@@ -7151,7 +7796,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "80beb287e5",
@@ -7171,12 +7819,17 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 52,
+    "category_id": "product_management",
+    "category_label": "Product Management",
+    "match_score": 17,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€42k–50k/yr (Junior/Associate)",
+    "matched_keywords": [
+      "bot",
+      "product manager",
+      "produktmanagement",
+      "erp"
+    ],
     "why_fits": "Strong Product Management fit. Matches keywords: bot, product manager, produktmanagement, erp.",
     "days_ago": 6,
     "posted_ago": "6 days ago (2026-11-16)",
@@ -7215,7 +7868,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "1139f4a7f1",
@@ -7235,12 +7891,21 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 59,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 24,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
+    "matched_keywords": [
+      "ai",
+      "agent",
+      "automatisierung",
+      "product team",
+      "roadmap",
+      "produktmanagement",
+      "stakeholder",
+      "operations"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, agent, automatisierung, product team, roadmap, produktmanagement.",
     "days_ago": 5,
     "posted_ago": "5 days ago (2026-11-17)",
@@ -7279,7 +7944,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "8f2c2bfd52",
@@ -7301,9 +7969,9 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 77,
+    "match_score": 79,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 5,
@@ -7343,7 +8011,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "7a067a4bf3",
@@ -7363,12 +8034,21 @@
     "cover_letter_url": "files/applications/Abacus_Medicine_Group_7a067a4bf3/Guillermo_Hernandez_Cover_Letter_Abacus_Medicine_Group.pdf",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 98,
+    "category_id": "cx_operations",
+    "category_label": "Business & Data Operations",
+    "match_score": 63,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
+    "matched_keywords": [
+      "ai",
+      "evaluation",
+      "bot",
+      "stakeholder",
+      "initiative",
+      "kpi",
+      "reporting",
+      "dashboard"
+    ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: ai, evaluation, bot, stakeholder, initiative, kpi.",
     "days_ago": 4,
     "posted_ago": "4 days ago (2026-11-18)",
@@ -7407,7 +8087,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "de9899e19a",
@@ -7429,9 +8112,9 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 77,
+    "match_score": 79,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 4,
@@ -7471,7 +8154,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "13aa546e71",
@@ -7491,12 +8177,16 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 36,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€42k–50k/yr (Junior/Associate)",
+    "matched_keywords": [
+      "git",
+      "bot",
+      "agile"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: git, bot, agile.",
     "days_ago": 4,
     "posted_ago": "4 days ago (2026-11-18)",
@@ -7535,7 +8225,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "f4943835d2",
@@ -7555,12 +8248,19 @@
     "cover_letter_url": "files/applications/Lyceum_f4943835d2/Guillermo_Hernandez_Cover_Letter_Lyceum.pdf",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 90,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 55,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
+    "matched_keywords": [
+      "ai",
+      "api",
+      "cloud",
+      "roadmap",
+      "feature",
+      "support"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, api, cloud, roadmap, feature, support.",
     "days_ago": 6,
     "posted_ago": "6 days ago (2026-11-16)",
@@ -7599,7 +8299,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "53f8c869d7",
@@ -7619,12 +8322,15 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 84,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 86,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
+    "matched_keywords": [
+      "ai",
+      "bot"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, bot.",
     "days_ago": 6,
     "posted_ago": "6 days ago (2026-11-16)",
@@ -7663,7 +8369,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "677c0f04fc",
@@ -7683,12 +8392,17 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 37,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€45k–55k/yr (Junior/Associate)",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "scrum",
+      "dashboard"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, scrum, dashboard.",
     "days_ago": 3,
     "posted_ago": "⚡ 3 days ago (2026-11-19)",
@@ -7727,7 +8441,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "143a4e2721",
@@ -7749,9 +8466,9 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 77,
+    "match_score": 42,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€42k–50k/yr (Junior/Associate)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 2,
@@ -7791,7 +8508,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "ef7ac1dd69",
@@ -7811,12 +8531,17 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 37,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 39,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
+    "matched_keywords": [
+      "api",
+      "git",
+      "bot",
+      "initiative"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: api, git, bot, initiative.",
     "days_ago": 2,
     "posted_ago": "⚡ 2 days ago (2026-11-20)",
@@ -7855,7 +8580,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "452b3584b2",
@@ -7877,9 +8605,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 81,
+    "match_score": 56,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
       "ai",
       "artificial intelligence",
@@ -7927,7 +8655,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "0a4b16e46d",
@@ -7949,9 +8680,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 31,
+    "match_score": 43,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [
       "ai",
       "chatbot",
@@ -7997,7 +8728,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "e04496eb3c",
@@ -8019,9 +8753,9 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 76,
+    "match_score": 78,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [
       "program manager"
     ],
@@ -8063,7 +8797,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "80c2fe3bf3",
@@ -8085,12 +8822,18 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 57,
+    "match_score": 69,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [
       "ai",
-      "automation"
+      "automation",
+      "workflow",
+      "low-code",
+      "agent",
+      "automatisierung",
+      "initiative",
+      "operations"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, workflow, low-code, agent, automatisierung.",
     "days_ago": 10,
@@ -8130,7 +8873,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "a0e324d7ee",
@@ -8152,12 +8898,18 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 57,
+    "match_score": 69,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [
       "ai",
-      "automation"
+      "automation",
+      "workflow",
+      "low-code",
+      "agent",
+      "automatisierung",
+      "initiative",
+      "operations"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, workflow, low-code, agent, automatisierung.",
     "days_ago": 10,
@@ -8197,7 +8949,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "235171584f",
@@ -8217,14 +8972,20 @@
     "cover_letter_url": "files/applications/ib_vogt_GmbH_235171584f/Guillermo_Hernandez_Cover_Letter_ib_vogt_GmbH.pdf",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "ai_automation",
-    "category_label": "AI Operations & Automation",
-    "match_score": 97,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 72,
     "language_req": "English + Basic/B1 German OK",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
+      "ai",
       "git",
-      "program manager"
+      "cloud",
+      "bot",
+      "tooling",
+      "erp",
+      "program manager",
+      "pmo"
     ],
     "why_fits": "Strong Project Management fit. Matches keywords: ai, git, cloud, bot, tooling, erp.",
     "days_ago": 10,
@@ -8264,7 +9025,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "ed591349e2",
@@ -8284,14 +9048,20 @@
     "cover_letter_url": "files/applications/ib_vogt_IBV_Solar_Spain_ed591349e2/Guillermo_Hernandez_Cover_Letter_ib_vogt_IBV_Solar_Spain.pdf",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "ai_automation",
-    "category_label": "AI Operations & Automation",
-    "match_score": 97,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 72,
     "language_req": "English + Basic/B1 German OK",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
+      "ai",
       "git",
-      "program manager"
+      "cloud",
+      "bot",
+      "tooling",
+      "erp",
+      "program manager",
+      "pmo"
     ],
     "why_fits": "Strong Project Management fit. Matches keywords: ai, git, cloud, bot, tooling, erp.",
     "days_ago": 9,
@@ -8331,7 +9101,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "c6c3240255",
@@ -8355,7 +9128,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 54,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai",
       "git",
@@ -8404,7 +9177,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "17db150292",
@@ -8426,9 +9202,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 78,
+    "match_score": 53,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
       "ai",
       "workflow",
@@ -8472,7 +9248,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "6f64f822cb",
@@ -8494,10 +9273,19 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 89,
+    "match_score": 91,
     "language_req": "English + Basic/B1 German OK",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
+    "matched_keywords": [
+      "ai",
+      "project manager",
+      "project management",
+      "stakeholder",
+      "coordination",
+      "agile",
+      "documentation",
+      "cross-functional"
+    ],
     "why_fits": "Strong Project Management fit. Matches keywords: ai, project manager, project management, stakeholder, coordination, agile.",
     "days_ago": 3,
     "posted_ago": "⚡ 3 days ago (2026-11-19)",
@@ -8536,7 +9324,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "53abe67f28",
@@ -8558,9 +9349,9 @@
     "synced_to_sheets": false,
     "category_id": "product_management",
     "category_label": "Product Management",
-    "match_score": 71,
+    "match_score": 46,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
       "product manager"
     ],
@@ -8602,7 +9393,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "26dd8ae3be",
@@ -8624,11 +9418,18 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 38,
+    "match_score": 13,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
-      "git"
+      "ai",
+      "git",
+      "bot",
+      "agent",
+      "automatisierung",
+      "erp",
+      "stakeholder",
+      "projektmanagement"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, bot, agent, automatisierung, erp.",
     "days_ago": 9,
@@ -8668,7 +9469,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "0ad45da86d",
@@ -8690,11 +9494,15 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 81,
+    "match_score": 56,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
-      "project manager"
+      "ai",
+      "ux",
+      "project manager",
+      "kpi",
+      "support"
     ],
     "why_fits": "Strong Project Management fit. Matches keywords: ai, ux, project manager, kpi, support.",
     "days_ago": 6,
@@ -8734,7 +9542,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "b3a8de9c18",
@@ -8756,10 +9567,11 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 27,
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
+      "stakeholder",
       "projektmanagement"
     ],
     "why_fits": "Strong Project Management fit. Matches keywords: stakeholder, projektmanagement.",
@@ -8800,7 +9612,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "8ae18c584e",
@@ -8822,9 +9637,9 @@
     "synced_to_sheets": false,
     "category_id": "cx_operations",
     "category_label": "Business & Data Operations",
-    "match_score": 71,
+    "match_score": 83,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [
       "operations"
     ],
@@ -8866,7 +9681,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "37763f4eb7",
@@ -8888,11 +9706,17 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 34,
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
-      "git"
+      "git",
+      "bot",
+      "product owner",
+      "figma",
+      "agile",
+      "projektmanagement",
+      "initiative"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: git, bot, product owner, figma, agile, projektmanagement.",
     "days_ago": 4,
@@ -8932,7 +9756,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "942a99da64",
@@ -8954,9 +9781,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 71,
+    "match_score": 46,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€50k–62k/yr (Junior/Associate)",
     "matched_keywords": [
       "ai"
     ],
@@ -8998,7 +9825,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Junior Tech/Operations"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "460832e132",
@@ -9020,9 +9850,9 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 71,
+    "match_score": 46,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
       "project manager"
     ],
@@ -9064,7 +9894,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "49e2f58b06",
@@ -9086,9 +9919,9 @@
     "synced_to_sheets": false,
     "category_id": "cx_operations",
     "category_label": "Business & Data Operations",
-    "match_score": 71,
+    "match_score": 46,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
       "operations"
     ],
@@ -9130,7 +9963,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "7c1b40f7f1",
@@ -9152,11 +9988,18 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 36,
+    "match_score": 11,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
-      "project management"
+      "bot",
+      "project management",
+      "pmo",
+      "stakeholder",
+      "rollout",
+      "agile",
+      "projektmanagement",
+      "kpi"
     ],
     "why_fits": "Strong Project Management fit. Matches keywords: bot, project management, pmo, stakeholder, rollout, agile.",
     "days_ago": 3,
@@ -9196,7 +10039,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "2da686eec4",
@@ -9218,11 +10064,17 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 34,
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€62k–83k/yr (Mid-level)",
     "matched_keywords": [
-      "git"
+      "git",
+      "bot",
+      "agent",
+      "erp",
+      "stakeholder",
+      "projektmanagement",
+      "initiative"
     ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: git, bot, agent, erp, stakeholder, projektmanagement.",
     "days_ago": 5,
@@ -9262,7 +10114,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "1b4b66e483",
@@ -9284,9 +10139,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 76,
+    "match_score": 51,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "82000.0-140000.0 EUR (yearly",
+    "extracted_pay": "💰 €82k–140k/yr (Listed)",
     "matched_keywords": [
       "ai",
       "api",
@@ -9333,7 +10188,10 @@
       "monthly_estimate": "~€6.833 – €11.666/mo",
       "source": "Employer Listed"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "56f6883495",
@@ -9355,11 +10213,14 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 80,
+    "match_score": 55,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
-      "implementation"
+      "ai",
+      "stakeholder",
+      "implementation",
+      "reporting"
     ],
     "why_fits": "Strong Project Management fit. Matches keywords: ai, stakeholder, implementation, reporting.",
     "days_ago": 0,
@@ -9399,7 +10260,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "74a6e7f13a",
@@ -9423,7 +10287,7 @@
     "category_label": "Project Management",
     "match_score": 65,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [
       "git",
       "bot",
@@ -9468,7 +10332,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Standard Berlin"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "b4650a1b16",
@@ -9492,7 +10359,7 @@
     "category_label": "Project Management",
     "match_score": 49,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai",
       "git",
@@ -9540,7 +10407,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "78066ec645",
@@ -9564,7 +10434,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 48,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "18,78 € pro Stunde",
+    "extracted_pay": "💰 €18–19/h (Listed)",
     "matched_keywords": [
       "ai",
       "api",
@@ -9610,7 +10480,10 @@
       "monthly_estimate": "~€1.563 – €1.626/mo (20h)",
       "source": "Employer Listed"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "6c27b10774",
@@ -9634,7 +10507,7 @@
     "category_label": "AI Operations & Automation",
     "match_score": 48,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai",
       "chatbot",
@@ -9681,7 +10554,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "5b1d5caffa",
@@ -9701,12 +10577,14 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 38,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 13,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 €16/h (Listed in text)",
+    "matched_keywords": [
+      "ai"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai.",
     "days_ago": 10,
     "posted_ago": "10 days ago (2026-11-12)",
@@ -9744,7 +10622,10 @@
       "monthly_estimate": "~€1.385/mo (20h)",
       "source": "Job Description"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "35edc436b0",
@@ -9764,12 +10645,18 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 28,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€62k–83k/yr (Mid-level)",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "bot",
+      "erp",
+      "quantitative"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, bot, erp, quantitative.",
     "days_ago": 6,
     "posted_ago": "6 days ago (2026-11-16)",
@@ -9808,7 +10695,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "50b930525c",
@@ -9828,12 +10718,17 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 42,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 60,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "automatisierung",
+      "reporting"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, automatisierung, reporting.",
     "days_ago": 9,
     "posted_ago": "9 days ago (2026-11-13)",
@@ -9872,7 +10767,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "a85beb0c61",
@@ -9894,10 +10792,17 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 30,
+    "match_score": 40,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
+    "matched_keywords": [
+      "bot",
+      "ux",
+      "erp",
+      "agile",
+      "scrum",
+      "projektmanagement"
+    ],
     "why_fits": "Strong Project Management fit. Matches keywords: bot, ux, erp, agile, scrum, projektmanagement.",
     "days_ago": 5,
     "posted_ago": "5 days ago (2026-11-17)",
@@ -9936,7 +10841,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "PART_TIME",
+    "employment_label": "⏱️ Teilzeit (Part-Time)",
+    "is_student_legal": true
   },
   {
     "id": "fc26a64daf",
@@ -9956,12 +10864,18 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 28,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "automatisierung",
+      "produktmanagement",
+      "customer service"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, automatisierung, produktmanagement, customer service.",
     "days_ago": 5,
     "posted_ago": "5 days ago (2026-11-17)",
@@ -10000,7 +10914,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "7eb85e4a9b",
@@ -10022,10 +10939,15 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 27,
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€62k–83k/yr (Mid-level)",
+    "matched_keywords": [
+      "ai",
+      "erp",
+      "pmo",
+      "projektmanagement"
+    ],
     "why_fits": "Strong Project Management fit. Matches keywords: ai, erp, pmo, projektmanagement.",
     "days_ago": 10,
     "posted_ago": "10 days ago (2026-11-12)",
@@ -10064,7 +10986,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "a700dfd772",
@@ -10084,12 +11009,21 @@
     "cover_letter_url": "",
     "notes": "",
     "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 49,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 24,
     "language_req": "German Working Language (B1 Challenging)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
+    "matched_keywords": [
+      "ai",
+      "git",
+      "bot",
+      "automatisierung",
+      "erp",
+      "initiative",
+      "kpi",
+      "reporting"
+    ],
     "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, git, bot, automatisierung, erp, initiative.",
     "days_ago": 5,
     "posted_ago": "5 days ago (2026-11-17)",
@@ -10128,7 +11062,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "eaeccd539a",
@@ -10150,9 +11087,9 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 67,
+    "match_score": 79,
     "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1700–2200/mo (Internship)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
     "days_ago": 5,
@@ -10192,7 +11129,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Enterprise"
     },
-    "is_english_friendly": true
+    "is_english_friendly": true,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "b6210f5d94",
@@ -10214,10 +11154,15 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 22,
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
-    "matched_keywords": [],
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
+    "matched_keywords": [
+      "git",
+      "produktmanagement",
+      "projektmanagement",
+      "initiative"
+    ],
     "why_fits": "Strong Project Management fit. Matches keywords: git, produktmanagement, projektmanagement, initiative.",
     "days_ago": 7,
     "posted_ago": "7 days ago (2026-11-15)",
@@ -10256,7 +11201,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "79de299c30",
@@ -10280,7 +11228,7 @@
     "category_label": "Business & Data Operations",
     "match_score": 52,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
     "matched_keywords": [
       "ai",
       "automation",
@@ -10329,7 +11277,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Tech / Scale-up"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true
   },
   {
     "id": "454bad3485",
@@ -10351,9 +11302,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 38,
+    "match_score": 40,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [
       "ai",
       "workflow",
@@ -10397,7 +11348,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "b36ea1fb52",
@@ -10419,9 +11373,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 38,
+    "match_score": 40,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€1300–1800/mo (Internship)",
     "matched_keywords": [
       "ai",
       "git",
@@ -10467,7 +11421,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Berlin Startup/Tech"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "INTERNSHIP",
+    "employment_label": "💼 Praktikum / Internship",
+    "is_student_legal": true
   },
   {
     "id": "139689c2e8",
@@ -10489,9 +11446,9 @@
     "synced_to_sheets": false,
     "category_id": "ai_automation",
     "category_label": "AI Operations & Automation",
-    "match_score": 34,
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "Not listed",
+    "extracted_pay": "💰 ~€52k–68k/yr (Mid-level)",
     "matched_keywords": [
       "ai",
       "workflow",
@@ -10540,7 +11497,10 @@
       "source": "Berlin Benchmark Estimate",
       "tier": "Professional/Manager"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "edba810160",
@@ -10562,9 +11522,9 @@
     "synced_to_sheets": false,
     "category_id": "project_management",
     "category_label": "Project Management",
-    "match_score": 31,
+    "match_score": 10,
     "language_req": "Requires C1/Fluent German (B1 Risk)",
-    "extracted_pay": "52000.0-61000.0 EUR (yearly",
+    "extracted_pay": "💰 €52k–61k/yr (Listed)",
     "matched_keywords": [
       "ai",
       "bot",
@@ -10611,7 +11571,10 @@
       "monthly_estimate": "~€4.333 – €5.083/mo",
       "source": "Employer Listed"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   },
   {
     "id": "feab83a323",
@@ -10633,9 +11596,9 @@
     "synced_to_sheets": false,
     "category_id": "cx_operations",
     "category_label": "Business & Data Operations",
-    "match_score": 33,
+    "match_score": 10,
     "language_req": "Requires Finnish",
-    "extracted_pay": "2409.33-2609.33 EUR (monthly",
+    "extracted_pay": "💰 €2.409–€2.609/mo (Listed)",
     "matched_keywords": [
       "ai",
       "api",
@@ -10683,6 +11646,9 @@
       "monthly_estimate": "€2.409 – €2.609/mo",
       "source": "Employer Listed"
     },
-    "is_english_friendly": false
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false
   }
 ]
