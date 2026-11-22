@@ -237,6 +237,168 @@ def calculate_commute_from_sohtstrasse(job: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
+def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Returns structured compensation details for a job:
+    - If explicit salary is in job metadata or description, cleans and formats it.
+    - Otherwise calculates a realistic Berlin benchmark estimate based on role, company, seniority, and domain.
+    """
+    raw_salary = str(job.get("salary") or "").strip()
+    title = str(job.get("title") or "").strip()
+    company = str(job.get("company") or "").strip()
+    desc = str(job.get("description") or "").strip()
+
+    title_l = title.lower()
+    desc_l = desc.lower()
+    company_l = company.lower()
+
+    # 1. Check if explicit salary is in job metadata
+    if raw_salary and raw_salary.lower() not in ["none", "nan", "not listed", "null", ""]:
+        nums = re.findall(r"(\d+(?:\.\d+)?)", raw_salary)
+        if nums:
+            low = float(nums[0])
+            high = float(nums[1]) if len(nums) > 1 else low
+            if "hour" in raw_salary.lower() or low < 100:
+                badge = f"💰 €{low:.0f}/h" if low == high else f"💰 €{low:.0f}–{high:.0f}/h"
+                monthly_low = int(low * 86.6)
+                monthly_high = int(high * 86.6)
+                return {
+                    "is_estimated": False,
+                    "badge": badge,
+                    "display": f"{badge} (Listed)",
+                    "range_text": f"€{low:.2f} – €{high:.2f} / hour",
+                    "monthly_estimate": f"~€{monthly_low:,} – €{monthly_high:,}/mo (20h)".replace(",", "."),
+                    "source": "Employer Listed",
+                }
+            elif "month" in raw_salary.lower() or (low >= 1000 and low <= 8000):
+                badge = f"💰 €{int(low):,}–€{int(high):,}/mo".replace(",", ".")
+                return {
+                    "is_estimated": False,
+                    "badge": badge,
+                    "display": f"{badge} (Listed)",
+                    "range_text": f"€{int(low):,} – €{int(high):,} / month".replace(",", "."),
+                    "monthly_estimate": f"€{int(low):,} – €{int(high):,}/mo".replace(",", "."),
+                    "source": "Employer Listed",
+                }
+            elif low > 20000:
+                badge = f"💰 €{int(low/1000)}k–{int(high/1000)}k/yr"
+                return {
+                    "is_estimated": False,
+                    "badge": badge,
+                    "display": f"{badge} (Listed)",
+                    "range_text": f"€{int(low):,} – €{int(high):,} / year".replace(",", "."),
+                    "monthly_estimate": f"~€{int(low/12):,} – €{int(high/12):,}/mo".replace(",", "."),
+                    "source": "Employer Listed",
+                }
+
+    # 2. Check if hourly rate is written in the job description text
+    desc_salary = re.search(
+        r"(\d{2}(?:[.,]\d{1,2})?)\s*(?:€|euro)\s*(?:/|\s*per\s*|\s*pro\s*)?(?:h|hour|std|stunde)",
+        desc,
+        re.IGNORECASE,
+    )
+    if desc_salary:
+        val = desc_salary.group(1).replace(",", ".")
+        try:
+            rate = float(val)
+            badge = f"💰 €{rate:.0f}/h"
+            return {
+                "is_estimated": False,
+                "badge": badge,
+                "display": f"{badge} (Listed in text)",
+                "range_text": f"€{rate:.2f}/h",
+                "monthly_estimate": f"~€{int(rate * 86.6):,}/mo (20h)".replace(",", "."),
+                "source": "Job Description",
+            }
+        except Exception:
+            pass
+
+    # 3. Calculate Realistic Berlin Benchmark Estimate
+    is_enterprise = any(k in company_l for k in ["sap", "amazon", "google", "microsoft", "deloitte", "pwc", "kpmg", "mckinsey", "zalando", "check24", "universal music"])
+    is_scaleup = any(k in company_l for k in ["auto1", "delivery hero", "n26", "contentful", "personio", "hellofresh", "jobbird", "tier", "flink", "trade republic"])
+    is_tech_ai = any(k in title_l or k in desc_l for k in ["ai", "machine learning", "data analytics", "sql", "sap", "cloud", "software", "infrastructure", "python"])
+
+    # Role seniority:
+    # A) Working Student
+    if any(k in title_l for k in ["working student", "werkstudent", "student", "studentische", "hilfskraft"]):
+        base_low = 14.50
+        base_high = 16.50
+        if is_enterprise:
+            base_low += 3.50
+            base_high += 5.50
+        elif is_scaleup or is_tech_ai:
+            base_low += 1.50
+            base_high += 2.50
+
+        low_h = round(base_low)
+        high_h = round(base_high)
+        monthly_low = int(low_h * 86.6)
+        monthly_high = int(high_h * 86.6)
+        badge = f"💰 ~€{low_h}–{high_h}/h"
+        return {
+            "is_estimated": True,
+            "badge": badge,
+            "display": f"{badge} (~€{monthly_low}–€{monthly_high}/mo)",
+            "range_text": f"~€{low_h} – €{high_h} / hour (Berlin Tech Benchmark)",
+            "monthly_estimate": f"~€{monthly_low} – €{monthly_high} / month (at 20h/wk)",
+            "source": "Berlin Benchmark Estimate",
+            "tier": "Enterprise (+premium)" if is_enterprise else ("Tech / Scale-up" if (is_scaleup or is_tech_ai) else "Standard Berlin"),
+        }
+
+    # B) Intern / Praktikum
+    if any(k in title_l for k in ["intern", "praktikant", "praktikum", "internship"]):
+        monthly_low = 1300 if not is_enterprise else 1700
+        monthly_high = 1800 if not is_enterprise else 2200
+        badge = f"💰 ~€{monthly_low}–{monthly_high}/mo"
+        return {
+            "is_estimated": True,
+            "badge": badge,
+            "display": f"{badge} (Internship)",
+            "range_text": f"~€{monthly_low} – €{monthly_high} / month",
+            "monthly_estimate": f"~€{monthly_low} – €{monthly_high} / month",
+            "source": "Berlin Benchmark Estimate",
+            "tier": "Enterprise" if is_enterprise else "Berlin Startup/Tech",
+        }
+
+    # C) Junior / Associate
+    if any(k in title_l for k in ["junior", "associate", "trainee", "entry", "coordinator", "assistant"]):
+        annual_low = 42
+        annual_high = 50
+        if is_enterprise:
+            annual_low += 8
+            annual_high += 12
+        elif is_tech_ai:
+            annual_low += 3
+            annual_high += 5
+        badge = f"💰 ~€{annual_low}k–{annual_high}k/yr"
+        return {
+            "is_estimated": True,
+            "badge": badge,
+            "display": f"{badge} (Junior/Associate)",
+            "range_text": f"~€{annual_low}.000 – €{annual_high}.000 / year",
+            "monthly_estimate": f"~€{int(annual_low*1000/12):,} – €{int(annual_high*1000/12):,}/mo".replace(",", "."),
+            "source": "Berlin Benchmark Estimate",
+            "tier": "Junior Tech/Operations",
+        }
+
+    # D) Mid-level Specialist / Manager / Consultant
+    annual_low = 52
+    annual_high = 68
+    if is_enterprise:
+        annual_low += 10
+        annual_high += 15
+    badge = f"💰 ~€{annual_low}k–{annual_high}k/yr"
+    return {
+        "is_estimated": True,
+        "badge": badge,
+        "display": f"{badge} (Mid-level)",
+        "range_text": f"~€{annual_low}.000 – €{annual_high}.000 / year",
+        "monthly_estimate": f"~€{int(annual_low*1000/12):,} – €{int(annual_high*1000/12):,}/mo".replace(",", "."),
+        "source": "Berlin Benchmark Estimate",
+        "tier": "Professional/Manager",
+    }
+
+
 def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
     title = str(job.get("title") or "")
     company = str(job.get("company") or "")
@@ -305,15 +467,19 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
     # Commute check from Söhtstraße 16, 12203 Berlin
     commute_info = calculate_commute_from_sohtstrasse(job)
 
+    # Compensation check (listed or Berlin benchmark estimate)
+    compensation_info = estimate_job_compensation(job)
+
     return {
         "category_id": best_cat_id,
         "category_label": best_cat_label,
         "match_score": final_score,
         "language_req": lang_label,
-        "extracted_pay": extracted_pay,
+        "extracted_pay": compensation_info["display"],
         "matched_keywords": matched_keywords[:8],
         "why_fits": why_fits,
         "commute": commute_info,
+        "compensation": compensation_info,
     }
 
 

@@ -383,7 +383,11 @@
         btn_download_cv_pdf: "📥 CV herunterladen (PDF)",
         btn_download_pdf: "📥 Als PDF herunterladen",
         download_cv_pdf_tooltip: "Maßgeschneiderten 1-Seiten-CV direkt als PDF herunterladen",
-        download_cl_pdf_tooltip: "Anschreiben direkt als PDF herunterladen"
+        download_cl_pdf_tooltip: "Anschreiben direkt als PDF herunterladen",
+        comp_box_title: "💰 Gehaltsschätzung & Werkstudenten-Vorteil",
+        comp_rate_label: "Geschätzter Stundenlohn / Gehalt",
+        comp_student_advantage_label: "Werkstudentenprivileg (Steuer- & Abgaben-Vorteil)",
+        comp_student_advantage_text: "Bis 20 Std./Woche: Keine Beiträge zur Kranken- und Arbeitslosenversicherung (~10% mehr Netto vom Brutto). Nur ~9,3% Rentenversicherung."
       },
       en: {
         brand_sub: "Indeed & LinkedIn Career Command",
@@ -466,7 +470,11 @@
         btn_download_cv_pdf: "📥 Download CV (PDF)",
         btn_download_pdf: "📥 Download PDF",
         download_cv_pdf_tooltip: "Directly download tailored 1-page CV as PDF",
-        download_cl_pdf_tooltip: "Directly download cover letter as PDF"
+        download_cl_pdf_tooltip: "Directly download cover letter as PDF",
+        comp_box_title: "💰 Estimated Compensation & Student Advantage",
+        comp_rate_label: "Estimated Pay Rate",
+        comp_student_advantage_label: "Student Advantage (Werkstudentenprivileg)",
+        comp_student_advantage_text: "Up to 20h/week: Exempt from health & unemployment contributions (~10% extra net pay). Only ~9.3% pension contribution applies."
       }
     };
 
@@ -1300,6 +1308,147 @@
       return { commute_minutes: 25, within_limit: true, badge: '🚇 ~25 min (S1)', summary: 'Central Berlin: ~25 min from Söhtstr. 16 via S1' };
     }
 
+    function getJobCompensation(job) {
+      if (job && job.compensation && job.compensation.badge) {
+        return job.compensation;
+      }
+      const rawSalary = (job.salary || '').trim();
+      const title = (job.title || '').toLowerCase();
+      const company = (job.company || '').toLowerCase();
+      const desc = (job.description || '').toLowerCase();
+
+      // 1. Explicit salary in metadata
+      if (rawSalary && !['none', 'nan', 'not listed', 'null', ''].includes(rawSalary.toLowerCase())) {
+        const nums = rawSalary.match(/\d+(?:\.\d+)?/g);
+        if (nums && nums.length > 0) {
+          const low = parseFloat(nums[0]);
+          const high = nums.length > 1 ? parseFloat(nums[1]) : low;
+          if (rawSalary.toLowerCase().includes('hour') || low < 100) {
+            const badge = low === high ? `💰 €${Math.round(low)}/h` : `💰 €${Math.round(low)}–${Math.round(high)}/h`;
+            return {
+              badge: badge,
+              display: `${badge} (Listed)`,
+              is_estimated: false,
+              range_text: `€${low.toFixed(2)} – €${high.toFixed(2)} / hour`,
+              monthly_estimate: `~€${Math.round(low * 86.6).toLocaleString('de-DE')} – €${Math.round(high * 86.6).toLocaleString('de-DE')}/mo (20h)`,
+              source: 'Employer Listed'
+            };
+          } else if (rawSalary.toLowerCase().includes('month') || (low >= 1000 && low <= 8000)) {
+            const badge = low === high ? `💰 €${Math.round(low)}/mo` : `💰 €${Math.round(low)}–${Math.round(high)}/mo`;
+            return {
+              badge: badge,
+              display: `${badge} (Listed)`,
+              is_estimated: false,
+              range_text: `€${Math.round(low).toLocaleString('de-DE')} – €${Math.round(high).toLocaleString('de-DE')} / month`,
+              monthly_estimate: `€${Math.round(low).toLocaleString('de-DE')} – €${Math.round(high).toLocaleString('de-DE')}/mo`,
+              source: 'Employer Listed'
+            };
+          } else if (low > 20000) {
+            const badge = `💰 €${Math.round(low/1000)}k–${Math.round(high/1000)}k/yr`;
+            return {
+              badge: badge,
+              display: `${badge} (Listed)`,
+              is_estimated: false,
+              range_text: `€${Math.round(low).toLocaleString('de-DE')} – €${Math.round(high).toLocaleString('de-DE')} / year`,
+              monthly_estimate: `~€${Math.round(low/12).toLocaleString('de-DE')} – €${Math.round(high/12).toLocaleString('de-DE')}/mo`,
+              source: 'Employer Listed'
+            };
+          }
+        }
+      }
+
+      // 2. Check text for hourly rate
+      const descMatch = desc.match(/(\d{2}(?:[.,]\d{1,2})?)\s*(?:€|euro)\s*(?:\/|\s*per\s*|\s*pro\s*)?(?:h|hour|std|stunde)/i);
+      if (descMatch) {
+        const rate = parseFloat(descMatch[1].replace(',', '.'));
+        if (!isNaN(rate)) {
+          const badge = `💰 €${Math.round(rate)}/h`;
+          return {
+            badge: badge,
+            display: `${badge} (Listed in text)`,
+            is_estimated: false,
+            range_text: `€${rate.toFixed(2)} / hour`,
+            monthly_estimate: `~€${Math.round(rate * 86.6).toLocaleString('de-DE')}/mo (20h)`,
+            source: 'Job Description'
+          };
+        }
+      }
+
+      // 3. Realistic Berlin Benchmark Estimates
+      const isEnterprise = ['sap', 'amazon', 'google', 'microsoft', 'deloitte', 'pwc', 'kpmg', 'mckinsey', 'zalando', 'check24', 'universal music'].some(k => company.includes(k));
+      const isScaleup = ['auto1', 'delivery hero', 'n26', 'contentful', 'personio', 'hellofresh', 'jobbird', 'tier', 'flink', 'trade republic'].some(k => company.includes(k));
+      const isTechAi = ['ai', 'machine learning', 'data analytics', 'sql', 'sap', 'cloud', 'software', 'infrastructure', 'python'].some(k => title.includes(k) || desc.includes(k));
+
+      // Working Student
+      if (['working student', 'werkstudent', 'student', 'studentische', 'hilfskraft'].some(k => title.includes(k))) {
+        let lowH = 15;
+        let highH = 17;
+        if (isEnterprise) { lowH = 18; highH = 22; }
+        else if (isScaleup || isTechAi) { lowH = 16; highH = 19; }
+        const monthlyLow = Math.round(lowH * 86.6);
+        const monthlyHigh = Math.round(highH * 86.6);
+        const badge = `💰 ~€${lowH}–${highH}/h`;
+        return {
+          badge: badge,
+          display: `${badge} (~€${monthlyLow}–€${monthlyHigh}/mo)`,
+          is_estimated: true,
+          range_text: `~€${lowH} – €${highH} / hour (Berlin Tech Benchmark)`,
+          monthly_estimate: `~€${monthlyLow} – €${monthlyHigh} / month (at 20h/wk)`,
+          tier: isEnterprise ? 'Enterprise (+premium)' : (isScaleup || isTechAi ? 'Tech / Scale-up' : 'Standard Berlin'),
+          source: 'Berlin Benchmark Estimate'
+        };
+      }
+
+      // Intern
+      if (['intern', 'praktikant', 'praktikum', 'internship'].some(k => title.includes(k))) {
+        const mLow = isEnterprise ? 1700 : 1300;
+        const mHigh = isEnterprise ? 2200 : 1800;
+        const badge = `💰 ~€${mLow}–${mHigh}/mo`;
+        return {
+          badge: badge,
+          display: `${badge} (Internship)`,
+          is_estimated: true,
+          range_text: `~€${mLow} – €${mHigh} / month`,
+          monthly_estimate: `~€${mLow} – €${mHigh} / month`,
+          tier: isEnterprise ? 'Enterprise' : 'Berlin Startup/Tech',
+          source: 'Berlin Benchmark Estimate'
+        };
+      }
+
+      // Junior / Associate
+      if (['junior', 'associate', 'trainee', 'entry', 'coordinator', 'assistant'].some(k => title.includes(k))) {
+        let aLow = 42;
+        let aHigh = 50;
+        if (isEnterprise) { aLow += 8; aHigh += 12; }
+        else if (isTechAi) { aLow += 3; aHigh += 5; }
+        const badge = `💰 ~€${aLow}k–${aHigh}k/yr`;
+        return {
+          badge: badge,
+          display: `${badge} (Junior/Associate)`,
+          is_estimated: true,
+          range_text: `~€${aLow}.000 – €${aHigh}.000 / year`,
+          monthly_estimate: `~€${Math.round(aLow*1000/12).toLocaleString('de-DE')} – €${Math.round(aHigh*1000/12).toLocaleString('de-DE')}/mo`,
+          tier: 'Junior Tech/Operations',
+          source: 'Berlin Benchmark Estimate'
+        };
+      }
+
+      // Mid-level
+      let aLow = 52;
+      let aHigh = 68;
+      if (isEnterprise) { aLow += 10; aHigh += 15; }
+      const badge = `💰 ~€${aLow}k–${aHigh}k/yr`;
+      return {
+        badge: badge,
+        display: `${badge} (Mid-level)`,
+        is_estimated: true,
+        range_text: `~€${aLow}.000 – €${aHigh}.000 / year`,
+        monthly_estimate: `~€${Math.round(aLow*1000/12).toLocaleString('de-DE')} – €${Math.round(aHigh*1000/12).toLocaleString('de-DE')}/mo`,
+        tier: 'Professional/Manager',
+        source: 'Berlin Benchmark Estimate'
+      };
+    }
+
     function renderJobs() {
       updateFilterTabs();
       const allJobs = getActiveJobs();
@@ -1402,6 +1551,7 @@
         const isFresh = (j.days_ago !== undefined && j.days_ago <= 1);
         const wm = j.work_model || (j.is_100_onsite ? '100% Vor Ort' : 'Hybrid');
         const commute = getJobCommute(j);
+        const comp = getJobCompensation(j);
 
         return `
           <div onclick="selectJob('${j.id}')" class="portal-card p-3.5 cursor-pointer relative ${isSelected ? 'active-job' : ''}">
@@ -1427,6 +1577,8 @@
                   <span class="truncate font-medium text-gray-800 dark:text-gray-200">${j.company}</span>
                   <span>&bull;</span>
                   <span class="text-blue-700 dark:text-blue-300 font-semibold shrink-0">${commute.badge}</span>
+                  <span>&bull;</span>
+                  <span class="text-emerald-700 dark:text-emerald-400 font-semibold shrink-0" title="${comp.display}">${comp.badge}</span>
                 </div>
 
                 <!-- Chips Row -->
@@ -1623,6 +1775,7 @@
       }
 
       const commute = getJobCommute(job);
+      const comp = getJobCompensation(job);
 
       container.innerHTML = `
         <!-- Sticky Detail Header -->
@@ -1643,6 +1796,10 @@
                   <span>&bull;</span>
                   <span class="text-blue-700 dark:text-blue-300 font-semibold bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 rounded-full border border-blue-200 dark:border-blue-800/60" title="${commute.summary || ''}">
                     ${commute.badge}
+                  </span>
+                  <span>&bull;</span>
+                  <span class="text-emerald-700 dark:text-emerald-300 font-semibold bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800/60" title="${comp.display}">
+                    ${comp.badge} ${comp.is_estimated ? '(Est.)' : '(Listed)'}
                   </span>
                   <span>&bull;</span>
                   <span>🕒 ${job.posted_ago || job.date_posted || 'Recently'}</span>
@@ -1858,6 +2015,33 @@
         <!-- VIEW 2: Overview, Address & Job Description -->
         <div id="detailViewOverview" class="${currentDetailTab === 'overview' ? '' : 'hidden'} flex-1 overflow-y-auto p-5 space-y-5 bg-[#fafafa] dark:bg-[#121721]">
           
+          <!-- Box 0: Estimated Compensation & Student Advantage -->
+          <div class="bg-white dark:bg-[#18202f] border border-emerald-200 dark:border-emerald-900/60 rounded-lg p-4 shadow-sm space-y-3">
+            <div class="flex items-center justify-between border-b border-gray-100 dark:border-slate-800 pb-2">
+              <span class="text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5">
+                <span>${t.comp_box_title}</span>
+              </span>
+              <span class="text-[11px] px-2 py-0.5 rounded-full ${comp.is_estimated ? 'bg-amber-100 dark:bg-amber-950/70 text-amber-800 dark:text-amber-300' : 'bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300'} font-bold">
+                ${comp.source}
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3 bg-emerald-50/60 dark:bg-emerald-950/20 rounded-lg border border-emerald-100 dark:border-emerald-900/40">
+                <div class="text-[11px] text-gray-500 dark:text-gray-400 font-medium">${t.comp_rate_label}</div>
+                <div class="text-base font-extrabold text-emerald-800 dark:text-emerald-300 mt-0.5">${comp.range_text}</div>
+                <div class="text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold mt-1">${comp.monthly_estimate}</div>
+              </div>
+
+              <div class="p-3 bg-gray-50 dark:bg-slate-800/60 rounded-lg border border-gray-200 dark:border-slate-700/60">
+                <div class="text-[11px] text-gray-500 dark:text-gray-400 font-medium">${t.comp_student_advantage_label}</div>
+                <div class="text-[11px] text-gray-700 dark:text-gray-300 mt-1 leading-relaxed">
+                  ${t.comp_student_advantage_text}
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Box 1: Tailored Cover Letter & Company Address -->
           <div class="bg-white dark:bg-[#18202f] border border-purple-200 dark:border-purple-900/60 rounded-lg p-4 shadow-sm space-y-3.5">
             <div class="flex flex-wrap items-center justify-between gap-2 border-b border-gray-100 dark:border-slate-800 pb-2.5">

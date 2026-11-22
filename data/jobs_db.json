@@ -60,6 +60,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -123,6 +132,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€18–22/h",
+      "display": "💰 ~€18–22/h (~€1558–€1905/mo)",
+      "range_text": "~€18 – €22 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1558 – €1905 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Enterprise (+premium)"
     }
   },
   {
@@ -186,6 +204,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -248,6 +275,14 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": false,
+      "badge": "💰 €17/h",
+      "display": "💰 €17/h (Listed)",
+      "range_text": "€17.00 – €17.00 / hour",
+      "monthly_estimate": "~€1.472 – €1.472/mo (20h)",
+      "source": "Employer Listed"
     }
   },
   {
@@ -306,6 +341,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -369,6 +413,15 @@
       "badge": "🚇 ~25 min (S1/Ring)",
       "summary": "Estimated transit: ~25 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -431,6 +484,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -488,6 +550,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -545,6 +616,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -602,6 +682,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -659,6 +748,15 @@
       "badge": "🚇 ~25 min (S1/U-Bahn)",
       "summary": "Estimated transit: ~25 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -716,6 +814,15 @@
       "badge": "🚇 ~40 min (S1/S7)",
       "summary": "Potsdam: ~40 min from Söhtstr. 16 (S1 Wannsee + S7/RB)",
       "transit_route": "S1 -> Wannsee -> S7/RB Potsdam Hbf"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€18–22/h",
+      "display": "💰 ~€18–22/h (~€1558–€1905/mo)",
+      "range_text": "~€18 – €22 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1558 – €1905 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Enterprise (+premium)"
     }
   },
   {
@@ -773,6 +880,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -835,6 +951,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -891,6 +1016,14 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": false,
+      "badge": "💰 €19/h",
+      "display": "💰 €19/h (Listed in text)",
+      "range_text": "€19.36/h",
+      "monthly_estimate": "~€1.676/mo (20h)",
+      "source": "Job Description"
     }
   },
   {
@@ -947,6 +1080,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -1003,6 +1145,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -1059,6 +1210,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -1115,6 +1275,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€18–22/h",
+      "display": "💰 ~€18–22/h (~€1558–€1905/mo)",
+      "range_text": "~€18 – €22 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1558 – €1905 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Enterprise (+premium)"
     }
   },
   {
@@ -1171,6 +1340,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€18–22/h",
+      "display": "💰 ~€18–22/h (~€1558–€1905/mo)",
+      "range_text": "~€18 – €22 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1558 – €1905 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Enterprise (+premium)"
     }
   },
   {
@@ -1227,6 +1405,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -1283,6 +1470,14 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": false,
+      "badge": "💰 €17/h",
+      "display": "💰 €17/h (Listed in text)",
+      "range_text": "€17.00/h",
+      "monthly_estimate": "~€1.472/mo (20h)",
+      "source": "Job Description"
     }
   },
   {
@@ -1339,6 +1534,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€18–22/h",
+      "display": "💰 ~€18–22/h (~€1558–€1905/mo)",
+      "range_text": "~€18 – €22 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1558 – €1905 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Enterprise (+premium)"
     }
   },
   {
@@ -1395,6 +1599,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -1451,6 +1664,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -1507,6 +1729,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€18–22/h",
+      "display": "💰 ~€18–22/h (~€1558–€1905/mo)",
+      "range_text": "~€18 – €22 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1558 – €1905 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Enterprise (+premium)"
     }
   },
   {
@@ -1570,6 +1801,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1700–2200/mo",
+      "display": "💰 ~€1700–2200/mo (Internship)",
+      "range_text": "~€1700 – €2200 / month",
+      "monthly_estimate": "~€1700 – €2200 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Enterprise"
     }
   },
   {
@@ -1626,6 +1866,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -1682,6 +1931,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -1738,6 +1996,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -1794,6 +2061,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -1850,6 +2126,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -1906,6 +2191,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€18–22/h",
+      "display": "💰 ~€18–22/h (~€1558–€1905/mo)",
+      "range_text": "~€18 – €22 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1558 – €1905 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Enterprise (+premium)"
     }
   },
   {
@@ -1962,6 +2256,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -2018,6 +2321,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2076,6 +2388,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2132,6 +2453,15 @@
       "badge": "🚇 ~40 min (S1/S7)",
       "summary": "Potsdam: ~40 min from Söhtstr. 16 (S1 Wannsee + S7/RB)",
       "transit_route": "S1 -> Wannsee -> S7/RB Potsdam Hbf"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2188,6 +2518,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -2244,6 +2583,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2300,6 +2648,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2356,6 +2713,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -2412,6 +2778,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2468,6 +2843,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2524,6 +2908,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -2580,6 +2973,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2636,6 +3038,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -2692,6 +3103,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2748,6 +3168,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2804,6 +3233,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2858,6 +3296,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2912,6 +3359,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -2966,6 +3422,15 @@
       "badge": "🏡 Remote (0 min)",
       "summary": "100% Remote / Home Office",
       "transit_route": "Remote / Home Office"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -3020,6 +3485,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -3074,6 +3548,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -3128,6 +3611,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -3182,6 +3674,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -3236,6 +3737,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -3290,6 +3800,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -3347,6 +3866,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -3401,6 +3929,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -3455,6 +3992,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -3509,6 +4055,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -3566,6 +4121,15 @@
       "badge": "🚇 ~25 min (S1/U-Bahn)",
       "summary": "Estimated transit: ~25 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -3620,6 +4184,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -3674,6 +4247,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -3728,6 +4310,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -3785,6 +4376,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -3842,6 +4442,15 @@
       "badge": "🚇 ~32 min (S1/S-Bahn)",
       "summary": "Estimated transit: ~32 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~32 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -3896,6 +4505,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -3950,6 +4568,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -4004,6 +4631,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -4058,6 +4694,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -4112,6 +4757,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -4169,6 +4823,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -4223,6 +4886,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -4277,6 +4949,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -4331,6 +5012,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -4385,6 +5075,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -4439,6 +5138,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -4493,6 +5201,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -4550,6 +5267,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -4604,6 +5330,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -4661,6 +5396,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€50k–62k/yr",
+      "display": "💰 ~€50k–62k/yr (Junior/Associate)",
+      "range_text": "~€50.000 – €62.000 / year",
+      "monthly_estimate": "~€4.166 – €5.166/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -4715,6 +5459,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€18–22/h",
+      "display": "💰 ~€18–22/h (~€1558–€1905/mo)",
+      "range_text": "~€18 – €22 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1558 – €1905 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Enterprise (+premium)"
     }
   },
   {
@@ -4769,6 +5522,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -4825,6 +5587,15 @@
       "badge": "🚇 ~30 min (S1/Bus)",
       "summary": "Teltow/Blankenfelde: ~30 min from Söhtstr. 16",
       "transit_route": "S1 / Bus X01/184"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -4888,6 +5659,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -4951,6 +5731,14 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": false,
+      "badge": "💰 €50k–65k/yr",
+      "display": "💰 €50k–65k/yr (Listed)",
+      "range_text": "€50.000 – €65.000 / year",
+      "monthly_estimate": "~€4.166 – €5.416/mo",
+      "source": "Employer Listed"
     }
   },
   {
@@ -5011,6 +5799,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -5067,6 +5864,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -5123,6 +5929,15 @@
       "badge": "🚇 ~25 min (S1/U-Bahn)",
       "summary": "Estimated transit: ~25 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -5179,6 +5994,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -5235,6 +6059,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -5291,6 +6124,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€42k–50k/yr",
+      "display": "💰 ~€42k–50k/yr (Junior/Associate)",
+      "range_text": "~€42.000 – €50.000 / year",
+      "monthly_estimate": "~€3.500 – €4.166/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -5347,6 +6189,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -5403,6 +6254,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1700–2200/mo",
+      "display": "💰 ~€1700–2200/mo (Internship)",
+      "range_text": "~€1700 – €2200 / month",
+      "monthly_estimate": "~€1700 – €2200 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Enterprise"
     }
   },
   {
@@ -5459,6 +6319,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -5515,6 +6384,15 @@
       "badge": "🚇 ~25 min (S1/Ring)",
       "summary": "Estimated transit: ~25 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -5571,6 +6449,15 @@
       "badge": "⚠️ >3h (Distant City)",
       "summary": "Located outside Berlin-Brandenburg metropolitan region",
       "transit_route": "ICE / Long-distance"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€42k–50k/yr",
+      "display": "💰 ~€42k–50k/yr (Junior/Associate)",
+      "range_text": "~€42.000 – €50.000 / year",
+      "monthly_estimate": "~€3.500 – €4.166/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -5627,6 +6514,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -5681,6 +6577,15 @@
       "badge": "🚇 ~45 min (S1/S45)",
       "summary": "Schönefeld: ~45 min from Söhtstr. 16 (S1 Südkreuz + S45)",
       "transit_route": "S1 -> Südkreuz -> S45 Schönefeld"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -5744,6 +6649,14 @@
       "badge": "🚇 ~18 min (S1 Direct)",
       "summary": "Estimated transit: ~18 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~18 min)"
+    },
+    "compensation": {
+      "is_estimated": false,
+      "badge": "💰 €45k–55k/yr",
+      "display": "💰 €45k–55k/yr (Listed)",
+      "range_text": "€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Employer Listed"
     }
   },
   {
@@ -5798,6 +6711,15 @@
       "badge": "⚠️ ~90 min (>1h 10m)",
       "summary": "Fürstenwalde (Spree): ~90 min from Söhtstr. 16 via S1 + RE1",
       "transit_route": "S1 -> Potsdamer Platz -> RE1 Fürstenwalde"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -5852,6 +6774,15 @@
       "badge": "🚇 ~45 min (S1/S45)",
       "summary": "Schönefeld: ~45 min from Söhtstr. 16 (S1 Südkreuz + S45)",
       "transit_route": "S1 -> Südkreuz -> S45 Schönefeld"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -5914,6 +6845,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -5968,6 +6908,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -6022,6 +6971,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1700–2200/mo",
+      "display": "💰 ~€1700–2200/mo (Internship)",
+      "range_text": "~€1700 – €2200 / month",
+      "monthly_estimate": "~€1700 – €2200 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Enterprise"
     }
   },
   {
@@ -6076,6 +7034,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -6130,6 +7097,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€42k–50k/yr",
+      "display": "💰 ~€42k–50k/yr (Junior/Associate)",
+      "range_text": "~€42.000 – €50.000 / year",
+      "monthly_estimate": "~€3.500 – €4.166/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -6184,6 +7160,15 @@
       "badge": "🚇 ~32 min (S1/S-Bahn)",
       "summary": "Estimated transit: ~32 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~32 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -6238,6 +7223,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -6292,6 +7286,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -6346,6 +7349,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -6400,6 +7412,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€42k–50k/yr",
+      "display": "💰 ~€42k–50k/yr (Junior/Associate)",
+      "range_text": "~€42.000 – €50.000 / year",
+      "monthly_estimate": "~€3.500 – €4.166/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -6454,6 +7475,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -6508,6 +7538,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -6562,6 +7601,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€45k–55k/yr",
+      "display": "💰 ~€45k–55k/yr (Junior/Associate)",
+      "range_text": "~€45.000 – €55.000 / year",
+      "monthly_estimate": "~€3.750 – €4.583/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -6616,6 +7664,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€42k–50k/yr",
+      "display": "💰 ~€42k–50k/yr (Junior/Associate)",
+      "range_text": "~€42.000 – €50.000 / year",
+      "monthly_estimate": "~€3.500 – €4.166/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -6670,6 +7727,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -6732,6 +7798,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -6792,6 +7867,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -6848,6 +7932,15 @@
       "badge": "⚠️ ~85 min (>1h 10m)",
       "summary": "Grünheide (Mark) / Gigafactory: ~85 min from Söhtstr. 16 via S1 + RE1 + Bus",
       "transit_route": "S1 -> Potsdamer Platz -> RE1 Fangschleuse + Shuttle"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -6905,6 +7998,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -6962,6 +8064,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -7019,6 +8130,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -7076,6 +8196,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -7139,6 +8268,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -7197,6 +8335,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -7251,6 +8398,15 @@
       "badge": "⚠️ ~85 min (>1h 10m)",
       "summary": "Grünheide (Mark) / Gigafactory: ~85 min from Söhtstr. 16 via S1 + RE1 + Bus",
       "transit_route": "S1 -> Potsdamer Platz -> RE1 Fangschleuse + Shuttle"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -7307,6 +8463,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -7363,6 +8528,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -7419,6 +8593,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -7475,6 +8658,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -7531,6 +8723,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -7587,6 +8788,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -7643,6 +8853,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€50k–62k/yr",
+      "display": "💰 ~€50k–62k/yr (Junior/Associate)",
+      "range_text": "~€50.000 – €62.000 / year",
+      "monthly_estimate": "~€4.166 – €5.166/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Junior Tech/Operations"
     }
   },
   {
@@ -7699,6 +8918,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -7755,6 +8983,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -7811,6 +9048,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -7867,6 +9113,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€62k–83k/yr",
+      "display": "💰 ~€62k–83k/yr (Mid-level)",
+      "range_text": "~€62.000 – €83.000 / year",
+      "monthly_estimate": "~€5.166 – €6.916/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -7929,6 +9184,14 @@
       "badge": "🏡 Remote (0 min)",
       "summary": "100% Remote / Home Office",
       "transit_route": "Remote / Home Office"
+    },
+    "compensation": {
+      "is_estimated": false,
+      "badge": "💰 €82k–140k/yr",
+      "display": "💰 €82k–140k/yr (Listed)",
+      "range_text": "€82.000 – €140.000 / year",
+      "monthly_estimate": "~€6.833 – €11.666/mo",
+      "source": "Employer Listed"
     }
   },
   {
@@ -7985,6 +9248,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -8044,6 +9316,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin"
     }
   },
   {
@@ -8106,6 +9387,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -8167,6 +9457,14 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": false,
+      "badge": "💰 €18–19/h",
+      "display": "💰 €18–19/h (Listed)",
+      "range_text": "€18.06 – €18.78 / hour",
+      "monthly_estimate": "~€1.563 – €1.626/mo (20h)",
+      "source": "Employer Listed"
     }
   },
   {
@@ -8228,6 +9526,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -8282,6 +9589,14 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": false,
+      "badge": "💰 €16/h",
+      "display": "💰 €16/h (Listed in text)",
+      "range_text": "€16.00/h",
+      "monthly_estimate": "~€1.385/mo (20h)",
+      "source": "Job Description"
     }
   },
   {
@@ -8336,6 +9651,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€62k–83k/yr",
+      "display": "💰 ~€62k–83k/yr (Mid-level)",
+      "range_text": "~€62.000 – €83.000 / year",
+      "monthly_estimate": "~€5.166 – €6.916/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -8390,6 +9714,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -8444,6 +9777,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -8498,6 +9840,15 @@
       "badge": "🚇 ~18 min (S1 Direct)",
       "summary": "Estimated transit: ~18 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~18 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -8552,6 +9903,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€62k–83k/yr",
+      "display": "💰 ~€62k–83k/yr (Mid-level)",
+      "range_text": "~€62.000 – €83.000 / year",
+      "monthly_estimate": "~€5.166 – €6.916/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -8606,6 +9966,15 @@
       "badge": "🚇 ~45 min (S1/S-Bahn)",
       "summary": "Estimated transit: ~45 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~45 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -8660,6 +10029,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1700–2200/mo",
+      "display": "💰 ~€1700–2200/mo (Internship)",
+      "range_text": "~€1700 – €2200 / month",
+      "monthly_estimate": "~€1700 – €2200 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Enterprise"
     }
   },
   {
@@ -8714,6 +10092,15 @@
       "badge": "⚠️ ~90 min (>1h 10m)",
       "summary": "Fürstenwalde (Spree): ~90 min from Söhtstr. 16 via S1 + RE1",
       "transit_route": "S1 -> Potsdamer Platz -> RE1 Fürstenwalde"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -8777,6 +10164,15 @@
       "badge": "🚇 ~25 min (S1)",
       "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
       "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€16–19/h",
+      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
+      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Tech / Scale-up"
     }
   },
   {
@@ -8835,6 +10231,15 @@
       "badge": "🚇 ~25 min (S1/U-Bahn)",
       "summary": "Estimated transit: ~25 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -8895,6 +10300,15 @@
       "badge": "🚇 ~22 min (S1 Direct)",
       "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€1300–1800/mo",
+      "display": "💰 ~€1300–1800/mo (Internship)",
+      "range_text": "~€1300 – €1800 / month",
+      "monthly_estimate": "~€1300 – €1800 / month",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Berlin Startup/Tech"
     }
   },
   {
@@ -8958,6 +10372,15 @@
       "badge": "🏡 Remote (0 min)",
       "summary": "100% Remote / Home Office",
       "transit_route": "Remote / Home Office"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr",
+      "display": "💰 ~€52k–68k/yr (Mid-level)",
+      "range_text": "~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager"
     }
   },
   {
@@ -9020,6 +10443,14 @@
       "badge": "🚇 ~18 min (S1 Direct)",
       "summary": "Estimated transit: ~18 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~18 min)"
+    },
+    "compensation": {
+      "is_estimated": false,
+      "badge": "💰 €52k–61k/yr",
+      "display": "💰 €52k–61k/yr (Listed)",
+      "range_text": "€52.000 – €61.000 / year",
+      "monthly_estimate": "~€4.333 – €5.083/mo",
+      "source": "Employer Listed"
     }
   },
   {
@@ -9083,6 +10514,14 @@
       "badge": "🚇 ~25 min (S1/U-Bahn)",
       "summary": "Estimated transit: ~25 min from Söhtstr. 16 via BVG/S-Bahn",
       "transit_route": "S1 Lichterfelde West -> BVG (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": false,
+      "badge": "💰 €2.409–€2.609/mo",
+      "display": "💰 €2.409–€2.609/mo (Listed)",
+      "range_text": "€2.409 – €2.609 / month",
+      "monthly_estimate": "€2.409 – €2.609/mo",
+      "source": "Employer Listed"
     }
   }
 ]

@@ -38,6 +38,7 @@ from tailor import (
     select_tailored_content,
     generate_job_application_bundle,
     calculate_commute_from_sohtstrasse,
+    estimate_job_compensation,
 )
 from sheets_sync import sync_jobs_to_google_sheet
 
@@ -140,6 +141,7 @@ def prune_and_refresh_job_ages(jobs, max_days=10):
         j["work_model"] = wm_label
         j["is_100_onsite"] = is_100_onsite
         j["commute"] = calculate_commute_from_sohtstrasse(j)
+        j["compensation"] = estimate_job_compensation(j)
 
         dp = j.get("date_posted")
         diff = 99
