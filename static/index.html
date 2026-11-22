@@ -484,6 +484,17 @@
       localStorage.setItem('app_lang', 'en');
     }
 
+    const CV_LAYOUT_VERSION = 'v5_perfect_1page_fit';
+    if (localStorage.getItem('cv_layout_version') !== CV_LAYOUT_VERSION) {
+      for (let i = localStorage.length - 1; i >= 0; i--) {
+        const k = localStorage.key(i);
+        if (k && (k.startsWith('job_cv_content_') || k.startsWith('job_doc_content_') || k.startsWith('job_custom_bullets_'))) {
+          localStorage.removeItem(k);
+        }
+      }
+      localStorage.setItem('cv_layout_version', CV_LAYOUT_VERSION);
+    }
+
     function showToast(msg) {
       let toast = document.getElementById('portalToast');
       if (!toast) {
@@ -766,7 +777,7 @@
                 <div style="font-size: 8.4pt; color: #222; margin-bottom: 1px;"><strong>Hotel la Posada de mi Viejo</strong> &nbsp;Comayagua, Honduras</div>
                 <ul style="margin-top: 1px; padding-left: 13px; list-style-type: disc;">
                   <li style="margin-bottom: 1px; font-size: 8.15pt;">Implemented customer-centric methodologies and workflows, leading to a 10% improvement in <strong>operational efficiency</strong>.</li>
-                  <li style="font-size: 8.15pt;">Supervised process operations and quality assurance, resulting in a <strong>10% increase in customer satisfaction scores</strong>.</li>
+                  <li style="font-size: 8.15pt;">Supervised process operations and quality assurance, resulting in a <strong>10% increase in customer satisfaction</strong>.</li>
                 </ul>
               </div>
             </div>
@@ -1758,9 +1769,22 @@
           !savedDocHtml.includes("A centerpiece of my work has been scaling our conversational AI product suite across 9 international markets") &&
           !savedDocHtml.includes("I have led integrations and continuous optimization for our AI voice bot across 9 international markets (routing millions of calls, boosting answer rates from 65% to 85%")) {
         activeDocHtml = savedDocHtml;
+      } else if (savedDocHtml) {
+        localStorage.removeItem('job_doc_content_' + job.id);
       }
+
       const savedCvHtml = localStorage.getItem('job_cv_content_' + job.id);
       const defaultCvHtml = buildTailoredCvHtmlForJob(job);
+      let activeCvHtml = defaultCvHtml;
+      if (savedCvHtml &&
+          !savedCvHtml.includes("High School Diploma") &&
+          !savedCvHtml.includes("Escuela Bilingüe") &&
+          !savedCvHtml.includes("customer satisfaction scores.") &&
+          savedCvHtml.length < 5200) {
+        activeCvHtml = savedCvHtml;
+      } else if (savedCvHtml) {
+        localStorage.removeItem('job_cv_content_' + job.id);
+      }
 
       const allAuto1Bullets = (window.STATIC_STATE && window.STATIC_STATE.all_auto1_bullets) ? window.STATIC_STATE.all_auto1_bullets : [];
       let activeBulletsList = [];
@@ -1920,7 +1944,7 @@
           </div>
 
           <!-- A4 Document Page Canvas (ContentEditable Google Doc) -->
-          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl border border-gray-200 dark:border-slate-700 rounded-b-lg p-8 sm:p-12 min-h-[1050px] font-sans leading-relaxed text-[12.5px] outline-none focus:ring-2 focus:ring-blue-400 box-border" id="liveGoogleDocA4_${job.id}" contenteditable="true" oninput="onDocContentInput('${job.id}')">
+          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl border border-gray-200 dark:border-slate-700 rounded-b-lg p-7 sm:p-10 min-h-[1050px] overflow-hidden font-sans leading-relaxed text-[12px] outline-none focus:ring-2 focus:ring-blue-400 box-border" id="liveGoogleDocA4_${job.id}" contenteditable="true" oninput="onDocContentInput('${job.id}')">
             ${activeDocHtml}
           </div>
 
@@ -2003,8 +2027,8 @@
           </div>
 
           <!-- Editable 1-Page A4 CV Canvas -->
-          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl border border-gray-200 dark:border-slate-700 rounded-b-lg p-5 sm:p-7 min-h-[1050px] outline-none focus:ring-2 focus:ring-emerald-400 box-border" id="liveCvA4_${job.id}" contenteditable="true" oninput="onCvContentInput('${job.id}')">
-            ${savedCvHtml || defaultCvHtml}
+          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl border border-gray-200 dark:border-slate-700 rounded-b-lg p-5 sm:p-7 min-h-[1050px] overflow-hidden outline-none focus:ring-2 focus:ring-emerald-400 box-border" id="liveCvA4_${job.id}" contenteditable="true" oninput="onCvContentInput('${job.id}')">
+            ${activeCvHtml}
           </div>
 
           <div class="shrink-0 text-[11px] text-gray-500 dark:text-gray-400 mt-3 pb-6 text-center">
