@@ -418,25 +418,33 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
                     "pays_min_16": pays_min_16,
                 }
             elif "month" in raw_salary.lower() or (low >= 1000 and low <= 8000):
-                badge = f"💰 €{int(low):,}–€{int(high):,}/mo".replace(",", ".")
-                pays_min_16 = (high >= 1385)  # 1385/86.6h = €16/h for 20h student
+                h_low_20 = round(low / 86.67)
+                h_high_20 = round(high / 86.67)
+                h_low_40 = round(low / 173.33, 1)
+                h_high_40 = round(high / 173.33, 1)
+                hourly_part = f"~€{h_low_20}/h" if h_low_20 == h_high_20 else f"~€{h_low_20}–{h_high_20}/h"
+                badge = f"💰 €{int(low):,}–€{int(high):,}/mo ({hourly_part})".replace(",", ".")
+                pays_min_16 = (h_high_20 >= 16)
                 return {
                     "is_estimated": False,
                     "badge": badge,
                     "display": f"{badge} (Listed)",
-                    "range_text": f"€{int(low):,} – €{int(high):,} / month".replace(",", "."),
-                    "monthly_estimate": f"€{int(low):,} – €{int(high):,}/mo".replace(",", "."),
+                    "range_text": f"{hourly_part} (at 20h/wk) · €{int(low):,} – €{int(high):,} / month".replace(",", "."),
+                    "monthly_estimate": f"€{int(low):,} – €{int(high):,}/mo (= {hourly_part} @ 20h student | ~€{h_low_40}–{h_high_40}/h @ 40h)".replace(",", "."),
                     "source": "Employer Listed",
                     "pays_min_16": pays_min_16,
                 }
             elif low > 20000:
-                badge = f"💰 €{int(low/1000)}k–{int(high/1000)}k/yr"
+                h_low_ft = round(low / 2080)
+                h_high_ft = round(high / 2080)
+                hourly_part = f"~€{h_low_ft}/h" if h_low_ft == h_high_ft else f"~€{h_low_ft}–{h_high_ft}/h"
+                badge = f"💰 €{int(low/1000)}k–{int(high/1000)}k/yr ({hourly_part})"
                 return {
                     "is_estimated": False,
                     "badge": badge,
                     "display": f"{badge} (Listed)",
-                    "range_text": f"€{int(low):,} – €{int(high):,} / year".replace(",", "."),
-                    "monthly_estimate": f"~€{int(low/12):,} – €{int(high/12):,}/mo".replace(",", "."),
+                    "range_text": f"{hourly_part} (Full-time) · €{int(low):,} – €{int(high):,} / year".replace(",", "."),
+                    "monthly_estimate": f"~€{int(low/12):,} – €{int(high/12):,}/mo (= {hourly_part})".replace(",", "."),
                     "source": "Employer Listed",
                     "pays_min_16": True,
                 }
@@ -504,16 +512,21 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
     if any(k in title_l for k in ["intern", "praktikant", "praktikum", "internship"]):
         monthly_low = 1300 if not is_enterprise else 1700
         monthly_high = 1800 if not is_enterprise else 2200
-        badge = f"💰 ~€{monthly_low}–{monthly_high}/mo"
+        h_low_20 = round(monthly_low / 86.67)
+        h_high_20 = round(monthly_high / 86.67)
+        h_low_40 = round(monthly_low / 173.33, 1)
+        h_high_40 = round(monthly_high / 173.33, 1)
+        hourly_part = f"~€{h_low_20}/h" if h_low_20 == h_high_20 else f"~€{h_low_20}–{h_high_20}/h"
+        badge = f"💰 ~€{monthly_low}–{monthly_high}/mo ({hourly_part})"
         return {
             "is_estimated": True,
             "badge": badge,
-            "display": f"{badge} (Internship)",
-            "range_text": f"~€{monthly_low} – €{monthly_high} / month",
-            "monthly_estimate": f"~€{monthly_low} – €{monthly_high} / month",
+            "display": f"{badge} (Internship: ~€{monthly_low}–{monthly_high}/mo)",
+            "range_text": f"{hourly_part} (at 20h/wk) · ~€{monthly_low} – €{monthly_high} / month",
+            "monthly_estimate": f"~€{monthly_low} – €{monthly_high} / month (= {hourly_part} @ 20h student | ~€{h_low_40}–{h_high_40}/h @ 40h)",
             "source": "Berlin Benchmark Estimate",
             "tier": "Enterprise" if is_enterprise else "Berlin Startup/Tech",
-            "pays_min_16": True,
+            "pays_min_16": (h_high_20 >= 16),
         }
 
     # C) Junior / Associate
@@ -526,13 +539,16 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
         elif is_tech_ai:
             annual_low += 3
             annual_high += 5
-        badge = f"💰 ~€{annual_low}k–{annual_high}k/yr"
+        h_low_ft = round(annual_low * 1000 / 2080)
+        h_high_ft = round(annual_high * 1000 / 2080)
+        hourly_part = f"~€{h_low_ft}–{h_high_ft}/h"
+        badge = f"💰 ~€{annual_low}k–{annual_high}k/yr ({hourly_part})"
         return {
             "is_estimated": True,
             "badge": badge,
             "display": f"{badge} (Junior/Associate)",
-            "range_text": f"~€{annual_low}.000 – €{annual_high}.000 / year",
-            "monthly_estimate": f"~€{int(annual_low*1000/12):,} – €{int(annual_high*1000/12):,}/mo".replace(",", "."),
+            "range_text": f"{hourly_part} (Full-time) · ~€{annual_low}.000 – €{annual_high}.000 / year",
+            "monthly_estimate": f"~€{int(annual_low*1000/12):,} – €{int(annual_high*1000/12):,}/mo (= {hourly_part})".replace(",", "."),
             "source": "Berlin Benchmark Estimate",
             "tier": "Junior Tech/Operations",
             "pays_min_16": True,
@@ -544,13 +560,16 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
     if is_enterprise:
         annual_low += 10
         annual_high += 15
-    badge = f"💰 ~€{annual_low}k–{annual_high}k/yr"
+    h_low_ft = round(annual_low * 1000 / 2080)
+    h_high_ft = round(annual_high * 1000 / 2080)
+    hourly_part = f"~€{h_low_ft}–{h_high_ft}/h"
+    badge = f"💰 ~€{annual_low}k–{annual_high}k/yr ({hourly_part})"
     return {
         "is_estimated": True,
         "badge": badge,
         "display": f"{badge} (Mid-level)",
-        "range_text": f"~€{annual_low}.000 – €{annual_high}.000 / year",
-        "monthly_estimate": f"~€{int(annual_low*1000/12):,} – €{int(annual_high*1000/12):,}/mo".replace(",", "."),
+        "range_text": f"{hourly_part} (Full-time) · ~€{annual_low}.000 – €{annual_high}.000 / year",
+        "monthly_estimate": f"~€{int(annual_low*1000/12):,} – €{int(annual_high*1000/12):,}/mo (= {hourly_part})".replace(",", "."),
         "source": "Berlin Benchmark Estimate",
         "tier": "Professional/Manager",
         "pays_min_16": True,

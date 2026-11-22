@@ -1315,16 +1315,18 @@
       if (typeof job.pays_min_16 === 'boolean') {
         return job.pays_min_16;
       }
-      const comp = job.compensation || {};
-      const badge = comp.badge || '';
-      if (badge.includes('/h')) {
-        const nums = (badge.match(/\d+/g) || []).map(Number);
-        if (nums.length > 0 && Math.max(...nums) < 16) return false;
-        if (nums.length >= 2 && nums[0] < 16 && nums[1] <= 16) return false;
+      const comp = getJobCompensation(job);
+      if (comp && typeof comp.pays_min_16 === 'boolean') {
+        return comp.pays_min_16;
       }
-      if (badge.includes('/mo')) {
-        const nums = (badge.match(/\d+/g) || []).map(Number);
-        if (nums.length > 0 && Math.max(...nums) < 1385) return false;
+      const badge = (comp && comp.badge) ? comp.badge : '';
+      if (badge.includes('/h')) {
+        const matches = [...badge.matchAll(/(\d+)(?:[–-](\d+))?\/h/g)];
+        if (matches.length > 0) {
+          const m = matches[matches.length - 1];
+          const highH = m[2] ? parseInt(m[2], 10) : parseInt(m[1], 10);
+          if (highH < 16) return false;
+        }
       }
       return true;
     }
@@ -1593,9 +1595,44 @@
     }
 
     function getJobCompensation(job) {
-      if (job && job.compensation && job.compensation.badge) {
-        return job.compensation;
+      let comp = (job && job.compensation && job.compensation.badge) ? { ...job.compensation } : null;
+      if (!comp) {
+        comp = computeCompensationFallback(job);
       }
+      // Ensure that if badge has /mo, it ALWAYS includes the hourly equivalent!
+      if (comp && comp.badge && comp.badge.includes('/mo') && !comp.badge.includes('/h')) {
+        const nums = (comp.badge.match(/\d+(?:\.\d+)?/g) || []).map(Number);
+        if (nums.length > 0) {
+          const lowM = nums[0];
+          const highM = nums.length > 1 ? nums[1] : lowM;
+          const hLow = Math.round(lowM / 86.67);
+          const hHigh = Math.round(highM / 86.67);
+          const hStr = hLow === hHigh ? `~€${hLow}/h` : `~€${hLow}–${hHigh}/h`;
+          comp.badge = `${comp.badge} (${hStr})`;
+          if (comp.range_text && !comp.range_text.includes('/ hour') && !comp.range_text.includes('/h') && !comp.range_text.includes('/ h')) {
+            comp.range_text = `${hStr} (at 20h/wk) · ${comp.range_text}`;
+          }
+          if (comp.monthly_estimate && !comp.monthly_estimate.includes('/h')) {
+            const ftLow = (lowM / 173.33).toFixed(1);
+            const ftHigh = (highM / 173.33).toFixed(1);
+            comp.monthly_estimate = `${comp.monthly_estimate} (= ${hStr} @ 20h student | ~€${ftLow}–${ftHigh}/h @ 40h)`;
+          }
+        }
+      } else if (comp && comp.badge && comp.badge.includes('/yr') && !comp.badge.includes('/h')) {
+        const nums = (comp.badge.match(/\d+(?:\.\d+)?/g) || []).map(Number);
+        if (nums.length > 0) {
+          const lowY = nums[0] < 100 ? nums[0] * 1000 : nums[0];
+          const highY = nums.length > 1 ? (nums[1] < 100 ? nums[1] * 1000 : nums[1]) : lowY;
+          const hLow = Math.round(lowY / 2080);
+          const hHigh = Math.round(highY / 2080);
+          const hStr = hLow === hHigh ? `~€${hLow}/h` : `~€${hLow}–${hHigh}/h`;
+          comp.badge = `${comp.badge} (${hStr})`;
+        }
+      }
+      return comp;
+    }
+
+    function computeCompensationFallback(job) {
       const rawSalary = (job.salary || '').trim();
       const title = (job.title || '').toLowerCase();
       const company = (job.company || '').toLowerCase();
@@ -1687,13 +1724,16 @@
       if (['intern', 'praktikant', 'praktikum', 'internship'].some(k => title.includes(k))) {
         const mLow = isEnterprise ? 1700 : 1300;
         const mHigh = isEnterprise ? 2200 : 1800;
-        const badge = `💰 ~€${mLow}–${mHigh}/mo`;
+        const hLow = Math.round(mLow / 86.67);
+        const hHigh = Math.round(mHigh / 86.67);
+        const hStr = hLow === hHigh ? `~€${hLow}/h` : `~€${hLow}–${hHigh}/h`;
+        const badge = `💰 ~€${mLow}–${mHigh}/mo (${hStr})`;
         return {
           badge: badge,
-          display: `${badge} (Internship)`,
+          display: `${badge} (Internship: ~€${mLow}–${mHigh}/mo)`,
           is_estimated: true,
-          range_text: `~€${mLow} – €${mHigh} / month`,
-          monthly_estimate: `~€${mLow} – €${mHigh} / month`,
+          range_text: `${hStr} (at 20h/wk) · ~€${mLow} – €${mHigh} / month`,
+          monthly_estimate: `~€${mLow} – €${mHigh} / month (= ${hStr} @ 20h student | ~€${(mLow/173.33).toFixed(1)}–${(mHigh/173.33).toFixed(1)}/h @ 40h)`,
           tier: isEnterprise ? 'Enterprise' : 'Berlin Startup/Tech',
           source: 'Berlin Benchmark Estimate'
         };
@@ -1705,13 +1745,16 @@
         let aHigh = 50;
         if (isEnterprise) { aLow += 8; aHigh += 12; }
         else if (isTechAi) { aLow += 3; aHigh += 5; }
-        const badge = `💰 ~€${aLow}k–${aHigh}k/yr`;
+        const hLow = Math.round(aLow * 1000 / 2080);
+        const hHigh = Math.round(aHigh * 1000 / 2080);
+        const hStr = `~€${hLow}–${hHigh}/h`;
+        const badge = `💰 ~€${aLow}k–${aHigh}k/yr (${hStr})`;
         return {
           badge: badge,
           display: `${badge} (Junior/Associate)`,
           is_estimated: true,
-          range_text: `~€${aLow}.000 – €${aHigh}.000 / year`,
-          monthly_estimate: `~€${Math.round(aLow*1000/12).toLocaleString('de-DE')} – €${Math.round(aHigh*1000/12).toLocaleString('de-DE')}/mo`,
+          range_text: `${hStr} (Full-time) · ~€${aLow}.000 – €${aHigh}.000 / year`,
+          monthly_estimate: `~€${Math.round(aLow*1000/12).toLocaleString('de-DE')} – €${Math.round(aHigh*1000/12).toLocaleString('de-DE')}/mo (= ${hStr})`,
           tier: 'Junior Tech/Operations',
           source: 'Berlin Benchmark Estimate'
         };
@@ -1721,13 +1764,16 @@
       let aLow = 52;
       let aHigh = 68;
       if (isEnterprise) { aLow += 10; aHigh += 15; }
-      const badge = `💰 ~€${aLow}k–${aHigh}k/yr`;
+      const hLow = Math.round(aLow * 1000 / 2080);
+      const hHigh = Math.round(aHigh * 1000 / 2080);
+      const hStr = `~€${hLow}–${hHigh}/h`;
+      const badge = `💰 ~€${aLow}k–${aHigh}k/yr (${hStr})`;
       return {
         badge: badge,
         display: `${badge} (Mid-level)`,
         is_estimated: true,
-        range_text: `~€${aLow}.000 – €${aHigh}.000 / year`,
-        monthly_estimate: `~€${Math.round(aLow*1000/12).toLocaleString('de-DE')} – €${Math.round(aHigh*1000/12).toLocaleString('de-DE')}/mo`,
+        range_text: `${hStr} (Full-time) · ~€${aLow}.000 – €${aHigh}.000 / year`,
+        monthly_estimate: `~€${Math.round(aLow*1000/12).toLocaleString('de-DE')} – €${Math.round(aHigh*1000/12).toLocaleString('de-DE')}/mo (= ${hStr})`,
         tier: 'Professional/Manager',
         source: 'Berlin Benchmark Estimate'
       };
