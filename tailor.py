@@ -71,7 +71,7 @@ def detect_language_requirement(title: str, description: str) -> Tuple[str, int,
     if "spanish" in title_l or "spanisch" in title_l:
         return ("Spanish + English (Native Fit!)", +20, True)
 
-    # 2. Strict C1 / C2 / Fluent / Verhandlungssicher German requirement
+    # 2. Strict C1 / C2 / Fluent / Verhandlungssicher German requirement (German and English phrasings)
     strict_c1_patterns = [
         r"verhandlungssicher",
         r"c1[- ]?(?:level|niveau)?",
@@ -87,14 +87,52 @@ def detect_language_requirement(title: str, description: str) -> Tuple[str, int,
         r"fluent\s+(?:in\s+)?german",
         r"excellent\s+german",
         r"business\s+fluent\s+german",
+        r"very\s+good\s+german",
+        r"proficient\s+(?:in\s+)?german",
+        r"strong\s+german",
+        r"solid\s+german",
+        r"german\s+language\s+skills",
+        r"german\s*(?:skills|kenntnisse)?[^\.\n;]{0,35}(?:very\s+good|fluent|c1|c2|excellent|strong|required|essential|mandatory|a\s+must)",
+        r"(?:very\s+good|fluent|c1|c2|excellent|strong|solid)\s+german",
+        r"good\s+command\s+of\s+german",
+        r"german\s+is\s+(?:required|mandatory|essential|a\s+must)",
+        r"deutschkenntnisse\s+in\s+wort\s+und\s+schrift",
+        r"gute\s+deutschkenntnisse",
+        r"fundierte\s+deutschkenntnisse",
+        r"sichere\s+deutschkenntnisse",
+        r"flie[ßss]ende\s+deutschkenntnisse",
     ]
     for pat in strict_c1_patterns:
         if re.search(pat, text):
             return ("Requires C1/Fluent German (B1 Risk)", -35, False)
 
-    # 3. Analyze language density
-    de_words = len(re.findall(r"\b(und|oder|für|mit|deine|aufgaben|wir|suchen|arbeit|studium|über|uns|dich)\b", text))
-    en_words = len(re.findall(r"\b(and|with|your|tasks|we|looking|working|student|experience|team|about|you)\b", text))
+    # 3. German-only domain roles (construction, legal, taxes, bookkeeping, traditional customer care)
+    german_domain_roles = [
+        "bauprojektmanagement", "bauingenieur", "bauleitung", "tiefbau", "hochbau",
+        "immobilien", "buchhaltung", "rechnungswesen", "finanzbuchhaltung", "steuern",
+        "steuerberatung", "sachbearbeiter", "jurist", "rechtsberatung", "kundenservice",
+        "kundenbetreuung", "vertrieb", "einkauf", "lohnabrechnung", "gehaltsabrechnung",
+        "arbeitsrecht", "verwaltungsangestellt"
+    ]
+    if any(dr in title_l for dr in german_domain_roles):
+        return ("German Domain (Construction/Admin/Legal - B1 Risk)", -35, False)
+
+    # 4. Handle sparse or missing descriptions
+    if not description or len(description.strip()) < 60:
+        de_title_indicators = ["werkstudent", "praktikant", "bau-", "management", "berater", "sachbearbeiter", "assistenz", "leiter", "betreuung", "vertrieb", "projekt"]
+        en_title_indicators = ["working student", "intern", "internship", "product manager", "engineer", "software", "ai", "developer", "designer", "international", "english"]
+        has_de_title = any(k in title_l for k in de_title_indicators)
+        has_en_title = any(k in title_l for k in en_title_indicators)
+        if has_de_title and not has_en_title:
+            return ("Requires German (Title in German / No Desc)", -35, False)
+        elif has_en_title:
+            return ("English Title (Pending Full Text)", +5, True)
+        else:
+            return ("German Working Language (B1 Risk)", -20, False)
+
+    # 5. Analyze language density
+    de_words = len(re.findall(r"\b(und|oder|für|mit|deine|aufgaben|wir|suchen|arbeit|studium|über|uns|dich|bei|von|nach|zu|im|in|ein|eine|einen|einem|einer|als|wirst|du|bist|hast|kannst|dein|profil|anforderungen|kenntnisse|erfahrung|bereich|unternehmen)\b", text))
+    en_words = len(re.findall(r"\b(and|with|your|tasks|we|looking|working|student|experience|team|about|you|the|for|our|will|are|have|role|skills|work|opportunity|join|who|what|offer)\b", text))
 
     # If explicitly English friendly or German optional
     if re.search(r"german\s*(?:is\s+a\s+plus|is\s+beneficial|is\s+optional|not\s+required|b1|basic)", text) or re.search(r"working\s+language\s+(?:is\s+)?english", text):
@@ -104,9 +142,105 @@ def detect_language_requirement(title: str, description: str) -> Tuple[str, int,
         return ("English Friendly (B1 OK)", +15, True)
 
     if de_words > en_words:
-        return ("German Working Language (B1 Challenging)", -20, False)
+        return ("German Working Language (B1 Challenging)", -25, False)
 
-    return ("English Friendly (B1 OK)", +10, True)
+    return ("Requires German (B1 Challenging)", -20, False)
+
+
+BENEFIT_TAXONOMY = [
+    {
+        "category": "transit",
+        "icon": "🚆",
+        "label": "Deutschlandticket / BVG Subsidy",
+        "patterns": [r"deutschlandticket", r"jobticket", r"bvg", r"firmenticket", r"fahrtkosten", r"mobilität", r"transit pass", r"subsidized transport", r"jobrad", r"swapfiets", r"bike leasing"],
+    },
+    {
+        "category": "remote",
+        "icon": "🏠",
+        "label": "Home Office / Hybrid",
+        "patterns": [r"home[\s-]?office", r"mobiles arbeiten", r"remote", r"hybrid", r"work from home", r"telearbeit"],
+    },
+    {
+        "category": "flexibility",
+        "icon": "⏰",
+        "label": "Flexible Working Hours",
+        "patterns": [r"flexible\s+arbeitszeiten", r"gleitzeit", r"flexible\s+hours", r"flexitime", r"vertrauensarbeitszeit"],
+    },
+    {
+        "category": "hardware",
+        "icon": "💻",
+        "label": "MacBook / Tech Equipment",
+        "patterns": [r"macbook", r"apple", r"modernes? equipment", r"laptop", r"choose your (?:own )?device"],
+    },
+    {
+        "category": "wellness",
+        "icon": "🏋️",
+        "label": "Urban Sports Club / Wellpass",
+        "patterns": [r"urban sports club", r"wellpass", r"gympass", r"fitness", r"gesundheitsförderung", r"sportangebote", r"egym"],
+    },
+    {
+        "category": "growth",
+        "icon": "🎓",
+        "label": "Learning & Training Budget",
+        "patterns": [r"weiterbildung", r"learning budget", r"entwicklungsmöglichkeiten", r"schulungen", r"training budget", r"mentoring", r"buddy"],
+    },
+    {
+        "category": "food",
+        "icon": "🍕",
+        "label": "Free Drinks, Coffee & Snacks",
+        "patterns": [r"obstkorb", r"free drinks", r"kaffee", r"snacks", r"barista", r"getränke", r"müsli", r"lunch", r"essenszuschuss"],
+    },
+    {
+        "category": "discounts",
+        "icon": "🛍️",
+        "label": "Corporate Benefits & Discounts",
+        "patterns": [r"corporate benefits", r"mitarbeiterrabatt", r"employee discounts", r"vergünstigungen"],
+    },
+    {
+        "category": "vacation",
+        "icon": "🌴",
+        "label": "28–30 Days Paid Vacation",
+        "patterns": [r"(?:28|29|30)\s+tage\s+urlaub", r"urlaubstage", r"paid time off", r"pto"],
+    },
+    {
+        "category": "pension",
+        "icon": "💰",
+        "label": "Company Pension (bAV)",
+        "patterns": [r"betriebliche altersvorsorge", r"\bbav\b", r"vermögenswirksame leistungen"],
+    },
+    {
+        "category": "events",
+        "icon": "🎉",
+        "label": "Team Events & Offsites",
+        "patterns": [r"teamevents?", r"sommerfest", r"weihnachtsfeier", r"after[\s-]?work", r"team offsite"],
+    },
+]
+
+
+def extract_job_benefits(description: str, title: str = "", company: str = "") -> List[Dict[str, str]]:
+    text = f"{title} {description}".lower()
+    comp_l = company.lower()
+    detected = []
+
+    for b in BENEFIT_TAXONOMY:
+        for pat in b["patterns"]:
+            if re.search(pat, text):
+                detected.append({
+                    "category": b["category"],
+                    "icon": b["icon"],
+                    "label": b["label"]
+                })
+                break
+
+    # Enterprise perks fallback (SAP, Amazon, etc. famously provide Deutschlandticket & hardware)
+    if "sap" in comp_l:
+        cats = [d["category"] for d in detected]
+        if "transit" not in cats:
+            detected.append({"category": "transit", "icon": "🚆", "label": "Deutschlandticket (SAP Perk)"})
+        if "hardware" not in cats:
+            detected.append({"category": "hardware", "icon": "💻", "label": "High-End Laptop & Tech"})
+
+    return detected
 
 
 def calculate_commute_from_sohtstrasse(job: Dict[str, Any]) -> Dict[str, Any]:
@@ -252,6 +386,7 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
     Returns structured compensation details for a job:
     - If explicit salary is in job metadata or description, cleans and formats it.
     - Otherwise calculates a realistic Berlin benchmark estimate based on role, company, seniority, and domain.
+    - Also evaluates 'pays_min_16': whether the wage meets or exceeds Guillermo's €16/hour target.
     """
     raw_salary = str(job.get("salary") or "").strip()
     title = str(job.get("title") or "").strip()
@@ -272,6 +407,7 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
                 badge = f"💰 €{low:.0f}/h" if low == high else f"💰 €{low:.0f}–{high:.0f}/h"
                 monthly_low = int(low * 86.6)
                 monthly_high = int(high * 86.6)
+                pays_min_16 = (high >= 16.0)
                 return {
                     "is_estimated": False,
                     "badge": badge,
@@ -279,9 +415,11 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
                     "range_text": f"€{low:.2f} – €{high:.2f} / hour",
                     "monthly_estimate": f"~€{monthly_low:,} – €{monthly_high:,}/mo (20h)".replace(",", "."),
                     "source": "Employer Listed",
+                    "pays_min_16": pays_min_16,
                 }
             elif "month" in raw_salary.lower() or (low >= 1000 and low <= 8000):
                 badge = f"💰 €{int(low):,}–€{int(high):,}/mo".replace(",", ".")
+                pays_min_16 = (high >= 1385)  # 1385/86.6h = €16/h for 20h student
                 return {
                     "is_estimated": False,
                     "badge": badge,
@@ -289,6 +427,7 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
                     "range_text": f"€{int(low):,} – €{int(high):,} / month".replace(",", "."),
                     "monthly_estimate": f"€{int(low):,} – €{int(high):,}/mo".replace(",", "."),
                     "source": "Employer Listed",
+                    "pays_min_16": pays_min_16,
                 }
             elif low > 20000:
                 badge = f"💰 €{int(low/1000)}k–{int(high/1000)}k/yr"
@@ -299,6 +438,7 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
                     "range_text": f"€{int(low):,} – €{int(high):,} / year".replace(",", "."),
                     "monthly_estimate": f"~€{int(low/12):,} – €{int(high/12):,}/mo".replace(",", "."),
                     "source": "Employer Listed",
+                    "pays_min_16": True,
                 }
 
     # 2. Check if hourly rate is written in the job description text
@@ -312,6 +452,7 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
         try:
             rate = float(val)
             badge = f"💰 €{rate:.0f}/h"
+            pays_min_16 = (rate >= 16.0)
             return {
                 "is_estimated": False,
                 "badge": badge,
@@ -319,14 +460,16 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
                 "range_text": f"€{rate:.2f}/h",
                 "monthly_estimate": f"~€{int(rate * 86.6):,}/mo (20h)".replace(",", "."),
                 "source": "Job Description",
+                "pays_min_16": pays_min_16,
             }
         except Exception:
             pass
 
     # 3. Calculate Realistic Berlin Benchmark Estimate
-    is_enterprise = any(k in company_l for k in ["sap", "amazon", "google", "microsoft", "deloitte", "pwc", "kpmg", "mckinsey", "zalando", "check24", "universal music"])
-    is_scaleup = any(k in company_l for k in ["auto1", "delivery hero", "n26", "contentful", "personio", "hellofresh", "jobbird", "tier", "flink", "trade republic"])
-    is_tech_ai = any(k in title_l or k in desc_l for k in ["ai", "machine learning", "data analytics", "sql", "sap", "cloud", "software", "infrastructure", "python"])
+    is_enterprise = any(k in company_l for k in ["sap", "amazon", "google", "microsoft", "deloitte", "pwc", "kpmg", "mckinsey", "zalando", "check24", "universal music", "databricks", "tesla", "siemens"])
+    is_scaleup = any(k in company_l for k in ["auto1", "delivery hero", "n26", "contentful", "personio", "hellofresh", "jobbird", "tier", "flink", "trade republic", "tiktok"])
+    is_tech_ai = any(k in title_l for k in ["ai", "machine learning", "data analytics", "sql", "sap", "cloud", "software", "infrastructure", "python"]) or \
+                 (any(k in desc_l for k in ["machine learning", "sql", "redash", "tableau", "looker", "python", "full-stack"]) and not any(k in title_l for k in ["bau", "immobilien", "handwerk", "reinigung"]))
 
     # Role seniority:
     # A) Working Student
@@ -345,6 +488,7 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
         monthly_low = int(low_h * 86.6)
         monthly_high = int(high_h * 86.6)
         badge = f"💰 ~€{low_h}–{high_h}/h"
+        pays_min_16 = (high_h >= 17) or (low_h >= 16) or (is_enterprise or is_scaleup or is_tech_ai)
         return {
             "is_estimated": True,
             "badge": badge,
@@ -353,6 +497,7 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
             "monthly_estimate": f"~€{monthly_low} – €{monthly_high} / month (at 20h/wk)",
             "source": "Berlin Benchmark Estimate",
             "tier": "Enterprise (+premium)" if is_enterprise else ("Tech / Scale-up" if (is_scaleup or is_tech_ai) else "Standard Berlin"),
+            "pays_min_16": pays_min_16,
         }
 
     # B) Intern / Praktikum
@@ -368,6 +513,7 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
             "monthly_estimate": f"~€{monthly_low} – €{monthly_high} / month",
             "source": "Berlin Benchmark Estimate",
             "tier": "Enterprise" if is_enterprise else "Berlin Startup/Tech",
+            "pays_min_16": True,
         }
 
     # C) Junior / Associate
@@ -389,6 +535,7 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
             "monthly_estimate": f"~€{int(annual_low*1000/12):,} – €{int(annual_high*1000/12):,}/mo".replace(",", "."),
             "source": "Berlin Benchmark Estimate",
             "tier": "Junior Tech/Operations",
+            "pays_min_16": True,
         }
 
     # D) Mid-level Specialist / Manager / Consultant
@@ -406,6 +553,7 @@ def estimate_job_compensation(job: Dict[str, Any]) -> Dict[str, Any]:
         "monthly_estimate": f"~€{int(annual_low*1000/12):,} – €{int(annual_high*1000/12):,}/mo".replace(",", "."),
         "source": "Berlin Benchmark Estimate",
         "tier": "Professional/Manager",
+        "pays_min_16": True,
     }
 
 
@@ -512,6 +660,16 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
 
     # Compensation check (listed or Berlin benchmark estimate)
     compensation_info = estimate_job_compensation(job)
+    pays_min_16 = compensation_info.get("pays_min_16", True)
+
+    # Sub-€16/h wage penalty: User constraint: "ideally we dont recommend any jobs that pay less than 16 per hour"
+    if not pays_min_16:
+        base_score -= 30
+
+    final_score = max(10, min(99, base_score))
+
+    # Benefits extraction
+    benefits_info = extract_job_benefits(description, title, company)
 
     return {
         "category_id": best_cat_id,
@@ -522,6 +680,8 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
         "employment_type": contract_code,
         "employment_label": contract_label,
         "is_student_legal": is_student_legal,
+        "pays_min_16": pays_min_16,
+        "benefits": benefits_info,
         "extracted_pay": compensation_info["display"],
         "matched_keywords": matched_keywords[:8],
         "why_fits": why_fits,
