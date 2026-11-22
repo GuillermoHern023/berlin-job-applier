@@ -218,6 +218,9 @@
             <span>💰 Min. €16/h</span>
             <span id="minPayIcon">✓</span>
           </button>
+          <button onclick="resetAllAppliedJobs()" id="btnResetAllApplied" class="px-2.5 py-1 rounded-full text-xs font-bold transition flex items-center gap-1 bg-amber-500 hover:bg-amber-600 text-white shadow-xs hidden" title="Reset all applied jobs back to review">
+            <span>🔄 Reset All to Review</span>
+          </button>
         </div>
 
         <div class="text-xs text-gray-500 dark:text-gray-400" id="showingCountLabel">
@@ -529,6 +532,27 @@
         }
       }
       localStorage.setItem('cv_layout_version', CV_LAYOUT_VERSION);
+    }
+
+    const STATUS_CLEANUP_VERSION = 'v1_clear_accidental_applied_links';
+    if (localStorage.getItem('status_cleanup_v') !== STATUS_CLEANUP_VERSION) {
+      try {
+        ['guillermo', 'alexandra'].forEach(u => {
+          const key = 'job_status_' + u;
+          const saved = JSON.parse(localStorage.getItem(key) || '{}');
+          let modified = false;
+          for (const jobId in saved) {
+            if (saved[jobId] === 'Applied') {
+              delete saved[jobId];
+              modified = true;
+            }
+          }
+          if (modified) {
+            localStorage.setItem(key, JSON.stringify(saved));
+          }
+        });
+      } catch (e) {}
+      localStorage.setItem('status_cleanup_v', STATUS_CLEANUP_VERSION);
     }
 
     function showToast(msg) {
@@ -1452,6 +1476,15 @@
           el.className = 'px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#30363d] border border-transparent dark:border-[#30363d] transition';
         }
       });
+
+      const btnReset = document.getElementById('btnResetAllApplied');
+      if (btnReset) {
+        if (currentStatusFilter === 'Applied') {
+          btnReset.classList.remove('hidden');
+        } else {
+          btnReset.classList.add('hidden');
+        }
+      }
     }
 
 
@@ -1905,11 +1938,18 @@
                     </span>
                   ` : ''}
 
-                  ${j.status && j.status !== 'New' ? `
+                  ${j.status && j.status.toLowerCase() === 'applied' ? `
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700">
+                      ✅ Applied
+                    </span>
+                    <button onclick="event.stopPropagation(); toggleJobAppliedStatus('${j.id}')" class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 hover:bg-amber-200 dark:bg-amber-950/60 dark:hover:bg-amber-900/60 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700 transition" title="Remove from Applied and move back to To Review">
+                      ↩ Remove
+                    </button>
+                  ` : (j.status && j.status !== 'New' ? `
                     <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 border border-transparent dark:border-[#30363d]">
                       ${j.status}
                     </span>
-                  ` : ''}
+                  ` : '')}
                 </div>
 
                 <div class="text-[11px] text-gray-500 dark:text-gray-400 mt-2 line-clamp-1">
@@ -2173,8 +2213,18 @@
               </button>
             </div>
 
-            <!-- Status selector & quick dismiss -->
+            <!-- Status selector & quick dismiss & explicit Applied action -->
             <div class="flex items-center gap-2">
+              ${(job.status || '').toLowerCase() === 'applied' ? `
+                <button onclick="toggleJobAppliedStatus('${job.id}')" class="px-3.5 py-1.5 rounded-md text-xs font-bold bg-amber-500 hover:bg-amber-600 text-white transition flex items-center gap-1.5 shadow-xs" title="Remove from Applied and move back to To Review">
+                  <span>↩ Remove from Applied</span>
+                </button>
+              ` : `
+                <button onclick="toggleJobAppliedStatus('${job.id}')" class="px-3.5 py-1.5 rounded-md text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center gap-1.5 shadow-xs hover:shadow" title="Mark this job as Applied">
+                  <span>✅ Mark as Applied</span>
+                </button>
+              `}
+
               <select onchange="markStatus('${job.id}', this.value)" class="bg-gray-50 dark:bg-[#0d1117] border border-gray-200 dark:border-[#30363d] rounded-md px-2.5 py-1.5 text-xs text-gray-700 dark:text-gray-200 font-medium">
                 ${['New', 'Ready to Apply', 'Applied', 'Interview', 'Not Interested'].map(s => `<option value="${s}" ${job.status === s ? 'selected' : ''}>${s}</option>`).join('')}
               </select>
@@ -2577,6 +2627,15 @@
             <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-2.5 rounded-md text-xs font-bold bg-purple-600 text-white">
               📋 Kopieren
             </button>
+            ${(job.status || '').toLowerCase() === 'applied' ? `
+              <button onclick="toggleJobAppliedStatus('${job.id}'); closeMobileDetail();" class="px-3 py-2.5 rounded-md text-xs font-bold bg-amber-500 text-white flex-1">
+                ↩ Aus 'Beworben' entfernen
+              </button>
+            ` : `
+              <button onclick="toggleJobAppliedStatus('${job.id}'); closeMobileDetail();" class="px-3 py-2.5 rounded-md text-xs font-bold bg-emerald-600 text-white flex-1">
+                ✅ Als beworben markieren
+              </button>
+            `}
           </div>
 
           <!-- Mobile Address Card -->
@@ -3131,6 +3190,46 @@
         });
       }
       renderJobs();
+    }
+
+    function toggleJobAppliedStatus(jobId) {
+      const jobs = getActiveJobs();
+      const j = jobs.find(x => x.id === jobId);
+      if (!j) return;
+      const isApplied = (j.status || '').toLowerCase() === 'applied';
+      const newStatus = isApplied ? 'New' : 'Applied';
+      markStatus(jobId, newStatus);
+      showToast(isApplied 
+        ? '↩ Removed from Applied (Moved back to To Review)' 
+        : '✅ Marked as Applied! (Moved to Applied tab)');
+    }
+
+    function resetAllAppliedJobs() {
+      const jobs = getActiveJobs();
+      let count = 0;
+      jobs.forEach(j => {
+        if ((j.status || '').toLowerCase() === 'applied') {
+          j.status = 'New';
+          count++;
+          if (isLiveBackend) {
+            fetch(`/api/jobs/${j.id}/status`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ user: activeUser, status: 'New' })
+            }).catch(() => {});
+          }
+        }
+      });
+      try {
+        const key = 'job_status_' + activeUser;
+        const saved = JSON.parse(localStorage.getItem(key) || '{}');
+        for (const k in saved) {
+          if (saved[k] === 'Applied') delete saved[k];
+        }
+        localStorage.setItem(key, JSON.stringify(saved));
+      } catch (e) {}
+      renderJobs();
+      showToast(`🔄 Reset ${count} applied jobs back to 'To Review'!`);
     }
 
     function openAutofillModal() {
