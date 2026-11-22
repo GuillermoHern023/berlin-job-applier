@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="h-full bg-[#f3f2ef]">
+<html lang="en" class="h-full bg-[#f3f2ef]">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,6 +14,7 @@
     }
   </script>
   <script src="docx.umd.js" onerror="var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js';document.head.appendChild(s);"></script>
+  <script src="html2pdf.bundle.min.js" onerror="var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';document.head.appendChild(s);"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     if (typeof tailwind !== 'undefined') {
@@ -104,21 +105,21 @@
       <!-- Right Action Tools -->
       <div class="flex items-center gap-2">
         <!-- On-Demand Scrape / More Jobs Button -->
-        <button id="moreJobsBtn" onclick="triggerMoreJobsScout()" class="px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm" title="Frische Stellen auf Knopfdruck suchen">
+        <button id="moreJobsBtn" onclick="triggerMoreJobsScout()" class="px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm" title="Search fresh roles on demand">
           <span id="moreJobsBtnIcon">🔍</span>
-          <span id="moreJobsBtnText">Mehr Jobs finden (+50)</span>
+          <span id="moreJobsBtnText">Find More Jobs (+50)</span>
         </button>
 
         <!-- Language Switcher Button (EN / DE) -->
-        <button id="langToggleBtn" onclick="toggleLanguage()" class="px-2.5 py-1.5 rounded-md border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 text-xs font-bold transition flex items-center gap-1.5 shadow-sm" title="Sprache wechseln / Switch Language (EN / DE)">
+        <button id="langToggleBtn" onclick="toggleLanguage()" class="px-2.5 py-1.5 rounded-md border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 text-xs font-bold transition flex items-center gap-1.5 shadow-sm" title="Switch Language (EN / DE)">
           <span id="langFlag">🇬🇧</span>
           <span id="langLabel">EN</span>
         </button>
 
         <!-- Dark Mode Toggle Button -->
-        <button id="themeToggleBtn" onclick="toggleDarkMode()" class="px-2.5 py-1.5 rounded-md border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 text-xs font-semibold transition flex items-center gap-1.5 shadow-sm" title="Zwischen Hell- und Dunkelmodus wechseln">
+        <button id="themeToggleBtn" onclick="toggleDarkMode()" class="px-2.5 py-1.5 rounded-md border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 text-xs font-semibold transition flex items-center gap-1.5 shadow-sm" title="Toggle Light / Dark Mode">
           <span id="themeToggleIcon">🌙</span>
-          <span id="themeToggleText" class="hidden sm:inline">Dunkel</span>
+          <span id="themeToggleText" class="hidden sm:inline">Dark</span>
         </button>
 
         <button onclick="openAutofillModal()" class="px-3 py-1.5 text-xs font-medium bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60 rounded-md transition flex items-center gap-1.5">
@@ -130,7 +131,7 @@
         </a>
 
         <a id="navMasterCvBtn" href="files/Guillermo_Hernandez_CV_Master.pdf" download class="px-3 py-1.5 text-xs font-semibold bg-gray-900 hover:bg-gray-800 text-white rounded-md transition flex items-center gap-1.5 shadow-sm">
-          <span>📄 Master-CV PDF</span>
+          <span>📄 Master CV (PDF)</span>
         </a>
       </div>
     </div>
@@ -139,7 +140,7 @@
   <!-- Notification Banner -->
   <div id="liveBanner" class="hidden bg-emerald-50 border-b border-emerald-200 text-emerald-900 px-4 py-2 text-xs flex items-center justify-between">
     <div id="bannerText" class="font-medium"></div>
-    <a id="bannerLink" href="#" target="_blank" class="font-bold underline ml-2">Sheet öffnen ↗</a>
+    <a id="bannerLink" href="#" target="_blank" class="font-bold underline ml-2">Open Sheet ↗</a>
   </div>
 
   <!-- Main Container: Two-Column Split-View (The LinkedIn / Indeed Layout) -->
@@ -153,28 +154,28 @@
           <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
             🔍
           </span>
-          <input id="searchInput" type="text" oninput="renderJobs()" placeholder="Position, Stichwort, Firma, z.B. Office Manager, Kanzlei, HR, Backoffice..." class="w-full pl-9 pr-3 py-2 bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md text-xs sm:text-sm text-gray-900 dark:text-gray-100 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <input id="searchInput" type="text" oninput="renderJobs()" placeholder="Position, keyword, company (e.g. Product Manager, AI, Operations)..." class="w-full pl-9 pr-3 py-2 bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md text-xs sm:text-sm text-gray-900 dark:text-gray-100 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
 
         <div class="flex flex-wrap sm:flex-nowrap gap-2">
           <!-- Workplace Model Filter -->
           <select id="workModelFilter" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <option value="HYBRID_REMOTE" selected>🏠 Nur Hybrid &amp; Remote (Kein 100% Vor-Ort)</option>
-            <option value="ALL">🏢 Alle Arbeitsmodelle (Inkl. Vor-Ort)</option>
-            <option value="REMOTE_ONLY">🏡 Nur 100% Remote</option>
+            <option value="HYBRID_REMOTE" selected>🏠 Hybrid &amp; Remote Only (No 100% Onsite)</option>
+            <option value="ALL">🏢 All Workplace Types (incl. Onsite)</option>
+            <option value="REMOTE_ONLY">🏡 100% Remote Only</option>
           </select>
 
           <!-- Portal Filter -->
           <select id="sourceFilter" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <option value="ALL">🌐 Alle Portale (Indeed &amp; LinkedIn)</option>
-            <option value="INDEED">🔷 Nur Indeed</option>
-            <option value="LINKEDIN">🔗 Nur LinkedIn</option>
+            <option value="ALL">🌐 All Portals (Indeed &amp; LinkedIn)</option>
+            <option value="INDEED">🔷 Indeed Only</option>
+            <option value="LINKEDIN">🔗 LinkedIn Only</option>
           </select>
 
           <!-- Sort -->
           <select id="sortBy" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <option value="NEWEST" selected>⚡ Neueste Stellen zuerst</option>
-            <option value="MATCH">⭐ Höchste Passung</option>
+            <option value="NEWEST" selected>⚡ Newest Roles First</option>
+            <option value="MATCH">⭐ Highest Match Score</option>
           </select>
         </div>
       </div>
@@ -183,21 +184,21 @@
       <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-gray-100">
         <div class="flex flex-wrap items-center gap-1.5">
           <button onclick="setFilterStatus('ACTIVE')" id="tabActive" class="px-3 py-1 rounded-full text-xs font-bold bg-[#0a66c2] text-white transition shadow-sm">
-            ⭐ Zu prüfen (<span id="pillActiveCount">0</span>)
+            ⭐ To Review (<span id="pillActiveCount">0</span>)
           </button>
           <button onclick="setFilterStatus('Applied')" id="tabApplied" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">
-            ✅ Beworben (<span id="pillAppliedCount">0</span>)
+            ✅ Applied (<span id="pillAppliedCount">0</span>)
           </button>
           <button onclick="setFilterStatus('NOT_INTERESTED')" id="tabNotInterested" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">
-            ❌ Nicht interessiert (<span id="pillDismissedCount">0</span>)
+            ❌ Not Interested (<span id="pillDismissedCount">0</span>)
           </button>
           <button onclick="setFilterStatus('ALL')" id="tabAll" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">
-            📁 Alle Stellen (<span id="pillTotalCount">0</span>)
+            📁 All Jobs (<span id="pillTotalCount">0</span>)
           </button>
         </div>
 
         <div class="text-xs text-gray-500" id="showingCountLabel">
-          Zeige Stellen...
+          Showing jobs...
         </div>
       </div>
     </div>
@@ -370,7 +371,11 @@
         field_company: "Firma / Unternehmen",
         field_dept: "Abteilung / Ansprechpartner",
         field_street: "Straße & Hausnummer",
-        field_zipcity: "PLZ & Ort"
+        field_zipcity: "PLZ & Ort",
+        btn_download_cv_pdf: "📥 CV herunterladen (PDF)",
+        btn_download_pdf: "📥 Als PDF herunterladen",
+        download_cv_pdf_tooltip: "Maßgeschneiderten 1-Seiten-CV direkt als PDF herunterladen",
+        download_cl_pdf_tooltip: "Anschreiben direkt als PDF herunterladen"
       },
       en: {
         brand_sub: "Indeed & LinkedIn Career Command",
@@ -402,7 +407,7 @@
         select_job_sub: "View the tailored cover letter, details, and direct apply link here.",
         apply_indeed: "🔷 Apply on Indeed ↗",
         apply_linkedin: "🔗 Apply on LinkedIn ↗",
-                as_google_doc: "📄 Open Google Doc",
+        as_google_doc: "📄 Open Google Doc",
         as_google_doc_tooltip: "Edit as a Google Doc directly here in this tab",
         tab_doc_editor: "📄 Google Doc (Cover Letter)",
         tab_cv_editor: "🎓 Tailored CV (1-Page A4)",
@@ -447,11 +452,15 @@
         field_company: "Company Name",
         field_dept: "Department / Contact",
         field_street: "Street & Number",
-        field_zipcity: "Postal Code & City"
+        field_zipcity: "Postal Code & City",
+        btn_download_cv_pdf: "📥 Download CV (PDF)",
+        btn_download_pdf: "📥 Download as PDF",
+        download_cv_pdf_tooltip: "Directly download tailored 1-page CV as PDF",
+        download_cl_pdf_tooltip: "Directly download cover letter as PDF"
       }
     };
 
-    let currentLang = (localStorage.getItem('app_lang') === 'en') ? 'en' : 'de';
+    let currentLang = (localStorage.getItem('app_lang') === 'de') ? 'de' : 'en';
 
     function showToast(msg) {
       let toast = document.getElementById('portalToast');
@@ -472,18 +481,18 @@
     }
 
     function toggleLanguage() {
-      currentLang = currentLang === 'de' ? 'en' : 'de';
+      currentLang = currentLang === 'en' ? 'de' : 'en';
       localStorage.setItem('app_lang', currentLang);
       if (selectedJobId) {
         localStorage.setItem('cl_lang_pref_' + selectedJobId, currentLang);
         localStorage.removeItem('job_doc_content_' + selectedJobId);
       }
       applyLanguage();
-      showToast(currentLang === 'en' ? '🇬🇧 Switched to English (Cover Letter translated)' : '🇩🇪 Sprache auf Deutsch gewechselt');
+      showToast(currentLang === 'en' ? '🇬🇧 Switched to English (Default)' : '🇩🇪 Sprache auf Deutsch gewechselt');
     }
 
     function applyLanguage() {
-      const t = I18N[currentLang] || I18N.de;
+      const t = I18N[currentLang] || I18N.en;
       
       const flag = document.getElementById('langFlag');
       const label = document.getElementById('langLabel');
@@ -585,7 +594,7 @@
       localStorage.setItem('job_cv_content_' + jobId, cvEl.innerHTML);
       const statusEl = document.getElementById('cvSaveStatus_' + jobId);
       if (statusEl) {
-        const t = I18N[currentLang] || I18N.de;
+        const t = I18N[currentLang] || I18N.en;
         statusEl.innerHTML = `🟢 ${t.auto_saved}`;
       }
     }
@@ -676,7 +685,7 @@
               <div style="font-size: 8.5pt; color: #333;">+49 176 85136597</div>
             </div>
             <div style="text-align: right;">
-              <a href="https://www.linkedin.com/in/guillermo-hernandez-lopez/" target="_blank" style="font-size: 8.5pt; color: #111; text-decoration: underline;">LinkedIn Profile</a>
+              <a href="https://www.linkedin.com/in/guillermojosehernandezlopez/" target="_blank" style="font-size: 8.5pt; color: #111; text-decoration: underline;">LinkedIn Profile</a>
             </div>
           </div>
 
@@ -744,18 +753,11 @@
                 <div style="font-size: 8pt; color: #333;">Berlin, Germany</div>
               </div>
             </div>
-            <div style="display: flex; margin-bottom: 3px;">
+            <div style="display: flex;">
               <div style="width: 17%; font-size: 8.2pt; color: #333;">Sep 2022 – Aug 2025</div>
               <div style="width: 83%;">
                 <div style="font-size: 8.55pt;"><strong>Bachelor’s degree in Digital Product Management | University of Europe for Applied Sciences</strong></div>
                 <div style="font-size: 8pt; color: #333;">Potsdam, Germany</div>
-              </div>
-            </div>
-            <div style="display: flex;">
-              <div style="width: 17%; font-size: 8.2pt; color: #333;">Jan 2015 – Jun 2022</div>
-              <div style="width: 83%;">
-                <div style="font-size: 8.55pt;"><strong>High School Diploma | Escuela Bilingüe Honduras</strong></div>
-                <div style="font-size: 8pt; color: #333;">Comayagua, Honduras</div>
               </div>
             </div>
           </fieldset>
@@ -780,6 +782,146 @@
           </fieldset>
         </div>
       `;
+    }
+
+    function downloadTailoredCvPdf(jobId) {
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      const rawComp = (job && job.company ? job.company : 'Company')
+        .replace(/[^a-zA-Z0-9äöüÄÖÜß_-]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
+      const pdfTitle = 'Guillermo_Hernandez_CV_' + (rawComp || 'Tailored');
+
+      // 1. Direct download if backend tailored PDF exists
+      if (job && (job.cv_url || job.cv_pdf)) {
+        const fileUrl = (job.cv_url || job.cv_pdf).replace(/^\/?/, '');
+        const a = document.createElement('a');
+        a.href = fileUrl;
+        a.download = pdfTitle + '.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        showToast(currentLang === 'en' ? '📥 Downloading Tailored CV PDF...' : '📥 Lade CV PDF herunter...');
+        return;
+      }
+
+      if (rawComp.toLowerCase().includes('sap')) {
+        const a = document.createElement('a');
+        a.href = 'files/Guillermo_Hernandez_CV_SAP.pdf';
+        a.download = 'Guillermo_Hernandez_CV_SAP.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        showToast(currentLang === 'en' ? '📥 Downloading Guillermo_Hernandez_CV_SAP.pdf...' : '📥 Lade SAP CV PDF herunter...');
+        return;
+      }
+
+      // 2. Client-side instant A4 PDF export using html2pdf
+      const cvEl = document.getElementById('liveCvA4_' + jobId);
+      if (typeof html2pdf !== 'undefined' && cvEl) {
+        showToast(currentLang === 'en' ? '⏳ Generating clean 1-Page A4 PDF...' : '⏳ Erstelle 1-Seiten A4 PDF...');
+
+        const wrapper = document.createElement('div');
+        wrapper.style.position = 'fixed';
+        wrapper.style.left = '-9999px';
+        wrapper.style.top = '0';
+        wrapper.style.width = '210mm';
+        wrapper.style.background = '#ffffff';
+
+        const inner = document.createElement('div');
+        inner.innerHTML = cvEl.innerHTML;
+        inner.style.width = '210mm';
+        inner.style.minHeight = '297mm';
+        inner.style.padding = '8mm 12mm';
+        inner.style.boxSizing = 'border-box';
+        inner.style.background = '#ffffff';
+        inner.style.color = '#111827';
+        inner.style.fontFamily = 'Arial, Calibri, sans-serif';
+
+        wrapper.appendChild(inner);
+        document.body.appendChild(wrapper);
+
+        const opt = {
+          margin: 0,
+          filename: pdfTitle + '.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true, logging: false },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(inner).save().then(() => {
+          document.body.removeChild(wrapper);
+          showToast(currentLang === 'en' ? '✅ CV PDF downloaded!' : '✅ CV PDF heruntergeladen!');
+        }).catch(err => {
+          if (wrapper.parentNode) document.body.removeChild(wrapper);
+          console.warn('html2pdf error:', err);
+          printTailoredCv(jobId);
+        });
+        return;
+      }
+
+      printTailoredCv(jobId);
+    }
+
+    function downloadCoverLetterPdf(jobId) {
+      const allJobs = getActiveJobs();
+      const job = allJobs.find(j => j.id === jobId);
+      const rawComp = (job && job.company ? job.company : 'Company')
+        .replace(/[^a-zA-Z0-9äöüÄÖÜß_-]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
+      const pdfTitle = 'Guillermo_Hernandez_Cover_Letter_' + (rawComp || 'Tailored');
+
+      if (job && (job.cover_letter_url || job.cover_letter_pdf)) {
+        const fileUrl = (job.cover_letter_url || job.cover_letter_pdf).replace(/^\/?/, '');
+        const a = document.createElement('a');
+        a.href = fileUrl;
+        a.download = pdfTitle + '.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        showToast(currentLang === 'en' ? '📥 Downloading Cover Letter PDF...' : '📥 Lade Anschreiben PDF herunter...');
+        return;
+      }
+
+      const docEl = document.getElementById('liveGoogleDocA4_' + jobId);
+      if (typeof html2pdf !== 'undefined' && docEl) {
+        showToast(currentLang === 'en' ? '⏳ Generating Cover Letter PDF...' : '⏳ Erstelle Anschreiben PDF...');
+
+        const wrapper = document.createElement('div');
+        wrapper.style.position = 'fixed';
+        wrapper.style.left = '-9999px';
+        wrapper.style.top = '0';
+        wrapper.style.width = '210mm';
+        wrapper.style.background = '#ffffff';
+
+        const inner = document.createElement('div');
+        inner.innerHTML = docEl.innerHTML;
+        inner.style.width = '210mm';
+        inner.style.minHeight = '297mm';
+        inner.style.padding = '18mm 20mm';
+        inner.style.boxSizing = 'border-box';
+        inner.style.background = '#ffffff';
+
+        wrapper.appendChild(inner);
+        document.body.appendChild(wrapper);
+
+        const opt = {
+          margin: 0,
+          filename: pdfTitle + '.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true, logging: false },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(inner).save().then(() => {
+          document.body.removeChild(wrapper);
+          showToast(currentLang === 'en' ? '✅ Cover Letter PDF downloaded!' : '✅ Anschreiben PDF heruntergeladen!');
+        }).catch(err => {
+          if (wrapper.parentNode) document.body.removeChild(wrapper);
+          printGoogleDoc(jobId);
+        });
+        return;
+      }
+
+      printGoogleDoc(jobId);
     }
 
     function printTailoredCv(jobId) {
@@ -814,7 +956,7 @@
       localStorage.setItem('job_doc_content_' + jobId, docEl.innerHTML);
       const statusEl = document.getElementById('docSaveStatus_' + jobId);
       if (statusEl) {
-        const t = I18N[currentLang] || I18N.de;
+        const t = I18N[currentLang] || I18N.en;
         statusEl.innerHTML = `🟢 ${t.auto_saved}`;
       }
     }
@@ -893,8 +1035,9 @@
       const isDark = document.documentElement.classList.contains('dark');
       const icon = document.getElementById('themeToggleIcon');
       const text = document.getElementById('themeToggleText');
+      const t = I18N[currentLang] || I18N.en;
       if (icon) icon.textContent = isDark ? '☀️' : '🌙';
-      if (text) text.textContent = isDark ? 'Hell' : 'Dunkel';
+      if (text) text.textContent = isDark ? t.theme_light : t.theme_dark;
     }
 
     function init() {
@@ -913,9 +1056,10 @@
       const body = document.getElementById('appBody');
       if (body) body.className = 'min-h-full flex flex-col user-guillermo';
       const masterBtn = document.getElementById('navMasterCvBtn');
+      const t = I18N[currentLang] || I18N.en;
       if (masterBtn) {
         masterBtn.href = 'files/Guillermo_Hernandez_CV_Master.pdf';
-        masterBtn.innerHTML = '<span>📄 Guillermos CV PDF</span>';
+        masterBtn.innerHTML = `<span>${t.master_cv}</span>`;
       }
     }
 
@@ -960,7 +1104,7 @@
     }
 
     function updateFilterTabs() {
-      const t = I18N[currentLang] || I18N.de;
+      const t = I18N[currentLang] || I18N.en;
       const tabActive = document.getElementById('tabActive');
       if (tabActive) {
         const c = document.getElementById('pillActiveCount')?.textContent || 0;
@@ -1103,7 +1247,7 @@
         }
       });
 
-      const t = I18N[currentLang] || I18N.de;
+      const t = I18N[currentLang] || I18N.en;
       document.getElementById('showingCountLabel').textContent = t.showing_jobs.replace('{shown}', filtered.length).replace('{total}', allJobs.length);
 
       // Keep active job selection valid
@@ -1116,7 +1260,7 @@
     }
 
     function renderFeedCards(jobsList) {
-      const t = I18N[currentLang] || I18N.de;
+      const t = I18N[currentLang] || I18N.en;
       const feed = document.getElementById('jobFeedContainer');
       if (jobsList.length === 0) {
         feed.innerHTML = `
@@ -1219,7 +1363,7 @@
     }
 
     function renderDetailPane(job) {
-      const t = I18N[currentLang] || I18N.de;
+      const t = I18N[currentLang] || I18N.en;
       const container = document.getElementById('jobDetailContainer');
       if (!job) {
         container.innerHTML = `
@@ -1385,17 +1529,22 @@
                 ${isIndeed ? t.apply_indeed : t.apply_linkedin}
               </a>
 
+              <!-- Second Option: Easy Download as PDF Button -->
+              <button onclick="downloadTailoredCvPdf('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center gap-1.5 shadow-sm hover:shadow" title="${t.download_cv_pdf_tooltip}">
+                <span>${t.btn_download_cv_pdf}</span>
+              </button>
+
               <!-- Google Doc Action Button -->
-              <button onclick="switchDetailView('doc', true)" class="px-3.5 py-2 rounded-md text-xs font-bold bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 transition flex items-center gap-1.5 shadow-2xs" title="${t.as_google_doc_tooltip}">
+              <button onclick="switchDetailView('doc', true)" class="px-3.5 py-2 rounded-md text-xs font-medium bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 transition flex items-center gap-1.5 shadow-2xs" title="${t.as_google_doc_tooltip}">
                 <span>${t.as_google_doc}</span>
               </button>
 
               <!-- Tailored CV Action Button -->
-              <button onclick="switchDetailView('cv', true)" class="px-3.5 py-2 rounded-md text-xs font-bold bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:hover:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 transition flex items-center gap-1.5 shadow-2xs">
+              <button onclick="switchDetailView('cv', true)" class="px-3.5 py-2 rounded-md text-xs font-medium bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:hover:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 transition flex items-center gap-1.5 shadow-2xs">
                 <span>${t.btn_tailored_cv}</span>
               </button>
 
-              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-purple-50 hover:bg-purple-100 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 transition flex items-center gap-1.5">
+              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-medium bg-purple-50 hover:bg-purple-100 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 transition flex items-center gap-1.5">
                 <span>${t.copy_cl}</span>
               </button>
 
@@ -1466,16 +1615,14 @@
                 <span>${t.open_google_docs_new}</span>
               </button>
 
-              <!-- Official PDF direct download -->
-              ${(job.cover_letter_url || job.cover_letter_pdf) ? `
-                <a href="${(job.cover_letter_url || job.cover_letter_pdf).replace(/^\/?/, '')}" download class="px-2 py-1 rounded bg-indigo-50 dark:bg-indigo-950/40 hover:bg-indigo-100 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 text-[11px] font-semibold flex items-center gap-1 shadow-2xs" title="Offizielles Backend-PDF direkt herunterladen">
-                  <span>📄 PDF</span>
-                </a>
-              ` : ''}
+              <!-- Easy Download Cover Letter as PDF -->
+              <button onclick="downloadCoverLetterPdf('${job.id}')" class="px-2.5 py-1 rounded bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition flex items-center gap-1 shadow-2xs text-[11px]" title="${t.download_cl_pdf_tooltip}">
+                <span>📥 PDF</span>
+              </button>
 
               <!-- Print / PDF -->
-              <button onclick="printGoogleDoc('${job.id}')" class="px-2 py-1 rounded bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700 text-[11px] font-medium flex items-center gap-1" title="Drucken oder als PDF speichern">
-                <span>${t.print_pdf}</span>
+              <button onclick="printGoogleDoc('${job.id}')" class="px-2 py-1 rounded bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700 text-[11px] font-medium flex items-center gap-1" title="Print Dialog">
+                <span>🖨️</span>
               </button>
 
               <!-- Copy All -->
@@ -1533,14 +1680,13 @@
                   </button>
                 ` : ''}
 
-                ${(job.cv_url || job.cv_pdf) ? `
-                  <a href="${(job.cv_url || job.cv_pdf).replace(/^\/?/, '')}" download class="px-2.5 py-1 rounded bg-emerald-50 dark:bg-emerald-950/50 hover:bg-emerald-100 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-[11px] font-semibold flex items-center gap-1 shadow-2xs" title="Maßgeschneidertes PDF direkt herunterladen">
-                    <span>📄 Tailored PDF</span>
-                  </a>
-                ` : ''}
+                <!-- Easy Download Tailored CV as PDF (Second Option) -->
+                <button onclick="downloadTailoredCvPdf('${job.id}')" class="px-3.5 py-1 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition flex items-center gap-1 shadow-xs text-[11px]" title="${t.download_cv_pdf_tooltip}">
+                  <span>${t.btn_download_pdf}</span>
+                </button>
 
-                <button onclick="printTailoredCv('${job.id}')" class="px-3 py-1 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition flex items-center gap-1 shadow-xs text-[11px]">
-                  <span>${t.print_cv_pdf}</span>
+                <button onclick="printTailoredCv('${job.id}')" class="px-2 py-1 rounded bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700 text-[11px] font-medium" title="${t.print_cv_pdf}">
+                  <span>🖨️</span>
                 </button>
 
                 <a href="files/Guillermo_Hernandez_CV_Master.pdf" download class="px-2 py-1 rounded bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700 text-[11px] font-medium">
@@ -2209,7 +2355,7 @@
 
           let deP2 = `In meiner aktuellen Position als Junior Project Manager (Werkstudent) bei der AUTO1 Group in Berlin arbeite ich eng mit Product Managern, Entwicklern und regionalen Operations-Teams in neun europäischen Märkten zusammen. Dabei habe ich den Rollout und die kontinuierliche Optimierung unseres KI-Voicebots über 9 Ländermärkte hinweg begleitet, wodurch Millionen von Anrufen geroutet, die Annahmequote von 65 % auf 85 % (+20 %) gesteigert und die Call-to-Booking-Konversion auf 57,8 % (+25 %) erhöht wurden. Zudem verantworte ich die Wissensarchitektur und Vektor-/Retrieval-Datenbanken für unseren KI-Chatbot mit über 30.000 monatlichen Kundenanfragen.`;
           if (isProdOps) {
-            deP2 += ` Um die Schnittstelle zwischen Produktentwicklung und operativen Teams zu stärken, habe ich eigene interne Web-Tools konzipiert und ausgerollt – darunter eine KI-QA-Evaluierungsplattform mit Bulk-Review-Pipelines sowie ein zentrales über GitHub versioniertes Kundenbewertungs-Portal.`;
+            deP2 += ` Um die Schnittstelle zwischen Produktentwicklung und operativen Teams zu stärken, habe ich eigene interne Web-Tools konzipiert und ausgerollt – darunter eine KI-QA-Evaluierungsplattform mit Bulk-Review-Pipelines sowie ein zentrales mit Google Apps Script entwickeltes Kundenbewertungs-Portal.`;
           } else if (isData) {
             deP2 += ` Parallel dazu führe ich täglich quantitative Analysen auf komplexen, unstrukturierten Multi-Market-Datensätzen mit SQL (Redash) und Advanced Excel durch und erstelle automatisierte KPI-Dashboards in Looker Studio und Tableau.`;
           } else {
@@ -2241,7 +2387,7 @@
 
         let p2 = `In my current role as a Junior Project Manager (Working Student) at AUTO1 Group, I collaborate daily with product managers, engineers, and regional leads across nine European markets. `;
         if (isProdOps) {
-          p2 += `A centerpiece of my work has been scaling our conversational AI product suite across 9 international markets, routing millions of customer calls while lifting inbound answer rates from 65% to 85% (+20%) and increasing call-to-booking conversion to 57.8% (+25%). Because smooth product operations depend on fast feedback loops and reliable tooling, I also designed and shipped several internal web tools: an AI Conversation QA & Evaluation platform with bulk-review pipelines for auditing model quality, a real-time cross-country collaboration knowledge base standardizing multi-market processes, and a centralized Google Reviews & Trustpilot management portal (versioned via Git/GitHub) that turned manual review discovery into a one-click workflow.`;
+          p2 += `A centerpiece of my work has been scaling our conversational AI product suite across 9 international markets, routing millions of customer calls while lifting inbound answer rates from 65% to 85% (+20%) and increasing call-to-booking conversion to 57.8% (+25%). Because smooth product operations depend on fast feedback loops and reliable tooling, I also designed and shipped several internal web tools: an AI Conversation QA & Evaluation platform with bulk-review pipelines for auditing model quality, a real-time cross-country collaboration knowledge base standardizing multi-market processes, and a centralized Google Reviews & Trustpilot management portal (built with Google Apps Script) that turned manual review discovery into a one-click workflow.`;
         } else if (isAiAuto) {
           p2 += `I have led integrations and continuous optimization for our AI voice bot across 9 international markets (routing millions of calls, boosting answer rates from 65% to 85%, and lifting booking conversion by 25% to 57.8%), while structuring and maintaining custom vector and retrieval knowledge bases for an AI chatbot handling over 30,000 monthly customer conversations. Beyond managing existing systems, I actively build custom automation tools: I developed an internal AI Conversation QA & Evaluation web app with bulk-review pipelines, as well as an automated Price-Lead Offer Email engine integrating internal admin systems, REST APIs, and low-code workflows.`;
         } else if (isData) {
@@ -2301,7 +2447,7 @@
     }
 
     function openAutofillModal() {
-      const bookmarkletCode = "javascript:(function(){const info={firstName:'Guillermo',lastName:'Hernandez Lopez',fullName:'Guillermo Hernandez',email:'guillejhl@gmail.com',phone:'+4917685136597',city:'Berlin',zip:'12203',linkedin:'https://www.linkedin.com/in/guillermo-hernandez-lopez/',hours:'20',start:'Ab sofort'};document.querySelectorAll('input,textarea,select').forEach(el=>{const n=(el.name||el.id||el.placeholder||el.getAttribute('aria-label')||'').toLowerCase();if(!el.value){if(n.includes('first')||n.includes('vorname'))el.value=info.firstName;else if(n.includes('last')||n.includes('nachname'))el.value=info.lastName;else if(n.includes('name')&&!n.includes('user'))el.value=info.fullName;else if(n.includes('mail'))el.value=info.email;else if(n.includes('phone')||n.includes('tel')||n.includes('mobil'))el.value=info.phone;else if(n.includes('city')||n.includes('stadt')||n.includes('ort'))el.value=info.city;else if(n.includes('zip')||n.includes('plz'))el.value=info.zip;else if(n.includes('linkedin'))el.value=info.linkedin;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));}});alert('✨ Formulardaten erfolgreich ausgefüllt!');})();";
+      const bookmarkletCode = "javascript:(function(){const info={firstName:'Guillermo',lastName:'Hernandez Lopez',fullName:'Guillermo Hernandez',email:'guillejhl@gmail.com',phone:'+4917685136597',city:'Berlin',zip:'12203',linkedin:'https://www.linkedin.com/in/guillermojosehernandezlopez/',hours:'20',start:'Ab sofort'};document.querySelectorAll('input,textarea,select').forEach(el=>{const n=(el.name||el.id||el.placeholder||el.getAttribute('aria-label')||'').toLowerCase();if(!el.value){if(n.includes('first')||n.includes('vorname'))el.value=info.firstName;else if(n.includes('last')||n.includes('nachname'))el.value=info.lastName;else if(n.includes('name')&&!n.includes('user'))el.value=info.fullName;else if(n.includes('mail'))el.value=info.email;else if(n.includes('phone')||n.includes('tel')||n.includes('mobil'))el.value=info.phone;else if(n.includes('city')||n.includes('stadt')||n.includes('ort'))el.value=info.city;else if(n.includes('zip')||n.includes('plz'))el.value=info.zip;else if(n.includes('linkedin'))el.value=info.linkedin;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));}});alert('✨ Formulardaten erfolgreich ausgefüllt!');})();";
       const bLink = document.getElementById('autofillBookmarkletLink');
       if (bLink) {
         bLink.href = bookmarkletCode;

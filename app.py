@@ -75,6 +75,22 @@ def serve_index():
     return FileResponse(STATIC_DIR / "index.html")
 
 
+@app.get("/docx.umd.js")
+def get_docx_umd():
+    p = STATIC_DIR / "docx.umd.js"
+    if p.exists():
+        return FileResponse(p)
+    raise HTTPException(status_code=404, detail="File not found")
+
+
+@app.get("/html2pdf.bundle.min.js")
+def get_html2pdf():
+    p = STATIC_DIR / "html2pdf.bundle.min.js"
+    if p.exists():
+        return FileResponse(p)
+    raise HTTPException(status_code=404, detail="File not found")
+
+
 @app.get("/api/state")
 def get_state():
     profile = load_master_profile()
