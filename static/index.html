@@ -2142,17 +2142,17 @@
             <div class="flex flex-wrap items-center gap-2.5">
               ${directUrl ? `
                 <!-- 1. Primary Direct Apply on Company Portal -->
-                <a href="${directUrl}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-sm bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white border border-teal-500/30" title="Apply directly on ${job.company}'s official careers website">
+                <a href="${directUrl}" target="_blank" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-sm bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white border border-teal-500/30" title="Apply directly on ${job.company}'s official careers website">
                   ${t.apply_company}
                 </a>
 
                 <!-- 2. Source Aggregator Link (LinkedIn / Indeed) -->
-                <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-3 py-2 rounded-md text-xs font-semibold transition flex items-center gap-1.5 ${isIndeed ? 'bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800/60 hover:bg-sky-100 dark:hover:bg-sky-900/40' : 'bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40'}" title="View original listing on ${isIndeed ? 'Indeed' : 'LinkedIn'}">
+                <a href="${job.job_url || '#'}" target="_blank" class="px-3 py-2 rounded-md text-xs font-semibold transition flex items-center gap-1.5 ${isIndeed ? 'bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800/60 hover:bg-sky-100 dark:hover:bg-sky-900/40' : 'bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40'}" title="View original listing on ${isIndeed ? 'Indeed' : 'LinkedIn'}">
                   ${isIndeed ? t.source_indeed : t.source_linkedin}
                 </a>
               ` : `
                 <!-- 1. Primary Apply CTA -->
-                <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-xs ${isIndeed ? 'bg-[#003a9b] hover:bg-[#002f7d] text-white' : 'bg-[#0a66c2] hover:bg-[#004182] text-white'}">
+                <a href="${job.job_url || '#'}" target="_blank" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-xs ${isIndeed ? 'bg-[#003a9b] hover:bg-[#002f7d] text-white' : 'bg-[#0a66c2] hover:bg-[#004182] text-white'}">
                   ${isIndeed ? t.apply_indeed : t.apply_linkedin}
                 </a>
 
@@ -2557,14 +2557,14 @@
 
           <div class="flex flex-wrap gap-2">
             ${directUrl ? `
-              <a href="${directUrl}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="flex-1 text-center py-2.5 rounded-md text-xs font-bold bg-gradient-to-r from-teal-600 to-emerald-600 text-white">
+              <a href="${directUrl}" target="_blank" class="flex-1 text-center py-2.5 rounded-md text-xs font-bold bg-gradient-to-r from-teal-600 to-emerald-600 text-white">
                 🏢 Direkt auf Website ↗
               </a>
-              <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-3 text-center py-2.5 rounded-md text-xs font-semibold ${isIndeed ? 'bg-[#003a9b] text-white' : 'bg-[#0a66c2] text-white'}">
+              <a href="${job.job_url || '#'}" target="_blank" class="px-3 text-center py-2.5 rounded-md text-xs font-semibold ${isIndeed ? 'bg-[#003a9b] text-white' : 'bg-[#0a66c2] text-white'}">
                 ${isIndeed ? '🔷 Indeed' : '🔗 LinkedIn'}
               </a>
             ` : `
-              <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="flex-1 text-center py-2.5 rounded-md text-xs font-bold ${isIndeed ? 'bg-[#003a9b] text-white' : 'bg-[#0a66c2] text-white'}">
+              <a href="${job.job_url || '#'}" target="_blank" class="flex-1 text-center py-2.5 rounded-md text-xs font-bold ${isIndeed ? 'bg-[#003a9b] text-white' : 'bg-[#0a66c2] text-white'}">
                 ${isIndeed ? '🔷 Auf Indeed bewerben ↗' : '🔗 Auf LinkedIn bewerben ↗'}
               </a>
               <a href="${companySearchUrl}" target="_blank" class="px-3 text-center py-2.5 rounded-md text-xs font-semibold bg-gray-200 dark:bg-slate-700 text-gray-800 dark:text-gray-200">
