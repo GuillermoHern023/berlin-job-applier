@@ -47,8 +47,8 @@ def build_cv_html(
 ) -> str:
     p = profile["personal_info"]
     if not selected_auto1_bullets:
-        # Default top 6 bullets including the best new projects + core metrics
-        selected_auto1_bullets = [b["html"] for b in profile["auto1_bullet_pool"][:6]]
+        # Default top 5 bullets for strict 1-page A4 fit
+        selected_auto1_bullets = [b["html"] for b in profile["auto1_bullet_pool"][:5]]
 
     core_skills = custom_core_skills if custom_core_skills else profile["skills"]["core"]
     core_skills_str = " | ".join(core_skills)
@@ -282,7 +282,7 @@ def build_cover_letter_html(
 <style>
   @page {{
     size: A4;
-    margin: 18mm 22mm 18mm 22mm;
+    margin: 14mm 18mm 14mm 18mm;
   }}
   * {{
     box-sizing: border-box;
@@ -291,8 +291,8 @@ def build_cover_letter_html(
   }}
   body {{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 10.5pt;
-    line-height: 1.55;
+    font-size: 10pt;
+    line-height: 1.45;
     color: #1e293b;
     background: #fff;
   }}
@@ -301,27 +301,27 @@ def build_cover_letter_html(
     justify-content: space-between;
     align-items: flex-end;
     border-bottom: 2px solid #0f172a;
-    padding-bottom: 8px;
-    margin-bottom: 18px;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
   }}
   .sender-name {{
-    font-size: 16.5pt;
+    font-size: 15.5pt;
     font-weight: 700;
     color: #0f172a;
     letter-spacing: -0.2px;
   }}
   .sender-contact {{
     text-align: right;
-    font-size: 9.5pt;
-    line-height: 1.4;
+    font-size: 9pt;
+    line-height: 1.35;
     color: #475569;
   }}
   .meta-row {{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 18px;
-    font-size: 10pt;
+    margin-bottom: 14px;
+    font-size: 9.5pt;
     color: #334155;
   }}
   .recipient-info div {{
@@ -329,26 +329,26 @@ def build_cover_letter_html(
   }}
   .job-subject {{
     font-weight: 700;
-    font-size: 11pt;
+    font-size: 10.5pt;
     color: #0f172a;
-    margin-top: 6px;
+    margin-top: 5px;
   }}
   .date-col {{
-    font-size: 9.5pt;
+    font-size: 9pt;
     color: #64748b;
   }}
   .salutation {{
     font-weight: 600;
     color: #0f172a;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }}
   .letter-body p {{
-    margin-bottom: 12px;
+    margin-bottom: 8pt;
     text-align: left;
     color: #334155;
   }}
   .sign-off {{
-    margin-top: 20px;
+    margin-top: 14px;
     color: #334155;
   }}
   .sign-off p {{

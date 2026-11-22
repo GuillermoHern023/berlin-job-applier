@@ -211,8 +211,8 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
         scored_bullets.append((b_score, b))
 
     scored_bullets.sort(key=lambda x: x[0], reverse=True)
-    # Keep top 6 bullets so CV fits cleanly on 1 A4 page
-    chosen_bullets = [b["html"] for _, b in scored_bullets[:6]]
+    # Keep top 5 bullets so CV fits cleanly on strict 1 A4 page
+    chosen_bullets = [b["html"] for _, b in scored_bullets[:5]]
 
     # Tailor core skills order
     all_skills = list(profile["skills"]["core"])
@@ -221,49 +221,46 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
     elif cat_id == "product_management":
         all_skills.sort(key=lambda s: 0 if ("Product" in s or "Quantitative" in s) else 1)
 
-    # Build tailored Cover Letter paragraphs without emdashes or rigid keyword copying
+    # Build concise, high-impact Cover Letter paragraphs (Strict 1-Page A4 Guarantee ~220 words)
     if cat_id == "ai_automation":
         project_highlight = (
-            "A core focus of my work has been conversational AI, where I supported the rollout and continuous tuning of our AI voice bot across 9 markets, routing millions of calls and increasing answer rates from 65% to 85%. "
-            "I also manage the knowledge architecture and retrieval datasets for an AI chatbot handling over 30,000 monthly inquiries, and built an internal bulk-review QA platform to streamline how agents evaluate model quality."
+            "I drive the rollout and tuning of our AI voice bot across 9 markets (routing millions of calls and lifting answer rates to 85%), while managing knowledge bases for a chatbot handling 30,000+ monthly conversations. "
+            "To streamline model evaluation, I built an internal AI QA web tool with bulk-review pipelines and REST API automations."
         )
     elif cat_id == "product_management":
         project_highlight = (
-            "Embedded in an agile cross-functional product environment, I helped scale our conversational AI tooling across 9 international markets, routing millions of calls while improving answer rates by 20%. "
-            "To support our operational workflows, I have designed and deployed internal evaluation tools, including an AI conversation QA web platform with bulk review pipelines, a centralized review management portal versioned via GitHub, and automated dispatch workflows."
+            "I helped scale our conversational AI products across 9 international markets, routing millions of calls while improving answer rates by 20% and booking conversion to 57.8%. "
+            "To support our operational workflows, I designed and shipped an internal AI QA evaluation web tool with bulk-review pipelines and a centralized customer review portal."
         )
     elif cat_id == "cx_operations":
         project_highlight = (
-            "My key initiatives include optimizing an international AI voice bot that scaled to route millions of calls (raising inbound answer rates from 65% to 85%), as well as structuring retrieval knowledge bases for an AI chatbot handling 30,000+ monthly customer chats. "
-            "To empower operational teams, I built an automated multi-market knowledge base, an AI QA review web application, and API-driven customer communication tools."
+            "I supported scaling our AI voice bot across 9 markets to route millions of calls (raising inbound answer rates from 65% to 85%), while maintaining retrieval knowledge bases for an AI chatbot handling 30,000+ monthly inquiries. "
+            "To empower operational teams, I built an automated multi-market knowledge base and custom REST API communication utilities."
         )
     else:  # project_management default
         project_highlight = (
-            "Working closely with product, engineering, and regional operations teams across 9 markets, I supported the rollout of an AI voice bot that scaled to route millions of calls, lifting answer rates by 20%. "
-            "I also maintain knowledge bases for a customer-facing chatbot handling 30,000+ monthly conversations, and built internal web utilities, including an AI conversation evaluation platform and an automated customer offer generator connecting internal systems."
+            "I supported the rollout of an AI voice bot across 9 markets routing millions of calls and lifting answer rates by 20%. "
+            "I also oversee knowledge architecture for an AI chatbot handling 30,000+ monthly inquiries, and built internal web tools—including an AI QA evaluation platform and automated REST API offer engines—to standardize team delivery."
         )
 
     paragraphs = [
         (
-            f"I am writing to express my strong interest in the {job_title} role at {company}. "
-            f"Through my experience helping scale conversational AI tools, optimizing operational workflows, and building data-driven internal products at Auto1 Group, "
-            f"I have learned that the greatest value comes from combining analytical rigor with practical builder execution. "
-            f"With a Bachelor's degree in Digital Product Management and my ongoing Master's studies in International Business Management in Berlin, "
-            f"I am eager to contribute this hands-on, problem-solving mindset to your team."
+            f"I am writing to apply for the {job_title} role at {company}. "
+            f"With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and hands-on experience at Auto1 Group scaling AI tools and data workflows, "
+            f"I combine analytical rigor with proactive builder execution to deliver immediate value to your team."
         ),
         (
-            f"In my current role as a Junior Project Manager at Auto1 Group in Berlin, I work closely with product managers, developers, and regional operations leads across nine European markets. "
+            f"In my current role as a Junior Project Manager at Auto1 Group in Berlin, I collaborate closely with product managers, engineers, and regional leads across nine European markets. "
             f"{project_highlight}"
         ),
         (
-            f"Beyond day-to-day operations, I genuinely enjoy untangling disorganized datasets and creating solutions that make teams more efficient. "
-            f"In my analytics and reporting work, I frequently write SQL queries in Redash and build dashboards across Excel, Tableau, and Looker Studio so stakeholders have dependable, real-time metrics. "
-            f"When off-the-shelf software falls short, I roll up my sleeves to build lightweight internal tools, whether that means connecting internal systems through REST APIs, automating multi-step workflows, or testing and structuring custom evaluation data. "
-            f"Collaborating in an international Berlin environment has also allowed me to work comfortably across languages, using my native Spanish, fluent English, and working German (B1)."
+            f"Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean, repeatable processes. "
+            f"I write SQL queries in Redash and build dashboards in Looker Studio, Tableau, and Excel to provide reliable metrics. When off-the-shelf software falls short, I prototype lightweight internal tools using JavaScript and REST APIs. "
+            f"Working in an international Berlin environment, I communicate fluently in English (C1/C2) and Spanish (native), with working German (B1)."
         ),
         (
-            f"What particularly excites me about {company} is the opportunity to bring this mix of analytical curiosity and builder execution to your team. "
-            f"Thank you very much for taking the time to review my application. I would welcome the chance to speak with you and discuss how my background can support {company} in this role."
+            f"What particularly excites me about {company} is the opportunity to bring this blend of product operations discipline, SQL analytics, and builder execution to your team in the {job_title} role. "
+            f"Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview."
         ),
     ]
 
