@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full bg-[#f3f2ef]">
+<html lang="en" class="h-full bg-[#f3f2ef] dark:bg-[#0d1117]">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,27 +35,13 @@
       transition: background-color 0.2s ease, color 0.2s ease;
     }
     .dark body {
-      background-color: #0f141c;
-      color: #e2e8f0;
-    }
-    .dark .portal-card {
-      background: #18202f !important;
-      border-color: #263346 !important;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-    }
-    .dark .portal-card:hover {
-      border-color: #3b4d66 !important;
-      background-color: #1e283b !important;
-    }
-    .dark .portal-card.active-job {
-      border-color: #38bdf8 !important;
-      background-color: #1b263b !important;
-      box-shadow: 0 0 0 1px #38bdf8, 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+      background-color: #0d1117;
+      color: #e6edf3;
     }
     .portal-card {
       background: #ffffff;
       border: 1px solid #e5e7eb;
-      border-radius: 8px;
+      border-radius: 10px;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
       transition: all 0.15s ease-in-out;
     }
@@ -68,35 +54,54 @@
       background-color: #f8fafd;
       box-shadow: 0 0 0 1px #0a66c2, 0 4px 6px -1px rgba(10, 102, 194, 0.1);
     }
+    .dark .portal-card {
+      background: #161b22 !important;
+      border-color: #30363d !important;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+    .dark .portal-card:hover {
+      border-color: #484f58 !important;
+      background-color: #1c2128 !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    .dark .portal-card.active-job {
+      border-color: #38bdf8 !important;
+      background-color: #1c2438 !important;
+      box-shadow: 0 0 0 1px #38bdf8, 0 4px 16px rgba(14, 165, 233, 0.25) !important;
+    }
     /* Scrollbars */
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .dark ::-webkit-scrollbar-track { background: transparent; }
+    .dark ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+    .dark ::-webkit-scrollbar-thumb:hover { background: #484f58; }
   </style>
 </head>
-<body class="min-h-full flex flex-col user-guillermo" id="appBody">
+<body class="min-h-full flex flex-col user-guillermo bg-[#f3f2ef] dark:bg-[#0d1117] transition-colors" id="appBody">
 
   <!-- Top Global Navigation Bar (LinkedIn Style) -->
-  <header class="sticky top-0 z-40 bg-white dark:bg-[#141b26] border-b border-gray-200 dark:border-slate-800 shadow-sm transition-colors">
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-[#161b22]/95 backdrop-blur-md border-b border-gray-200 dark:border-[#30363d] shadow-xs transition-colors">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
       
       <!-- Brand & User Profile Switcher -->
       <div class="flex items-center gap-3">
         <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded bg-[#0a66c2] text-white flex items-center justify-center font-black text-lg tracking-tighter shadow-sm">
+          <div class="w-8 h-8 rounded-lg bg-[#0a66c2] text-white flex items-center justify-center font-black text-lg tracking-tighter shadow-sm shadow-blue-500/20">
             in
           </div>
           <div class="hidden sm:block">
             <div class="text-sm font-bold text-gray-900 dark:text-white leading-tight">Berlin Job Hub</div>
-            <div class="text-[10px] text-gray-500 font-medium">Indeed &amp; LinkedIn Career Command</div>
+            <div class="text-[10px] text-gray-500 dark:text-gray-400 font-medium">Indeed &amp; LinkedIn Career Command</div>
           </div>
         </div>
 
-        <div class="h-6 w-px bg-gray-200 mx-1"></div>
+        <div class="h-6 w-px bg-gray-200 dark:bg-[#30363d] mx-1"></div>
 
-        <div class="flex items-center bg-gray-100 dark:bg-slate-800/90 p-0.5 rounded-lg border border-gray-200 dark:border-slate-700 text-xs font-semibold">
-          <span id="userTabGuillermo" class="px-3 py-1.5 rounded-md flex items-center gap-1.5 bg-white dark:bg-[#17253b] text-blue-700 dark:text-blue-300 shadow-sm font-bold">
+        <div class="flex items-center bg-gray-100 dark:bg-[#21262d] p-0.5 rounded-lg border border-gray-200 dark:border-[#30363d] text-xs font-semibold">
+          <span id="userTabGuillermo" class="px-3 py-1.5 rounded-md flex items-center gap-1.5 bg-white dark:bg-[#1c2438] text-blue-700 dark:text-blue-300 shadow-xs font-bold border border-transparent dark:border-blue-500/30">
             <span>👨 Guillermo (PM &amp; AI)</span>
           </span>
         </div>
@@ -105,32 +110,32 @@
       <!-- Right Action Tools -->
       <div class="flex items-center gap-2">
         <!-- On-Demand Scrape / More Jobs Button -->
-        <button id="moreJobsBtn" onclick="triggerMoreJobsScout()" class="px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm" title="Search fresh roles on demand">
+        <button id="moreJobsBtn" onclick="triggerMoreJobsScout()" class="px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs" title="Search fresh roles on demand">
           <span id="moreJobsBtnIcon">🔍</span>
           <span id="moreJobsBtnText">Find More Jobs (+50)</span>
         </button>
 
         <!-- Language Switcher Button (EN / DE) -->
-        <button id="langToggleBtn" onclick="toggleLanguage()" class="px-2.5 py-1.5 rounded-md border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 text-xs font-bold transition flex items-center gap-1.5 shadow-sm" title="Switch Language (EN / DE)">
+        <button id="langToggleBtn" onclick="toggleLanguage()" class="px-2.5 py-1.5 rounded-md border border-gray-200 dark:border-[#30363d] bg-gray-50 dark:bg-[#21262d] text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-[#30363d] text-xs font-bold transition flex items-center gap-1.5 shadow-xs" title="Switch Language (EN / DE)">
           <span id="langFlag">🇬🇧</span>
           <span id="langLabel">EN</span>
         </button>
 
         <!-- Dark Mode Toggle Button -->
-        <button id="themeToggleBtn" onclick="toggleDarkMode()" class="px-2.5 py-1.5 rounded-md border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 text-xs font-semibold transition flex items-center gap-1.5 shadow-sm" title="Toggle Light / Dark Mode">
+        <button id="themeToggleBtn" onclick="toggleDarkMode()" class="px-2.5 py-1.5 rounded-md border border-gray-200 dark:border-[#30363d] bg-gray-50 dark:bg-[#21262d] text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-[#30363d] text-xs font-semibold transition flex items-center gap-1.5 shadow-xs" title="Toggle Light / Dark Mode">
           <span id="themeToggleIcon">🌙</span>
           <span id="themeToggleText" class="hidden sm:inline">Dark</span>
         </button>
 
-        <button onclick="openAutofillModal()" class="px-3 py-1.5 text-xs font-medium bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60 rounded-md transition flex items-center gap-1.5">
+        <button onclick="openAutofillModal()" class="px-3 py-1.5 text-xs font-medium bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-700/60 rounded-md transition flex items-center gap-1.5">
           <span>⚡ 1-Click Autofill Helper</span>
         </button>
 
-        <a id="navSheetLink" href="https://docs.google.com/spreadsheets/d/1o2r4Qvn9SL7gOa05P-up9tiwnCXPmcnOG3kttL_H0Fk/edit" target="_blank" class="hidden md:flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 rounded-md transition">
+        <a id="navSheetLink" href="https://docs.google.com/spreadsheets/d/1o2r4Qvn9SL7gOa05P-up9tiwnCXPmcnOG3kttL_H0Fk/edit" target="_blank" class="hidden md:flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-700/60 rounded-md transition">
           <span>📗 Google Sheet ↗</span>
         </a>
 
-        <a id="navMasterCvBtn" href="files/Guillermo_Hernandez_CV_Master.pdf" download class="px-3 py-1.5 text-xs font-semibold bg-gray-900 hover:bg-gray-800 text-white rounded-md transition flex items-center gap-1.5 shadow-sm">
+        <a id="navMasterCvBtn" href="files/Guillermo_Hernandez_CV_Master.pdf" download class="px-3 py-1.5 text-xs font-semibold bg-gray-900 hover:bg-gray-800 dark:bg-slate-100 dark:hover:bg-white text-white dark:text-slate-900 rounded-md transition flex items-center gap-1.5 shadow-xs">
           <span>📄 Master CV (PDF)</span>
         </a>
       </div>
@@ -147,39 +152,39 @@
   <main class="max-w-[1440px] w-full mx-auto px-3 sm:px-6 py-4 flex-1 flex flex-col">
     
     <!-- Top Filter & Search Bar -->
-    <div class="bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-lg p-3.5 mb-4 shadow-sm space-y-3 transition-colors">
+    <div class="bg-white dark:bg-[#161b22] border border-gray-200 dark:border-[#30363d] rounded-xl p-3.5 mb-4 shadow-xs space-y-3 transition-colors">
       <!-- Search Input row -->
       <div class="flex flex-col sm:flex-row gap-2.5">
         <div class="relative flex-1">
-          <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+          <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 dark:text-gray-500">
             🔍
           </span>
-          <input id="searchInput" type="text" oninput="renderJobs()" placeholder="Position, keyword, company (e.g. Product Manager, AI, Operations)..." class="w-full pl-9 pr-3 py-2 bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md text-xs sm:text-sm text-gray-900 dark:text-gray-100 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <input id="searchInput" type="text" oninput="renderJobs()" placeholder="Position, keyword, company (e.g. Product Manager, AI, Operations)..." class="w-full pl-9 pr-3 py-2 bg-gray-50 dark:bg-[#0d1117] border border-gray-300 dark:border-[#30363d] rounded-lg text-xs sm:text-sm text-gray-900 dark:text-gray-100 focus:bg-white dark:focus:bg-[#161b22] focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" />
         </div>
 
         <div class="flex flex-wrap sm:flex-nowrap gap-2">
           <!-- Commute / Travel Time Filter (Max 1h 10m from Söhtstraße 16) -->
-          <select id="commuteFilter" onchange="renderJobs()" class="bg-blue-50/70 dark:bg-blue-950/40 border border-blue-300 dark:border-blue-700/60 rounded-md px-3 py-2 text-xs font-semibold text-blue-900 dark:text-blue-200 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-2xs" title="Filter jobs by transit travel time from Söhtstraße 16, 12203 Berlin">
+          <select id="commuteFilter" onchange="renderJobs()" class="bg-blue-50/70 dark:bg-blue-950/40 border border-blue-300 dark:border-blue-700/60 rounded-lg px-3 py-2 text-xs font-semibold text-blue-900 dark:text-blue-300 focus:bg-white dark:focus:bg-[#161b22] focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-2xs transition-colors" title="Filter jobs by transit travel time from Söhtstraße 16, 12203 Berlin">
             <option value="MAX_70MIN" selected>⏱️ Max 1h 10m (Söhtstr. 16)</option>
             <option value="ALL">🌍 All Distances / Locations</option>
           </select>
 
           <!-- Workplace Model Filter -->
-          <select id="workModelFilter" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <select id="workModelFilter" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0d1117] border border-gray-300 dark:border-[#30363d] rounded-lg px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#161b22] focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
             <option value="HYBRID_REMOTE" selected>🏠 Hybrid &amp; Remote Only (No 100% Onsite)</option>
             <option value="ALL">🏢 All Workplace Types (incl. Onsite)</option>
             <option value="REMOTE_ONLY">🏡 100% Remote Only</option>
           </select>
 
           <!-- Portal Filter -->
-          <select id="sourceFilter" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <select id="sourceFilter" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0d1117] border border-gray-300 dark:border-[#30363d] rounded-lg px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#161b22] focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
             <option value="ALL">🌐 All Portals (Indeed &amp; LinkedIn)</option>
             <option value="INDEED">🔷 Indeed Only</option>
             <option value="LINKEDIN">🔗 LinkedIn Only</option>
           </select>
 
           <!-- Sort -->
-          <select id="sortBy" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <select id="sortBy" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0d1117] border border-gray-300 dark:border-[#30363d] rounded-lg px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#161b22] focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
             <option value="NEWEST" selected>⚡ Newest Roles First</option>
             <option value="MATCH">⭐ Highest Match Score</option>
           </select>
@@ -187,23 +192,23 @@
       </div>
 
       <!-- Quick Status Filter Pills -->
-      <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-gray-100">
+      <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-gray-100 dark:border-[#30363d]">
         <div class="flex flex-wrap items-center gap-1.5">
-          <button onclick="setFilterStatus('ACTIVE')" id="tabActive" class="px-3 py-1 rounded-full text-xs font-bold bg-[#0a66c2] text-white transition shadow-sm">
+          <button onclick="setFilterStatus('ACTIVE')" id="tabActive" class="px-3 py-1 rounded-full text-xs font-bold bg-[#0a66c2] text-white transition shadow-xs">
             ⭐ To Review (<span id="pillActiveCount">0</span>)
           </button>
-          <button onclick="setFilterStatus('Applied')" id="tabApplied" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">
+          <button onclick="setFilterStatus('Applied')" id="tabApplied" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#30363d] border border-transparent dark:border-[#30363d] transition">
             ✅ Applied (<span id="pillAppliedCount">0</span>)
           </button>
-          <button onclick="setFilterStatus('NOT_INTERESTED')" id="tabNotInterested" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">
+          <button onclick="setFilterStatus('NOT_INTERESTED')" id="tabNotInterested" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#30363d] border border-transparent dark:border-[#30363d] transition">
             ❌ Not Interested (<span id="pillDismissedCount">0</span>)
           </button>
-          <button onclick="setFilterStatus('ALL')" id="tabAll" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition">
+          <button onclick="setFilterStatus('ALL')" id="tabAll" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#30363d] border border-transparent dark:border-[#30363d] transition">
             📁 All Jobs (<span id="pillTotalCount">0</span>)
           </button>
         </div>
 
-        <div class="text-xs text-gray-500" id="showingCountLabel">
+        <div class="text-xs text-gray-500 dark:text-gray-400" id="showingCountLabel">
           Showing jobs...
         </div>
       </div>
@@ -218,7 +223,7 @@
       </div>
 
       <!-- RIGHT COLUMN: Active Job Detail & Command Panel (Sticky) -->
-      <div class="hidden lg:flex flex-1 flex-col bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-lg shadow-sm sticky top-[76px] max-h-[calc(100vh-210px)] overflow-hidden transition-colors" id="jobDetailContainer">
+      <div class="hidden lg:flex flex-1 flex-col bg-white dark:bg-[#161b22] border border-gray-200 dark:border-[#30363d] rounded-xl shadow-xs sticky top-[76px] max-h-[calc(100vh-210px)] overflow-hidden transition-colors" id="jobDetailContainer">
         <!-- Selected job details injected here -->
       </div>
 
@@ -228,13 +233,13 @@
 
   <!-- Mobile Detail Slide-Over Modal (For screens < 1024px) -->
   <div id="mobileDetailModal" class="hidden fixed inset-0 z-50 bg-black/60 flex flex-col justify-end lg:hidden">
-    <div class="bg-white rounded-t-2xl max-h-[92vh] flex flex-col overflow-hidden shadow-2xl">
-      <div class="p-3 border-b border-gray-200 flex items-center justify-between bg-gray-50">
-        <button onclick="closeMobileDetail()" class="text-xs font-bold text-blue-600 flex items-center gap-1">
+    <div class="bg-white dark:bg-[#161b22] border-t border-gray-200 dark:border-[#30363d] rounded-t-2xl max-h-[92vh] flex flex-col overflow-hidden shadow-2xl">
+      <div class="p-3 border-b border-gray-200 dark:border-[#30363d] flex items-center justify-between bg-gray-50 dark:bg-[#0d1117]">
+        <button onclick="closeMobileDetail()" class="text-xs font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1">
           ← Zurück zur Liste
         </button>
-        <div class="text-xs font-medium text-gray-500" id="mobileModalJobCount">Job-Detail</div>
-        <button onclick="closeMobileDetail()" class="text-gray-400 hover:text-gray-700 font-bold text-lg">✕</button>
+        <div class="text-xs font-medium text-gray-500 dark:text-gray-400" id="mobileModalJobCount">Job-Detail</div>
+        <button onclick="closeMobileDetail()" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 font-bold text-lg">✕</button>
       </div>
       <div class="flex-1 overflow-y-auto p-4" id="mobileDetailContent"></div>
     </div>
@@ -242,20 +247,20 @@
 
   <!-- 1-Click Autofill Helper Modal -->
   <div id="autofillModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-    <div class="bg-white border border-gray-200 rounded-xl max-w-2xl w-full p-6 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
-      <div class="flex items-center justify-between border-b border-gray-200 pb-3">
+    <div class="bg-white dark:bg-[#161b22] border border-gray-200 dark:border-[#30363d] rounded-2xl max-w-2xl w-full p-6 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-gray-200 dark:border-[#30363d] pb-3">
         <div>
-          <h2 class="text-base font-bold text-gray-900 flex items-center gap-2">
+          <h2 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
             <span>⚡ 1-Klick Autofill &amp; CV Vorab-Hinterlegung</span>
           </h2>
-          <p class="text-xs text-gray-500 mt-0.5">So sparst du Zeit und bewirbst dich in 3 Sekunden</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">So sparst du Zeit und bewirbst dich in 3 Sekunden</p>
         </div>
-        <button onclick="closeAutofillModal()" class="text-gray-400 hover:text-gray-700 text-lg font-bold">✕</button>
+        <button onclick="closeAutofillModal()" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 text-lg font-bold">✕</button>
       </div>
 
-      <div class="space-y-4 text-xs text-gray-700">
-        <div class="p-4 rounded-lg bg-blue-50 border border-blue-200 space-y-2">
-          <div class="font-bold text-blue-900 text-sm flex items-center gap-1.5">
+      <div class="space-y-4 text-xs text-gray-700 dark:text-gray-300">
+        <div class="p-4 rounded-xl bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800/50 space-y-2">
+          <div class="font-bold text-blue-900 dark:text-blue-200 text-sm flex items-center gap-1.5">
             <span>🔷 1. Für Indeed: Lebenslauf einmal hinterlegen</span>
           </div>
           <p class="leading-relaxed">
@@ -265,32 +270,35 @@
             <a href="https://de.indeed.com/profile" target="_blank" class="px-3 py-1.5 rounded-md bg-[#003a9b] hover:bg-[#002f7d] text-white font-semibold transition flex items-center gap-1.5">
               <span>🚀 Zu deinem Indeed-Profil ↗</span>
             </a>
-            <a id="modalDownloadMasterBtn" href="files/Guillermo_Hernandez_CV_Master.pdf" download class="px-3 py-1.5 rounded-md bg-white hover:bg-gray-50 text-gray-800 border border-gray-300 font-semibold transition">
+            <a id="modalDownloadMasterBtn" href="files/Guillermo_Hernandez_CV_Master.pdf" download class="px-3 py-1.5 rounded-md bg-white dark:bg-[#21262d] hover:bg-gray-50 dark:hover:bg-[#30363d] text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-[#30363d] font-semibold transition">
               📄 Master-Lebenslauf herunterladen
             </a>
           </div>
         </div>
 
-        <div class="p-4 rounded-lg bg-purple-50 border border-purple-200 space-y-2">
-          <div class="font-bold text-purple-900 text-sm flex items-center gap-1.5">
+        <div class="p-4 rounded-xl bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800/50 space-y-2">
+          <div class="font-bold text-purple-900 dark:text-purple-200 text-sm flex items-center gap-1.5">
             <span>🪄 2. Für andere Portale (Personio, Join.com, Workday)</span>
           </div>
           <p class="leading-relaxed">
             Ziehe diesen Button einfach in deine <strong>Browser-Lesezeichenleiste</strong> (Chrome, Safari, Edge):
           </p>
-          <div class="p-3 bg-white rounded border border-purple-200 text-center my-1.5">
+          <div class="p-3 bg-white dark:bg-[#0d1117] rounded-lg border border-purple-200 dark:border-purple-800/60 text-center my-1.5">
             <a id="autofillBookmarkletLink" href="#" class="inline-block px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-95 text-white font-bold rounded shadow cursor-grab text-xs">
               ⚡ Guillermo 1-Klick Autofill (In Lesezeichenleiste ziehen)
             </a>
           </div>
-          <p class="text-[11px] text-gray-500">
+          <p class="text-[11px] text-gray-500 dark:text-gray-400">
             Klicke auf einem beliebigen Online-Formular auf dieses Lesezeichen: Es füllt Name, E-Mail, Telefon und Adresse automatisch in 1 Millisekunde aus!
           </p>
         </div>
       </div>
 
-      <div class="flex justify-end pt-2 border-t border-gray-200">
-        <button onclick="closeAutofillModal()" class="px-4 py-1.5 rounded-md bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium text-xs">
+      <div class="flex justify-end pt-2 border-t border-gray-200 dark:border-[#30363d]">
+        <button onclick="closeAutofillModal()" class="px-4 py-1.5 rounded-md bg-gray-100 dark:bg-[#21262d] hover:bg-gray-200 dark:hover:bg-[#30363d] text-gray-700 dark:text-gray-300 font-medium text-xs transition">
+          Schließen
+        </button>
+      </div>
           Schließen
         </button>
       </div>
@@ -1125,7 +1133,7 @@
 
     function applyUserTheme() {
       const body = document.getElementById('appBody');
-      if (body) body.className = 'min-h-full flex flex-col user-guillermo';
+      if (body) body.className = 'min-h-full flex flex-col user-guillermo bg-[#f3f2ef] dark:bg-[#0d1117] transition-colors';
       const masterBtn = document.getElementById('navMasterCvBtn');
       const t = I18N[currentLang] || I18N.en;
       if (masterBtn) {
@@ -1198,10 +1206,10 @@
       }
 
       const tabs = [
-        { id: 'tabActive', active: currentStatusFilter === 'ACTIVE', activeClass: 'bg-[#0a66c2]' + ' text-white font-bold shadow-sm' },
-        { id: 'tabApplied', active: currentStatusFilter === 'Applied', activeClass: 'bg-emerald-600 text-white font-bold shadow-sm' },
-        { id: 'tabNotInterested', active: currentStatusFilter === 'NOT_INTERESTED', activeClass: 'bg-rose-600 text-white font-bold shadow-sm' },
-        { id: 'tabAll', active: currentStatusFilter === 'ALL', activeClass: 'bg-gray-800 text-white font-bold shadow-sm' },
+        { id: 'tabActive', active: currentStatusFilter === 'ACTIVE', activeClass: 'bg-[#0a66c2] text-white font-bold shadow-xs shadow-blue-500/20' },
+        { id: 'tabApplied', active: currentStatusFilter === 'Applied', activeClass: 'bg-emerald-600 text-white font-bold shadow-xs shadow-emerald-500/20' },
+        { id: 'tabNotInterested', active: currentStatusFilter === 'NOT_INTERESTED', activeClass: 'bg-rose-600 text-white font-bold shadow-xs shadow-rose-500/20' },
+        { id: 'tabAll', active: currentStatusFilter === 'ALL', activeClass: 'bg-gray-800 dark:bg-[#30363d] text-white font-bold shadow-xs' },
       ];
       tabs.forEach(tab => {
         const el = document.getElementById(tab.id);
@@ -1209,7 +1217,7 @@
         if (tab.active) {
           el.className = 'px-3 py-1 rounded-full text-xs ' + tab.activeClass + ' transition';
         } else {
-          el.className = 'px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition';
+          el.className = 'px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#30363d] border border-transparent dark:border-[#30363d] transition';
         }
       });
     }
@@ -1569,7 +1577,7 @@
             <div class="flex items-start gap-3">
               
               <!-- Company Initial Avatar -->
-              <div class="w-10 h-10 rounded-md bg-gray-100 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 flex items-center justify-center font-bold text-gray-700 dark:text-gray-200 text-base shrink-0">
+              <div class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-[#21262d] border border-gray-200 dark:border-[#30363d] flex items-center justify-center font-bold text-gray-700 dark:text-gray-200 text-base shrink-0">
                 ${initial}
               </div>
 
@@ -1579,7 +1587,7 @@
                   <h3 class="text-sm font-bold text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 line-clamp-2 leading-snug">
                     ${j.title}
                   </h3>
-                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold ${score >= 90 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-gray-100 text-gray-700'} shrink-0 ml-1">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold ${score >= 90 ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60' : 'bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 border border-transparent dark:border-[#30363d]'} shrink-0 ml-1">
                     ${score}%
                   </span>
                 </div>
@@ -1587,35 +1595,35 @@
                 <div class="text-xs text-gray-600 dark:text-gray-400 font-medium mt-0.5 truncate flex items-center gap-1.5">
                   <span class="truncate font-medium text-gray-800 dark:text-gray-200">${j.company}</span>
                   <span>&bull;</span>
-                  <span class="text-blue-700 dark:text-blue-300 font-semibold shrink-0">${commute.badge}</span>
+                  <span class="text-blue-700 dark:text-blue-400 font-semibold shrink-0">${commute.badge}</span>
                   <span>&bull;</span>
                   <span class="text-emerald-700 dark:text-emerald-400 font-semibold shrink-0" title="${comp.display}">${comp.badge}</span>
                 </div>
 
                 <!-- Chips Row -->
                 <div class="flex flex-wrap items-center gap-1.5 mt-2">
-                  <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-emerald-50 text-emerald-800 border border-emerald-200">
+                  <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">
                     🏠 ${wm}
                   </span>
 
                   ${isIndeed ? `
-                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-sky-50 text-sky-800 border border-sky-200">
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-sky-50 dark:bg-sky-950/50 text-sky-800 dark:text-sky-300 border border-sky-200 dark:border-sky-800/60">
                       🔷 Indeed
                     </span>
                   ` : `
-                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-blue-50 text-blue-800 border border-blue-200">
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-blue-50 dark:bg-blue-950/50 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800/60">
                       🔗 LinkedIn
                     </span>
                   `}
 
                   ${isFresh ? `
-                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-50 text-amber-800 border border-amber-200">
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-50 dark:bg-amber-950/50 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60">
                       🔥 Neu
                     </span>
                   ` : ''}
 
                   ${j.status && j.status !== 'New' ? `
-                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-gray-100 text-gray-700">
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 border border-transparent dark:border-[#30363d]">
                       ${j.status}
                     </span>
                   ` : ''}
@@ -1803,10 +1811,10 @@
 
       container.innerHTML = `
         <!-- Sticky Detail Header -->
-        <div class="p-5 border-b border-gray-200 dark:border-slate-800 bg-white dark:bg-[#18202f]">
+        <div class="p-5 border-b border-gray-200 dark:border-[#30363d] bg-white dark:bg-[#161b22]">
           <div class="flex items-start justify-between gap-4">
             <div class="flex items-start gap-3.5">
-              <div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 flex items-center justify-center font-black text-gray-700 dark:text-gray-200 text-xl shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-gray-100 dark:bg-[#21262d] border border-gray-200 dark:border-[#30363d] flex items-center justify-center font-black text-gray-700 dark:text-gray-200 text-xl shrink-0">
                 ${initial}
               </div>
               <div>
@@ -1831,33 +1839,33 @@
               </div>
             </div>
 
-            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">
               ${job.match_score || 85}% ${t.match}
             </span>
           </div>
 
           <!-- Main CTA Action Buttons Bar (Clean, uncluttered, focused) -->
-          <div class="flex flex-wrap items-center justify-between gap-2.5 mt-4 pt-3 border-t border-gray-100 dark:border-slate-800">
+          <div class="flex flex-wrap items-center justify-between gap-2.5 mt-4 pt-3 border-t border-gray-100 dark:border-[#30363d]">
             <div class="flex flex-wrap items-center gap-2.5">
               <!-- 1. Primary Apply CTA -->
-              <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-sm ${isIndeed ? 'bg-[#003a9b] hover:bg-[#002f7d] text-white' : 'bg-[#0a66c2] hover:bg-[#004182] text-white'}">
+              <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-xs ${isIndeed ? 'bg-[#003a9b] hover:bg-[#002f7d] text-white' : 'bg-[#0a66c2] hover:bg-[#004182] text-white'}">
                 ${isIndeed ? t.apply_indeed : t.apply_linkedin}
               </a>
 
               <!-- 2. Second Option: Prominent Easy Download CV as PDF -->
-              <button onclick="downloadTailoredCvPdf('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center gap-1.5 shadow-sm hover:shadow" title="${t.download_cv_pdf_tooltip}">
+              <button onclick="downloadTailoredCvPdf('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center gap-1.5 shadow-xs hover:shadow" title="${t.download_cv_pdf_tooltip}">
                 <span>${t.btn_download_cv_pdf}</span>
               </button>
 
               <!-- 3. Copy Cover Letter Text -->
-              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-semibold bg-purple-50 hover:bg-purple-100 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 transition flex items-center gap-1.5" title="Copy Cover Letter">
+              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-semibold bg-purple-50 hover:bg-purple-100 dark:bg-purple-950/40 dark:hover:bg-purple-900/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/60 transition flex items-center gap-1.5" title="Copy Cover Letter">
                 <span>${t.copy_cl}</span>
               </button>
             </div>
 
             <!-- Status selector & quick dismiss -->
             <div class="flex items-center gap-2">
-              <select onchange="markStatus('${job.id}', this.value)" class="bg-gray-50 dark:bg-[#121721] border border-gray-200 dark:border-slate-700 rounded-md px-2.5 py-1.5 text-xs text-gray-700 dark:text-gray-200 font-medium">
+              <select onchange="markStatus('${job.id}', this.value)" class="bg-gray-50 dark:bg-[#0d1117] border border-gray-200 dark:border-[#30363d] rounded-md px-2.5 py-1.5 text-xs text-gray-700 dark:text-gray-200 font-medium">
                 ${['New', 'Ready to Apply', 'Applied', 'Interview', 'Not Interested'].map(s => `<option value="${s}" ${job.status === s ? 'selected' : ''}>${s}</option>`).join('')}
               </select>
 
@@ -1866,7 +1874,7 @@
                   ↩
                 </button>
               ` : `
-                <button onclick="markStatus('${job.id}', 'Not Interested')" class="p-1.5 rounded-md text-gray-400 hover:text-rose-600 hover:bg-rose-50 text-xs transition" title="${t.not_interested}">
+                <button onclick="markStatus('${job.id}', 'Not Interested')" class="p-1.5 rounded-md text-gray-400 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40 dark:hover:text-rose-400 text-xs transition" title="${t.not_interested}">
                   ✕
                 </button>
               `}
@@ -1875,7 +1883,7 @@
         </div>
 
         <!-- Sub Tabs: Cover Letter vs Tailored 1-Page CV vs Job Details -->
-        <div class="flex items-center px-5 bg-gray-50/80 dark:bg-slate-900/60 border-b border-gray-200 dark:border-slate-800 gap-3">
+        <div class="flex items-center px-5 bg-gray-50/80 dark:bg-[#0d1117] border-b border-gray-200 dark:border-[#30363d] gap-3">
           <button id="detailSubTabDoc" onclick="switchDetailView('doc')" class="py-2.5 px-2 border-b-2 ${currentDetailTab === 'doc' ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 font-medium'} flex items-center gap-1.5 transition text-xs">
             <span>${t.tab_doc_editor}</span>
           </button>
@@ -1888,10 +1896,10 @@
         </div>
 
         <!-- VIEW 1: Interactive Google Doc Live Editor (A4 Paper Canvas) -->
-        <div id="detailViewDoc" class="${currentDetailTab === 'doc' ? '' : 'hidden'} flex-1 overflow-y-auto bg-[#f0f4f9] dark:bg-[#0c1017] p-3 sm:p-5 flex flex-col items-center">
+        <div id="detailViewDoc" class="${currentDetailTab === 'doc' ? '' : 'hidden'} flex-1 overflow-y-auto bg-[#f0f4f9] dark:bg-[#0d1117] p-3 sm:p-5 flex flex-col items-center">
           
           <!-- Document Control Bar (Google Docs styled) -->
-          <div class="max-w-[760px] w-full shrink-0 bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-t-lg p-3 shadow-xs flex flex-wrap items-center justify-between gap-2.5 border-b-0">
+          <div class="max-w-[760px] w-full shrink-0 bg-white dark:bg-[#161b22] border border-gray-200 dark:border-[#30363d] rounded-t-xl p-3 shadow-xs flex flex-wrap items-center justify-between gap-2.5 border-b-0">
             <div class="flex items-center gap-2">
               <span class="text-xs font-bold text-gray-800 dark:text-gray-100 flex items-center gap-1">
                 <span>📄 ${t.tab_doc_editor}</span>
@@ -1909,28 +1917,28 @@
             <!-- Action Toolbar (Simplified & Uncluttered) -->
             <div class="flex flex-wrap items-center gap-1.5 text-xs">
               <!-- Language Toggle -->
-              <div class="inline-flex items-center bg-gray-100 dark:bg-slate-800 p-0.5 rounded border border-gray-200 dark:border-slate-700 text-[11px] font-semibold">
-                <button onclick="setCoverLetterLanguage('${job.id}', 'de')" class="px-2 py-0.5 rounded transition ${clLang === 'de' ? 'bg-white dark:bg-slate-700 text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="Auf Deutsch anzeigen">
+              <div class="inline-flex items-center bg-gray-100 dark:bg-[#21262d] p-0.5 rounded-lg border border-gray-200 dark:border-[#30363d] text-[11px] font-semibold">
+                <button onclick="setCoverLetterLanguage('${job.id}', 'de')" class="px-2 py-0.5 rounded transition ${clLang === 'de' ? 'bg-white dark:bg-[#30363d] text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="Auf Deutsch anzeigen">
                   🇩🇪 DE
                 </button>
-                <button onclick="setCoverLetterLanguage('${job.id}', 'en')" class="px-2 py-0.5 rounded transition ${clLang === 'en' ? 'bg-white dark:bg-slate-700 text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="English translation">
+                <button onclick="setCoverLetterLanguage('${job.id}', 'en')" class="px-2 py-0.5 rounded transition ${clLang === 'en' ? 'bg-white dark:bg-[#30363d] text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="English translation">
                   🇬🇧 EN
                 </button>
               </div>
 
               <!-- Easy Download Cover Letter as PDF -->
-              <button onclick="downloadCoverLetterPdf('${job.id}')" class="px-3 py-1 rounded bg-indigo-600 hover:bg-indigo-700 text-white font-bold transition flex items-center gap-1 shadow-2xs text-[11px]" title="${t.download_cl_pdf_tooltip}">
+              <button onclick="downloadCoverLetterPdf('${job.id}')" class="px-3 py-1 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white font-bold transition flex items-center gap-1 shadow-2xs text-[11px]" title="${t.download_cl_pdf_tooltip}">
                 <span>📥 PDF</span>
               </button>
 
               <!-- Copy Text -->
-              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-2.5 py-1 rounded bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-100 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 text-[11px] font-semibold flex items-center gap-1" title="Copy full letter to clipboard">
+              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-2.5 py-1 rounded-md bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-100 dark:hover:bg-purple-900/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/60 text-[11px] font-semibold flex items-center gap-1" title="Copy full letter to clipboard">
                 <span>${t.copy_all}</span>
               </button>
 
               <!-- Compact secondary tools -->
-              <div class="flex items-center gap-1 pl-1 border-l border-gray-200 dark:border-slate-700">
-                <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="p-1 rounded text-gray-500 hover:text-gray-800 dark:text-gray-400 text-[11px]" title="${t.as_word}">
+              <div class="flex items-center gap-1 pl-1 border-l border-gray-200 dark:border-[#30363d]">
+                <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="p-1 rounded text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 text-[11px]" title="${t.as_word}">
                   <span>💾 .docx</span>
                 </button>
                 <button onclick="openInGoogleDocsTab('${job.id}')" class="p-1 rounded text-gray-500 hover:text-blue-600 text-[11px]" title="${t.open_google_docs_new}">
@@ -1944,7 +1952,7 @@
           </div>
 
           <!-- A4 Document Page Canvas (ContentEditable Google Doc) -->
-          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl border border-gray-200 dark:border-slate-700 rounded-b-lg p-7 sm:p-10 min-h-[1050px] overflow-hidden font-sans leading-relaxed text-[12px] outline-none focus:ring-2 focus:ring-blue-400 box-border" id="liveGoogleDocA4_${job.id}" contenteditable="true" oninput="onDocContentInput('${job.id}')">
+          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl dark:shadow-[0_16px_40px_rgba(0,0,0,0.65)] border border-gray-200 dark:border-slate-600 rounded-b-xl p-7 sm:p-10 min-h-[1050px] overflow-hidden font-sans leading-relaxed text-[12px] outline-none focus:ring-2 focus:ring-blue-400 box-border" id="liveGoogleDocA4_${job.id}" contenteditable="true" oninput="onDocContentInput('${job.id}')">
             ${activeDocHtml}
           </div>
 
@@ -1955,10 +1963,10 @@
         </div>
 
         <!-- VIEW 1.5: Interactive Tailored 1-Page CV Editor -->
-        <div id="detailViewCv" class="${currentDetailTab === 'cv' ? '' : 'hidden'} flex-1 overflow-y-auto bg-[#f0f4f9] dark:bg-[#0c1017] p-3 sm:p-5 flex flex-col items-center">
+        <div id="detailViewCv" class="${currentDetailTab === 'cv' ? '' : 'hidden'} flex-1 overflow-y-auto bg-[#f0f4f9] dark:bg-[#0d1117] p-3 sm:p-5 flex flex-col items-center">
           
           <!-- CV Toolbar (Simplified & Uncluttered) -->
-          <div class="max-w-[760px] w-full shrink-0 bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-t-lg p-3 shadow-xs space-y-2.5 border-b-0">
+          <div class="max-w-[760px] w-full shrink-0 bg-white dark:bg-[#161b22] border border-gray-200 dark:border-[#30363d] rounded-t-xl p-3 shadow-xs space-y-2.5 border-b-0">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <div class="flex flex-wrap items-center gap-2">
                 <span class="text-xs font-bold text-gray-800 dark:text-gray-100 flex items-center gap-1">
@@ -1976,22 +1984,22 @@
 
               <div class="flex flex-wrap items-center gap-1.5 text-xs">
                 <!-- Easy Download Tailored CV as PDF (Second Option) -->
-                <button onclick="downloadTailoredCvPdf('${job.id}')" class="px-3.5 py-1 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition flex items-center gap-1 shadow-xs text-[11px]" title="${t.download_cv_pdf_tooltip}">
+                <button onclick="downloadTailoredCvPdf('${job.id}')" class="px-3.5 py-1 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition flex items-center gap-1 shadow-xs text-[11px]" title="${t.download_cv_pdf_tooltip}">
                   <span>${t.btn_download_pdf}</span>
                 </button>
 
                 ${isGuillermo ? `
-                  <button onclick="toggleBulletPicker('${job.id}')" class="px-2.5 py-1 rounded bg-amber-50 dark:bg-amber-950/50 hover:bg-amber-100 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-[11px] font-bold flex items-center gap-1 transition">
+                  <button onclick="toggleBulletPicker('${job.id}')" class="px-2.5 py-1 rounded-md bg-amber-50 dark:bg-amber-950/50 hover:bg-amber-100 dark:hover:bg-amber-900/50 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-700/60 text-[11px] font-bold flex items-center gap-1 transition">
                     <span>${t.customize_bullets}</span>
                   </button>
                 ` : ''}
 
                 <!-- Compact secondary tools -->
-                <div class="flex items-center gap-1 pl-1 border-l border-gray-200 dark:border-slate-700">
-                  <a href="files/Guillermo_Hernandez_CV_Master.pdf" download class="p-1 rounded text-gray-500 hover:text-gray-800 dark:text-gray-400 text-[11px]" title="Master CV (PDF)">
+                <div class="flex items-center gap-1 pl-1 border-l border-gray-200 dark:border-[#30363d]">
+                  <a href="files/Guillermo_Hernandez_CV_Master.pdf" download class="p-1 rounded text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 text-[11px]" title="Master CV (PDF)">
                     <span>📄 Master</span>
                   </a>
-                  <button onclick="printTailoredCv('${job.id}')" class="p-1 rounded text-gray-500 hover:text-gray-800 text-[11px]" title="${t.print_cv_pdf}">
+                  <button onclick="printTailoredCv('${job.id}')" class="p-1 rounded text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 text-[11px]" title="${t.print_cv_pdf}">
                     <span>🖨️</span>
                   </button>
                   <button onclick="resetCvToTemplate('${job.id}')" class="p-1 rounded text-gray-400 hover:text-rose-600 text-[11px]" title="${t.reset_original}">
@@ -2003,10 +2011,10 @@
 
             <!-- Interactive AUTO1 Bullet Selector Drawer for Guillermo -->
             ${isGuillermo ? `
-              <div id="bulletPickerDrawer" class="hidden p-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-700 space-y-2 text-xs">
+              <div id="bulletPickerDrawer" class="hidden p-3 rounded-lg bg-gray-50 dark:bg-[#0d1117] border border-gray-200 dark:border-[#30363d] space-y-2 text-xs">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-gray-800 dark:text-gray-200">🎯 Select AUTO1 Bullets (Recommended: 5 for Strict 1-Page A4 Fit):</span>
-                  <button onclick="applyCustomBulletsToJob('${job.id}')" class="px-3 py-1 rounded bg-blue-600 hover:bg-blue-700 text-white font-bold text-[11px] shadow-xs">
+                  <button onclick="applyCustomBulletsToJob('${job.id}')" class="px-3 py-1 rounded-md bg-blue-600 hover:bg-blue-700 text-white font-bold text-[11px] shadow-xs">
                     ⚡ Apply Selected Bullets to CV
                   </button>
                 </div>
@@ -2015,7 +2023,7 @@
                     const isChecked = activeBulletsList.includes(b.html);
                     const safeHtmlAttr = (b.html || '').replace(/"/g, '&quot;');
                     return `
-                      <label class="flex items-start gap-2 p-1.5 rounded bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 cursor-pointer hover:border-blue-400">
+                      <label class="flex items-start gap-2 p-1.5 rounded-lg bg-white dark:bg-[#161b22] border border-gray-200 dark:border-[#30363d] cursor-pointer hover:border-blue-400 dark:hover:border-blue-500 transition-colors">
                         <input type="checkbox" class="mt-0.5 accent-blue-600 auto1-bullet-cb-${job.id}" data-bullet-html="${safeHtmlAttr}" ${isChecked ? 'checked' : ''}>
                         <span class="text-[11px] text-gray-700 dark:text-gray-200 leading-snug">${b.html}</span>
                       </label>
@@ -2027,7 +2035,7 @@
           </div>
 
           <!-- Editable 1-Page A4 CV Canvas -->
-          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl border border-gray-200 dark:border-slate-700 rounded-b-lg p-5 sm:p-7 min-h-[1050px] overflow-hidden outline-none focus:ring-2 focus:ring-emerald-400 box-border" id="liveCvA4_${job.id}" contenteditable="true" oninput="onCvContentInput('${job.id}')">
+          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl dark:shadow-[0_16px_40px_rgba(0,0,0,0.65)] border border-gray-200 dark:border-slate-600 rounded-b-xl p-5 sm:p-7 min-h-[1050px] overflow-hidden outline-none focus:ring-2 focus:ring-emerald-400 box-border" id="liveCvA4_${job.id}" contenteditable="true" oninput="onCvContentInput('${job.id}')">
             ${activeCvHtml}
           </div>
 
@@ -2040,8 +2048,8 @@
         <div id="detailViewOverview" class="${currentDetailTab === 'overview' ? '' : 'hidden'} flex-1 overflow-y-auto p-5 space-y-5 bg-[#fafafa] dark:bg-[#121721]">
           
           <!-- Box 0: Estimated Compensation & Student Advantage -->
-          <div class="bg-white dark:bg-[#18202f] border border-emerald-200 dark:border-emerald-900/60 rounded-lg p-4 shadow-sm space-y-3">
-            <div class="flex items-center justify-between border-b border-gray-100 dark:border-slate-800 pb-2">
+          <div class="bg-white dark:bg-[#161b22] border border-emerald-200 dark:border-emerald-800/60 rounded-xl p-4 shadow-xs space-y-3">
+            <div class="flex items-center justify-between border-b border-gray-100 dark:border-[#30363d] pb-2">
               <span class="text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5">
                 <span>${t.comp_box_title}</span>
               </span>
@@ -2051,13 +2059,13 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              <div class="p-3 bg-emerald-50/60 dark:bg-emerald-950/20 rounded-lg border border-emerald-100 dark:border-emerald-900/40">
+              <div class="p-3 bg-emerald-50/60 dark:bg-emerald-950/30 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
                 <div class="text-[11px] text-gray-500 dark:text-gray-400 font-medium">${t.comp_rate_label}</div>
                 <div class="text-base font-extrabold text-emerald-800 dark:text-emerald-300 mt-0.5">${comp.range_text}</div>
                 <div class="text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold mt-1">${comp.monthly_estimate}</div>
               </div>
 
-              <div class="p-3 bg-gray-50 dark:bg-slate-800/60 rounded-lg border border-gray-200 dark:border-slate-700/60">
+              <div class="p-3 bg-gray-50 dark:bg-[#21262d] rounded-xl border border-gray-200 dark:border-[#30363d]">
                 <div class="text-[11px] text-gray-500 dark:text-gray-400 font-medium">${t.comp_student_advantage_label}</div>
                 <div class="text-[11px] text-gray-700 dark:text-gray-300 mt-1 leading-relaxed">
                   ${t.comp_student_advantage_text}
@@ -2067,39 +2075,39 @@
           </div>
 
           <!-- Box 1: Tailored Cover Letter & Company Address -->
-          <div class="bg-white dark:bg-[#18202f] border border-purple-200 dark:border-purple-900/60 rounded-lg p-4 shadow-sm space-y-3.5">
-            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-gray-100 dark:border-slate-800 pb-2.5">
+          <div class="bg-white dark:bg-[#161b22] border border-purple-200 dark:border-purple-800/60 rounded-xl p-4 shadow-xs space-y-3.5">
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-gray-100 dark:border-[#30363d] pb-2.5">
               <div class="flex items-center gap-2">
                 <span class="text-xs font-bold text-purple-900 dark:text-purple-300">${t.cl_box_title}</span>
               </div>
               <div class="flex items-center gap-2">
-                <button onclick="switchDetailView('doc', true)" class="px-3 py-1.5 rounded bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                <button onclick="switchDetailView('doc', true)" class="px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs">
                   <span>${t.as_google_doc}</span>
                 </button>
-                <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-1.5 rounded bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-1.5 rounded-md bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs">
                   <span>${t.cl_copy_text}</span>
                 </button>
               </div>
             </div>
 
             <!-- Address Card -->
-            <div class="bg-purple-50/70 dark:bg-purple-950/25 border border-purple-200 dark:border-purple-800/50 rounded-lg p-3 space-y-2">
+            <div class="bg-purple-50/70 dark:bg-purple-950/25 border border-purple-200 dark:border-purple-800/50 rounded-xl p-3 space-y-2">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1.5 text-xs font-bold text-purple-900 dark:text-purple-200">
                   <span>${t.address_card_title}</span>
                 </div>
                 <div class="flex items-center gap-1.5">
-                  <button onclick="copyRecipientAddress('${job.id}')" class="px-2.5 py-1 rounded bg-white dark:bg-slate-800 border border-purple-300 dark:border-purple-700 text-purple-800 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-slate-700 text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="Nur die Firmenadresse in die Zwischenablage kopieren">
+                  <button onclick="copyRecipientAddress('${job.id}')" class="px-2.5 py-1 rounded bg-white dark:bg-[#21262d] border border-purple-300 dark:border-purple-700 text-purple-800 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-[#30363d] text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="Nur die Firmenadresse in die Zwischenablage kopieren">
                     <span>${t.copy_address_only}</span>
                   </button>
-                  <button onclick="toggleEditAddress('${job.id}')" id="editAddrBtn_${job.id}" class="px-2.5 py-1 rounded bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700 text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="Adresse bearbeiten">
+                  <button onclick="toggleEditAddress('${job.id}')" id="editAddrBtn_${job.id}" class="px-2.5 py-1 rounded bg-white dark:bg-[#21262d] border border-gray-300 dark:border-[#30363d] text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#30363d] text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="Adresse bearbeiten">
                     <span>${t.edit_address}</span>
                   </button>
                 </div>
               </div>
 
               <!-- Display Mode -->
-              <div id="addrDisplay_${job.id}" class="text-xs text-gray-800 dark:text-gray-200 leading-snug bg-white/90 dark:bg-slate-900/70 p-2.5 rounded border border-purple-100 dark:border-purple-900/40">
+              <div id="addrDisplay_${job.id}" class="text-xs text-gray-800 dark:text-gray-200 leading-snug bg-white/90 dark:bg-[#0d1117] p-2.5 rounded-lg border border-purple-100 dark:border-purple-900/40">
                 <div class="font-bold text-gray-900 dark:text-white">${addr.company}</div>
                 <div class="text-gray-600 dark:text-gray-400 text-[11px]">${addr.department}</div>
                 <div>${addr.street}</div>
@@ -2107,30 +2115,30 @@
               </div>
 
               <!-- Edit Mode -->
-              <div id="addrEdit_${job.id}" class="hidden space-y-2 bg-white dark:bg-slate-900 p-3 rounded border border-purple-200 dark:border-purple-800">
+              <div id="addrEdit_${job.id}" class="hidden space-y-2 bg-white dark:bg-[#161b22] p-3 rounded-lg border border-purple-200 dark:border-purple-800">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                   <div>
                     <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">${t.field_company}</label>
-                    <input type="text" id="editCompany_${job.id}" value="${(addr.company || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white text-xs">
+                    <input type="text" id="editCompany_${job.id}" value="${(addr.company || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-[#30363d] rounded bg-gray-50 dark:bg-[#0d1117] text-gray-900 dark:text-white text-xs">
                   </div>
                   <div>
                     <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">${t.field_dept}</label>
-                    <input type="text" id="editDept_${job.id}" value="${(addr.department || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white text-xs">
+                    <input type="text" id="editDept_${job.id}" value="${(addr.department || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-[#30363d] rounded bg-gray-50 dark:bg-[#0d1117] text-gray-900 dark:text-white text-xs">
                   </div>
                   <div>
                     <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">${t.field_street}</label>
-                    <input type="text" id="editStreet_${job.id}" value="${(addr.street || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white text-xs">
+                    <input type="text" id="editStreet_${job.id}" value="${(addr.street || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-[#30363d] rounded bg-gray-50 dark:bg-[#0d1117] text-gray-900 dark:text-white text-xs">
                   </div>
                   <div>
                     <label class="block text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">${t.field_zipcity}</label>
-                    <input type="text" id="editZipCity_${job.id}" value="${(addr.zipCity || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-slate-700 rounded bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white text-xs">
+                    <input type="text" id="editZipCity_${job.id}" value="${(addr.zipCity || '').replace(/"/g, '&quot;')}" class="w-full mt-0.5 px-2 py-1 border border-gray-300 dark:border-[#30363d] rounded bg-gray-50 dark:bg-[#0d1117] text-gray-900 dark:text-white text-xs">
                   </div>
                 </div>
                 <div class="flex justify-end gap-2 pt-1">
                   <button onclick="saveCustomAddress('${job.id}')" class="px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded text-xs font-bold transition shadow-xs">
                     ${t.save_address}
                   </button>
-                  <button onclick="toggleEditAddress('${job.id}')" class="px-2.5 py-1 bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs">
+                  <button onclick="toggleEditAddress('${job.id}')" class="px-2.5 py-1 bg-gray-100 dark:bg-[#21262d] hover:bg-gray-200 dark:hover:bg-[#30363d] text-gray-700 dark:text-gray-300 rounded text-xs">
                     ${t.cancel}
                   </button>
                 </div>
@@ -2152,18 +2160,18 @@
             </div>
 
             <!-- Anschreiben Textarea -->
-            <textarea id="clDetailTextarea" rows="10" class="w-full p-3 bg-gray-50 dark:bg-[#121721] border border-gray-200 dark:border-slate-700 rounded-md text-xs text-gray-800 dark:text-gray-200 leading-relaxed font-sans focus:bg-white dark:focus:bg-[#0f141c] focus:outline-none focus:ring-1 focus:ring-purple-500">${clText}</textarea>
+            <textarea id="clDetailTextarea" rows="10" class="w-full p-3 bg-gray-50 dark:bg-[#0d1117] border border-gray-200 dark:border-[#30363d] rounded-lg text-xs text-gray-800 dark:text-gray-200 leading-relaxed font-sans focus:bg-white dark:focus:bg-[#161b22] focus:outline-none focus:ring-1 focus:ring-purple-500">${clText}</textarea>
             
-            <div class="text-[11px] text-gray-500 flex flex-wrap items-center justify-between gap-2">
+            <div class="text-[11px] text-gray-500 dark:text-gray-400 flex flex-wrap items-center justify-between gap-2">
               <span>${t.cl_hint}</span>
-              <a href="files/Guillermo_Hernandez_CV_Master.pdf" download class="font-semibold text-blue-600 hover:underline">
+              <a href="files/Guillermo_Hernandez_CV_Master.pdf" download class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">
                 ${t.download_resume}
               </a>
             </div>
           </div>
 
           <!-- Box 2: Job Description -->
-          <div class="bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-lg p-4 shadow-sm space-y-2">
+          <div class="bg-white dark:bg-[#161b22] border border-gray-200 dark:border-[#30363d] rounded-xl p-4 shadow-xs space-y-2">
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300">
               ${t.job_desc_title}
             </h4>
@@ -2173,7 +2181,7 @@
           </div>
 
           <!-- Box 3: Why fits / Analysis -->
-          <div class="bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-lg p-4 shadow-sm space-y-2">
+          <div class="bg-white dark:bg-[#161b22] border border-gray-200 dark:border-[#30363d] rounded-xl p-4 shadow-xs space-y-2">
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300">
               ${t.why_fits_title}
             </h4>
