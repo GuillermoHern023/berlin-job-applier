@@ -2084,7 +2084,8 @@
     "is_english_friendly": true,
     "employment_type": "INTERNSHIP",
     "employment_label": "💼 Praktikum / Internship",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://jobs.sap.com/search/?q=SAP+iXp+Intern+%28f%2Fm%2Fd%29+-+Adoption+%26+Consumption+Operations&locationsearch=Berlin"
   },
   {
     "id": "cc90f0cb1f",
@@ -2160,7 +2161,8 @@
     "is_english_friendly": true,
     "employment_type": "INTERNSHIP",
     "employment_label": "💼 Praktikum / Internship",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://lifeattiktok.com/search/7694281881915672837"
   },
   {
     "id": "cc79f4bc6b",
@@ -2311,7 +2313,8 @@
     "is_english_friendly": true,
     "employment_type": "INTERNSHIP",
     "employment_label": "💼 Praktikum / Internship",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://www.databricks.com/company/careers?location=Berlin"
   },
   {
     "id": "1b0f8d15f5",
@@ -2387,7 +2390,8 @@
     "is_english_friendly": true,
     "employment_type": "INTERNSHIP",
     "employment_label": "💼 Praktikum / Internship",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://jobdb.softgarden.de/jobdb/public/jobdb/posting/68792500/0/0/Intern+Strategic+Finance+%26+Strategy+%28all+genders%29+%E2%80%93+Universal+Music+Central+Europe+%28%E2%80%98UM+CE%E2%80%99%29+%E2%80%93+Universal+Music+GmbH.html"
   },
   {
     "id": "06d851c0fd",
@@ -2604,7 +2608,8 @@
     "is_english_friendly": true,
     "employment_type": "WERKSTUDENT",
     "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://jobs.sap.com/search/?q=Working+Student+%28f%2Fm%2Fd%29+-+Signavio+Next+Full-Stack+Development+%26+Engineering+Automation&locationsearch=Berlin"
   },
   {
     "id": "557f6b21db",
@@ -3664,7 +3669,8 @@
         "Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean, repeatable processes. I write SQL queries in Redash and build dashboards in Looker Studio, Tableau, and Excel to provide reliable metrics. When off-the-shelf software falls short, I prototype lightweight internal tools using JavaScript and REST APIs. Working in an international Berlin environment, I communicate fluently in English (C1/C2) and Spanish (native), with working German (B1).",
         "What particularly excites me about SAP is the opportunity to bring this blend of product operations discipline, SQL analytics, and builder execution to your team in the Werkstudent (w/m/d) - Agile Project Support within SAP Store role. Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview."
       ]
-    }
+    },
+    "direct_apply_url": "https://jobs.sap.com/search/?q=Werkstudent+%28w%2Fm%2Fd%29+-+Agile+Project+Support+within+SAP+Store&locationsearch=Berlin"
   },
   {
     "id": "370145dca6",
@@ -3814,7 +3820,8 @@
     "is_english_friendly": true,
     "employment_type": "INTERNSHIP",
     "employment_label": "💼 Praktikum / Internship",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://www.tesla.com/careers/search/?query=Building+Design+Management+Internship%2C+Factory+Design+Engineering+%28m%2Fw%2Fd%29+-+Gigafactory+Berlin-Brandenburg&location=Berlin"
   },
   {
     "id": "9927096041",
@@ -4019,7 +4026,8 @@
     "is_english_friendly": true,
     "employment_type": "WERKSTUDENT",
     "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://jobs.deloitte.de/search/?q=Werkstudent+Operational+Excellence+%26+Digitalization+%28OED%29+%28w%2Fm%2Fd%29+in+Berlin&locationsearch=Berlin"
   },
   {
     "id": "7cf776ea80",
@@ -4226,7 +4234,8 @@
     "is_english_friendly": true,
     "employment_type": "WERKSTUDENT",
     "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://db.jobs/de-de/suche?keywords=Werkstudent%3Ain+Bauprojektmanagement&location=Berlin"
   },
   {
     "id": "454d6672aa",
@@ -6436,10 +6445,10 @@
     "category_label": "Project Management",
     "match_score": 85,
     "language_req": "English Friendly (B1 OK)",
-    "is_english_friendly": true,
-    "employment_type": "WERKSTUDENT",
-    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true,
+    "is_english_friendly": false,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false,
     "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
@@ -6452,12 +6461,12 @@
     },
     "compensation": {
       "is_estimated": true,
-      "badge": "💰 ~€14–16/h",
-      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
-      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
-      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "badge": "💰 ~€50k–62k/yr",
+      "display": "💰 ~€50k–62k/yr (Junior/Associate)",
+      "range_text": "~€50.000 – €62.000 / year",
+      "monthly_estimate": "~€4.166 – €5.166/mo",
       "source": "Berlin Benchmark Estimate",
-      "tier": "Standard Berlin"
+      "tier": "Junior Tech/Operations"
     },
     "days_ago": 0,
     "posted_ago": "🔥 Today (2026-11-22)",
@@ -6480,26 +6489,6 @@
         "What particularly excites me about HiSolutions AG is the opportunity to bring this blend of product operations discipline, SQL analytics, and builder execution to your team in the Werkstudent Innovation & KI (w/m/d) role. Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview."
       ]
     },
-    "commute": {
-      "commute_minutes": 25,
-      "within_limit": true,
-      "badge": "🚇 ~25 min (S1)",
-      "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
-      "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
-    },
-    "compensation": {
-      "is_estimated": true,
-      "badge": "💰 ~€50k–62k/yr",
-      "display": "💰 ~€50k–62k/yr (Junior/Associate)",
-      "range_text": "~€50.000 – €62.000 / year",
-      "monthly_estimate": "~€4.166 – €5.166/mo",
-      "source": "Berlin Benchmark Estimate",
-      "tier": "Junior Tech/Operations"
-    },
-    "is_english_friendly": false,
-    "employment_type": "FULL_TIME",
-    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false,
     "direct_apply_url": "https://jobs.check24.de/jobs?location=Berlin&query=Associate+Product+Owner+%28m%2Fw%2Fd%29+Traineeprogramm"
   },
   {
@@ -8398,7 +8387,8 @@
     "is_english_friendly": true,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://karriere.pwc.de/jobs?query=Praktikum+Projektportfolio-+%2F+Programm-Management+%28PPM%29+%28w%2Fm%2Fd%29"
   },
   {
     "id": "ef7ac1dd69",
@@ -9072,7 +9062,8 @@
     "is_english_friendly": false,
     "employment_type": "INTERNSHIP",
     "employment_label": "💼 Praktikum / Internship",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://jobs.enpal.de/jobs?query=Praktikum+AI+%26+Automation+%E2%80%93+Virtual+Power+Plant+%28w%2Fm%2Fd%29"
   },
   {
     "id": "a0e324d7ee",
@@ -9148,7 +9139,8 @@
     "is_english_friendly": false,
     "employment_type": "INTERNSHIP",
     "employment_label": "💼 Praktikum / Internship",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://jobs.enpal.de/jobs?query=Praktikum+AI+%26+Automation+%E2%80%93+Virtual+Power+Plant+%28m%2Fw%2Fd%29"
   },
   {
     "id": "1d2702eb2b",
@@ -9375,7 +9367,8 @@
     "is_english_friendly": false,
     "employment_type": "WERKSTUDENT",
     "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://db.jobs/de-de/suche?keywords=Werkstudent%3Ain+IT-Development&location=Berlin"
   },
   {
     "id": "74a6e7f13a",
@@ -9447,7 +9440,8 @@
     "is_english_friendly": false,
     "employment_type": "WERKSTUDENT",
     "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://jobs.bundesdruckerei.de/job/Werkstudent-PMO-&-Projektmanagement-uvGE/923-de_DE"
   },
   {
     "id": "fb5fc73007",
@@ -9595,7 +9589,8 @@
     "is_english_friendly": true,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://jobs.ashbyhq.com/moss/885fd357-d932-43b8-900d-49fabdbe4c59?utm_source=rAK7ABQNwk"
   },
   {
     "id": "70459b749c",
@@ -9670,7 +9665,8 @@
     "is_english_friendly": true,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://jobs.ashbyhq.com/almetra/07104107-bb4b-4714-8948-fcee6fecc430?utm_source=AZx13PrmKG"
   },
   {
     "id": "7a067a4bf3",
@@ -9821,7 +9817,8 @@
     "is_english_friendly": true,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://jobs.smartrecruiters.com/DeliveryHero/744000161455928-associate-analyst-business-operations-fixed-term-labeling-operations-consumer-"
   },
   {
     "id": "de487c1d5b",
@@ -9894,7 +9891,8 @@
     "is_english_friendly": false,
     "employment_type": "WERKSTUDENT",
     "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://jobs.siemens-energy.com/careers?query=Werkstudent+%28w%2Fm%2Fd%29+Business+Intelligence+%26+Data+Analytics&location=Berlin"
   },
   {
     "id": "de4e255f7a",
@@ -10111,7 +10109,8 @@
     "is_english_friendly": true,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://t.gohiring.com/h/1e5b301736c6abd88d6049d34365483b3142cd2174e5689e98ef92270a85abc8?source=Indeed"
   },
   {
     "id": "50b930525c",
@@ -10183,7 +10182,8 @@
     "is_english_friendly": false,
     "employment_type": "WERKSTUDENT",
     "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://www.daimlertruck.com/karriere/job-suche/?search=Service+Processes+%26+S24H+MB+Trucks+Germany&location=Berlin"
   },
   {
     "id": "10030f9bc4",
@@ -10684,7 +10684,8 @@
     "is_english_friendly": true,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://jobs.ashbyhq.com/almetra/6a3297aa-2d4e-47cb-b32e-a6f42b2d9684?utm_source=AZx13PrmKG"
   },
   {
     "id": "2ddc2be71a",
@@ -10904,7 +10905,8 @@
     "is_english_friendly": true,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://jobs.ashbyhq.com/almetra/a70ea4fb-560f-4b94-a8fa-acdaad3f256b?utm_source=AZx13PrmKG"
   },
   {
     "id": "0ad45da86d",
@@ -11044,7 +11046,8 @@
     "is_english_friendly": false,
     "employment_type": "WERKSTUDENT",
     "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://www.daimlertruck.com/karriere/job-suche/?search=Werkstudentent%C3%A4tigkeit+m%2Fw%2Fd+Datenqualit%C3%A4t%2C+Analyse+und+Optimierung+von+Service-+und+Gesch%C3%A4ftsprozessen&location=Berlin"
   },
   {
     "id": "f4943835d2",
@@ -11416,7 +11419,8 @@
     "is_english_friendly": false,
     "employment_type": "WERKSTUDENT",
     "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://jobs.siemens.com/careers?query=Werkstudent+%28w%2Fm%2Fd%29+Produktmanagement+Wayside+Signals&location=Berlin"
   },
   {
     "id": "17db150292",
@@ -11934,7 +11938,8 @@
     "is_english_friendly": false,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://grnh.se/732acac2teu"
   },
   {
     "id": "2da686eec4",
@@ -12595,7 +12600,8 @@
     "is_english_friendly": false,
     "employment_type": "WERKSTUDENT",
     "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://kpmg.com/de/de/home/karriere/jobsuche.html?searchField=Praktikant+%2F+Werkstudent+%28w%2Fm%2Fd%29+Audit+Technology+-+Digital+Audit+Innovation"
   },
   {
     "id": "810bdeeee5",
@@ -12819,7 +12825,8 @@
     "is_english_friendly": false,
     "employment_type": "WERKSTUDENT",
     "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://jobs.deloitte.de/search/?q=Werkstudent+Digital+Controllership+%28m%2Fw%2Fd%29+in+Berlin&locationsearch=Berlin"
   },
   {
     "id": "6993c64e29",
@@ -13037,7 +13044,8 @@
     "is_english_friendly": false,
     "employment_type": "WERKSTUDENT",
     "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://jobs.siemens.com/careers?query=Werkstudent+%28w%2Fm%2Fd%29+KI-gest%C3%BCtzte+Software-+und+Plattformentwicklung&location=Berlin"
   },
   {
     "id": "1ddced3f64",
@@ -13613,7 +13621,8 @@
     "is_english_friendly": true,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://www.databricks.com/company/careers?location=Berlin"
   },
   {
     "id": "942a99da64",
@@ -13682,7 +13691,8 @@
     "is_english_friendly": true,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://jobs.check24.de/jobs?location=Berlin&query=Technischer+Produkt+Manager+%28m%2Fw%2Fd%29+Traineeprogramm"
   },
   {
     "id": "460832e132",
@@ -14184,7 +14194,8 @@
     "is_english_friendly": false,
     "employment_type": "INTERNSHIP",
     "employment_label": "💼 Praktikum / Internship",
-    "is_student_legal": true
+    "is_student_legal": true,
+    "direct_apply_url": "https://db.jobs/de-de/Suche/Praktikum-Digitalisierung-und-Datenmanagement-w-m-d--14093980?jobId=644715"
   },
   {
     "id": "d3b22a2405",
@@ -15420,7 +15431,8 @@
     "is_english_friendly": false,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://jobs.enpal.de/jobs?query=Associate+Venture+Development+%E2%80%93+Commercial+Product+Energy+%28w%2Fm%2Fd%29"
   },
   {
     "id": "a700dfd772",
@@ -15872,7 +15884,8 @@
     "is_english_friendly": false,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://jobs.check24.de/jobs?location=Berlin&query=Associate+Product+Owner+%28m%2Fw%2Fd%29+Traineeprogramm"
   },
   {
     "id": "26dd8ae3be",
@@ -16241,7 +16254,8 @@
     "is_english_friendly": false,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://jobs.enpal.de/jobs?query=Business+Operations+Associate+%28m%2Ff%2Fd%29"
   },
   {
     "id": "fd281d7977",
@@ -16314,7 +16328,8 @@
     "is_english_friendly": false,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://join.com/companies/oktagonmma/16948093-junior-partnerships-coordinator-de?pid=a13795120131dbe48464"
   },
   {
     "id": "ca1bd2116d",
@@ -16752,7 +16767,8 @@
     "is_english_friendly": false,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://karriere.pwc.de/jobs?query=Consultant+Public+Sector+Transformation%2C+Infrastrukturf%C3%B6rderung+und+Digitalisierung+%28w%2Fm%2Fd%29"
   },
   {
     "id": "35edc436b0",
@@ -16825,7 +16841,8 @@
     "is_english_friendly": false,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://jobs.deloitte.de/search/?q=Business+Analyst+%2F+Consultant+Strategieberatung+-+Monitor+Deloitte+%28m%2Fw%2Fd%29&locationsearch=Berlin"
   },
   {
     "id": "fc26a64daf",
@@ -16970,7 +16987,8 @@
     "is_english_friendly": false,
     "employment_type": "FULL_TIME",
     "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
-    "is_student_legal": false
+    "is_student_legal": false,
+    "direct_apply_url": "https://kpmg.com/de/de/home/karriere/jobsuche.html?searchField=Mitarbeiter+Projekt-+%2F+Prozessmanagement+Finance+%28w%2Fm%2Fd%29"
   },
   {
     "id": "b6210f5d94",
