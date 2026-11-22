@@ -595,7 +595,7 @@
       const statusEl = document.getElementById('cvSaveStatus_' + jobId);
       if (statusEl) {
         const t = I18N[currentLang] || I18N.en;
-        statusEl.innerHTML = `🟢 ${t.auto_saved}`;
+        statusEl.textContent = '🟢 ' + t.auto_saved;
       }
     }
 
@@ -782,7 +782,6 @@
           </fieldset>
         </div>
       `;
-      `;
     }
 
     function downloadTailoredCvPdf(jobId) {
@@ -924,9 +923,6 @@
         });
         return;
       }
-        });
-        return;
-      }
 
       printGoogleDoc(jobId);
     }
@@ -964,7 +960,7 @@
       const statusEl = document.getElementById('docSaveStatus_' + jobId);
       if (statusEl) {
         const t = I18N[currentLang] || I18N.en;
-        statusEl.innerHTML = `🟢 ${t.auto_saved}`;
+        statusEl.textContent = '🟢 ' + t.auto_saved;
       }
     }
 
