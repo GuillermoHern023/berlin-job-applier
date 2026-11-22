@@ -492,7 +492,7 @@
       localStorage.setItem('app_lang', 'en');
     }
 
-    const CV_LAYOUT_VERSION = 'v5_perfect_1page_fit';
+    const CV_LAYOUT_VERSION = 'v6_no_empty_space_vector_pdf';
     if (localStorage.getItem('cv_layout_version') !== CV_LAYOUT_VERSION) {
       for (let i = localStorage.length - 1; i >= 0; i--) {
         const k = localStorage.key(i);
@@ -726,101 +726,101 @@
       }
 
       return `
-        <div style="font-family: Georgia, 'Times New Roman', serif; font-size: 8.2pt; line-height: 1.2; color: #1a1a1a; background: #fff; box-sizing: border-box;">
-          <div style="border: 1px solid #333; padding: 6px 12px; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: flex-start;">
+        <div style="font-family: Georgia, 'Times New Roman', serif; font-size: 8.5pt; line-height: 1.28; color: #1a1a1a; background: #fff; box-sizing: border-box;">
+          <div style="border: 1px solid #333; padding: 7px 12px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: flex-start;">
             <div>
-              <div style="font-size: 14.5pt; font-weight: bold; color: #111; margin-bottom: 1px;">Guillermo Jose Hernandez Lopez</div>
-              <div style="font-size: 8.3pt; color: #333;">Söhtstraße 16, 12203 Berlin, Germany</div>
-              <div style="font-size: 8.3pt; color: #333;">guillejhl@gmail.com</div>
-              <div style="font-size: 8.3pt; color: #333;">+49 176 85136597</div>
+              <div style="font-size: 15pt; font-weight: bold; color: #111; margin-bottom: 2px;">Guillermo Jose Hernandez Lopez</div>
+              <div style="font-size: 8.5pt; color: #333;">Söhtstraße 16, 12203 Berlin, Germany</div>
+              <div style="font-size: 8.5pt; color: #333;">guillejhl@gmail.com</div>
+              <div style="font-size: 8.5pt; color: #333;">+49 176 85136597</div>
             </div>
             <div style="text-align: right;">
-              <a href="https://www.linkedin.com/in/guillermojosehernandezlopez/" target="_blank" style="font-size: 8.3pt; color: #111; text-decoration: underline;">LinkedIn Profile</a>
+              <a href="https://www.linkedin.com/in/guillermojosehernandezlopez/" target="_blank" style="font-size: 8.5pt; color: #111; text-decoration: underline;">LinkedIn Profile</a>
             </div>
           </div>
 
-          <fieldset style="border: 1px solid #333; padding: 4px 10px 4px 10px; margin-bottom: 3.5px;">
-            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 4px; margin-left: 4px; color: #111;">EXPERIENCE</legend>
+          <fieldset style="border: 1px solid #333; padding: 6px 12px 6px 12px; margin-bottom: 5px;">
+            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 4px; margin-left: 4px; color: #111;">EXPERIENCE</legend>
             
-            <div style="display: flex; margin-bottom: 3px;">
-              <div style="width: 17%; font-size: 8pt; color: #333; padding-right: 6px; flex-shrink: 0;">Sep 2024 – Present</div>
+            <div style="display: flex; margin-bottom: 4px;">
+              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 6px; flex-shrink: 0;">Sep 2024 – Present</div>
               <div style="width: 83%;">
-                <div style="font-weight: bold; font-size: 8.8pt; color: #111;">${roleFocus}</div>
-                <div style="font-size: 8.4pt; color: #222;"><strong>Auto1 Group</strong> &nbsp;Berlin, Germany</div>
-                <div style="font-size: 7.9pt; color: #444; margin-bottom: 1px;">Intern (Sept 2024 – Feb 2025) | Working Student (Mar 2025 – Present)</div>
-                <ul style="margin-top: 1px; padding-left: 13px; list-style-type: disc;">
-                  ${chosenBullets.map(b => `<li style="margin-bottom: 1.2px; font-size: 8.15pt; line-height: 1.2;">${b}</li>`).join('')}
+                <div style="font-weight: bold; font-size: 9pt; color: #111;">${roleFocus}</div>
+                <div style="font-size: 8.5pt; color: #222;"><strong>Auto1 Group</strong> &nbsp;Berlin, Germany</div>
+                <div style="font-size: 8.1pt; color: #444; margin-bottom: 1.5px;">Intern (Sept 2024 – Feb 2025) | Working Student (Mar 2025 – Present)</div>
+                <ul style="margin-top: 1px; padding-left: 14px; list-style-type: disc;">
+                  ${chosenBullets.map(b => `<li style="margin-bottom: 1.5px; font-size: 8.4pt; line-height: 1.25;">${b}</li>`).join('')}
                 </ul>
               </div>
             </div>
 
-            <div style="display: flex; margin-bottom: 3px;">
-              <div style="width: 17%; font-size: 8pt; color: #333; padding-right: 6px; flex-shrink: 0;">Oct 2023</div>
+            <div style="display: flex; margin-bottom: 4px;">
+              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 6px; flex-shrink: 0;">Oct 2023</div>
               <div style="width: 83%;">
-                <div style="font-weight: bold; font-size: 8.8pt; color: #111;">Customer Experience and Digital Innovation (Project Collaboration)</div>
-                <div style="font-size: 8.4pt; color: #222; margin-bottom: 1px;"><strong>Franz Schneider Brakel (FSB)</strong> &nbsp;Berlin, Germany</div>
-                <ul style="margin-top: 1px; padding-left: 13px; list-style-type: disc;">
-                  <li style="margin-bottom: 1px; font-size: 8.15pt;">Conducted <strong>quantitative research and data analysis</strong> to propose a new subscription model that incentivized sustainability, boosting client engagement.</li>
-                  <li style="margin-bottom: 1px; font-size: 8.15pt;">Designed webpages to communicate FSB's sustainable product standards and collaborated closely with product stakeholders to ensure alignment.</li>
+                <div style="font-weight: bold; font-size: 9pt; color: #111;">Customer Experience and Digital Innovation (Project Collaboration)</div>
+                <div style="font-size: 8.5pt; color: #222; margin-bottom: 1px;"><strong>Franz Schneider Brakel (FSB)</strong> &nbsp;Berlin, Germany</div>
+                <ul style="margin-top: 1px; padding-left: 14px; list-style-type: disc;">
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.25;">Conducted <strong>quantitative research and data analysis</strong> to propose a new subscription model that incentivized sustainability, boosting client engagement.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.25;">Designed webpages to communicate FSB's sustainable product standards and collaborated closely with product stakeholders to ensure alignment.</li>
                 </ul>
               </div>
             </div>
 
-            <div style="display: flex; margin-bottom: 3px;">
-              <div style="width: 17%; font-size: 8pt; color: #333; padding-right: 6px; flex-shrink: 0;">Jan 2022 – Aug 2022</div>
+            <div style="display: flex; margin-bottom: 4px;">
+              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 6px; flex-shrink: 0;">Jan 2022 – Aug 2022</div>
               <div style="width: 83%;">
-                <div style="font-weight: bold; font-size: 8.8pt; color: #111;">Intern</div>
-                <div style="font-size: 8.4pt; color: #222; margin-bottom: 1px;"><strong>Fincas El Carmen</strong> &nbsp;Comayagua, Honduras</div>
-                <ul style="margin-top: 1px; padding-left: 13px; list-style-type: disc;">
-                  <li style="margin-bottom: 1px; font-size: 8.15pt;">Managed <strong>inventory levels and purchasing decisions</strong> using quantitative analysis in Advanced Excel, achieving a <strong>15% increase</strong> in stock availability.</li>
-                  <li style="margin-bottom: 1px; font-size: 8.15pt;">Collaborated with cross-functional teams to streamline workflows, <strong>reducing processing time by 20%</strong>.</li>
+                <div style="font-weight: bold; font-size: 9pt; color: #111;">Intern</div>
+                <div style="font-size: 8.5pt; color: #222; margin-bottom: 1px;"><strong>Fincas El Carmen</strong> &nbsp;Comayagua, Honduras</div>
+                <ul style="margin-top: 1px; padding-left: 14px; list-style-type: disc;">
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.25;">Managed <strong>inventory levels and purchasing decisions</strong> using quantitative analysis in Advanced Excel, achieving a <strong>15% increase</strong> in stock availability.</li>
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.25;">Collaborated with cross-functional teams to streamline workflows, <strong>reducing processing time by 20%</strong>.</li>
                 </ul>
               </div>
             </div>
 
             <div style="display: flex;">
-              <div style="width: 17%; font-size: 8pt; color: #333; padding-right: 6px; flex-shrink: 0;">Jan 2020 – Dec 2021</div>
+              <div style="width: 17%; font-size: 8.3pt; color: #333; padding-right: 6px; flex-shrink: 0;">Jan 2020 – Dec 2021</div>
               <div style="width: 83%;">
-                <div style="font-weight: bold; font-size: 8.8pt; color: #111;">Product Supervisor</div>
-                <div style="font-size: 8.4pt; color: #222; margin-bottom: 1px;"><strong>Hotel la Posada de mi Viejo</strong> &nbsp;Comayagua, Honduras</div>
-                <ul style="margin-top: 1px; padding-left: 13px; list-style-type: disc;">
-                  <li style="margin-bottom: 1px; font-size: 8.15pt;">Implemented customer-centric methodologies and workflows, leading to a 10% improvement in <strong>operational efficiency</strong>.</li>
-                  <li style="font-size: 8.15pt;">Supervised process operations and quality assurance, resulting in a <strong>10% increase in customer satisfaction</strong>.</li>
+                <div style="font-weight: bold; font-size: 9pt; color: #111;">Product Supervisor</div>
+                <div style="font-size: 8.5pt; color: #222; margin-bottom: 1px;"><strong>Hotel la Posada de mi Viejo</strong> &nbsp;Comayagua, Honduras</div>
+                <ul style="margin-top: 1px; padding-left: 14px; list-style-type: disc;">
+                  <li style="margin-bottom: 1.2px; font-size: 8.4pt; line-height: 1.25;">Implemented customer-centric methodologies and workflows, leading to a 10% improvement in <strong>operational efficiency</strong>.</li>
+                  <li style="font-size: 8.4pt; line-height: 1.25;">Supervised process operations and quality assurance, resulting in a <strong>10% increase in customer satisfaction</strong>.</li>
                 </ul>
               </div>
             </div>
           </fieldset>
 
-          <fieldset style="border: 1px solid #333; padding: 4px 10px 4px 10px; margin-bottom: 3.5px;">
-            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 4px; margin-left: 4px; color: #111;">EDUCATION</legend>
-            <div style="display: flex; margin-bottom: 2px;">
-              <div style="width: 17%; font-size: 8pt; color: #333;">Sep 2025 – Aug 2027</div>
+          <fieldset style="border: 1px solid #333; padding: 6px 12px 6px 12px; margin-bottom: 5px;">
+            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 4px; margin-left: 4px; color: #111;">EDUCATION</legend>
+            <div style="display: flex; margin-bottom: 3px;">
+              <div style="width: 17%; font-size: 8.3pt; color: #333;">Sep 2025 – Aug 2027</div>
               <div style="width: 83%;">
-                <div style="font-size: 8.4pt;"><strong>Master’s degree in International Business Management | University of Europe for Applied Sciences</strong></div>
-                <div style="font-size: 7.9pt; color: #333;">Berlin, Germany</div>
+                <div style="font-size: 8.6pt;"><strong>Master’s degree in International Business Management | University of Europe for Applied Sciences</strong></div>
+                <div style="font-size: 8.1pt; color: #333;">Berlin, Germany</div>
               </div>
             </div>
             <div style="display: flex;">
-              <div style="width: 17%; font-size: 8pt; color: #333;">Sep 2022 – Aug 2025</div>
+              <div style="width: 17%; font-size: 8.3pt; color: #333;">Sep 2022 – Aug 2025</div>
               <div style="width: 83%;">
-                <div style="font-size: 8.4pt;"><strong>Bachelor’s degree in Digital Product Management | University of Europe for Applied Sciences</strong></div>
-                <div style="font-size: 7.9pt; color: #333;">Potsdam, Germany</div>
+                <div style="font-size: 8.6pt;"><strong>Bachelor’s degree in Digital Product Management | University of Europe for Applied Sciences</strong></div>
+                <div style="font-size: 8.1pt; color: #333;">Potsdam, Germany</div>
               </div>
             </div>
           </fieldset>
 
-          <fieldset style="border: 1px solid #333; padding: 4px 10px 4px 10px; margin-bottom: 3.5px;">
-            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 4px; margin-left: 4px; color: #111;">SKILLS</legend>
-            <div style="font-size: 8.15pt; line-height: 1.22;">
-              <p style="margin-bottom: 1.5px;"><strong>Core Competencies:</strong> ${coreSkills.join(' | ')}</p>
-              <p style="margin-bottom: 1.5px;"><strong>Technical Skills:</strong> SQL (Redash Querying &amp; Dataset Analysis) | REST APIs &amp; Integrations | Git, GitHub &amp; Cloud | Vector Databases &amp; AI QA Tools | Low-Code Automation &amp; JavaScript</p>
+          <fieldset style="border: 1px solid #333; padding: 6px 12px 6px 12px; margin-bottom: 5px;">
+            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 4px; margin-left: 4px; color: #111;">SKILLS</legend>
+            <div style="font-size: 8.35pt; line-height: 1.28;">
+              <p style="margin-bottom: 2px;"><strong>Core Competencies:</strong> ${coreSkills.join(' | ')}</p>
+              <p style="margin-bottom: 2px;"><strong>Technical Skills:</strong> SQL (Redash Querying &amp; Complex Dataset Analysis) | REST APIs &amp; System Integrations | Git, GitHub &amp; Cloud Platforms | Vector Databases, Knowledge Bases &amp; AI QA Tools | Low-Code Automation &amp; JavaScript</p>
               <p><strong>Software Proficiency:</strong> Redash (SQL), GitHub / Git, Looker Studio, Tableau, Advanced Excel &amp; Google Sheets, Figma, Freshdesk, C# (Unity)</p>
             </div>
           </fieldset>
 
-          <fieldset style="border: 1px solid #333; padding: 4px 10px 4px 10px; margin-bottom: 0;">
-            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 4px; margin-left: 4px; color: #111;">LANGUAGES</legend>
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 2px 10px; font-size: 8.15pt;">
+          <fieldset style="border: 1px solid #333; padding: 6px 12px 6px 12px; margin-bottom: 0;">
+            <legend style="font-family: Arial, Helvetica, sans-serif; font-size: 8.2pt; font-weight: bold; letter-spacing: 0.7px; padding: 0 4px; margin-left: 4px; color: #111;">LANGUAGES</legend>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 2px 10px; font-size: 8.35pt;">
               <div><strong>SPANISH</strong> Native Speaker</div>
               <div><strong>ENGLISH</strong> Professional (C1/C2)</div>
               <div><strong>GERMAN</strong> B1 Proficiency</div>
@@ -831,7 +831,7 @@
       `;
     }
 
-    function downloadTailoredCvPdf(jobId) {
+    async function downloadTailoredCvPdf(jobId) {
       const allJobs = getActiveJobs();
       const job = allJobs.find(j => j.id === jobId);
       const rawComp = (job && job.company ? job.company : 'Company')
@@ -862,7 +862,39 @@
         return;
       }
 
-      // 2. Client-side instant A4 PDF export using html2pdf
+      // 2. Generate vector 1-page PDF on live backend
+      if (isLiveBackend && job) {
+        showToast(currentLang === 'en' ? '⏳ Generating clean 1-Page Vector PDF...' : '⏳ Erstelle 1-Seiten Vektor-PDF...');
+        try {
+          const resp = await fetch(`/api/jobs/${job.id}/tailor`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user: 'guillermo' })
+          });
+          if (resp.ok) {
+            const data = await resp.json();
+            if (data && data.bundle && data.bundle.cv_url) {
+              job.cv_url = data.bundle.cv_url;
+              job.cv_pdf = data.bundle.cv_pdf;
+              job.cover_letter_url = data.bundle.cover_letter_url;
+              job.cover_letter_pdf = data.bundle.cover_letter_pdf;
+              const fileUrl = job.cv_url.replace(/^\/?/, '');
+              const a = document.createElement('a');
+              a.href = fileUrl;
+              a.download = pdfTitle + '.pdf';
+              document.body.appendChild(a);
+              a.click();
+              document.body.removeChild(a);
+              showToast(currentLang === 'en' ? '✅ 1-Page CV PDF downloaded!' : '✅ 1-Seiten CV PDF heruntergeladen!');
+              return;
+            }
+          }
+        } catch (e) {
+          console.warn('Backend tailor call failed, falling back to client-side:', e);
+        }
+      }
+
+      // 3. Client-side instant A4 PDF export using html2pdf (NO clipping or maxHeight overflow)
       const cvEl = document.getElementById('liveCvA4_' + jobId);
       if (typeof html2pdf !== 'undefined' && cvEl) {
         showToast(currentLang === 'en' ? '⏳ Generating clean 1-Page A4 PDF...' : '⏳ Erstelle 1-Seiten A4 PDF...');
@@ -871,18 +903,16 @@
         wrapper.style.position = 'fixed';
         wrapper.style.left = '-9999px';
         wrapper.style.top = '0';
-        wrapper.style.width = '210mm';
+        wrapper.style.width = '794px';
         wrapper.style.background = '#ffffff';
 
         const inner = document.createElement('div');
         inner.innerHTML = cvEl.innerHTML;
-        inner.style.width = '210mm';
-        inner.style.maxHeight = '296mm';
-        inner.style.padding = '6mm 10mm';
+        inner.style.width = '794px';
+        inner.style.padding = '18px 24px';
         inner.style.boxSizing = 'border-box';
         inner.style.background = '#ffffff';
         inner.style.color = '#111827';
-        inner.style.overflow = 'hidden';
 
         wrapper.appendChild(inner);
         document.body.appendChild(wrapper);
@@ -892,8 +922,7 @@
           filename: pdfTitle + '.pdf',
           image: { type: 'jpeg', quality: 0.98 },
           html2canvas: { scale: 2, useCORS: true, logging: false },
-          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-          pagebreak: { mode: 'avoid-all' }
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
 
         html2pdf().set(opt).from(inner).save().then(() => {
@@ -910,7 +939,7 @@
       printTailoredCv(jobId);
     }
 
-    function downloadCoverLetterPdf(jobId) {
+    async function downloadCoverLetterPdf(jobId) {
       const allJobs = getActiveJobs();
       const job = allJobs.find(j => j.id === jobId);
       const rawComp = (job && job.company ? job.company : 'Company')
@@ -929,6 +958,37 @@
         return;
       }
 
+      if (isLiveBackend && job) {
+        showToast(currentLang === 'en' ? '⏳ Generating clean 1-Page Cover Letter...' : '⏳ Erstelle 1-Seiten Anschreiben...');
+        try {
+          const resp = await fetch(`/api/jobs/${job.id}/tailor`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user: 'guillermo' })
+          });
+          if (resp.ok) {
+            const data = await resp.json();
+            if (data && data.bundle && data.bundle.cover_letter_url) {
+              job.cover_letter_url = data.bundle.cover_letter_url;
+              job.cover_letter_pdf = data.bundle.cover_letter_pdf;
+              job.cv_url = data.bundle.cv_url;
+              job.cv_pdf = data.bundle.cv_pdf;
+              const fileUrl = job.cover_letter_url.replace(/^\/?/, '');
+              const a = document.createElement('a');
+              a.href = fileUrl;
+              a.download = pdfTitle + '.pdf';
+              document.body.appendChild(a);
+              a.click();
+              document.body.removeChild(a);
+              showToast(currentLang === 'en' ? '✅ 1-Page Cover Letter downloaded!' : '✅ 1-Seiten Anschreiben PDF heruntergeladen!');
+              return;
+            }
+          }
+        } catch (e) {
+          console.warn('Backend tailor call failed:', e);
+        }
+      }
+
       const docEl = document.getElementById('liveGoogleDocA4_' + jobId);
       if (typeof html2pdf !== 'undefined' && docEl) {
         showToast(currentLang === 'en' ? '⏳ Generating clean 1-Page Cover Letter PDF...' : '⏳ Erstelle 1-Seiten Anschreiben PDF...');
@@ -937,17 +997,16 @@
         wrapper.style.position = 'fixed';
         wrapper.style.left = '-9999px';
         wrapper.style.top = '0';
-        wrapper.style.width = '210mm';
+        wrapper.style.width = '794px';
         wrapper.style.background = '#ffffff';
 
         const inner = document.createElement('div');
         inner.innerHTML = docEl.innerHTML;
-        inner.style.width = '210mm';
-        inner.style.maxHeight = '296mm';
-        inner.style.padding = '12mm 15mm';
+        inner.style.width = '794px';
+        inner.style.padding = '35px 45px';
         inner.style.boxSizing = 'border-box';
         inner.style.background = '#ffffff';
-        inner.style.overflow = 'hidden';
+        inner.style.color = '#111827';
 
         wrapper.appendChild(inner);
         document.body.appendChild(wrapper);
@@ -957,8 +1016,7 @@
           filename: pdfTitle + '.pdf',
           image: { type: 'jpeg', quality: 0.98 },
           html2canvas: { scale: 2, useCORS: true, logging: false },
-          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-          pagebreak: { mode: 'avoid-all' }
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
 
         html2pdf().set(opt).from(inner).save().then(() => {
@@ -1749,21 +1807,21 @@
           ${today}
         </div>
 
-        <div style="font-weight: 700; font-size: 13.5px; text-decoration: underline; margin-bottom: 12px; color: #111827; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
+        <div style="font-weight: 700; font-size: 14px; text-decoration: underline; margin-bottom: 14px; color: #111827; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
           ${subjectTitle}
         </div>
 
-        <div style="margin-bottom: 10px; font-size: 12px; font-weight: 600; font-family: Calibri, 'Segoe UI', Arial, sans-serif; color: #111827;">
+        <div style="margin-bottom: 12px; font-size: 12.5px; font-weight: 600; font-family: Calibri, 'Segoe UI', Arial, sans-serif; color: #111827;">
           ${salutation}
         </div>
 
-        <div style="font-size: 12px; line-height: 1.48; color: #1f2937; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
-          ${paragraphTexts.map(p => `<p style="margin-bottom: 9px;">${p}</p>`).join('')}
+        <div style="font-size: 12.5px; line-height: 1.52; color: #1f2937; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
+          ${paragraphTexts.map(p => `<p style="margin-bottom: 11px;">${p}</p>`).join('')}
         </div>
 
-        <div style="margin-top: 14px; line-height: 1.4; font-size: 12px; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
+        <div style="margin-top: 16px; line-height: 1.45; font-size: 12.5px; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
           <div>${isEnDoc ? "Sincerely," : "Mit freundlichen Grüßen"}</div>
-          <div style="font-weight: 700; margin-top: 12px; color: #111827;">${senderName}</div>
+          <div style="font-weight: 700; margin-top: 14px; color: #111827;">${senderName}</div>
         </div>
       `;
 
@@ -1952,7 +2010,7 @@
           </div>
 
           <!-- A4 Document Page Canvas (ContentEditable Google Doc) -->
-          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl dark:shadow-[0_16px_40px_rgba(0,0,0,0.65)] border border-gray-200 dark:border-slate-600 rounded-b-xl p-7 sm:p-10 min-h-[1050px] overflow-hidden font-sans leading-relaxed text-[12px] outline-none focus:ring-2 focus:ring-blue-400 box-border" id="liveGoogleDocA4_${job.id}" contenteditable="true" oninput="onDocContentInput('${job.id}')">
+          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl dark:shadow-[0_16px_40px_rgba(0,0,0,0.65)] border border-gray-200 dark:border-slate-600 rounded-b-xl p-6 sm:p-9 min-h-[480px] overflow-hidden font-sans leading-relaxed text-[12.5px] outline-none focus:ring-2 focus:ring-blue-400 box-border" id="liveGoogleDocA4_${job.id}" contenteditable="true" oninput="onDocContentInput('${job.id}')">
             ${activeDocHtml}
           </div>
 
@@ -2035,7 +2093,7 @@
           </div>
 
           <!-- Editable 1-Page A4 CV Canvas -->
-          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl dark:shadow-[0_16px_40px_rgba(0,0,0,0.65)] border border-gray-200 dark:border-slate-600 rounded-b-xl p-5 sm:p-7 min-h-[1050px] overflow-hidden outline-none focus:ring-2 focus:ring-emerald-400 box-border" id="liveCvA4_${job.id}" contenteditable="true" oninput="onCvContentInput('${job.id}')">
+          <div class="max-w-[760px] w-full shrink-0 bg-white text-gray-900 shadow-xl dark:shadow-[0_16px_40px_rgba(0,0,0,0.65)] border border-gray-200 dark:border-slate-600 rounded-b-xl p-5 sm:p-7 min-h-[520px] overflow-hidden outline-none focus:ring-2 focus:ring-emerald-400 box-border" id="liveCvA4_${job.id}" contenteditable="true" oninput="onCvContentInput('${job.id}')">
             ${activeCvHtml}
           </div>
 
