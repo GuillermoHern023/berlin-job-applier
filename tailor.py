@@ -99,6 +99,144 @@ def detect_language_requirement(title: str, description: str) -> Tuple[str, int]
     return ("English Friendly", +10)
 
 
+def calculate_commute_from_sohtstrasse(job: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Calculates estimated public transit commute time from Guillermo's home at:
+    Söhtstraße 16, 12203 Berlin (S-Bahn Lichterfelde West, S1).
+    Target limit: max 1 hour 10 minutes (70 minutes).
+    """
+    title = str(job.get("title") or "").strip()
+    loc = str(job.get("location") or "").strip()
+    desc = str(job.get("description") or "").strip()
+    work_model = str(job.get("work_model") or "").strip()
+
+    loc_lower = loc.lower()
+    title_lower = title.lower()
+    desc_lower = desc.lower()
+
+    # 1. 100% Remote / Home Office
+    if "100% remote" in work_model.lower() or "fully remote" in desc_lower or "remote first" in desc_lower or "100% remote" in title_lower:
+        return {
+            "commute_minutes": 0,
+            "within_limit": True,
+            "badge": "🏡 Remote (0 min)",
+            "summary": "100% Remote / Home Office",
+            "transit_route": "Remote / Home Office",
+        }
+
+    # 2. Distant cities outside Berlin/Brandenburg
+    distant_cities = ["münchen", "munich", "frankfurt", "bonn", "hamburg", "stuttgart", "köln", "cologne", "düsseldorf", "leipzig", "nürnberg", "dresden"]
+    is_distant = False
+    for dc in distant_cities:
+        if re.search(r'\b' + dc + r'\b', loc_lower) and "berlin" not in loc_lower:
+            is_distant = True
+            break
+        if re.search(r'\b' + dc + r'\b', title_lower) and "berlin" not in title_lower and "remote" not in title_lower and "deutschlandweit" not in title_lower:
+            is_distant = True
+            break
+
+    if is_distant and "remote" not in desc_lower and "hybrid" not in desc_lower:
+        return {
+            "commute_minutes": 180,
+            "within_limit": False,
+            "badge": "⚠️ >3h (Distant City)",
+            "summary": "Located outside Berlin-Brandenburg metropolitan region",
+            "transit_route": "ICE / Long-distance",
+        }
+
+    # 3. Outer Brandenburg outside 70-min ring
+    if any(k in loc_lower or k in desc_lower for k in ["fürstenwalde", "fuerstenwalde"]):
+        return {
+            "commute_minutes": 90,
+            "within_limit": False,
+            "badge": "⚠️ ~90 min (>1h 10m)",
+            "summary": "Fürstenwalde (Spree): ~90 min from Söhtstr. 16 via S1 + RE1",
+            "transit_route": "S1 -> Potsdamer Platz -> RE1 Fürstenwalde",
+        }
+
+    if any(k in loc_lower or k in desc_lower for k in ["grünheide", "gruenheide", "gigafactory"]):
+        return {
+            "commute_minutes": 85,
+            "within_limit": False,
+            "badge": "⚠️ ~85 min (>1h 10m)",
+            "summary": "Grünheide (Mark) / Gigafactory: ~85 min from Söhtstr. 16 via S1 + RE1 + Bus",
+            "transit_route": "S1 -> Potsdamer Platz -> RE1 Fangschleuse + Shuttle",
+        }
+
+    outer_bb = ["frankfurt (oder)", "frankfurt oder", "cottbus", "brandenburg an der havel", "eberswalde", "neuruppin"]
+    for ob in outer_bb:
+        if ob in loc_lower:
+            return {
+                "commute_minutes": 85,
+                "within_limit": False,
+                "badge": "⚠️ ~85 min (>1h 10m)",
+                "summary": f"{ob.title()}: >70 min from Söhtstr. 16",
+                "transit_route": "Regionalbahn (>70 min)",
+            }
+
+    # 4. Commutable Brandenburg locations (Potsdam, Schönefeld, Teltow)
+    if "potsdam" in loc_lower or "potsdam" in title_lower:
+        return {
+            "commute_minutes": 40,
+            "within_limit": True,
+            "badge": "🚇 ~40 min (S1/S7)",
+            "summary": "Potsdam: ~40 min from Söhtstr. 16 (S1 Wannsee + S7/RB)",
+            "transit_route": "S1 -> Wannsee -> S7/RB Potsdam Hbf",
+        }
+
+    if "schönefeld" in loc_lower or "schoenefeld" in loc_lower:
+        return {
+            "commute_minutes": 45,
+            "within_limit": True,
+            "badge": "🚇 ~45 min (S1/S45)",
+            "summary": "Schönefeld: ~45 min from Söhtstr. 16 (S1 Südkreuz + S45)",
+            "transit_route": "S1 -> Südkreuz -> S45 Schönefeld",
+        }
+
+    if "blankenfelde" in loc_lower or "mahlow" in loc_lower or "teltow" in loc_lower:
+        return {
+            "commute_minutes": 30,
+            "within_limit": True,
+            "badge": "🚇 ~30 min (S1/Bus)",
+            "summary": "Teltow/Blankenfelde: ~30 min from Söhtstr. 16",
+            "transit_route": "S1 / Bus X01/184",
+        }
+
+    # 5. Berlin Districts
+    district_times = {
+        ("lichterfelde", "steglitz", "zehlendorf", "dahlem"): (15, "🚇 ~15 min (S1/Local)"),
+        ("schöneberg", "schoeneberg", "innsbrucker platz", "südkreuz", "suedkreuz", "tempelhof"): (18, "🚇 ~18 min (S1 Direct)"),
+        ("potsdamer platz", "mitte", "friedrichstraße", "friedrichstrasse", "tiergarten", "brandenburger tor"): (22, "🚇 ~22 min (S1 Direct)"),
+        ("charlottenburg", "wilmersdorf", "kudamm", "kurfürstendamm", "zoologischer garten", "zoo"): (25, "🚇 ~25 min (S1/Ring)"),
+        ("kreuzberg", "neukölln", "neukoelln", "gleisdreieck", "hermannstraße"): (25, "🚇 ~25 min (S1/U-Bahn)"),
+        ("moabit", "wedding", "gesundbrunnen", "hauptbahnhof"): (28, "🚇 ~28 min (S1/U9)"),
+        ("friedrichshain", "ostkreuz", "warschau", "alexanderplatz"): (32, "🚇 ~32 min (S1/S-Bahn)"),
+        ("prenzlauer berg", "pankow"): (35, "🚇 ~35 min (S1/Ring)"),
+        ("adlershof", "treptow", "köpenick", "koepenick"): (45, "🚇 ~45 min (S1/S-Bahn)"),
+        ("spandau", "reinickendorf", "tegel"): (45, "🚇 ~45 min (S1/U-Bahn)"),
+        ("marzahn", "hellersdorf", "lichtenberg"): (50, "🚇 ~50 min (S1/S-Bahn)"),
+    }
+    combined_text = f"{loc_lower} {title_lower} {desc_lower}"
+    for keys, (minutes, badge) in district_times.items():
+        if any(k in combined_text for k in keys):
+            return {
+                "commute_minutes": minutes,
+                "within_limit": True,
+                "badge": badge,
+                "summary": f"Estimated transit: ~{minutes} min from Söhtstr. 16 via BVG/S-Bahn",
+                "transit_route": f"S1 Lichterfelde West -> BVG (~{minutes} min)",
+            }
+
+    # Default Berlin
+    return {
+        "commute_minutes": 25,
+        "within_limit": True,
+        "badge": "🚇 ~25 min (S1)",
+        "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
+        "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)",
+    }
+
+
 def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
     title = str(job.get("title") or "")
     company = str(job.get("company") or "")
@@ -164,6 +302,9 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
     top_kws = ", ".join(matched_keywords[:6]) if matched_keywords else "Product team, SQL (Redash), quantitative analysis, AI evaluation tools"
     why_fits = f"Strong {best_cat_label} fit. Matches keywords: {top_kws}."
 
+    # Commute check from Söhtstraße 16, 12203 Berlin
+    commute_info = calculate_commute_from_sohtstrasse(job)
+
     return {
         "category_id": best_cat_id,
         "category_label": best_cat_label,
@@ -172,6 +313,7 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
         "extracted_pay": extracted_pay,
         "matched_keywords": matched_keywords[:8],
         "why_fits": why_fits,
+        "commute": commute_info,
     }
 
 

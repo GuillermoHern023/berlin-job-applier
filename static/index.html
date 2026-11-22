@@ -158,6 +158,12 @@
         </div>
 
         <div class="flex flex-wrap sm:flex-nowrap gap-2">
+          <!-- Commute / Travel Time Filter (Max 1h 10m from Söhtstraße 16) -->
+          <select id="commuteFilter" onchange="renderJobs()" class="bg-blue-50/70 dark:bg-blue-950/40 border border-blue-300 dark:border-blue-700/60 rounded-md px-3 py-2 text-xs font-semibold text-blue-900 dark:text-blue-200 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-2xs" title="Filter jobs by transit travel time from Söhtstraße 16, 12203 Berlin">
+            <option value="MAX_70MIN" selected>⏱️ Max 1h 10m (Söhtstr. 16)</option>
+            <option value="ALL">🌍 All Distances / Locations</option>
+          </select>
+
           <!-- Workplace Model Filter -->
           <select id="workModelFilter" onchange="renderJobs()" class="bg-gray-50 dark:bg-[#0f141c] border border-gray-300 dark:border-slate-700 rounded-md px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-200 focus:bg-white dark:focus:bg-[#141b26] focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="HYBRID_REMOTE" selected>🏠 Hybrid &amp; Remote Only (No 100% Onsite)</option>
@@ -328,9 +334,11 @@
         apply_linkedin: "🔗 Auf LinkedIn bewerben ↗",
                 as_google_doc: "📄 Google Doc öffnen",
         as_google_doc_tooltip: "Als Google Doc direkt hier im Tab bearbeiten",
-        tab_doc_editor: "📄 Google Doc (Anschreiben)",
-        tab_cv_editor: "🎓 Maßgeschneiderter CV (1 Seite)",
-        tab_overview: "📋 Stellenbeschreibung & Details",
+        commute_max_70: "⏱️ Max. 1h 10m (Söhtstraße 16)",
+        commute_all: "🌍 Alle Entfernungen",
+        tab_doc_editor: "📄 Anschreiben",
+        tab_cv_editor: "🎓 1-Seiten-CV",
+        tab_overview: "📋 Details",
         btn_tailored_cv: "🎓 Tailored CV öffnen",
         print_cv_pdf: "🖨️ Tailored CV als PDF speichern",
         customize_bullets: "🎛️ AUTO1-Projekte für diese Stelle anpassen",
@@ -409,21 +417,23 @@
         apply_linkedin: "🔗 Apply on LinkedIn ↗",
         as_google_doc: "📄 Open Google Doc",
         as_google_doc_tooltip: "Edit as a Google Doc directly here in this tab",
-        tab_doc_editor: "📄 Google Doc (Cover Letter)",
-        tab_cv_editor: "🎓 Tailored CV (1-Page A4)",
-        tab_overview: "📋 Job Description & Details",
+        commute_max_70: "⏱️ Max 1h 10m (Söhtstraße 16)",
+        commute_all: "🌍 All Distances / Locations",
+        tab_doc_editor: "📄 Cover Letter",
+        tab_cv_editor: "🎓 Tailored CV (1-Page)",
+        tab_overview: "📋 Details",
         btn_tailored_cv: "🎓 Open Tailored CV",
         print_cv_pdf: "🖨️ Save Tailored CV (PDF)",
-        customize_bullets: "🎛️ Customize AUTO1 Bullets for This Role",
-        tailored_for_badge: "✨ Auto-Tailored for This Role",
-        open_google_docs_new: "🌐 Open in Google Docs (docs.new) ↗",
+        customize_bullets: "🎛️ Customize AUTO1 Bullets",
+        tailored_for_badge: "✨ Tailored",
+        open_google_docs_new: "🌐 Google Docs (docs.new) ↗",
         print_pdf: "🖨️ Print / Save PDF",
-        copy_all: "📋 Copy All",
-        auto_saved: "🟢 Auto-saved in real-time",
-        reset_original: "🔄 Reset to Template",
-        as_word: "💾 Download Word (.docx)",
+        copy_all: "📋 Copy Text",
+        auto_saved: "🟢 Auto-saved",
+        reset_original: "🔄 Reset",
+        as_word: "💾 Word (.docx)",
         copy_cl: "📋 Copy Cover Letter",
-        not_interested: "❌ Not Interested",
+        not_interested: "✕ Dismiss",
         restore: "↩ Restore",
         match: "Match",
         cl_box_title: "✍️ Tailored Cover Letter & Company Address",
@@ -432,7 +442,7 @@
         address_card_title: "🏢 Recipient Company Address",
         copy_address_only: "📋 Copy Address Only",
         edit_address: "✏️ Edit Address",
-        save_address: "💾 Save Address & Apply to Letter",
+        save_address: "💾 Save Address",
         cancel: "Cancel",
         format_full: "With Sender & Company Address (DIN 5008)",
         format_body: "Body Text Only",
@@ -454,13 +464,17 @@
         field_street: "Street & Number",
         field_zipcity: "Postal Code & City",
         btn_download_cv_pdf: "📥 Download CV (PDF)",
-        btn_download_pdf: "📥 Download as PDF",
+        btn_download_pdf: "📥 Download PDF",
         download_cv_pdf_tooltip: "Directly download tailored 1-page CV as PDF",
         download_cl_pdf_tooltip: "Directly download cover letter as PDF"
       }
     };
 
-    let currentLang = (localStorage.getItem('app_lang') === 'de') ? 'de' : 'en';
+    let currentLang = localStorage.getItem('app_lang');
+    if (!currentLang) {
+      currentLang = 'en';
+      localStorage.setItem('app_lang', 'en');
+    }
 
     function showToast(msg) {
       let toast = document.getElementById('portalToast');
@@ -507,6 +521,12 @@
 
       const searchInput = document.getElementById('searchInput');
       if (searchInput) searchInput.placeholder = t.search_placeholder;
+
+      const commuteFilter = document.getElementById('commuteFilter');
+      if (commuteFilter && commuteFilter.options.length >= 2) {
+        commuteFilter.options[0].text = t.commute_max_70;
+        commuteFilter.options[1].text = t.commute_all;
+      }
 
       const workModelFilter = document.getElementById('workModelFilter');
       if (workModelFilter) {
@@ -1218,6 +1238,68 @@
       document.getElementById('scoutModal').classList.add('hidden');
     }
 
+    function getJobCommute(job) {
+      if (job && job.commute && typeof job.commute.within_limit === 'boolean') {
+        return job.commute;
+      }
+      // Accurate client-side calculation from Söhtstraße 16, 12203 Berlin (Lichterfelde West / S1)
+      const title = (job.title || '').toLowerCase();
+      const loc = (job.location || '').toLowerCase();
+      const desc = (job.description || '').toLowerCase();
+      const wm = (job.work_model || '').toLowerCase();
+
+      // 1. 100% Remote / Home Office
+      if (wm.includes('100% remote') || desc.includes('fully remote') || desc.includes('remote first') || title.includes('100% remote')) {
+        return { commute_minutes: 0, within_limit: true, badge: '🏡 Remote (0 min)', summary: '100% Remote / Home Office' };
+      }
+
+      // 2. Distant cities outside Berlin/Brandenburg
+      const distant = ['münchen', 'munich', 'frankfurt', 'bonn', 'hamburg', 'stuttgart', 'köln', 'cologne', 'düsseldorf', 'leipzig'];
+      for (const d of distant) {
+        if (loc.includes(d) && !loc.includes('berlin')) {
+          return { commute_minutes: 180, within_limit: false, badge: '⚠️ >3h (Distant City)', summary: 'Outside Berlin-Brandenburg region' };
+        }
+        if (title.includes(d) && !title.includes('berlin') && !title.includes('remote') && !title.includes('deutschlandweit')) {
+          return { commute_minutes: 180, within_limit: false, badge: '⚠️ >3h (Distant City)', summary: 'Outside Berlin-Brandenburg region' };
+        }
+      }
+
+      // 3. Outer Brandenburg outside 70m ring
+      if (loc.includes('fürstenwalde') || desc.includes('fürstenwalde')) {
+        return { commute_minutes: 90, within_limit: false, badge: '⚠️ ~90 min (>1h 10m)', summary: 'Fürstenwalde: ~90 min from Söhtstr. 16' };
+      }
+      if (loc.includes('grünheide') || desc.includes('grünheide') || desc.includes('gigafactory')) {
+        return { commute_minutes: 85, within_limit: false, badge: '⚠️ ~85 min (>1h 10m)', summary: 'Grünheide: ~85 min from Söhtstr. 16' };
+      }
+
+      // 4. Commutable Brandenburg
+      if (loc.includes('potsdam') || title.includes('potsdam')) {
+        return { commute_minutes: 40, within_limit: true, badge: '🚇 ~40 min (S1/S7)', summary: 'Potsdam: ~40 min from Söhtstr. 16' };
+      }
+      if (loc.includes('schönefeld') || loc.includes('schoenefeld')) {
+        return { commute_minutes: 45, within_limit: true, badge: '🚇 ~45 min (S1/S45)', summary: 'Schönefeld: ~45 min from Söhtstr. 16' };
+      }
+      if (loc.includes('blankenfelde') || loc.includes('teltow') || loc.includes('mahlow')) {
+        return { commute_minutes: 30, within_limit: true, badge: '🚇 ~30 min (S1/Bus)', summary: 'Teltow/Blankenfelde: ~30 min from Söhtstr. 16' };
+      }
+
+      // 5. Berlin Districts
+      if (loc.includes('steglitz') || loc.includes('zehlendorf') || loc.includes('lichterfelde')) {
+        return { commute_minutes: 15, within_limit: true, badge: '🚇 ~15 min (Local)', summary: '~15 min from Söhtstr. 16' };
+      }
+      if (loc.includes('schöneberg') || loc.includes('schoeneberg') || loc.includes('tempelhof') || loc.includes('südkreuz')) {
+        return { commute_minutes: 18, within_limit: true, badge: '🚇 ~18 min (S1 Direct)', summary: '~18 min from Söhtstr. 16' };
+      }
+      if (loc.includes('mitte') || loc.includes('potsdamer platz') || loc.includes('tiergarten') || loc.includes('friedrichstraße')) {
+        return { commute_minutes: 22, within_limit: true, badge: '🚇 ~22 min (S1 Direct)', summary: '~22 min from Söhtstr. 16' };
+      }
+      if (loc.includes('charlottenburg') || loc.includes('wilmersdorf')) {
+        return { commute_minutes: 25, within_limit: true, badge: '🚇 ~25 min (S1/Ring)', summary: '~25 min from Söhtstr. 16' };
+      }
+
+      return { commute_minutes: 25, within_limit: true, badge: '🚇 ~25 min (S1)', summary: 'Central Berlin: ~25 min from Söhtstr. 16 via S1' };
+    }
+
     function renderJobs() {
       updateFilterTabs();
       const allJobs = getActiveJobs();
@@ -1225,6 +1307,7 @@
       const wm = document.getElementById('workModelFilter').value;
       const src = document.getElementById('sourceFilter').value;
       const sort = document.getElementById('sortBy').value;
+      const commuteFilter = document.getElementById('commuteFilter') ? document.getElementById('commuteFilter').value : 'MAX_70MIN';
 
       // Update counters
       const activeCount = allJobs.filter(j => !['applied', 'not interested', 'archived', 'rejected'].includes((j.status || '').toLowerCase())).length;
@@ -1244,6 +1327,12 @@
           if (st !== 'not interested') return false;
         } else if (currentStatusFilter === 'Applied') {
           if (st !== 'applied') return false;
+        }
+
+        // Commute Filter (Max 1h 10m from Söhtstraße 16)
+        if (commuteFilter === 'MAX_70MIN') {
+          const c = getJobCommute(j);
+          if (!c.within_limit) return false;
         }
 
         // Work model filter
@@ -1312,6 +1401,7 @@
         const isIndeed = (j.source || '').toLowerCase() === 'indeed' || (j.job_url || '').toLowerCase().includes('indeed.com');
         const isFresh = (j.days_ago !== undefined && j.days_ago <= 1);
         const wm = j.work_model || (j.is_100_onsite ? '100% Vor Ort' : 'Hybrid');
+        const commute = getJobCommute(j);
 
         return `
           <div onclick="selectJob('${j.id}')" class="portal-card p-3.5 cursor-pointer relative ${isSelected ? 'active-job' : ''}">
@@ -1333,8 +1423,10 @@
                   </span>
                 </div>
 
-                <div class="text-xs text-gray-600 dark:text-gray-400 font-medium mt-0.5 truncate">
-                  ${j.company} &bull; ${j.location || 'Berlin'}
+                <div class="text-xs text-gray-600 dark:text-gray-400 font-medium mt-0.5 truncate flex items-center gap-1.5">
+                  <span class="truncate font-medium text-gray-800 dark:text-gray-200">${j.company}</span>
+                  <span>&bull;</span>
+                  <span class="text-blue-700 dark:text-blue-300 font-semibold shrink-0">${commute.badge}</span>
                 </div>
 
                 <!-- Chips Row -->
@@ -1530,6 +1622,8 @@
           : allAuto1Bullets.slice(0, 6).map(b => b.html);
       }
 
+      const commute = getJobCommute(job);
+
       container.innerHTML = `
         <!-- Sticky Detail Header -->
         <div class="p-5 border-b border-gray-200 dark:border-slate-800 bg-white dark:bg-[#18202f]">
@@ -1542,14 +1636,16 @@
                 <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100 leading-snug">
                   ${job.title}
                 </h2>
-                <div class="text-xs text-gray-600 dark:text-gray-300 mt-0.5 flex flex-wrap items-center gap-1.5 font-medium">
+                <div class="text-xs text-gray-600 dark:text-gray-300 mt-1 flex flex-wrap items-center gap-1.5 font-medium">
                   <span class="font-bold text-gray-900 dark:text-white">${job.company}</span>
                   <span>&bull;</span>
                   <span>📍 ${job.location || 'Berlin'}</span>
                   <span>&bull;</span>
-                  <span>🕒 ${job.posted_ago || job.date_posted || 'Kürzlich'}</span>
+                  <span class="text-blue-700 dark:text-blue-300 font-semibold bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 rounded-full border border-blue-200 dark:border-blue-800/60" title="${commute.summary || ''}">
+                    ${commute.badge}
+                  </span>
                   <span>&bull;</span>
-                  <span>👥 ${job.applicants_text || 'Direktes Portal'}</span>
+                  <span>🕒 ${job.posted_ago || job.date_posted || 'Recently'}</span>
                 </div>
               </div>
             </div>
@@ -1559,62 +1655,53 @@
             </span>
           </div>
 
-          <!-- Main CTA Action Buttons Bar -->
+          <!-- Main CTA Action Buttons Bar (Clean, uncluttered, focused) -->
           <div class="flex flex-wrap items-center justify-between gap-2.5 mt-4 pt-3 border-t border-gray-100 dark:border-slate-800">
-            <div class="flex flex-wrap items-center gap-2">
+            <div class="flex flex-wrap items-center gap-2.5">
+              <!-- 1. Primary Apply CTA -->
               <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-sm ${isIndeed ? 'bg-[#003a9b] hover:bg-[#002f7d] text-white' : 'bg-[#0a66c2] hover:bg-[#004182] text-white'}">
                 ${isIndeed ? t.apply_indeed : t.apply_linkedin}
               </a>
 
-              <!-- Second Option: Easy Download as PDF Button -->
+              <!-- 2. Second Option: Prominent Easy Download CV as PDF -->
               <button onclick="downloadTailoredCvPdf('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center gap-1.5 shadow-sm hover:shadow" title="${t.download_cv_pdf_tooltip}">
                 <span>${t.btn_download_cv_pdf}</span>
               </button>
 
-              <!-- Google Doc Action Button -->
-              <button onclick="switchDetailView('doc', true)" class="px-3.5 py-2 rounded-md text-xs font-medium bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/40 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 transition flex items-center gap-1.5 shadow-2xs" title="${t.as_google_doc_tooltip}">
-                <span>${t.as_google_doc}</span>
-              </button>
-
-              <!-- Tailored CV Action Button -->
-              <button onclick="switchDetailView('cv', true)" class="px-3.5 py-2 rounded-md text-xs font-medium bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-950/40 dark:hover:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 transition flex items-center gap-1.5 shadow-2xs">
-                <span>${t.btn_tailored_cv}</span>
-              </button>
-
-              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-medium bg-purple-50 hover:bg-purple-100 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 transition flex items-center gap-1.5">
+              <!-- 3. Copy Cover Letter Text -->
+              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-semibold bg-purple-50 hover:bg-purple-100 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 transition flex items-center gap-1.5" title="Copy Cover Letter">
                 <span>${t.copy_cl}</span>
               </button>
-
-              ${isDismissed ? `
-                <button onclick="markStatus('${job.id}', 'New')" class="px-3 py-2 rounded-md text-xs font-medium bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 transition">
-                  ${t.restore}
-                </button>
-              ` : `
-                <button onclick="markStatus('${job.id}', 'Not Interested')" class="px-3 py-2 rounded-md text-xs font-medium bg-gray-50 dark:bg-slate-800 hover:bg-rose-50 text-gray-500 hover:text-rose-600 border border-gray-200 dark:border-slate-700 transition" title="Ausblenden">
-                  ${t.not_interested}
-                </button>
-              `}
             </div>
 
+            <!-- Status selector & quick dismiss -->
             <div class="flex items-center gap-2">
               <select onchange="markStatus('${job.id}', this.value)" class="bg-gray-50 dark:bg-[#121721] border border-gray-200 dark:border-slate-700 rounded-md px-2.5 py-1.5 text-xs text-gray-700 dark:text-gray-200 font-medium">
                 ${['New', 'Ready to Apply', 'Applied', 'Interview', 'Not Interested'].map(s => `<option value="${s}" ${job.status === s ? 'selected' : ''}>${s}</option>`).join('')}
               </select>
+
+              ${isDismissed ? `
+                <button onclick="markStatus('${job.id}', 'New')" class="p-1.5 rounded-md text-gray-500 hover:text-blue-600 text-xs transition" title="${t.restore}">
+                  ↩
+                </button>
+              ` : `
+                <button onclick="markStatus('${job.id}', 'Not Interested')" class="p-1.5 rounded-md text-gray-400 hover:text-rose-600 hover:bg-rose-50 text-xs transition" title="${t.not_interested}">
+                  ✕
+                </button>
+              `}
             </div>
           </div>
         </div>
 
-        <!-- Sub Tabs: Cover Letter vs Tailored 1-Page CV vs Job Overview -->
-        <div class="flex flex-wrap items-center px-5 bg-gray-50/80 dark:bg-slate-900/60 border-b border-gray-200 dark:border-slate-800 gap-2">
-          <button id="detailSubTabDoc" onclick="switchDetailView('doc')" class="py-2.5 px-3 border-b-2 ${currentDetailTab === 'doc' ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 font-medium'} flex items-center gap-1.5 transition text-xs">
+        <!-- Sub Tabs: Cover Letter vs Tailored 1-Page CV vs Job Details -->
+        <div class="flex items-center px-5 bg-gray-50/80 dark:bg-slate-900/60 border-b border-gray-200 dark:border-slate-800 gap-3">
+          <button id="detailSubTabDoc" onclick="switchDetailView('doc')" class="py-2.5 px-2 border-b-2 ${currentDetailTab === 'doc' ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 font-medium'} flex items-center gap-1.5 transition text-xs">
             <span>${t.tab_doc_editor}</span>
-            <span class="text-[10px] bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-200 px-1.5 py-0.2 rounded-full font-bold">Live Editor</span>
           </button>
-          <button id="detailSubTabCv" onclick="switchDetailView('cv')" class="py-2.5 px-3 border-b-2 ${currentDetailTab === 'cv' ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 font-medium'} flex items-center gap-1.5 transition text-xs">
+          <button id="detailSubTabCv" onclick="switchDetailView('cv')" class="py-2.5 px-2 border-b-2 ${currentDetailTab === 'cv' ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 font-medium'} flex items-center gap-1.5 transition text-xs">
             <span>${t.tab_cv_editor}</span>
-            <span class="text-[10px] bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200 px-1.5 py-0.2 rounded-full font-bold">Auto-Adapted</span>
           </button>
-          <button id="detailSubTabOverview" onclick="switchDetailView('overview')" class="py-2.5 px-3 border-b-2 ${currentDetailTab === 'overview' ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 font-medium'} flex items-center gap-1.5 transition text-xs">
+          <button id="detailSubTabOverview" onclick="switchDetailView('overview')" class="py-2.5 px-2 border-b-2 ${currentDetailTab === 'overview' ? 'border-blue-600 text-blue-600 dark:text-blue-400 font-bold' : 'border-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 font-medium'} flex items-center gap-1.5 transition text-xs">
             <span>${t.tab_overview}</span>
           </button>
         </div>
@@ -1626,19 +1713,19 @@
           <div class="max-w-[760px] w-full shrink-0 bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-t-lg p-3 shadow-xs flex flex-wrap items-center justify-between gap-2.5 border-b-0">
             <div class="flex items-center gap-2">
               <span class="text-xs font-bold text-gray-800 dark:text-gray-100 flex items-center gap-1">
-                <span>📄 Anschreiben</span>
+                <span>📄 ${t.tab_doc_editor}</span>
                 <span class="text-gray-400 font-normal">&bull;</span>
                 <span class="text-gray-600 dark:text-gray-300 font-semibold">${job.company}</span>
               </span>
               <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700 font-bold" title="Strict 1-Page A4 Guarantee">
-                📄 1 Page Guaranteed
+                1-Page A4
               </span>
               <span id="docSaveStatus_${job.id}" class="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1">
                 ${t.auto_saved}
               </span>
             </div>
 
-            <!-- Action Toolbar -->
+            <!-- Action Toolbar (Simplified & Uncluttered) -->
             <div class="flex flex-wrap items-center gap-1.5 text-xs">
               <!-- Language Toggle -->
               <div class="inline-flex items-center bg-gray-100 dark:bg-slate-800 p-0.5 rounded border border-gray-200 dark:border-slate-700 text-[11px] font-semibold">
@@ -1650,40 +1737,28 @@
                 </button>
               </div>
 
-              <!-- Auto-Fit 1 Page Helper -->
-              <button onclick="autoFitCoverLetterToOnePage('${job.id}')" class="px-2 py-1 rounded bg-emerald-50 dark:bg-emerald-950/50 hover:bg-emerald-100 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-bold transition flex items-center gap-1 text-[11px]" title="Auto-scale font and spacing to guarantee strict 1-Page A4 fit">
-                <span>⚡ Auto-Fit 1 Page</span>
-              </button>
-
-              <!-- Open in real Google Docs in new tab -->
-              <button onclick="openInGoogleDocsTab('${job.id}')" class="px-2.5 py-1 rounded bg-[#1a73e8] hover:bg-[#1557b0] text-white font-bold transition flex items-center gap-1 shadow-2xs text-[11px]" title="Kopiert den Text und öffnet ein neues Google Doc in Google Drive (docs.new)">
-                <span>${t.open_google_docs_new}</span>
-              </button>
-
               <!-- Easy Download Cover Letter as PDF -->
-              <button onclick="downloadCoverLetterPdf('${job.id}')" class="px-2.5 py-1 rounded bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition flex items-center gap-1 shadow-2xs text-[11px]" title="${t.download_cl_pdf_tooltip}">
+              <button onclick="downloadCoverLetterPdf('${job.id}')" class="px-3 py-1 rounded bg-indigo-600 hover:bg-indigo-700 text-white font-bold transition flex items-center gap-1 shadow-2xs text-[11px]" title="${t.download_cl_pdf_tooltip}">
                 <span>📥 PDF</span>
               </button>
 
-              <!-- Print / PDF -->
-              <button onclick="printGoogleDoc('${job.id}')" class="px-2 py-1 rounded bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700 text-[11px] font-medium flex items-center gap-1" title="Print Dialog">
-                <span>🖨️</span>
-              </button>
-
-              <!-- Copy All -->
-              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-2 py-1 rounded bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-100 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 text-[11px] font-medium flex items-center gap-1" title="Vollständigen Text in die Zwischenablage kopieren">
+              <!-- Copy Text -->
+              <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-2.5 py-1 rounded bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-100 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 text-[11px] font-semibold flex items-center gap-1" title="Copy full letter to clipboard">
                 <span>${t.copy_all}</span>
               </button>
 
-              <!-- Download Word (.docx) -->
-              <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="px-2 py-1 rounded bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-slate-700 text-[11px] font-medium flex items-center gap-1" title="Als Word-Datei herunterladen">
-                <span>💾 .docx</span>
-              </button>
-
-              <!-- Reset to template -->
-              <button onclick="resetDocToTemplate('${job.id}')" class="px-1.5 py-1 rounded text-gray-400 hover:text-rose-600 text-[11px]" title="${t.reset_original}">
-                <span>🔄</span>
-              </button>
+              <!-- Compact secondary tools -->
+              <div class="flex items-center gap-1 pl-1 border-l border-gray-200 dark:border-slate-700">
+                <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="p-1 rounded text-gray-500 hover:text-gray-800 dark:text-gray-400 text-[11px]" title="${t.as_word}">
+                  <span>💾 .docx</span>
+                </button>
+                <button onclick="openInGoogleDocsTab('${job.id}')" class="p-1 rounded text-gray-500 hover:text-blue-600 text-[11px]" title="${t.open_google_docs_new}">
+                  <span>🌐 docs.new</span>
+                </button>
+                <button onclick="resetDocToTemplate('${job.id}')" class="p-1 rounded text-gray-400 hover:text-rose-600 text-[11px]" title="${t.reset_original}">
+                  <span>🔄</span>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -1701,17 +1776,17 @@
         <!-- VIEW 1.5: Interactive Tailored 1-Page CV Editor -->
         <div id="detailViewCv" class="${currentDetailTab === 'cv' ? '' : 'hidden'} flex-1 overflow-y-auto bg-[#f0f4f9] dark:bg-[#0c1017] p-3 sm:p-5 flex flex-col items-center">
           
-          <!-- CV Toolbar -->
+          <!-- CV Toolbar (Simplified & Uncluttered) -->
           <div class="max-w-[760px] w-full shrink-0 bg-white dark:bg-[#18202f] border border-gray-200 dark:border-slate-800 rounded-t-lg p-3 shadow-xs space-y-2.5 border-b-0">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <div class="flex flex-wrap items-center gap-2">
                 <span class="text-xs font-bold text-gray-800 dark:text-gray-100 flex items-center gap-1">
-                  <span>🎓 1-Page CV</span>
+                  <span>🎓 ${t.tab_cv_editor}</span>
                   <span class="text-gray-400 font-normal">&bull;</span>
                   <span class="text-emerald-700 dark:text-emerald-400 font-semibold">${job.company}</span>
                 </span>
                 <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700 font-bold" title="Strict 1-Page A4 Guarantee">
-                  📄 1 Page Guaranteed
+                  1-Page A4
                 </span>
                 <span id="cvSaveStatus_${job.id}" class="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
                   ${t.auto_saved}
@@ -1719,33 +1794,29 @@
               </div>
 
               <div class="flex flex-wrap items-center gap-1.5 text-xs">
+                <!-- Easy Download Tailored CV as PDF (Second Option) -->
+                <button onclick="downloadTailoredCvPdf('${job.id}')" class="px-3.5 py-1 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition flex items-center gap-1 shadow-xs text-[11px]" title="${t.download_cv_pdf_tooltip}">
+                  <span>${t.btn_download_pdf}</span>
+                </button>
+
                 ${isGuillermo ? `
                   <button onclick="toggleBulletPicker('${job.id}')" class="px-2.5 py-1 rounded bg-amber-50 dark:bg-amber-950/50 hover:bg-amber-100 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-[11px] font-bold flex items-center gap-1 transition">
                     <span>${t.customize_bullets}</span>
                   </button>
                 ` : ''}
 
-                <!-- Auto-Fit 1 Page Helper -->
-                <button onclick="autoFitCvToOnePage('${job.id}')" class="px-2 py-1 rounded bg-emerald-50 dark:bg-emerald-950/50 hover:bg-emerald-100 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 font-bold transition flex items-center gap-1 text-[11px]" title="Auto-scale font and spacing to guarantee strict 1-Page A4 fit">
-                  <span>⚡ Auto-Fit 1 Page</span>
-                </button>
-
-                <!-- Easy Download Tailored CV as PDF (Second Option) -->
-                <button onclick="downloadTailoredCvPdf('${job.id}')" class="px-3.5 py-1 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition flex items-center gap-1 shadow-xs text-[11px]" title="${t.download_cv_pdf_tooltip}">
-                  <span>${t.btn_download_pdf}</span>
-                </button>
-
-                <button onclick="printTailoredCv('${job.id}')" class="px-2 py-1 rounded bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700 text-[11px] font-medium" title="${t.print_cv_pdf}">
-                  <span>🖨️</span>
-                </button>
-
-                <a href="files/Guillermo_Hernandez_CV_Master.pdf" download class="px-2 py-1 rounded bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-slate-700 text-[11px] font-medium">
-                  <span>📄 Master PDF</span>
-                </a>
-
-                <button onclick="resetCvToTemplate('${job.id}')" class="px-1.5 py-1 rounded text-gray-400 hover:text-rose-600 text-[11px]" title="${t.reset_original}">
-                  <span>🔄</span>
-                </button>
+                <!-- Compact secondary tools -->
+                <div class="flex items-center gap-1 pl-1 border-l border-gray-200 dark:border-slate-700">
+                  <a href="files/Guillermo_Hernandez_CV_Master.pdf" download class="p-1 rounded text-gray-500 hover:text-gray-800 dark:text-gray-400 text-[11px]" title="Master CV (PDF)">
+                    <span>📄 Master</span>
+                  </a>
+                  <button onclick="printTailoredCv('${job.id}')" class="p-1 rounded text-gray-500 hover:text-gray-800 text-[11px]" title="${t.print_cv_pdf}">
+                    <span>🖨️</span>
+                  </button>
+                  <button onclick="resetCvToTemplate('${job.id}')" class="p-1 rounded text-gray-400 hover:text-rose-600 text-[11px]" title="${t.reset_original}">
+                    <span>🔄</span>
+                  </button>
+                </div>
               </div>
             </div>
 
