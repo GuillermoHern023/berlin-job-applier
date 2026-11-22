@@ -1,8 +1,72 @@
 import re
+import urllib.parse
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 import requests
+
+
+def resolve_direct_career_url(job: Dict[str, Any]) -> Optional[str]:
+    """
+    Resolves the official direct company careers portal or ATS apply URL.
+    Returns None if no specific direct URL can be determined (frontend will fall back to smart search).
+    """
+    url = str(job.get("job_url") or "").strip()
+    direct = str(job.get("direct_apply_url") or job.get("job_url_direct") or "").strip()
+    if direct and direct.startswith("http"):
+        return direct
+
+    # Check if job_url is already an ATS or direct employer domain
+    ats_domains = [
+        "smartrecruiters.com", "greenhouse.io", "recruitee.com", "workdayjobs.com",
+        "ashbyhq.com", "hibob.com", "softgarden.de", "corning.com", "grnh.se",
+        "personio.de", "join.com", "jobs.personio.de"
+    ]
+    u_low = url.lower()
+    if any(d in u_low for d in ats_domains) or ("linkedin.com" not in u_low and "indeed.com" not in u_low and url.startswith("http")):
+        return url
+
+    comp = str(job.get("company") or "").lower()
+    title = str(job.get("title") or "")
+    t_low = title.lower()
+    enc_title = urllib.parse.quote_plus(title)
+
+    if "tiktok" in comp:
+        if "project management" in t_low or "gbs" in t_low:
+            return "https://lifeattiktok.com/search/7694281881915672837"
+        return f"https://careers.tiktok.com/position?keywords={enc_title}&location=Berlin"
+    elif "sap" in comp:
+        if "business ai" in t_low:
+            return "https://jobs.smartrecruiters.com/SAP/744000109968962-working-student-f-m-d-product-management-for-sap-business-ai"
+        if "hana cloud" in t_low:
+            return "https://jobs.smartrecruiters.com/SAPITBusinessSysteme/744000162052409-working-student-w-m-d-sap-hana-cloud-infrastructure-"
+        return f"https://jobs.sap.com/search/?q={enc_title}&locationsearch=Berlin"
+    elif "knorr-bremse" in comp:
+        return f"https://careers.knorr-bremse.com/search/?q={enc_title}&locationsearch=berlin"
+    elif "siemens energy" in comp:
+        return f"https://jobs.siemens-energy.com/careers?query={enc_title}&location=Berlin"
+    elif "siemens" in comp:
+        return f"https://jobs.siemens.com/careers?query={enc_title}&location=Berlin"
+    elif "deloitte" in comp:
+        return f"https://jobs.deloitte.de/search/?q={enc_title}&locationsearch=Berlin"
+    elif "check24" in comp:
+        return f"https://jobs.check24.de/jobs?location=Berlin&query={enc_title}"
+    elif "deutsche bahn" in comp or comp == "db":
+        return f"https://db.jobs/de-de/suche?keywords={enc_title}&location=Berlin"
+    elif "tesla" in comp:
+        return f"https://www.tesla.com/careers/search/?query={enc_title}&location=Berlin"
+    elif "enpal" in comp:
+        return f"https://jobs.enpal.de/jobs?query={enc_title}"
+    elif "daimler" in comp:
+        return f"https://www.daimlertruck.com/karriere/job-suche/?search={enc_title}&location=Berlin"
+    elif "databricks" in comp:
+        return "https://www.databricks.com/company/careers?location=Berlin"
+    elif "kpmg" in comp:
+        return f"https://kpmg.com/de/de/home/karriere/jobsuche.html?searchField={enc_title}"
+    elif "pwc" in comp:
+        return f"https://karriere.pwc.de/jobs?query={enc_title}"
+
+    return None
 
 
 def compute_days_ago(date_posted_str: str, posted_time_ago_raw: str = "") -> tuple[int, str]:
@@ -114,10 +178,16 @@ def _fetch_single_linkedin_meta(job: Dict[str, Any]) -> Dict[str, Any]:
     job["posted_ago"] = posted_label
     job["applicants_num"] = app_num
     job["applicants_text"] = app_label
+    job["direct_apply_url"] = resolve_direct_career_url(job)
     return job
 
 
 def enrich_jobs_metadata(jobs: List[Dict[str, Any]], force_refresh: bool = False) -> List[Dict[str, Any]]:
+    # Always ensure direct_apply_url is populated for all jobs
+    for j in jobs:
+        if force_refresh or not j.get("direct_apply_url"):
+            j["direct_apply_url"] = resolve_direct_career_url(j)
+
     to_enrich = [
         j for j in jobs
         if force_refresh or "applicants_text" not in j or "posted_ago" not in j

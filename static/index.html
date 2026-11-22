@@ -348,6 +348,11 @@
         select_job_sub: "Hier siehst du sofort das Anschreiben, Details und Bewerbung.",
         apply_indeed: "🔷 Auf Indeed bewerben ↗",
         apply_linkedin: "🔗 Auf LinkedIn bewerben ↗",
+        apply_company: "🏢 Auf Unternehmens-Website bewerben ↗",
+        search_company: "🔍 Auf Unternehmens-Portal suchen ↗",
+        company_portal_badge: "🏢 Firmen-Website",
+        source_indeed: "🔷 Indeed ↗",
+        source_linkedin: "🔗 LinkedIn ↗",
                 as_google_doc: "📄 Google Doc öffnen",
         as_google_doc_tooltip: "Als Google Doc direkt hier im Tab bearbeiten",
         commute_max_70: "⏱️ Max. 1h 10m (Söhtstraße 16)",
@@ -435,6 +440,11 @@
         select_job_sub: "View the tailored cover letter, details, and direct apply link here.",
         apply_indeed: "🔷 Apply on Indeed ↗",
         apply_linkedin: "🔗 Apply on LinkedIn ↗",
+        apply_company: "🏢 Apply on Company Website ↗",
+        search_company: "🔍 Find on Company Portal ↗",
+        company_portal_badge: "🏢 Company Site",
+        source_indeed: "🔷 Indeed ↗",
+        source_linkedin: "🔗 LinkedIn ↗",
         as_google_doc: "📄 Open Google Doc",
         as_google_doc_tooltip: "Edit as a Google Doc directly here in this tab",
         commute_max_70: "⏱️ Max 1h 10m (Söhtstraße 16)",
@@ -1186,6 +1196,60 @@
       return false;
     }
 
+    function getJobDirectApplyUrl(job) {
+      if (!job) return null;
+      if (job.direct_apply_url && job.direct_apply_url.trim() && job.direct_apply_url.trim().startsWith('http')) {
+        return job.direct_apply_url.trim();
+      }
+      if (job.job_url_direct && job.job_url_direct.trim() && job.job_url_direct.trim().startsWith('http')) {
+        return job.job_url_direct.trim();
+      }
+      const u = (job.job_url || '').toLowerCase();
+      const ats = [
+        'smartrecruiters.com', 'greenhouse.io', 'recruitee.com', 'workdayjobs.com',
+        'ashbyhq.com', 'hibob.com', 'softgarden.de', 'corning.com', 'grnh.se',
+        'personio.de', 'join.com', 'jobs.personio.de'
+      ];
+      if (ats.some(d => u.includes(d)) || (!u.includes('linkedin.com') && !u.includes('indeed.com') && (job.job_url || '').startsWith('http'))) {
+        return job.job_url;
+      }
+      const comp = (job.company || '').toLowerCase();
+      const title = job.title || '';
+      const tLow = title.toLowerCase();
+      const encTitle = encodeURIComponent(title);
+
+      if (comp.includes('tiktok')) {
+        if (tLow.includes('project management') || tLow.includes('gbs')) {
+          return 'https://lifeattiktok.com/search/7694281881915672837';
+        }
+        return `https://careers.tiktok.com/position?keywords=${encTitle}&location=Berlin`;
+      }
+      if (comp.includes('sap')) {
+        if (tLow.includes('business ai')) return 'https://jobs.smartrecruiters.com/SAP/744000109968962-working-student-f-m-d-product-management-for-sap-business-ai';
+        if (tLow.includes('hana cloud')) return 'https://jobs.smartrecruiters.com/SAPITBusinessSysteme/744000162052409-working-student-w-m-d-sap-hana-cloud-infrastructure-';
+        return `https://jobs.sap.com/search/?q=${encTitle}&locationsearch=Berlin`;
+      }
+      if (comp.includes('knorr-bremse')) return `https://careers.knorr-bremse.com/search/?q=${encTitle}&locationsearch=berlin`;
+      if (comp.includes('siemens energy')) return `https://jobs.siemens-energy.com/careers?query=${encTitle}&location=Berlin`;
+      if (comp.includes('siemens')) return `https://jobs.siemens.com/careers?query=${encTitle}&location=Berlin`;
+      if (comp.includes('deloitte')) return `https://jobs.deloitte.de/search/?q=${encTitle}&locationsearch=Berlin`;
+      if (comp.includes('check24')) return `https://jobs.check24.de/jobs?location=Berlin&query=${encTitle}`;
+      if (comp.includes('deutsche bahn') || comp === 'db') return `https://db.jobs/de-de/suche?keywords=${encTitle}&location=Berlin`;
+      if (comp.includes('tesla')) return `https://www.tesla.com/careers/search/?query=${encTitle}&location=Berlin`;
+      if (comp.includes('enpal')) return `https://jobs.enpal.de/jobs?query=${encTitle}`;
+      if (comp.includes('daimler')) return `https://www.daimlertruck.com/karriere/job-suche/?search=${encTitle}&location=Berlin`;
+      if (comp.includes('databricks')) return `https://www.databricks.com/company/careers?location=Berlin`;
+      if (comp.includes('kpmg')) return `https://kpmg.com/de/de/home/karriere/jobsuche.html?searchField=${encTitle}`;
+      if (comp.includes('pwc')) return `https://karriere.pwc.de/jobs?query=${encTitle}`;
+
+      return null;
+    }
+
+    function getJobCompanySearchUrl(job) {
+      if (!job) return '#';
+      return `https://www.google.com/search?q=${encodeURIComponent((job.company || '') + ' ' + (job.title || '') + ' careers apply')}`;
+    }
+
     function toggleStudentOnlyFilter() {
       onlyStudentLegal = !onlyStudentLegal;
       localStorage.setItem('filter_student_only', onlyStudentLegal ? 'true' : 'false');
@@ -1754,6 +1818,12 @@
                     </span>
                   `}
 
+                  ${getJobDirectApplyUrl(j) ? `
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-teal-50 dark:bg-teal-950/50 text-teal-800 dark:text-teal-300 border border-teal-200 dark:border-teal-800/60" title="Direct Company Careers Portal">
+                      ${t.company_portal_badge || '🏢 Company Site'}
+                    </span>
+                  ` : ''}
+
                   ${isFresh ? `
                     <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-50 dark:bg-amber-950/50 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60">
                       🔥 Neu
@@ -1812,6 +1882,8 @@
       const initial = (job.company || 'C').charAt(0).toUpperCase();
       const isIndeed = (job.source || '').toLowerCase() === 'indeed' || (job.job_url || '').toLowerCase().includes('indeed.com');
       const isDismissed = (job.status || '').toLowerCase() === 'not interested';
+      const directUrl = getJobDirectApplyUrl(job);
+      const companySearchUrl = getJobCompanySearchUrl(job);
 
       // Generate bespoke cover letter with resolved recipient address
       const addr = getResolvedJobAddress(job);
@@ -1993,17 +2065,34 @@
           <!-- Main CTA Action Buttons Bar (Clean, uncluttered, focused) -->
           <div class="flex flex-wrap items-center justify-between gap-2.5 mt-4 pt-3 border-t border-gray-100 dark:border-[#30363d]">
             <div class="flex flex-wrap items-center gap-2.5">
-              <!-- 1. Primary Apply CTA -->
-              <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-xs ${isIndeed ? 'bg-[#003a9b] hover:bg-[#002f7d] text-white' : 'bg-[#0a66c2] hover:bg-[#004182] text-white'}">
-                ${isIndeed ? t.apply_indeed : t.apply_linkedin}
-              </a>
+              ${directUrl ? `
+                <!-- 1. Primary Direct Apply on Company Portal -->
+                <a href="${directUrl}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-sm bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white border border-teal-500/30" title="Apply directly on ${job.company}'s official careers website">
+                  ${t.apply_company}
+                </a>
 
-              <!-- 2. Second Option: Prominent Easy Download CV as PDF -->
+                <!-- 2. Source Aggregator Link (LinkedIn / Indeed) -->
+                <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-3 py-2 rounded-md text-xs font-semibold transition flex items-center gap-1.5 ${isIndeed ? 'bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800/60 hover:bg-sky-100 dark:hover:bg-sky-900/40' : 'bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800/60 hover:bg-blue-100 dark:hover:bg-blue-900/40'}" title="View original listing on ${isIndeed ? 'Indeed' : 'LinkedIn'}">
+                  ${isIndeed ? t.source_indeed : t.source_linkedin}
+                </a>
+              ` : `
+                <!-- 1. Primary Apply CTA -->
+                <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-4 py-2 rounded-md text-xs font-bold transition flex items-center gap-1.5 shadow-xs ${isIndeed ? 'bg-[#003a9b] hover:bg-[#002f7d] text-white' : 'bg-[#0a66c2] hover:bg-[#004182] text-white'}">
+                  ${isIndeed ? t.apply_indeed : t.apply_linkedin}
+                </a>
+
+                <!-- 2. Instant Search on Company Careers Portal -->
+                <a href="${companySearchUrl}" target="_blank" class="px-3 py-2 rounded-md text-xs font-medium bg-gray-100 hover:bg-gray-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-slate-700 transition flex items-center gap-1.5" title="Search ${job.company}'s official careers portal directly">
+                  ${t.search_company}
+                </a>
+              `}
+
+              <!-- 3. Prominent Easy Download CV as PDF -->
               <button onclick="downloadTailoredCvPdf('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white transition flex items-center gap-1.5 shadow-xs hover:shadow" title="${t.download_cv_pdf_tooltip}">
                 <span>${t.btn_download_cv_pdf}</span>
               </button>
 
-              <!-- 3. Copy Cover Letter Text -->
+              <!-- 4. Copy Cover Letter Text -->
               <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3.5 py-2 rounded-md text-xs font-semibold bg-purple-50 hover:bg-purple-100 dark:bg-purple-950/40 dark:hover:bg-purple-900/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/60 transition flex items-center gap-1.5" title="Copy Cover Letter">
                 <span>${t.copy_cl}</span>
               </button>
@@ -2349,6 +2438,8 @@
       const clFormat = localStorage.getItem('cl_format_pref') || 'full';
       const clText = buildTailoredCoverLetter(job, clFormat === 'full');
       const isIndeed = (job.source || '').toLowerCase() === 'indeed' || (job.job_url || '').toLowerCase().includes('indeed.com');
+      const directUrl = getJobDirectApplyUrl(job);
+      const companySearchUrl = getJobCompanySearchUrl(job);
 
       content.innerHTML = `
         <div class="space-y-4">
@@ -2358,9 +2449,21 @@
           </div>
 
           <div class="flex flex-wrap gap-2">
-            <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="flex-1 text-center py-2.5 rounded-md text-xs font-bold ${isIndeed ? 'bg-[#003a9b] text-white' : 'bg-[#0a66c2] text-white'}">
-              ${isIndeed ? '🔷 Auf Indeed bewerben ↗' : '🔗 Auf LinkedIn bewerben ↗'}
-            </a>
+            ${directUrl ? `
+              <a href="${directUrl}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="flex-1 text-center py-2.5 rounded-md text-xs font-bold bg-gradient-to-r from-teal-600 to-emerald-600 text-white">
+                🏢 Direkt auf Website ↗
+              </a>
+              <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="px-3 text-center py-2.5 rounded-md text-xs font-semibold ${isIndeed ? 'bg-[#003a9b] text-white' : 'bg-[#0a66c2] text-white'}">
+                ${isIndeed ? '🔷 Indeed' : '🔗 LinkedIn'}
+              </a>
+            ` : `
+              <a href="${job.job_url || '#'}" target="_blank" onclick="markStatus('${job.id}', 'Applied')" class="flex-1 text-center py-2.5 rounded-md text-xs font-bold ${isIndeed ? 'bg-[#003a9b] text-white' : 'bg-[#0a66c2] text-white'}">
+                ${isIndeed ? '🔷 Auf Indeed bewerben ↗' : '🔗 Auf LinkedIn bewerben ↗'}
+              </a>
+              <a href="${companySearchUrl}" target="_blank" class="px-3 text-center py-2.5 rounded-md text-xs font-semibold bg-gray-200 dark:bg-slate-700 text-gray-800 dark:text-gray-200">
+                🔍 Firmenportal
+              </a>
+            `}
             <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="px-3 py-2.5 rounded-md text-xs font-bold bg-blue-600 text-white">
               📝 Word (.docx)
             </button>
