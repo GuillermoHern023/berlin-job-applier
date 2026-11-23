@@ -75,6 +75,12 @@
       "tags": ["cx_operations", "data_reporting", "ai_automation"],
       "priority": 90,
       "html": "Automated <strong>customer feedback classification and executive reporting across ~260 branch locations</strong> using custom data pipelines, delivering actionable NPS intelligence to leadership across European branches."
+    },
+    {
+      "id": "overall_impact_summary",
+      "tags": ["project_management", "product_management", "ai_automation", "cx_operations", "core", "locked_bottom"],
+      "priority": 175,
+      "html": "Maintained <strong>high-velocity tooling delivery across 9 European markets</strong>, shipping <strong>10 production automation initiatives in 2026 alone (~1,070+ hours saved, 5+ FTE estimated impact)</strong> alongside ongoing voicebot and data governance."
     }
   ],
   "experience": [

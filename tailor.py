@@ -751,8 +751,11 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
         scored_bullets.append((b_score, b))
 
     scored_bullets.sort(key=lambda x: x[0], reverse=True)
-    # Keep top 6 bullets matching SAP CV 1-page A4 standard (3 core 2024-present anchors + 3 tailored tool bullets)
-    chosen_bullets = [b["html"] for _, b in scored_bullets[:6]]
+    # Permanently lock voicebot_rollout as #1, top 4 tailored bullets in the middle, and overall_impact_summary as the concluding #6 bullet
+    top_anchor = [b["html"] for _, b in scored_bullets if b["id"] == "voicebot_rollout"]
+    bottom_anchor = [b["html"] for _, b in scored_bullets if b["id"] == "overall_impact_summary"]
+    middle_tailored = [b["html"] for _, b in scored_bullets if b["id"] not in ("voicebot_rollout", "overall_impact_summary")][:4]
+    chosen_bullets = top_anchor + middle_tailored + bottom_anchor
 
     # Tailor core skills order
     all_skills = list(profile["skills"]["core"])
