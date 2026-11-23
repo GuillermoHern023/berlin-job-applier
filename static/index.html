@@ -523,7 +523,7 @@
       localStorage.setItem('app_lang', 'en');
     }
 
-    const CV_LAYOUT_VERSION = 'v11_executive_auto1_bullets_760k';
+    const CV_LAYOUT_VERSION = 'v12_full_2024_present_tenure_6_bullets';
     if (localStorage.getItem('cv_layout_version') !== CV_LAYOUT_VERSION) {
       for (let i = localStorage.length - 1; i >= 0; i--) {
         const k = localStorage.key(i);
@@ -3151,18 +3151,18 @@
             ? `Guillermo Hernandez\nSöhtstraße 16 · 12203 Berlin\nMobil: +49 176 8513 6597 · E-Mail: guillejhl@gmail.com\n\n${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}\n\nBerlin, ${today}\n\nBewerbung als ${cleanTitle}\n\n`
             : '';
 
-          let deP2 = `In meiner Rolle als Junior Project Manager bei der AUTO1 Group (seit 2024) habe ich allein im Jahr 2026 10 interne Tooling- und Automatisierungs-Initiativen umgesetzt, die über 1.070 Arbeitsstunden (~1,9 FTE/Monat gemessen, geschätzt über 5 FTEs) über 9 europäische Märkte hinweg eingespart haben.`;
+          let deP2 = `In meiner Rolle als Junior Project Manager bei der AUTO1 Group (seit 2024, Aufstieg vom Intern zum Working Student) habe ich den Rollout unseres internationalen KI-Voicebots über 9 europäische Märkte hinweg begleitet (Millionen geroutete Anrufe, +80 % Annahmequote, +50 % Buchungs-Conversion) und eine Suite produktiver interner Tools sowie Workflow-Automatisierungen aufgebaut.`;
           if (isProdOps) {
-            deP2 += ` Dazu gehören ein zentrales KI-gestütztes Google Reviews & Trustpilot-Managementportal für 9 Länder, automatisierte Vertragsgenerierungs-Tools für DE und AT sowie die Skalierung unserer KI-Voicebots.`;
+            deP2 += ` Dazu gehören ein zentrales KI-gestütztes Google Reviews & Trustpilot-Managementportal für 9 Länder, die mehrsprachige 'Compass'-Wissensdatenbank mit KI-Assistent sowie automatisierte Vertragsgenerierungs-Tools für DE und AT.`;
           } else if (isData) {
-            deP2 += ` Dazu gehören quantitative Analysen mit SQL (Redash) und Live-Dashboards, n8n-automatisierte QA-Evaluierungs-Pipelines für 760.000+ Konversationen sowie automatisierte Branch-Feedback-Auswertungen über ~260 Standorte.`;
+            deP2 += ` Dazu gehören quantitative Analysen mit SQL (Redash) und Live-Dashboards in Zusammenarbeit mit 3 Projektmanagern, n8n-automatisierte QA-Evaluierungs-Pipelines über 760.000+ Konversationen sowie automatisierte Branch-Feedback-Auswertungen über ~260 Standorte.`;
           } else {
-            deP2 += ` Dazu gehören die Betreuung der Voicebot-Prompts via Parloa & ElevenLabs, die Einführung der Compass-Wissensdatenbank für 9 Länder und automatisierte n8n-Workflows mit Freshdesk.`;
+            deP2 += ` Dazu gehören die zentrale Steuerung der Voicebot-Prompts und Wissensarchitektur via Parloa & ElevenLabs, die Einführung der Compass-Wissensdatenbank für 9 Länder sowie automatisierte n8n-Workflows mit Freshdesk.`;
           }
 
           return deHeader +
             `Sehr geehrtes Recruiting-Team von ${comp},\n\n` +
-            `mit großem Interesse bewerbe ich mich als ${cleanTitle} bei ${comp}. Durch mein Studium (Bachelor in Digital Product Management, laufender Master in International Business Management) und meine Praxiserfahrung an der Schnittstelle von Product Operations, KI-Automatisierung und Projektmanagement bei der AUTO1 Group bringe ich die ideale Kombination aus analytischer Struktur und hands-on Umsetzungsstärke mit.\n\n` +
+            `mit großem Interesse bewerbe ich mich als ${cleanTitle} bei ${comp}. Durch mein Studium (Bachelor in Digital Product Management, laufender Master in International Business Management) und meine über zweijährige Praxiserfahrung an der Schnittstelle von Product Operations, KI-Automatisierung und Projektmanagement bei der AUTO1 Group bringe ich die ideale Kombination aus analytischer Struktur und hands-on Umsetzungsstärke mit.\n\n` +
             `${deP2}\n\n` +
             `Ich arbeite täglich mit SQL (Redash), Looker Studio, Tableau, REST APIs, Git/GitHub und Low-Code-Workflows, um unstrukturierte Daten in klare Entscheidungen zu übersetzen. Mein früheres Marktforschungsprojekt bei Franz Schneider Brakel (FSB) hat meine Schnittstellenkompetenz zusätzlich geschärft. Ich kommuniziere fließend auf Englisch (C1/C2), Spanisch (Muttersprache) und im Berufsalltag auf Deutsch (B1) und stehe mit 20 Stunden/Woche in Berlin zur Verfügung.\n\n` +
             `Ich freue mich darauf, Ihr Team bei ${comp} tatkräftig zu unterstützen und meine Erfahrungen in einem persönlichen Gespräch zu vertiefen.\n\n` +
@@ -3175,17 +3175,17 @@
         else if (isAiAuto) focusSnippet = "scaling conversational AI systems, retrieval knowledge bases, and workflow automation";
         else if (isData) focusSnippet = "transforming complex, unstructured datasets into reliable KPI dashboards and automated tools";
 
-        let p1 = `I am writing to apply for the ${cleanTitle} role at ${comp}. With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and hands-on experience at AUTO1 Group ${focusSnippet}, I combine analytical rigor with proactive builder execution to deliver immediate value to your team.`;
+        let p1 = `I am writing to apply for the ${cleanTitle} role at ${comp}. With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and over two years of hands-on experience at AUTO1 Group ${focusSnippet}, I combine analytical rigor with proactive builder execution to deliver immediate value to your team.`;
 
-        let p2 = `In my role as Junior Project Manager at AUTO1 Group in Berlin (where I have worked since 2024), I have delivered 10 automation and internal tooling initiatives in 2026 alone—saving over 1,070 hours (~1.9 FTE/month measured, with over 5 FTEs total estimated impact) across 9 European markets. `;
+        let p2 = `In my role as Junior Project Manager at AUTO1 Group in Berlin (since 2024, progressing from Intern to Working Student), I have helped drive the end-to-end rollout and continuous optimization of our AI voice bot across 9 European markets—routing millions of calls, increasing inbound answer rates by over 80%, and lifting call-to-booking conversion by over 50%. `;
         if (isProdOps) {
-          p2 += `This includes designing an AI-assisted Google Reviews & Trustpilot management web portal across 9 markets, scaling conversational voicebots routing millions of calls, and engineering automated contract generation engines across thousands of amendments.`;
+          p2 += `Alongside core multi-market operations, I built a centralized Google Reviews & Trustpilot AI management portal across 9 markets, launched the 'Compass' knowledge base with an AI Assistant, and engineered automated contract generation engines across thousands of amendments.`;
         } else if (isAiAuto) {
-          p2 += `This includes managing voicebot prompting and knowledge architecture across 9 markets using Parloa and ElevenLabs (routing millions of calls), as well as building an internal AI QA web platform with n8n workflow logic that enabled automated bulk-review and quality scoring across 760,000+ customer conversations.`;
+          p2 += `I also manage voicebot prompting and knowledge architecture using Parloa and ElevenLabs across 760,000+ customer conversations, and built an internal AI Conversation QA web platform with n8n workflow logic for automated bulk evaluation and quality scoring.`;
         } else if (isData) {
-          p2 += `This includes querying SQL in Redash and building live dashboards covering 760k+ interactions, automating customer feedback categorization across ~260 branch locations, and creating n8n data pipelines to eliminate manual bottlenecks.`;
+          p2 += `I partner closely with project managers to query complex datasets via SQL (Redash) and build automated company-wide KPI dashboards, while automating customer feedback categorization across ~260 European branch locations and building n8n data pipelines.`;
         } else {
-          p2 += `This includes driving the rollout of our AI voice bot across 9 markets, launching the multi-country 'Compass' knowledge base with an AI Assistant, and engineering automated contract amendment tools across DE and AT.`;
+          p2 += `Alongside partnering with project managers on SQL (Redash) KPI dashboards, I launched the multi-country 'Compass' knowledge base with an AI Assistant, built an n8n AI Conversation QA platform, and engineered automated contract amendment tools across DE and AT.`;
         }
 
         let p3 = `Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean processes. Whether querying SQL in Redash, building live dashboards, or prototyping internal tools with JavaScript/REST APIs, I bridge strategy with execution. Earlier project work at Franz Schneider Brakel (FSB) further sharpened my stakeholder alignment. Fluent in English (C1/C2) and Spanish (native), with professional German (B1), I am available 20 hours/week in Berlin.`;

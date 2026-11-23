@@ -47,8 +47,8 @@ def build_cv_html(
 ) -> str:
     p = profile["personal_info"]
     if not selected_auto1_bullets:
-        # Default top 5 bullets for strict 1-page A4 fit
-        selected_auto1_bullets = [b["html"] for b in profile["auto1_bullet_pool"][:5]]
+        # Default top 6 bullets matching SAP CV 1-page A4 standard
+        selected_auto1_bullets = [b["html"] for b in profile["auto1_bullet_pool"][:6]]
 
     core_skills = custom_core_skills if custom_core_skills else profile["skills"]["core"]
     core_skills_str = " | ".join(core_skills)

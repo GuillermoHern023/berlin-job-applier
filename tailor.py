@@ -751,8 +751,8 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
         scored_bullets.append((b_score, b))
 
     scored_bullets.sort(key=lambda x: x[0], reverse=True)
-    # Keep top 5 bullets so CV fits cleanly on strict 1 A4 page
-    chosen_bullets = [b["html"] for _, b in scored_bullets[:5]]
+    # Keep top 6 bullets matching SAP CV 1-page A4 standard (3 core 2024-present anchors + 3 tailored tool bullets)
+    chosen_bullets = [b["html"] for _, b in scored_bullets[:6]]
 
     # Tailor core skills order
     all_skills = list(profile["skills"]["core"])
@@ -764,34 +764,34 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
     # Build concise, high-impact Cover Letter paragraphs (Strict 1-Page A4 Guarantee ~220 words)
     if cat_id == "ai_automation":
         project_highlight = (
-            "I manage voicebot prompting and knowledge architecture using Parloa and ElevenLabs (routing millions of calls and lifting answer rates to 85%), "
-            "and built an internal AI Conversation QA web platform with n8n workflow logic enabling automated bulk evaluation across 760,000+ customer conversations."
+            "I manage voicebot prompting and knowledge architecture using Parloa and ElevenLabs across 760,000+ customer conversations, "
+            "and built an internal AI Conversation QA web platform with n8n workflow logic enabling automated bulk evaluation and quality scoring across 9 markets."
         )
     elif cat_id == "product_management":
         project_highlight = (
-            "I designed and rolled out an AI-assisted Google Reviews & Trustpilot web portal across 9 markets, "
-            "engineered automated contract generation engines automating thousands of contracts, and scaled conversational voicebots routing millions of calls."
+            "I designed and rolled out a centralized Google Reviews & Trustpilot AI management portal across 9 markets, "
+            "launched the multi-country 'Compass' knowledge base with an AI Assistant, and engineered automated contract generation tools across thousands of amendments."
         )
     elif cat_id == "cx_operations":
         project_highlight = (
-            "I built a centralized Google Reviews & Trustpilot AI management portal across 9 markets, "
+            "I built a centralized Google Reviews & Trustpilot AI management portal across 9 markets with a one-click approval workflow, "
             "automated customer feedback categorization across ~260 branch locations, and engineered multi-market n8n offer email workflows integrated with Freshdesk."
         )
     else:  # project_management default
         project_highlight = (
-            "I drove the rollout and optimization of an AI voice bot across 9 markets, engineered an automated Contract Amendment (Änderungsvertrag) tool "
+            "I partnered with project managers on SQL (Redash) KPI dashboards, engineered an automated Contract Amendment (Änderungsvertrag) tool "
             "for DE and AT automating thousands of contracts, and built an internal AI QA evaluation platform with n8n to streamline cross-market delivery."
         )
 
     paragraphs = [
         (
             f"I am writing to apply for the {job_title} role at {company}. "
-            f"With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and hands-on experience at AUTO1 Group engineering internal tools and workflow automations, "
+            f"With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and over two years of hands-on experience at AUTO1 Group scaling AI operations, data reporting, and internal tooling, "
             f"I combine analytical rigor with proactive builder execution to deliver immediate value to your team."
         ),
         (
-            f"In my role as Junior Project Manager at AUTO1 Group in Berlin (where I have worked since 2024), I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. "
-            f"In 2026 alone, I have delivered 10 automation and internal tooling initiatives that have saved over 1,070 hours (~1.9 FTE/month measured, with over 5 FTEs total estimated impact). "
+            f"In my role as Junior Project Manager at AUTO1 Group in Berlin (since 2024, progressing from Intern to Working Student), I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. "
+            f"I helped drive the end-to-end rollout and continuous optimization of our AI voice bot (routing millions of calls, increasing inbound answer rates by over 80%, and lifting call-to-booking conversion by over 50%), while shipping a suite of production internal tools and workflow automations. "
             f"{project_highlight}"
         ),
         (
