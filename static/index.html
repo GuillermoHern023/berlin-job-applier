@@ -965,7 +965,7 @@
       const pdfTitle = 'Guillermo_Hernandez_Cover_Letter_' + (rawComp || 'Tailored');
 
       if (job && (job.cover_letter_url || job.cover_letter_pdf)) {
-        const fileUrl = (job.cover_letter_url || job.cover_letter_pdf).replace(/^\/?/, '');
+        const fileUrl = (job.cover_letter_url || job.cover_letter_pdf).replace(/^\/?/, '') + '?v=' + Date.now();
         const a = document.createElement('a');
         a.href = fileUrl;
         a.download = pdfTitle + '.pdf';
@@ -991,7 +991,7 @@
               job.cover_letter_pdf = data.bundle.cover_letter_pdf;
               job.cv_url = data.bundle.cv_url;
               job.cv_pdf = data.bundle.cv_pdf;
-              const fileUrl = job.cover_letter_url.replace(/^\/?/, '');
+              const fileUrl = job.cover_letter_url.replace(/^\/?/, '') + '?v=' + Date.now();
               const a = document.createElement('a');
               a.href = fileUrl;
               a.download = pdfTitle + '.pdf';
@@ -2135,9 +2135,14 @@
           ${paragraphTexts.map(p => `<p style="margin-bottom: 11px;">${p}</p>`).join('')}
         </div>
 
-        <div style="margin-top: 16px; line-height: 1.45; font-size: 12.5px; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
+        <div style="margin-top: 20px; line-height: 1.45; font-size: 12.5px; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
           <div>${isEnDoc ? "Sincerely," : "Mit freundlichen Grüßen"}</div>
-          <div style="font-weight: 700; margin-top: 14px; color: #111827;">${senderName}</div>
+          <div style="height: 28px;"></div>
+          <div style="font-weight: 700; color: #111827;">${senderName}</div>
+        </div>
+
+        <div style="margin-top: 24px; font-size: 11px; color: #64748b; border-top: 1px solid #e2e8f0; padding-top: 6px; font-family: Calibri, 'Segoe UI', Arial, sans-serif;">
+          ${isEnDoc ? "Enclosure: Curriculum Vitae" : "Anlagen: Lebenslauf"}
         </div>
       `;
 

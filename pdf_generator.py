@@ -282,7 +282,7 @@ def build_cover_letter_html(
 <style>
   @page {{
     size: A4;
-    margin: 14mm 18mm 14mm 18mm;
+    margin: 18mm 20mm 18mm 20mm;
   }}
   * {{
     box-sizing: border-box;
@@ -291,8 +291,8 @@ def build_cover_letter_html(
   }}
   body {{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 10pt;
-    line-height: 1.45;
+    font-size: 10.1pt;
+    line-height: 1.54;
     color: #1e293b;
     background: #fff;
   }}
@@ -301,11 +301,11 @@ def build_cover_letter_html(
     justify-content: space-between;
     align-items: flex-end;
     border-bottom: 2px solid #0f172a;
-    padding-bottom: 6px;
-    margin-bottom: 14px;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
   }}
   .sender-name {{
-    font-size: 15.5pt;
+    font-size: 16pt;
     font-weight: 700;
     color: #0f172a;
     letter-spacing: -0.2px;
@@ -313,15 +313,15 @@ def build_cover_letter_html(
   .sender-contact {{
     text-align: right;
     font-size: 9pt;
-    line-height: 1.35;
+    line-height: 1.4;
     color: #475569;
   }}
   .meta-row {{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 14px;
-    font-size: 9.5pt;
+    margin-bottom: 16px;
+    font-size: 9.8pt;
     color: #334155;
   }}
   .recipient-info div {{
@@ -329,30 +329,37 @@ def build_cover_letter_html(
   }}
   .job-subject {{
     font-weight: 700;
-    font-size: 10.5pt;
+    font-size: 10.8pt;
     color: #0f172a;
-    margin-top: 5px;
+    margin-top: 6px;
   }}
   .date-col {{
-    font-size: 9pt;
+    font-size: 9.5pt;
     color: #64748b;
   }}
   .salutation {{
     font-weight: 600;
     color: #0f172a;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }}
   .letter-body p {{
-    margin-bottom: 8pt;
+    margin-bottom: 10pt;
     text-align: left;
     color: #334155;
   }}
   .sign-off {{
-    margin-top: 14px;
+    margin-top: 16px;
     color: #334155;
   }}
-  .sign-off p {{
-    margin-bottom: 3px;
+  .signature-space {{
+    height: 30px;
+  }}
+  .enclosures {{
+    margin-top: 22px;
+    font-size: 8.8pt;
+    color: #64748b;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 6px;
   }}
 </style>
 </head>
@@ -384,7 +391,12 @@ def build_cover_letter_html(
 
   <div class="sign-off">
     <p>Sincerely,</p>
+    <div class="signature-space"></div>
     <p><strong>{p["short_name"]}</strong></p>
+  </div>
+
+  <div class="enclosures">
+    Enclosure: Curriculum Vitae
   </div>
 </body>
 </html>
