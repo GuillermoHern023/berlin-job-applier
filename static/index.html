@@ -893,9 +893,12 @@
         .replace(/[^a-zA-Z0-9äöüÄÖÜß_-]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
       const pdfTitle = 'Guillermo_Hernandez_CV_' + (rawComp || 'Tailored');
 
-      // 1. Direct download if backend tailored PDF exists
-      if (job && (job.cv_url || job.cv_pdf)) {
-        const fileUrl = (job.cv_url || job.cv_pdf).replace(/^\/?/, '');
+      const customBulletsJson = localStorage.getItem('job_custom_bullets_' + jobId);
+      const customBullets = customBulletsJson ? JSON.parse(customBulletsJson) : null;
+
+      // 1. Direct download if backend tailored PDF exists and no custom overrides
+      if (!customBullets && job && (job.cv_url || job.cv_pdf)) {
+        const fileUrl = (job.cv_url || job.cv_pdf).replace(/^\/?/, '') + '?v=' + Date.now();
         const a = document.createElement('a');
         a.href = fileUrl;
         a.download = pdfTitle + '.pdf';
@@ -906,9 +909,9 @@
         return;
       }
 
-      if (rawComp.toLowerCase().includes('sap')) {
+      if (!customBullets && rawComp.toLowerCase().includes('sap')) {
         const a = document.createElement('a');
-        a.href = 'files/Guillermo_Hernandez_CV_SAP.pdf';
+        a.href = 'files/Guillermo_Hernandez_CV_SAP.pdf?v=' + Date.now();
         a.download = 'Guillermo_Hernandez_CV_SAP.pdf';
         document.body.appendChild(a);
         a.click();
@@ -924,7 +927,7 @@
           const resp = await fetch(`/api/jobs/${job.id}/tailor`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ user: 'guillermo' })
+            body: JSON.stringify({ user: 'guillermo', custom_bullets: customBullets })
           });
           if (resp.ok) {
             const data = await resp.json();
@@ -933,7 +936,7 @@
               job.cv_pdf = data.bundle.cv_pdf;
               job.cover_letter_url = data.bundle.cover_letter_url;
               job.cover_letter_pdf = data.bundle.cover_letter_pdf;
-              const fileUrl = job.cv_url.replace(/^\/?/, '');
+              const fileUrl = job.cv_url.replace(/^\/?/, '') + '?v=' + Date.now();
               const a = document.createElement('a');
               a.href = fileUrl;
               a.download = pdfTitle + '.pdf';
