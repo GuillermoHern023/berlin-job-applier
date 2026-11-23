@@ -13718,5 +13718,102 @@
         "label": "Learning & Training Budget"
       }
     ]
+  },
+  {
+    "id": "ae30d48fa5",
+    "title": "AI GTM Engineer (f/m/d) B2B Sales",
+    "company": "Berufliche Schulen Potsdam der ASG – Anerkannten Schulgesellschaft mbH",
+    "location": "Berlin, BE, Germany",
+    "job_url": "https://jobs.ionos.de/career/all-jobs/detailed-view/5043758101-ai-gtm-engineer-fmd-b2b-sales",
+    "source": "Indeed",
+    "date_posted": "2026-11-23",
+    "date_found": "2026-11-23 20:16",
+    "salary": "",
+    "description": "At IONOS, the leading European provider of cloud infrastructure, cloud services and hosting services, you will work together with a wide range of teams. We are characterized by open structures, a friendly working culture and flat hierarchies with a strong team spirit. We firmly believe that work and fun are compatible, and offer you the right environment for this. Our constant growth means that we are always looking for new colleagues. Become part of IONOS and grow with us.\n\n  \n\nWant to build the AI systems that run a modern B2B sales team? As our first AI GTM Engineer in Berlin (hybrid), you'll automate the manual work that slows our sellers down and build the tools that find new revenue across IONOS's sister brands. You get startup pace and ownership, backed by corporate-level data, tools and budget, plus a working student to support you from day one.\n\n#### **Tasks**\n\n* Automate RFP and security questionnaire responses with an AI engine grounded in our product, pricing and compliance knowledge.\n* Build signal-based outreach tooling, from account enrichment and scoring to AI research agents that draft personalised outreach for sellers to approve.\n* Give account managers AI insights on upsell potential, churn risk and relationship health, and automate routine customer admin and billing queries.\n* Automate the quarterly relationship overview we send to every client, from data collection to a tailored report that is ready to send.\n* Build internal tracking for revenue, pipeline, billing queries and other key numbers, with alerts when something needs attention.\n\n#### **Qualifications**\n\n* Perseverance and grit: you keep going until a system works and the sales team uses it.\n* Hands-on experience building AI-driven systems for a sales, revenue or growth team, ideally as an AI GTM Engineer.\n* Deep knowledge of current frontier models and techniques such as prompting, RAG, agents, tool use and evals, and where each adds value.\n* Solid coding skills in Python or TypeScript, plus experience with APIs, SQL and automation platforms.\n* Strong analytical thinking and the ability to turn messy CRM, usage and billing data into clear answers.\n* Project management skills to run several builds at once, set priorities and keep stakeholders aligned.\n\n#### **Benefits**\n\n* Hybrid working model in a modern, central Berlin office.\n* Flexible working hours through trust-based working hours.\n* At some locations a subsidized canteen and various free drinks.\n* Modern office space with very good transport connections.\n* Various employee discounts for activities and products.\n* Employee events such as summer and winter parties, as well as workshops.\n* Numerous training and development opportunities.\n* Various health offers, such as sports and health courses.\n\n#### **Job info**\n\nLocation: Berlin\n  \nType: Full-time\n  \nCategory: Sales\n  \nWork experience: Professionals\n  \nReference ID: 1708\n\n##### **About IONOS**\n\nIONOS is the leading European digitalization partner for small and medium-sized businesses (SMB). The company serves around six million customers and operates across 18 markets in Europe and North America, with its services being accessible worldwide. With its Web Presence & Productivity portfolio, IONOS acts as a 'one-stop shop' for all digitalization needs: from domains and web hosting to classic website builders and do-it-yourself solutions, from e-commerce to online marketing tools. In addition, the company offers Cloud Solutions to enterprises who are looking to move to the cloud as their businesses evolve.\n\nWe value diversity and welcome all applications - regardless of, for example, gender, nationality, ethnic or social origin, religion, disability, age as well as sexual orientation and identity, physical characteristics, marital status or any other irrelevant factor subject to applicable law.\n\nIONOS SE\n  \nRecruiting Team IONOS\n  \nHinterm Hauptbahnhof 3-5\n  \nD-76135 Karlsruhe\n  \nJobs@ionos.com",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "ai_automation",
+    "category_label": "AI Operations & Automation",
+    "match_score": 67,
+    "language_req": "English Friendly (B1 OK)",
+    "is_english_friendly": true,
+    "employment_type": "FULL_TIME",
+    "employment_label": "⚠️ Vollzeit (40h/wk - Not Student-Legal)",
+    "is_student_legal": false,
+    "pays_min_16": true,
+    "benefits": [
+      {
+        "category": "remote",
+        "icon": "🏠",
+        "label": "Home Office / Hybrid"
+      },
+      {
+        "category": "food",
+        "icon": "🍕",
+        "label": "Free Drinks, Coffee & Snacks"
+      },
+      {
+        "category": "discounts",
+        "icon": "🛍️",
+        "label": "Corporate Benefits & Discounts"
+      }
+    ],
+    "extracted_pay": "💰 ~€52k–68k/yr (~€25–33/h) (Mid-level)",
+    "matched_keywords": [
+      "ai",
+      "automation",
+      "prompt",
+      "api",
+      "git",
+      "cloud",
+      "agent",
+      "tooling"
+    ],
+    "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, prompt, api, git, cloud.",
+    "commute": {
+      "commute_minutes": 28,
+      "within_limit": true,
+      "badge": "🚇 ~28 min (S1/U9)",
+      "summary": "Estimated transit: ~28 min from Söhtstr. 16 via BVG/S-Bahn",
+      "transit_route": "S1 Lichterfelde West -> BVG (~28 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€52k–68k/yr (~€25–33/h)",
+      "display": "💰 ~€52k–68k/yr (~€25–33/h) (Mid-level)",
+      "range_text": "~€25–33/h (Full-time) · ~€52.000 – €68.000 / year",
+      "monthly_estimate": "~€4.333 – €5.666/mo (= ~€25–33/h)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Professional/Manager",
+      "pays_min_16": true
+    },
+    "direct_apply_url": "https://jobs.ionos.de/career/all-jobs/detailed-view/5043758101-ai-gtm-engineer-fmd-b2b-sales",
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-23)",
+    "applicants_num": 999,
+    "applicants_text": "Direct Portal (No counter)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Managed the <strong>end-to-end rollout, stakeholder alignment, and continuous optimization</strong> of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional product team, routing <strong>millions of calls</strong>, increasing inbound answer rates by <strong>over 80%</strong>, and lifting call-to-booking conversion by <strong>over 50%</strong>.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, voicebot prompting &amp; FAQs, and AI knowledge bases</strong>, coordinating multi-market releases and answer-accuracy improvements across <strong>hundreds of thousands of customer conversations</strong>.",
+        "Scoped operational bottlenecks and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> with <strong>automated workflows and bulk-review evaluation pipelines</strong>, standardizing how cross-market teams audit and benchmark AI quality.",
+        "Partnered with <strong>3 project managers</strong> to track <strong>project milestones and multi-market KPIs</strong>, performing <strong>quantitative analysis on complex datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel to build automated company-wide dashboards.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Built and rolled out a centralized <strong>Google Reviews &amp; Trustpilot web portal</strong> in <strong>Google Apps Script</strong> with template-based smart reply suggestions, aligning operations teams onto a <strong>one-click approval workflow</strong>."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to apply for the AI GTM Engineer (f/m/d) B2B Sales role at Berufliche Schulen Potsdam der ASG – Anerkannten Schulgesellschaft mbH. With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and over two years of hands-on experience at AUTO1 Group scaling AI operations, data reporting, and internal tooling, I combine analytical rigor with proactive builder execution to deliver immediate value to your team.",
+        "In my role as Junior Project Manager at AUTO1 Group in Berlin (since 2024, progressing from Intern to Working Student), I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. I helped drive the end-to-end rollout and continuous optimization of our AI voice bot (routing millions of calls, increasing inbound answer rates by over 80%, and lifting call-to-booking conversion by over 50%), while shipping a suite of production internal tools and workflow automations. I manage AI chatbot and voicebot prompting, FAQs, and knowledge bases across hundreds of thousands of customer conversations, and built an internal AI Conversation QA & Evaluation web tool with automated workflows and bulk-review evaluation pipelines.",
+        "Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean, repeatable processes. I write SQL queries in Redash and build dashboards in Looker Studio, Tableau, and Excel to provide reliable metrics. When off-the-shelf software falls short, I prototype lightweight internal tools using JavaScript and REST APIs. Working in an international Berlin environment, I communicate fluently in English (C1/C2) and Spanish (native), with working German (B1).",
+        "What particularly excites me about Berufliche Schulen Potsdam der ASG – Anerkannten Schulgesellschaft mbH is the opportunity to bring this blend of product operations discipline, SQL analytics, and builder execution to your team in the AI GTM Engineer (f/m/d) B2B Sales role. Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview."
+      ]
+    }
   }
 ]

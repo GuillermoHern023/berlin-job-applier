@@ -13,10 +13,14 @@ JOBS_DB_PATH = DATA_DIR / "jobs_db.json"
 
 DEFAULT_SEARCH_QUERIES = [
     {"search_term": "Working Student Project Management", "location": "Berlin, Germany"},
+    {"search_term": "Werkstudent Projektmanagement", "location": "Berlin, Germany"},
     {"search_term": "Working Student Product Management", "location": "Berlin, Germany"},
-    {"search_term": "Working Student Operations AI", "location": "Berlin, Germany"},
+    {"search_term": "Werkstudent Produktmanagement", "location": "Berlin, Germany"},
+    {"search_term": "Working Student PMO", "location": "Berlin, Germany"},
+    {"search_term": "Working Student Project Coordinator", "location": "Berlin, Germany"},
     {"search_term": "Working Student Business Operations", "location": "Berlin, Germany"},
-    {"search_term": "Working Student Project Manager Remote", "location": "Germany"},
+    {"search_term": "Working Student Venture Development", "location": "Berlin, Germany"},
+    {"search_term": "Working Student Project Management Remote", "location": "Germany"},
 ]
 
 
@@ -103,6 +107,22 @@ def run_job_scrape(
                 t_low = title.lower()
                 if any(bad in t_low for bad in ["senior", "head of", "director", "vp ", "principal", "team lead", "teamleiter"]):
                     continue
+
+                # Exclude pure IT, software developer, infrastructure, hardware, and tech support jobs
+                # (Guillermo is looking for Project Manager, PMO, Product Manager & Business Operations roles)
+                it_exclusions = [
+                    "software engineer", "softwareentwickler", "software developer", "developer", "frontend", "backend",
+                    "full stack", "fullstack", "devops", "cloud engineer", "cloud infrastructure", "infrastructure",
+                    "sap hana", "systemadministrator", "sysadmin", "system engineer", "network engineer",
+                    "first level support", "1st level", "2nd level", "helpdesk", "service desk", "it-support", "it support",
+                    "it operations", "it-administration", "ai research", "deep learning", "machine learning engineer",
+                    "ml engineer", "hardware engineer", "factory design", "gtm engineer", "engineering manager",
+                    "data engineer", "data warehouse", "embedded", "qa tester", "test engineer"
+                ]
+                if any(bad in t_low for bad in it_exclusions):
+                    # Keep only if it explicitly involves project/product management (e.g. IT Project Manager is OK, but IT Support / Dev is NOT)
+                    if not any(pm in t_low for pm in ["project", "projekt", "product", "produkt", "pmo", "coordinator", "koordinator"]):
+                        continue
 
                 dedup_key = f"{company.lower()}|{title.lower()}"
                 jid = make_job_id(company, title, job_url)

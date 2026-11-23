@@ -12,41 +12,82 @@ from pdf_generator import (
 
 
 ROLE_CATEGORIES = {
-    "ai_automation": {
-        "label": "AI Operations & Automation",
+    "project_management": {
+        "label": "Project Management",
         "keywords": [
-            "ai", "artificial intelligence", "automation", "chatbot", "voicebot", "voice bot",
-            "llm", "prompt", "knowledge base", "vector", "vector database", "evaluation",
-            "workflow", "apps script", "low-code", "rest api", "api", "git", "github", "cloud",
-            "bot", "genai", "agent", "automatisierung", "tooling",
+            "project manager", "project management", "projektmanager", "projektmanagement",
+            "pmo", "project coordinator", "projektkoordinator", "project lead", "projektleitung",
+            "project intern", "projektassistenz", "project support", "project delivery", "project portfolio",
+            "stakeholder", "rollout", "agile", "scrum", "kanban", "sprint", "milestone", "coordination",
+            "cross-functional", "governance", "change management", "transformation", "implementation",
+            "initiative", "status tracking", "risk management", "venture development", "strategy & operations",
+            "business analyst", "transformation office", "projektmitarbeiter",
         ],
     },
     "product_management": {
         "label": "Product Management",
         "keywords": [
-            "product manager", "product management", "product owner", "product team", "digital product",
-            "roadmap", "feature", "user story", "ux", "figma", "backlog", "mvp",
-            "product operations", "produktmanagement", "erp", "saas", "evaluation",
+            "product manager", "product management", "produktmanager", "produktmanagement",
+            "product owner", "product team", "digital product", "roadmap", "feature",
+            "user story", "ux", "figma", "backlog", "mvp", "product operations",
+            "erp", "saas", "go-to-market", "gtm", "product rollout", "product lifecycle",
         ],
     },
-    "project_management": {
-        "label": "Project Management",
+    "ai_automation": {
+        "label": "AI & Process Automation",
         "keywords": [
-            "project manager", "project management", "program manager", "pmo", "stakeholder",
-            "coordination", "rollout", "agile", "scrum", "documentation", "cross-functional",
-            "projektmanagement", "implementation", "initiative",
+            "voicebot", "voice bot", "chatbot", "conversational ai", "prompt engineering",
+            "workflow automation", "process automation", "low-code", "n8n", "make.com",
+            "ai enablement", "ai adoption", "automatisierung",
         ],
     },
     "cx_operations": {
         "label": "Business & Data Operations",
         "keywords": [
-            "operations", "customer experience", "cx", "customer service", "quality assurance",
-            "qa", "kpi", "reporting", "dashboard", "sql", "redash", "quantitative", "complex data",
+            "operations", "customer experience", "cx", "quality assurance",
+            "kpi", "reporting", "dashboard", "sql", "redash", "quantitative", "complex data",
             "data analysis", "looker", "tableau", "process improvement", "business operations",
-            "bizops", "freshdesk", "support",
+            "bizops", "operational excellence",
         ],
     },
 }
+
+IT_NON_PM_PATTERNS = [
+    r"first\s*level\s*support",
+    r"1st\s*level",
+    r"2nd\s*level",
+    r"helpdesk",
+    r"service\s*desk",
+    r"it[- ]support",
+    r"it[- ]operations",
+    r"it[- ]administration",
+    r"systemadministrator",
+    r"sysadmin",
+    r"cloud\s*infrastructure",
+    r"infrastructure",
+    r"sap\s*hana\s*cloud",
+    r"software\s*engineer",
+    r"softwareentwickler",
+    r"software\s*developer",
+    r"frontend",
+    r"backend",
+    r"full[- ]?stack",
+    r"devops",
+    r"ai\s*research",
+    r"research\s*assistant",
+    r"deep\s*learning",
+    r"machine\s*learning\s*engineer",
+    r"ml\s*engineer",
+    r"factory\s*design",
+    r"gtm\s*engineer",
+    r"hardware\s*engineer",
+    r"engineering\s*manager",
+    r"data\s*engineer",
+    r"data\s*warehouse",
+    r"embedded",
+    r"qa\s*tester",
+    r"test\s*engineer",
+]
 
 
 def detect_language_requirement(title: str, description: str) -> Tuple[str, int, bool]:
@@ -625,20 +666,47 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
     # 1. Detect primary role category
     cat_scores = {}
     matched_keywords = []
+
+    # Priority check: If title directly names Project Management or Product Management
+    is_pm_title = any(term in title_lower for term in [
+        "project manager", "project management", "projektmanagement", "projektmanager",
+        "pmo", "project coordinator", "projektkoordinator", "project lead", "projektleitung",
+        "project intern", "projektassistenz", "project support", "project portfolio",
+        "venture development", "transformation office", "projektmitarbeiter",
+    ])
+    is_prod_title = any(term in title_lower for term in [
+        "product manager", "product management", "produktmanagement", "produktmanager",
+        "product owner", "product operations",
+    ])
+
+    # Check for pure IT, developer, infrastructure, and technical support positions
+    is_pure_it = False
+    for pat in IT_NON_PM_PATTERNS:
+        if re.search(pat, title_lower):
+            if not is_pm_title:
+                is_pure_it = True
+                break
+
     for cat_id, cat_info in ROLE_CATEGORIES.items():
         score = 0
         for kw in cat_info["keywords"]:
             if kw in title_lower:
-                score += 12
+                score += 35 if cat_id in ("project_management", "product_management") else 12
                 if kw not in matched_keywords:
                     matched_keywords.append(kw)
             elif kw in text_lower:
-                score += 4
+                score += 3
                 if kw not in matched_keywords:
                     matched_keywords.append(kw)
         cat_scores[cat_id] = score
 
-    best_cat_id = max(cat_scores, key=cat_scores.get) if any(cat_scores.values()) else "project_management"
+    if is_pm_title:
+        best_cat_id = "project_management"
+    elif is_prod_title:
+        best_cat_id = "product_management"
+    else:
+        best_cat_id = max(cat_scores, key=cat_scores.get) if any(cat_scores.values()) else "project_management"
+
     best_cat_label = ROLE_CATEGORIES[best_cat_id]["label"]
 
     # 2. Employment Type & Student Legal Check
@@ -646,6 +714,14 @@ def score_and_classify_job(job: Dict[str, Any]) -> Dict[str, Any]:
 
     # Base score incorporates contract compatibility
     base_score = 52 + contract_adj
+
+    # Project & Product Management focus bonus (+15 pts)
+    if is_pm_title or is_prod_title:
+        base_score += 15
+
+    # Pure IT, Infrastructure, Support penalty (-45 pts)
+    if is_pure_it:
+        base_score -= 45
 
     # Add keyword points (capped)
     keyword_bonus = min(25, sum(cat_scores.values()) // 3)
@@ -765,25 +841,25 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
         all_skills.sort(key=lambda s: 0 if ("Product" in s or "Quantitative" in s) else 1)
 
     # Build concise, high-impact Cover Letter paragraphs (Strict 1-Page A4 Guarantee ~220 words)
-    if cat_id == "ai_automation":
+    if cat_id == "project_management":
         project_highlight = (
-            "I manage AI chatbot and voicebot prompting, FAQs, and knowledge bases across hundreds of thousands of customer conversations, "
-            "and built an internal AI Conversation QA & Evaluation web tool with automated workflows and bulk-review evaluation pipelines."
+            "I coordinated multi-market project milestones and cross-functional sprints across 9 countries, "
+            "partnered with PMs to track delivery KPIs using SQL (Redash) dashboards, and standardized project documentation and rollout workflows."
         )
     elif cat_id == "product_management":
         project_highlight = (
-            "I designed and rolled out a centralized Google Reviews & Trustpilot web portal with a one-click approval workflow, "
-            "launched a multi-country AI knowledge base with smart search across 9 markets, and built an internal AI Conversation QA evaluation tool."
+            "I partnered closely with product managers and engineers to scope features, define user requirements, "
+            "and roll out production web tools and AI knowledge bases across 9 European markets."
         )
-    elif cat_id == "cx_operations":
+    elif cat_id == "ai_automation":
+        project_highlight = (
+            "I helped drive the rollout and continuous optimization of our AI voice bot across 9 European markets (routing millions of calls), "
+            "and built automated evaluation pipelines to benchmark quality and performance."
+        )
+    else:  # cx_operations
         project_highlight = (
             "I built a centralized Google Reviews & Trustpilot web portal with template-based smart reply suggestions and a one-click approval workflow, "
             "automated customer feedback classification across hundreds of European branch locations, and developed automated Price-Lead Offer Email workflows via REST APIs."
-        )
-    else:  # project_management default
-        project_highlight = (
-            "I partnered with project managers on SQL (Redash) KPI dashboards, engineered automated contract and document generation tools, "
-            "and built an internal AI Conversation QA & Evaluation web platform to standardize cross-market quality."
         )
 
     paragraphs = [

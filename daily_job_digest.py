@@ -182,11 +182,13 @@ def run_fresh_scrape_if_requested(do_scrape: bool):
             res_g = run_job_scrape(
                 search_terms=[
                     "Working Student Project Management",
+                    "Werkstudent Projektmanagement",
                     "Working Student Product Management",
-                    "Working Student Operations AI",
-                    "Werkstudent IT Projektmanagement",
-                    "Working Student Business Analyst",
-                    "Werkstudent Data Analytics Reporting",
+                    "Werkstudent Produktmanagement",
+                    "Working Student PMO",
+                    "Working Student Project Coordinator",
+                    "Working Student Business Operations",
+                    "Working Student Venture Development",
                 ],
                 location="Berlin, Germany",
                 results_wanted=15,
