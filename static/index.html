@@ -201,7 +201,7 @@
             ✅ Applied (<span id="pillAppliedCount">0</span>)
           </button>
           <button onclick="setFilterStatus('NOT_INTERESTED')" id="tabNotInterested" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#30363d] border border-transparent dark:border-[#30363d] transition">
-            ❌ Not Interested (<span id="pillDismissedCount">0</span>)
+            ❌ Inactive / Closed (<span id="pillDismissedCount">0</span>)
           </button>
           <button onclick="setFilterStatus('ALL')" id="tabAll" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#30363d] border border-transparent dark:border-[#30363d] transition">
             📁 All Jobs (<span id="pillTotalCount">0</span>)
@@ -1792,9 +1792,9 @@
       const commuteFilter = document.getElementById('commuteFilter') ? document.getElementById('commuteFilter').value : 'MAX_70MIN';
 
       // Update counters
-      const activeCount = allJobs.filter(j => !['applied', 'not interested', 'archived', 'rejected'].includes((j.status || '').toLowerCase())).length;
+      const activeCount = allJobs.filter(j => !['applied', 'not interested', 'not available', 'archived', 'rejected'].includes((j.status || '').toLowerCase())).length;
       const appliedCount = allJobs.filter(j => (j.status || '').toLowerCase() === 'applied').length;
-      const dismissedCount = allJobs.filter(j => (j.status || '').toLowerCase() === 'not interested').length;
+      const dismissedCount = allJobs.filter(j => ['not interested', 'not available', 'archived', 'rejected'].includes((j.status || '').toLowerCase())).length;
 
       document.getElementById('pillActiveCount').textContent = activeCount;
       document.getElementById('pillAppliedCount').textContent = appliedCount;
@@ -1804,9 +1804,9 @@
       let filtered = allJobs.filter(j => {
         const st = (j.status || 'New').toLowerCase();
         if (currentStatusFilter === 'ACTIVE') {
-          if (['applied', 'not interested', 'archived', 'rejected'].includes(st)) return false;
+          if (['applied', 'not interested', 'not available', 'archived', 'rejected'].includes(st)) return false;
         } else if (currentStatusFilter === 'NOT_INTERESTED') {
-          if (st !== 'not interested') return false;
+          if (!['not interested', 'not available', 'archived', 'rejected'].includes(st)) return false;
         } else if (currentStatusFilter === 'Applied') {
           if (st !== 'applied') return false;
         }
@@ -1994,11 +1994,15 @@
                     <button onclick="event.stopPropagation(); toggleJobAppliedStatus('${j.id}')" class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 hover:bg-amber-200 dark:bg-amber-950/60 dark:hover:bg-amber-900/60 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700 transition" title="Remove from Applied and move back to To Review">
                       ↩ Remove
                     </button>
+                  ` : (j.status && j.status.toLowerCase() === 'not available' ? `
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 border border-zinc-300 dark:border-zinc-700" title="Job expired, closed, or no longer accepting applications">
+                      ⛔ Not Available
+                    </span>
                   ` : (j.status && j.status !== 'New' ? `
                     <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 border border-transparent dark:border-[#30363d]">
                       ${j.status}
                     </span>
-                  ` : '')}
+                  ` : ''))}
                 </div>
 
                 <div class="text-[11px] text-gray-500 dark:text-gray-400 mt-2 line-clamp-1">
@@ -2045,7 +2049,7 @@
 
       const initial = (job.company || 'C').charAt(0).toUpperCase();
       const isIndeed = (job.source || '').toLowerCase() === 'indeed' || (job.job_url || '').toLowerCase().includes('indeed.com');
-      const isDismissed = (job.status || '').toLowerCase() === 'not interested';
+      const isDismissed = ['not interested', 'not available'].includes((job.status || '').toLowerCase());
       const directUrl = getJobDirectApplyUrl(job);
       const companySearchUrl = getJobCompanySearchUrl(job);
 
@@ -2280,7 +2284,7 @@
               `}
 
               <select onchange="markStatus('${job.id}', this.value)" class="bg-gray-50 dark:bg-[#0d1117] border border-gray-200 dark:border-[#30363d] rounded-md px-2.5 py-1.5 text-xs text-gray-700 dark:text-gray-200 font-medium">
-                ${['New', 'Ready to Apply', 'Applied', 'Interview', 'Not Interested'].map(s => `<option value="${s}" ${job.status === s ? 'selected' : ''}>${s}</option>`).join('')}
+                ${['New', 'Ready to Apply', 'Applied', 'Interview', 'Not Available', 'Not Interested'].map(s => `<option value="${s}" ${job.status === s ? 'selected' : ''}>${s}</option>`).join('')}
               </select>
 
               ${isDismissed ? `
@@ -3243,6 +3247,15 @@
           body: JSON.stringify({ user: activeUser, status })
         });
       }
+
+      if (status.toLowerCase() === 'not available') {
+        showToast(currentLang === 'en' ? '⛔ Marked as Not Available (Moved to Inactive)' : '⛔ Als nicht mehr verfügbar markiert');
+      } else if (status.toLowerCase() === 'not interested') {
+        showToast(currentLang === 'en' ? '✕ Marked as Not Interested' : '✕ Als nicht interessiert markiert');
+      } else if (status === 'New') {
+        showToast(currentLang === 'en' ? '↩ Restored to To Review' : '↩ Zurück zu Zu Prüfen verschoben');
+      }
+
       renderJobs();
     }
 
