@@ -765,22 +765,22 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
     if cat_id == "ai_automation":
         project_highlight = (
             "I manage voicebot prompting and knowledge architecture using Parloa and ElevenLabs (routing millions of calls and lifting answer rates to 85%), "
-            "and built an internal AI Conversation QA web tool with n8n workflow logic enabling automated bulk-review of 21,833+ conversations."
+            "and built an internal AI Conversation QA web platform with n8n workflow logic enabling automated bulk evaluation across 760,000+ customer conversations."
         )
     elif cat_id == "product_management":
         project_highlight = (
-            "I designed and rolled out an AI-assisted Google Reviews & Trustpilot web portal across 9 markets saving ~443 hours (~1.2 FTE/month), "
-            "engineered automated contract generation engines saving 190+ hours on 2,864 contracts, and scaled conversational voicebots routing millions of calls."
+            "I designed and rolled out an AI-assisted Google Reviews & Trustpilot web portal across 9 markets, "
+            "engineered automated contract generation engines automating thousands of contracts, and scaled conversational voicebots routing millions of calls."
         )
     elif cat_id == "cx_operations":
         project_highlight = (
-            "I built a centralized Google Reviews & Trustpilot AI management portal saving ~443 hours (~1.2 FTE/month), "
+            "I built a centralized Google Reviews & Trustpilot AI management portal across 9 markets, "
             "automated customer feedback categorization across ~260 branch locations, and engineered multi-market n8n offer email workflows integrated with Freshdesk."
         )
     else:  # project_management default
         project_highlight = (
             "I drove the rollout and optimization of an AI voice bot across 9 markets, engineered an automated Contract Amendment (Änderungsvertrag) tool "
-            "saving 190+ hours across 2,864 contracts, and built an internal AI QA evaluation platform with n8n to streamline cross-market delivery."
+            "for DE and AT automating thousands of contracts, and built an internal AI QA evaluation platform with n8n to streamline cross-market delivery."
         )
 
     paragraphs = [
