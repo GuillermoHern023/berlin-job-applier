@@ -251,9 +251,9 @@
     <div class="bg-white dark:bg-[#161b22] border-t border-gray-200 dark:border-[#30363d] rounded-t-2xl max-h-[92vh] flex flex-col overflow-hidden shadow-2xl">
       <div class="p-3 border-b border-gray-200 dark:border-[#30363d] flex items-center justify-between bg-gray-50 dark:bg-[#0d1117]">
         <button onclick="closeMobileDetail()" class="text-xs font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1">
-          ← Zurück zur Liste
+          ← Back to Job List
         </button>
-        <div class="text-xs font-medium text-gray-500 dark:text-gray-400" id="mobileModalJobCount">Job-Detail</div>
+        <div class="text-xs font-medium text-gray-500 dark:text-gray-400" id="mobileModalJobCount">Job Details</div>
         <button onclick="closeMobileDetail()" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 font-bold text-lg">✕</button>
       </div>
       <div class="flex-1 overflow-y-auto p-4" id="mobileDetailContent"></div>
@@ -266,9 +266,9 @@
       <div class="flex items-center justify-between border-b border-gray-200 dark:border-[#30363d] pb-3">
         <div>
           <h2 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
-            <span>⚡ 1-Klick Autofill &amp; CV Vorab-Hinterlegung</span>
+            <span>⚡ 1-Click Autofill &amp; CV Pre-Upload</span>
           </h2>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">So sparst du Zeit und bewirbst dich in 3 Sekunden</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Save time and apply to roles in 3 seconds</p>
         </div>
         <button onclick="closeAutofillModal()" class="text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 text-lg font-bold">✕</button>
       </div>
@@ -276,45 +276,42 @@
       <div class="space-y-4 text-xs text-gray-700 dark:text-gray-300">
         <div class="p-4 rounded-xl bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800/50 space-y-2">
           <div class="font-bold text-blue-900 dark:text-blue-200 text-sm flex items-center gap-1.5">
-            <span>🔷 1. Für Indeed: Lebenslauf einmal hinterlegen</span>
+            <span>🔷 1. For Indeed: Upload Master CV Once</span>
           </div>
           <p class="leading-relaxed">
-            Lade deinen neuen 1-Seiten-Master-Lebenslauf <strong>einmalig</strong> in deinem Indeed-Profil hoch. Danach sind alle Indeed-Bewerbungen sofort vorab ausgefüllt:
+            Upload your new 1-page Master CV <strong>once</strong> to your Indeed profile. After that, all Indeed applications are instant 1-click apply:
           </p>
           <div class="pt-1 flex flex-wrap gap-2">
             <a href="https://de.indeed.com/profile" target="_blank" class="px-3 py-1.5 rounded-md bg-[#003a9b] hover:bg-[#002f7d] text-white font-semibold transition flex items-center gap-1.5">
-              <span>🚀 Zu deinem Indeed-Profil ↗</span>
+              <span>🚀 Go to your Indeed profile ↗</span>
             </a>
             <a id="modalDownloadMasterBtn" href="files/Guillermo_Hernandez_CV_Master.pdf" download class="px-3 py-1.5 rounded-md bg-white dark:bg-[#21262d] hover:bg-gray-50 dark:hover:bg-[#30363d] text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-[#30363d] font-semibold transition">
-              📄 Master-Lebenslauf herunterladen
+              📄 Download Master CV (PDF)
             </a>
           </div>
         </div>
 
         <div class="p-4 rounded-xl bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800/50 space-y-2">
           <div class="font-bold text-purple-900 dark:text-purple-200 text-sm flex items-center gap-1.5">
-            <span>🪄 2. Für andere Portale (Personio, Join.com, Workday)</span>
+            <span>🪄 2. For other portals (Workday, SmartRecruiters, Personio, Greenhouse)</span>
           </div>
           <p class="leading-relaxed">
-            Ziehe diesen Button einfach in deine <strong>Browser-Lesezeichenleiste</strong> (Chrome, Safari, Edge):
+            Simply drag this button into your <strong>Browser Bookmarks Bar</strong> (Chrome, Safari, Edge):
           </p>
           <div class="p-3 bg-white dark:bg-[#0d1117] rounded-lg border border-purple-200 dark:border-purple-800/60 text-center my-1.5">
             <a id="autofillBookmarkletLink" href="#" class="inline-block px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-95 text-white font-bold rounded shadow cursor-grab text-xs">
-              ⚡ Guillermo 1-Klick Autofill (In Lesezeichenleiste ziehen)
+              ⚡ Guillermo 1-Click Autofill (Drag to Bookmarks Bar)
             </a>
           </div>
           <p class="text-[11px] text-gray-500 dark:text-gray-400">
-            Klicke auf einem beliebigen Online-Formular auf dieses Lesezeichen: Es füllt Name, E-Mail, Telefon und Adresse automatisch in 1 Millisekunde aus!
+            Click this bookmark on any online job application: It autofills your Name, Email, Phone, and Address automatically in 1 millisecond!
           </p>
         </div>
       </div>
 
       <div class="flex justify-end pt-2 border-t border-gray-200 dark:border-[#30363d]">
         <button onclick="closeAutofillModal()" class="px-4 py-1.5 rounded-md bg-gray-100 dark:bg-[#21262d] hover:bg-gray-200 dark:hover:bg-[#30363d] text-gray-700 dark:text-gray-300 font-medium text-xs transition">
-          Schließen
-        </button>
-      </div>
-          Schließen
+          Close
         </button>
       </div>
     </div>
@@ -1139,7 +1136,9 @@
       }
 
       navigator.clipboard.writeText(textToCopy).then(() => {
-        alert('📋 Anschreiben-Text wurde in die Zwischenablage kopiert!\n\nGoogle Docs öffnet sich jetzt in einem neuen Tab. Drücke dort einfach Strg + V (bzw. Cmd + V), um den vollständigen formatierten Text einzufügen!');
+        alert(currentLang === 'en' 
+          ? '📋 Cover letter text copied to clipboard!\n\nGoogle Docs is opening in a new tab. Simply press Ctrl+V (or Cmd+V) there to paste the formatted text!' 
+          : '📋 Anschreiben-Text wurde in die Zwischenablage kopiert!\n\nGoogle Docs öffnet sich jetzt in einem neuen Tab. Drücke dort einfach Strg + V (bzw. Cmd + V), um den vollständigen formatierten Text einzufügen!');
         window.open('https://docs.new', '_blank');
       }).catch(() => {
         window.open('https://docs.new', '_blank');
@@ -1499,7 +1498,7 @@
         const icon = document.getElementById('moreJobsBtnIcon');
         const txt = document.getElementById('moreJobsBtnText');
         if (icon) icon.textContent = '⏳';
-        if (txt) txt.textContent = 'Suche auf Indeed...';
+        if (txt) txt.textContent = currentLang === 'en' ? 'Searching portals...' : 'Suche auf Indeed...';
         btn.disabled = true;
 
         try {
@@ -1513,13 +1512,15 @@
             })
           });
           const data = await res.json();
-          alert(`✅ Suche abgeschlossen! +${data.added_count || 0} neue Stellen wurden gefunden und zu deinem Feed hinzugefügt.`);
+          alert(currentLang === 'en'
+            ? `✅ Search complete! +${data.added_count || 0} fresh jobs were found and added to your feed.`
+            : `✅ Suche abgeschlossen! +${data.added_count || 0} neue Stellen wurden gefunden und zu deinem Feed hinzugefügt.`);
           loadLiveState();
         } catch (e) {
           openScoutModal();
         } finally {
           if (icon) icon.textContent = '🔍';
-          if (txt) txt.textContent = 'Mehr Jobs finden (+50)';
+          if (txt) txt.textContent = I18N[currentLang]?.find_more_jobs || (currentLang === 'en' ? 'Find More Jobs (+50)' : 'Mehr Jobs finden (+50)');
           btn.disabled = false;
         }
       } else {
@@ -1983,7 +1984,7 @@
 
                   ${isFresh ? `
                     <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-50 dark:bg-amber-950/50 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60">
-                      🔥 Neu
+                      🔥 ${currentLang === 'en' ? 'New' : 'Neu'}
                     </span>
                   ` : ''}
 
@@ -2336,10 +2337,10 @@
             <div class="flex flex-wrap items-center gap-1.5 text-xs">
               <!-- Language Toggle -->
               <div class="inline-flex items-center bg-gray-100 dark:bg-[#21262d] p-0.5 rounded-lg border border-gray-200 dark:border-[#30363d] text-[11px] font-semibold">
-                <button onclick="setCoverLetterLanguage('${job.id}', 'de')" class="px-2 py-0.5 rounded transition ${clLang === 'de' ? 'bg-white dark:bg-[#30363d] text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="Auf Deutsch anzeigen">
+                <button onclick="setCoverLetterLanguage('${job.id}', 'de')" class="px-2 py-0.5 rounded transition ${clLang === 'de' ? 'bg-white dark:bg-[#30363d] text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="${currentLang === 'en' ? 'Show German version (for submission)' : 'Auf Deutsch anzeigen'}">
                   🇩🇪 DE
                 </button>
-                <button onclick="setCoverLetterLanguage('${job.id}', 'en')" class="px-2 py-0.5 rounded transition ${clLang === 'en' ? 'bg-white dark:bg-[#30363d] text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="English translation">
+                <button onclick="setCoverLetterLanguage('${job.id}', 'en')" class="px-2 py-0.5 rounded transition ${clLang === 'en' ? 'bg-white dark:bg-[#30363d] text-purple-900 dark:text-purple-200 shadow-2xs font-bold' : 'text-gray-500 dark:text-gray-400'}" title="${currentLang === 'en' ? 'Show English version (for preview)' : 'Englische Übersetzung anzeigen'}">
                   🇬🇧 EN
                 </button>
               </div>
@@ -2375,7 +2376,7 @@
           </div>
 
           <div class="shrink-0 text-[11px] text-gray-500 dark:text-gray-400 mt-3 pb-6 text-center">
-            💡 Tipp: Du kannst jeden Text direkt im Dokument bearbeiten – Änderungen werden automatisch im Browser gespeichert!
+            ${currentLang === 'en' ? '💡 Tip: You can click anywhere in the document to edit text directly — changes are automatically saved in your browser!' : '💡 Tipp: Du kannst jeden Text direkt im Dokument bearbeiten – Änderungen werden automatisch im Browser gespeichert!'}
           </div>
 
         </div>
@@ -2520,10 +2521,10 @@
                   <span>${t.address_card_title}</span>
                 </div>
                 <div class="flex items-center gap-1.5">
-                  <button onclick="copyRecipientAddress('${job.id}')" class="px-2.5 py-1 rounded bg-white dark:bg-[#21262d] border border-purple-300 dark:border-purple-700 text-purple-800 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-[#30363d] text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="Nur die Firmenadresse in die Zwischenablage kopieren">
+                  <button onclick="copyRecipientAddress('${job.id}')" class="px-2.5 py-1 rounded bg-white dark:bg-[#21262d] border border-purple-300 dark:border-purple-700 text-purple-800 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-[#30363d] text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="${currentLang === 'en' ? 'Copy company address to clipboard' : 'Nur die Firmenadresse in die Zwischenablage kopieren'}">
                     <span>${t.copy_address_only}</span>
                   </button>
-                  <button onclick="toggleEditAddress('${job.id}')" id="editAddrBtn_${job.id}" class="px-2.5 py-1 rounded bg-white dark:bg-[#21262d] border border-gray-300 dark:border-[#30363d] text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#30363d] text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="Adresse bearbeiten">
+                  <button onclick="toggleEditAddress('${job.id}')" id="editAddrBtn_${job.id}" class="px-2.5 py-1 rounded bg-white dark:bg-[#21262d] border border-gray-300 dark:border-[#30363d] text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#30363d] text-[11px] font-semibold flex items-center gap-1 transition shadow-2xs" title="${currentLang === 'en' ? 'Edit address' : 'Adresse bearbeiten'}">
                     <span>${t.edit_address}</span>
                   </button>
                 </div>
@@ -2666,32 +2667,32 @@
           <div class="flex flex-wrap gap-2">
             ${directUrl ? `
               <a href="${directUrl}" target="_blank" class="flex-1 text-center py-2.5 rounded-md text-xs font-bold bg-gradient-to-r from-teal-600 to-emerald-600 text-white">
-                🏢 Direkt auf Website ↗
+                🏢 ${currentLang === 'en' ? 'Direct on Website ↗' : 'Direkt auf Website ↗'}
               </a>
               <a href="${job.job_url || '#'}" target="_blank" class="px-3 text-center py-2.5 rounded-md text-xs font-semibold ${isIndeed ? 'bg-[#003a9b] text-white' : 'bg-[#0a66c2] text-white'}">
                 ${isIndeed ? '🔷 Indeed' : '🔗 LinkedIn'}
               </a>
             ` : `
               <a href="${job.job_url || '#'}" target="_blank" class="flex-1 text-center py-2.5 rounded-md text-xs font-bold ${isIndeed ? 'bg-[#003a9b] text-white' : 'bg-[#0a66c2] text-white'}">
-                ${isIndeed ? '🔷 Auf Indeed bewerben ↗' : '🔗 Auf LinkedIn bewerben ↗'}
+                ${isIndeed ? (currentLang === 'en' ? '🔷 Apply on Indeed ↗' : '🔷 Auf Indeed bewerben ↗') : (currentLang === 'en' ? '🔗 Apply on LinkedIn ↗' : '🔗 Auf LinkedIn bewerben ↗')}
               </a>
               <a href="${companySearchUrl}" target="_blank" class="px-3 text-center py-2.5 rounded-md text-xs font-semibold bg-gray-200 dark:bg-slate-700 text-gray-800 dark:text-gray-200">
-                🔍 Firmenportal
+                🔍 ${currentLang === 'en' ? 'Company Portal' : 'Firmenportal'}
               </a>
             `}
             <button onclick="downloadCoverLetterAsDocx('${job.id}')" class="px-3 py-2.5 rounded-md text-xs font-bold bg-blue-600 text-white">
               📝 Word (.docx)
             </button>
             <button onclick="copyGeneratedCoverLetter('${job.id}')" class="px-3 py-2.5 rounded-md text-xs font-bold bg-purple-600 text-white">
-              📋 Kopieren
+              📋 ${currentLang === 'en' ? 'Copy Text' : 'Kopieren'}
             </button>
             ${(job.status || '').toLowerCase() === 'applied' ? `
               <button onclick="toggleJobAppliedStatus('${job.id}'); closeMobileDetail();" class="px-3 py-2.5 rounded-md text-xs font-bold bg-amber-500 text-white flex-1">
-                ↩ Aus 'Beworben' entfernen
+                ↩ ${currentLang === 'en' ? 'Remove from Applied' : "Aus 'Beworben' entfernen"}
               </button>
             ` : `
               <button onclick="toggleJobAppliedStatus('${job.id}'); closeMobileDetail();" class="px-3 py-2.5 rounded-md text-xs font-bold bg-emerald-600 text-white flex-1">
-                ✅ Als beworben markieren
+                ✅ ${currentLang === 'en' ? 'Mark as Applied' : 'Als beworben markieren'}
               </button>
             `}
           </div>
@@ -2699,9 +2700,9 @@
           <!-- Mobile Address Card -->
           <div class="bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800 rounded-lg p-3 space-y-1.5 text-xs">
             <div class="flex items-center justify-between">
-              <span class="font-bold text-purple-900 dark:text-purple-200">🏢 Firmenanschrift:</span>
+              <span class="font-bold text-purple-900 dark:text-purple-200">🏢 ${currentLang === 'en' ? 'Company Address:' : 'Firmenanschrift:'}</span>
               <button onclick="copyRecipientAddress('${job.id}')" class="px-2 py-0.5 rounded bg-white dark:bg-slate-800 border border-purple-300 text-[11px] font-semibold text-purple-700 dark:text-purple-300">
-                📋 Nur Adresse kopieren
+                📋 ${currentLang === 'en' ? 'Copy Address Only' : 'Nur Adresse kopieren'}
               </button>
             </div>
             <div class="text-gray-800 dark:text-gray-200 font-mono text-[11px] bg-white/80 dark:bg-slate-900/60 p-2 rounded">
@@ -2714,13 +2715,13 @@
 
           <div class="space-y-2">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-purple-900 dark:text-purple-200">✍️ Anschreiben (DIN 5008)</span>
+              <span class="text-xs font-bold text-purple-900 dark:text-purple-200">✍️ ${currentLang === 'en' ? 'Cover Letter (DIN 5008)' : 'Anschreiben (DIN 5008)'}</span>
             </div>
             <textarea id="clDetailTextarea" rows="10" class="w-full p-2.5 bg-gray-50 dark:bg-slate-900 border border-gray-300 dark:border-slate-700 rounded text-xs text-gray-800 dark:text-gray-200">${clText}</textarea>
           </div>
 
           <div class="space-y-1 text-xs text-gray-700 dark:text-gray-300">
-            <div class="font-bold">📋 Beschreibung</div>
+            <div class="font-bold">📋 ${currentLang === 'en' ? 'Description' : 'Beschreibung'}</div>
             <div class="max-h-60 overflow-y-auto whitespace-pre-line text-xs text-gray-600 dark:text-gray-400">${job.description || ''}</div>
           </div>
         </div>
@@ -2882,9 +2883,9 @@
       const addr = getResolvedJobAddress(job);
       const formatted = `${addr.company}\n${addr.department}\n${addr.street}\n${addr.zipCity}`;
       navigator.clipboard.writeText(formatted).then(() => {
-        alert('🏢 Firmenanschrift in die Zwischenablage kopiert:\n\n' + formatted);
+        alert(currentLang === 'en' ? ('🏢 Company address copied to clipboard:\n\n' + formatted) : ('🏢 Firmenanschrift in die Zwischenablage kopiert:\n\n' + formatted));
       }).catch(() => {
-        alert('Kopiert:\n' + formatted);
+        alert(currentLang === 'en' ? ('Copied:\n' + formatted) : ('Kopiert:\n' + formatted));
       });
     }
 
@@ -2911,7 +2912,7 @@
       const addr = { company, department, street, zipCity };
       localStorage.setItem('job_custom_addr_' + jobId, JSON.stringify(addr));
       localStorage.removeItem('job_doc_content_' + jobId);
-      showToast('💾 Firmenanschrift gespeichert & im Anschreiben aktualisiert!');
+      showToast(currentLang === 'en' ? '💾 Company address saved & updated in cover letter!' : '💾 Firmenanschrift gespeichert & im Anschreiben aktualisiert!');
 
       const allJobs = getActiveJobs();
       const job = allJobs.find(j => j.id === jobId);
@@ -3104,7 +3105,7 @@
       const blob = await Packer.toBlob(doc);
       const cleanComp = (compName || "Firma").replace(/[^a-zA-Z0-9_-]/g, '_').substring(0, 30);
       const cleanUser = "Guillermo_Hernandez";
-      const filename = `${cleanUser}_Anschreiben_${cleanComp}.docx`;
+      const filename = `${cleanUser}_Cover_Letter_${cleanComp}.docx`;
 
       saveBlobAs(blob, filename);
     }
@@ -3300,7 +3301,7 @@
     }
 
     function openAutofillModal() {
-      const bookmarkletCode = "javascript:(function(){const info={firstName:'Guillermo',lastName:'Hernandez Lopez',fullName:'Guillermo Hernandez',email:'guillejhl@gmail.com',phone:'+4917685136597',city:'Berlin',zip:'12203',linkedin:'https://www.linkedin.com/in/guillermojosehernandezlopez/',hours:'20',start:'Ab sofort'};document.querySelectorAll('input,textarea,select').forEach(el=>{const n=(el.name||el.id||el.placeholder||el.getAttribute('aria-label')||'').toLowerCase();if(!el.value){if(n.includes('first')||n.includes('vorname'))el.value=info.firstName;else if(n.includes('last')||n.includes('nachname'))el.value=info.lastName;else if(n.includes('name')&&!n.includes('user'))el.value=info.fullName;else if(n.includes('mail'))el.value=info.email;else if(n.includes('phone')||n.includes('tel')||n.includes('mobil'))el.value=info.phone;else if(n.includes('city')||n.includes('stadt')||n.includes('ort'))el.value=info.city;else if(n.includes('zip')||n.includes('plz'))el.value=info.zip;else if(n.includes('linkedin'))el.value=info.linkedin;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));}});alert('✨ Formulardaten erfolgreich ausgefüllt!');})();";
+      const bookmarkletCode = "javascript:(function(){const info={firstName:'Guillermo',lastName:'Hernandez Lopez',fullName:'Guillermo Hernandez',email:'guillejhl@gmail.com',phone:'+4917685136597',city:'Berlin',zip:'12203',linkedin:'https://www.linkedin.com/in/guillermojosehernandezlopez/',hours:'20',start:'Immediately'};document.querySelectorAll('input,textarea,select').forEach(el=>{const n=(el.name||el.id||el.placeholder||el.getAttribute('aria-label')||'').toLowerCase();if(!el.value){if(n.includes('first')||n.includes('vorname'))el.value=info.firstName;else if(n.includes('last')||n.includes('nachname'))el.value=info.lastName;else if(n.includes('name')&&!n.includes('user'))el.value=info.fullName;else if(n.includes('mail'))el.value=info.email;else if(n.includes('phone')||n.includes('tel')||n.includes('mobil'))el.value=info.phone;else if(n.includes('city')||n.includes('stadt')||n.includes('ort'))el.value=info.city;else if(n.includes('zip')||n.includes('plz'))el.value=info.zip;else if(n.includes('linkedin'))el.value=info.linkedin;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));}});alert('✨ Application fields filled successfully!');})();";
       const bLink = document.getElementById('autofillBookmarkletLink');
       if (bLink) {
         bLink.href = bookmarkletCode;
@@ -3322,9 +3323,9 @@
       <div class="flex items-center justify-between border-b border-gray-200 dark:border-slate-800 pb-3">
         <div>
           <h2 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
-            <span>🚀 Frische Jobs auf Knopfdruck suchen</span>
+            <span>🚀 Find Fresh Jobs Instantly</span>
           </h2>
-          <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Automatischer 24/7-Suchzyklus &amp; Sofort-Suche</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Automated 24/7 search cycle &amp; on-demand scrape</p>
         </div>
         <button onclick="closeScoutModal()" class="text-gray-400 hover:text-gray-700 dark:hover:text-white text-lg font-bold">✕</button>
       </div>
@@ -3332,34 +3333,34 @@
       <div class="space-y-3 text-xs text-gray-700 dark:text-gray-300">
         <div class="p-3.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 space-y-1.5">
           <div class="font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5">
-            <span>🔄 Automatischer 24/7 Zyklus (3x täglich aktiv)</span>
+            <span>🔄 Automated 24/7 Cycle (Active 3x Daily)</span>
           </div>
           <p class="leading-relaxed">
-            GitHub Actions durchsucht <strong>jeden Tag um 08:00, 14:00 und 20:00 Uhr</strong> automatisch Indeed &amp; LinkedIn, <strong>löscht Stellen die älter als 10 Tage sind</strong>, und bringt neue Jobs an die Spitze des Feeds – ganz unabhängig davon, ob dein PC an ist!
+            GitHub Actions automatically searches Indeed &amp; LinkedIn <strong>every day at 08:00, 14:00, and 20:00 CET</strong>, <strong>purges postings older than 10 days</strong>, and brings fresh matching jobs to the top of your feed — whether your computer is on or off!
           </p>
         </div>
 
         <div class="p-3.5 rounded-lg bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/60 space-y-2">
           <div class="font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5">
-            <span>⚡ Jetzt sofort frische Stellen suchen</span>
+            <span>⚡ Search for Fresh Jobs Right Now</span>
           </div>
           <p class="leading-relaxed">
-            Du möchtest nicht bis zum nächsten Zeitplan warten? Klicke einfach auf den Button unten, um die Cloud-Suche <strong>jetzt sofort manuell zu starten</strong>:
+            Don't want to wait for the next scheduled run? Click below to launch the cloud search <strong>manually right now</strong>:
           </p>
           <div class="pt-1">
             <a href="https://github.com/GuillermoHern023/berlin-job-applier/actions/workflows/daily_job_applier.yml" target="_blank" class="w-full text-center py-2.5 px-4 rounded-md bg-[#003a9b] hover:bg-[#002f7d] text-white font-bold transition flex items-center justify-center gap-2 shadow-sm text-xs">
-              <span>🚀 Cloud-Suche jetzt starten (GitHub Action) ↗</span>
+              <span>🚀 Launch Cloud Search (GitHub Action) ↗</span>
             </a>
           </div>
           <p class="text-[11px] text-gray-500 dark:text-gray-400 text-center">
-            (Dort einfach auf <strong>"Run workflow"</strong> klicken &bull; In 2 Minuten ist dein Dashboard aktualisiert!)
+            (Simply click <strong>"Run workflow"</strong> there • Your dashboard updates automatically in ~2 minutes!)
           </p>
         </div>
       </div>
 
       <div class="flex justify-end pt-2 border-t border-gray-200 dark:border-slate-800">
         <button onclick="closeScoutModal()" class="px-4 py-1.5 rounded-md bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-300 font-medium text-xs">
-          Schließen
+          Close
         </button>
       </div>
     </div>
