@@ -751,11 +751,11 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
         scored_bullets.append((b_score, b))
 
     scored_bullets.sort(key=lambda x: x[0], reverse=True)
-    # Permanently lock voicebot_rollout as #1, top 4 tailored bullets in the middle, and overall_impact_summary as the concluding #6 bullet
-    top_anchor = [b["html"] for _, b in scored_bullets if b["id"] == "voicebot_rollout"]
-    bottom_anchor = [b["html"] for _, b in scored_bullets if b["id"] == "overall_impact_summary"]
-    middle_tailored = [b["html"] for _, b in scored_bullets if b["id"] not in ("voicebot_rollout", "overall_impact_summary")][:4]
-    chosen_bullets = top_anchor + middle_tailored + bottom_anchor
+    # Permanently lock voicebot_rollout as #1 and faq_voicebot_maintenance as #2, followed by top 4 tailored concrete project bullets
+    b1 = [b["html"] for _, b in scored_bullets if b["id"] == "voicebot_rollout"]
+    b2 = [b["html"] for _, b in scored_bullets if b["id"] == "faq_voicebot_maintenance"]
+    rest = [b["html"] for _, b in scored_bullets if b["id"] not in ("voicebot_rollout", "faq_voicebot_maintenance")][:4]
+    chosen_bullets = b1 + b2 + rest
 
     # Tailor core skills order
     all_skills = list(profile["skills"]["core"])
@@ -767,23 +767,23 @@ def select_tailored_content(job: Dict[str, Any], profile: Dict[str, Any]) -> Dic
     # Build concise, high-impact Cover Letter paragraphs (Strict 1-Page A4 Guarantee ~220 words)
     if cat_id == "ai_automation":
         project_highlight = (
-            "I manage voicebot prompting and knowledge architecture using Parloa and ElevenLabs across 760,000+ customer conversations, "
-            "and built an internal AI Conversation QA web platform with n8n workflow logic enabling automated bulk evaluation and quality scoring across 9 markets."
+            "I manage AI chatbot and voicebot prompting, FAQs, and knowledge bases across hundreds of thousands of customer conversations, "
+            "and built an internal AI Conversation QA & Evaluation web tool with automated workflows and bulk-review evaluation pipelines."
         )
     elif cat_id == "product_management":
         project_highlight = (
-            "I designed and rolled out a centralized Google Reviews & Trustpilot AI management portal across 9 markets, "
-            "launched the multi-country 'Compass' knowledge base with an AI Assistant, and engineered automated contract generation tools across thousands of amendments."
+            "I designed and rolled out a centralized Google Reviews & Trustpilot web portal with a one-click approval workflow, "
+            "launched a multi-country AI knowledge base with smart search across 9 markets, and built an internal AI Conversation QA evaluation tool."
         )
     elif cat_id == "cx_operations":
         project_highlight = (
-            "I built a centralized Google Reviews & Trustpilot AI management portal across 9 markets with a one-click approval workflow, "
-            "automated customer feedback categorization across ~260 branch locations, and engineered multi-market n8n offer email workflows integrated with Freshdesk."
+            "I built a centralized Google Reviews & Trustpilot web portal with template-based smart reply suggestions and a one-click approval workflow, "
+            "automated customer feedback classification across hundreds of European branch locations, and developed automated Price-Lead Offer Email workflows via REST APIs."
         )
     else:  # project_management default
         project_highlight = (
-            "I partnered with project managers on SQL (Redash) KPI dashboards, engineered an automated Contract Amendment (Änderungsvertrag) tool "
-            "for DE and AT automating thousands of contracts, and built an internal AI QA evaluation platform with n8n to streamline cross-market delivery."
+            "I partnered with project managers on SQL (Redash) KPI dashboards, engineered automated contract and document generation tools, "
+            "and built an internal AI Conversation QA & Evaluation web platform to standardize cross-market quality."
         )
 
     paragraphs = [

@@ -523,7 +523,7 @@
       localStorage.setItem('app_lang', 'en');
     }
 
-    const CV_LAYOUT_VERSION = 'v13_voicebot_top_high_velocity_bottom';
+    const CV_LAYOUT_VERSION = 'v14_nda_safe_sap_standard_6_bullets';
     if (localStorage.getItem('cv_layout_version') !== CV_LAYOUT_VERSION) {
       for (let i = localStorage.length - 1; i >= 0; i--) {
         const k = localStorage.key(i);
@@ -3153,11 +3153,11 @@
 
           let deP2 = `In meiner Rolle als Junior Project Manager bei der AUTO1 Group (seit 2024, Aufstieg vom Intern zum Working Student) habe ich den Rollout unseres internationalen KI-Voicebots über 9 europäische Märkte hinweg begleitet (Millionen geroutete Anrufe, +80 % Annahmequote, +50 % Buchungs-Conversion) und eine Suite produktiver interner Tools sowie Workflow-Automatisierungen aufgebaut.`;
           if (isProdOps) {
-            deP2 += ` Dazu gehören ein zentrales KI-gestütztes Google Reviews & Trustpilot-Managementportal für 9 Länder, die mehrsprachige 'Compass'-Wissensdatenbank mit KI-Assistent sowie automatisierte Vertragsgenerierungs-Tools für DE und AT.`;
+            deP2 += ` Dazu gehören ein zentrales KI-gestütztes Google Reviews & Trustpilot-Managementportal für 9 Länder, eine mehrsprachige KI-Wissensdatenbank mit Smart Search sowie automatisierte Tools zur Dokumenten- und Vertragserstellung.`;
           } else if (isData) {
-            deP2 += ` Dazu gehören quantitative Analysen mit SQL (Redash) und Live-Dashboards in Zusammenarbeit mit 3 Projektmanagern, n8n-automatisierte QA-Evaluierungs-Pipelines über 760.000+ Konversationen sowie automatisierte Branch-Feedback-Auswertungen über ~260 Standorte.`;
+            deP2 += ` Dazu gehören quantitative Analysen mit SQL (Redash) und Live-Dashboards in Zusammenarbeit mit 3 Projektmanagern, automatisierte QA-Evaluierungs-Pipelines für hunderttausende Kundenkonversationen sowie automatisierte Branch-Feedback-Auswertungen.`;
           } else {
-            deP2 += ` Dazu gehören die zentrale Steuerung der Voicebot-Prompts und Wissensarchitektur via Parloa & ElevenLabs, die Einführung der Compass-Wissensdatenbank für 9 Länder sowie automatisierte n8n-Workflows mit Freshdesk.`;
+            deP2 += ` Dazu gehören die zentrale Steuerung von Chatbot- und Voicebot-Prompts sowie Wissensdatenbanken, ein internes KI-QA-Evaluierungstool und automatisierte Low-Code-Workflows via REST APIs.`;
           }
 
           return deHeader +
@@ -3179,13 +3179,13 @@
 
         let p2 = `In my role as Junior Project Manager at AUTO1 Group in Berlin (since 2024, progressing from Intern to Working Student), I have helped drive the end-to-end rollout and continuous optimization of our AI voice bot across 9 European markets—routing millions of calls, increasing inbound answer rates by over 80%, and lifting call-to-booking conversion by over 50%. `;
         if (isProdOps) {
-          p2 += `Alongside core multi-market operations, I built a centralized Google Reviews & Trustpilot AI management portal across 9 markets, launched the 'Compass' knowledge base with an AI Assistant, and engineered automated contract generation engines across thousands of amendments.`;
+          p2 += `Alongside core multi-market operations, I built a centralized Google Reviews & Trustpilot web portal with a one-click approval workflow, launched a multi-country AI knowledge base with smart search across 9 markets, and engineered automated contract and document generation tools.`;
         } else if (isAiAuto) {
-          p2 += `I also manage voicebot prompting and knowledge architecture using Parloa and ElevenLabs across 760,000+ customer conversations, and built an internal AI Conversation QA web platform with n8n workflow logic for automated bulk evaluation and quality scoring.`;
+          p2 += `I also implement and maintain AI chatbot and voicebot prompting, FAQs, and knowledge bases across hundreds of thousands of customer conversations, and built an internal AI Conversation QA & Evaluation web tool with automated bulk-review pipelines.`;
         } else if (isData) {
-          p2 += `I partner closely with project managers to query complex datasets via SQL (Redash) and build automated company-wide KPI dashboards, while automating customer feedback categorization across ~260 European branch locations and building n8n data pipelines.`;
+          p2 += `I partner closely with project managers to query complex datasets via SQL (Redash) and build automated company-wide KPI dashboards, while automating customer feedback classification across hundreds of European branch locations.`;
         } else {
-          p2 += `Alongside partnering with project managers on SQL (Redash) KPI dashboards, I launched the multi-country 'Compass' knowledge base with an AI Assistant, built an n8n AI Conversation QA platform, and engineered automated contract amendment tools across DE and AT.`;
+          p2 += `Alongside partnering with project managers on SQL (Redash) KPI dashboards, I launched a centralized multi-country AI knowledge base, built an internal AI Conversation QA evaluation tool, and engineered automated document and offer-email workflows.`;
         }
 
         let p3 = `Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean processes. Whether querying SQL in Redash, building live dashboards, or prototyping internal tools with JavaScript/REST APIs, I bridge strategy with execution. Earlier project work at Franz Schneider Brakel (FSB) further sharpened my stakeholder alignment. Fluent in English (C1/C2) and Spanish (native), with professional German (B1), I am available 20 hours/week in Berlin.`;
