@@ -35,8 +35,8 @@
     "why_fits": "Strong Product Management fit. Matches keywords: stakeholder, milestone, coordination, initiative, product management, product owner.",
     "days_ago": 6,
     "posted_ago": "6 days ago (2026-11-20)",
-    "applicants_num": 85,
-    "applicants_text": "🟡 85 applicants",
+    "applicants_num": 86,
+    "applicants_text": "🟡 86 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -308,164 +308,6 @@
         "In my role as Junior Project Manager at AUTO1 Group in Berlin (since 2024, progressing from Intern to Working Student), I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. I helped drive the end-to-end rollout and continuous optimization of our AI voice bot (routing millions of calls, increasing inbound answer rates by over 80%, and lifting call-to-booking conversion by over 50%), while shipping a suite of production internal tools and workflow automations. I partnered with project managers on SQL (Redash) KPI dashboards, engineered automated contract and document generation tools, and built an internal AI Conversation QA & Evaluation web platform to standardize cross-market quality.",
         "Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean, repeatable processes. I write SQL queries in Redash and build dashboards in Looker Studio, Tableau, and Excel to provide reliable metrics. When off-the-shelf software falls short, I prototype lightweight internal tools using JavaScript and REST APIs. Working in an international Berlin environment, I communicate fluently in English (C1/C2) and Spanish (native), with working German (B1).",
         "What particularly excites me about TikTok is the opportunity to bring this blend of product operations discipline, SQL analytics, and builder execution to your team in the Project Management - Project Intern (GBS) - 2027 Start role. Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview."
-      ]
-    }
-  },
-  {
-    "id": "b7c5883fbf",
-    "title": "Working Student – Compliance Automation & AI (m/f/d)",
-    "company": "Pliant",
-    "location": "Berlin, Berlin, Germany",
-    "job_url": "https://www.linkedin.com/jobs/view/4491512010",
-    "source": "Linkedin",
-    "date_posted": "2026-11-16",
-    "date_found": "2026-11-16 17:39",
-    "salary": "",
-    "description": "About Us Pliant is a modular B2B payments platform combining commercial card issuing, payment accounts, FX and spend management for businesses and AI agents. Businesses across travel, e-commerce, insurance and AI-native technology use Pliant to manage complex payment workflows, while fintechs, software platforms and banks use its infrastructure to build and operate their own commercial payment offerings. Pliant's API-first platform also enables AI agents and applications to access regulated payment infrastructure with permissions, controls and auditability built in. Founded in 2020 and headquartered in Berlin, Pliant serves businesses and partners across Europe and North America. A principal member of Visa and Mastercard, Pliant issues commercial cards in 13 currencies across 32 countries under its European e-money license and through regulated partners in the UK and US. Learn more at www.getpliant.com. About The Role We are looking for an exceptional working student to join our team — someone who wants to build expertise in fintech and banking, sharpen their analytical skills, and work alongside senior specialists on critical operational risk topics. As a Working Student – Compliance Automation &amp; AI (m/f/d) , you’ll sit at the intersection of fintech, data, and operational risk management. You’ll work on high-impact tasks in client onboarding, risk profiling, and transaction surveillance — while leveraging data-driven applications, Python, and AI tools to enhance efficiency and insight. You’ll collaborate closely with our Compliance, Risk, Product, and Engineering teams, gaining hands-on experience in one of Europe’s fastest-scaling fintechs. This role is Berlin-based with the ability to work at least 2 days per week from our Berlin HQ. What You’ll Do Onboarding, Risk &amp; Transaction Surveillance Verify corporate clients (KYB), identifying legal representatives and beneficial owners through global databases and registries. Assess customer risk profiles using structured data, defined frameworks, and regulatory guidelines. Review AML alerts from monitoring systems, flag anomalies, and escalate potential cases to senior specialists. Analyze transaction patterns to detect suspicious behaviors or potential financial crime indicators. Prepare and maintain accurate digital credit files in compliance with internal policies. Contribute to the refinement of detection rules to reduce false positives and improve monitoring effectiveness. Data &amp; Technology Integration Work with data-driven applications to support decision-making in compliance and monitoring. Use Python for data analysis, workflow automation, and reporting. Develop and maintain local LLM-based applications. Apply prompt engineering to accelerate research, document drafting, and case analysis. Process Innovation Collaborate with Product and Engineering to improve tools, workflows, and system logic. Suggest automation opportunities and AI-driven enhancements. What You’ll Bring Enrolled in a university program in computer science, data science, business informatics, engineering, or a related quantitative field, with a strong academic track record. Hands-on automation experience (n8n, Make, Zapier, or code-based pipelines), including API integrations. Proficiency in Python and SQL. Practical experience with LLMs and prompt engineering. Structured, detail-oriented, and disciplined about testing and documenting what you build. Fluent in English; German or other European languages are a plus. Nice to have Interest in fintech and curiosity about compliance topics such as AML/KYC and sanctions screening. Regulatory knowledge is not required; you'll learn it on the job. Experience with data analysis, visualization, or BI tools such as Metabase. Experience with Taktile or other rules engines, or with KYB/registry/Google Maps APIs. Familiarity with Git and AI coding tools such as Claude Code. What We Offer The opportunity to work in a growing team with big responsibilities that thrives on a strong exchange of knowledge and excellence Attractive remuneration Flat hierarchy and transparent communication in a relaxed, professional atmosphere Opportunity to develop your talent in a dynamic team with ambitious goals Flexibility and possibility to work remotely Monthly mobility benefit Wellhub Membership Pliant Card with monthly credit to explore the product and enjoy food with colleagues Pliant is an equal opportunity employer. We welcome applications from people of all backgrounds, identities and abilities, and are committed to an inclusive hiring process. If you need any accommodations during the interview process, please let us know. At Pliant we use the Ashby AI Criteria to assist with looking over resumes against our job qualifications for this role. All final decisions are made by our Talent Team and Hiring Team. A human is behind these processes. Ashby does not automatically reject candidates or make final hiring decisions. Our teams review all results and make the final hiring decision with every candidate that applies.",
-    "status": "New",
-    "cv_pdf": "C:\\Users\\guill\\Desktop\\Tools\\job-applier\\output\\applications\\Pliant_b7c5883fbf\\Guillermo_Hernandez_CV_Pliant.pdf",
-    "cover_letter_pdf": "C:\\Users\\guill\\Desktop\\Tools\\job-applier\\output\\applications\\Pliant_b7c5883fbf\\Guillermo_Hernandez_Cover_Letter_Pliant.pdf",
-    "cv_url": "files/applications/Pliant_b7c5883fbf/Guillermo_Hernandez_CV_Pliant.pdf",
-    "cover_letter_url": "files/applications/Pliant_b7c5883fbf/Guillermo_Hernandez_Cover_Letter_Pliant.pdf",
-    "notes": "",
-    "synced_to_sheets": false,
-    "category_id": "cx_operations",
-    "category_label": "Business & Data Operations",
-    "match_score": 98,
-    "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
-    "matched_keywords": [
-      "risk management",
-      "prompt engineering",
-      "workflow automation",
-      "n8n",
-      "reporting",
-      "sql",
-      "quantitative",
-      "data analysis"
-    ],
-    "why_fits": "Strong Business & Data Operations fit. Matches keywords: risk management, prompt engineering, workflow automation, n8n, reporting, sql.",
-    "days_ago": 7,
-    "posted_ago": "1 week ago (2026-11-16)",
-    "applicants_num": 191,
-    "applicants_text": "🔴 191 applicants",
-    "work_model": "Flexibles Office",
-    "is_100_onsite": false,
-    "tailored_preview": {
-      "selected_bullets": [
-        "Managed the <strong>end-to-end rollout, stakeholder alignment, and continuous optimization</strong> of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional product team, routing <strong>millions of calls</strong>, increasing inbound answer rates by <strong>over 80%</strong>, and lifting call-to-booking conversion by <strong>over 50%</strong>.",
-        "Implemented, structured, and maintained an <strong>AI chatbot, voicebot prompting &amp; FAQs, and AI knowledge bases</strong>, coordinating multi-market releases and answer-accuracy improvements across <strong>hundreds of thousands of customer conversations</strong>.",
-        "Scoped operational bottlenecks and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> with <strong>automated workflows and bulk-review evaluation pipelines</strong>, standardizing how cross-market teams audit and benchmark AI quality.",
-        "Partnered with <strong>3 project managers</strong> to track <strong>project milestones and multi-market KPIs</strong>, performing <strong>quantitative analysis on complex datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel to build automated company-wide dashboards.",
-        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
-        "Built and rolled out a centralized <strong>Google Reviews &amp; Trustpilot web portal</strong> in <strong>Google Apps Script</strong> with template-based smart reply suggestions, aligning operations teams onto a <strong>one-click approval workflow</strong>."
-      ],
-      "cover_letter_paragraphs": [
-        "I am writing to apply for the Working Student – Compliance Automation & AI (m/f/d) role at Pliant. With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and over two years of hands-on experience at AUTO1 Group scaling AI operations, data reporting, and internal tooling, I combine analytical rigor with proactive builder execution to deliver immediate value to your team.",
-        "In my role as Junior Project Manager at AUTO1 Group in Berlin (since 2024, progressing from Intern to Working Student), I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. I helped drive the end-to-end rollout and continuous optimization of our AI voice bot (routing millions of calls, increasing inbound answer rates by over 80%, and lifting call-to-booking conversion by over 50%), while shipping a suite of production internal tools and workflow automations. I built a centralized Google Reviews & Trustpilot web portal with template-based smart reply suggestions and a one-click approval workflow, automated customer feedback classification across hundreds of European branch locations, and developed automated Price-Lead Offer Email workflows via REST APIs.",
-        "Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean, repeatable processes. I write SQL queries in Redash and build dashboards in Looker Studio, Tableau, and Excel to provide reliable metrics. When off-the-shelf software falls short, I prototype lightweight internal tools using JavaScript and REST APIs. Working in an international Berlin environment, I communicate fluently in English (C1/C2) and Spanish (native), with working German (B1).",
-        "What particularly excites me about Pliant is the opportunity to bring this blend of product operations discipline, SQL analytics, and builder execution to your team in the Working Student – Compliance Automation & AI (m/f/d) role. Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview."
-      ]
-    },
-    "commute": {
-      "commute_minutes": 22,
-      "within_limit": true,
-      "badge": "🚇 ~22 min (S1 Direct)",
-      "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
-      "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
-    },
-    "compensation": {
-      "is_estimated": true,
-      "badge": "💰 ~€16–19/h",
-      "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
-      "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
-      "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
-      "source": "Berlin Benchmark Estimate",
-      "tier": "Tech / Scale-up",
-      "pays_min_16": true
-    },
-    "is_english_friendly": true,
-    "employment_type": "WERKSTUDENT",
-    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true,
-    "pays_min_16": true,
-    "benefits": [
-      {
-        "category": "remote",
-        "icon": "🏠",
-        "label": "Home Office / Hybrid"
-      }
-    ],
-    "direct_apply_url": null,
-    "tailored_application": {
-      "analysis": {
-        "category_id": "ai_automation",
-        "category_label": "AI Operations & Automation",
-        "match_score": 99,
-        "language_req": "English Friendly (B1 OK)",
-        "is_english_friendly": true,
-        "employment_type": "WERKSTUDENT",
-        "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-        "is_student_legal": true,
-        "pays_min_16": true,
-        "benefits": [
-          {
-            "category": "remote",
-            "icon": "🏠",
-            "label": "Home Office / Hybrid"
-          }
-        ],
-        "extracted_pay": "💰 ~€16–19/h (~€1385–€1645/mo)",
-        "matched_keywords": [
-          "ai",
-          "automation",
-          "llm",
-          "prompt",
-          "workflow",
-          "api",
-          "git",
-          "agent"
-        ],
-        "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, automation, llm, prompt, workflow, api.",
-        "commute": {
-          "commute_minutes": 22,
-          "within_limit": true,
-          "badge": "🚇 ~22 min (S1 Direct)",
-          "summary": "Estimated transit: ~22 min from Söhtstr. 16 via BVG/S-Bahn",
-          "transit_route": "S1 Lichterfelde West -> BVG (~22 min)"
-        },
-        "compensation": {
-          "is_estimated": true,
-          "badge": "💰 ~€16–19/h",
-          "display": "💰 ~€16–19/h (~€1385–€1645/mo)",
-          "range_text": "~€16 – €19 / hour (Berlin Tech Benchmark)",
-          "monthly_estimate": "~€1385 – €1645 / month (at 20h/wk)",
-          "source": "Berlin Benchmark Estimate",
-          "tier": "Tech / Scale-up",
-          "pays_min_16": true
-        }
-      },
-      "selected_bullets": [
-        "Managed the <strong>end-to-end rollout, stakeholder alignment, and continuous optimization</strong> of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional product team, routing <strong>millions of calls</strong>, increasing inbound answer rates by <strong>over 80%</strong>, and lifting call-to-booking conversion by <strong>over 50%</strong>.",
-        "Implemented, structured, and maintained an <strong>AI chatbot, voicebot prompting &amp; FAQs, and AI knowledge bases</strong>, coordinating multi-market releases and answer-accuracy improvements across <strong>hundreds of thousands of customer conversations</strong>.",
-        "Scoped operational bottlenecks and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> with <strong>automated workflows and bulk-review evaluation pipelines</strong>, standardizing how cross-market teams audit and benchmark AI quality.",
-        "Partnered with <strong>3 project managers</strong> to track <strong>project milestones and multi-market KPIs</strong>, performing <strong>quantitative analysis on complex datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel to build automated company-wide dashboards.",
-        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
-        "Built and rolled out a centralized <strong>Google Reviews &amp; Trustpilot web portal</strong> in <strong>Google Apps Script</strong> with template-based smart reply suggestions, aligning operations teams onto a <strong>one-click approval workflow</strong>."
-      ],
-      "selected_skills": [
-        "AI Evaluation Tools, Prompting & Knowledge Bases",
-        "Low-Code Workflow Automation & Internal Tooling",
-        "Multi-Market Project Rollout & Agile Delivery",
-        "Quantitative Analysis on Complex Datasets",
-        "SQL Reporting & Disorganized Data Structuring",
-        "Cross-Functional Stakeholder Management"
-      ],
-      "cover_letter_paragraphs": [
-        "I am writing to apply for the Working Student – Compliance Automation & AI (m/f/d) role at Pliant. With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and over two years of hands-on experience at AUTO1 Group scaling AI operations, data reporting, and internal tooling, I combine analytical rigor with proactive builder execution to deliver immediate value to your team.",
-        "In my role as Junior Project Manager at AUTO1 Group in Berlin (since 2024, progressing from Intern to Working Student), I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. I helped drive the end-to-end rollout and continuous optimization of our AI voice bot (routing millions of calls, increasing inbound answer rates by over 80%, and lifting call-to-booking conversion by over 50%), while shipping a suite of production internal tools and workflow automations. I manage AI chatbot and voicebot prompting, FAQs, and knowledge bases across hundreds of thousands of customer conversations, and built an internal AI Conversation QA & Evaluation web tool with automated workflows and bulk-review evaluation pipelines.",
-        "Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean, repeatable processes. I write SQL queries in Redash and build dashboards in Looker Studio, Tableau, and Excel to provide reliable metrics. When off-the-shelf software falls short, I prototype lightweight internal tools using JavaScript and REST APIs. Working in an international Berlin environment, I communicate fluently in English (C1/C2) and Spanish (native), with working German (B1).",
-        "What particularly excites me about Pliant is the opportunity to bring this blend of product operations discipline, SQL analytics, and builder execution to your team in the Working Student – Compliance Automation & AI (m/f/d) role. Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview."
       ]
     }
   },
@@ -894,8 +736,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.ashbyhq.com/upvest/ea8c4081-1913-482f-88fc-4a8cdbee6c89?utm_source=O3qYbowvb0",
-    "days_ago": 1,
-    "posted_ago": "🔥 Yesterday (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -918,146 +760,6 @@
     }
   },
   {
-    "id": "370145dca6",
-    "title": "Technical Founders Associate (Intern)",
-    "company": "Lyceum",
-    "location": "Berlin, Berlin, Germany",
-    "job_url": "https://www.linkedin.com/jobs/view/4489795281",
-    "source": "Linkedin",
-    "date_posted": "2026-11-16",
-    "date_found": "2026-11-16 23:57",
-    "salary": "",
-    "description": "Your mission The Role As a Technical Founders Associate (Intern), you'll sit at the intersection of customers and engineering. You'll talk to users, synthesise feedback, ship features, and help shape the product roadmap for a platform used by ML engineers across Europe. This isn't a \"shadow and learn\" internship. You'll own real surface area from week one, working directly with the engineering team to build the best GPU cloud product on the market. What You'll Do Conduct user interviews and synthesise customer feedback into actionable product insights Define and prioritise feature requirements in close collaboration with engineering leads Write specs, user stories, and acceptance criteria for new features Coordinate cross-functionally between engineering, GTM, and support to ensure smooth feature launches Analyse product usage data to identify friction points and opportunities for improvement Contribute directly to product decisions - your input shapes what gets built next Your profile What We're Looking For Currently pursuing or recently completed a degree in Computer Science, Engineering, Business, or a related field Genuine curiosity about developer tools, cloud infrastructure, or AI/ML Strong communication skills: you can talk to an ML engineer and a sales lead in the same afternoon Analytical mindset: comfortable with data, metrics, and structured thinking Bias toward action: you ship, not just plan Prior internship or project experience in product, engineering, or a startup environment is a plus Why us? Outstanding team: Work with some of the best engineers in the world, coming from hedge funds, big tech, AI startups and top universities Once in a lifetime opportunity: Early-stage company in the fastest-growing market in the world Ownership: Shape how European AI companies access GPU compute European mission: Build sovereign, GDPR-compliant AI infrastructure for the next generation of deep-tech",
-    "status": "New",
-    "cv_pdf": "C:\\Users\\guill\\Desktop\\Tools\\job-applier\\output\\applications\\Lyceum_370145dca6\\Guillermo_Hernandez_CV_Lyceum.pdf",
-    "cover_letter_pdf": "C:\\Users\\guill\\Desktop\\Tools\\job-applier\\output\\applications\\Lyceum_370145dca6\\Guillermo_Hernandez_Cover_Letter_Lyceum.pdf",
-    "cv_url": "files/applications/Lyceum_370145dca6/Guillermo_Hernandez_CV_Lyceum.pdf",
-    "cover_letter_url": "files/applications/Lyceum_370145dca6/Guillermo_Hernandez_Cover_Letter_Lyceum.pdf",
-    "notes": "",
-    "synced_to_sheets": false,
-    "category_id": "product_management",
-    "category_label": "Product Management",
-    "match_score": 88,
-    "language_req": "English Friendly (B1 OK)",
-    "extracted_pay": "💰 ~€1300–1800/mo (~€15–21/h) (Internship: ~€1300–1800/mo)",
-    "matched_keywords": [
-      "cross-functional",
-      "roadmap",
-      "feature",
-      "gtm"
-    ],
-    "why_fits": "Strong Product Management fit. Matches keywords: cross-functional, roadmap, feature, gtm.",
-    "days_ago": 7,
-    "posted_ago": "1 week ago (2026-11-16)",
-    "applicants_num": 55,
-    "applicants_text": "🟡 55 applicants",
-    "work_model": "Flexibles Office",
-    "is_100_onsite": false,
-    "tailored_preview": {
-      "selected_bullets": [
-        "Managed the <strong>end-to-end rollout, stakeholder alignment, and continuous optimization</strong> of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional product team, routing <strong>millions of calls</strong>, increasing inbound answer rates by <strong>over 80%</strong>, and lifting call-to-booking conversion by <strong>over 50%</strong>.",
-        "Implemented, structured, and maintained an <strong>AI chatbot, voicebot prompting &amp; FAQs, and AI knowledge bases</strong>, coordinating multi-market releases and answer-accuracy improvements across <strong>hundreds of thousands of customer conversations</strong>.",
-        "Scoped operational bottlenecks and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> with <strong>automated workflows and bulk-review evaluation pipelines</strong>, standardizing how cross-market teams audit and benchmark AI quality.",
-        "Partnered with <strong>3 project managers</strong> to track <strong>project milestones and multi-market KPIs</strong>, performing <strong>quantitative analysis on complex datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel to build automated company-wide dashboards.",
-        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
-        "Built and rolled out a centralized <strong>Google Reviews &amp; Trustpilot web portal</strong> in <strong>Google Apps Script</strong> with template-based smart reply suggestions, aligning operations teams onto a <strong>one-click approval workflow</strong>."
-      ],
-      "cover_letter_paragraphs": [
-        "I am writing to apply for the Technical Founders Associate (Intern) role at Lyceum. With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and over two years of hands-on experience at AUTO1 Group scaling AI operations, data reporting, and internal tooling, I combine analytical rigor with proactive builder execution to deliver immediate value to your team.",
-        "In my role as Junior Project Manager at AUTO1 Group in Berlin (since 2024, progressing from Intern to Working Student), I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. I helped drive the end-to-end rollout and continuous optimization of our AI voice bot (routing millions of calls, increasing inbound answer rates by over 80%, and lifting call-to-booking conversion by over 50%), while shipping a suite of production internal tools and workflow automations. I partnered closely with product managers and engineers to scope features, define user requirements, and roll out production web tools and AI knowledge bases across 9 European markets.",
-        "Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean, repeatable processes. I write SQL queries in Redash and build dashboards in Looker Studio, Tableau, and Excel to provide reliable metrics. When off-the-shelf software falls short, I prototype lightweight internal tools using JavaScript and REST APIs. Working in an international Berlin environment, I communicate fluently in English (C1/C2) and Spanish (native), with working German (B1).",
-        "What particularly excites me about Lyceum is the opportunity to bring this blend of product operations discipline, SQL analytics, and builder execution to your team in the Technical Founders Associate (Intern) role. Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview."
-      ]
-    },
-    "commute": {
-      "commute_minutes": 25,
-      "within_limit": true,
-      "badge": "🚇 ~25 min (S1)",
-      "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
-      "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
-    },
-    "compensation": {
-      "is_estimated": true,
-      "badge": "💰 ~€1300–1800/mo (~€15–21/h)",
-      "display": "💰 ~€1300–1800/mo (~€15–21/h) (Internship: ~€1300–1800/mo)",
-      "range_text": "~€15–21/h (at 20h/wk) · ~€1300 – €1800 / month",
-      "monthly_estimate": "~€1300 – €1800 / month (= ~€15–21/h @ 20h student | ~€7.5–10.4/h @ 40h)",
-      "source": "Berlin Benchmark Estimate",
-      "tier": "Berlin Startup/Tech",
-      "pays_min_16": true
-    },
-    "is_english_friendly": true,
-    "employment_type": "INTERNSHIP",
-    "employment_label": "💼 Praktikum / Internship",
-    "is_student_legal": true,
-    "pays_min_16": true,
-    "benefits": [],
-    "direct_apply_url": null,
-    "tailored_application": {
-      "analysis": {
-        "category_id": "ai_automation",
-        "category_label": "AI Operations & Automation",
-        "match_score": 92,
-        "language_req": "English Friendly (B1 OK)",
-        "is_english_friendly": true,
-        "employment_type": "INTERNSHIP",
-        "employment_label": "💼 Praktikum / Internship",
-        "is_student_legal": true,
-        "pays_min_16": true,
-        "benefits": [],
-        "extracted_pay": "💰 ~€1300–1800/mo (~€15–21/h) (Internship: ~€1300–1800/mo)",
-        "matched_keywords": [
-          "ai",
-          "cloud",
-          "roadmap",
-          "feature",
-          "cross-functional",
-          "support"
-        ],
-        "why_fits": "Strong AI Operations & Automation fit. Matches keywords: ai, cloud, roadmap, feature, cross-functional, support.",
-        "commute": {
-          "commute_minutes": 25,
-          "within_limit": true,
-          "badge": "🚇 ~25 min (S1)",
-          "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
-          "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
-        },
-        "compensation": {
-          "is_estimated": true,
-          "badge": "💰 ~€1300–1800/mo (~€15–21/h)",
-          "display": "💰 ~€1300–1800/mo (~€15–21/h) (Internship: ~€1300–1800/mo)",
-          "range_text": "~€15–21/h (at 20h/wk) · ~€1300 – €1800 / month",
-          "monthly_estimate": "~€1300 – €1800 / month (= ~€15–21/h @ 20h student | ~€7.5–10.4/h @ 40h)",
-          "source": "Berlin Benchmark Estimate",
-          "tier": "Berlin Startup/Tech",
-          "pays_min_16": true
-        }
-      },
-      "selected_bullets": [
-        "Managed the <strong>end-to-end rollout, stakeholder alignment, and continuous optimization</strong> of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional product team, routing <strong>millions of calls</strong>, increasing inbound answer rates by <strong>over 80%</strong>, and lifting call-to-booking conversion by <strong>over 50%</strong>.",
-        "Implemented, structured, and maintained an <strong>AI chatbot, voicebot prompting &amp; FAQs, and AI knowledge bases</strong>, coordinating multi-market releases and answer-accuracy improvements across <strong>hundreds of thousands of customer conversations</strong>.",
-        "Scoped operational bottlenecks and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> with <strong>automated workflows and bulk-review evaluation pipelines</strong>, standardizing how cross-market teams audit and benchmark AI quality.",
-        "Partnered with <strong>3 project managers</strong> to track <strong>project milestones and multi-market KPIs</strong>, performing <strong>quantitative analysis on complex datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel to build automated company-wide dashboards.",
-        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
-        "Built and rolled out a centralized <strong>Google Reviews &amp; Trustpilot web portal</strong> in <strong>Google Apps Script</strong> with template-based smart reply suggestions, aligning operations teams onto a <strong>one-click approval workflow</strong>."
-      ],
-      "selected_skills": [
-        "AI Evaluation Tools, Prompting & Knowledge Bases",
-        "Low-Code Workflow Automation & Internal Tooling",
-        "Multi-Market Project Rollout & Agile Delivery",
-        "Quantitative Analysis on Complex Datasets",
-        "SQL Reporting & Disorganized Data Structuring",
-        "Cross-Functional Stakeholder Management"
-      ],
-      "cover_letter_paragraphs": [
-        "I am writing to apply for the Technical Founders Associate (Intern) role at Lyceum. With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and over two years of hands-on experience at AUTO1 Group scaling AI operations, data reporting, and internal tooling, I combine analytical rigor with proactive builder execution to deliver immediate value to your team.",
-        "In my role as Junior Project Manager at AUTO1 Group in Berlin (since 2024, progressing from Intern to Working Student), I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. I helped drive the end-to-end rollout and continuous optimization of our AI voice bot (routing millions of calls, increasing inbound answer rates by over 80%, and lifting call-to-booking conversion by over 50%), while shipping a suite of production internal tools and workflow automations. I manage AI chatbot and voicebot prompting, FAQs, and knowledge bases across hundreds of thousands of customer conversations, and built an internal AI Conversation QA & Evaluation web tool with automated workflows and bulk-review evaluation pipelines.",
-        "Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean, repeatable processes. I write SQL queries in Redash and build dashboards in Looker Studio, Tableau, and Excel to provide reliable metrics. When off-the-shelf software falls short, I prototype lightweight internal tools using JavaScript and REST APIs. Working in an international Berlin environment, I communicate fluently in English (C1/C2) and Spanish (native), with working German (B1).",
-        "What particularly excites me about Lyceum is the opportunity to bring this blend of product operations discipline, SQL analytics, and builder execution to your team in the Technical Founders Associate (Intern) role. Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview."
-      ]
-    }
-  },
-  {
     "id": "de9899e19a",
     "title": "Business Analyst Intern (6 months) - 2027",
     "company": "ACCA Careers",
@@ -1068,11 +770,11 @@
     "date_found": "2026-11-19 17:39",
     "salary": "",
     "description": "There's a universe of opportunity at Amazon. At Amazon, your career doesn't follow a straight line. It accelerates, twists, and challenges you in ways you never expected. From the moment you join, you're part of something big: building products or services that reach millions and shaping how people live, work, and connect every day. This is where your ideas turn into real impact. You'll work with world class tools, global platforms, and systems built to operate at an extraordinary scale. You'll move fast, experiment and launch solutions that matter. With endless opportunities to explore across teams and roles, you'll learn quickly, apply what you know and discover skills you didn't know existed. This is an environment designed for builders who want to see the impact of their work in the world. Ready to start your adventure? What's in it for you? An internship at Amazon means real responsibility from day one. You'll build, test, and learn alongside people who want to see you succeed, while making an impact that reaches far beyond campus. Key job responsibilities You will test your analytical and technical skills. This internship is a learning opportunity, where you will put your skills and bias for action to the test, to complete a project that will support your own growth in the Business Analysis function, as well as the team and our customers' success. Partner with multiple teams across different geographies, building collaborative relationships while learning from experienced professionals in a global business environment. Take ownership of data analysis projects with guidance from mentors, turning data insights into actionable business recommendations. Identify and propose process improvement opportunities, working with the team to develop streamlined solutions that enhance business efficiency. Lead root cause analyses for assigned projects, collaborating with team members to solve real business challenges and implement solutions. Support the development of business cases for new programs, gaining hands-on experience in strategic planning and project development. Own the maintenance and improvement of specific performance metrics dashboards, while learning advanced visualization techniques from experienced analysts. Develop into a valued team member by bringing fresh perspectives and innovative ideas, while building foundation skills in business analysis. A day in the life Location: Berlin Start Date: Flexible between January - March 2027. We don't offer 2026 start dates. Duration: 6 months minimum This is not a remote internship opportunity Every day is different as a Business Analyst Intern. You'll work alongside experienced analysts and a dedicated mentor on real data analysis projects that directly impact business efficiency. You might spend your morning diving into datasets to perform a root cause analysis on an operational challenge, then spend your afternoon building and refining a performance metrics dashboard to track key business outcomes. You will partner with teams across different geographies, present data-driven recommendations, and contribute fresh perspectives to solve real business problems. Amazon is a data-driven business, so no matter which project you own, part of your role will involve turning raw data into actionable insights. You'll identify process improvement opportunities, support the development of business cases for new programs, and present your findings to senior stakeholders - building your analytical, technical, and strategic thinking skills in a fast-paced, global environment. Note: You must have the right to work in the country of employment by the start date. About The Team Intern Community: As an Amazon Intern, you'll be part of a dynamic, supportive community that empowers your growth and development. You'll collaborate with interns from around the world, networking and participating in social events to broaden your perspectives. You can also join specialized groups focused on areas like sustainability to explore your diverse interests. Support The internship program provides a robust support system, including weekly intern office hours, dedicated IT and HR support, and a program team committed to your success. This ensures you have the guidance and assistance needed to thrive. Learning Sessions Exclusive learning sessions will further enhance your skills, granting you access to Amazon's industry-leading learning platforms and the expertise of industry leaders. These structured development opportunities will prepare you for the next step in your career. Opportunities Upon successful completion of the internship, you may be considered for a graduate role or a second internship, allowing you to continue your journey with Amazon. Additionally, you'll enjoy a competitive monthly salary, relocation support, and access to a range of employee benefits. Basic Qualifications Work 40 hours a week Speak, write, and read fluently in German Speak, write, and read fluently in English at C1 level or above Knowledge of Microsoft Excel at an advanced level, including: pivot tables, macros, index/match, vlookup, VBA, data links, etc. Knowledge of SQL Currently in your penultimate or final year and working towards a university bachelor's or master's in Business Analytics, Finance, Accounting, Economics, Statistics, Mathematics, Computer Science, Information Systems, Engineering, Supply Chain, Logistics or a similar discipline Available for a full-time internship (40 hours/week) and commit to 6 month internship Preferred Qualifications Strong problem-solving and analytical skills, with the ability to identify process improvements and innovative solutions Excellent communication and teamwork skills, able to collaborate effectively with others. Demonstrated curiosity, proactivity, and willingness to take on challenges in an ambiguous, fast-paced environment. Amazon is an equal opportunities employer. We believe passionately that employing a diverse workforce is central to our success. We make recruiting decisions based on your experience and skills. We value your passion to discover, invent, simplify and build. Protecting your privacy and the security of your data is a longstanding top priority for Amazon. Please consult our Privacy Notice (https://www.amazon.jobs/en/privacy_page) to know more about how we collect, use and transfer the personal data of our candidates. m/w/d Our inclusive culture empowers Amazonians to deliver the best results for our customers. If you have a disability and need a workplace accommodation or adjustment during the application and hiring process, including support for the interview or onboarding process, please visit https://amazon.jobs/content/en/how-we-hire/accommodations for more information. If the country/region you're applying in isn't listed, please contact your Recruiting Partner.",
-    "status": "New",
-    "cv_pdf": "",
-    "cover_letter_pdf": "",
-    "cv_url": "",
-    "cover_letter_url": "",
+    "status": "Ready to Apply",
+    "cv_pdf": "/home/runner/work/berlin-job-applier/berlin-job-applier/output/applications/ACCA_Careers_de9899e19a/Guillermo_Hernandez_CV_ACCA_Careers.pdf",
+    "cover_letter_pdf": "/home/runner/work/berlin-job-applier/berlin-job-applier/output/applications/ACCA_Careers_de9899e19a/Guillermo_Hernandez_Cover_Letter_ACCA_Careers.pdf",
+    "cv_url": "files/applications/ACCA_Careers_de9899e19a/Guillermo_Hernandez_CV_ACCA_Careers.pdf",
+    "cover_letter_url": "files/applications/ACCA_Careers_de9899e19a/Guillermo_Hernandez_Cover_Letter_ACCA_Careers.pdf",
     "notes": "",
     "synced_to_sheets": false,
     "category_id": "project_management",
@@ -1086,8 +788,8 @@
     "why_fits": "Strong Project Management fit. Matches keywords: business analyst.",
     "days_ago": 7,
     "posted_ago": "1 week ago (2026-11-18)",
-    "applicants_num": 41,
-    "applicants_text": "🟡 41 applicants",
+    "applicants_num": 42,
+    "applicants_text": "🟡 42 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1142,11 +844,11 @@
     "date_found": "2026-11-23 21:07",
     "salary": "",
     "description": "Company Description You have gained initial experience in the laboratory or in conducting experiments during your studies. Now it's time for some practical experience! Apply now as a working student (f/m/d) at Anton Paar ProveTec! Job Description Analysis of existing and potential markets: You will assist in identifying growth potential and new areas of application. Systematic monitoring of the competition: You will analyze competitors' products, prices, and strategies and help prepare relevant market information. Documentation: You will create reports, presentations, marketing documents, and training materials for an international audience. Coordination and teamwork: You will coordinate topics that affect multiple products in various teams - from coordinating common features to standardizing documentation. Qualifications You are currently studying engineering or natural sciences (e.g., mechatronics, electrical engineering, mechanical engineering, process engineering, technical sciences, or similar) or business administration with a technical affinity. Ideally, you have already gained practical laboratory experience and have a technical understanding of measurement methods or laboratory procedures. You have gained initial experience with data analysis in Excel, PowerPoint, etc. You are highly committed, have analytical thinking skills, are eager to learn, and have a structured approach to your work. You are confident in written and spoken German and English. Additional Information A wide range of tasks and independent work Collaboration in a dynamic team and innovative environment Flexible working hours by arrangement (up to 20 hours per week)",
-    "status": "New",
-    "cv_pdf": "",
-    "cover_letter_pdf": "",
-    "cv_url": "",
-    "cover_letter_url": "",
+    "status": "Ready to Apply",
+    "cv_pdf": "/home/runner/work/berlin-job-applier/berlin-job-applier/output/applications/Anton_Paar_ProveTec_cc79f4bc6b/Guillermo_Hernandez_CV_Anton_Paar_ProveTec.pdf",
+    "cover_letter_pdf": "/home/runner/work/berlin-job-applier/berlin-job-applier/output/applications/Anton_Paar_ProveTec_cc79f4bc6b/Guillermo_Hernandez_Cover_Letter_Anton_Paar_ProveTec.pdf",
+    "cv_url": "files/applications/Anton_Paar_ProveTec_cc79f4bc6b/Guillermo_Hernandez_CV_Anton_Paar_ProveTec.pdf",
+    "cover_letter_url": "files/applications/Anton_Paar_ProveTec_cc79f4bc6b/Guillermo_Hernandez_Cover_Letter_Anton_Paar_ProveTec.pdf",
     "notes": "",
     "synced_to_sheets": false,
     "category_id": "product_management",
@@ -1346,8 +1048,8 @@
     "direct_apply_url": "https://jobs.sap.com/search/?q=Working+Student+%28f%2Fm%2Fd%29+-+Business+Development+in+Supply+Chain+Management&locationsearch=Berlin",
     "days_ago": 3,
     "posted_ago": "⚡ 3 days ago (2026-11-23)",
-    "applicants_num": 84,
-    "applicants_text": "🟡 84 applicants",
+    "applicants_num": 85,
+    "applicants_text": "🟡 85 applicants",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1507,8 +1209,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "tailored_preview": {
@@ -1622,8 +1324,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "tailored_preview": {
@@ -1670,10 +1372,10 @@
     "extracted_pay": "💰 ~€1300–1800/mo (~€15–21/h) (Internship: ~€1300–1800/mo)",
     "matched_keywords": [],
     "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
-    "days_ago": 7,
-    "posted_ago": "1 week ago (2026-11-17)",
-    "applicants_num": 57,
-    "applicants_text": "🟡 57 applicants",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1766,8 +1468,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -1838,8 +1540,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 5,
-    "posted_ago": "5 days ago (2026-11-21)",
+    "days_ago": 6,
+    "posted_ago": "6 days ago (2026-11-21)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -1910,10 +1612,10 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 7,
-    "posted_ago": "1 week ago (2026-11-17)",
-    "applicants_num": 150,
-    "applicants_text": "🔴 130 applicants",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -1982,8 +1684,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -2094,8 +1796,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 5,
-    "posted_ago": "5 days ago (2026-11-21)",
+    "days_ago": 6,
+    "posted_ago": "6 days ago (2026-11-21)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -2201,8 +1903,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://grnh.se/2saxdpv2teu",
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Hybrid (Home Office)",
@@ -2275,10 +1977,10 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 7,
-    "posted_ago": "1 week ago (2026-11-18)",
-    "applicants_num": 51,
-    "applicants_text": "🟡 51 applicants",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -2349,10 +2051,10 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 7,
-    "posted_ago": "1 week ago (2026-11-18)",
-    "applicants_num": 36,
-    "applicants_text": "🟡 36 applicants",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -2440,8 +2142,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Hybrid (Home Office)",
@@ -2514,10 +2216,10 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
-    "applicants_num": 38,
-    "applicants_text": "🟡 38 applicants",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
     "is_100_onsite": false,
     "tailored_preview": {
@@ -2588,8 +2290,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -2662,8 +2364,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 150,
     "applicants_text": "🔴 149 applicants",
     "work_model": "Flexibles Office",
@@ -2736,8 +2438,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -2810,8 +2512,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 36,
     "applicants_text": "🟡 36 applicants",
     "work_model": "Flexibles Office",
@@ -2884,8 +2586,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -2958,8 +2660,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 0,
-    "posted_ago": "🔥 Today (2026-11-26)",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-26)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -3033,8 +2735,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://careers.corning.com/us/en/job/80040",
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -3115,8 +2817,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://db.jobs/de-de/Suche/--14099790?jobId=644847",
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Hybrid (Home Office)",
@@ -3205,8 +2907,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://colorsxstudios.bamboohr.com/careers/68?source=indeed&src=indeed&postedDate=2026-11-23",
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -3298,8 +3000,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Hybrid (Home Office)",
@@ -3379,8 +3081,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.ashbyhq.com/moss/6744af3b-29cd-4007-be8f-93456d2f23ac?utm_source=rAK7ABQNwk",
-    "days_ago": 0,
-    "posted_ago": "🔥 Today (2026-11-26)",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-26)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -3454,8 +3156,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -3528,8 +3230,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.deloitte.de/search/?q=Werkstudent+Technology+Transformation+%28m%2Fw%2Fd%29&locationsearch=Berlin",
-    "days_ago": 0,
-    "posted_ago": "🔥 Today (2026-11-26)",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-26)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -3600,8 +3302,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 31,
     "applicants_text": "🟢 31 applicants",
     "work_model": "Flexibles Office",
@@ -3687,8 +3389,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 150,
     "applicants_text": "🔴 127 applicants",
     "work_model": "Flexibles Office",
@@ -3779,8 +3481,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.smartrecruiters.com/ScalableGmbH/744000163492830--junior-anti-financial-crime-expert-m-f-x-",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -3851,8 +3553,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 72,
     "applicants_text": "🟡 72 applicants",
     "work_model": "Flexibles Office",
@@ -3923,8 +3625,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 72,
     "applicants_text": "🟡 72 applicants",
     "work_model": "Hybrid (Home Office)",
@@ -3995,8 +3697,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 7,
-    "posted_ago": "7 days ago (2026-11-19)",
+    "days_ago": 8,
+    "posted_ago": "8 days ago (2026-11-19)",
     "applicants_num": 60,
     "applicants_text": "🟡 60 applicants",
     "work_model": "Flexibles Office",
@@ -4015,6 +3717,78 @@
         "In my role as Junior Project Manager at AUTO1 Group in Berlin (since 2024, progressing from Intern to Working Student), I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. I helped drive the end-to-end rollout and continuous optimization of our AI voice bot (routing millions of calls, increasing inbound answer rates by over 80%, and lifting call-to-booking conversion by over 50%), while shipping a suite of production internal tools and workflow automations. I built a centralized Google Reviews & Trustpilot web portal with template-based smart reply suggestions and a one-click approval workflow, automated customer feedback classification across hundreds of European branch locations, and developed automated Price-Lead Offer Email workflows via REST APIs.",
         "Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean, repeatable processes. I write SQL queries in Redash and build dashboards in Looker Studio, Tableau, and Excel to provide reliable metrics. When off-the-shelf software falls short, I prototype lightweight internal tools using JavaScript and REST APIs. Working in an international Berlin environment, I communicate fluently in English (C1/C2) and Spanish (native), with working German (B1).",
         "What particularly excites me about Upvest is the opportunity to bring this blend of product operations discipline, SQL analytics, and builder execution to your team in the Working Student Client Experience (f/m/d) role. Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview."
+      ]
+    }
+  },
+  {
+    "id": "1ba2f86e75",
+    "title": "Working Student People & Events (m/w/d)",
+    "company": "voize",
+    "location": "Berlin, Berlin, Germany",
+    "job_url": "https://www.linkedin.com/jobs/view/4495564502",
+    "source": "Linkedin",
+    "date_posted": "2026-11-27",
+    "date_found": "2026-11-27 03:14",
+    "salary": "",
+    "description": "🎤 Why voize? Because we’re more than just a job! voize is the voice-based agentic operating system for care . Nurses speak, and voize documents, plans, and takes work off their plate, so they get time back for the people they care for. More than 200,000 nurses already use voize across Germany, the US, the UK, and France , and we are backed by a $50M Series A funding led by Balderton Capital, with support from HV Capital, Y Combinator and other leading VCs. 💡 Why this matters Care is facing one of the biggest structural shifts of our time. Across Europe, North America and much of East Asia, societies are getting older. Every year more people need care, while the generation that has carried the care workforce for decades is retiring and fewer young people follow. In Germany alone , official projections show between 280,000 and 690,000 nurses missing by 2049. This gap will not close by hiring more nurses alone, because there simply will not be enough people. The only way forward is to change how care work gets done. Today nurses spend a large part of every shift on documentation and admin instead of with the people they care for. That is where we started: with voice documentation, nurses save about a third of their documentation time per shift. But documentation was only the beginning . Planning, handovers, coordination and countless small tasks still pull nurses away from the people in front of them. That is why we are building the first global agentic operating system for care , where voize takes on the work around care so nurses can focus on care itself. Our mission is to give that time back to care, and we are only getting started. 🎯 Where ambition meets impact voize is one of the rare places where ambition and mission point in the same direction. We are building a generational, category-defining company, and we are growing fast: from 30 to 230 people in less than two years . All of that growth goes into a problem that matters, making life better for nurses and the people they care for. This path has not been walked before. Things are often ambiguous, priorities shift, and the work asks a lot of you. We work hard, and we do it for the mission and for the nurses who feel the difference. We care about outcomes, not hours. If you want real impact, want to build something and bring ambition and agency, this is a place where you will thrive. 💡 Your Mission: Bring our people together, make voize a great place to work As a Working Student in our People &amp; Organization team at voize, you own the planning and delivery of our company offsite, bringing our colleagues together in one place. Alongside that, you support our Berlin office and our People Operations, so every colleague gets quick, friendly help and a workplace that runs smoothly. You are part of a small team, learn how a fast-growing company works from the inside, and your ideas shape how we come together. 🚀 Your Daily Business: no two days are alike Own our company offsite: organize the program, coordinate venues, travel and vendors (often in German), manage the budget and timeline, and make it a great experience for voize employees. Support office management: keep the office welcoming and running, and organize events and everyday office needs. Support with employee requests and help us answer them quickly, clearly, and with care. Build and maintain our knowledge hub and documentation so colleagues find answers on their own and People processes are easy to follow. Your Working Model - flexible 20 hours per week, scheduled flexibly within working hours around your studies Based in Berlin, with at least one day per week in our office 🤝 Your Skillset - What you bring to the table Currently enrolled at a university (Bachelor’s or Master’s). Fields like business administration, Human Resources, event management, economics, psychology, or sociology are a great fit. Structure and ownership: you plan carefully, keep track of many moving parts, and follow through until it’s done well. Clear, friendly communication with colleagues and external partners, and the creativity to turn an idea into an event people remember. Fluent English; German is a huge plus. Curiosity about AI tools and a hands-on approach to making everyday work simpler. No specific tools required. 🌱 Growing together - what you can expect at voize We are a fast-growing startup, which means you will tackle challenges, grow quickly, and make a real impact, giving frontline workers more time for people You decide when you work best; that means flexible working hours and a good hybrid set-up. Generous perks for working students: new MacBook, Home Office equipment, Reimbursement of your Semesterticket, 25 days of vacation, and your birthday off ✨Ready to talk? Apply now! We look forward to your application and can’t wait to meet you - no matter who you are or what background you have!",
+    "status": "New",
+    "cv_pdf": "",
+    "cover_letter_pdf": "",
+    "cv_url": "",
+    "cover_letter_url": "",
+    "notes": "",
+    "synced_to_sheets": false,
+    "category_id": "project_management",
+    "category_label": "Project Management",
+    "match_score": 50,
+    "language_req": "English Title (Pending Full Text)",
+    "is_english_friendly": true,
+    "employment_type": "WERKSTUDENT",
+    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
+    "is_student_legal": true,
+    "pays_min_16": false,
+    "benefits": [],
+    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
+    "matched_keywords": [],
+    "why_fits": "Strong Project Management fit. Matches keywords: Product team, SQL (Redash), quantitative analysis, AI evaluation tools.",
+    "commute": {
+      "commute_minutes": 25,
+      "within_limit": true,
+      "badge": "🚇 ~25 min (S1)",
+      "summary": "Central Berlin: ~25 min from Söhtstr. 16 via S1 direct",
+      "transit_route": "S1 Lichterfelde West -> Berlin City (~25 min)"
+    },
+    "compensation": {
+      "is_estimated": true,
+      "badge": "💰 ~€14–16/h",
+      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
+      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
+      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
+      "source": "Berlin Benchmark Estimate",
+      "tier": "Standard Berlin",
+      "pays_min_16": false
+    },
+    "direct_apply_url": null,
+    "days_ago": 0,
+    "posted_ago": "🔥 Today (2026-11-27)",
+    "applicants_num": 999,
+    "applicants_text": "LinkedIn (Click to view)",
+    "work_model": "Hybrid (Home Office)",
+    "is_100_onsite": false,
+    "tailored_preview": {
+      "selected_bullets": [
+        "Managed the <strong>end-to-end rollout, stakeholder alignment, and continuous optimization</strong> of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional product team, routing <strong>millions of calls</strong>, increasing inbound answer rates by <strong>over 80%</strong>, and lifting call-to-booking conversion by <strong>over 50%</strong>.",
+        "Implemented, structured, and maintained an <strong>AI chatbot, voicebot prompting &amp; FAQs, and AI knowledge bases</strong>, coordinating multi-market releases and answer-accuracy improvements across <strong>hundreds of thousands of customer conversations</strong>.",
+        "Scoped operational bottlenecks and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> with <strong>automated workflows and bulk-review evaluation pipelines</strong>, standardizing how cross-market teams audit and benchmark AI quality.",
+        "Partnered with <strong>3 project managers</strong> to track <strong>project milestones and multi-market KPIs</strong>, performing <strong>quantitative analysis on complex datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel to build automated company-wide dashboards.",
+        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails.",
+        "Engineered an automated <strong>Contract Amendment &amp; Document Generation Tool</strong> combining digital forms and dynamic PDF generation scripts, end-to-end automating contract processing and status tracking at scale."
+      ],
+      "cover_letter_paragraphs": [
+        "I am writing to apply for the Working Student People & Events (m/w/d) role at voize. With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and over two years of hands-on experience at AUTO1 Group scaling AI operations, data reporting, and internal tooling, I combine analytical rigor with proactive builder execution to deliver immediate value to your team.",
+        "In my role as Junior Project Manager at AUTO1 Group in Berlin (since 2024, progressing from Intern to Working Student), I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. I helped drive the end-to-end rollout and continuous optimization of our AI voice bot (routing millions of calls, increasing inbound answer rates by over 80%, and lifting call-to-booking conversion by over 50%), while shipping a suite of production internal tools and workflow automations. I coordinated multi-market project milestones and cross-functional sprints across 9 countries, partnered with PMs to track delivery KPIs using SQL (Redash) dashboards, and standardized project documentation and rollout workflows.",
+        "Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean, repeatable processes. I write SQL queries in Redash and build dashboards in Looker Studio, Tableau, and Excel to provide reliable metrics. When off-the-shelf software falls short, I prototype lightweight internal tools using JavaScript and REST APIs. Working in an international Berlin environment, I communicate fluently in English (C1/C2) and Spanish (native), with working German (B1).",
+        "What particularly excites me about voize is the opportunity to bring this blend of product operations discipline, SQL analytics, and builder execution to your team in the Working Student People & Events (m/w/d) role. Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview."
       ]
     }
   },
@@ -4067,8 +3841,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.enpal.de/jobs?query=Praktikum+Strategische+Baubarkeit+%28w%2Fm%2Fd%29",
-    "days_ago": 0,
-    "posted_ago": "🔥 Today (2026-11-26)",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-26)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -4119,8 +3893,8 @@
       "sql"
     ],
     "why_fits": "Strong Project Management fit. Matches keywords: transformation, erp, sql.",
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -4289,8 +4063,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.siemens-energy.com/careers?query=Werkstudent+%28w%2Fm%2Fd%29+Data+Analytics+%26+AI+im+Procurement&location=Berlin",
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 74,
     "applicants_text": "🟡 74 applicants",
     "work_model": "Flexibles Office",
@@ -4370,8 +4144,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.siemens-energy.com/en_US/CareersMarketplace/FolderDetail/Werkstudent-w-m-d-Data-Analytics-AI-im-Procurement/307858",
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -4426,8 +4200,8 @@
       "process improvement"
     ],
     "why_fits": "Strong Business & Data Operations fit. Matches keywords: stakeholder, coordination, erp, reporting, dashboard, complex data.",
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -4539,92 +4313,6 @@
     }
   },
   {
-    "id": "d15fd94821",
-    "title": "Werkstudent (m/w/d) als Projektassistenz | Berlin",
-    "company": "WISAG Job & Karriere GmbH & Co. KG",
-    "location": "Berlin, Berlin, Germany",
-    "job_url": "https://www.linkedin.com/jobs/view/4491438034",
-    "source": "Linkedin",
-    "date_posted": "2026-11-16",
-    "date_found": "2026-11-23 20:16",
-    "salary": "",
-    "description": "Willkommen bei der WISAG … einem der führenden Dienstleistungsunternehmen in Deutschland für die Bereiche: Aviation, Facility und Industrie. Mehr als 60.000 Mitarbeiterinnen und Mitarbeiter sind Tag für Tag bei uns im Einsatz. In der WISAG Gebäudetechnik sind wir auf technische Anlagen in Immobilien spezialisiert. Unsere Arbeit umfasst die Bereiche: Gebäudemanagement, Wartung und Instandhaltung sowie Energiemanagement. Wir stellen sicher, dass die Technik im Gebäude zuverlässig arbeitet. Mehr über die WISAG erfährst Du auf unserer Webseite. Werkstudent (m/w/d) als Projektassistenz | Berlin Kennziffer: 432140 Deine Aufgaben bei uns - Unterstützen der Projektleitung im Tagesgeschäft – organisatorisch, administrativ und inhaltlich - Allgemeine Assistenz und Unterstützen des Teams bei bereichsübergreifenden Aufgaben bzw. Projekten - Übernahme und selbstständige Betreuung kleinerer Projekte (Energiemanagement, CAFM-Administration, Aufnahme techn. Anlagen) Du unterstützt unser Team am Standort Berlin Lichtenberg. Damit begeisterst Du uns - Immatrikuliert im Bereich Facility-Management, Immobilien-Management, Technische Gebäudeausrüstung, Bauingenieurwesen, Elektrotechnik o. Ä. - Sichere MS-Office-Kenntnisse (Excel) - Offenheit, Neugier, Organisationstalent und Verantwortungsbewusstsein Das bieten wir Dir - Angemessene Vergütung - Vergünstigte Mitgliedschaft im Urban Sports Club - Jede Menge praktische Erfahrung - Mitarbeit in spannenden Projekten - Beste Übernahmechancen nach Deinem Hochschulabschluss - Kollegen und Führungskräfte, die Dich unterstützen werden - Unterstützung bei der Themenauswahl für Abschlussarbeiten - Jährliche Firmenevents: Oktoberfest und Weihnachtsfeier Wir haben Dich überzeugt? Dann freuen wir uns darauf, Dich kennenzulernen! Der einfachste Weg zu uns führt über den „Jetzt bewerben\"-Button – ohne Registrierung – bewirb Dich in nur 2 Minuten. Die WISAG ist Unterzeichner der „Charta der Vielfalt“ und fördert alle Mitarbeiter*innen mit ihren vielfältigen Fähigkeiten und Talenten wertschätzend und vorurteilsfrei. Alle Bewerbungen – unabhängig von Geschlecht, Nationalität, kultureller und sozialer Herkunft, Religion und Weltanschauung, Behinderung, Alter sowie sexueller Orientierung und geschlechtlicher Identität – werden begrüßt. Bewerbungen von Menschen mit Migrationshintergrund sind erwünscht. Wir berücksichtigen Schwerbehinderte entsprechend den Vorgaben des SGB IX und ggf. der betrieblichen Integrationsvereinbarung. Alle personenbezogenen Formulierungen in dieser Stellenanzeige sind geschlechtsneutral zu betrachten. Wir weisen darauf hin, dass wir schriftliche, per Post versandte Bewerbungsmappen, leider nicht zurückschicken können. Ansprechpartner Silvio Machalz Tel.: +49 (30) 4242 - 4321 Adresse WISAG Gebäudetechnik Berlin GmbH &amp; Co. KG, Bornitzstraße 67-71, 10365 Berlin",
-    "status": "New",
-    "cv_pdf": "",
-    "cover_letter_pdf": "",
-    "cv_url": "",
-    "cover_letter_url": "",
-    "notes": "",
-    "synced_to_sheets": false,
-    "category_id": "project_management",
-    "category_label": "Project Management",
-    "match_score": 47,
-    "language_req": "German Working Language (B1 Challenging)",
-    "is_english_friendly": false,
-    "employment_type": "WERKSTUDENT",
-    "employment_label": "🎓 Werkstudent (Max 20h/wk)",
-    "is_student_legal": true,
-    "pays_min_16": false,
-    "benefits": [
-      {
-        "category": "wellness",
-        "icon": "🏋️",
-        "label": "Urban Sports Club / Wellpass"
-      },
-      {
-        "category": "events",
-        "icon": "🎉",
-        "label": "Team Events & Offsites"
-      }
-    ],
-    "extracted_pay": "💰 ~€14–16/h (~€1212–€1385/mo)",
-    "matched_keywords": [
-      "projektleitung",
-      "projektassistenz"
-    ],
-    "why_fits": "Strong Project Management fit. Matches keywords: projektleitung, projektassistenz.",
-    "commute": {
-      "commute_minutes": 50,
-      "within_limit": true,
-      "badge": "🚇 ~50 min (S1/S-Bahn)",
-      "summary": "Estimated transit: ~50 min from Söhtstr. 16 via BVG/S-Bahn",
-      "transit_route": "S1 Lichterfelde West -> BVG (~50 min)"
-    },
-    "compensation": {
-      "is_estimated": true,
-      "badge": "💰 ~€14–16/h",
-      "display": "💰 ~€14–16/h (~€1212–€1385/mo)",
-      "range_text": "~€14 – €16 / hour (Berlin Tech Benchmark)",
-      "monthly_estimate": "~€1212 – €1385 / month (at 20h/wk)",
-      "source": "Berlin Benchmark Estimate",
-      "tier": "Standard Berlin",
-      "pays_min_16": false
-    },
-    "direct_apply_url": null,
-    "days_ago": 10,
-    "posted_ago": "10 days ago (2026-11-16)",
-    "applicants_num": 999,
-    "applicants_text": "LinkedIn (Click to view)",
-    "work_model": "Flexibles Office",
-    "is_100_onsite": false,
-    "tailored_preview": {
-      "selected_bullets": [
-        "Managed the <strong>end-to-end rollout, stakeholder alignment, and continuous optimization</strong> of an <strong>AI voice bot across 9 international markets</strong> within a cross-functional product team, routing <strong>millions of calls</strong>, increasing inbound answer rates by <strong>over 80%</strong>, and lifting call-to-booking conversion by <strong>over 50%</strong>.",
-        "Implemented, structured, and maintained an <strong>AI chatbot, voicebot prompting &amp; FAQs, and AI knowledge bases</strong>, coordinating multi-market releases and answer-accuracy improvements across <strong>hundreds of thousands of customer conversations</strong>.",
-        "Scoped operational bottlenecks and built an internal <strong>AI Conversation QA &amp; Evaluation web tool</strong> with <strong>automated workflows and bulk-review evaluation pipelines</strong>, standardizing how cross-market teams audit and benchmark AI quality.",
-        "Partnered with <strong>3 project managers</strong> to track <strong>project milestones and multi-market KPIs</strong>, performing <strong>quantitative analysis on complex datasets</strong> using <strong>SQL (Redash)</strong> and Advanced Excel to build automated company-wide dashboards.",
-        "Engineered an automated <strong>Contract Amendment &amp; Document Generation Tool</strong> combining digital forms and dynamic PDF generation scripts, end-to-end automating contract processing and status tracking at scale.",
-        "Developed an <strong>automated Price-Lead Offer Email tool</strong> integrating internal admin systems, <strong>REST APIs, and low-code automation workflows</strong> to extract customer data and auto-generate personalized offer emails."
-      ],
-      "cover_letter_paragraphs": [
-        "I am writing to apply for the Werkstudent (m/w/d) als Projektassistenz | Berlin role at WISAG Job & Karriere GmbH & Co. KG. With a Bachelor’s in Digital Product Management, ongoing Master’s studies in International Business Management in Berlin, and over two years of hands-on experience at AUTO1 Group scaling AI operations, data reporting, and internal tooling, I combine analytical rigor with proactive builder execution to deliver immediate value to your team.",
-        "In my role as Junior Project Manager at AUTO1 Group in Berlin (since 2024, progressing from Intern to Working Student), I collaborate daily across Product, Engineering, and Operations teams in 9 European markets. I helped drive the end-to-end rollout and continuous optimization of our AI voice bot (routing millions of calls, increasing inbound answer rates by over 80%, and lifting call-to-booking conversion by over 50%), while shipping a suite of production internal tools and workflow automations. I coordinated multi-market project milestones and cross-functional sprints across 9 countries, partnered with PMs to track delivery KPIs using SQL (Redash) dashboards, and standardized project documentation and rollout workflows.",
-        "Beyond daily operations, I thrive on untangling disorganized data and turning operational friction into clean, repeatable processes. I write SQL queries in Redash and build dashboards in Looker Studio, Tableau, and Excel to provide reliable metrics. When off-the-shelf software falls short, I prototype lightweight internal tools using JavaScript and REST APIs. Working in an international Berlin environment, I communicate fluently in English (C1/C2) and Spanish (native), with working German (B1).",
-        "What particularly excites me about WISAG Job & Karriere GmbH & Co. KG is the opportunity to bring this blend of product operations discipline, SQL analytics, and builder execution to your team in the Werkstudent (m/w/d) als Projektassistenz | Berlin role. Thank you for your time and consideration—I look forward to discussing how I can contribute in an interview."
-      ]
-    }
-  },
-  {
     "id": "fb5fc73007",
     "title": "Werkstudent Teamassistenz Project Management Office (m/w/d)",
     "company": "Diebold Nixdorf",
@@ -4686,8 +4374,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 26,
     "applicants_text": "🟢 26 applicants",
     "work_model": "Flexibles Office",
@@ -4764,8 +4452,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.deloitte.de/search/?q=Werkstudent+Product+Strategy+%26+Lifecycle+Management+%28PLM%29+%28m%2Fw%2Fd%29&locationsearch=Berlin",
-    "days_ago": 4,
-    "posted_ago": "4 days ago (2026-11-22)",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-11-22)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -4862,8 +4550,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://grnh.se/732acac2teu",
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Hybrid (Home Office)",
@@ -4936,8 +4624,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 28,
     "applicants_text": "🟢 28 applicants",
     "work_model": "Flexibles Office",
@@ -5019,8 +4707,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://careers.richemont.com/en/jobs/jr135993/working-student-retail-experience-retail-design-mfd-architecture-interior-design-visual-merchandising/",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -5100,8 +4788,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.siemens.com/externaljobs/JobDetail/530715?source=Indeed",
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -5172,8 +4860,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.siemens-energy.com/careers?query=Werkstudent+%28w%2Fm%2Fd%29+Business+Intelligence+%26+Data+Analytics&location=Berlin",
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -5279,8 +4967,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.enpal.de/jobs?query=Associate+Venture+Development+%E2%80%93+Commercial+Product+Energy+%28w%2Fm%2Fd%29",
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -5357,8 +5045,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://4flow.wd3.myworkdayjobs.com/en-US/4flow/job/Berlin/Working-Student-Software-Testing--m-f-d-_R4676",
-    "days_ago": 7,
-    "posted_ago": "7 days ago (2026-11-19)",
+    "days_ago": 8,
+    "posted_ago": "8 days ago (2026-11-19)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -5435,8 +5123,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobdb.softgarden.de/jobdb/public/jobdb/posting/68792500/0/0/Intern+Strategic+Finance+%26+Strategy+%28all+genders%29+%E2%80%93+Universal+Music+Central+Europe+%28%E2%80%98UM+CE%E2%80%99%29+%E2%80%93+Universal+Music+GmbH.html",
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -5523,8 +5211,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://db.jobs/de-de/suche?keywords=Werkstudent%3Ain+Bauprojektmanagement&location=Berlin",
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -5616,8 +5304,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://jobs.funkemedien.de/job/Berlin-Werkstudent-Assistenz-im-Projektmanagement-%28mwd%29/1378512155/",
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Hybrid (Home Office)",
@@ -5690,8 +5378,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -5787,8 +5475,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 4,
-    "posted_ago": "4 days ago (2026-11-22)",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-11-22)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -5861,8 +5549,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 7,
-    "posted_ago": "7 days ago (2026-11-19)",
+    "days_ago": 8,
+    "posted_ago": "8 days ago (2026-11-19)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -5935,8 +5623,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -6009,8 +5697,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -6083,8 +5771,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 0,
-    "posted_ago": "🔥 Today (2026-11-26)",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-26)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -6190,8 +5878,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -6265,8 +5953,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 5,
-    "posted_ago": "5 days ago (2026-11-21)",
+    "days_ago": 6,
+    "posted_ago": "6 days ago (2026-11-21)",
     "applicants_num": 41,
     "applicants_text": "🟡 41 applicants",
     "work_model": "Flexibles Office",
@@ -6337,8 +6025,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -6423,8 +6111,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.ashbyhq.com/applausejobs/49433bc3-a6ab-42db-8003-9633af8d122f?utm_source=OnenBA1XP5",
-    "days_ago": 7,
-    "posted_ago": "7 days ago (2026-11-19)",
+    "days_ago": 8,
+    "posted_ago": "8 days ago (2026-11-19)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -6497,8 +6185,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 7,
-    "posted_ago": "7 days ago (2026-11-19)",
+    "days_ago": 8,
+    "posted_ago": "8 days ago (2026-11-19)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -6571,8 +6259,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -6645,8 +6333,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -6735,8 +6423,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://t.gohiring.com/h/ea398b02bc330475a7adb31c32dd23229b18c93bed6f3281f7a1286ed4ea186b?source=Indeed",
-    "days_ago": 0,
-    "posted_ago": "🔥 Today (2026-11-26)",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-26)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Hybrid (Home Office)",
@@ -6809,8 +6497,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 0,
-    "posted_ago": "🔥 Today (2026-11-26)",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-26)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -6884,8 +6572,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 75,
     "applicants_text": "🟡 75 applicants",
     "work_model": "Flexibles Office",
@@ -6962,8 +6650,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://join.com/companies/maxdrei/16957173-paid-mandatory-internship-in-b2b-sales-partner-management-and-business-development-m-f-d?pid=a13795120131dbe48464",
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Hybrid (Home Office)",
@@ -7058,8 +6746,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.smartrecruiters.com/ScalableGmbH/744000163427929--associate-product-manager-settlement-services-m-f-x-",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -7167,8 +6855,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.check24.de/jobs?location=Berlin&query=Associate+Product+Owner+%28m%2Fw%2Fd%29+Traineeprogramm",
-    "days_ago": 4,
-    "posted_ago": "4 days ago (2026-11-22)",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-11-22)",
     "applicants_num": 197,
     "applicants_text": "🔴 197 applicants",
     "tailored_preview": {
@@ -7247,8 +6935,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 4,
-    "posted_ago": "4 days ago (2026-11-22)",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-11-22)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -7364,8 +7052,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -7466,8 +7154,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -7570,8 +7258,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 94,
     "applicants_text": "🟡 94 applicants",
     "work_model": "Flexibles Office",
@@ -7648,8 +7336,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -7723,8 +7411,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -7803,8 +7491,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -7877,8 +7565,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://karriere.pwc.de/jobs?query=Consultant+Projektmanagement+Public+Sector+%28w%2Fm%2Fd%29",
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 39,
     "applicants_text": "🟡 39 applicants",
     "work_model": "Hybrid (Home Office)",
@@ -7951,8 +7639,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://karriere.pwc.de/jobs?query=Consultant+Public+Sector+Transformation%2C+Infrastrukturf%C3%B6rderung+und+Digitalisierung+%28w%2Fm%2Fd%29",
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -8025,8 +7713,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -8139,8 +7827,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 7,
-    "posted_ago": "7 days ago (2026-11-19)",
+    "days_ago": 8,
+    "posted_ago": "8 days ago (2026-11-19)",
     "applicants_num": 181,
     "applicants_text": "🔴 181 applicants",
     "tailored_preview": {
@@ -8229,8 +7917,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://www.adc.de/jobs/#Werkstudent/in%20Kreativwettbewerbe/Jury%20(all%20genders)%20%7C%20ab%20sofort,%2020%20Stunden/Woche,%20Homeoffice%20m%C3%B6glich",
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "tailored_preview": {
@@ -8303,8 +7991,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 7,
-    "posted_ago": "7 days ago (2026-11-19)",
+    "days_ago": 8,
+    "posted_ago": "8 days ago (2026-11-19)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -8398,8 +8086,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -8473,8 +8161,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.enpal.de/jobs?query=Business+Operations+Associate+%28m%2Ff%2Fd%29",
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -8560,8 +8248,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions/preview/26013808?utm_medium=jobboard&utm_source=indeed",
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -8652,8 +8340,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://www.wwf.de/ueber-uns/stellenangebote/stellenangebot/stelle/studentische-mitarbeiter-m-w-d-projektunterstuetzung-daten-organisation-qm1160ds",
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Hybrid (Home Office)",
@@ -8755,8 +8443,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 47,
     "applicants_text": "🟡 47 applicants",
     "work_model": "Flexibles Office",
@@ -8836,8 +8524,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 30,
     "applicants_text": "🟢 30 applicants",
     "work_model": "Hybrid (Home Office)",
@@ -8917,8 +8605,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 7,
-    "posted_ago": "7 days ago (2026-11-19)",
+    "days_ago": 8,
+    "posted_ago": "8 days ago (2026-11-19)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -8991,8 +8679,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -9065,8 +8753,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 7,
-    "posted_ago": "7 days ago (2026-11-19)",
+    "days_ago": 8,
+    "posted_ago": "8 days ago (2026-11-19)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -9139,8 +8827,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -9213,8 +8901,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 0,
-    "posted_ago": "🔥 Today (2026-11-26)",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-26)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -9295,8 +8983,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://ats.sopea-hr.com/ats/JobAd?Job=6180934725",
-    "days_ago": 5,
-    "posted_ago": "5 days ago (2026-11-21)",
+    "days_ago": 6,
+    "posted_ago": "6 days ago (2026-11-21)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "tailored_preview": {
@@ -9385,8 +9073,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://apply.workable.com/j/253993EA80",
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "tailored_preview": {
@@ -9457,8 +9145,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -9529,8 +9217,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 39,
     "applicants_text": "🟡 39 applicants",
     "work_model": "Flexibles Office",
@@ -9601,8 +9289,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -9673,8 +9361,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -9745,8 +9433,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 7,
-    "posted_ago": "7 days ago (2026-11-19)",
+    "days_ago": 8,
+    "posted_ago": "8 days ago (2026-11-19)",
     "applicants_num": 150,
     "applicants_text": "🔴 112 applicants",
     "work_model": "Flexibles Office",
@@ -9825,8 +9513,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -9899,8 +9587,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://www.accumulata.de/jobs/werkstudent-technisches-development-ab-sofort-m-w-d/",
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "tailored_preview": {
@@ -9979,8 +9667,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://karma-games.com/contact/jobs/",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "100% Remote",
@@ -10059,8 +9747,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://jobs.smartrecruiters.com/Avaloq1/744000163660008-working-student-tax-services-12-months-",
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Hybrid (Home Office)",
@@ -10167,8 +9855,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.check24.de/jobs?location=Berlin&query=Technischer+Produkt+Manager+%28m%2Fw%2Fd%29+Traineeprogramm",
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 96,
     "applicants_text": "🟡 96 applicants",
     "tailored_preview": {
@@ -10253,8 +9941,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 57,
     "applicants_text": "🟡 57 applicants",
     "tailored_preview": {
@@ -10325,8 +10013,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -10405,8 +10093,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -10505,8 +10193,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -10577,8 +10265,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -10649,8 +10337,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -10721,8 +10409,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -10803,8 +10491,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://grnh.se/c1hdpn5i1us",
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "100% Remote",
@@ -10875,8 +10563,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 4,
-    "posted_ago": "4 days ago (2026-11-22)",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-11-22)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -10947,8 +10635,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 4,
-    "posted_ago": "4 days ago (2026-11-22)",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-11-22)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -11019,8 +10707,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -11093,8 +10781,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -11180,8 +10868,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.siemens.com/careers?query=Projektassistent+mit+Controlling-Fokus+%28w%2Fm%2Fd%29&location=Berlin",
-    "days_ago": 4,
-    "posted_ago": "4 days ago (2026-11-22)",
+    "days_ago": 5,
+    "posted_ago": "5 days ago (2026-11-22)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -11263,8 +10951,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -11344,8 +11032,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": "https://db.jobs/de-de/suche?keywords=Werkstudent%3Ain+Auftragskoordination+%26+Labormanagement&location=Berlin",
-    "days_ago": 5,
-    "posted_ago": "5 days ago (2026-11-21)",
+    "days_ago": 6,
+    "posted_ago": "6 days ago (2026-11-21)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -11416,8 +11104,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "tailored_preview": {
@@ -11488,8 +11176,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -11560,8 +11248,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -11632,8 +11320,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -11704,8 +11392,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -11776,8 +11464,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -11864,8 +11552,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.ashbyhq.com/moss/6903e731-b1a5-4dca-ac51-000fbeb125ff?utm_source=rAK7ABQNwk",
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -11935,8 +11623,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -12007,8 +11695,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 6,
-    "posted_ago": "6 days ago (2026-11-20)",
+    "days_ago": 7,
+    "posted_ago": "7 days ago (2026-11-20)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -12079,8 +11767,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 7,
-    "posted_ago": "7 days ago (2026-11-19)",
+    "days_ago": 8,
+    "posted_ago": "8 days ago (2026-11-19)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -12151,8 +11839,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 8,
-    "posted_ago": "8 days ago (2026-11-18)",
+    "days_ago": 9,
+    "posted_ago": "9 days ago (2026-11-18)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -12223,8 +11911,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -12295,8 +11983,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 9,
-    "posted_ago": "9 days ago (2026-11-17)",
+    "days_ago": 10,
+    "posted_ago": "10 days ago (2026-11-17)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Hybrid (Home Office)",
@@ -12375,8 +12063,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.ashbyhq.com/moss/da76d3d3-55ed-4ef1-b004-225686107ae1?utm_source=rAK7ABQNwk",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -12447,8 +12135,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -12519,8 +12207,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -12591,8 +12279,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -12671,8 +12359,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://t.gohiring.com/h/afeb0528b3feb8d723e4a1755be61cb423c95b920479dd95378177dbaeed6a19?source=Indeed",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -12752,8 +12440,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://t.gohiring.com/h/2e1c61006a42df1e16b07df067cb12bbf6f93f9e0c22adde3f9eb9edc78a7301?source=Indeed",
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Flexibles Office",
@@ -12824,8 +12512,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -12915,8 +12603,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": "https://jobs.esmt.berlin/en?id=dd212f",
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "Direct Portal (No counter)",
     "work_model": "Hybrid (Home Office)",
@@ -12987,8 +12675,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -13059,8 +12747,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 150,
     "applicants_text": "🔴 128 applicants",
     "work_model": "Hybrid (Home Office)",
@@ -13130,8 +12818,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 3,
-    "posted_ago": "⚡ 3 days ago (2026-11-23)",
+    "days_ago": 4,
+    "posted_ago": "4 days ago (2026-11-23)",
     "applicants_num": 28,
     "applicants_text": "🟢 28 applicants",
     "work_model": "Flexibles Office",
@@ -13204,8 +12892,8 @@
       "pays_min_16": true
     },
     "direct_apply_url": null,
-    "days_ago": 0,
-    "posted_ago": "🔥 Today (2026-11-26)",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-26)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -13276,8 +12964,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 2,
-    "posted_ago": "⚡ 2 days ago (2026-11-24)",
+    "days_ago": 3,
+    "posted_ago": "⚡ 3 days ago (2026-11-24)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
@@ -13348,8 +13036,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 1,
-    "posted_ago": "🔥 1 day ago (2026-11-25)",
+    "days_ago": 2,
+    "posted_ago": "⚡ 2 days ago (2026-11-25)",
     "applicants_num": 35,
     "applicants_text": "🟢 35 applicants",
     "work_model": "Flexibles Office",
@@ -13420,8 +13108,8 @@
       "pays_min_16": false
     },
     "direct_apply_url": null,
-    "days_ago": 0,
-    "posted_ago": "🔥 Today (2026-11-26)",
+    "days_ago": 1,
+    "posted_ago": "🔥 1 day ago (2026-11-26)",
     "applicants_num": 999,
     "applicants_text": "LinkedIn (Click to view)",
     "work_model": "Flexibles Office",
